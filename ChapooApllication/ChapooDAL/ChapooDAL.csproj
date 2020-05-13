@@ -63,7 +63,17 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="klantDAO.cs" />
+    <Compile Include="MedewerkerDAO.cs" />
+    <Compile Include="MenuItemDAO.cs" />
+    <Compile Include="MenuKaartDAO.cs" />
+    <Compile Include="ProductDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RekeningDAO.cs" />
+    <Compile Include="ReserveringDAO.cs" />
+    <Compile Include="TafelDAO.cs" />
+    <Compile Include="VoorraadDAO.cs" />
+    <Compile Include="WerkstationDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
