@@ -76,5 +76,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChapooLogic\ChapooLogic.csproj">
+      <Project>{10d8a80d-ea8c-4fdd-9557-6dbcd58c42f2}</Project>
+      <Name>ChapooLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChapooModel\ChapooModel.csproj">
+      <Project>{e9aa1aca-dfc9-4b63-aebe-3c7823fed847}</Project>
+      <Name>ChapooModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
