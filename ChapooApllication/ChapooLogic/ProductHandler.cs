@@ -9,8 +9,13 @@ using ChapooModel;
 
 namespace ChapooLogic
 {
-    public class Class1
+    public class ProductHandler
     {
+        ProductDAO Product_db = new ProductDAO();
 
+        public List<Product> GetProduct()
+        {
+            return Product_db.Db.Get_All_Producten();
+        }
     }
 }

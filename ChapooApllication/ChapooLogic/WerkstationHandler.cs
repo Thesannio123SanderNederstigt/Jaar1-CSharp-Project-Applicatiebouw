@@ -9,8 +9,13 @@ using ChapooModel;
 
 namespace ChapooLogic
 {
-    public class Class1
+    public class WerkstationHandler
     {
+        WerkstationDAO Werkstation_db = new WerkstationDAO();
 
+        public List<Werkstation> GetWerkstation()
+        {
+            return Werkstation_db.Db.Get_All_Werkstations();
+        }
     }
 }

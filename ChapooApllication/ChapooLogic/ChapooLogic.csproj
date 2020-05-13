@@ -42,7 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="KlantHandler.cs" />
+    <Compile Include="MedewerkerHandler.cs" />
+    <Compile Include="ProductHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReserveringHandler.cs" />
+    <Compile Include="TafelHandler.cs" />
+    <Compile Include="WerkstationHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChapooDAL\ChapooDAL.csproj">

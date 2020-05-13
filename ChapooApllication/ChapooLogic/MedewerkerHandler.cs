@@ -9,8 +9,13 @@ using ChapooModel;
 
 namespace ChapooLogic
 {
-    public class Class1
+    public class MedewerkerHandler
     {
+        MedewerkerDAO Medewerker_db = new MedewerkerDAO();
 
+        public List<Medewerker> GetKlant()
+        {
+            return Medewerker_db.Db.Get_All_Medewerkers();
+        }
     }
 }

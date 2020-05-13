@@ -9,8 +9,13 @@ using ChapooModel;
 
 namespace ChapooLogic
 {
-    public class Class1
-    {
+   public  class KlantHandler
+   {
+        KlantDAO Klant_db = new KlantDAO();
 
-    }
+        public List<Klant> GetKlant()
+        {
+            return Klant_db.Db.Get_All_Klanten();
+        }
+   }
 }

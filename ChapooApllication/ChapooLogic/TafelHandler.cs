@@ -9,8 +9,13 @@ using ChapooModel;
 
 namespace ChapooLogic
 {
-    public class Class1
+    public class TafelHandler
     {
+        TafelDAO Tafel_db = new TafelDAO();
 
+        public List<Tafel> GetTafel()
+        {
+            return Tafel_db.Db.Get_All_Tafels();
+        }
     }
 }

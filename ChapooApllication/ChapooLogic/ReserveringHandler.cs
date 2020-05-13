@@ -9,8 +9,13 @@ using ChapooModel;
 
 namespace ChapooLogic
 {
-    public class Class1
+    public class ReserveringHandler
     {
+        ReserveringDAO Reservering_db = new ReserveringDAO();
 
+        public List<Reservering> GetReservering()
+        {
+            return Reservering_db.Db.Get_All_Reserveringen();
+        }
     }
 }
