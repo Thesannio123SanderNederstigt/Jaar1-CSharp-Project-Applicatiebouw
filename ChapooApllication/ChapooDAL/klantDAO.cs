@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace ChapooDAL
 {
-    public class klantDAO
+    public class KlantDAO
     {
     }
 }
