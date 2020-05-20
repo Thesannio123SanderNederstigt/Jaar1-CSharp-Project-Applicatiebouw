@@ -13,9 +13,14 @@ namespace ChapooLogic
    {
         KlantDAO Klant_db = new KlantDAO();
 
-        public List<Klant> GetKlant()
+        public List<Klant> GetKlanten()
         {
-            return Klant_db.Db.Get_All_Klanten();
+            return Klant_db.Get_All_Klanten();
         }
-   }
+
+        public Klant GetKlant(int klantID)
+        {
+            return Klant_db.GetById(klantID);
+        }
+    }
 }

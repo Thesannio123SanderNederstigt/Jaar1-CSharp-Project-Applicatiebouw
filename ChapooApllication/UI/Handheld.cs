@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class LoginHandheld : Form
+    public partial class Handheld : Form
     {
-        public LoginHandheld()
+        public Handheld()
         {
             InitializeComponent();
         }
