@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI
 {
-    public partial class LoginKeuken : Form
+    public partial class Bar : Form
     {
-        public LoginKeuken()
+        public Bar()
         {
             InitializeComponent();
         }
