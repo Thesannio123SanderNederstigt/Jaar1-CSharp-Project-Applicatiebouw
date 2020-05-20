@@ -19,5 +19,13 @@ namespace UI
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 6557e494ed4fb8aefaa3038d995528f7091b39e9
     }
 }
