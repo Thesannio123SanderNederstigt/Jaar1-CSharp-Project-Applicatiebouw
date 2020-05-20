@@ -8,13 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using ChapooModel;
+using ChapooLogic;
+
 namespace UI
 {
-    public partial class LoginBar : Form
+    public partial class Kassa : Form
     {
-        public LoginBar()
+        public Kassa()
         {
             InitializeComponent();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

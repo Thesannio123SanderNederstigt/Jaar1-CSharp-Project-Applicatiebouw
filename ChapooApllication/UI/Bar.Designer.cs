@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class LoginBar
+    partial class Bar
     {
         /// <summary>
         /// Required designer variable.

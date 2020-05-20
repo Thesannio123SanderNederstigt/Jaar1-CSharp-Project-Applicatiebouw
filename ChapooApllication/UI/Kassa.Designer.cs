@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class LoginKassa
+    partial class Kassa
     {
         /// <summary>
         /// Required designer variable.
