@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class LoginKeuken
+    partial class Keuken
     {
         /// <summary>
         /// Required designer variable.
