@@ -19,5 +19,10 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
