@@ -13,9 +13,14 @@ namespace ChapooLogic
     {
         MedewerkerDAO Medewerker_db = new MedewerkerDAO();
 
-        public List<Medewerker> GetKlant()
+        public List<Medewerker> GetMedewerkers()
         {
-            return Medewerker_db.Db.Get_All_Medewerkers();
+            return Medewerker_db.Get_All_Medewerkers();
+        }
+
+        public Medewerker GetMedewerker(int medewerkerID)
+        {
+            return Medewerker_db.GetById(medewerkerID);
         }
     }
 }
