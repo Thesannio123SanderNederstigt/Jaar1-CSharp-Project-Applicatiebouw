@@ -11,5 +11,12 @@ namespace ChapooModel
         public int ID { get; set; }
         public int aantal { get; set; }
         public int productID { get; set; }
+
+        public Voorraad(int id, int aantal, int productID)
+        {
+            this.ID = id;
+            this.aantal = aantal;
+            this.productID = productID;
+        }
     }
 }

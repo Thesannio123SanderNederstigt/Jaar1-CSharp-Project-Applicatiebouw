@@ -15,5 +15,16 @@ namespace ChapooModel
         public DateTime besteldatum { get; set; }
         public int btw { get; set; }
         public int voorraadID { get; set; }
+
+        public Product(int id, string naam, string type, float prijs, DateTime besteldatum, int btw, int voorraadID)
+        {
+            this.ID = id;
+            this.naam = naam;
+            this.type = type;
+            this.prijs = prijs;
+            this.besteldatum = besteldatum;
+            this.btw = btw;
+            this.voorraadID = voorraadID;
+        }
     }
 }

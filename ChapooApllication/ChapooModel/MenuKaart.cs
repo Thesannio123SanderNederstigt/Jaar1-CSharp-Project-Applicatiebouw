@@ -10,5 +10,11 @@ namespace ChapooModel
     {
         public int ID { get; set; }
         public string naam { get; set; }
+
+        public MenuKaart(int id, string naam)
+        {
+            this.ID = id;
+            this.naam = naam;
+        }
     }
 }

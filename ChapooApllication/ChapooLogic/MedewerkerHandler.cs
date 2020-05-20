@@ -11,16 +11,35 @@ namespace ChapooLogic
 {
     public class MedewerkerHandler
     {
-        MedewerkerDAO Medewerker_db = new MedewerkerDAO();
+        private readonly MedewerkerDAO Medewerker_db = new MedewerkerDAO();
 
         public List<Medewerker> GetMedewerkers()
         {
-            return Medewerker_db.Get_All_Medewerkers();
+            try
+            {
+                return Medewerker_db.Get_All_Medewerkers();
+            }
+            catch(Exception)
+            {
+                List<Medewerker> fakemedewerkerlist = new List<Medewerker>();
+                Medewerker fakemedewerker = new Medewerker(1, "error", "something went wrong", "oh no", 1, 1);
+                return fakemedewerkerlist;
+            }
+
         }
 
         public Medewerker GetMedewerker(int medewerkerID)
         {
-            return Medewerker_db.GetById(medewerkerID);
+            try
+            {
+                return Medewerker_db.GetById(medewerkerID);
+            }
+            catch(Exception)
+            {
+                Medewerker fakemedewerker = new Medewerker(1, "error", "something went wrong", "oh no", 1, 1);
+                return fakemedewerker;
+            }
+
         }
     }
 }

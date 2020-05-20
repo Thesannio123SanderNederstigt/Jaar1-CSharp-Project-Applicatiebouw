@@ -61,6 +61,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BestellingDAO.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="KlantDAO.cs" />
     <Compile Include="MedewerkerDAO.cs" />

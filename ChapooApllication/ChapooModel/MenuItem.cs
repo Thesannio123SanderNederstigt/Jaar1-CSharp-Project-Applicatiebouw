@@ -11,5 +11,12 @@ namespace ChapooModel
         public int ID { get; set; }
         public int menukaartID { get; set; }
         public string omschrijving { get; set; }
+
+        public MenuItem(int id, int menukaartid, string omschrijving)
+        {
+            this.ID = id;
+            this.menukaartID = menukaartid;
+            this.omschrijving = omschrijving;
+        }
     }
 }

@@ -11,11 +11,16 @@ namespace ChapooLogic
 {
     public class WerkstationHandler
     {
-        WerkstationDAO Werkstation_db = new WerkstationDAO();
+        private WerkstationDAO Werkstation_db = new WerkstationDAO();
 
-        public List<Werkstation> GetWerkstation()
+        public List<Werkstation> GetWerkstations()
         {
-            return Werkstation_db.Db.Get_All_Werkstations();
+            return Werkstation_db.Get_All_Werkstations();
+        }
+
+        public Werkstation GetWerkstation(int werkstationID)
+        {
+            return Werkstation_db.GetById(werkstationID);
         }
     }
 }

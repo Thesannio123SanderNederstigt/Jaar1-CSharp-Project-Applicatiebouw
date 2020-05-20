@@ -15,12 +15,32 @@ namespace ChapooLogic
 
         public List<Klant> GetKlanten()
         {
-            return Klant_db.Get_All_Klanten();
+            try
+            {
+                return Klant_db.Get_All_Klanten();
+            }
+            catch(Exception)
+            {
+                List<Klant> fakeklantenlist = new List<Klant>();
+                Klant fakeklant = new Klant(1, "error", 1);
+                fakeklantenlist.Add(fakeklant);
+                return fakeklantenlist;
+            }
+
         }
 
         public Klant GetKlant(int klantID)
         {
-            return Klant_db.GetById(klantID);
+            try
+            {
+                return Klant_db.GetById(klantID);
+            }
+            catch(Exception)
+            {
+                Klant fakeklant = new Klant(1, "error", 1);
+                return fakeklant;
+            }
+
         }
     }
 }

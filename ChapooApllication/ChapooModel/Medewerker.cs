@@ -23,6 +23,7 @@ namespace ChapooModel
             this.type = type;
             this.inlogcode = inlogcode;
             this.werkstationID = werkstationid;
+
         }
     }
 }
