@@ -14,27 +14,26 @@ namespace ChapooDAL
         // Get all Bestellingen
         public List<Bestelling> Get_All_Bestellingen()
         {
-            string query = "SELECT ID, aantal, besteltijd, status, tafelID, rekeningID, medewerkerID, menuItemID FROM Bestelling";
+            string query = "SELECT ID, besteltijd, status, tafelID, rekeningID, menuItemID FROM Bestelling";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadBestellingen (ExecuteSelectQuery(query, sqlParameters));
         }
 
         private List<Bestelling> ReadBestellingen(DataTable dataTable)
         {
+
             List<Bestelling> bestellingen = new List<Bestelling>();
 
             foreach(DataRow dr in dataTable.Rows)
             {
                 int ID = (int)dr["ID"];
-                int aantal = (int)dr["aantal"];
                 DateTime besteltijd = (DateTime)dr["besteltijd"];
                 bool status = (bool)dr["status"];
                 int tafelID = (int)dr["tafelID"];
                 int rekeningID = (int)dr["rekeningID"];
-                int medewerkerID = (int)dr["medewerkerID"];
-                int menuItemID = (int)dr["menuItemID"];
+                string opmerking = (string)dr["opmerking"];
 
-                Bestelling bestelling = new Bestelling(ID, aantal, besteltijd, status, tafelID, rekeningID, medewerkerID, menuItemID);
+                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, rekeningID, opmerking);
                 bestellingen.Add(bestelling);
             }
 
@@ -46,7 +45,7 @@ namespace ChapooDAL
         // Get Bestelling by ID
         public Bestelling GetById(int bestellingID)
         {
-            string query = "SELECT ID, aantal, besteltijd, status, tafelID, rekeningID, medewerkerID, menuItemID FROM Bestelling WHERE ID = @id";
+            string query = "SELECT ID, besteltijd, status, tafelID, rekeningID, menuItemID FROM Bestelling WHERE ID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[]  { new SqlParameter("@id", bestellingID) };
             return ReadBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -60,21 +59,38 @@ namespace ChapooDAL
             foreach (DataRow dr in dataTable.Rows)
             {
                 int ID = (int)dr["ID"];
-                int aantal = (int)dr["aantal"];
                 DateTime besteltijd = (DateTime)dr["besteltijd"];
                 bool status = (bool)dr["status"];
                 int tafelID = (int)dr["tafelID"];
                 int rekeningID = (int)dr["rekeningID"];
-                int medewerkerID = (int)dr["medewerkerID"];
-                int menuItemID = (int)dr["menuItemID"];
+                string opmerking = (string)dr["opmerking"];
 
-                bestelling = new Bestelling(ID, aantal, besteltijd, status, tafelID, rekeningID, medewerkerID, menuItemID);
+                bestelling = new Bestelling(ID, besteltijd, status, tafelID, rekeningID, opmerking);
             }
 
             return bestelling;
         }
 
-        //bij de methode voor het inschrijven van een bestelling ook een gerecht aanmaken in de database (tabel 'Gerecht')
+        public void AddBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        {
+            string query = "INSERT Bestelling(besteltijd, status, tafelID, rekeningID, opmerking) VALUES (@Besteltijd, @Status, @TafelID, @RekeningID, @Opmerking)";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Besteltijd", besteltijd), new SqlParameter("@Status", status), new SqlParameter("@TafelID", tafelID), new SqlParameter("@RekeningID", rekeningID), new SqlParameter("@Opmerking", opmerking) };
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        {
+            string query = "UPDATE Bestelling SET besteltijd = @Besteltijd, status = @Status, tafelID = @TafelID, rekeningID = @RekeningID, opmerking = @Opmerking WHERE ID = @Id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", BestellingID), new SqlParameter("@Besteltijd", besteltijd), new SqlParameter("@Status", status), new SqlParameter("@TafelID", tafelID), new SqlParameter("@RekeningID", rekeningID), new SqlParameter("@Opmerking", opmerking) };
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void DeleteBestelling(int BestellingID)
+        {
+            string query = "DELETE FROM Bestelling WHERE ID = @Id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", BestellingID) };
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
     }
 }

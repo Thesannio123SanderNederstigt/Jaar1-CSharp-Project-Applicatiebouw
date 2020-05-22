@@ -13,17 +13,14 @@ namespace ChapooModel
         public string achternaam { get; set; }
         public string type { get; set; }
         public int inlogcode { get; set; }
-        public int werkstationID { get; set; }
 
-        public Medewerker(int id, string voornaam, string achternaam, string type, int inlogcode, int werkstationid)
+        public Medewerker(int id, string voornaam, string achternaam, string type, int inlogcode)
         {
             this.id = id;
             this.voornaam = voornaam;
             this.achternaam = achternaam;
             this.type = type;
             this.inlogcode = inlogcode;
-            this.werkstationID = werkstationid;
-
         }
     }
 }

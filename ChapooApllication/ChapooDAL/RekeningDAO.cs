@@ -14,7 +14,7 @@ namespace ChapooDAL
     {
         public List<Rekening> Get_All_Rekeningen()
         {
-            string query = "SELECT ID, fooi, betaalwijze, tafelID, betaalstatus FROM Rekening";
+            string query = "SELECT ID, fooi, betaalwijze, tafelID, betaalstatus, opmerking FROM Rekening";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadRekeningen(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -30,7 +30,9 @@ namespace ChapooDAL
                 string betaalwijze = (string)dr["betaalwijze"];
                 int tafelID = (int)dr["tafelID"];
                 bool betaalstatus = (bool)dr["betaalstatus"];
-                Rekening rekening = new Rekening(ID, fooi, betaalwijze, tafelID, betaalstatus);
+                string opmerking = (string)dr["opmerking"];
+
+                Rekening rekening = new Rekening(ID, fooi, betaalwijze, tafelID, betaalstatus, opmerking);
                 
                 rekeningen.Add(rekening);
             }
@@ -42,7 +44,7 @@ namespace ChapooDAL
 
         public Rekening GetById(int rekeningID)
         {
-            string query = "SELECT ID, fooi, betaalwijze, tafelID, betaalstatus FROM Rekening WHERE ID = @id";
+            string query = "SELECT ID, fooi, betaalwijze, tafelID, betaalstatus, opmerking FROM Rekening WHERE ID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", rekeningID) };
             return ReadRekening(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -58,13 +60,35 @@ namespace ChapooDAL
                 string betaalwijze = (string)dr["betaalwijze"];
                 int tafelID = (int)dr["tafelID"];
                 bool betaalstatus = (bool)dr["betaalstatus"];
+                string opmerking = (string)dr["opmerking"];
 
-                rekening = new Rekening(ID, fooi, betaalwijze, tafelID, betaalstatus);
+                rekening = new Rekening(ID, fooi, betaalwijze, tafelID, betaalstatus, opmerking);
             }
 
             return rekening;
         }
 
+        public Rekening GetByTafelId(int TafelID)
+        {
+            string query = "SELECT ID, fooi, betaalwijze, tafelID, betaalstatus, opmerking FROM Rekening WHERE tafelID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", TafelID) };
+            return ReadRekening(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public void AddRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking)
+        {
+
+        }
+
+        public void EditRekening(int ID, float fooi, string betaalwijze, bool betaalStatus, string opmerking)
+        {
+
+        }
+
+        public void DeleteRekening(int RekeningID)
+        {
+
+        }
 
     }
 }

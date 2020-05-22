@@ -6,21 +6,25 @@ using System.Threading.Tasks;
 
 namespace ChapooModel
 {
-    public class Rekening
+    public class Rekening 
     {
         public int ID { get; set; }
         public float fooi { get; set; }
         public string betaalwijze { get; set; }
-        public int tafelID { get; set; }
         public bool betaalStatus { get;  set; }
+        public string opmerking { get; set; }
 
-        public Rekening(int id, float fooi, string betaalwijze, int tafelID, bool betaalStatus)
+        private Tafel tafel;
+
+
+        public Rekening(int ID, float fooi, string betaalwijze, bool betaalStatus, string opmerking, Tafel tafel)
         {
-            this.ID = id;
+            this.ID = ID;
             this.fooi = fooi;
             this.betaalwijze = betaalwijze;
-            this.tafelID = tafelID;
             this.betaalStatus = betaalStatus;
+            this.opmerking = opmerking;
+            this.tafel = tafel;
         }
     }
 }

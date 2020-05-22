@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace ChapooDAL
     {
         public List<Medewerker> Get_All_Medewerkers()
         {
-            string query = "SELECT ID, voornaam, achternaam, [type], werkstationID, inlogcode FROM Medewerker";
+            string query = "SELECT ID, voornaam, achternaam, [type], inlogcode FROM Medewerker";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadMedewerkers(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -29,10 +29,9 @@ namespace ChapooDAL
                 string voornaam = (string)dr["voornaam"];
                 string achternaam = (string)dr["achternaam"];
                 string type = (string)dr["[type]"];
-                int werkstationID = (int)dr["werkstationID"];
                 int inlogcode = (int)dr["inlogcode"];
 
-                Medewerker medewerker = new Medewerker(ID, voornaam, achternaam, type, werkstationID, inlogcode);
+                Medewerker medewerker = new Medewerker(ID, voornaam, achternaam, type, inlogcode);
 
                 medewerkers.Add(medewerker);
             }
@@ -42,7 +41,7 @@ namespace ChapooDAL
 
         public Medewerker GetById(int medewerkerID)
         {
-            string query = "SELECT ID, voornaam, achternaam, [type], werkstationID, inlogcode FROM Medewerker WHERE ID = @Id";
+            string query = "SELECT ID, voornaam, achternaam, [type], inlogcode FROM Medewerker WHERE ID = @Id";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", medewerkerID) };
             return ReadMedewerker(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -57,13 +56,26 @@ namespace ChapooDAL
                 string voornaam = (string)dr["voornaam"];
                 string achternaam = (string)dr["achternaam"];
                 string type = (string)dr["[type]"];
-                int werkstationID = (int)dr["werkstationID"];
                 int inlogcode = (int)dr["inlogcode"];
 
-                medewerker = new Medewerker(ID, voornaam, achternaam, type, werkstationID, inlogcode);
+                medewerker = new Medewerker(ID, voornaam, achternaam, type, inlogcode);
             }
 
             return medewerker;
+        }
+
+        public void AddNewMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
+        {
+            string query = "INSERT INTO Medewerker(ID, voornaam, achternaam, type, inlogcode)VALUES(@medewerkerID,@voornaam, @achternaam, @type, @inlogcode)";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", medewerkerID), new SqlParameter("@voornaam",voornaam), new SqlParameter("@type", achternaam), new SqlParameter("@type", type), new SqlParameter("@inlogcode", inlogcode) };
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        public void DeleteMedewerker(int medewerkerID)
+        {
+            string query = "DELETE * FROM Medewerker WHERE ID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter ("@id", medewerkerID)};
+            ExecuteEditQuery(query, sqlParameters);
         }
     }
 }

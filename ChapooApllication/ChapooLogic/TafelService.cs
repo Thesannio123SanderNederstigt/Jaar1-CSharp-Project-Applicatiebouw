@@ -10,7 +10,7 @@ using ChapooModel;
 namespace ChapooLogic
 {
 
-    public class TafelHandler
+    public class TafelService
     {
         private readonly TafelDAO Tafel_db = new TafelDAO();
 

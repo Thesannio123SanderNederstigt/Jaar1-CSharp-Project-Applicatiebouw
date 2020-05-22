@@ -15,22 +15,28 @@ namespace ChapooDAL
         // Get all MenuItems
         public List<MenuItem> Get_All_MenuItems()
         {
-            string query = "SELECT ID, menukaartID, omschrijving FROM MenuItem";
+            string query = "SELECT ID, menukaartsoort, categorie, prijs, btw, omschrijving, aantalInVoorraad FROM MenuItem";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
         }
+
 
         private List<MenuItem> ReadMenuItems(DataTable dataTable)
         {
             List<MenuItem> menuitems = new List<MenuItem>();
 
-            foreach(DataRow dr in dataTable.Rows)
+            foreach (DataRow dr in dataTable.Rows)
             {
                 int ID = (int)dr["ID"];
-                int menukaartID = (int)dr["menukaartID"];
+                string menukaartsoort = (string)dr["menukaartsoort"];
+                string categorie = (string)dr["categorie"];
+                float prijs = (float)dr["prijs"];
+                int btw = (int)dr["btw"];
                 string omschrijving = (string)dr["omschrijving"];
+                int aantalInVoorraad = (int)dr["aantalInVoorraad"];
 
-                MenuItem menuitem = new MenuItem(ID, menukaartID, omschrijving);
+
+                MenuItem menuitem = new MenuItem(ID, menukaartsoort, omschrijving, prijs, btw, aantalInVoorraad, categorie);
                 menuitems.Add(menuitem);
             }
             return menuitems;
@@ -39,7 +45,7 @@ namespace ChapooDAL
         //Get MenuItem by ID
         public MenuItem GetById(int menuitemID)
         {
-            string query = "SELECT ID, menukaartID, omschrijving FROM MenuItem WHERE ID = @id";
+            string query = "SELECT ID, menukaartsoort, categorie, prijs, btw, omschrijving, aantalInVoorraad FROM MenuItem WHERE ID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", menuitemID)};
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -51,10 +57,14 @@ namespace ChapooDAL
             foreach (DataRow dr in dataTable.Rows)
             {
                 int ID = (int)dr["ID"];
-                int menukaartID = (int)dr["menukaartID"];
+                string menukaartsoort = (string)dr["menukaartsoort"];
                 string omschrijving = (string)dr["omschrijving"];
+                float prijs = (float)dr["prijs"];
+                string categorie = (string)dr["categorie"];
+                int btw = (int)dr["btw"];
+                int aantalInVoorraad = (int)dr["aantalInVoorraad"];
 
-                menuitem = new MenuItem(ID, menukaartID, omschrijving);
+                menuitem = new MenuItem(ID, menukaartsoort, omschrijving, prijs, btw, aantalInVoorraad, categorie);
 
             }
 
