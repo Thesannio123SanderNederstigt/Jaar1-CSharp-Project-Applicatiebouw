@@ -8,27 +8,23 @@ namespace ChapooModel
 {
     public class Bestelling
     {
+        private List<MenuItem> menuitemlist = new List<MenuItem>();
         public int ID { get; set; }
-        public int aantal { get; set; }
         public DateTime besteltijd { get; set; }
         public bool status { get; set; }
         public int tafelID { get; set; }
         public int rekeningID { get; set; }
-        public int medewerkerID { get; set; }
-        public int menuItemID { get; set; }
+        public string opmerking { get; set; }
 
 
-        public Bestelling(int ID, int aantal, DateTime besteltijd, bool status, int tafelID, int rekeningID,
-            int medewerkerID, int menuItemID)
+        public Bestelling(int ID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             this.ID = ID;
-            this.aantal = aantal;
             this.besteltijd = besteltijd;
             this.status = status;
             this.tafelID = tafelID;
             this.rekeningID = rekeningID;
-            this.medewerkerID = medewerkerID;
-            this.menuItemID = menuItemID;
+            this.opmerking = opmerking;
         }
     }
 }
