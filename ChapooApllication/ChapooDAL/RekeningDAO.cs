@@ -75,19 +75,29 @@ namespace ChapooDAL
             return ReadRekening(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public void AddRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking)
+        public void AddRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking, int tafelID)
         {
+            string query = "INSERT INTO [Rekening] VALUES (@fooi, @betaalwijze, @betaalStatus, @opmerking, @tafelID)";
+            SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter("@fooi", fooi), new SqlParameter("@betaalwijze", betaalwijze),
+            new SqlParameter("@betaalStatus", betaalStatus), new SqlParameter("@opmerking", opmerking), new SqlParameter("@tafelID", tafelID)};
+            ExecuteEditQuery(query, sqlParameters);
 
         }
 
         public void EditRekening(int ID, float fooi, string betaalwijze, bool betaalStatus, string opmerking)
         {
-
+            string query = "UPDATE Rekening SET (fooi = @fooi, betaalwijze = @betaalwijze, betaalStatus = @betaalStatus, " +
+                "opmerking = @opmerking WHERE ID = @ID";
+            SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter("@fooi", fooi), new SqlParameter("@betaalwijze", betaalwijze),
+            new SqlParameter("@betaalStatus", betaalStatus), new SqlParameter("@opmerking", opmerking), new SqlParameter("@ID", ID)};
+            ExecuteEditQuery(query, sqlParameters);
         }
 
         public void DeleteRekening(int RekeningID)
         {
-
+            string query = "DELETE * FROM Rekening WHERE ID = @ID";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@ID", RekeningID) };
+            ExecuteEditQuery(query, sqlParameters);
         }
 
     }

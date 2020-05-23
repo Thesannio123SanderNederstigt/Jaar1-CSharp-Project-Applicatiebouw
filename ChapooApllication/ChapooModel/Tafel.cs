@@ -12,11 +12,14 @@ namespace ChapooModel
         public bool status { get; set; }
         public int medewerkerID { get; set; }
 
+        private Medewerker medewerker;
+
         public Tafel(int id, bool status, int medewerkerid)
         {
             this.ID = id;
             this.status = status;
             this.medewerkerID = medewerkerid;
+            
         }
     }
 }
