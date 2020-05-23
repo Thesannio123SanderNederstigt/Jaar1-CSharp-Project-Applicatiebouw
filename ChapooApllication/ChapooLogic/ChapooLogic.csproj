@@ -41,15 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BestellingHandler.cs" />
-    <Compile Include="RekeningHandler.cs" />
-    <Compile Include="KlantHandler.cs" />
-    <Compile Include="MedewerkerHandler.cs" />
-    <Compile Include="ProductHandler.cs" />
+    <Compile Include="BestellingService.cs" />
+    <Compile Include="MedewerkerService.cs" />
+    <Compile Include="MenuItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReserveringHandler.cs" />
-    <Compile Include="TafelHandler.cs" />
-    <Compile Include="WerkstationHandler.cs" />
+    <Compile Include="RekeningService.cs" />
+    <Compile Include="TafelService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ChapooDAL\ChapooDAL.csproj">

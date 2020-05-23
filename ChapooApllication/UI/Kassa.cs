@@ -19,13 +19,40 @@ namespace UI
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
 
-        private void button15_Click(object sender, EventArgs e)
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
->>>>>>> 6557e494ed4fb8aefaa3038d995528f7091b39e9
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnl_KassaDrankMenuoverizcht_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
