@@ -7,3 +7,8 @@ D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwReposi
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.LoginKassa.resources
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.LoginKeuken.resources
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Handheld.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bar.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache

@@ -14,9 +14,9 @@ namespace ChapooModel
         public string type { get; set; }
         public int inlogcode { get; set; }
 
-        public Medewerker(int id, string voornaam, string achternaam, string type, int inlogcode)
+        public Medewerker(int ID, string voornaam, string achternaam, string type, int inlogcode)
         {
-            this.ID = id;
+            this.ID = ID;
             this.voornaam = voornaam;
             this.achternaam = achternaam;
             this.type = type;

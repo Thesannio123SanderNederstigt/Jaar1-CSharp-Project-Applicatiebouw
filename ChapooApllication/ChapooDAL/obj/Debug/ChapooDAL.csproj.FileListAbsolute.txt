@@ -14,3 +14,4 @@ D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwReposi
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CopyComplete
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CoreCompileInputs.cache
