@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ChapooModel
-{
+{ 
     public class Tafel
     {
         public int ID { get; set; }
@@ -19,7 +19,6 @@ namespace ChapooModel
             this.ID = id;
             this.status = status;
             this.medewerkerID = medewerkerid;
-            
         }
     }
 }

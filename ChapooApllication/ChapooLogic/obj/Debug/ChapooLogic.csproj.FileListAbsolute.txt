@@ -1,1 +1,11 @@
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csprojAssemblyReference.cache
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.dll
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.dll
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooModel.dll
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooModel.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CoreCompileInputs.cache
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.dll
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.pdb

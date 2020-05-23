@@ -28,22 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl_HandheldLogin = new System.Windows.Forms.Panel();
-            this.btn_Numpadx = new System.Windows.Forms.Button();
-            this.btn_Numpad0 = new System.Windows.Forms.Button();
-            this.btn_Numpad3 = new System.Windows.Forms.Button();
-            this.btn_Numpad6 = new System.Windows.Forms.Button();
-            this.btn_Numpad2 = new System.Windows.Forms.Button();
-            this.btn_Numpad5 = new System.Windows.Forms.Button();
-            this.btn_Numpad1 = new System.Windows.Forms.Button();
-            this.btn_Numpad4 = new System.Windows.Forms.Button();
-            this.btn_Numpad9 = new System.Windows.Forms.Button();
-            this.btn_Numpad8 = new System.Windows.Forms.Button();
-            this.btn_Numpad7 = new System.Windows.Forms.Button();
-            this.lbl_HandheldLoginPincode = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_HandheldStart = new System.Windows.Forms.Panel();
             this.btn_HandheldTerug = new System.Windows.Forms.Button();
             this.btn_HandheldOpties = new System.Windows.Forms.Button();
@@ -80,6 +64,11 @@
             this.lbl_TijdDatum3 = new System.Windows.Forms.Label();
             this.pnl_HandheldKeuken = new System.Windows.Forms.Panel();
             this.lv_HandheldKeuken = new System.Windows.Forms.ListView();
+            this.HandheldKeukenID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HandheldKeukenTafel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HandheldKeukenDetails = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HandheldKeukenTijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HandheldKeukenStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txt_HandheldKeuken = new System.Windows.Forms.TextBox();
             this.btn_HandheldTerug5 = new System.Windows.Forms.Button();
             this.btn_HandheldOpties5 = new System.Windows.Forms.Button();
@@ -99,51 +88,44 @@
             this.lbl_TijdDatum4 = new System.Windows.Forms.Label();
             this.pnl_HandheldReserveringen = new System.Windows.Forms.Panel();
             this.lv_HandheldReserveringen = new System.Windows.Forms.ListView();
+            this.ReserveringenDatum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ReserveringenTijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ReserveringenNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ReserveringenTafel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txt_HandheldReserveringen = new System.Windows.Forms.TextBox();
             this.btn_HandheldTerug6 = new System.Windows.Forms.Button();
             this.btn_HandheldOpties6 = new System.Windows.Forms.Button();
             this.lbl_Gebruiker6 = new System.Windows.Forms.Label();
             this.lbl_TijdDatum6 = new System.Windows.Forms.Label();
-            this.ReserveringenDatum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ReserveringenTijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ReserveringenNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ReserveringenTafel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HandheldKeukenID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HandheldKeukenTafel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HandheldKeukenDetails = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HandheldKeukenTijd = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HandheldKeukenStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_HandheldTafelBestellen = new System.Windows.Forms.Panel();
+            this.btn_HandheldBestellenToevoegen = new System.Windows.Forms.Button();
+            this.btn_HandheldBestellenMin = new System.Windows.Forms.Button();
+            this.btn_HandheldBestellenPlus = new System.Windows.Forms.Button();
+            this.lv_BestellenLijst = new System.Windows.Forms.ListView();
+            this.HandheldBestellijstNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HandheldBestellijstPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HandheldBestellijstAantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_HandheldBestellenDrinken = new System.Windows.Forms.Button();
+            this.btn_HandheldBestellenEten = new System.Windows.Forms.Button();
             this.txt_HandheldBestellen = new System.Windows.Forms.TextBox();
             this.btn_HandheldTerug7 = new System.Windows.Forms.Button();
             this.btn_HandheldOpties7 = new System.Windows.Forms.Button();
             this.lbl_Gebruiker7 = new System.Windows.Forms.Label();
             this.lbl_TijdDatum7 = new System.Windows.Forms.Label();
-            this.btn_HandheldBestellenEten = new System.Windows.Forms.Button();
-            this.btn_HandheldBestellenDrinken = new System.Windows.Forms.Button();
-            this.lv_BestellenLijst = new System.Windows.Forms.ListView();
-            this.HandheldBestellijstNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HandheldBestellijstPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.HandheldBestellijstAantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_HandheldBestellenPlus = new System.Windows.Forms.Button();
-            this.btn_HandheldBestellenMin = new System.Windows.Forms.Button();
-            this.btn_HandheldBestellenToevoegen = new System.Windows.Forms.Button();
             this.pnl_HandheldTafelRekening = new System.Windows.Forms.Panel();
+            this.lbl_HandheldBestellingTotaal = new System.Windows.Forms.Label();
+            this.lv_HandheldRekeningTotaal = new System.Windows.Forms.ListView();
+            this.btn_HandheldRekeningAfrekenen = new System.Windows.Forms.Button();
+            this.lv_HandheldRekening = new System.Windows.Forms.ListView();
+            this.RekeningProduct = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RekeningPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RekeningBTW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RekeningAantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txt_HandheldRekeningTafel = new System.Windows.Forms.TextBox();
             this.btn_HandheldTerug8 = new System.Windows.Forms.Button();
             this.btn_HandheldOpties8 = new System.Windows.Forms.Button();
             this.lbl_Gebruiker8 = new System.Windows.Forms.Label();
             this.lbl_TijdDatum8 = new System.Windows.Forms.Label();
-            this.lv_HandheldRekening = new System.Windows.Forms.ListView();
-            this.btn_HandheldRekeningAfrekenen = new System.Windows.Forms.Button();
-            this.lv_HandheldRekeningTotaal = new System.Windows.Forms.ListView();
-            this.lbl_HandheldBestellingTotaal = new System.Windows.Forms.Label();
-            this.RekeningProduct = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RekeningPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RekeningBTW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RekeningAantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pnl_HandheldLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_HandheldStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_HandheldTafels.SuspendLayout();
@@ -154,164 +136,6 @@
             this.pnl_HandheldTafelBestellen.SuspendLayout();
             this.pnl_HandheldTafelRekening.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnl_HandheldLogin
-            // 
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpadx);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad0);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad3);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad6);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad2);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad5);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad1);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad4);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad9);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad8);
-            this.pnl_HandheldLogin.Controls.Add(this.btn_Numpad7);
-            this.pnl_HandheldLogin.Controls.Add(this.lbl_HandheldLoginPincode);
-            this.pnl_HandheldLogin.Controls.Add(this.textBox1);
-            this.pnl_HandheldLogin.Controls.Add(this.button12);
-            this.pnl_HandheldLogin.Controls.Add(this.pictureBox2);
-            this.pnl_HandheldLogin.Location = new System.Drawing.Point(0, 0);
-            this.pnl_HandheldLogin.Name = "pnl_HandheldLogin";
-            this.pnl_HandheldLogin.Size = new System.Drawing.Size(623, 921);
-            this.pnl_HandheldLogin.TabIndex = 22;
-            // 
-            // btn_Numpadx
-            // 
-            this.btn_Numpadx.Location = new System.Drawing.Point(356, 703);
-            this.btn_Numpadx.Name = "btn_Numpadx";
-            this.btn_Numpadx.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpadx.TabIndex = 36;
-            this.btn_Numpadx.Text = "x";
-            this.btn_Numpadx.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad0
-            // 
-            this.btn_Numpad0.Location = new System.Drawing.Point(177, 703);
-            this.btn_Numpad0.Name = "btn_Numpad0";
-            this.btn_Numpad0.Size = new System.Drawing.Size(172, 73);
-            this.btn_Numpad0.TabIndex = 35;
-            this.btn_Numpad0.Text = "0";
-            this.btn_Numpad0.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad3
-            // 
-            this.btn_Numpad3.Location = new System.Drawing.Point(355, 624);
-            this.btn_Numpad3.Name = "btn_Numpad3";
-            this.btn_Numpad3.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad3.TabIndex = 34;
-            this.btn_Numpad3.Text = "3";
-            this.btn_Numpad3.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad6
-            // 
-            this.btn_Numpad6.Location = new System.Drawing.Point(355, 545);
-            this.btn_Numpad6.Name = "btn_Numpad6";
-            this.btn_Numpad6.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad6.TabIndex = 33;
-            this.btn_Numpad6.Text = "6";
-            this.btn_Numpad6.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad2
-            // 
-            this.btn_Numpad2.Location = new System.Drawing.Point(266, 624);
-            this.btn_Numpad2.Name = "btn_Numpad2";
-            this.btn_Numpad2.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad2.TabIndex = 32;
-            this.btn_Numpad2.Text = "2";
-            this.btn_Numpad2.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad5
-            // 
-            this.btn_Numpad5.Location = new System.Drawing.Point(266, 545);
-            this.btn_Numpad5.Name = "btn_Numpad5";
-            this.btn_Numpad5.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad5.TabIndex = 31;
-            this.btn_Numpad5.Text = "5";
-            this.btn_Numpad5.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad1
-            // 
-            this.btn_Numpad1.Location = new System.Drawing.Point(177, 624);
-            this.btn_Numpad1.Name = "btn_Numpad1";
-            this.btn_Numpad1.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad1.TabIndex = 30;
-            this.btn_Numpad1.Text = "1";
-            this.btn_Numpad1.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad4
-            // 
-            this.btn_Numpad4.Location = new System.Drawing.Point(177, 545);
-            this.btn_Numpad4.Name = "btn_Numpad4";
-            this.btn_Numpad4.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad4.TabIndex = 29;
-            this.btn_Numpad4.Text = "4";
-            this.btn_Numpad4.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad9
-            // 
-            this.btn_Numpad9.Location = new System.Drawing.Point(355, 466);
-            this.btn_Numpad9.Name = "btn_Numpad9";
-            this.btn_Numpad9.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad9.TabIndex = 28;
-            this.btn_Numpad9.Text = "9";
-            this.btn_Numpad9.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad8
-            // 
-            this.btn_Numpad8.Location = new System.Drawing.Point(266, 466);
-            this.btn_Numpad8.Name = "btn_Numpad8";
-            this.btn_Numpad8.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad8.TabIndex = 27;
-            this.btn_Numpad8.Text = "8";
-            this.btn_Numpad8.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad7
-            // 
-            this.btn_Numpad7.Location = new System.Drawing.Point(177, 466);
-            this.btn_Numpad7.Name = "btn_Numpad7";
-            this.btn_Numpad7.Size = new System.Drawing.Size(83, 73);
-            this.btn_Numpad7.TabIndex = 26;
-            this.btn_Numpad7.Text = "7";
-            this.btn_Numpad7.UseVisualStyleBackColor = true;
-            // 
-            // lbl_HandheldLoginPincode
-            // 
-            this.lbl_HandheldLoginPincode.AutoSize = true;
-            this.lbl_HandheldLoginPincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_HandheldLoginPincode.Location = new System.Drawing.Point(229, 286);
-            this.lbl_HandheldLoginPincode.Name = "lbl_HandheldLoginPincode";
-            this.lbl_HandheldLoginPincode.Size = new System.Drawing.Size(120, 31);
-            this.lbl_HandheldLoginPincode.TabIndex = 25;
-            this.lbl_HandheldLoginPincode.Text = "Pincode:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(191, 360);
-            this.textBox1.MinimumSize = new System.Drawing.Size(200, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 20);
-            this.textBox1.TabIndex = 24;
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(162, 849);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(277, 48);
-            this.button12.TabIndex = 23;
-            this.button12.Text = "Inloggen";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(103, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(416, 244);
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
             // 
             // pnl_HandheldStart
             // 
@@ -693,6 +517,30 @@
             this.lv_HandheldKeuken.UseCompatibleStateImageBehavior = false;
             this.lv_HandheldKeuken.View = System.Windows.Forms.View.Details;
             // 
+            // HandheldKeukenID
+            // 
+            this.HandheldKeukenID.Text = "ID";
+            // 
+            // HandheldKeukenTafel
+            // 
+            this.HandheldKeukenTafel.Text = "Tafel";
+            this.HandheldKeukenTafel.Width = 68;
+            // 
+            // HandheldKeukenDetails
+            // 
+            this.HandheldKeukenDetails.Text = "Details";
+            this.HandheldKeukenDetails.Width = 255;
+            // 
+            // HandheldKeukenTijd
+            // 
+            this.HandheldKeukenTijd.Text = "Tijd";
+            this.HandheldKeukenTijd.Width = 84;
+            // 
+            // HandheldKeukenStatus
+            // 
+            this.HandheldKeukenStatus.Text = "Status";
+            this.HandheldKeukenStatus.Width = 92;
+            // 
             // txt_HandheldKeuken
             // 
             this.txt_HandheldKeuken.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -872,6 +720,26 @@
             this.lv_HandheldReserveringen.UseCompatibleStateImageBehavior = false;
             this.lv_HandheldReserveringen.View = System.Windows.Forms.View.Details;
             // 
+            // ReserveringenDatum
+            // 
+            this.ReserveringenDatum.Text = "Datum";
+            this.ReserveringenDatum.Width = 86;
+            // 
+            // ReserveringenTijd
+            // 
+            this.ReserveringenTijd.Text = "Tijd";
+            this.ReserveringenTijd.Width = 64;
+            // 
+            // ReserveringenNaam
+            // 
+            this.ReserveringenNaam.Text = "Naam";
+            this.ReserveringenNaam.Width = 333;
+            // 
+            // ReserveringenTafel
+            // 
+            this.ReserveringenTafel.Text = "Tafel";
+            this.ReserveringenTafel.Width = 78;
+            // 
             // txt_HandheldReserveringen
             // 
             this.txt_HandheldReserveringen.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -919,50 +787,6 @@
             this.lbl_TijdDatum6.TabIndex = 37;
             this.lbl_TijdDatum6.Text = "Datum en tijd";
             // 
-            // ReserveringenDatum
-            // 
-            this.ReserveringenDatum.Text = "Datum";
-            this.ReserveringenDatum.Width = 86;
-            // 
-            // ReserveringenTijd
-            // 
-            this.ReserveringenTijd.Text = "Tijd";
-            this.ReserveringenTijd.Width = 64;
-            // 
-            // ReserveringenNaam
-            // 
-            this.ReserveringenNaam.Text = "Naam";
-            this.ReserveringenNaam.Width = 333;
-            // 
-            // ReserveringenTafel
-            // 
-            this.ReserveringenTafel.Text = "Tafel";
-            this.ReserveringenTafel.Width = 78;
-            // 
-            // HandheldKeukenID
-            // 
-            this.HandheldKeukenID.Text = "ID";
-            // 
-            // HandheldKeukenTafel
-            // 
-            this.HandheldKeukenTafel.Text = "Tafel";
-            this.HandheldKeukenTafel.Width = 68;
-            // 
-            // HandheldKeukenDetails
-            // 
-            this.HandheldKeukenDetails.Text = "Details";
-            this.HandheldKeukenDetails.Width = 255;
-            // 
-            // HandheldKeukenTijd
-            // 
-            this.HandheldKeukenTijd.Text = "Tijd";
-            this.HandheldKeukenTijd.Width = 84;
-            // 
-            // HandheldKeukenStatus
-            // 
-            this.HandheldKeukenStatus.Text = "Status";
-            this.HandheldKeukenStatus.Width = 92;
-            // 
             // pnl_HandheldTafelBestellen
             // 
             this.pnl_HandheldTafelBestellen.Controls.Add(this.btn_HandheldBestellenToevoegen);
@@ -980,6 +804,80 @@
             this.pnl_HandheldTafelBestellen.Name = "pnl_HandheldTafelBestellen";
             this.pnl_HandheldTafelBestellen.Size = new System.Drawing.Size(623, 921);
             this.pnl_HandheldTafelBestellen.TabIndex = 44;
+            // 
+            // btn_HandheldBestellenToevoegen
+            // 
+            this.btn_HandheldBestellenToevoegen.Location = new System.Drawing.Point(177, 830);
+            this.btn_HandheldBestellenToevoegen.Name = "btn_HandheldBestellenToevoegen";
+            this.btn_HandheldBestellenToevoegen.Size = new System.Drawing.Size(246, 67);
+            this.btn_HandheldBestellenToevoegen.TabIndex = 52;
+            this.btn_HandheldBestellenToevoegen.Text = "Toevoegen";
+            this.btn_HandheldBestellenToevoegen.UseVisualStyleBackColor = true;
+            // 
+            // btn_HandheldBestellenMin
+            // 
+            this.btn_HandheldBestellenMin.Location = new System.Drawing.Point(54, 807);
+            this.btn_HandheldBestellenMin.Name = "btn_HandheldBestellenMin";
+            this.btn_HandheldBestellenMin.Size = new System.Drawing.Size(54, 40);
+            this.btn_HandheldBestellenMin.TabIndex = 51;
+            this.btn_HandheldBestellenMin.Text = "-";
+            this.btn_HandheldBestellenMin.UseVisualStyleBackColor = true;
+            // 
+            // btn_HandheldBestellenPlus
+            // 
+            this.btn_HandheldBestellenPlus.Location = new System.Drawing.Point(505, 807);
+            this.btn_HandheldBestellenPlus.Name = "btn_HandheldBestellenPlus";
+            this.btn_HandheldBestellenPlus.Size = new System.Drawing.Size(54, 40);
+            this.btn_HandheldBestellenPlus.TabIndex = 50;
+            this.btn_HandheldBestellenPlus.Text = "+";
+            this.btn_HandheldBestellenPlus.UseVisualStyleBackColor = true;
+            // 
+            // lv_BestellenLijst
+            // 
+            this.lv_BestellenLijst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.HandheldBestellijstNaam,
+            this.HandheldBestellijstPrijs,
+            this.HandheldBestellijstAantal});
+            this.lv_BestellenLijst.HideSelection = false;
+            this.lv_BestellenLijst.Location = new System.Drawing.Point(54, 258);
+            this.lv_BestellenLijst.Name = "lv_BestellenLijst";
+            this.lv_BestellenLijst.Size = new System.Drawing.Size(505, 543);
+            this.lv_BestellenLijst.TabIndex = 49;
+            this.lv_BestellenLijst.UseCompatibleStateImageBehavior = false;
+            this.lv_BestellenLijst.View = System.Windows.Forms.View.Details;
+            // 
+            // HandheldBestellijstNaam
+            // 
+            this.HandheldBestellijstNaam.Text = "Naam";
+            this.HandheldBestellijstNaam.Width = 353;
+            // 
+            // HandheldBestellijstPrijs
+            // 
+            this.HandheldBestellijstPrijs.Text = "Prijs";
+            this.HandheldBestellijstPrijs.Width = 87;
+            // 
+            // HandheldBestellijstAantal
+            // 
+            this.HandheldBestellijstAantal.Text = "Aantal";
+            this.HandheldBestellijstAantal.Width = 59;
+            // 
+            // btn_HandheldBestellenDrinken
+            // 
+            this.btn_HandheldBestellenDrinken.Location = new System.Drawing.Point(354, 159);
+            this.btn_HandheldBestellenDrinken.Name = "btn_HandheldBestellenDrinken";
+            this.btn_HandheldBestellenDrinken.Size = new System.Drawing.Size(246, 67);
+            this.btn_HandheldBestellenDrinken.TabIndex = 48;
+            this.btn_HandheldBestellenDrinken.Text = "Drinken";
+            this.btn_HandheldBestellenDrinken.UseVisualStyleBackColor = true;
+            // 
+            // btn_HandheldBestellenEten
+            // 
+            this.btn_HandheldBestellenEten.Location = new System.Drawing.Point(14, 159);
+            this.btn_HandheldBestellenEten.Name = "btn_HandheldBestellenEten";
+            this.btn_HandheldBestellenEten.Size = new System.Drawing.Size(246, 67);
+            this.btn_HandheldBestellenEten.TabIndex = 47;
+            this.btn_HandheldBestellenEten.Text = "Eten";
+            this.btn_HandheldBestellenEten.UseVisualStyleBackColor = true;
             // 
             // txt_HandheldBestellen
             // 
@@ -1028,83 +926,8 @@
             this.lbl_TijdDatum7.TabIndex = 42;
             this.lbl_TijdDatum7.Text = "Datum en tijd";
             // 
-            // btn_HandheldBestellenEten
-            // 
-            this.btn_HandheldBestellenEten.Location = new System.Drawing.Point(14, 159);
-            this.btn_HandheldBestellenEten.Name = "btn_HandheldBestellenEten";
-            this.btn_HandheldBestellenEten.Size = new System.Drawing.Size(246, 67);
-            this.btn_HandheldBestellenEten.TabIndex = 47;
-            this.btn_HandheldBestellenEten.Text = "Eten";
-            this.btn_HandheldBestellenEten.UseVisualStyleBackColor = true;
-            // 
-            // btn_HandheldBestellenDrinken
-            // 
-            this.btn_HandheldBestellenDrinken.Location = new System.Drawing.Point(354, 159);
-            this.btn_HandheldBestellenDrinken.Name = "btn_HandheldBestellenDrinken";
-            this.btn_HandheldBestellenDrinken.Size = new System.Drawing.Size(246, 67);
-            this.btn_HandheldBestellenDrinken.TabIndex = 48;
-            this.btn_HandheldBestellenDrinken.Text = "Drinken";
-            this.btn_HandheldBestellenDrinken.UseVisualStyleBackColor = true;
-            // 
-            // lv_BestellenLijst
-            // 
-            this.lv_BestellenLijst.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.HandheldBestellijstNaam,
-            this.HandheldBestellijstPrijs,
-            this.HandheldBestellijstAantal});
-            this.lv_BestellenLijst.HideSelection = false;
-            this.lv_BestellenLijst.Location = new System.Drawing.Point(54, 258);
-            this.lv_BestellenLijst.Name = "lv_BestellenLijst";
-            this.lv_BestellenLijst.Size = new System.Drawing.Size(505, 543);
-            this.lv_BestellenLijst.TabIndex = 49;
-            this.lv_BestellenLijst.UseCompatibleStateImageBehavior = false;
-            this.lv_BestellenLijst.View = System.Windows.Forms.View.Details;
-            // 
-            // HandheldBestellijstNaam
-            // 
-            this.HandheldBestellijstNaam.Text = "Naam";
-            this.HandheldBestellijstNaam.Width = 353;
-            // 
-            // HandheldBestellijstPrijs
-            // 
-            this.HandheldBestellijstPrijs.Text = "Prijs";
-            this.HandheldBestellijstPrijs.Width = 87;
-            // 
-            // HandheldBestellijstAantal
-            // 
-            this.HandheldBestellijstAantal.Text = "Aantal";
-            this.HandheldBestellijstAantal.Width = 59;
-            // 
-            // btn_HandheldBestellenPlus
-            // 
-            this.btn_HandheldBestellenPlus.Location = new System.Drawing.Point(505, 807);
-            this.btn_HandheldBestellenPlus.Name = "btn_HandheldBestellenPlus";
-            this.btn_HandheldBestellenPlus.Size = new System.Drawing.Size(54, 40);
-            this.btn_HandheldBestellenPlus.TabIndex = 50;
-            this.btn_HandheldBestellenPlus.Text = "+";
-            this.btn_HandheldBestellenPlus.UseVisualStyleBackColor = true;
-            // 
-            // btn_HandheldBestellenMin
-            // 
-            this.btn_HandheldBestellenMin.Location = new System.Drawing.Point(54, 807);
-            this.btn_HandheldBestellenMin.Name = "btn_HandheldBestellenMin";
-            this.btn_HandheldBestellenMin.Size = new System.Drawing.Size(54, 40);
-            this.btn_HandheldBestellenMin.TabIndex = 51;
-            this.btn_HandheldBestellenMin.Text = "-";
-            this.btn_HandheldBestellenMin.UseVisualStyleBackColor = true;
-            // 
-            // btn_HandheldBestellenToevoegen
-            // 
-            this.btn_HandheldBestellenToevoegen.Location = new System.Drawing.Point(177, 830);
-            this.btn_HandheldBestellenToevoegen.Name = "btn_HandheldBestellenToevoegen";
-            this.btn_HandheldBestellenToevoegen.Size = new System.Drawing.Size(246, 67);
-            this.btn_HandheldBestellenToevoegen.TabIndex = 52;
-            this.btn_HandheldBestellenToevoegen.Text = "Toevoegen";
-            this.btn_HandheldBestellenToevoegen.UseVisualStyleBackColor = true;
-            // 
             // pnl_HandheldTafelRekening
             // 
-            this.pnl_HandheldTafelRekening.Controls.Add(this.pnl_HandheldLogin);
             this.pnl_HandheldTafelRekening.Controls.Add(this.lbl_HandheldBestellingTotaal);
             this.pnl_HandheldTafelRekening.Controls.Add(this.lv_HandheldRekeningTotaal);
             this.pnl_HandheldTafelRekening.Controls.Add(this.btn_HandheldRekeningAfrekenen);
@@ -1118,6 +941,68 @@
             this.pnl_HandheldTafelRekening.Name = "pnl_HandheldTafelRekening";
             this.pnl_HandheldTafelRekening.Size = new System.Drawing.Size(623, 921);
             this.pnl_HandheldTafelRekening.TabIndex = 44;
+            // 
+            // lbl_HandheldBestellingTotaal
+            // 
+            this.lbl_HandheldBestellingTotaal.AutoSize = true;
+            this.lbl_HandheldBestellingTotaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_HandheldBestellingTotaal.Location = new System.Drawing.Point(218, 711);
+            this.lbl_HandheldBestellingTotaal.Name = "lbl_HandheldBestellingTotaal";
+            this.lbl_HandheldBestellingTotaal.Size = new System.Drawing.Size(133, 29);
+            this.lbl_HandheldBestellingTotaal.TabIndex = 50;
+            this.lbl_HandheldBestellingTotaal.Text = "Totaalprijs:";
+            // 
+            // lv_HandheldRekeningTotaal
+            // 
+            this.lv_HandheldRekeningTotaal.HideSelection = false;
+            this.lv_HandheldRekeningTotaal.Location = new System.Drawing.Point(177, 748);
+            this.lv_HandheldRekeningTotaal.Name = "lv_HandheldRekeningTotaal";
+            this.lv_HandheldRekeningTotaal.Size = new System.Drawing.Size(219, 57);
+            this.lv_HandheldRekeningTotaal.TabIndex = 49;
+            this.lv_HandheldRekeningTotaal.UseCompatibleStateImageBehavior = false;
+            // 
+            // btn_HandheldRekeningAfrekenen
+            // 
+            this.btn_HandheldRekeningAfrekenen.Location = new System.Drawing.Point(142, 844);
+            this.btn_HandheldRekeningAfrekenen.Name = "btn_HandheldRekeningAfrekenen";
+            this.btn_HandheldRekeningAfrekenen.Size = new System.Drawing.Size(296, 65);
+            this.btn_HandheldRekeningAfrekenen.TabIndex = 48;
+            this.btn_HandheldRekeningAfrekenen.Text = "Afrekenen";
+            this.btn_HandheldRekeningAfrekenen.UseVisualStyleBackColor = true;
+            // 
+            // lv_HandheldRekening
+            // 
+            this.lv_HandheldRekening.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.RekeningProduct,
+            this.RekeningPrijs,
+            this.RekeningBTW,
+            this.RekeningAantal});
+            this.lv_HandheldRekening.HideSelection = false;
+            this.lv_HandheldRekening.Location = new System.Drawing.Point(26, 170);
+            this.lv_HandheldRekening.Name = "lv_HandheldRekening";
+            this.lv_HandheldRekening.Size = new System.Drawing.Size(549, 509);
+            this.lv_HandheldRekening.TabIndex = 47;
+            this.lv_HandheldRekening.UseCompatibleStateImageBehavior = false;
+            this.lv_HandheldRekening.View = System.Windows.Forms.View.Details;
+            // 
+            // RekeningProduct
+            // 
+            this.RekeningProduct.Text = "Product";
+            this.RekeningProduct.Width = 269;
+            // 
+            // RekeningPrijs
+            // 
+            this.RekeningPrijs.Text = "Prijs";
+            this.RekeningPrijs.Width = 109;
+            // 
+            // RekeningBTW
+            // 
+            this.RekeningBTW.Text = "BTW";
+            this.RekeningBTW.Width = 99;
+            // 
+            // RekeningAantal
+            // 
+            this.RekeningAantal.Text = "Aantal";
             // 
             // txt_HandheldRekeningTafel
             // 
@@ -1166,68 +1051,6 @@
             this.lbl_TijdDatum8.TabIndex = 42;
             this.lbl_TijdDatum8.Text = "Datum en tijd";
             // 
-            // lv_HandheldRekening
-            // 
-            this.lv_HandheldRekening.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.RekeningProduct,
-            this.RekeningPrijs,
-            this.RekeningBTW,
-            this.RekeningAantal});
-            this.lv_HandheldRekening.HideSelection = false;
-            this.lv_HandheldRekening.Location = new System.Drawing.Point(26, 170);
-            this.lv_HandheldRekening.Name = "lv_HandheldRekening";
-            this.lv_HandheldRekening.Size = new System.Drawing.Size(549, 509);
-            this.lv_HandheldRekening.TabIndex = 47;
-            this.lv_HandheldRekening.UseCompatibleStateImageBehavior = false;
-            this.lv_HandheldRekening.View = System.Windows.Forms.View.Details;
-            // 
-            // btn_HandheldRekeningAfrekenen
-            // 
-            this.btn_HandheldRekeningAfrekenen.Location = new System.Drawing.Point(142, 844);
-            this.btn_HandheldRekeningAfrekenen.Name = "btn_HandheldRekeningAfrekenen";
-            this.btn_HandheldRekeningAfrekenen.Size = new System.Drawing.Size(296, 65);
-            this.btn_HandheldRekeningAfrekenen.TabIndex = 48;
-            this.btn_HandheldRekeningAfrekenen.Text = "Afrekenen";
-            this.btn_HandheldRekeningAfrekenen.UseVisualStyleBackColor = true;
-            // 
-            // lv_HandheldRekeningTotaal
-            // 
-            this.lv_HandheldRekeningTotaal.HideSelection = false;
-            this.lv_HandheldRekeningTotaal.Location = new System.Drawing.Point(177, 748);
-            this.lv_HandheldRekeningTotaal.Name = "lv_HandheldRekeningTotaal";
-            this.lv_HandheldRekeningTotaal.Size = new System.Drawing.Size(219, 57);
-            this.lv_HandheldRekeningTotaal.TabIndex = 49;
-            this.lv_HandheldRekeningTotaal.UseCompatibleStateImageBehavior = false;
-            // 
-            // lbl_HandheldBestellingTotaal
-            // 
-            this.lbl_HandheldBestellingTotaal.AutoSize = true;
-            this.lbl_HandheldBestellingTotaal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_HandheldBestellingTotaal.Location = new System.Drawing.Point(218, 711);
-            this.lbl_HandheldBestellingTotaal.Name = "lbl_HandheldBestellingTotaal";
-            this.lbl_HandheldBestellingTotaal.Size = new System.Drawing.Size(133, 29);
-            this.lbl_HandheldBestellingTotaal.TabIndex = 50;
-            this.lbl_HandheldBestellingTotaal.Text = "Totaalprijs:";
-            // 
-            // RekeningProduct
-            // 
-            this.RekeningProduct.Text = "Product";
-            this.RekeningProduct.Width = 269;
-            // 
-            // RekeningPrijs
-            // 
-            this.RekeningPrijs.Text = "Prijs";
-            this.RekeningPrijs.Width = 109;
-            // 
-            // RekeningBTW
-            // 
-            this.RekeningBTW.Text = "BTW";
-            this.RekeningBTW.Width = 99;
-            // 
-            // RekeningAantal
-            // 
-            this.RekeningAantal.Text = "Aantal";
-            // 
             // Handheld
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1243,9 +1066,6 @@
             this.Controls.Add(this.pnl_HandheldStart);
             this.Name = "Handheld";
             this.Text = "LoginHandheld";
-            this.pnl_HandheldLogin.ResumeLayout(false);
-            this.pnl_HandheldLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_HandheldStart.ResumeLayout(false);
             this.pnl_HandheldStart.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1268,23 +1088,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnl_HandheldLogin;
-        private System.Windows.Forms.Button btn_Numpadx;
-        private System.Windows.Forms.Button btn_Numpad0;
-        private System.Windows.Forms.Button btn_Numpad3;
-        private System.Windows.Forms.Button btn_Numpad6;
-        private System.Windows.Forms.Button btn_Numpad2;
-        private System.Windows.Forms.Button btn_Numpad5;
-        private System.Windows.Forms.Button btn_Numpad1;
-        private System.Windows.Forms.Button btn_Numpad4;
-        private System.Windows.Forms.Button btn_Numpad9;
-        private System.Windows.Forms.Button btn_Numpad8;
-        private System.Windows.Forms.Label lbl_HandheldLoginPincode;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btn_Numpad7;
         private System.Windows.Forms.Panel pnl_HandheldStart;
         private System.Windows.Forms.Button btn_HandheldTerug;
         private System.Windows.Forms.Button btn_HandheldOpties;
