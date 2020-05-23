@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ChapooModel
-{
+{ 
     public class Tafel
     {
         public int ID { get; set; }
         public bool status { get; set; }
         public int medewerkerID { get; set; }
+
+        private Medewerker medewerker;
 
         public Tafel(int id, bool status, int medewerkerid)
         {

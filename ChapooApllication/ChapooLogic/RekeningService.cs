@@ -21,8 +21,7 @@ namespace ChapooLogic
             catch(Exception)
             {
                 List<Rekening> fakerekeninglist = new List<Rekening>();
-                Tafel tafel = new Tafel(1, false, 1);
-                Rekening fakerekening = new Rekening(1, 1, "error", true, "error", tafel);
+                Rekening fakerekening = new Rekening(1, 1, "error", 1, true, "error");
                 fakerekeninglist.Add(fakerekening);
                 return fakerekeninglist;
             }
@@ -37,8 +36,7 @@ namespace ChapooLogic
             }
             catch(Exception)
             {
-                Tafel tafel = new Tafel(1, false, 1);
-                Rekening fakerekening = new Rekening(1, 1, "error", true, "error", tafel);
+                Rekening fakerekening = new Rekening(1, 1, "error", 1, true, "error");
                 return fakerekening;
             }
         }
@@ -51,16 +49,16 @@ namespace ChapooLogic
             }
             catch(Exception)
             {
-                Rekening fakerekening = new Rekening(1, 1, "error", true, "error", tafel);
+                Rekening fakerekening = new Rekening(1, 1, "error", 1, true, "error");
                 return fakerekening;
             }
         }
 
-        public void AddNewRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking)
+        public void AddNewRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking, int tafelID)
         {
             try
             {
-                Rekening_db.AddRekening(fooi, betaalwijze, betaalStatus, opmerking);
+                Rekening_db.AddRekening(fooi, betaalwijze, betaalStatus, opmerking, tafelID);
             }
             catch(Exception)
             {

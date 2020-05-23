@@ -8,15 +8,15 @@ namespace ChapooModel
 {
     public class Medewerker
     {
-        public int id { get; set; }
+        public int ID { get; set; }
         public string voornaam { get; set; }
         public string achternaam { get; set; }
         public string type { get; set; }
         public int inlogcode { get; set; }
 
-        public Medewerker(int id, string voornaam, string achternaam, string type, int inlogcode)
+        public Medewerker(int ID, string voornaam, string achternaam, string type, int inlogcode)
         {
-            this.id = id;
+            this.ID = ID;
             this.voornaam = voornaam;
             this.achternaam = achternaam;
             this.type = type;

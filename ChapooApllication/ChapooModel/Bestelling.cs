@@ -8,7 +8,7 @@ namespace ChapooModel
 {
     public class Bestelling
     {
-        private List<MenuItem> menuitemlist = new List<MenuItem>();
+        private List<MenuItem> menuItemlist = new List<MenuItem>();
         public int ID { get; set; }
         public DateTime besteltijd { get; set; }
         public bool status { get; set; }
