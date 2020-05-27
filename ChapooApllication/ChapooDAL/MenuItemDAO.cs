@@ -49,11 +49,20 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", menuitemID)};
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
-        public void  Db_GetMenuItem(string MenuKaartSoort, string SoortType)
+
+        //public void  Db_GetMenuItem(string MenuKaartSoort, string SoortType)
+        //{
+        //    string query = $"SELECT * FROM [MenuItem] Where [menukaartsoort] = '{MenuKaartSoort}' and categorie = '{SoortType}'";
+        //    SqlParameter[] sqlParameters = new SqlParameter[0];
+        //    ExecuteSelectQuery(query, sqlParameters);
+        //}
+
+        public MenuItem Db_GetMenuItem(string MenuKaartSoort, string SoortType)
         {
-            string query = $"SELECT * FROM [MenuItem] Where [menukaartsoort] = '{MenuKaartSoort}' and categorie = '{SoortType}'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            ExecuteSelectQuery(query, sqlParameters);
+            string query = "SELECT * FROM MenuItem Where menukaartsoort = @MenuKaartSoort and categorie = @SoortType";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@MenuKaartSoort", MenuKaartSoort),
+                new SqlParameter("@SoortType", SoortType) };
+            return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
         private MenuItem ReadMenuItem(DataTable dataTable)

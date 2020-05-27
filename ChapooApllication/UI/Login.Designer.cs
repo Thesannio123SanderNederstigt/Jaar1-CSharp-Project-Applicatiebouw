@@ -46,8 +46,11 @@
             this.btn_LoginWarningOK = new System.Windows.Forms.Button();
             this.lbl_LoginOnjuist = new System.Windows.Forms.Label();
             this.lbl_CurrentLogincode = new System.Windows.Forms.Label();
+            this.pnl_Login = new System.Windows.Forms.Panel();
+            this.btn_Login = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_LoginWarning.SuspendLayout();
+            this.pnl_Login.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_LoginScherm
@@ -201,12 +204,15 @@
             // 
             // pnl_LoginWarning
             // 
+            this.pnl_LoginWarning.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_LoginWarning.Controls.Add(this.btn_LoginWarningOK);
             this.pnl_LoginWarning.Controls.Add(this.lbl_LoginOnjuist);
+            this.pnl_LoginWarning.Enabled = false;
             this.pnl_LoginWarning.Location = new System.Drawing.Point(232, 310);
             this.pnl_LoginWarning.Name = "pnl_LoginWarning";
             this.pnl_LoginWarning.Size = new System.Drawing.Size(531, 158);
             this.pnl_LoginWarning.TabIndex = 24;
+            this.pnl_LoginWarning.Visible = false;
             // 
             // btn_LoginWarningOK
             // 
@@ -223,20 +229,53 @@
             // 
             this.lbl_LoginOnjuist.AutoSize = true;
             this.lbl_LoginOnjuist.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LoginOnjuist.Location = new System.Drawing.Point(139, 45);
+            this.lbl_LoginOnjuist.Location = new System.Drawing.Point(63, 45);
             this.lbl_LoginOnjuist.Name = "lbl_LoginOnjuist";
-            this.lbl_LoginOnjuist.Size = new System.Drawing.Size(310, 42);
+            this.lbl_LoginOnjuist.Size = new System.Drawing.Size(398, 42);
             this.lbl_LoginOnjuist.TabIndex = 25;
-            this.lbl_LoginOnjuist.Text = "Logincode onjuist";
+            this.lbl_LoginOnjuist.Text = "Voer een juiste code in";
             // 
             // lbl_CurrentLogincode
             // 
             this.lbl_CurrentLogincode.AutoSize = true;
-            this.lbl_CurrentLogincode.Location = new System.Drawing.Point(452, 150);
+            this.lbl_CurrentLogincode.Location = new System.Drawing.Point(464, 150);
             this.lbl_CurrentLogincode.Name = "lbl_CurrentLogincode";
-            this.lbl_CurrentLogincode.Size = new System.Drawing.Size(41, 15);
+            this.lbl_CurrentLogincode.Size = new System.Drawing.Size(0, 15);
             this.lbl_CurrentLogincode.TabIndex = 25;
-            this.lbl_CurrentLogincode.Text = "label1";
+            // 
+            // pnl_Login
+            // 
+            this.pnl_Login.Controls.Add(this.btn_Login);
+            this.pnl_Login.Controls.Add(this.pictureBox3);
+            this.pnl_Login.Controls.Add(this.lbl_LoginScherm);
+            this.pnl_Login.Controls.Add(this.Numpadx);
+            this.pnl_Login.Controls.Add(this.Numpad0);
+            this.pnl_Login.Controls.Add(this.Numpad1);
+            this.pnl_Login.Controls.Add(this.Numpad2);
+            this.pnl_Login.Controls.Add(this.Numpad3);
+            this.pnl_Login.Controls.Add(this.Numpad4);
+            this.pnl_Login.Controls.Add(this.Numpad5);
+            this.pnl_Login.Controls.Add(this.Numpad6);
+            this.pnl_Login.Controls.Add(this.Numpad7);
+            this.pnl_Login.Controls.Add(this.Numpad8);
+            this.pnl_Login.Controls.Add(this.Numpad9);
+            this.pnl_Login.Controls.Add(this.lbl_CurrentLogincode);
+            this.pnl_Login.Controls.Add(this.txt_LoginScherm);
+            this.pnl_Login.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Login.Name = "pnl_Login";
+            this.pnl_Login.Size = new System.Drawing.Size(1034, 815);
+            this.pnl_Login.TabIndex = 26;
+            // 
+            // btn_Login
+            // 
+            this.btn_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Login.Location = new System.Drawing.Point(770, 501);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(200, 257);
+            this.btn_Login.TabIndex = 26;
+            this.btn_Login.Text = "Log in";
+            this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // Login
             // 
@@ -244,29 +283,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1028, 805);
-            this.Controls.Add(this.lbl_CurrentLogincode);
             this.Controls.Add(this.pnl_LoginWarning);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.lbl_LoginScherm);
-            this.Controls.Add(this.Numpadx);
-            this.Controls.Add(this.Numpad0);
-            this.Controls.Add(this.Numpad3);
-            this.Controls.Add(this.Numpad2);
-            this.Controls.Add(this.Numpad6);
-            this.Controls.Add(this.Numpad5);
-            this.Controls.Add(this.Numpad1);
-            this.Controls.Add(this.Numpad4);
-            this.Controls.Add(this.Numpad9);
-            this.Controls.Add(this.Numpad8);
-            this.Controls.Add(this.Numpad7);
-            this.Controls.Add(this.txt_LoginScherm);
+            this.Controls.Add(this.pnl_Login);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_LoginWarning.ResumeLayout(false);
             this.pnl_LoginWarning.PerformLayout();
+            this.pnl_Login.ResumeLayout(false);
+            this.pnl_Login.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -290,5 +316,7 @@
         private System.Windows.Forms.Label lbl_LoginOnjuist;
         private System.Windows.Forms.Button btn_LoginWarningOK;
         private System.Windows.Forms.Label lbl_CurrentLogincode;
+        private System.Windows.Forms.Panel pnl_Login;
+        private System.Windows.Forms.Button btn_Login;
     }
 }
