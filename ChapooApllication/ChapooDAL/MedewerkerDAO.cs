@@ -14,7 +14,7 @@ namespace ChapooDAL
     {
         public List<Medewerker> Get_All_Medewerkers()
         {
-            string query = "SELECT ID, voornaam, achternaam, [type], inlogcode FROM Medewerker";
+            string query = "SELECT ID, voornaam, achternaam, type, inlogcode FROM Medewerker";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadMedewerkers(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -28,7 +28,7 @@ namespace ChapooDAL
                 int ID = (int)dr["ID"];
                 string voornaam = (string)dr["voornaam"];
                 string achternaam = (string)dr["achternaam"];
-                string type = (string)dr["[type]"];
+                string type = (string)dr["type"];
                 int inlogcode = (int)dr["inlogcode"];
 
                 Medewerker medewerker = new Medewerker(ID, voornaam, achternaam, type, inlogcode);
@@ -41,10 +41,18 @@ namespace ChapooDAL
 
         public Medewerker GetById(int medewerkerID)
         {
-            string query = "SELECT ID, voornaam, achternaam, [type], inlogcode FROM Medewerker WHERE ID = @Id";
+            string query = "SELECT ID, voornaam, achternaam, type, inlogcode FROM Medewerker WHERE ID = @Id";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", medewerkerID) };
             return ReadMedewerker(ExecuteSelectQuery(query, sqlParameters));
         }
+
+
+        public Medewerker GetByLogincode(int logincode)
+        {
+            string query = "SELECT ID, voornaam, achternaam, type, inlogcode FROM [Medewerker] WHERE inlogcode = @logincode";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@logincode", logincode) };
+            return ReadMedewerker(ExecuteSelectQuery(query, sqlParameters));
+        }   
 
         public Medewerker ReadMedewerker(DataTable dataTable)
         {
@@ -55,7 +63,7 @@ namespace ChapooDAL
                 int ID = (int)dr["ID"];
                 string voornaam = (string)dr["voornaam"];
                 string achternaam = (string)dr["achternaam"];
-                string type = (string)dr["[type]"];
+                string type = (string)dr["type"];
                 int inlogcode = (int)dr["inlogcode"];
 
                 medewerker = new Medewerker(ID, voornaam, achternaam, type, inlogcode);
@@ -77,5 +85,7 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter ("@id", medewerkerID)};
             ExecuteEditQuery(query, sqlParameters);
         }
+
+
     }
 }

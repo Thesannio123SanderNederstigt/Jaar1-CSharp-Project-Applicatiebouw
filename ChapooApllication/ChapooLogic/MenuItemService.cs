@@ -42,6 +42,9 @@ namespace ChapooLogic
             }
         }
         
-
+        public void ReadMenuItem(string MenuKaartSoort, string SoortType)
+        {
+            MenuItem_db.Db_GetMenuItem(MenuKaartSoort, SoortType);
+        }
     }
 }
