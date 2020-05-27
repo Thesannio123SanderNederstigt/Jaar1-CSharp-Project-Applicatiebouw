@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChapooLogic;
+using ChapooModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,26 +14,73 @@ namespace UI
 {
     public partial class Login : Form
     {
+        // method to hide all other panels
+        void HidePanels()
+        {
+            pnl_LoginWarning.Hide();
+        }
         public Login()
         {
             InitializeComponent();
+            HidePanels();
+
         }
 
         // Methode om de numpads naar een inlogcode te krijgen
-        private string loginString;
+        private string loginString = "";
         void LoginCodeGenerate(string givenValue)
         {
-            loginString += givenValue;
-            if(loginString.Length >= 4)
+            if (loginString.Length >= 1 && givenValue == "X")
+            {
+                loginString = loginString.Remove(loginString.Length - 1, 1);
+            } else if(loginString.Length == 0 && givenValue == "X")
+            {
+                loginString = "";
+            }
+            else
+            {
+                loginString += givenValue;
+            }
+            lbl_CurrentLogincode.Text = loginString;
+
+
+            if (loginString.Length == 4)
             {
                 int loginCode = int.Parse(loginString);
+                MedewerkerService medewerkerservice = new MedewerkerService();
+                Medewerker medewerker = medewerkerservice.GetByLogincode(loginCode);
+
+                if (medewerker.type == "eigenaar")
+                {
+                    Kassa kassa = new Kassa();
+                    kassa.Show();
+                }if(medewerker.type == "chef-kok")
+                {
+                    Keuken keuken = new Keuken();
+                    keuken.Show();
+                }if(medewerker.type == "bediening")
+                {
+                    Handheld handheld = new Handheld();
+                    handheld.Show();
+                } if(medewerker.type == "barmedewerker")
+                {
+                    Bar bar = new Bar();
+                    bar.Show();
+                }
+                else if(medewerker == null)
+                {
+                    pnl_LoginWarning.Show();
+                }
+
+                loginString = "";
+                lbl_CurrentLogincode.Text = medewerker.voornaam;
             }
         }
 
         // Numpad Button functies
         private void Numpadx_Click(object sender, EventArgs e)
         {
-
+            LoginCodeGenerate("X");
         }
         private void Numpad0_Click(object sender, EventArgs e)
         {
@@ -81,6 +130,11 @@ namespace UI
         private void Numpad9_Click(object sender, EventArgs e)
         {
             LoginCodeGenerate(Numpad9.Text);
+        }
+
+        private void btn_LoginWarningOK_Click(object sender, EventArgs e)
+        {
+            HidePanels();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace ChapooLogic
             catch(Exception)
             {
                 List<Medewerker> fakemedewerkerlist = new List<Medewerker>();
-                Medewerker fakemedewerker = new Medewerker(1, "error", "something went wrong", "oh no", 1);
+                Medewerker fakemedewerker = new Medewerker(99999999, "error", "something went wrong", "oh no", 9999);
                 return fakemedewerkerlist;
             }
 
@@ -36,8 +36,21 @@ namespace ChapooLogic
             }
             catch(Exception)
             {
-                Medewerker fakemedewerker = new Medewerker(1, "error", "something went wrong", "oh no", 1);
+                Medewerker fakemedewerker = new Medewerker(9999999, "error", "something went wrong", "oh no", 9999);
                 return fakemedewerker;
+            }
+        }
+
+        public Medewerker GetByLogincode(int loginCode)
+        {
+            try
+            {
+                return Medewerker_db.GetByLogincode(loginCode);
+            }
+            catch (Exception)
+            {
+                Medewerker fakeMedewerker = new Medewerker(1, "Query error logincode", "news:", "nonExisting", 0000);
+                return fakeMedewerker;
             }
         }
 
@@ -64,5 +77,7 @@ namespace ChapooLogic
                 throw new Exception("Could not delete a Medewerker.");
             }
         }
+
+
     }
 }
