@@ -12,3 +12,13 @@ D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwReposi
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bar.resources
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Handheld.resources
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache

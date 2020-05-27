@@ -52,6 +52,12 @@
     <Compile Include="Bar.Designer.cs">
       <DependentUpon>Bar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bediening.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bediening.Designer.cs">
+      <DependentUpon>Bediening.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handheld.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bar.resx">
       <DependentUpon>Bar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bediening.resx">
+      <DependentUpon>Bediening.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Handheld.resx">
       <DependentUpon>Handheld.cs</DependentUpon>
