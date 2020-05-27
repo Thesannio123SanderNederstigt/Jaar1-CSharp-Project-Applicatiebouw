@@ -15,6 +15,7 @@ namespace UI
         public Bar()
         {
             InitializeComponent();
+            lbl_User.Text = Login.Username;
         }
     }
 }
