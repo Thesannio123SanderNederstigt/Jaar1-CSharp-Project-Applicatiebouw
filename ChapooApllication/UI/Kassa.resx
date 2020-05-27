@@ -384,7 +384,7 @@
         5AuH+cZfRhpQAeQhe2kK+eP/g2ZUtIpfVNThp6GiVP4DvXmMOOdTV1cAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBx_TerugNaarHoofdscherm3_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBx_TerugNaarHoofdscherm1_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAABGdBTUEAALGPC/xhBQAAAh5JREFUWEft
         2TtrFGEUh/E0FtEUgXgr0kiaFOlt1SLxgpp8GEtLP41NbKy9gGA0CH4EEQsvUcQLaqI+z8IZJuG88E5m
@@ -399,7 +399,7 @@
         IN/IAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBx_TerugDinermenuOverzicht_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAIAAADY27xgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAABTtJREFUWEftmFlIlWkYxw9oappli9u4tnhhExFpFwqJOoFLOohb4JWKmeSFKFFq
@@ -427,7 +427,7 @@
         5AuH+cZfRhpQAeQhe2kK+eP/g2ZUtIpfVNThp6GiVP4DvXmMOOdTV1cAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBx_TerugNaarHoofdscherm1_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBx_TerugNaarHoofdscherm3_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAABGdBTUEAALGPC/xhBQAAAh5JREFUWEft
         2TtrFGEUh/E0FtEUgXgr0kiaFOlt1SLxgpp8GEtLP41NbKy9gGA0CH4EEQsvUcQLaqI+z8IZJuG88E5m
@@ -442,7 +442,7 @@
         IN/IAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBx_TerugDinermenuOverzicht_Kassa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAIAAADY27xgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAABTtJREFUWEftmFlIlWkYxw9oappli9u4tnhhExFpFwqJOoFLOohb4JWKmeSFKFFq
