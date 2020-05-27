@@ -19,7 +19,8 @@ namespace UI
 
         private void Bediening_Load(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToLongDateString();
+            lblB2.Text = DateTime.Now.ToShortDateString();
+            lblB1.Text = DateTime.Now.ToShortTimeString();
         }
 
         private void button1_Click(object sender, EventArgs e)
