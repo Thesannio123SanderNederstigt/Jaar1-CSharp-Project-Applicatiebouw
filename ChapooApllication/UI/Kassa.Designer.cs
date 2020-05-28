@@ -2421,6 +2421,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_KassaLunchMenuoverizcht);
             this.Controls.Add(this.pnl_KassaVoorraadoverzichtDrank);
@@ -2428,7 +2429,6 @@
             this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
             this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
             this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
-            this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaTafeloverzicht);
             this.Controls.Add(this.pnl_KassaVoorraadKeuze);
             this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
