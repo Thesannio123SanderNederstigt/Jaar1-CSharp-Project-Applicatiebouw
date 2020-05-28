@@ -40,6 +40,7 @@
             "Revers",
             "chef-kok",
             "1112"}, -1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kassa));
             this.lbl_KassaPincode = new System.Windows.Forms.Label();
             this.btn_KassaLogin = new System.Windows.Forms.Button();
             this.txt_KassaPincode = new System.Windows.Forms.TextBox();
@@ -108,21 +109,21 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pnl_KassaVoorraadoverzichtGerecht = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaVoorraadoverzichtDrank = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -140,17 +141,32 @@
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaVoorraadKeuze = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaMenuoverzichtKeuze = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.pnl_KassaDrankMenuoverzicht = new System.Windows.Forms.Panel();
+            this.button37 = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.button31 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
@@ -160,28 +176,13 @@
             this.listView3 = new System.Windows.Forms.ListView();
             this.drankmenuID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuOmschrijving = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.drankmenuAantalvoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuBTW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuCategorie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuSoort = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button37 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaLunchMenuoverizcht = new System.Windows.Forms.Panel();
             this.button38 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
@@ -276,125 +277,139 @@
             // 
             this.lbl_KassaPincode.AutoSize = true;
             this.lbl_KassaPincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KassaPincode.Location = new System.Drawing.Point(422, 281);
+            this.lbl_KassaPincode.Location = new System.Drawing.Point(563, 346);
+            this.lbl_KassaPincode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_KassaPincode.Name = "lbl_KassaPincode";
-            this.lbl_KassaPincode.Size = new System.Drawing.Size(120, 31);
+            this.lbl_KassaPincode.Size = new System.Drawing.Size(150, 39);
             this.lbl_KassaPincode.TabIndex = 0;
             this.lbl_KassaPincode.Text = "Pincode:";
             // 
             // btn_KassaLogin
             // 
             this.btn_KassaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KassaLogin.Location = new System.Drawing.Point(353, 663);
+            this.btn_KassaLogin.Location = new System.Drawing.Point(471, 816);
+            this.btn_KassaLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaLogin.Name = "btn_KassaLogin";
-            this.btn_KassaLogin.Size = new System.Drawing.Size(277, 54);
+            this.btn_KassaLogin.Size = new System.Drawing.Size(369, 66);
             this.btn_KassaLogin.TabIndex = 1;
             this.btn_KassaLogin.Text = "Inloggen";
             this.btn_KassaLogin.UseVisualStyleBackColor = true;
             // 
             // txt_KassaPincode
             // 
-            this.txt_KassaPincode.Location = new System.Drawing.Point(382, 315);
-            this.txt_KassaPincode.MinimumSize = new System.Drawing.Size(200, 30);
+            this.txt_KassaPincode.Location = new System.Drawing.Point(509, 388);
+            this.txt_KassaPincode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_KassaPincode.MinimumSize = new System.Drawing.Size(265, 30);
             this.txt_KassaPincode.Name = "txt_KassaPincode";
-            this.txt_KassaPincode.Size = new System.Drawing.Size(207, 20);
+            this.txt_KassaPincode.Size = new System.Drawing.Size(275, 22);
             this.txt_KassaPincode.TabIndex = 7;
             // 
             // btn_Numpad7
             // 
-            this.btn_Numpad7.Location = new System.Drawing.Point(382, 367);
+            this.btn_Numpad7.Location = new System.Drawing.Point(509, 452);
+            this.btn_Numpad7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad7.Name = "btn_Numpad7";
-            this.btn_Numpad7.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad7.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad7.TabIndex = 23;
             this.btn_Numpad7.Text = "7";
             this.btn_Numpad7.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad8
             // 
-            this.btn_Numpad8.Location = new System.Drawing.Point(453, 367);
+            this.btn_Numpad8.Location = new System.Drawing.Point(604, 452);
+            this.btn_Numpad8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad8.Name = "btn_Numpad8";
-            this.btn_Numpad8.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad8.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad8.TabIndex = 24;
             this.btn_Numpad8.Text = "8";
             this.btn_Numpad8.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad9
             // 
-            this.btn_Numpad9.Location = new System.Drawing.Point(524, 367);
+            this.btn_Numpad9.Location = new System.Drawing.Point(699, 452);
+            this.btn_Numpad9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad9.Name = "btn_Numpad9";
-            this.btn_Numpad9.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad9.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad9.TabIndex = 25;
             this.btn_Numpad9.Text = "9";
             this.btn_Numpad9.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad4
             // 
-            this.btn_Numpad4.Location = new System.Drawing.Point(382, 428);
+            this.btn_Numpad4.Location = new System.Drawing.Point(509, 527);
+            this.btn_Numpad4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad4.Name = "btn_Numpad4";
-            this.btn_Numpad4.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad4.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad4.TabIndex = 26;
             this.btn_Numpad4.Text = "4";
             this.btn_Numpad4.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad5
             // 
-            this.btn_Numpad5.Location = new System.Drawing.Point(453, 428);
+            this.btn_Numpad5.Location = new System.Drawing.Point(604, 527);
+            this.btn_Numpad5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad5.Name = "btn_Numpad5";
-            this.btn_Numpad5.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad5.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad5.TabIndex = 27;
             this.btn_Numpad5.Text = "5";
             this.btn_Numpad5.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad6
             // 
-            this.btn_Numpad6.Location = new System.Drawing.Point(524, 428);
+            this.btn_Numpad6.Location = new System.Drawing.Point(699, 527);
+            this.btn_Numpad6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad6.Name = "btn_Numpad6";
-            this.btn_Numpad6.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad6.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad6.TabIndex = 28;
             this.btn_Numpad6.Text = "6";
             this.btn_Numpad6.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad1
             // 
-            this.btn_Numpad1.Location = new System.Drawing.Point(382, 489);
+            this.btn_Numpad1.Location = new System.Drawing.Point(509, 602);
+            this.btn_Numpad1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad1.Name = "btn_Numpad1";
-            this.btn_Numpad1.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad1.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad1.TabIndex = 29;
             this.btn_Numpad1.Text = "1";
             this.btn_Numpad1.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad2
             // 
-            this.btn_Numpad2.Location = new System.Drawing.Point(453, 489);
+            this.btn_Numpad2.Location = new System.Drawing.Point(604, 602);
+            this.btn_Numpad2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad2.Name = "btn_Numpad2";
-            this.btn_Numpad2.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad2.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad2.TabIndex = 30;
             this.btn_Numpad2.Text = "2";
             this.btn_Numpad2.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad3
             // 
-            this.btn_Numpad3.Location = new System.Drawing.Point(524, 489);
+            this.btn_Numpad3.Location = new System.Drawing.Point(699, 602);
+            this.btn_Numpad3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad3.Name = "btn_Numpad3";
-            this.btn_Numpad3.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpad3.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpad3.TabIndex = 31;
             this.btn_Numpad3.Text = "3";
             this.btn_Numpad3.UseVisualStyleBackColor = true;
             // 
             // btn_Numpad0
             // 
-            this.btn_Numpad0.Location = new System.Drawing.Point(382, 550);
+            this.btn_Numpad0.Location = new System.Drawing.Point(509, 677);
+            this.btn_Numpad0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpad0.Name = "btn_Numpad0";
-            this.btn_Numpad0.Size = new System.Drawing.Size(136, 55);
+            this.btn_Numpad0.Size = new System.Drawing.Size(181, 68);
             this.btn_Numpad0.TabIndex = 32;
             this.btn_Numpad0.Text = "0";
             this.btn_Numpad0.UseVisualStyleBackColor = true;
             // 
             // btn_Numpadx
             // 
-            this.btn_Numpadx.Location = new System.Drawing.Point(524, 550);
+            this.btn_Numpadx.Location = new System.Drawing.Point(699, 677);
+            this.btn_Numpadx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Numpadx.Name = "btn_Numpadx";
-            this.btn_Numpadx.Size = new System.Drawing.Size(65, 55);
+            this.btn_Numpadx.Size = new System.Drawing.Size(87, 68);
             this.btn_Numpadx.TabIndex = 34;
             this.btn_Numpadx.Text = "x";
             this.btn_Numpadx.UseVisualStyleBackColor = true;
@@ -402,9 +417,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(290, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(387, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(416, 244);
+            this.pictureBox1.Size = new System.Drawing.Size(555, 300);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -418,60 +434,67 @@
             this.pnl_KassaHoofdscherm.Controls.Add(this.button1);
             this.pnl_KassaHoofdscherm.Controls.Add(this.pictureBox2);
             this.pnl_KassaHoofdscherm.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaHoofdscherm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaHoofdscherm.Name = "pnl_KassaHoofdscherm";
-            this.pnl_KassaHoofdscherm.Size = new System.Drawing.Size(1008, 736);
+            this.pnl_KassaHoofdscherm.Size = new System.Drawing.Size(1344, 906);
             this.pnl_KassaHoofdscherm.TabIndex = 35;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 12);
+            this.label1.Location = new System.Drawing.Point(585, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Hoofdscherm";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(421, 510);
+            this.button5.Location = new System.Drawing.Point(561, 628);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(176, 167);
+            this.button5.Size = new System.Drawing.Size(235, 206);
             this.button5.TabIndex = 9;
             this.button5.Text = "Tafeloverzicht";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(185, 510);
+            this.button4.Location = new System.Drawing.Point(247, 628);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(176, 167);
+            this.button4.Size = new System.Drawing.Size(235, 206);
             this.button4.TabIndex = 8;
             this.button4.Text = "Personeelsbeheer";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(676, 314);
+            this.button3.Location = new System.Drawing.Point(901, 386);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(176, 167);
+            this.button3.Size = new System.Drawing.Size(235, 206);
             this.button3.TabIndex = 7;
             this.button3.Text = "Bestellingen";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(421, 312);
+            this.button2.Location = new System.Drawing.Point(561, 384);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 167);
+            this.button2.Size = new System.Drawing.Size(235, 206);
             this.button2.TabIndex = 6;
             this.button2.Text = "Voorraad";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(185, 316);
+            this.button1.Location = new System.Drawing.Point(247, 389);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 167);
+            this.button1.Size = new System.Drawing.Size(235, 206);
             this.button1.TabIndex = 5;
             this.button1.Text = "Menu Overzicht";
             this.button1.UseVisualStyleBackColor = true;
@@ -479,9 +502,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(290, 41);
+            this.pictureBox2.Location = new System.Drawing.Point(387, 50);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(416, 236);
+            this.pictureBox2.Size = new System.Drawing.Size(555, 290);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -489,26 +513,29 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(439, 9);
+            this.label2.Location = new System.Drawing.Point(585, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Keuze bestelling";
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(282, 312);
+            this.button6.Location = new System.Drawing.Point(376, 384);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(168, 165);
+            this.button6.Size = new System.Drawing.Size(224, 203);
             this.button6.TabIndex = 6;
             this.button6.Text = "Bar";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(538, 316);
+            this.button7.Location = new System.Drawing.Point(717, 389);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(168, 165);
+            this.button7.Size = new System.Drawing.Size(224, 203);
             this.button7.TabIndex = 7;
             this.button7.Text = "Keuken";
             this.button7.UseVisualStyleBackColor = true;
@@ -521,16 +548,18 @@
             this.pnl_KassaKeuzeBestellingen.Controls.Add(this.button6);
             this.pnl_KassaKeuzeBestellingen.Controls.Add(this.label2);
             this.pnl_KassaKeuzeBestellingen.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaKeuzeBestellingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaKeuzeBestellingen.Name = "pnl_KassaKeuzeBestellingen";
-            this.pnl_KassaKeuzeBestellingen.Size = new System.Drawing.Size(1005, 730);
+            this.pnl_KassaKeuzeBestellingen.Size = new System.Drawing.Size(1340, 898);
             this.pnl_KassaKeuzeBestellingen.TabIndex = 11;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(342, 70);
+            this.pictureBox3.Location = new System.Drawing.Point(456, 86);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(313, 165);
+            this.pictureBox3.Size = new System.Drawing.Size(417, 203);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -546,79 +575,88 @@
             this.pnl_Inkomstenoverzicht.Controls.Add(this.label4);
             this.pnl_Inkomstenoverzicht.Controls.Add(this.label3);
             this.pnl_Inkomstenoverzicht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_Inkomstenoverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_Inkomstenoverzicht.Name = "pnl_Inkomstenoverzicht";
-            this.pnl_Inkomstenoverzicht.Size = new System.Drawing.Size(1008, 736);
+            this.pnl_Inkomstenoverzicht.Size = new System.Drawing.Size(1344, 906);
             this.pnl_Inkomstenoverzicht.TabIndex = 11;
             // 
             // lbl_InkomstenoverzichtJaar
             // 
             this.lbl_InkomstenoverzichtJaar.AutoSize = true;
-            this.lbl_InkomstenoverzichtJaar.Location = new System.Drawing.Point(510, 648);
+            this.lbl_InkomstenoverzichtJaar.Location = new System.Drawing.Point(680, 798);
+            this.lbl_InkomstenoverzichtJaar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_InkomstenoverzichtJaar.Name = "lbl_InkomstenoverzichtJaar";
-            this.lbl_InkomstenoverzichtJaar.Size = new System.Drawing.Size(42, 13);
+            this.lbl_InkomstenoverzichtJaar.Size = new System.Drawing.Size(55, 17);
             this.lbl_InkomstenoverzichtJaar.TabIndex = 7;
             this.lbl_InkomstenoverzichtJaar.Text = "[aantal]";
             // 
             // lbl_InkomstenoverzichtMaand
             // 
             this.lbl_InkomstenoverzichtMaand.AutoSize = true;
-            this.lbl_InkomstenoverzichtMaand.Location = new System.Drawing.Point(510, 619);
+            this.lbl_InkomstenoverzichtMaand.Location = new System.Drawing.Point(680, 762);
+            this.lbl_InkomstenoverzichtMaand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_InkomstenoverzichtMaand.Name = "lbl_InkomstenoverzichtMaand";
-            this.lbl_InkomstenoverzichtMaand.Size = new System.Drawing.Size(42, 13);
+            this.lbl_InkomstenoverzichtMaand.Size = new System.Drawing.Size(55, 17);
             this.lbl_InkomstenoverzichtMaand.TabIndex = 6;
             this.lbl_InkomstenoverzichtMaand.Text = "[aantal]";
             // 
             // lbl_KassaInkomstenoverzichtVandaag
             // 
             this.lbl_KassaInkomstenoverzichtVandaag.AutoSize = true;
-            this.lbl_KassaInkomstenoverzichtVandaag.Location = new System.Drawing.Point(510, 595);
+            this.lbl_KassaInkomstenoverzichtVandaag.Location = new System.Drawing.Point(680, 732);
+            this.lbl_KassaInkomstenoverzichtVandaag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_KassaInkomstenoverzichtVandaag.Name = "lbl_KassaInkomstenoverzichtVandaag";
-            this.lbl_KassaInkomstenoverzichtVandaag.Size = new System.Drawing.Size(42, 13);
+            this.lbl_KassaInkomstenoverzichtVandaag.Size = new System.Drawing.Size(55, 17);
             this.lbl_KassaInkomstenoverzichtVandaag.TabIndex = 5;
             this.lbl_KassaInkomstenoverzichtVandaag.Text = "[aantal]";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(379, 571);
+            this.label7.Location = new System.Drawing.Point(505, 703);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 13);
+            this.label7.Size = new System.Drawing.Size(145, 17);
             this.label7.TabIndex = 4;
             this.label7.Text = "Overzicht breakdown:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(380, 648);
+            this.label6.Location = new System.Drawing.Point(507, 798);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 13);
+            this.label6.Size = new System.Drawing.Size(126, 17);
             this.label6.TabIndex = 3;
             this.label6.Text = "Huidige jaaromzet:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(380, 619);
+            this.label5.Location = new System.Drawing.Point(507, 762);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.Size = new System.Drawing.Size(92, 17);
             this.label5.TabIndex = 2;
             this.label5.Text = "Deze maand:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(379, 595);
+            this.label4.Location = new System.Drawing.Point(505, 732);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Vandaag:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(450, 25);
+            this.label3.Location = new System.Drawing.Point(600, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.Size = new System.Drawing.Size(136, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Inkomsten Overzicht";
             // 
@@ -640,16 +678,18 @@
             this.pnl_KassaTafeloverzicht.Controls.Add(this.btn_KassaTafel1);
             this.pnl_KassaTafeloverzicht.Controls.Add(this.label8);
             this.pnl_KassaTafeloverzicht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaTafeloverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaTafeloverzicht.Name = "pnl_KassaTafeloverzicht";
-            this.pnl_KassaTafeloverzicht.Size = new System.Drawing.Size(1008, 733);
+            this.pnl_KassaTafeloverzicht.Size = new System.Drawing.Size(1344, 902);
             this.pnl_KassaTafeloverzicht.TabIndex = 8;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox4.Location = new System.Drawing.Point(843, 9);
+            this.pictureBox4.Location = new System.Drawing.Point(1124, 11);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(139, 82);
+            this.pictureBox4.Size = new System.Drawing.Size(185, 101);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -657,107 +697,119 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(293, 657);
+            this.label10.Location = new System.Drawing.Point(391, 809);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 13);
+            this.label10.Size = new System.Drawing.Size(40, 17);
             this.label10.TabIndex = 12;
             this.label10.Text = "= Vrij";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(293, 630);
+            this.label9.Location = new System.Drawing.Point(391, 775);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.Size = new System.Drawing.Size(56, 17);
             this.label9.TabIndex = 11;
             this.label9.Text = "= Bezet";
             // 
             // btn_KassaTafel10
             // 
-            this.btn_KassaTafel10.Location = new System.Drawing.Point(421, 578);
+            this.btn_KassaTafel10.Location = new System.Drawing.Point(561, 711);
+            this.btn_KassaTafel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel10.Name = "btn_KassaTafel10";
-            this.btn_KassaTafel10.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel10.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel10.TabIndex = 10;
             this.btn_KassaTafel10.Text = "Tafel 10";
             this.btn_KassaTafel10.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel9
             // 
-            this.btn_KassaTafel9.Location = new System.Drawing.Point(559, 436);
+            this.btn_KassaTafel9.Location = new System.Drawing.Point(745, 537);
+            this.btn_KassaTafel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel9.Name = "btn_KassaTafel9";
-            this.btn_KassaTafel9.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel9.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel9.TabIndex = 9;
             this.btn_KassaTafel9.Text = "Tafel 9";
             this.btn_KassaTafel9.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel8
             // 
-            this.btn_KassaTafel8.Location = new System.Drawing.Point(421, 437);
+            this.btn_KassaTafel8.Location = new System.Drawing.Point(561, 538);
+            this.btn_KassaTafel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel8.Name = "btn_KassaTafel8";
-            this.btn_KassaTafel8.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel8.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel8.TabIndex = 8;
             this.btn_KassaTafel8.Text = "Tafel 8";
             this.btn_KassaTafel8.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel7
             // 
-            this.btn_KassaTafel7.Location = new System.Drawing.Point(290, 437);
+            this.btn_KassaTafel7.Location = new System.Drawing.Point(387, 538);
+            this.btn_KassaTafel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel7.Name = "btn_KassaTafel7";
-            this.btn_KassaTafel7.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel7.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel7.TabIndex = 7;
             this.btn_KassaTafel7.Text = "Tafel 7";
             this.btn_KassaTafel7.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel6
             // 
-            this.btn_KassaTafel6.Location = new System.Drawing.Point(559, 283);
+            this.btn_KassaTafel6.Location = new System.Drawing.Point(745, 348);
+            this.btn_KassaTafel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel6.Name = "btn_KassaTafel6";
-            this.btn_KassaTafel6.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel6.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel6.TabIndex = 6;
             this.btn_KassaTafel6.Text = "Tafel 6";
             this.btn_KassaTafel6.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel5
             // 
-            this.btn_KassaTafel5.Location = new System.Drawing.Point(421, 283);
+            this.btn_KassaTafel5.Location = new System.Drawing.Point(561, 348);
+            this.btn_KassaTafel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel5.Name = "btn_KassaTafel5";
-            this.btn_KassaTafel5.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel5.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel5.TabIndex = 5;
             this.btn_KassaTafel5.Text = "Tafel 5";
             this.btn_KassaTafel5.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel4
             // 
-            this.btn_KassaTafel4.Location = new System.Drawing.Point(290, 283);
+            this.btn_KassaTafel4.Location = new System.Drawing.Point(387, 348);
+            this.btn_KassaTafel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel4.Name = "btn_KassaTafel4";
-            this.btn_KassaTafel4.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel4.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel4.TabIndex = 4;
             this.btn_KassaTafel4.Text = "Tafel 4";
             this.btn_KassaTafel4.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel3
             // 
-            this.btn_KassaTafel3.Location = new System.Drawing.Point(559, 139);
+            this.btn_KassaTafel3.Location = new System.Drawing.Point(745, 171);
+            this.btn_KassaTafel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel3.Name = "btn_KassaTafel3";
-            this.btn_KassaTafel3.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel3.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel3.TabIndex = 3;
             this.btn_KassaTafel3.Text = "Tafel 3";
             this.btn_KassaTafel3.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel2
             // 
-            this.btn_KassaTafel2.Location = new System.Drawing.Point(421, 139);
+            this.btn_KassaTafel2.Location = new System.Drawing.Point(561, 171);
+            this.btn_KassaTafel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel2.Name = "btn_KassaTafel2";
-            this.btn_KassaTafel2.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel2.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel2.TabIndex = 2;
             this.btn_KassaTafel2.Text = "Tafel 2";
             this.btn_KassaTafel2.UseVisualStyleBackColor = true;
             // 
             // btn_KassaTafel1
             // 
-            this.btn_KassaTafel1.Location = new System.Drawing.Point(290, 139);
+            this.btn_KassaTafel1.Location = new System.Drawing.Point(387, 171);
+            this.btn_KassaTafel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_KassaTafel1.Name = "btn_KassaTafel1";
-            this.btn_KassaTafel1.Size = new System.Drawing.Size(111, 117);
+            this.btn_KassaTafel1.Size = new System.Drawing.Size(148, 144);
             this.btn_KassaTafel1.TabIndex = 1;
             this.btn_KassaTafel1.Text = "Tafel 1";
             this.btn_KassaTafel1.UseVisualStyleBackColor = true;
@@ -765,9 +817,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(439, 22);
+            this.label8.Location = new System.Drawing.Point(585, 27);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
+            this.label8.Size = new System.Drawing.Size(97, 17);
             this.label8.TabIndex = 0;
             this.label8.Text = "Tafeloverzicht";
             // 
@@ -784,42 +837,47 @@
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.pictureBox5);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.label11);
             this.pnl_KassaPersoneelsbeheer.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaPersoneelsbeheer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaPersoneelsbeheer.Name = "pnl_KassaPersoneelsbeheer";
-            this.pnl_KassaPersoneelsbeheer.Size = new System.Drawing.Size(1008, 736);
+            this.pnl_KassaPersoneelsbeheer.Size = new System.Drawing.Size(1344, 906);
             this.pnl_KassaPersoneelsbeheer.TabIndex = 11;
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(22, 520);
+            this.button23.Location = new System.Drawing.Point(29, 640);
+            this.button23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(175, 112);
+            this.button23.Size = new System.Drawing.Size(233, 138);
             this.button23.TabIndex = 12;
             this.button23.Text = "Inkomsten";
             this.button23.UseVisualStyleBackColor = true;
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(22, 392);
+            this.button22.Location = new System.Drawing.Point(29, 482);
+            this.button22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(175, 112);
+            this.button22.Size = new System.Drawing.Size(233, 138);
             this.button22.TabIndex = 11;
             this.button22.Text = "Personeelsbeheer";
             this.button22.UseVisualStyleBackColor = true;
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(22, 268);
+            this.button21.Location = new System.Drawing.Point(29, 330);
+            this.button21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(175, 112);
+            this.button21.Size = new System.Drawing.Size(233, 138);
             this.button21.TabIndex = 10;
             this.button21.Text = "Bestellingen";
             this.button21.UseVisualStyleBackColor = true;
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(22, 144);
+            this.button20.Location = new System.Drawing.Point(29, 177);
+            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(175, 112);
+            this.button20.Size = new System.Drawing.Size(233, 138);
             this.button20.TabIndex = 9;
             this.button20.Text = "Voorraad";
             this.button20.UseVisualStyleBackColor = true;
@@ -827,9 +885,10 @@
             // button19
             // 
             this.button19.BackColor = System.Drawing.Color.OliveDrab;
-            this.button19.Location = new System.Drawing.Point(636, 652);
+            this.button19.Location = new System.Drawing.Point(848, 802);
+            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(360, 43);
+            this.button19.Size = new System.Drawing.Size(480, 53);
             this.button19.TabIndex = 8;
             this.button19.Text = "Opslaan";
             this.button19.UseVisualStyleBackColor = false;
@@ -837,9 +896,10 @@
             // button18
             // 
             this.button18.BackColor = System.Drawing.Color.IndianRed;
-            this.button18.Location = new System.Drawing.Point(223, 652);
+            this.button18.Location = new System.Drawing.Point(297, 802);
+            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(360, 43);
+            this.button18.Size = new System.Drawing.Size(480, 53);
             this.button18.TabIndex = 7;
             this.button18.Text = "Verwijderen";
             this.button18.UseVisualStyleBackColor = false;
@@ -856,9 +916,10 @@
             this.listView_Personeelsbeheer.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2});
-            this.listView_Personeelsbeheer.Location = new System.Drawing.Point(223, 144);
+            this.listView_Personeelsbeheer.Location = new System.Drawing.Point(297, 177);
+            this.listView_Personeelsbeheer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView_Personeelsbeheer.Name = "listView_Personeelsbeheer";
-            this.listView_Personeelsbeheer.Size = new System.Drawing.Size(773, 488);
+            this.listView_Personeelsbeheer.Size = new System.Drawing.Size(1029, 600);
             this.listView_Personeelsbeheer.TabIndex = 6;
             this.listView_Personeelsbeheer.UseCompatibleStateImageBehavior = false;
             this.listView_Personeelsbeheer.View = System.Windows.Forms.View.Details;
@@ -892,9 +953,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox5.Location = new System.Drawing.Point(453, 12);
+            this.pictureBox5.Location = new System.Drawing.Point(604, 15);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(230, 101);
+            this.pictureBox5.Size = new System.Drawing.Size(307, 124);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
@@ -902,9 +964,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(510, 123);
+            this.label11.Location = new System.Drawing.Point(680, 151);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 13);
+            this.label11.Size = new System.Drawing.Size(136, 17);
             this.label11.TabIndex = 0;
             this.label11.Text = "Overzicht Personeel";
             // 
@@ -925,29 +988,107 @@
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.label12);
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.pictureBox6);
             this.pnl_KassaVoorraadoverzichtGerecht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaVoorraadoverzichtGerecht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaVoorraadoverzichtGerecht.Name = "pnl_KassaVoorraadoverzichtGerecht";
-            this.pnl_KassaVoorraadoverzichtGerecht.Size = new System.Drawing.Size(1005, 730);
+            this.pnl_KassaVoorraadoverzichtGerecht.Size = new System.Drawing.Size(1340, 898);
             this.pnl_KassaVoorraadoverzichtGerecht.TabIndex = 9;
             // 
-            // pictureBox6
+            // button13
             // 
-            this.pictureBox6.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox6.Location = new System.Drawing.Point(383, 6);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(182, 106);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 14;
-            this.pictureBox6.TabStop = false;
+            this.button13.Location = new System.Drawing.Point(29, 636);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(189, 119);
+            this.button13.TabIndex = 26;
+            this.button13.Text = "Personeelsbeheer";
+            this.button13.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // button12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(597, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "gerechtvoorraadoverzicht Kassa";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.button12.Location = new System.Drawing.Point(29, 469);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(189, 119);
+            this.button12.TabIndex = 25;
+            this.button12.Text = "Menu Overzicht";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(29, 309);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(189, 119);
+            this.button11.TabIndex = 24;
+            this.button11.Text = "Bestellingen";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(29, 145);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(189, 119);
+            this.button10.TabIndex = 23;
+            this.button10.Text = "Voorraad";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(1115, 402);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(195, 49);
+            this.button9.TabIndex = 22;
+            this.button9.Text = "Verwijderen";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(1115, 326);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(195, 49);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "Wijziging opslaan";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(1120, 241);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 17);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Aantal";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1120, 185);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 17);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Product";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(1124, 261);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(132, 22);
+            this.textBox2.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(1124, 204);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.TabIndex = 17;
             // 
             // listView1
             // 
@@ -955,9 +1096,10 @@
             this.Product,
             this.Aantal});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(203, 118);
+            this.listView1.Location = new System.Drawing.Point(271, 145);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(598, 596);
+            this.listView1.Size = new System.Drawing.Size(796, 733);
             this.listView1.TabIndex = 16;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -972,92 +1114,27 @@
             this.Aantal.Text = "Aantal";
             this.Aantal.Width = 90;
             // 
-            // textBox1
+            // label12
             // 
-            this.textBox1.Location = new System.Drawing.Point(843, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(796, 7);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(213, 17);
+            this.label12.TabIndex = 15;
+            this.label12.Text = "gerechtvoorraadoverzicht Kassa";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // textBox2
+            // pictureBox6
             // 
-            this.textBox2.Location = new System.Drawing.Point(843, 212);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 18;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(840, 150);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 13);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Product";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(840, 196);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 13);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Aantal";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(836, 265);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(146, 40);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "Wijziging opslaan";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(836, 327);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(146, 40);
-            this.button9.TabIndex = 22;
-            this.button9.Text = "Verwijderen";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(22, 118);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(142, 97);
-            this.button10.TabIndex = 23;
-            this.button10.Text = "Voorraad";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(22, 251);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(142, 97);
-            this.button11.TabIndex = 24;
-            this.button11.Text = "Bestellingen";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(22, 381);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(142, 97);
-            this.button12.TabIndex = 25;
-            this.button12.Text = "Menu Overzicht";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(22, 517);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(142, 97);
-            this.button13.TabIndex = 26;
-            this.button13.Text = "Personeelsbeheer";
-            this.button13.UseVisualStyleBackColor = true;
+            this.pictureBox6.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox6.Location = new System.Drawing.Point(511, 7);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(243, 130);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 14;
+            this.pictureBox6.TabStop = false;
             // 
             // pnl_KassaVoorraadoverzichtDrank
             // 
@@ -1076,60 +1153,67 @@
             this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.label17);
             this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.pictureBox7);
             this.pnl_KassaVoorraadoverzichtDrank.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaVoorraadoverzichtDrank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaVoorraadoverzichtDrank.Name = "pnl_KassaVoorraadoverzichtDrank";
-            this.pnl_KassaVoorraadoverzichtDrank.Size = new System.Drawing.Size(1005, 730);
+            this.pnl_KassaVoorraadoverzichtDrank.Size = new System.Drawing.Size(1340, 898);
             this.pnl_KassaVoorraadoverzichtDrank.TabIndex = 27;
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(22, 517);
+            this.button14.Location = new System.Drawing.Point(29, 636);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(142, 97);
+            this.button14.Size = new System.Drawing.Size(189, 119);
             this.button14.TabIndex = 26;
             this.button14.Text = "Personeelsbeheer";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(22, 381);
+            this.button15.Location = new System.Drawing.Point(29, 469);
+            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(142, 97);
+            this.button15.Size = new System.Drawing.Size(189, 119);
             this.button15.TabIndex = 25;
             this.button15.Text = "Menu Overzicht";
             this.button15.UseVisualStyleBackColor = true;
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(22, 251);
+            this.button16.Location = new System.Drawing.Point(29, 309);
+            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(142, 97);
+            this.button16.Size = new System.Drawing.Size(189, 119);
             this.button16.TabIndex = 24;
             this.button16.Text = "Bestellingen";
             this.button16.UseVisualStyleBackColor = true;
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(22, 118);
+            this.button17.Location = new System.Drawing.Point(29, 145);
+            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(142, 97);
+            this.button17.Size = new System.Drawing.Size(189, 119);
             this.button17.TabIndex = 23;
             this.button17.Text = "Voorraad";
             this.button17.UseVisualStyleBackColor = true;
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(836, 327);
+            this.button24.Location = new System.Drawing.Point(1115, 402);
+            this.button24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(146, 40);
+            this.button24.Size = new System.Drawing.Size(195, 49);
             this.button24.TabIndex = 22;
             this.button24.Text = "Verwijderen";
             this.button24.UseVisualStyleBackColor = true;
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(836, 265);
+            this.button25.Location = new System.Drawing.Point(1115, 326);
+            this.button25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(146, 40);
+            this.button25.Size = new System.Drawing.Size(195, 49);
             this.button25.TabIndex = 21;
             this.button25.Text = "Wijziging opslaan";
             this.button25.UseVisualStyleBackColor = true;
@@ -1137,33 +1221,37 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(840, 196);
+            this.label15.Location = new System.Drawing.Point(1120, 241);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 13);
+            this.label15.Size = new System.Drawing.Size(48, 17);
             this.label15.TabIndex = 20;
             this.label15.Text = "Aantal";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(840, 150);
+            this.label16.Location = new System.Drawing.Point(1120, 185);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 13);
+            this.label16.Size = new System.Drawing.Size(57, 17);
             this.label16.TabIndex = 19;
             this.label16.Text = "Product";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(843, 212);
+            this.textBox3.Location = new System.Drawing.Point(1124, 261);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 18;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(843, 166);
+            this.textBox4.Location = new System.Drawing.Point(1124, 204);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(132, 22);
             this.textBox4.TabIndex = 17;
             // 
             // listView2
@@ -1172,9 +1260,10 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(203, 118);
+            this.listView2.Location = new System.Drawing.Point(271, 145);
+            this.listView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(598, 596);
+            this.listView2.Size = new System.Drawing.Size(796, 733);
             this.listView2.TabIndex = 16;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -1192,9 +1281,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(597, 6);
+            this.label17.Location = new System.Drawing.Point(796, 7);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(153, 13);
+            this.label17.Size = new System.Drawing.Size(203, 17);
             this.label17.TabIndex = 15;
             this.label17.Text = "Drankvoorraadoverzicht Kassa";
             this.label17.Click += new System.EventHandler(this.label17_Click);
@@ -1202,9 +1292,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox7.Location = new System.Drawing.Point(383, 6);
+            this.pictureBox7.Location = new System.Drawing.Point(511, 7);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(182, 106);
+            this.pictureBox7.Size = new System.Drawing.Size(243, 130);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 14;
             this.pictureBox7.TabStop = false;
@@ -1216,46 +1307,51 @@
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.label18);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.pictureBox8);
             this.pnl_KassaVoorraadKeuze.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaVoorraadKeuze.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaVoorraadKeuze.Name = "pnl_KassaVoorraadKeuze";
-            this.pnl_KassaVoorraadKeuze.Size = new System.Drawing.Size(1008, 733);
+            this.pnl_KassaVoorraadKeuze.Size = new System.Drawing.Size(1344, 902);
             this.pnl_KassaVoorraadKeuze.TabIndex = 27;
             // 
-            // pictureBox8
+            // button27
             // 
-            this.pictureBox8.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox8.Location = new System.Drawing.Point(407, 9);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(182, 106);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 27;
-            this.pictureBox8.TabStop = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(597, 41);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(128, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Voorraad keuze overzicht";
+            this.button27.Location = new System.Drawing.Point(348, 534);
+            this.button27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(696, 146);
+            this.button27.TabIndex = 30;
+            this.button27.Text = "Gerechten";
+            this.button27.UseVisualStyleBackColor = true;
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(261, 226);
+            this.button26.Location = new System.Drawing.Point(348, 278);
+            this.button26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(522, 119);
+            this.button26.Size = new System.Drawing.Size(696, 146);
             this.button26.TabIndex = 29;
             this.button26.Text = "Drank";
             this.button26.UseVisualStyleBackColor = true;
             // 
-            // button27
+            // label18
             // 
-            this.button27.Location = new System.Drawing.Point(261, 434);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(522, 119);
-            this.button27.TabIndex = 30;
-            this.button27.Text = "Gerechten";
-            this.button27.UseVisualStyleBackColor = true;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(796, 50);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(170, 17);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Voorraad keuze overzicht";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox8.Location = new System.Drawing.Point(543, 11);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(243, 130);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 27;
+            this.pictureBox8.TabStop = false;
             // 
             // pnl_KassaMenuoverzichtKeuze
             // 
@@ -1265,57 +1361,63 @@
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.button28);
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.pictureBox9);
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.label19);
-            this.pnl_KassaMenuoverzichtKeuze.Location = new System.Drawing.Point(0, 283);
+            this.pnl_KassaMenuoverzichtKeuze.Location = new System.Drawing.Point(0, 348);
+            this.pnl_KassaMenuoverzichtKeuze.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaMenuoverzichtKeuze.Name = "pnl_KassaMenuoverzichtKeuze";
-            this.pnl_KassaMenuoverzichtKeuze.Size = new System.Drawing.Size(1008, 453);
+            this.pnl_KassaMenuoverzichtKeuze.Size = new System.Drawing.Size(1344, 558);
             this.pnl_KassaMenuoverzichtKeuze.TabIndex = 11;
             this.pnl_KassaMenuoverzichtKeuze.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label19
+            // button30
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(689, 28);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(108, 13);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "menuoverzicht keuze";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox9.Location = new System.Drawing.Point(353, 12);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(288, 151);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(290, 196);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(416, 116);
-            this.button28.TabIndex = 13;
-            this.button28.Text = "Drank Menu";
-            this.button28.UseVisualStyleBackColor = true;
+            this.button30.Location = new System.Drawing.Point(387, 636);
+            this.button30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(555, 142);
+            this.button30.TabIndex = 15;
+            this.button30.Text = "Diner Menu";
+            this.button30.UseVisualStyleBackColor = true;
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(290, 348);
+            this.button29.Location = new System.Drawing.Point(387, 428);
+            this.button29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(416, 119);
+            this.button29.Size = new System.Drawing.Size(555, 146);
             this.button29.TabIndex = 14;
             this.button29.Text = "Lunch Menu";
             this.button29.UseVisualStyleBackColor = true;
             // 
-            // button30
+            // button28
             // 
-            this.button30.Location = new System.Drawing.Point(290, 517);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(416, 115);
-            this.button30.TabIndex = 15;
-            this.button30.Text = "Diner Menu";
-            this.button30.UseVisualStyleBackColor = true;
+            this.button28.Location = new System.Drawing.Point(387, 241);
+            this.button28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(555, 143);
+            this.button28.TabIndex = 13;
+            this.button28.Text = "Drank Menu";
+            this.button28.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox9.Location = new System.Drawing.Point(471, 15);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(384, 186);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 12;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(919, 34);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(142, 17);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "menuoverzicht keuze";
             // 
             // pnl_KassaDrankMenuoverzicht
             // 
@@ -1344,61 +1446,204 @@
             this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label22);
             this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.pictureBox10);
             this.pnl_KassaDrankMenuoverzicht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaDrankMenuoverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaDrankMenuoverzicht.Name = "pnl_KassaDrankMenuoverzicht";
-            this.pnl_KassaDrankMenuoverzicht.Size = new System.Drawing.Size(1008, 736);
+            this.pnl_KassaDrankMenuoverzicht.Size = new System.Drawing.Size(1344, 906);
             this.pnl_KassaDrankMenuoverzicht.TabIndex = 16;
             this.pnl_KassaDrankMenuoverzicht.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_KassaDrankMenuoverizcht_Paint);
             // 
+            // button37
+            // 
+            this.button37.Location = new System.Drawing.Point(456, 746);
+            this.button37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(223, 68);
+            this.button37.TabIndex = 54;
+            this.button37.Text = "Toevoegen";
+            this.button37.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(1004, 640);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(35, 17);
+            this.label29.TabIndex = 53;
+            this.label29.Text = "Prijs";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(1003, 660);
+            this.textBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(73, 22);
+            this.textBox13.TabIndex = 52;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(829, 640);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(81, 17);
+            this.label28.TabIndex = 51;
+            this.label28.Text = "Menu Soort";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(833, 660);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(132, 22);
+            this.textBox12.TabIndex = 50;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(687, 640);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 17);
+            this.label27.TabIndex = 49;
+            this.label27.Text = "Categorie";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(684, 660);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(132, 22);
+            this.textBox11.TabIndex = 48;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(619, 639);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(39, 17);
+            this.label26.TabIndex = 47;
+            this.label26.Text = "BTW";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(623, 658);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(37, 22);
+            this.textBox10.TabIndex = 46;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(515, 640);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(80, 17);
+            this.label25.TabIndex = 45;
+            this.label25.Text = "In voorraad";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(519, 660);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(76, 22);
+            this.textBox9.TabIndex = 44;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(344, 638);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(89, 17);
+            this.label24.TabIndex = 43;
+            this.label24.Text = "Omschrijving";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(348, 658);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(132, 22);
+            this.textBox8.TabIndex = 42;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(269, 638);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(21, 17);
+            this.label23.TabIndex = 41;
+            this.label23.Text = "ID";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(273, 657);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(51, 22);
+            this.textBox7.TabIndex = 40;
+            // 
             // button31
             // 
-            this.button31.Location = new System.Drawing.Point(24, 525);
+            this.button31.Location = new System.Drawing.Point(32, 646);
+            this.button31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(142, 97);
+            this.button31.Size = new System.Drawing.Size(189, 119);
             this.button31.TabIndex = 39;
             this.button31.Text = "Personeelsbeheer";
             this.button31.UseVisualStyleBackColor = true;
             // 
             // button32
             // 
-            this.button32.Location = new System.Drawing.Point(24, 389);
+            this.button32.Location = new System.Drawing.Point(32, 479);
+            this.button32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(142, 97);
+            this.button32.Size = new System.Drawing.Size(189, 119);
             this.button32.TabIndex = 38;
             this.button32.Text = "Menu Overzicht";
             this.button32.UseVisualStyleBackColor = true;
             // 
             // button33
             // 
-            this.button33.Location = new System.Drawing.Point(24, 259);
+            this.button33.Location = new System.Drawing.Point(32, 319);
+            this.button33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(142, 97);
+            this.button33.Size = new System.Drawing.Size(189, 119);
             this.button33.TabIndex = 37;
             this.button33.Text = "Bestellingen";
             this.button33.UseVisualStyleBackColor = true;
             // 
             // button34
             // 
-            this.button34.Location = new System.Drawing.Point(24, 126);
+            this.button34.Location = new System.Drawing.Point(32, 155);
+            this.button34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(142, 97);
+            this.button34.Size = new System.Drawing.Size(189, 119);
             this.button34.TabIndex = 36;
             this.button34.Text = "Voorraad";
             this.button34.UseVisualStyleBackColor = true;
             // 
             // button35
             // 
-            this.button35.Location = new System.Drawing.Point(756, 606);
+            this.button35.Location = new System.Drawing.Point(1008, 746);
+            this.button35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(197, 55);
+            this.button35.Size = new System.Drawing.Size(263, 68);
             this.button35.TabIndex = 35;
             this.button35.Text = "Verwijderen";
             this.button35.UseVisualStyleBackColor = true;
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(537, 606);
+            this.button36.Location = new System.Drawing.Point(716, 746);
+            this.button36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(188, 55);
+            this.button36.Size = new System.Drawing.Size(251, 68);
             this.button36.TabIndex = 34;
             this.button36.Text = "Wijziging opslaan";
             this.button36.UseVisualStyleBackColor = true;
@@ -1414,9 +1659,10 @@
             this.drankmenuSoort,
             this.drankmenuPrijs});
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(205, 126);
+            this.listView3.Location = new System.Drawing.Point(273, 155);
+            this.listView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(748, 378);
+            this.listView3.Size = new System.Drawing.Size(996, 464);
             this.listView3.TabIndex = 29;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.View = System.Windows.Forms.View.Details;
@@ -1430,25 +1676,6 @@
             // 
             this.drankmenuOmschrijving.Text = "Omschrijving";
             this.drankmenuOmschrijving.Width = 200;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(599, 14);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(106, 13);
-            this.label22.TabIndex = 28;
-            this.label22.Text = "drankmenu overzicht";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox10.Location = new System.Drawing.Point(385, 14);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(182, 106);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 27;
-            this.pictureBox10.TabStop = false;
             // 
             // drankmenuAantalvoorraad
             // 
@@ -1475,126 +1702,26 @@
             this.drankmenuPrijs.Text = "Prijs";
             this.drankmenuPrijs.Width = 50;
             // 
-            // label23
+            // label22
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(202, 518);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(18, 13);
-            this.label23.TabIndex = 41;
-            this.label23.Text = "ID";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(799, 17);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(140, 17);
+            this.label22.TabIndex = 28;
+            this.label22.Text = "drankmenu overzicht";
             // 
-            // textBox7
+            // pictureBox10
             // 
-            this.textBox7.Location = new System.Drawing.Point(205, 534);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(39, 20);
-            this.textBox7.TabIndex = 40;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(258, 518);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 13);
-            this.label24.TabIndex = 43;
-            this.label24.Text = "Omschrijving";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(261, 535);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 42;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(386, 520);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(61, 13);
-            this.label25.TabIndex = 45;
-            this.label25.Text = "In voorraad";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(389, 536);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(58, 20);
-            this.textBox9.TabIndex = 44;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(464, 519);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(32, 13);
-            this.label26.TabIndex = 47;
-            this.label26.Text = "BTW";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(467, 535);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(29, 20);
-            this.textBox10.TabIndex = 46;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(515, 520);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(52, 13);
-            this.label27.TabIndex = 49;
-            this.label27.Text = "Categorie";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(513, 536);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 48;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(622, 520);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(62, 13);
-            this.label28.TabIndex = 51;
-            this.label28.Text = "Menu Soort";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(625, 536);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 50;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(753, 520);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(26, 13);
-            this.label29.TabIndex = 53;
-            this.label29.Text = "Prijs";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(752, 536);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(56, 20);
-            this.textBox13.TabIndex = 52;
-            // 
-            // button37
-            // 
-            this.button37.Location = new System.Drawing.Point(342, 606);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(167, 55);
-            this.button37.TabIndex = 54;
-            this.button37.Text = "Toevoegen";
-            this.button37.UseVisualStyleBackColor = true;
+            this.pictureBox10.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox10.Location = new System.Drawing.Point(513, 17);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(243, 130);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 27;
+            this.pictureBox10.TabStop = false;
             // 
             // pnl_KassaLunchMenuoverizcht
             // 
@@ -1623,15 +1750,17 @@
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.label35);
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.pictureBox11);
             this.pnl_KassaLunchMenuoverizcht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaLunchMenuoverizcht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaLunchMenuoverizcht.Name = "pnl_KassaLunchMenuoverizcht";
-            this.pnl_KassaLunchMenuoverizcht.Size = new System.Drawing.Size(1008, 730);
+            this.pnl_KassaLunchMenuoverizcht.Size = new System.Drawing.Size(1344, 898);
             this.pnl_KassaLunchMenuoverizcht.TabIndex = 55;
             // 
             // button38
             // 
-            this.button38.Location = new System.Drawing.Point(342, 606);
+            this.button38.Location = new System.Drawing.Point(456, 746);
+            this.button38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(167, 55);
+            this.button38.Size = new System.Drawing.Size(223, 68);
             this.button38.TabIndex = 54;
             this.button38.Text = "Toevoegen";
             this.button38.UseVisualStyleBackColor = true;
@@ -1639,165 +1768,185 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(753, 520);
+            this.label20.Location = new System.Drawing.Point(1004, 640);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(26, 13);
+            this.label20.Size = new System.Drawing.Size(35, 17);
             this.label20.TabIndex = 53;
             this.label20.Text = "Prijs";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(752, 536);
+            this.textBox5.Location = new System.Drawing.Point(1003, 660);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(56, 20);
+            this.textBox5.Size = new System.Drawing.Size(73, 22);
             this.textBox5.TabIndex = 52;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(622, 520);
+            this.label21.Location = new System.Drawing.Point(829, 640);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(62, 13);
+            this.label21.Size = new System.Drawing.Size(81, 17);
             this.label21.TabIndex = 51;
             this.label21.Text = "Menu Soort";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(625, 536);
+            this.textBox6.Location = new System.Drawing.Point(833, 660);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.Size = new System.Drawing.Size(132, 22);
             this.textBox6.TabIndex = 50;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(515, 520);
+            this.label30.Location = new System.Drawing.Point(687, 640);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(52, 13);
+            this.label30.Size = new System.Drawing.Size(69, 17);
             this.label30.TabIndex = 49;
             this.label30.Text = "Categorie";
             // 
             // textBox14
             // 
-            this.textBox14.Location = new System.Drawing.Point(513, 536);
+            this.textBox14.Location = new System.Drawing.Point(684, 660);
+            this.textBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
+            this.textBox14.Size = new System.Drawing.Size(132, 22);
             this.textBox14.TabIndex = 48;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(464, 519);
+            this.label31.Location = new System.Drawing.Point(619, 639);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 13);
+            this.label31.Size = new System.Drawing.Size(39, 17);
             this.label31.TabIndex = 47;
             this.label31.Text = "BTW";
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(467, 535);
+            this.textBox15.Location = new System.Drawing.Point(623, 658);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(29, 20);
+            this.textBox15.Size = new System.Drawing.Size(37, 22);
             this.textBox15.TabIndex = 46;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(386, 520);
+            this.label32.Location = new System.Drawing.Point(515, 640);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(61, 13);
+            this.label32.Size = new System.Drawing.Size(80, 17);
             this.label32.TabIndex = 45;
             this.label32.Text = "In voorraad";
             // 
             // textBox16
             // 
-            this.textBox16.Location = new System.Drawing.Point(389, 536);
+            this.textBox16.Location = new System.Drawing.Point(519, 660);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(58, 20);
+            this.textBox16.Size = new System.Drawing.Size(76, 22);
             this.textBox16.TabIndex = 44;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(258, 518);
+            this.label33.Location = new System.Drawing.Point(344, 638);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(67, 13);
+            this.label33.Size = new System.Drawing.Size(89, 17);
             this.label33.TabIndex = 43;
             this.label33.Text = "Omschrijving";
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(261, 535);
+            this.textBox17.Location = new System.Drawing.Point(348, 658);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.Size = new System.Drawing.Size(132, 22);
             this.textBox17.TabIndex = 42;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(202, 518);
+            this.label34.Location = new System.Drawing.Point(269, 638);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(18, 13);
+            this.label34.Size = new System.Drawing.Size(21, 17);
             this.label34.TabIndex = 41;
             this.label34.Text = "ID";
             // 
             // textBox18
             // 
-            this.textBox18.Location = new System.Drawing.Point(205, 534);
+            this.textBox18.Location = new System.Drawing.Point(273, 657);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(39, 20);
+            this.textBox18.Size = new System.Drawing.Size(51, 22);
             this.textBox18.TabIndex = 40;
             // 
             // button39
             // 
-            this.button39.Location = new System.Drawing.Point(24, 525);
+            this.button39.Location = new System.Drawing.Point(32, 646);
+            this.button39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(142, 97);
+            this.button39.Size = new System.Drawing.Size(189, 119);
             this.button39.TabIndex = 39;
             this.button39.Text = "Personeelsbeheer";
             this.button39.UseVisualStyleBackColor = true;
             // 
             // button40
             // 
-            this.button40.Location = new System.Drawing.Point(24, 389);
+            this.button40.Location = new System.Drawing.Point(32, 479);
+            this.button40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(142, 97);
+            this.button40.Size = new System.Drawing.Size(189, 119);
             this.button40.TabIndex = 38;
             this.button40.Text = "Menu Overzicht";
             this.button40.UseVisualStyleBackColor = true;
             // 
             // button41
             // 
-            this.button41.Location = new System.Drawing.Point(24, 259);
+            this.button41.Location = new System.Drawing.Point(32, 319);
+            this.button41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(142, 97);
+            this.button41.Size = new System.Drawing.Size(189, 119);
             this.button41.TabIndex = 37;
             this.button41.Text = "Bestellingen";
             this.button41.UseVisualStyleBackColor = true;
             // 
             // button42
             // 
-            this.button42.Location = new System.Drawing.Point(24, 126);
+            this.button42.Location = new System.Drawing.Point(32, 155);
+            this.button42.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(142, 97);
+            this.button42.Size = new System.Drawing.Size(189, 119);
             this.button42.TabIndex = 36;
             this.button42.Text = "Voorraad";
             this.button42.UseVisualStyleBackColor = true;
             // 
             // button43
             // 
-            this.button43.Location = new System.Drawing.Point(756, 606);
+            this.button43.Location = new System.Drawing.Point(1008, 746);
+            this.button43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(197, 55);
+            this.button43.Size = new System.Drawing.Size(263, 68);
             this.button43.TabIndex = 35;
             this.button43.Text = "Verwijderen";
             this.button43.UseVisualStyleBackColor = true;
             // 
             // button44
             // 
-            this.button44.Location = new System.Drawing.Point(537, 606);
+            this.button44.Location = new System.Drawing.Point(716, 746);
+            this.button44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(188, 55);
+            this.button44.Size = new System.Drawing.Size(251, 68);
             this.button44.TabIndex = 34;
             this.button44.Text = "Wijziging opslaan";
             this.button44.UseVisualStyleBackColor = true;
@@ -1813,9 +1962,10 @@
             this.columnHeader8,
             this.columnHeader9});
             this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(205, 126);
+            this.listView4.Location = new System.Drawing.Point(273, 155);
+            this.listView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(748, 378);
+            this.listView4.Size = new System.Drawing.Size(996, 464);
             this.listView4.TabIndex = 29;
             this.listView4.UseCompatibleStateImageBehavior = false;
             this.listView4.View = System.Windows.Forms.View.Details;
@@ -1858,9 +2008,10 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(599, 14);
+            this.label35.Location = new System.Drawing.Point(799, 17);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(112, 13);
+            this.label35.Size = new System.Drawing.Size(147, 17);
             this.label35.TabIndex = 28;
             this.label35.Text = "Lunch menu overzicht";
             this.label35.Click += new System.EventHandler(this.label35_Click);
@@ -1868,9 +2019,10 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox11.Location = new System.Drawing.Point(385, 14);
+            this.pictureBox11.Location = new System.Drawing.Point(513, 17);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(182, 106);
+            this.pictureBox11.Size = new System.Drawing.Size(243, 130);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 27;
             this.pictureBox11.TabStop = false;
@@ -1902,15 +2054,17 @@
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.label43);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.pictureBox12);
             this.pnl_KassaDinerMenuoverzicht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaDinerMenuoverzicht.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KassaDinerMenuoverzicht.Name = "pnl_KassaDinerMenuoverzicht";
-            this.pnl_KassaDinerMenuoverzicht.Size = new System.Drawing.Size(1008, 733);
+            this.pnl_KassaDinerMenuoverzicht.Size = new System.Drawing.Size(1344, 902);
             this.pnl_KassaDinerMenuoverzicht.TabIndex = 56;
             // 
             // button45
             // 
-            this.button45.Location = new System.Drawing.Point(342, 606);
+            this.button45.Location = new System.Drawing.Point(456, 746);
+            this.button45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(167, 55);
+            this.button45.Size = new System.Drawing.Size(223, 68);
             this.button45.TabIndex = 54;
             this.button45.Text = "Toevoegen";
             this.button45.UseVisualStyleBackColor = true;
@@ -1918,165 +2072,185 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(753, 520);
+            this.label36.Location = new System.Drawing.Point(1004, 640);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(26, 13);
+            this.label36.Size = new System.Drawing.Size(35, 17);
             this.label36.TabIndex = 53;
             this.label36.Text = "Prijs";
             // 
             // textBox19
             // 
-            this.textBox19.Location = new System.Drawing.Point(752, 536);
+            this.textBox19.Location = new System.Drawing.Point(1003, 660);
+            this.textBox19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(56, 20);
+            this.textBox19.Size = new System.Drawing.Size(73, 22);
             this.textBox19.TabIndex = 52;
             // 
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(622, 520);
+            this.label37.Location = new System.Drawing.Point(829, 640);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(62, 13);
+            this.label37.Size = new System.Drawing.Size(81, 17);
             this.label37.TabIndex = 51;
             this.label37.Text = "Menu Soort";
             // 
             // textBox20
             // 
-            this.textBox20.Location = new System.Drawing.Point(625, 536);
+            this.textBox20.Location = new System.Drawing.Point(833, 660);
+            this.textBox20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(100, 20);
+            this.textBox20.Size = new System.Drawing.Size(132, 22);
             this.textBox20.TabIndex = 50;
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(515, 520);
+            this.label38.Location = new System.Drawing.Point(687, 640);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(52, 13);
+            this.label38.Size = new System.Drawing.Size(69, 17);
             this.label38.TabIndex = 49;
             this.label38.Text = "Categorie";
             // 
             // textBox21
             // 
-            this.textBox21.Location = new System.Drawing.Point(513, 536);
+            this.textBox21.Location = new System.Drawing.Point(684, 660);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(100, 20);
+            this.textBox21.Size = new System.Drawing.Size(132, 22);
             this.textBox21.TabIndex = 48;
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(464, 519);
+            this.label39.Location = new System.Drawing.Point(619, 639);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 13);
+            this.label39.Size = new System.Drawing.Size(39, 17);
             this.label39.TabIndex = 47;
             this.label39.Text = "BTW";
             // 
             // textBox22
             // 
-            this.textBox22.Location = new System.Drawing.Point(467, 535);
+            this.textBox22.Location = new System.Drawing.Point(623, 658);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(29, 20);
+            this.textBox22.Size = new System.Drawing.Size(37, 22);
             this.textBox22.TabIndex = 46;
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(386, 520);
+            this.label40.Location = new System.Drawing.Point(515, 640);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(61, 13);
+            this.label40.Size = new System.Drawing.Size(80, 17);
             this.label40.TabIndex = 45;
             this.label40.Text = "In voorraad";
             // 
             // textBox23
             // 
-            this.textBox23.Location = new System.Drawing.Point(389, 536);
+            this.textBox23.Location = new System.Drawing.Point(519, 660);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(58, 20);
+            this.textBox23.Size = new System.Drawing.Size(76, 22);
             this.textBox23.TabIndex = 44;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(258, 518);
+            this.label41.Location = new System.Drawing.Point(344, 638);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(67, 13);
+            this.label41.Size = new System.Drawing.Size(89, 17);
             this.label41.TabIndex = 43;
             this.label41.Text = "Omschrijving";
             // 
             // textBox24
             // 
-            this.textBox24.Location = new System.Drawing.Point(261, 535);
+            this.textBox24.Location = new System.Drawing.Point(348, 658);
+            this.textBox24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(100, 20);
+            this.textBox24.Size = new System.Drawing.Size(132, 22);
             this.textBox24.TabIndex = 42;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(202, 518);
+            this.label42.Location = new System.Drawing.Point(269, 638);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(18, 13);
+            this.label42.Size = new System.Drawing.Size(21, 17);
             this.label42.TabIndex = 41;
             this.label42.Text = "ID";
             // 
             // textBox25
             // 
-            this.textBox25.Location = new System.Drawing.Point(205, 534);
+            this.textBox25.Location = new System.Drawing.Point(273, 657);
+            this.textBox25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(39, 20);
+            this.textBox25.Size = new System.Drawing.Size(51, 22);
             this.textBox25.TabIndex = 40;
             // 
             // button46
             // 
-            this.button46.Location = new System.Drawing.Point(24, 525);
+            this.button46.Location = new System.Drawing.Point(32, 646);
+            this.button46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(142, 97);
+            this.button46.Size = new System.Drawing.Size(189, 119);
             this.button46.TabIndex = 39;
             this.button46.Text = "Personeelsbeheer";
             this.button46.UseVisualStyleBackColor = true;
             // 
             // button47
             // 
-            this.button47.Location = new System.Drawing.Point(24, 389);
+            this.button47.Location = new System.Drawing.Point(32, 479);
+            this.button47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(142, 97);
+            this.button47.Size = new System.Drawing.Size(189, 119);
             this.button47.TabIndex = 38;
             this.button47.Text = "Menu Overzicht";
             this.button47.UseVisualStyleBackColor = true;
             // 
             // button48
             // 
-            this.button48.Location = new System.Drawing.Point(24, 259);
+            this.button48.Location = new System.Drawing.Point(32, 319);
+            this.button48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(142, 97);
+            this.button48.Size = new System.Drawing.Size(189, 119);
             this.button48.TabIndex = 37;
             this.button48.Text = "Bestellingen";
             this.button48.UseVisualStyleBackColor = true;
             // 
             // button49
             // 
-            this.button49.Location = new System.Drawing.Point(24, 126);
+            this.button49.Location = new System.Drawing.Point(32, 155);
+            this.button49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(142, 97);
+            this.button49.Size = new System.Drawing.Size(189, 119);
             this.button49.TabIndex = 36;
             this.button49.Text = "Voorraad";
             this.button49.UseVisualStyleBackColor = true;
             // 
             // button50
             // 
-            this.button50.Location = new System.Drawing.Point(756, 606);
+            this.button50.Location = new System.Drawing.Point(1008, 746);
+            this.button50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(197, 55);
+            this.button50.Size = new System.Drawing.Size(263, 68);
             this.button50.TabIndex = 35;
             this.button50.Text = "Verwijderen";
             this.button50.UseVisualStyleBackColor = true;
             // 
             // button51
             // 
-            this.button51.Location = new System.Drawing.Point(537, 606);
+            this.button51.Location = new System.Drawing.Point(716, 746);
+            this.button51.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(188, 55);
+            this.button51.Size = new System.Drawing.Size(251, 68);
             this.button51.TabIndex = 34;
             this.button51.Text = "Wijziging opslaan";
             this.button51.UseVisualStyleBackColor = true;
@@ -2092,9 +2266,10 @@
             this.columnHeader15,
             this.columnHeader16});
             this.listView5.HideSelection = false;
-            this.listView5.Location = new System.Drawing.Point(205, 126);
+            this.listView5.Location = new System.Drawing.Point(273, 155);
+            this.listView5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(748, 378);
+            this.listView5.Size = new System.Drawing.Size(996, 464);
             this.listView5.TabIndex = 29;
             this.listView5.UseCompatibleStateImageBehavior = false;
             this.listView5.View = System.Windows.Forms.View.Details;
@@ -2137,27 +2312,29 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(599, 14);
+            this.label43.Location = new System.Drawing.Point(799, 17);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(107, 13);
+            this.label43.Size = new System.Drawing.Size(142, 17);
             this.label43.TabIndex = 28;
             this.label43.Text = "Diner menu overzicht";
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox12.Location = new System.Drawing.Point(385, 14);
+            this.pictureBox12.Location = new System.Drawing.Point(513, 17);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(182, 106);
+            this.pictureBox12.Size = new System.Drawing.Size(243, 130);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 27;
             this.pictureBox12.TabStop = false;
             // 
             // Kassa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 897);
             this.Controls.Add(this.pnl_KassaDrankMenuoverzicht);
             this.Controls.Add(this.pnl_KassaLunchMenuoverizcht);
             this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
@@ -2185,6 +2362,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_KassaLogin);
             this.Controls.Add(this.lbl_KassaPincode);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Kassa";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

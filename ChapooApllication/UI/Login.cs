@@ -60,8 +60,9 @@ namespace UI
                     keuken.Show();
                 }if(medewerker.type == "bediening")
                 {
-                    Handheld handheld = new Handheld();
-                    handheld.Show();
+                    Bediening bediening = new Bediening();
+                    bediening.Show();
+                    
                 } if(medewerker.type == "barmedewerker")
                 {
                     Bar bar = new Bar();
@@ -135,6 +136,11 @@ namespace UI
         private void btn_LoginWarningOK_Click(object sender, EventArgs e)
         {
             HidePanels();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

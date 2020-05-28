@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veal Tartare",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Crab-salmon",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veal Tartare",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Crab-salmon",
             "1"}, -1);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keuken));
             this.pnl_KeukenBarStart = new System.Windows.Forms.Panel();
             this.btn_StartAfmelden = new System.Windows.Forms.Button();
             this.btn_StartVoorraad = new System.Windows.Forms.Button();
@@ -186,16 +187,18 @@
             this.pnl_KeukenBarStart.Controls.Add(this.btn_StartAfgeronde);
             this.pnl_KeukenBarStart.Controls.Add(this.ChapooLogoBestellingStartScherm);
             this.pnl_KeukenBarStart.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KeukenBarStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_KeukenBarStart.Name = "pnl_KeukenBarStart";
-            this.pnl_KeukenBarStart.Size = new System.Drawing.Size(1903, 1041);
+            this.pnl_KeukenBarStart.Size = new System.Drawing.Size(2537, 1281);
             this.pnl_KeukenBarStart.TabIndex = 21;
             // 
             // btn_StartAfmelden
             // 
             this.btn_StartAfmelden.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_StartAfmelden.Location = new System.Drawing.Point(806, 879);
+            this.btn_StartAfmelden.Location = new System.Drawing.Point(1075, 1082);
+            this.btn_StartAfmelden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_StartAfmelden.Name = "btn_StartAfmelden";
-            this.btn_StartAfmelden.Size = new System.Drawing.Size(348, 82);
+            this.btn_StartAfmelden.Size = new System.Drawing.Size(464, 101);
             this.btn_StartAfmelden.TabIndex = 28;
             this.btn_StartAfmelden.Text = "Afmelden";
             this.btn_StartAfmelden.UseVisualStyleBackColor = true;
@@ -203,9 +206,10 @@
             // btn_StartVoorraad
             // 
             this.btn_StartVoorraad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_StartVoorraad.Location = new System.Drawing.Point(1273, 490);
+            this.btn_StartVoorraad.Location = new System.Drawing.Point(1697, 603);
+            this.btn_StartVoorraad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_StartVoorraad.Name = "btn_StartVoorraad";
-            this.btn_StartVoorraad.Size = new System.Drawing.Size(311, 310);
+            this.btn_StartVoorraad.Size = new System.Drawing.Size(415, 382);
             this.btn_StartVoorraad.TabIndex = 27;
             this.btn_StartVoorraad.Text = "Voorraad overzicht";
             this.btn_StartVoorraad.UseVisualStyleBackColor = true;
@@ -213,9 +217,10 @@
             // btn_StartInkomende
             // 
             this.btn_StartInkomende.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_StartInkomende.Location = new System.Drawing.Point(819, 490);
+            this.btn_StartInkomende.Location = new System.Drawing.Point(1092, 603);
+            this.btn_StartInkomende.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_StartInkomende.Name = "btn_StartInkomende";
-            this.btn_StartInkomende.Size = new System.Drawing.Size(311, 310);
+            this.btn_StartInkomende.Size = new System.Drawing.Size(415, 382);
             this.btn_StartInkomende.TabIndex = 26;
             this.btn_StartInkomende.Text = "Inkomende bestellingen";
             this.btn_StartInkomende.UseVisualStyleBackColor = true;
@@ -223,9 +228,10 @@
             // btn_StartAfgeronde
             // 
             this.btn_StartAfgeronde.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_StartAfgeronde.Location = new System.Drawing.Point(371, 490);
+            this.btn_StartAfgeronde.Location = new System.Drawing.Point(495, 603);
+            this.btn_StartAfgeronde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_StartAfgeronde.Name = "btn_StartAfgeronde";
-            this.btn_StartAfgeronde.Size = new System.Drawing.Size(311, 310);
+            this.btn_StartAfgeronde.Size = new System.Drawing.Size(415, 382);
             this.btn_StartAfgeronde.TabIndex = 25;
             this.btn_StartAfgeronde.Text = "Afgeronde bestellingen";
             this.btn_StartAfgeronde.UseVisualStyleBackColor = true;
@@ -233,9 +239,10 @@
             // ChapooLogoBestellingStartScherm
             // 
             this.ChapooLogoBestellingStartScherm.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.ChapooLogoBestellingStartScherm.Location = new System.Drawing.Point(756, 98);
+            this.ChapooLogoBestellingStartScherm.Location = new System.Drawing.Point(1008, 121);
+            this.ChapooLogoBestellingStartScherm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ChapooLogoBestellingStartScherm.Name = "ChapooLogoBestellingStartScherm";
-            this.ChapooLogoBestellingStartScherm.Size = new System.Drawing.Size(416, 244);
+            this.ChapooLogoBestellingStartScherm.Size = new System.Drawing.Size(555, 300);
             this.ChapooLogoBestellingStartScherm.TabIndex = 21;
             this.ChapooLogoBestellingStartScherm.TabStop = false;
             // 
@@ -250,8 +257,9 @@
             this.pnl_BinnenkomendeBestellingen.Controls.Add(this.btn_VerwijderBestelling);
             this.pnl_BinnenkomendeBestellingen.Controls.Add(this.ChapooLogoBinnenkomendeBetselling);
             this.pnl_BinnenkomendeBestellingen.Location = new System.Drawing.Point(0, 0);
+            this.pnl_BinnenkomendeBestellingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_BinnenkomendeBestellingen.Name = "pnl_BinnenkomendeBestellingen";
-            this.pnl_BinnenkomendeBestellingen.Size = new System.Drawing.Size(1903, 1041);
+            this.pnl_BinnenkomendeBestellingen.Size = new System.Drawing.Size(2537, 1281);
             this.pnl_BinnenkomendeBestellingen.TabIndex = 22;
             // 
             // pnl_TafelBinnenkomendeBestelling
@@ -269,9 +277,10 @@
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_DatumTijd);
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_Tafel);
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.Btn_Sluiten);
-            this.pnl_TafelBinnenkomendeBestelling.Location = new System.Drawing.Point(503, 129);
+            this.pnl_TafelBinnenkomendeBestelling.Location = new System.Drawing.Point(671, 159);
+            this.pnl_TafelBinnenkomendeBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_TafelBinnenkomendeBestelling.Name = "pnl_TafelBinnenkomendeBestelling";
-            this.pnl_TafelBinnenkomendeBestelling.Size = new System.Drawing.Size(911, 744);
+            this.pnl_TafelBinnenkomendeBestelling.Size = new System.Drawing.Size(1214, 915);
             this.pnl_TafelBinnenkomendeBestelling.TabIndex = 75;
             // 
             // lbl_Aantal
@@ -279,9 +288,10 @@
             this.lbl_Aantal.AutoSize = true;
             this.lbl_Aantal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Aantal.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Aantal.Location = new System.Drawing.Point(661, 490);
+            this.lbl_Aantal.Location = new System.Drawing.Point(881, 603);
+            this.lbl_Aantal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Aantal.Name = "lbl_Aantal";
-            this.lbl_Aantal.Size = new System.Drawing.Size(68, 25);
+            this.lbl_Aantal.Size = new System.Drawing.Size(85, 29);
             this.lbl_Aantal.TabIndex = 69;
             this.lbl_Aantal.Text = "Aantal";
             // 
@@ -290,26 +300,29 @@
             this.lbl_MenuItem.AutoSize = true;
             this.lbl_MenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_MenuItem.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_MenuItem.Location = new System.Drawing.Point(19, 488);
+            this.lbl_MenuItem.Location = new System.Drawing.Point(25, 601);
+            this.lbl_MenuItem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_MenuItem.Name = "lbl_MenuItem";
-            this.lbl_MenuItem.Size = new System.Drawing.Size(104, 25);
+            this.lbl_MenuItem.Size = new System.Drawing.Size(132, 29);
             this.lbl_MenuItem.TabIndex = 68;
             this.lbl_MenuItem.Text = "Menu Item";
             // 
             // txtAantal
             // 
             this.txtAantal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAantal.Location = new System.Drawing.Point(739, 489);
+            this.txtAantal.Location = new System.Drawing.Point(985, 602);
+            this.txtAantal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAantal.Name = "txtAantal";
-            this.txtAantal.Size = new System.Drawing.Size(139, 26);
+            this.txtAantal.Size = new System.Drawing.Size(184, 30);
             this.txtAantal.TabIndex = 67;
             // 
             // txtMenuItem
             // 
             this.txtMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMenuItem.Location = new System.Drawing.Point(134, 489);
+            this.txtMenuItem.Location = new System.Drawing.Point(179, 602);
+            this.txtMenuItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMenuItem.Name = "txtMenuItem";
-            this.txtMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.txtMenuItem.Size = new System.Drawing.Size(184, 30);
             this.txtMenuItem.TabIndex = 66;
             // 
             // lbl_Opmerkingen
@@ -317,27 +330,30 @@
             this.lbl_Opmerkingen.AutoSize = true;
             this.lbl_Opmerkingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Opmerkingen.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Opmerkingen.Location = new System.Drawing.Point(389, 585);
+            this.lbl_Opmerkingen.Location = new System.Drawing.Point(519, 720);
+            this.lbl_Opmerkingen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Opmerkingen.Name = "lbl_Opmerkingen";
-            this.lbl_Opmerkingen.Size = new System.Drawing.Size(130, 25);
+            this.lbl_Opmerkingen.Size = new System.Drawing.Size(165, 29);
             this.lbl_Opmerkingen.TabIndex = 65;
             this.lbl_Opmerkingen.Text = "Opmerkingen";
             // 
             // txt_Opmerkingen
             // 
-            this.txt_Opmerkingen.Location = new System.Drawing.Point(21, 622);
+            this.txt_Opmerkingen.Location = new System.Drawing.Point(28, 766);
+            this.txt_Opmerkingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Opmerkingen.Multiline = true;
             this.txt_Opmerkingen.Name = "txt_Opmerkingen";
-            this.txt_Opmerkingen.Size = new System.Drawing.Size(857, 113);
+            this.txt_Opmerkingen.Size = new System.Drawing.Size(1141, 138);
             this.txt_Opmerkingen.TabIndex = 64;
             // 
             // btnGereedMenuItem
             // 
             this.btnGereedMenuItem.BackColor = System.Drawing.Color.OliveDrab;
             this.btnGereedMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGereedMenuItem.Location = new System.Drawing.Point(335, 528);
+            this.btnGereedMenuItem.Location = new System.Drawing.Point(447, 650);
+            this.btnGereedMenuItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGereedMenuItem.Name = "btnGereedMenuItem";
-            this.btnGereedMenuItem.Size = new System.Drawing.Size(241, 42);
+            this.btnGereedMenuItem.Size = new System.Drawing.Size(321, 52);
             this.btnGereedMenuItem.TabIndex = 63;
             this.btnGereedMenuItem.Text = "Gereed";
             this.btnGereedMenuItem.UseVisualStyleBackColor = false;
@@ -350,11 +366,12 @@
             this.listView_BestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_BestelItems.HideSelection = false;
             this.listView_BestelItems.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14});
-            this.listView_BestelItems.Location = new System.Drawing.Point(21, 81);
+            listViewItem1,
+            listViewItem2});
+            this.listView_BestelItems.Location = new System.Drawing.Point(28, 100);
+            this.listView_BestelItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView_BestelItems.Name = "listView_BestelItems";
-            this.listView_BestelItems.Size = new System.Drawing.Size(857, 390);
+            this.listView_BestelItems.Size = new System.Drawing.Size(1141, 479);
             this.listView_BestelItems.TabIndex = 62;
             this.listView_BestelItems.UseCompatibleStateImageBehavior = false;
             this.listView_BestelItems.View = System.Windows.Forms.View.Details;
@@ -374,9 +391,10 @@
             this.lbl_Bestelling.AutoSize = true;
             this.lbl_Bestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Bestelling.Location = new System.Drawing.Point(414, 27);
+            this.lbl_Bestelling.Location = new System.Drawing.Point(552, 33);
+            this.lbl_Bestelling.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling.Name = "lbl_Bestelling";
-            this.lbl_Bestelling.Size = new System.Drawing.Size(96, 25);
+            this.lbl_Bestelling.Size = new System.Drawing.Size(124, 29);
             this.lbl_Bestelling.TabIndex = 61;
             this.lbl_Bestelling.Text = "Bestelling";
             // 
@@ -385,9 +403,10 @@
             this.lbl_DatumTijd.AutoSize = true;
             this.lbl_DatumTijd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DatumTijd.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_DatumTijd.Location = new System.Drawing.Point(731, 27);
+            this.lbl_DatumTijd.Location = new System.Drawing.Point(975, 33);
+            this.lbl_DatumTijd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_DatumTijd.Name = "lbl_DatumTijd";
-            this.lbl_DatumTijd.Size = new System.Drawing.Size(147, 25);
+            this.lbl_DatumTijd.Size = new System.Drawing.Size(183, 29);
             this.lbl_DatumTijd.TabIndex = 60;
             this.lbl_DatumTijd.Text = "17-05-20 12:30";
             // 
@@ -396,18 +415,20 @@
             this.lbl_Tafel.AutoSize = true;
             this.lbl_Tafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Tafel.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Tafel.Location = new System.Drawing.Point(201, 27);
+            this.lbl_Tafel.Location = new System.Drawing.Point(268, 33);
+            this.lbl_Tafel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Tafel.Name = "lbl_Tafel";
-            this.lbl_Tafel.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Tafel.Size = new System.Drawing.Size(90, 29);
             this.lbl_Tafel.TabIndex = 41;
             this.lbl_Tafel.Text = "Tafel 1";
             // 
             // Btn_Sluiten
             // 
             this.Btn_Sluiten.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Sluiten.Location = new System.Drawing.Point(21, 21);
+            this.Btn_Sluiten.Location = new System.Drawing.Point(28, 26);
+            this.Btn_Sluiten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Sluiten.Name = "Btn_Sluiten";
-            this.Btn_Sluiten.Size = new System.Drawing.Size(139, 36);
+            this.Btn_Sluiten.Size = new System.Drawing.Size(185, 44);
             this.Btn_Sluiten.TabIndex = 35;
             this.Btn_Sluiten.Text = "Sluiten";
             this.Btn_Sluiten.UseVisualStyleBackColor = true;
@@ -415,9 +436,10 @@
             // btn_AfgerondeBestelling
             // 
             this.btn_AfgerondeBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AfgerondeBestelling.Location = new System.Drawing.Point(744, 920);
+            this.btn_AfgerondeBestelling.Location = new System.Drawing.Point(992, 1132);
+            this.btn_AfgerondeBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_AfgerondeBestelling.Name = "btn_AfgerondeBestelling";
-            this.btn_AfgerondeBestelling.Size = new System.Drawing.Size(428, 82);
+            this.btn_AfgerondeBestelling.Size = new System.Drawing.Size(571, 101);
             this.btn_AfgerondeBestelling.TabIndex = 40;
             this.btn_AfgerondeBestelling.Text = "Afgeronde bestellingen";
             this.btn_AfgerondeBestelling.UseVisualStyleBackColor = true;
@@ -440,9 +462,11 @@
             this.gBoxBestellingen.Controls.Add(this.gBox_Tafel2);
             this.gBoxBestellingen.Controls.Add(this.lblTijd1);
             this.gBoxBestellingen.Controls.Add(this.gBox_Tafel1);
-            this.gBoxBestellingen.Location = new System.Drawing.Point(0, 151);
+            this.gBoxBestellingen.Location = new System.Drawing.Point(0, 186);
+            this.gBoxBestellingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBoxBestellingen.Name = "gBoxBestellingen";
-            this.gBoxBestellingen.Size = new System.Drawing.Size(1900, 736);
+            this.gBoxBestellingen.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxBestellingen.Size = new System.Drawing.Size(2533, 906);
             this.gBoxBestellingen.TabIndex = 39;
             this.gBoxBestellingen.TabStop = false;
             // 
@@ -451,9 +475,10 @@
             this.lblTijd8.AutoSize = true;
             this.lblTijd8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd8.Location = new System.Drawing.Point(1554, 374);
+            this.lblTijd8.Location = new System.Drawing.Point(2072, 460);
+            this.lblTijd8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd8.Name = "lblTijd8";
-            this.lblTijd8.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd8.Size = new System.Drawing.Size(183, 29);
             this.lblTijd8.TabIndex = 74;
             this.lblTijd8.Text = "17-05-20 12:30";
             // 
@@ -461,9 +486,11 @@
             // 
             this.gBox_Tafel8.Controls.Add(this.lBox_Bestelling8);
             this.gBox_Tafel8.Controls.Add(this.lbl_Bestelling8);
-            this.gBox_Tafel8.Location = new System.Drawing.Point(1480, 399);
+            this.gBox_Tafel8.Location = new System.Drawing.Point(1973, 491);
+            this.gBox_Tafel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel8.Name = "gBox_Tafel8";
-            this.gBox_Tafel8.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel8.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel8.TabIndex = 73;
             this.gBox_Tafel8.TabStop = false;
             // 
@@ -471,13 +498,14 @@
             // 
             this.lBox_Bestelling8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling8.FormattingEnabled = true;
-            this.lBox_Bestelling8.ItemHeight = 20;
+            this.lBox_Bestelling8.ItemHeight = 25;
             this.lBox_Bestelling8.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_Bestelling8.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling8.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling8.Name = "lBox_Bestelling8";
-            this.lBox_Bestelling8.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling8.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling8.TabIndex = 39;
             // 
             // lbl_Bestelling8
@@ -485,9 +513,10 @@
             this.lbl_Bestelling8.AutoSize = true;
             this.lbl_Bestelling8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Bestelling8.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling8.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling8.Name = "lbl_Bestelling8";
-            this.lbl_Bestelling8.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling8.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling8.TabIndex = 40;
             this.lbl_Bestelling8.Text = "Tafel 8";
             // 
@@ -496,9 +525,10 @@
             this.lblTijd7.AutoSize = true;
             this.lblTijd7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd7.Location = new System.Drawing.Point(1107, 374);
+            this.lblTijd7.Location = new System.Drawing.Point(1476, 460);
+            this.lblTijd7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd7.Name = "lblTijd7";
-            this.lblTijd7.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd7.Size = new System.Drawing.Size(183, 29);
             this.lblTijd7.TabIndex = 72;
             this.lblTijd7.Text = "17-05-20 12:30";
             // 
@@ -506,9 +536,11 @@
             // 
             this.gBox_Tafel7.Controls.Add(this.lBox_Bestelling7);
             this.gBox_Tafel7.Controls.Add(this.lbl_Bestelling7);
-            this.gBox_Tafel7.Location = new System.Drawing.Point(1033, 399);
+            this.gBox_Tafel7.Location = new System.Drawing.Point(1377, 491);
+            this.gBox_Tafel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel7.Name = "gBox_Tafel7";
-            this.gBox_Tafel7.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel7.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel7.TabIndex = 71;
             this.gBox_Tafel7.TabStop = false;
             // 
@@ -516,13 +548,14 @@
             // 
             this.lBox_Bestelling7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling7.FormattingEnabled = true;
-            this.lBox_Bestelling7.ItemHeight = 20;
+            this.lBox_Bestelling7.ItemHeight = 25;
             this.lBox_Bestelling7.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_Bestelling7.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling7.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling7.Name = "lBox_Bestelling7";
-            this.lBox_Bestelling7.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling7.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling7.TabIndex = 39;
             // 
             // lbl_Bestelling7
@@ -530,9 +563,10 @@
             this.lbl_Bestelling7.AutoSize = true;
             this.lbl_Bestelling7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Bestelling7.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling7.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling7.Name = "lbl_Bestelling7";
-            this.lbl_Bestelling7.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling7.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling7.TabIndex = 40;
             this.lbl_Bestelling7.Text = "Tafel 7";
             // 
@@ -541,9 +575,10 @@
             this.lblTijd6.AutoSize = true;
             this.lblTijd6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd6.Location = new System.Drawing.Point(654, 374);
+            this.lblTijd6.Location = new System.Drawing.Point(872, 460);
+            this.lblTijd6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd6.Name = "lblTijd6";
-            this.lblTijd6.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd6.Size = new System.Drawing.Size(183, 29);
             this.lblTijd6.TabIndex = 70;
             this.lblTijd6.Text = "17-05-20 12:30";
             // 
@@ -551,9 +586,11 @@
             // 
             this.gBox_Tafel6.Controls.Add(this.lBox_Bestelling6);
             this.gBox_Tafel6.Controls.Add(this.lbl_Bestelling6);
-            this.gBox_Tafel6.Location = new System.Drawing.Point(580, 399);
+            this.gBox_Tafel6.Location = new System.Drawing.Point(773, 491);
+            this.gBox_Tafel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel6.Name = "gBox_Tafel6";
-            this.gBox_Tafel6.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel6.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel6.TabIndex = 69;
             this.gBox_Tafel6.TabStop = false;
             // 
@@ -561,13 +598,14 @@
             // 
             this.lBox_Bestelling6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling6.FormattingEnabled = true;
-            this.lBox_Bestelling6.ItemHeight = 20;
+            this.lBox_Bestelling6.ItemHeight = 25;
             this.lBox_Bestelling6.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_Bestelling6.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling6.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling6.Name = "lBox_Bestelling6";
-            this.lBox_Bestelling6.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling6.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling6.TabIndex = 39;
             // 
             // lbl_Bestelling6
@@ -575,9 +613,10 @@
             this.lbl_Bestelling6.AutoSize = true;
             this.lbl_Bestelling6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Bestelling6.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling6.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling6.Name = "lbl_Bestelling6";
-            this.lbl_Bestelling6.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling6.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling6.TabIndex = 40;
             this.lbl_Bestelling6.Text = "Tafel 6";
             // 
@@ -586,9 +625,10 @@
             this.lblTijd5.AutoSize = true;
             this.lblTijd5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd5.Location = new System.Drawing.Point(183, 374);
+            this.lblTijd5.Location = new System.Drawing.Point(244, 460);
+            this.lblTijd5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd5.Name = "lblTijd5";
-            this.lblTijd5.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd5.Size = new System.Drawing.Size(183, 29);
             this.lblTijd5.TabIndex = 68;
             this.lblTijd5.Text = "17-05-20 12:30";
             // 
@@ -596,9 +636,11 @@
             // 
             this.gBox_Tafel5.Controls.Add(this.lBox_Bestelling5);
             this.gBox_Tafel5.Controls.Add(this.lbl_Bestelling5);
-            this.gBox_Tafel5.Location = new System.Drawing.Point(109, 399);
+            this.gBox_Tafel5.Location = new System.Drawing.Point(145, 491);
+            this.gBox_Tafel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel5.Name = "gBox_Tafel5";
-            this.gBox_Tafel5.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel5.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel5.TabIndex = 67;
             this.gBox_Tafel5.TabStop = false;
             // 
@@ -606,13 +648,14 @@
             // 
             this.lBox_Bestelling5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling5.FormattingEnabled = true;
-            this.lBox_Bestelling5.ItemHeight = 20;
+            this.lBox_Bestelling5.ItemHeight = 25;
             this.lBox_Bestelling5.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_Bestelling5.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling5.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling5.Name = "lBox_Bestelling5";
-            this.lBox_Bestelling5.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling5.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling5.TabIndex = 39;
             // 
             // lbl_Bestelling5
@@ -620,9 +663,10 @@
             this.lbl_Bestelling5.AutoSize = true;
             this.lbl_Bestelling5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Bestelling5.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling5.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling5.Name = "lbl_Bestelling5";
-            this.lbl_Bestelling5.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling5.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling5.TabIndex = 40;
             this.lbl_Bestelling5.Text = "Tafel 5";
             // 
@@ -631,9 +675,10 @@
             this.lblTijd4.AutoSize = true;
             this.lblTijd4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd4.Location = new System.Drawing.Point(1554, 16);
+            this.lblTijd4.Location = new System.Drawing.Point(2072, 20);
+            this.lblTijd4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd4.Name = "lblTijd4";
-            this.lblTijd4.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd4.Size = new System.Drawing.Size(183, 29);
             this.lblTijd4.TabIndex = 66;
             this.lblTijd4.Text = "17-05-20 12:30";
             // 
@@ -641,9 +686,11 @@
             // 
             this.gBox_Tafel4.Controls.Add(this.lBox_Bestelling4);
             this.gBox_Tafel4.Controls.Add(this.lbl_Bestelling4);
-            this.gBox_Tafel4.Location = new System.Drawing.Point(1480, 41);
+            this.gBox_Tafel4.Location = new System.Drawing.Point(1973, 50);
+            this.gBox_Tafel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel4.Name = "gBox_Tafel4";
-            this.gBox_Tafel4.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel4.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel4.TabIndex = 65;
             this.gBox_Tafel4.TabStop = false;
             // 
@@ -651,13 +698,14 @@
             // 
             this.lBox_Bestelling4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling4.FormattingEnabled = true;
-            this.lBox_Bestelling4.ItemHeight = 20;
+            this.lBox_Bestelling4.ItemHeight = 25;
             this.lBox_Bestelling4.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_Bestelling4.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling4.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling4.Name = "lBox_Bestelling4";
-            this.lBox_Bestelling4.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling4.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling4.TabIndex = 39;
             // 
             // lbl_Bestelling4
@@ -665,9 +713,10 @@
             this.lbl_Bestelling4.AutoSize = true;
             this.lbl_Bestelling4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Bestelling4.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling4.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling4.Name = "lbl_Bestelling4";
-            this.lbl_Bestelling4.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling4.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling4.TabIndex = 40;
             this.lbl_Bestelling4.Text = "Tafel 4";
             // 
@@ -676,9 +725,10 @@
             this.lblTijd3.AutoSize = true;
             this.lblTijd3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd3.Location = new System.Drawing.Point(1107, 16);
+            this.lblTijd3.Location = new System.Drawing.Point(1476, 20);
+            this.lblTijd3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd3.Name = "lblTijd3";
-            this.lblTijd3.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd3.Size = new System.Drawing.Size(183, 29);
             this.lblTijd3.TabIndex = 64;
             this.lblTijd3.Text = "17-05-20 12:30";
             // 
@@ -686,9 +736,11 @@
             // 
             this.gBox_Tafel3.Controls.Add(this.lBox_Bestelling3);
             this.gBox_Tafel3.Controls.Add(this.lbl_Bestelling3);
-            this.gBox_Tafel3.Location = new System.Drawing.Point(1033, 41);
+            this.gBox_Tafel3.Location = new System.Drawing.Point(1377, 50);
+            this.gBox_Tafel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel3.Name = "gBox_Tafel3";
-            this.gBox_Tafel3.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel3.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel3.TabIndex = 63;
             this.gBox_Tafel3.TabStop = false;
             // 
@@ -696,14 +748,15 @@
             // 
             this.lBox_Bestelling3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling3.FormattingEnabled = true;
-            this.lBox_Bestelling3.ItemHeight = 20;
+            this.lBox_Bestelling3.ItemHeight = 25;
             this.lBox_Bestelling3.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "paté van fazant (2x)",
             "hertenstoofpot (3x)"});
-            this.lBox_Bestelling3.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling3.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling3.Name = "lBox_Bestelling3";
-            this.lBox_Bestelling3.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling3.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling3.TabIndex = 39;
             // 
             // lbl_Bestelling3
@@ -711,9 +764,10 @@
             this.lbl_Bestelling3.AutoSize = true;
             this.lbl_Bestelling3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_Bestelling3.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling3.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling3.Name = "lbl_Bestelling3";
-            this.lbl_Bestelling3.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling3.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling3.TabIndex = 40;
             this.lbl_Bestelling3.Text = "Tafel 3";
             // 
@@ -722,9 +776,10 @@
             this.lblTijd2.AutoSize = true;
             this.lblTijd2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd2.Location = new System.Drawing.Point(654, 16);
+            this.lblTijd2.Location = new System.Drawing.Point(872, 20);
+            this.lblTijd2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd2.Name = "lblTijd2";
-            this.lblTijd2.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd2.Size = new System.Drawing.Size(183, 29);
             this.lblTijd2.TabIndex = 62;
             this.lblTijd2.Text = "17-05-20 12:30";
             // 
@@ -732,9 +787,11 @@
             // 
             this.gBox_Tafel2.Controls.Add(this.lBox_Bestelling2);
             this.gBox_Tafel2.Controls.Add(this.lbl_Bestelling2);
-            this.gBox_Tafel2.Location = new System.Drawing.Point(580, 41);
+            this.gBox_Tafel2.Location = new System.Drawing.Point(773, 50);
+            this.gBox_Tafel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel2.Name = "gBox_Tafel2";
-            this.gBox_Tafel2.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel2.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel2.TabIndex = 61;
             this.gBox_Tafel2.TabStop = false;
             // 
@@ -742,13 +799,14 @@
             // 
             this.lBox_Bestelling2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling2.FormattingEnabled = true;
-            this.lBox_Bestelling2.ItemHeight = 20;
+            this.lBox_Bestelling2.ItemHeight = 25;
             this.lBox_Bestelling2.Items.AddRange(new object[] {
             "Paté van fazant (1x)",
             "Gebakken kabeljauw (1x)"});
-            this.lBox_Bestelling2.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling2.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling2.Name = "lBox_Bestelling2";
-            this.lBox_Bestelling2.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling2.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling2.TabIndex = 39;
             // 
             // lbl_Bestelling2
@@ -756,9 +814,10 @@
             this.lbl_Bestelling2.AutoSize = true;
             this.lbl_Bestelling2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling2.ForeColor = System.Drawing.Color.Orange;
-            this.lbl_Bestelling2.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling2.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling2.Name = "lbl_Bestelling2";
-            this.lbl_Bestelling2.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling2.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling2.TabIndex = 40;
             this.lbl_Bestelling2.Text = "Tafel 2";
             // 
@@ -767,9 +826,10 @@
             this.lblTijd1.AutoSize = true;
             this.lblTijd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTijd1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblTijd1.Location = new System.Drawing.Point(183, 16);
+            this.lblTijd1.Location = new System.Drawing.Point(244, 20);
+            this.lblTijd1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTijd1.Name = "lblTijd1";
-            this.lblTijd1.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd1.Size = new System.Drawing.Size(183, 29);
             this.lblTijd1.TabIndex = 59;
             this.lblTijd1.Text = "17-05-20 12:30";
             // 
@@ -777,9 +837,11 @@
             // 
             this.gBox_Tafel1.Controls.Add(this.lBox_Bestelling1);
             this.gBox_Tafel1.Controls.Add(this.lbl_Bestelling1);
-            this.gBox_Tafel1.Location = new System.Drawing.Point(109, 41);
+            this.gBox_Tafel1.Location = new System.Drawing.Point(145, 50);
+            this.gBox_Tafel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_Tafel1.Name = "gBox_Tafel1";
-            this.gBox_Tafel1.Size = new System.Drawing.Size(307, 321);
+            this.gBox_Tafel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_Tafel1.Size = new System.Drawing.Size(409, 395);
             this.gBox_Tafel1.TabIndex = 58;
             this.gBox_Tafel1.TabStop = false;
             // 
@@ -787,7 +849,7 @@
             // 
             this.lBox_Bestelling1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_Bestelling1.FormattingEnabled = true;
-            this.lBox_Bestelling1.ItemHeight = 20;
+            this.lBox_Bestelling1.ItemHeight = 25;
             this.lBox_Bestelling1.Items.AddRange(new object[] {
             "Veal Tartare (2x)",
             "Crab-salmon (1x)",
@@ -795,9 +857,10 @@
             "Hertenstoofpot (3x)",
             "Cherry Baby (2x)",
             "Café Surprise (1x)"});
-            this.lBox_Bestelling1.Location = new System.Drawing.Point(0, 37);
+            this.lBox_Bestelling1.Location = new System.Drawing.Point(0, 46);
+            this.lBox_Bestelling1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_Bestelling1.Name = "lBox_Bestelling1";
-            this.lBox_Bestelling1.Size = new System.Drawing.Size(307, 284);
+            this.lBox_Bestelling1.Size = new System.Drawing.Size(408, 329);
             this.lBox_Bestelling1.TabIndex = 39;
             // 
             // lbl_Bestelling1
@@ -805,18 +868,20 @@
             this.lbl_Bestelling1.AutoSize = true;
             this.lbl_Bestelling1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Bestelling1.ForeColor = System.Drawing.Color.Orange;
-            this.lbl_Bestelling1.Location = new System.Drawing.Point(111, 10);
+            this.lbl_Bestelling1.Location = new System.Drawing.Point(148, 12);
+            this.lbl_Bestelling1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestelling1.Name = "lbl_Bestelling1";
-            this.lbl_Bestelling1.Size = new System.Drawing.Size(72, 25);
+            this.lbl_Bestelling1.Size = new System.Drawing.Size(90, 29);
             this.lbl_Bestelling1.TabIndex = 40;
             this.lbl_Bestelling1.Text = "Tafel 1";
             // 
             // btn_TerugStartscherm
             // 
             this.btn_TerugStartscherm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TerugStartscherm.Location = new System.Drawing.Point(109, 68);
+            this.btn_TerugStartscherm.Location = new System.Drawing.Point(145, 84);
+            this.btn_TerugStartscherm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_TerugStartscherm.Name = "btn_TerugStartscherm";
-            this.btn_TerugStartscherm.Size = new System.Drawing.Size(203, 59);
+            this.btn_TerugStartscherm.Size = new System.Drawing.Size(271, 73);
             this.btn_TerugStartscherm.TabIndex = 34;
             this.btn_TerugStartscherm.Text = "Startscherm";
             this.btn_TerugStartscherm.UseVisualStyleBackColor = true;
@@ -825,9 +890,10 @@
             // 
             this.lbl_Bestellingen.AutoSize = true;
             this.lbl_Bestellingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestellingen.Location = new System.Drawing.Point(740, 74);
+            this.lbl_Bestellingen.Location = new System.Drawing.Point(987, 91);
+            this.lbl_Bestellingen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Bestellingen.Name = "lbl_Bestellingen";
-            this.lbl_Bestellingen.Size = new System.Drawing.Size(456, 39);
+            this.lbl_Bestellingen.Size = new System.Drawing.Size(556, 48);
             this.lbl_Bestellingen.TabIndex = 33;
             this.lbl_Bestellingen.Text = "Binnengekomen bestellingen";
             // 
@@ -835,9 +901,10 @@
             // 
             this.btn_GereedBestelling.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_GereedBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_GereedBestelling.Location = new System.Drawing.Point(109, 920);
+            this.btn_GereedBestelling.Location = new System.Drawing.Point(145, 1132);
+            this.btn_GereedBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_GereedBestelling.Name = "btn_GereedBestelling";
-            this.btn_GereedBestelling.Size = new System.Drawing.Size(348, 82);
+            this.btn_GereedBestelling.Size = new System.Drawing.Size(464, 101);
             this.btn_GereedBestelling.TabIndex = 31;
             this.btn_GereedBestelling.Text = "Gereed voor serveren";
             this.btn_GereedBestelling.UseVisualStyleBackColor = false;
@@ -846,9 +913,10 @@
             // 
             this.btn_VerwijderBestelling.BackColor = System.Drawing.Color.IndianRed;
             this.btn_VerwijderBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VerwijderBestelling.Location = new System.Drawing.Point(1437, 920);
+            this.btn_VerwijderBestelling.Location = new System.Drawing.Point(1916, 1132);
+            this.btn_VerwijderBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_VerwijderBestelling.Name = "btn_VerwijderBestelling";
-            this.btn_VerwijderBestelling.Size = new System.Drawing.Size(348, 82);
+            this.btn_VerwijderBestelling.Size = new System.Drawing.Size(464, 101);
             this.btn_VerwijderBestelling.TabIndex = 30;
             this.btn_VerwijderBestelling.Text = "Bestelling verwijderen";
             this.btn_VerwijderBestelling.UseVisualStyleBackColor = false;
@@ -856,9 +924,10 @@
             // ChapooLogoBinnenkomendeBetselling
             // 
             this.ChapooLogoBinnenkomendeBetselling.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.ChapooLogoBinnenkomendeBetselling.Location = new System.Drawing.Point(1632, 0);
+            this.ChapooLogoBinnenkomendeBetselling.Location = new System.Drawing.Point(2176, 0);
+            this.ChapooLogoBinnenkomendeBetselling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ChapooLogoBinnenkomendeBetselling.Name = "ChapooLogoBinnenkomendeBetselling";
-            this.ChapooLogoBinnenkomendeBetselling.Size = new System.Drawing.Size(237, 133);
+            this.ChapooLogoBinnenkomendeBetselling.Size = new System.Drawing.Size(316, 164);
             this.ChapooLogoBinnenkomendeBetselling.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ChapooLogoBinnenkomendeBetselling.TabIndex = 22;
             this.ChapooLogoBinnenkomendeBetselling.TabStop = false;
@@ -873,8 +942,9 @@
             this.pnl_AfgerondeBestellingen.Controls.Add(this.btn_VerwijderAfgerondeBestelling);
             this.pnl_AfgerondeBestellingen.Controls.Add(this.ChapooLogoAfgerondeBetselling);
             this.pnl_AfgerondeBestellingen.Location = new System.Drawing.Point(0, 0);
+            this.pnl_AfgerondeBestellingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_AfgerondeBestellingen.Name = "pnl_AfgerondeBestellingen";
-            this.pnl_AfgerondeBestellingen.Size = new System.Drawing.Size(1903, 1041);
+            this.pnl_AfgerondeBestellingen.Size = new System.Drawing.Size(2537, 1281);
             this.pnl_AfgerondeBestellingen.TabIndex = 23;
             // 
             // pnl_TafelAfgerondeBestelling
@@ -887,9 +957,10 @@
             this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFDatumTijd);
             this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFTafel);
             this.pnl_TafelAfgerondeBestelling.Controls.Add(this.Btn_AFSluiten);
-            this.pnl_TafelAfgerondeBestelling.Location = new System.Drawing.Point(503, 129);
+            this.pnl_TafelAfgerondeBestelling.Location = new System.Drawing.Point(671, 159);
+            this.pnl_TafelAfgerondeBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_TafelAfgerondeBestelling.Name = "pnl_TafelAfgerondeBestelling";
-            this.pnl_TafelAfgerondeBestelling.Size = new System.Drawing.Size(911, 682);
+            this.pnl_TafelAfgerondeBestelling.Size = new System.Drawing.Size(1214, 839);
             this.pnl_TafelAfgerondeBestelling.TabIndex = 75;
             // 
             // lbl_AFOpmerkingen
@@ -897,18 +968,20 @@
             this.lbl_AFOpmerkingen.AutoSize = true;
             this.lbl_AFOpmerkingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFOpmerkingen.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFOpmerkingen.Location = new System.Drawing.Point(389, 506);
+            this.lbl_AFOpmerkingen.Location = new System.Drawing.Point(519, 623);
+            this.lbl_AFOpmerkingen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFOpmerkingen.Name = "lbl_AFOpmerkingen";
-            this.lbl_AFOpmerkingen.Size = new System.Drawing.Size(130, 25);
+            this.lbl_AFOpmerkingen.Size = new System.Drawing.Size(165, 29);
             this.lbl_AFOpmerkingen.TabIndex = 65;
             this.lbl_AFOpmerkingen.Text = "Opmerkingen";
             // 
             // txt_AFOpmerkingen
             // 
-            this.txt_AFOpmerkingen.Location = new System.Drawing.Point(21, 543);
+            this.txt_AFOpmerkingen.Location = new System.Drawing.Point(28, 668);
+            this.txt_AFOpmerkingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_AFOpmerkingen.Multiline = true;
             this.txt_AFOpmerkingen.Name = "txt_AFOpmerkingen";
-            this.txt_AFOpmerkingen.Size = new System.Drawing.Size(857, 113);
+            this.txt_AFOpmerkingen.Size = new System.Drawing.Size(1141, 138);
             this.txt_AFOpmerkingen.TabIndex = 64;
             // 
             // listView_AFBestelItems
@@ -919,11 +992,12 @@
             this.listView_AFBestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_AFBestelItems.HideSelection = false;
             this.listView_AFBestelItems.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem15,
-            listViewItem16});
-            this.listView_AFBestelItems.Location = new System.Drawing.Point(21, 81);
+            listViewItem3,
+            listViewItem4});
+            this.listView_AFBestelItems.Location = new System.Drawing.Point(28, 100);
+            this.listView_AFBestelItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView_AFBestelItems.Name = "listView_AFBestelItems";
-            this.listView_AFBestelItems.Size = new System.Drawing.Size(857, 390);
+            this.listView_AFBestelItems.Size = new System.Drawing.Size(1141, 479);
             this.listView_AFBestelItems.TabIndex = 62;
             this.listView_AFBestelItems.UseCompatibleStateImageBehavior = false;
             this.listView_AFBestelItems.View = System.Windows.Forms.View.Details;
@@ -943,9 +1017,10 @@
             this.lbl_AFBestelling.AutoSize = true;
             this.lbl_AFBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling.Location = new System.Drawing.Point(414, 27);
+            this.lbl_AFBestelling.Location = new System.Drawing.Point(552, 33);
+            this.lbl_AFBestelling.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling.Name = "lbl_AFBestelling";
-            this.lbl_AFBestelling.Size = new System.Drawing.Size(96, 25);
+            this.lbl_AFBestelling.Size = new System.Drawing.Size(124, 29);
             this.lbl_AFBestelling.TabIndex = 61;
             this.lbl_AFBestelling.Text = "Bestelling";
             // 
@@ -954,9 +1029,10 @@
             this.lbl_AFDatumTijd.AutoSize = true;
             this.lbl_AFDatumTijd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFDatumTijd.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFDatumTijd.Location = new System.Drawing.Point(731, 27);
+            this.lbl_AFDatumTijd.Location = new System.Drawing.Point(975, 33);
+            this.lbl_AFDatumTijd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFDatumTijd.Name = "lbl_AFDatumTijd";
-            this.lbl_AFDatumTijd.Size = new System.Drawing.Size(147, 25);
+            this.lbl_AFDatumTijd.Size = new System.Drawing.Size(183, 29);
             this.lbl_AFDatumTijd.TabIndex = 60;
             this.lbl_AFDatumTijd.Text = "17-05-20 12:30";
             // 
@@ -965,18 +1041,20 @@
             this.lbl_AFTafel.AutoSize = true;
             this.lbl_AFTafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFTafel.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFTafel.Location = new System.Drawing.Point(201, 27);
+            this.lbl_AFTafel.Location = new System.Drawing.Point(268, 33);
+            this.lbl_AFTafel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFTafel.Name = "lbl_AFTafel";
-            this.lbl_AFTafel.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFTafel.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFTafel.TabIndex = 41;
             this.lbl_AFTafel.Text = "Tafel 1";
             // 
             // Btn_AFSluiten
             // 
             this.Btn_AFSluiten.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_AFSluiten.Location = new System.Drawing.Point(21, 21);
+            this.Btn_AFSluiten.Location = new System.Drawing.Point(28, 26);
+            this.Btn_AFSluiten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_AFSluiten.Name = "Btn_AFSluiten";
-            this.Btn_AFSluiten.Size = new System.Drawing.Size(139, 36);
+            this.Btn_AFSluiten.Size = new System.Drawing.Size(185, 44);
             this.Btn_AFSluiten.TabIndex = 35;
             this.Btn_AFSluiten.Text = "Sluiten";
             this.Btn_AFSluiten.UseVisualStyleBackColor = true;
@@ -984,9 +1062,10 @@
             // btn_Binnenkomendestelling
             // 
             this.btn_Binnenkomendestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Binnenkomendestelling.Location = new System.Drawing.Point(109, 920);
+            this.btn_Binnenkomendestelling.Location = new System.Drawing.Point(145, 1132);
+            this.btn_Binnenkomendestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Binnenkomendestelling.Name = "btn_Binnenkomendestelling";
-            this.btn_Binnenkomendestelling.Size = new System.Drawing.Size(428, 82);
+            this.btn_Binnenkomendestelling.Size = new System.Drawing.Size(571, 101);
             this.btn_Binnenkomendestelling.TabIndex = 40;
             this.btn_Binnenkomendestelling.Text = "Binnengekomen bestellingen";
             this.btn_Binnenkomendestelling.UseVisualStyleBackColor = true;
@@ -1009,9 +1088,11 @@
             this.gBoxAfgerondeBestellingen.Controls.Add(this.gBox_AFTafel2);
             this.gBoxAfgerondeBestellingen.Controls.Add(this.lblAFTijd1);
             this.gBoxAfgerondeBestellingen.Controls.Add(this.gBox_AFTafel1);
-            this.gBoxAfgerondeBestellingen.Location = new System.Drawing.Point(0, 151);
+            this.gBoxAfgerondeBestellingen.Location = new System.Drawing.Point(0, 186);
+            this.gBoxAfgerondeBestellingen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBoxAfgerondeBestellingen.Name = "gBoxAfgerondeBestellingen";
-            this.gBoxAfgerondeBestellingen.Size = new System.Drawing.Size(1900, 736);
+            this.gBoxAfgerondeBestellingen.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBoxAfgerondeBestellingen.Size = new System.Drawing.Size(2533, 906);
             this.gBoxAfgerondeBestellingen.TabIndex = 39;
             this.gBoxAfgerondeBestellingen.TabStop = false;
             // 
@@ -1020,9 +1101,10 @@
             this.lblAFTijd8.AutoSize = true;
             this.lblAFTijd8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd8.Location = new System.Drawing.Point(1554, 374);
+            this.lblAFTijd8.Location = new System.Drawing.Point(2072, 460);
+            this.lblAFTijd8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd8.Name = "lblAFTijd8";
-            this.lblAFTijd8.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd8.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd8.TabIndex = 74;
             this.lblAFTijd8.Text = "17-05-20 12:30";
             // 
@@ -1030,9 +1112,11 @@
             // 
             this.gBox_AFTafel8.Controls.Add(this.lBox_AFBestelling8);
             this.gBox_AFTafel8.Controls.Add(this.lbl_AFBestelling8);
-            this.gBox_AFTafel8.Location = new System.Drawing.Point(1480, 399);
+            this.gBox_AFTafel8.Location = new System.Drawing.Point(1973, 491);
+            this.gBox_AFTafel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel8.Name = "gBox_AFTafel8";
-            this.gBox_AFTafel8.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel8.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel8.TabIndex = 73;
             this.gBox_AFTafel8.TabStop = false;
             // 
@@ -1040,13 +1124,14 @@
             // 
             this.lBox_AFBestelling8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling8.FormattingEnabled = true;
-            this.lBox_AFBestelling8.ItemHeight = 20;
+            this.lBox_AFBestelling8.ItemHeight = 25;
             this.lBox_AFBestelling8.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_AFBestelling8.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling8.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling8.Name = "lBox_AFBestelling8";
-            this.lBox_AFBestelling8.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling8.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling8.TabIndex = 39;
             // 
             // lbl_AFBestelling8
@@ -1054,9 +1139,10 @@
             this.lbl_AFBestelling8.AutoSize = true;
             this.lbl_AFBestelling8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling8.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling8.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling8.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling8.Name = "lbl_AFBestelling8";
-            this.lbl_AFBestelling8.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling8.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling8.TabIndex = 40;
             this.lbl_AFBestelling8.Text = "Tafel 8";
             // 
@@ -1065,9 +1151,10 @@
             this.lblAFTijd7.AutoSize = true;
             this.lblAFTijd7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd7.Location = new System.Drawing.Point(1107, 374);
+            this.lblAFTijd7.Location = new System.Drawing.Point(1476, 460);
+            this.lblAFTijd7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd7.Name = "lblAFTijd7";
-            this.lblAFTijd7.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd7.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd7.TabIndex = 72;
             this.lblAFTijd7.Text = "17-05-20 12:30";
             // 
@@ -1075,9 +1162,11 @@
             // 
             this.gBox_AFTafel7.Controls.Add(this.lBox_AFBestelling7);
             this.gBox_AFTafel7.Controls.Add(this.lbl_AFBestelling7);
-            this.gBox_AFTafel7.Location = new System.Drawing.Point(1033, 399);
+            this.gBox_AFTafel7.Location = new System.Drawing.Point(1377, 491);
+            this.gBox_AFTafel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel7.Name = "gBox_AFTafel7";
-            this.gBox_AFTafel7.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel7.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel7.TabIndex = 71;
             this.gBox_AFTafel7.TabStop = false;
             // 
@@ -1085,13 +1174,14 @@
             // 
             this.lBox_AFBestelling7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling7.FormattingEnabled = true;
-            this.lBox_AFBestelling7.ItemHeight = 20;
+            this.lBox_AFBestelling7.ItemHeight = 25;
             this.lBox_AFBestelling7.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_AFBestelling7.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling7.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling7.Name = "lBox_AFBestelling7";
-            this.lBox_AFBestelling7.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling7.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling7.TabIndex = 39;
             // 
             // lbl_AFBestelling7
@@ -1099,9 +1189,10 @@
             this.lbl_AFBestelling7.AutoSize = true;
             this.lbl_AFBestelling7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling7.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling7.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling7.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling7.Name = "lbl_AFBestelling7";
-            this.lbl_AFBestelling7.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling7.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling7.TabIndex = 40;
             this.lbl_AFBestelling7.Text = "Tafel 7";
             // 
@@ -1110,9 +1201,10 @@
             this.lblAFTijd6.AutoSize = true;
             this.lblAFTijd6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd6.Location = new System.Drawing.Point(654, 374);
+            this.lblAFTijd6.Location = new System.Drawing.Point(872, 460);
+            this.lblAFTijd6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd6.Name = "lblAFTijd6";
-            this.lblAFTijd6.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd6.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd6.TabIndex = 70;
             this.lblAFTijd6.Text = "17-05-20 12:30";
             // 
@@ -1120,9 +1212,11 @@
             // 
             this.gBox_AFTafel6.Controls.Add(this.lBox_AFBestelling6);
             this.gBox_AFTafel6.Controls.Add(this.lbl_AFBestelling6);
-            this.gBox_AFTafel6.Location = new System.Drawing.Point(580, 399);
+            this.gBox_AFTafel6.Location = new System.Drawing.Point(773, 491);
+            this.gBox_AFTafel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel6.Name = "gBox_AFTafel6";
-            this.gBox_AFTafel6.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel6.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel6.TabIndex = 69;
             this.gBox_AFTafel6.TabStop = false;
             // 
@@ -1130,13 +1224,14 @@
             // 
             this.lBox_AFBestelling6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling6.FormattingEnabled = true;
-            this.lBox_AFBestelling6.ItemHeight = 20;
+            this.lBox_AFBestelling6.ItemHeight = 25;
             this.lBox_AFBestelling6.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_AFBestelling6.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling6.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling6.Name = "lBox_AFBestelling6";
-            this.lBox_AFBestelling6.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling6.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling6.TabIndex = 39;
             // 
             // lbl_AFBestelling6
@@ -1144,9 +1239,10 @@
             this.lbl_AFBestelling6.AutoSize = true;
             this.lbl_AFBestelling6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling6.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling6.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling6.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling6.Name = "lbl_AFBestelling6";
-            this.lbl_AFBestelling6.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling6.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling6.TabIndex = 40;
             this.lbl_AFBestelling6.Text = "Tafel 6";
             // 
@@ -1155,9 +1251,10 @@
             this.lblAFTijd5.AutoSize = true;
             this.lblAFTijd5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd5.Location = new System.Drawing.Point(183, 374);
+            this.lblAFTijd5.Location = new System.Drawing.Point(244, 460);
+            this.lblAFTijd5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd5.Name = "lblAFTijd5";
-            this.lblAFTijd5.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd5.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd5.TabIndex = 68;
             this.lblAFTijd5.Text = "17-05-20 12:30";
             // 
@@ -1165,9 +1262,11 @@
             // 
             this.gBox_AFTafel5.Controls.Add(this.lBox_AFBestelling5);
             this.gBox_AFTafel5.Controls.Add(this.lbl_AFBestelling5);
-            this.gBox_AFTafel5.Location = new System.Drawing.Point(109, 399);
+            this.gBox_AFTafel5.Location = new System.Drawing.Point(145, 491);
+            this.gBox_AFTafel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel5.Name = "gBox_AFTafel5";
-            this.gBox_AFTafel5.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel5.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel5.TabIndex = 67;
             this.gBox_AFTafel5.TabStop = false;
             // 
@@ -1175,13 +1274,14 @@
             // 
             this.lBox_AFBestelling5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling5.FormattingEnabled = true;
-            this.lBox_AFBestelling5.ItemHeight = 20;
+            this.lBox_AFBestelling5.ItemHeight = 25;
             this.lBox_AFBestelling5.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_AFBestelling5.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling5.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling5.Name = "lBox_AFBestelling5";
-            this.lBox_AFBestelling5.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling5.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling5.TabIndex = 39;
             // 
             // lbl_AFBestelling5
@@ -1189,9 +1289,10 @@
             this.lbl_AFBestelling5.AutoSize = true;
             this.lbl_AFBestelling5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling5.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling5.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling5.Name = "lbl_AFBestelling5";
-            this.lbl_AFBestelling5.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling5.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling5.TabIndex = 40;
             this.lbl_AFBestelling5.Text = "Tafel 5";
             // 
@@ -1200,9 +1301,10 @@
             this.lblAFTijd4.AutoSize = true;
             this.lblAFTijd4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd4.Location = new System.Drawing.Point(1554, 16);
+            this.lblAFTijd4.Location = new System.Drawing.Point(2072, 20);
+            this.lblAFTijd4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd4.Name = "lblAFTijd4";
-            this.lblAFTijd4.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd4.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd4.TabIndex = 66;
             this.lblAFTijd4.Text = "17-05-20 12:30";
             // 
@@ -1210,9 +1312,11 @@
             // 
             this.gBox_AFTafel4.Controls.Add(this.lBox_AFBestelling4);
             this.gBox_AFTafel4.Controls.Add(this.lbl_AFBestelling4);
-            this.gBox_AFTafel4.Location = new System.Drawing.Point(1480, 41);
+            this.gBox_AFTafel4.Location = new System.Drawing.Point(1973, 50);
+            this.gBox_AFTafel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel4.Name = "gBox_AFTafel4";
-            this.gBox_AFTafel4.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel4.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel4.TabIndex = 65;
             this.gBox_AFTafel4.TabStop = false;
             // 
@@ -1220,13 +1324,14 @@
             // 
             this.lBox_AFBestelling4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling4.FormattingEnabled = true;
-            this.lBox_AFBestelling4.ItemHeight = 20;
+            this.lBox_AFBestelling4.ItemHeight = 25;
             this.lBox_AFBestelling4.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "hertenstoofpot (3x)"});
-            this.lBox_AFBestelling4.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling4.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling4.Name = "lBox_AFBestelling4";
-            this.lBox_AFBestelling4.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling4.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling4.TabIndex = 39;
             // 
             // lbl_AFBestelling4
@@ -1234,9 +1339,10 @@
             this.lbl_AFBestelling4.AutoSize = true;
             this.lbl_AFBestelling4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling4.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling4.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling4.Name = "lbl_AFBestelling4";
-            this.lbl_AFBestelling4.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling4.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling4.TabIndex = 40;
             this.lbl_AFBestelling4.Text = "Tafel 4";
             // 
@@ -1245,9 +1351,10 @@
             this.lblAFTijd3.AutoSize = true;
             this.lblAFTijd3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd3.Location = new System.Drawing.Point(1107, 16);
+            this.lblAFTijd3.Location = new System.Drawing.Point(1476, 20);
+            this.lblAFTijd3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd3.Name = "lblAFTijd3";
-            this.lblAFTijd3.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd3.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd3.TabIndex = 64;
             this.lblAFTijd3.Text = "17-05-20 12:30";
             // 
@@ -1255,9 +1362,11 @@
             // 
             this.gBox_AFTafel3.Controls.Add(this.lBox_AFBestelling3);
             this.gBox_AFTafel3.Controls.Add(this.lbl_AFBestelling3);
-            this.gBox_AFTafel3.Location = new System.Drawing.Point(1033, 41);
+            this.gBox_AFTafel3.Location = new System.Drawing.Point(1377, 50);
+            this.gBox_AFTafel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel3.Name = "gBox_AFTafel3";
-            this.gBox_AFTafel3.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel3.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel3.TabIndex = 63;
             this.gBox_AFTafel3.TabStop = false;
             // 
@@ -1265,14 +1374,15 @@
             // 
             this.lBox_AFBestelling3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling3.FormattingEnabled = true;
-            this.lBox_AFBestelling3.ItemHeight = 20;
+            this.lBox_AFBestelling3.ItemHeight = 25;
             this.lBox_AFBestelling3.Items.AddRange(new object[] {
             "steak tartaar (1x)",
             "paté van fazant (2x)",
             "hertenstoofpot (3x)"});
-            this.lBox_AFBestelling3.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling3.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling3.Name = "lBox_AFBestelling3";
-            this.lBox_AFBestelling3.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling3.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling3.TabIndex = 39;
             // 
             // lbl_AFBestelling3
@@ -1280,9 +1390,10 @@
             this.lbl_AFBestelling3.AutoSize = true;
             this.lbl_AFBestelling3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling3.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling3.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling3.Name = "lbl_AFBestelling3";
-            this.lbl_AFBestelling3.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling3.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling3.TabIndex = 40;
             this.lbl_AFBestelling3.Text = "Tafel 3";
             // 
@@ -1291,9 +1402,10 @@
             this.lblAFTijd2.AutoSize = true;
             this.lblAFTijd2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd2.Location = new System.Drawing.Point(654, 16);
+            this.lblAFTijd2.Location = new System.Drawing.Point(872, 20);
+            this.lblAFTijd2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd2.Name = "lblAFTijd2";
-            this.lblAFTijd2.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd2.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd2.TabIndex = 62;
             this.lblAFTijd2.Text = "17-05-20 12:30";
             // 
@@ -1301,9 +1413,11 @@
             // 
             this.gBox_AFTafel2.Controls.Add(this.lBox_AFBestelling2);
             this.gBox_AFTafel2.Controls.Add(this.lbl_AFBestelling2);
-            this.gBox_AFTafel2.Location = new System.Drawing.Point(580, 41);
+            this.gBox_AFTafel2.Location = new System.Drawing.Point(773, 50);
+            this.gBox_AFTafel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel2.Name = "gBox_AFTafel2";
-            this.gBox_AFTafel2.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel2.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel2.TabIndex = 61;
             this.gBox_AFTafel2.TabStop = false;
             // 
@@ -1311,13 +1425,14 @@
             // 
             this.lBox_AFBestelling2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling2.FormattingEnabled = true;
-            this.lBox_AFBestelling2.ItemHeight = 20;
+            this.lBox_AFBestelling2.ItemHeight = 25;
             this.lBox_AFBestelling2.Items.AddRange(new object[] {
             "Paté van fazant (1x)",
             "Gebakken kabeljauw (1x)"});
-            this.lBox_AFBestelling2.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling2.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling2.Name = "lBox_AFBestelling2";
-            this.lBox_AFBestelling2.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling2.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling2.TabIndex = 39;
             // 
             // lbl_AFBestelling2
@@ -1325,9 +1440,10 @@
             this.lbl_AFBestelling2.AutoSize = true;
             this.lbl_AFBestelling2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling2.ForeColor = System.Drawing.Color.Orange;
-            this.lbl_AFBestelling2.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling2.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling2.Name = "lbl_AFBestelling2";
-            this.lbl_AFBestelling2.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling2.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling2.TabIndex = 40;
             this.lbl_AFBestelling2.Text = "Tafel 2";
             // 
@@ -1336,9 +1452,10 @@
             this.lblAFTijd1.AutoSize = true;
             this.lblAFTijd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAFTijd1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblAFTijd1.Location = new System.Drawing.Point(183, 16);
+            this.lblAFTijd1.Location = new System.Drawing.Point(244, 20);
+            this.lblAFTijd1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAFTijd1.Name = "lblAFTijd1";
-            this.lblAFTijd1.Size = new System.Drawing.Size(147, 25);
+            this.lblAFTijd1.Size = new System.Drawing.Size(183, 29);
             this.lblAFTijd1.TabIndex = 59;
             this.lblAFTijd1.Text = "17-05-20 12:30";
             // 
@@ -1346,9 +1463,11 @@
             // 
             this.gBox_AFTafel1.Controls.Add(this.lBox_AFBestelling1);
             this.gBox_AFTafel1.Controls.Add(this.lbl_AFBestelling1);
-            this.gBox_AFTafel1.Location = new System.Drawing.Point(109, 41);
+            this.gBox_AFTafel1.Location = new System.Drawing.Point(145, 50);
+            this.gBox_AFTafel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBox_AFTafel1.Name = "gBox_AFTafel1";
-            this.gBox_AFTafel1.Size = new System.Drawing.Size(307, 321);
+            this.gBox_AFTafel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gBox_AFTafel1.Size = new System.Drawing.Size(409, 395);
             this.gBox_AFTafel1.TabIndex = 58;
             this.gBox_AFTafel1.TabStop = false;
             // 
@@ -1356,7 +1475,7 @@
             // 
             this.lBox_AFBestelling1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBox_AFBestelling1.FormattingEnabled = true;
-            this.lBox_AFBestelling1.ItemHeight = 20;
+            this.lBox_AFBestelling1.ItemHeight = 25;
             this.lBox_AFBestelling1.Items.AddRange(new object[] {
             "Veal Tartare (2x)",
             "Crab-salmon (1x)",
@@ -1364,9 +1483,10 @@
             "Hertenstoofpot (3x)",
             "Cherry Baby (2x)",
             "Café Surprise (1x)"});
-            this.lBox_AFBestelling1.Location = new System.Drawing.Point(0, 37);
+            this.lBox_AFBestelling1.Location = new System.Drawing.Point(0, 46);
+            this.lBox_AFBestelling1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lBox_AFBestelling1.Name = "lBox_AFBestelling1";
-            this.lBox_AFBestelling1.Size = new System.Drawing.Size(307, 284);
+            this.lBox_AFBestelling1.Size = new System.Drawing.Size(408, 329);
             this.lBox_AFBestelling1.TabIndex = 39;
             // 
             // lbl_AFBestelling1
@@ -1374,18 +1494,20 @@
             this.lbl_AFBestelling1.AutoSize = true;
             this.lbl_AFBestelling1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AFBestelling1.ForeColor = System.Drawing.Color.OliveDrab;
-            this.lbl_AFBestelling1.Location = new System.Drawing.Point(111, 10);
+            this.lbl_AFBestelling1.Location = new System.Drawing.Point(148, 12);
+            this.lbl_AFBestelling1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AFBestelling1.Name = "lbl_AFBestelling1";
-            this.lbl_AFBestelling1.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling1.Size = new System.Drawing.Size(90, 29);
             this.lbl_AFBestelling1.TabIndex = 40;
             this.lbl_AFBestelling1.Text = "Tafel 1";
             // 
             // btn_StartAfgerondAfmelden
             // 
             this.btn_StartAfgerondAfmelden.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_StartAfgerondAfmelden.Location = new System.Drawing.Point(109, 68);
+            this.btn_StartAfgerondAfmelden.Location = new System.Drawing.Point(145, 84);
+            this.btn_StartAfgerondAfmelden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_StartAfgerondAfmelden.Name = "btn_StartAfgerondAfmelden";
-            this.btn_StartAfgerondAfmelden.Size = new System.Drawing.Size(203, 59);
+            this.btn_StartAfgerondAfmelden.Size = new System.Drawing.Size(271, 73);
             this.btn_StartAfgerondAfmelden.TabIndex = 34;
             this.btn_StartAfgerondAfmelden.Text = "Startscherm";
             this.btn_StartAfgerondAfmelden.UseVisualStyleBackColor = true;
@@ -1394,9 +1516,10 @@
             // 
             this.lbl_AfgerondeBestellingen.AutoSize = true;
             this.lbl_AfgerondeBestellingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AfgerondeBestellingen.Location = new System.Drawing.Point(787, 74);
+            this.lbl_AfgerondeBestellingen.Location = new System.Drawing.Point(1049, 91);
+            this.lbl_AfgerondeBestellingen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_AfgerondeBestellingen.Name = "lbl_AfgerondeBestellingen";
-            this.lbl_AfgerondeBestellingen.Size = new System.Drawing.Size(366, 39);
+            this.lbl_AfgerondeBestellingen.Size = new System.Drawing.Size(447, 48);
             this.lbl_AfgerondeBestellingen.TabIndex = 33;
             this.lbl_AfgerondeBestellingen.Text = "Afgeronde bestellingen";
             // 
@@ -1404,9 +1527,10 @@
             // 
             this.btn_VerwijderAfgerondeBestelling.BackColor = System.Drawing.Color.IndianRed;
             this.btn_VerwijderAfgerondeBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_VerwijderAfgerondeBestelling.Location = new System.Drawing.Point(794, 920);
+            this.btn_VerwijderAfgerondeBestelling.Location = new System.Drawing.Point(1059, 1132);
+            this.btn_VerwijderAfgerondeBestelling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_VerwijderAfgerondeBestelling.Name = "btn_VerwijderAfgerondeBestelling";
-            this.btn_VerwijderAfgerondeBestelling.Size = new System.Drawing.Size(348, 82);
+            this.btn_VerwijderAfgerondeBestelling.Size = new System.Drawing.Size(464, 101);
             this.btn_VerwijderAfgerondeBestelling.TabIndex = 30;
             this.btn_VerwijderAfgerondeBestelling.Text = "Bestelling verwijderen";
             this.btn_VerwijderAfgerondeBestelling.UseVisualStyleBackColor = false;
@@ -1414,21 +1538,24 @@
             // ChapooLogoAfgerondeBetselling
             // 
             this.ChapooLogoAfgerondeBetselling.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.ChapooLogoAfgerondeBetselling.Location = new System.Drawing.Point(1632, 0);
+            this.ChapooLogoAfgerondeBetselling.Location = new System.Drawing.Point(2176, 0);
+            this.ChapooLogoAfgerondeBetselling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ChapooLogoAfgerondeBetselling.Name = "ChapooLogoAfgerondeBetselling";
-            this.ChapooLogoAfgerondeBetselling.Size = new System.Drawing.Size(237, 133);
+            this.ChapooLogoAfgerondeBetselling.Size = new System.Drawing.Size(316, 164);
             this.ChapooLogoAfgerondeBetselling.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ChapooLogoAfgerondeBetselling.TabIndex = 22;
             this.ChapooLogoAfgerondeBetselling.TabStop = false;
             // 
             // Keuken
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(2539, 1281);
             this.Controls.Add(this.pnl_KeukenBarStart);
             this.Controls.Add(this.pnl_BinnenkomendeBestellingen);
             this.Controls.Add(this.pnl_AfgerondeBestellingen);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Keuken";
             this.Text = "Bestellingscherm";
             this.pnl_KeukenBarStart.ResumeLayout(false);
