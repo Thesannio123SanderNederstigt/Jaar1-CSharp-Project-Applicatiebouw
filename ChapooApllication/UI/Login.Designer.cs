@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.txt_LoginScherm = new System.Windows.Forms.TextBox();
             this.Numpad7 = new System.Windows.Forms.Button();
             this.Numpad8 = new System.Windows.Forms.Button();
