@@ -15,44 +15,54 @@ namespace UI
 {
     public partial class Kassa : Form
     {
+
+       public void HidePanels()
+        {
+            pnl_Inkomstenoverzicht.Hide();
+            pnl_KassaDinerMenuoverzicht.Hide();
+            pnl_KassaDrankMenuoverzicht.Hide();
+
+            //pnl_KassaHoofdscherm.Hide();
+
+            pnl_KassaKeuzeBestellingen.Hide();
+            pnl_KassaLunchMenuoverizcht.Hide();
+            pnl_KassaMenuoverzichtKeuze.Hide();
+            pnl_KassaPersoneelsbeheer.Hide();
+            pnl_KassaTafeloverzicht.Hide();
+            pnl_KassaVoorraadKeuze.Hide();
+            pnl_KassaVoorraadoverzichtDrank.Hide();
+            pnl_KassaVoorraadoverzichtGerecht.Hide();
+        }
         public Kassa()
         {
             InitializeComponent();
+            HidePanels();
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        // methode to hide al panels
+ 
 
+        private void btn_MenuOverzichtHoofdscherm_Kassa_Click(object sender, EventArgs e)
+        {
+            pnl_KassaMenuoverzichtKeuze.Show();
+            pnl_KassaHoofdscherm.Hide();
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void pictureBx_Uitloggen_Kassa_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            //Login.ActiveForm.Visible = true;
 
+            Login login = new Login();
+            login.Show();
         }
 
-        private void label14_Click(object sender, EventArgs e)
+        private void Kassa_FormClosing(object sender, FormClosingEventArgs e)
         {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnl_KassaDrankMenuoverizcht_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label35_Click(object sender, EventArgs e)
-        {
-
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }

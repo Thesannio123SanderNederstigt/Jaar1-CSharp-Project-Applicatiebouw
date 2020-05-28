@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using ChapooDAL;
 using ChapooModel;
+using System.Data.SqlTypes;
+using System.Data.SqlClient;
 
 namespace ChapooLogic
 {
@@ -45,11 +47,18 @@ namespace ChapooLogic
         {
             try
             {
+                Medewerker medewerker = Medewerker_db.GetByLogincode(loginCode);
+                if (medewerker == null)
+                {
+                    medewerker = new Medewerker(999999, "Gotten null result", "From the database", "Fake", 99999);
+                    return medewerker;
+                }
                 return Medewerker_db.GetByLogincode(loginCode);
+
             }
             catch (Exception)
             {
-                Medewerker fakeMedewerker = new Medewerker(1, "Query error logincode", "news:", "nonExisting", 0000);
+                Medewerker fakeMedewerker = new Medewerker(1, "Query error logincode", "news:", "nonExisting", 9999);
                 return fakeMedewerker;
             }
         }

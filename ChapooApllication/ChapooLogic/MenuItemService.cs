@@ -42,9 +42,18 @@ namespace ChapooLogic
             }
         }
         
-        public void ReadMenuItem(string MenuKaartSoort, string SoortType)
+        public MenuItem ReadMenuItem(string MenuKaartSoort, string SoortType)
         {
-            MenuItem_db.Db_GetMenuItem(MenuKaartSoort, SoortType);
+            try
+            {
+                return MenuItem_db.Db_GetMenuItem(MenuKaartSoort, SoortType);
+            }
+            catch(Exception)
+            {
+                MenuItem fakemenuitem = new MenuItem(1, "error", "an error occured", 0.0f, 0, 0, "error");
+                return fakemenuitem;
+            }
+
         }
     }
 }
