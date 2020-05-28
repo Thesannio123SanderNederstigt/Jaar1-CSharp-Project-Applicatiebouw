@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kassa_FormClosing);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kassa));
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
@@ -41,30 +42,6 @@
             "Revers",
             "chef-kok",
             "1112"}, -1);
-            this.lbl_KassaPincode = new System.Windows.Forms.Label();
-            this.btn_KassaLogin = new System.Windows.Forms.Button();
-            this.txt_KassaPincode = new System.Windows.Forms.TextBox();
-            this.btn_Numpad7 = new System.Windows.Forms.Button();
-            this.btn_Numpad8 = new System.Windows.Forms.Button();
-            this.btn_Numpad9 = new System.Windows.Forms.Button();
-            this.btn_Numpad4 = new System.Windows.Forms.Button();
-            this.btn_Numpad5 = new System.Windows.Forms.Button();
-            this.btn_Numpad6 = new System.Windows.Forms.Button();
-            this.btn_Numpad1 = new System.Windows.Forms.Button();
-            this.btn_Numpad2 = new System.Windows.Forms.Button();
-            this.btn_Numpad3 = new System.Windows.Forms.Button();
-            this.btn_Numpad0 = new System.Windows.Forms.Button();
-            this.btn_Numpadx = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnl_KassaHoofdscherm = new System.Windows.Forms.Panel();
-            this.pictureBx_Uitloggen_Kassa = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_TafeloverzichtHoofdscherm_Kassa = new System.Windows.Forms.Button();
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa = new System.Windows.Forms.Button();
-            this.btn_BestellingenHoofdscherm_Kassa = new System.Windows.Forms.Button();
-            this.btn_VoorraadHoofdscherm_Kassa = new System.Windows.Forms.Button();
-            this.btn_MenuOverzichtHoofdscherm_Kassa = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_BarKeuzeBestelling_Kassa = new System.Windows.Forms.Button();
             this.btn_KeukenKeuzeBestelling_Kassa = new System.Windows.Forms.Button();
@@ -280,10 +257,15 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label35 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnl_KassaHoofdscherm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_MenuOverzichtHoofdscherm_Kassa = new System.Windows.Forms.Button();
+            this.btn_VoorraadHoofdscherm_Kassa = new System.Windows.Forms.Button();
+            this.btn_BestellingenHoofdscherm_Kassa = new System.Windows.Forms.Button();
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa = new System.Windows.Forms.Button();
+            this.btn_TafeloverzichtHoofdscherm_Kassa = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBx_Uitloggen_Kassa = new System.Windows.Forms.PictureBox();
+            this.pnl_KassaHoofdscherm = new System.Windows.Forms.Panel();
             this.pnl_KassaKeuzeBestellingen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugKeuzebestelling_Kassa)).BeginInit();
@@ -326,237 +308,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugLunchMenuOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).BeginInit();
+            this.pnl_KassaHoofdscherm.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbl_KassaPincode
-            // 
-            this.lbl_KassaPincode.AutoSize = true;
-            this.lbl_KassaPincode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_KassaPincode.Location = new System.Drawing.Point(422, 281);
-            this.lbl_KassaPincode.Name = "lbl_KassaPincode";
-            this.lbl_KassaPincode.Size = new System.Drawing.Size(120, 31);
-            this.lbl_KassaPincode.TabIndex = 0;
-            this.lbl_KassaPincode.Text = "Pincode:";
-            // 
-            // btn_KassaLogin
-            // 
-            this.btn_KassaLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_KassaLogin.Location = new System.Drawing.Point(353, 663);
-            this.btn_KassaLogin.Name = "btn_KassaLogin";
-            this.btn_KassaLogin.Size = new System.Drawing.Size(277, 54);
-            this.btn_KassaLogin.TabIndex = 1;
-            this.btn_KassaLogin.Text = "Inloggen";
-            this.btn_KassaLogin.UseVisualStyleBackColor = true;
-            // 
-            // txt_KassaPincode
-            // 
-            this.txt_KassaPincode.Location = new System.Drawing.Point(382, 315);
-            this.txt_KassaPincode.MinimumSize = new System.Drawing.Size(200, 30);
-            this.txt_KassaPincode.Name = "txt_KassaPincode";
-            this.txt_KassaPincode.Size = new System.Drawing.Size(207, 20);
-            this.txt_KassaPincode.TabIndex = 7;
-            // 
-            // btn_Numpad7
-            // 
-            this.btn_Numpad7.Location = new System.Drawing.Point(382, 367);
-            this.btn_Numpad7.Name = "btn_Numpad7";
-            this.btn_Numpad7.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad7.TabIndex = 23;
-            this.btn_Numpad7.Text = "7";
-            this.btn_Numpad7.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad8
-            // 
-            this.btn_Numpad8.Location = new System.Drawing.Point(453, 367);
-            this.btn_Numpad8.Name = "btn_Numpad8";
-            this.btn_Numpad8.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad8.TabIndex = 24;
-            this.btn_Numpad8.Text = "8";
-            this.btn_Numpad8.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad9
-            // 
-            this.btn_Numpad9.Location = new System.Drawing.Point(524, 367);
-            this.btn_Numpad9.Name = "btn_Numpad9";
-            this.btn_Numpad9.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad9.TabIndex = 25;
-            this.btn_Numpad9.Text = "9";
-            this.btn_Numpad9.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad4
-            // 
-            this.btn_Numpad4.Location = new System.Drawing.Point(382, 428);
-            this.btn_Numpad4.Name = "btn_Numpad4";
-            this.btn_Numpad4.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad4.TabIndex = 26;
-            this.btn_Numpad4.Text = "4";
-            this.btn_Numpad4.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad5
-            // 
-            this.btn_Numpad5.Location = new System.Drawing.Point(453, 428);
-            this.btn_Numpad5.Name = "btn_Numpad5";
-            this.btn_Numpad5.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad5.TabIndex = 27;
-            this.btn_Numpad5.Text = "5";
-            this.btn_Numpad5.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad6
-            // 
-            this.btn_Numpad6.Location = new System.Drawing.Point(524, 428);
-            this.btn_Numpad6.Name = "btn_Numpad6";
-            this.btn_Numpad6.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad6.TabIndex = 28;
-            this.btn_Numpad6.Text = "6";
-            this.btn_Numpad6.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad1
-            // 
-            this.btn_Numpad1.Location = new System.Drawing.Point(382, 489);
-            this.btn_Numpad1.Name = "btn_Numpad1";
-            this.btn_Numpad1.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad1.TabIndex = 29;
-            this.btn_Numpad1.Text = "1";
-            this.btn_Numpad1.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad2
-            // 
-            this.btn_Numpad2.Location = new System.Drawing.Point(453, 489);
-            this.btn_Numpad2.Name = "btn_Numpad2";
-            this.btn_Numpad2.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad2.TabIndex = 30;
-            this.btn_Numpad2.Text = "2";
-            this.btn_Numpad2.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad3
-            // 
-            this.btn_Numpad3.Location = new System.Drawing.Point(524, 489);
-            this.btn_Numpad3.Name = "btn_Numpad3";
-            this.btn_Numpad3.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpad3.TabIndex = 31;
-            this.btn_Numpad3.Text = "3";
-            this.btn_Numpad3.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpad0
-            // 
-            this.btn_Numpad0.Location = new System.Drawing.Point(382, 550);
-            this.btn_Numpad0.Name = "btn_Numpad0";
-            this.btn_Numpad0.Size = new System.Drawing.Size(136, 55);
-            this.btn_Numpad0.TabIndex = 32;
-            this.btn_Numpad0.Text = "0";
-            this.btn_Numpad0.UseVisualStyleBackColor = true;
-            // 
-            // btn_Numpadx
-            // 
-            this.btn_Numpadx.Location = new System.Drawing.Point(524, 550);
-            this.btn_Numpadx.Name = "btn_Numpadx";
-            this.btn_Numpadx.Size = new System.Drawing.Size(65, 55);
-            this.btn_Numpadx.TabIndex = 34;
-            this.btn_Numpadx.Text = "x";
-            this.btn_Numpadx.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(290, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(416, 244);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pnl_KassaHoofdscherm
-            // 
-            this.pnl_KassaHoofdscherm.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaHoofdscherm.Controls.Add(this.pictureBx_Uitloggen_Kassa);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.label1);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_TafeloverzichtHoofdscherm_Kassa);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_PersoneelsbeheerHoofdscherm_Kassa);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_BestellingenHoofdscherm_Kassa);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_VoorraadHoofdscherm_Kassa);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_MenuOverzichtHoofdscherm_Kassa);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.pictureBox2);
-            this.pnl_KassaHoofdscherm.Location = new System.Drawing.Point(0, 0);
-            this.pnl_KassaHoofdscherm.Name = "pnl_KassaHoofdscherm";
-            this.pnl_KassaHoofdscherm.Size = new System.Drawing.Size(1008, 736);
-            this.pnl_KassaHoofdscherm.TabIndex = 35;
-            // 
-            // pictureBx_Uitloggen_Kassa
-            // 
-            this.pictureBx_Uitloggen_Kassa.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBx_Uitloggen_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_Uitloggen_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_Uitloggen_Kassa.Image")));
-            this.pictureBx_Uitloggen_Kassa.Location = new System.Drawing.Point(22, 14);
-            this.pictureBx_Uitloggen_Kassa.Name = "pictureBx_Uitloggen_Kassa";
-            this.pictureBx_Uitloggen_Kassa.Size = new System.Drawing.Size(52, 54);
-            this.pictureBx_Uitloggen_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_Uitloggen_Kassa.TabIndex = 11;
-            this.pictureBx_Uitloggen_Kassa.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Hoofdscherm";
-            // 
-            // btn_TafeloverzichtHoofdscherm_Kassa
-            // 
-            this.btn_TafeloverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(421, 510);
-            this.btn_TafeloverzichtHoofdscherm_Kassa.Name = "btn_TafeloverzichtHoofdscherm_Kassa";
-            this.btn_TafeloverzichtHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
-            this.btn_TafeloverzichtHoofdscherm_Kassa.TabIndex = 9;
-            this.btn_TafeloverzichtHoofdscherm_Kassa.Text = "Tafeloverzicht";
-            this.btn_TafeloverzichtHoofdscherm_Kassa.UseVisualStyleBackColor = true;
-            // 
-            // btn_PersoneelsbeheerHoofdscherm_Kassa
-            // 
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Location = new System.Drawing.Point(185, 510);
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Name = "btn_PersoneelsbeheerHoofdscherm_Kassa";
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa.TabIndex = 8;
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Text = "Personeelsbeheer";
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa.UseVisualStyleBackColor = true;
-            // 
-            // btn_BestellingenHoofdscherm_Kassa
-            // 
-            this.btn_BestellingenHoofdscherm_Kassa.Location = new System.Drawing.Point(676, 314);
-            this.btn_BestellingenHoofdscherm_Kassa.Name = "btn_BestellingenHoofdscherm_Kassa";
-            this.btn_BestellingenHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
-            this.btn_BestellingenHoofdscherm_Kassa.TabIndex = 7;
-            this.btn_BestellingenHoofdscherm_Kassa.Text = "Bestellingen";
-            this.btn_BestellingenHoofdscherm_Kassa.UseVisualStyleBackColor = true;
-            // 
-            // btn_VoorraadHoofdscherm_Kassa
-            // 
-            this.btn_VoorraadHoofdscherm_Kassa.Location = new System.Drawing.Point(421, 312);
-            this.btn_VoorraadHoofdscherm_Kassa.Name = "btn_VoorraadHoofdscherm_Kassa";
-            this.btn_VoorraadHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
-            this.btn_VoorraadHoofdscherm_Kassa.TabIndex = 6;
-            this.btn_VoorraadHoofdscherm_Kassa.Text = "Voorraad";
-            this.btn_VoorraadHoofdscherm_Kassa.UseVisualStyleBackColor = true;
-            // 
-            // btn_MenuOverzichtHoofdscherm_Kassa
-            // 
-            this.btn_MenuOverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(185, 316);
-            this.btn_MenuOverzichtHoofdscherm_Kassa.Name = "btn_MenuOverzichtHoofdscherm_Kassa";
-            this.btn_MenuOverzichtHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
-            this.btn_MenuOverzichtHoofdscherm_Kassa.TabIndex = 5;
-            this.btn_MenuOverzichtHoofdscherm_Kassa.Text = "Menu Overzicht";
-            this.btn_MenuOverzichtHoofdscherm_Kassa.UseVisualStyleBackColor = true;
-            this.btn_MenuOverzichtHoofdscherm_Kassa.Click += new System.EventHandler(this.btn_MenuOverzichtHoofdscherm_Kassa_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox2.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(290, 41);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(416, 236);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -2566,6 +2321,101 @@
             this.pictureBox11.TabIndex = 27;
             this.pictureBox11.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox2.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(290, 41);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(416, 236);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btn_MenuOverzichtHoofdscherm_Kassa
+            // 
+            this.btn_MenuOverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(200, 311);
+            this.btn_MenuOverzichtHoofdscherm_Kassa.Name = "btn_MenuOverzichtHoofdscherm_Kassa";
+            this.btn_MenuOverzichtHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
+            this.btn_MenuOverzichtHoofdscherm_Kassa.TabIndex = 5;
+            this.btn_MenuOverzichtHoofdscherm_Kassa.Text = "Menu Overzicht";
+            this.btn_MenuOverzichtHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            this.btn_MenuOverzichtHoofdscherm_Kassa.Click += new System.EventHandler(this.btn_MenuOverzichtHoofdscherm_Kassa_Click);
+            // 
+            // btn_VoorraadHoofdscherm_Kassa
+            // 
+            this.btn_VoorraadHoofdscherm_Kassa.Location = new System.Drawing.Point(421, 312);
+            this.btn_VoorraadHoofdscherm_Kassa.Name = "btn_VoorraadHoofdscherm_Kassa";
+            this.btn_VoorraadHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
+            this.btn_VoorraadHoofdscherm_Kassa.TabIndex = 6;
+            this.btn_VoorraadHoofdscherm_Kassa.Text = "Voorraad";
+            this.btn_VoorraadHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            // 
+            // btn_BestellingenHoofdscherm_Kassa
+            // 
+            this.btn_BestellingenHoofdscherm_Kassa.Location = new System.Drawing.Point(676, 314);
+            this.btn_BestellingenHoofdscherm_Kassa.Name = "btn_BestellingenHoofdscherm_Kassa";
+            this.btn_BestellingenHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
+            this.btn_BestellingenHoofdscherm_Kassa.TabIndex = 7;
+            this.btn_BestellingenHoofdscherm_Kassa.Text = "Bestellingen";
+            this.btn_BestellingenHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            // 
+            // btn_PersoneelsbeheerHoofdscherm_Kassa
+            // 
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Location = new System.Drawing.Point(185, 510);
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Name = "btn_PersoneelsbeheerHoofdscherm_Kassa";
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.TabIndex = 8;
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Text = "Personeelsbeheer";
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            // 
+            // btn_TafeloverzichtHoofdscherm_Kassa
+            // 
+            this.btn_TafeloverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(421, 510);
+            this.btn_TafeloverzichtHoofdscherm_Kassa.Name = "btn_TafeloverzichtHoofdscherm_Kassa";
+            this.btn_TafeloverzichtHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
+            this.btn_TafeloverzichtHoofdscherm_Kassa.TabIndex = 9;
+            this.btn_TafeloverzichtHoofdscherm_Kassa.Text = "Tafeloverzicht";
+            this.btn_TafeloverzichtHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(439, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Hoofdscherm";
+            // 
+            // pictureBx_Uitloggen_Kassa
+            // 
+            this.pictureBx_Uitloggen_Kassa.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBx_Uitloggen_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBx_Uitloggen_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_Uitloggen_Kassa.Image")));
+            this.pictureBx_Uitloggen_Kassa.Location = new System.Drawing.Point(22, 14);
+            this.pictureBx_Uitloggen_Kassa.Name = "pictureBx_Uitloggen_Kassa";
+            this.pictureBx_Uitloggen_Kassa.Size = new System.Drawing.Size(52, 54);
+            this.pictureBx_Uitloggen_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBx_Uitloggen_Kassa.TabIndex = 11;
+            this.pictureBx_Uitloggen_Kassa.TabStop = false;
+            this.pictureBx_Uitloggen_Kassa.Click += new System.EventHandler(this.pictureBx_Uitloggen_Kassa_Click);
+            // 
+            // pnl_KassaHoofdscherm
+            // 
+            this.pnl_KassaHoofdscherm.BackColor = System.Drawing.Color.White;
+            this.pnl_KassaHoofdscherm.Controls.Add(this.pictureBx_Uitloggen_Kassa);
+            this.pnl_KassaHoofdscherm.Controls.Add(this.label1);
+            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_TafeloverzichtHoofdscherm_Kassa);
+            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_PersoneelsbeheerHoofdscherm_Kassa);
+            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_BestellingenHoofdscherm_Kassa);
+            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_VoorraadHoofdscherm_Kassa);
+            this.pnl_KassaHoofdscherm.Controls.Add(this.btn_MenuOverzichtHoofdscherm_Kassa);
+            this.pnl_KassaHoofdscherm.Controls.Add(this.pictureBox2);
+            this.pnl_KassaHoofdscherm.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaHoofdscherm.Name = "pnl_KassaHoofdscherm";
+            this.pnl_KassaHoofdscherm.Size = new System.Drawing.Size(1008, 736);
+            this.pnl_KassaHoofdscherm.TabIndex = 35;
+            // 
             // Kassa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2583,28 +2433,8 @@
             this.Controls.Add(this.pnl_KassaVoorraadKeuze);
             this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
             this.Controls.Add(this.pnl_Inkomstenoverzicht);
-            this.Controls.Add(this.btn_Numpadx);
-            this.Controls.Add(this.btn_Numpad0);
-            this.Controls.Add(this.btn_Numpad3);
-            this.Controls.Add(this.btn_Numpad2);
-            this.Controls.Add(this.btn_Numpad1);
-            this.Controls.Add(this.btn_Numpad6);
-            this.Controls.Add(this.btn_Numpad5);
-            this.Controls.Add(this.btn_Numpad4);
-            this.Controls.Add(this.btn_Numpad9);
-            this.Controls.Add(this.btn_Numpad8);
-            this.Controls.Add(this.btn_Numpad7);
-            this.Controls.Add(this.txt_KassaPincode);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btn_KassaLogin);
-            this.Controls.Add(this.lbl_KassaPincode);
             this.Name = "Kassa";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnl_KassaHoofdscherm.ResumeLayout(false);
-            this.pnl_KassaHoofdscherm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_KassaKeuzeBestellingen.ResumeLayout(false);
             this.pnl_KassaKeuzeBestellingen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm_Kassa)).EndInit();
@@ -2658,36 +2488,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugLunchMenuOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).EndInit();
+            this.pnl_KassaHoofdscherm.ResumeLayout(false);
+            this.pnl_KassaHoofdscherm.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_KassaPincode;
-        private System.Windows.Forms.Button btn_KassaLogin;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txt_KassaPincode;
-        private System.Windows.Forms.Button btn_Numpad7;
-        private System.Windows.Forms.Button btn_Numpad8;
-        private System.Windows.Forms.Button btn_Numpad9;
-        private System.Windows.Forms.Button btn_Numpad4;
-        private System.Windows.Forms.Button btn_Numpad5;
-        private System.Windows.Forms.Button btn_Numpad6;
-        private System.Windows.Forms.Button btn_Numpad1;
-        private System.Windows.Forms.Button btn_Numpad2;
-        private System.Windows.Forms.Button btn_Numpad3;
-        private System.Windows.Forms.Button btn_Numpad0;
-        private System.Windows.Forms.Button btn_Numpadx;
-        private System.Windows.Forms.Panel pnl_KassaHoofdscherm;
-        private System.Windows.Forms.Button btn_TafeloverzichtHoofdscherm_Kassa;
-        private System.Windows.Forms.Button btn_PersoneelsbeheerHoofdscherm_Kassa;
-        private System.Windows.Forms.Button btn_BestellingenHoofdscherm_Kassa;
-        private System.Windows.Forms.Button btn_VoorraadHoofdscherm_Kassa;
-        private System.Windows.Forms.Button btn_MenuOverzichtHoofdscherm_Kassa;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnl_Inkomstenoverzicht;
         private System.Windows.Forms.Label lbl_InkomstenoverzichtJaar;
         private System.Windows.Forms.Label lbl_InkomstenoverzichtMaand;
@@ -2892,7 +2701,6 @@
         private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm5_Kassa;
         private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm1_Kassa;
         private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm3_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_Uitloggen_Kassa;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Button btn_ToevoegenPersoneel;
         private System.Windows.Forms.TextBox txt_PersoneelsbeheerID;
@@ -2904,91 +2712,15 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox txt_AchternaamPersoneelsbeheer;
         private System.Windows.Forms.Label label46;
-
- /*       private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;*/
-        private System.Windows.Forms.Panel pnl_KassaLogin;
-/*        private System.Windows.Forms.Panel pnl_KassaHoofdscherm;*/
-        private System.Windows.Forms.Button btn_KassaRekeningoverzicht;
-        private System.Windows.Forms.Button btn_KassaPersoneelsbeheer;
-        private System.Windows.Forms.Button btn_KassaBestellingoverzicht;
-        private System.Windows.Forms.Button btn_KassaVoorraadoverzicht;
-        private System.Windows.Forms.Button btn_KassaInkomstenoverzicht;
-        private System.Windows.Forms.Button btn_KassaTafeloverzicht;
-/*        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel pnl_KassaTafeloverzicht;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btn_KassaTafel10;
-        private System.Windows.Forms.Button btn_KassaTafel9;
-        private System.Windows.Forms.Button btn_KassaTafel8;
-        private System.Windows.Forms.Button btn_KassaTafel7;
-        private System.Windows.Forms.Button btn_KassaTafel6;
-        private System.Windows.Forms.Button btn_KassaTafel5;
-        private System.Windows.Forms.Button btn_KassaTafel4;
-        private System.Windows.Forms.Button btn_KassaTafel3;
-        private System.Windows.Forms.Button btn_KassaTafel2;
-        private System.Windows.Forms.Button btn_KassaTafel1;*/
-        private System.Windows.Forms.Label lbl_KassaGebruiker;
-        private System.Windows.Forms.Label lbl_KassaDatum;
-        private System.Windows.Forms.Panel pnl_KassaVoorraadoverzicht;
-        private System.Windows.Forms.Button btn_KassaKeukenvoorraad;
-        private System.Windows.Forms.Button btn_KassaDrankVoorraad;
-/*        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.TextBox textBox3;*/
-        private System.Windows.Forms.Panel pnl_KassaKeukenvoorraad;
-        private System.Windows.Forms.ListView listview_KassaKeukenvooraadOverzicht;
-        private System.Windows.Forms.ColumnHeader Naam;
-        private System.Windows.Forms.ColumnHeader Type;
-        private System.Windows.Forms.ColumnHeader Prijs;
-        private System.Windows.Forms.ColumnHeader Besteldatum;
-        private System.Windows.Forms.ColumnHeader Btwtarief;
-/*        private System.Windows.Forms.ColumnHeader Aantal;
-        private System.Windows.Forms.TextBox textBox4;*/
-        private System.Windows.Forms.Panel pnl_KassaDrankvoorraadOverzicht;
-/*        private System.Windows.Forms.Button button16;*/
-        private System.Windows.Forms.ListView listview_KassaOverzichtDrankvoorraad;
-/*       private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;*/ 
-        private System.Windows.Forms.TextBox txtKassaOverzichtDrankvooraad;
-        private System.Windows.Forms.Panel pnl_KassaOverzichtBestelling;
-        private System.Windows.Forms.Button btn_Afgerondebestellingen;
-        private System.Windows.Forms.Button btn_KassaHuidigebestellingen;
- /*       private System.Windows.Forms.Button button15;*/
-        private System.Windows.Forms.TextBox txtBestellingKiezen;
-        private System.Windows.Forms.Panel pnl_BinnengekomenBestellingen;
-        private System.Windows.Forms.GroupBox groupBox_Binnengekomenbestellingen;
-        private System.Windows.Forms.ListView listView8;
-        private System.Windows.Forms.ListView listView7;
-        private System.Windows.Forms.ListView listView6;
-/*        private System.Windows.Forms.ListView listView5;
-        private System.Windows.Forms.ListView listView4;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.TextBox textBox5;
-*/
+        private System.Windows.Forms.Button btn_MenuOverzichtHoofdscherm_Kassa;
+        private System.Windows.Forms.Button btn_VoorraadHoofdscherm_Kassa;
+        private System.Windows.Forms.Button btn_BestellingenHoofdscherm_Kassa;
+        private System.Windows.Forms.Button btn_PersoneelsbeheerHoofdscherm_Kassa;
+        private System.Windows.Forms.Button btn_TafeloverzichtHoofdscherm_Kassa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBx_Uitloggen_Kassa;
+        private System.Windows.Forms.Panel pnl_KassaHoofdscherm;
     }
 }
 

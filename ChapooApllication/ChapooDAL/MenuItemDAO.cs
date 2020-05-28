@@ -50,13 +50,6 @@ namespace ChapooDAL
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //public void  Db_GetMenuItem(string MenuKaartSoort, string SoortType)
-        //{
-        //    string query = $"SELECT * FROM [MenuItem] Where [menukaartsoort] = '{MenuKaartSoort}' and categorie = '{SoortType}'";
-        //    SqlParameter[] sqlParameters = new SqlParameter[0];
-        //    ExecuteSelectQuery(query, sqlParameters);
-        //}
-
         public MenuItem Db_GetMenuItem(string MenuKaartSoort, string SoortType)
         {
             string query = "SELECT * FROM MenuItem Where menukaartsoort = @MenuKaartSoort and categorie = @SoortType";
