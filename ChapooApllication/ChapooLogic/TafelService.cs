@@ -26,7 +26,7 @@ namespace ChapooLogic
                 }
                 return tafellijst;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 string error = e.ToString();
 
@@ -49,7 +49,7 @@ namespace ChapooLogic
                 }
                 return tafel;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             { 
 
                 string error = e.ToString();
@@ -71,7 +71,7 @@ namespace ChapooLogic
                 }
                 return tafellijst;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 string error = e.ToString();
                 List<Tafel> fakeTafelLijst = new List<Tafel>();

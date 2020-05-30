@@ -24,7 +24,7 @@ namespace ChapooLogic
                 }
                 return rekeninglijst;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 List<Rekening> fakerekeninglist = new List<Rekening>();
                 Rekening fakerekening = new Rekening(1, 1, e.ToString(), 1, true, "error");
@@ -46,7 +46,7 @@ namespace ChapooLogic
                 }
                 return rekening;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 Rekening fakerekening = new Rekening(1, 1, e.ToString(), 1, true, "error");
                 return fakerekening;
@@ -65,7 +65,7 @@ namespace ChapooLogic
                 }
                 return rekening;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 Rekening fakerekening = new Rekening(1, 1, e.ToString(), 1, true, "error");
                 return fakerekening;
@@ -76,7 +76,8 @@ namespace ChapooLogic
         {
             try
             {
-                return Rekening_db.AddRekening(fooi, betaalwijze, betaalStatus, opmerking, tafelID);
+                Rekening_db.AddRekening(fooi, betaalwijze, betaalStatus, opmerking, tafelID);
+                return "Rekening succesvol toegevoegd!";
             }
             catch(Exception e)
             {
@@ -88,7 +89,8 @@ namespace ChapooLogic
         {
             try
             {
-                return Rekening_db.EditRekening(ID, fooi, betaalwijze, betaalStatus, opmerking);
+                Rekening_db.EditRekening(ID, fooi, betaalwijze, betaalStatus, opmerking);
+                return "Rekening met succes gewijzigd!";
             }
             catch(Exception e)
             {
@@ -100,7 +102,8 @@ namespace ChapooLogic
         {
             try
             {
-                return Rekening_db.DeleteRekening(RekeningID);
+                Rekening_db.DeleteRekening(RekeningID);
+                return "Rekening succevol verwijderd!";
             }
             catch(Exception e)
             {

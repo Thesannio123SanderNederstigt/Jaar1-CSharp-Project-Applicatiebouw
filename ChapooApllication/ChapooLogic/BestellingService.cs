@@ -25,7 +25,7 @@ namespace ChapooLogic
                 }
                 return bestellingslijst;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
                 Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
@@ -47,7 +47,7 @@ namespace ChapooLogic
                 }
                 return bestelling;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 Bestelling fakebestelling = new Bestelling(1, DateTime.Now, false, 1, 1, e.ToString());
                 return fakebestelling;
@@ -58,9 +58,10 @@ namespace ChapooLogic
         {
             try
             {
-                return Bestelling_db.AddBestelling(besteltijd, status, tafelID, rekeningID, opmerking);
+                Bestelling_db.AddBestelling(besteltijd, status, tafelID, rekeningID, opmerking);
+                return "Bestelling succesvol toegevoegd!";
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 return e.ToString();
             }
@@ -70,7 +71,8 @@ namespace ChapooLogic
         {
             try
             {
-                return Bestelling_db.EditBestelling(BestellingID, besteltijd, status, tafelID, rekeningID, opmerking);
+                Bestelling_db.EditBestelling(BestellingID, besteltijd, status, tafelID, rekeningID, opmerking);
+                return "Bestelling met succes aangepast!";
             }
             catch(Exception e)
             {
@@ -82,7 +84,8 @@ namespace ChapooLogic
         {
             try
             {
-                return Bestelling_db.DeleteBestelling(BestellingID);
+                Bestelling_db.DeleteBestelling(BestellingID);
+                return "Bestelling succesvol verwijderd!";
             }
             catch(Exception e)
             {

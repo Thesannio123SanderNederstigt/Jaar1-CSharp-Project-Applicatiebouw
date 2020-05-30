@@ -18,12 +18,18 @@ namespace ChapooLogic
         {
             try
             {
-                return MenuItem_db.Get_All_MenuItems();
+                List<MenuItem> menuitemlijst = MenuItem_db.Get_All_MenuItems();
+
+                if(menuitemlijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuitemlijst;
             }
-            catch (Exception)
+            catch(Exception e)
             {
                 List<MenuItem> fakemenuitemlist = new List<MenuItem>();
-                MenuItem fakemenuitem = new MenuItem(1, "error", "an error occured", 0.0f, 0, 0, "error");
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "error", 0.0f, 0, 0, "error");
                 fakemenuitemlist.Add(fakemenuitem);
                 return fakemenuitemlist;
             }
@@ -33,12 +39,18 @@ namespace ChapooLogic
         {
             try
             {
-                return MenuItem_db.Get_Gerechten_MenuItems();
+                List<MenuItem> menuitemlijst = MenuItem_db.Get_Gerechten_MenuItems();
+
+                if(menuitemlijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuitemlijst;
             }
-            catch (Exception)
+            catch(Exception e)
             {
                 List<MenuItem> fakemenuitemlist = new List<MenuItem>();
-                MenuItem fakemenuitem = new MenuItem(1, "error", "an error occured", 0.0f, 0, 0, "error");
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
                 fakemenuitemlist.Add(fakemenuitem);
                 return fakemenuitemlist;
             }
@@ -48,12 +60,18 @@ namespace ChapooLogic
         {
             try
             {
-                return MenuItem_db.Get_Dranken_MenuItems();
+                List<MenuItem> menuitemlijst = MenuItem_db.Get_Dranken_MenuItems();
+
+                if(menuitemlijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuitemlijst;
             }
-            catch (Exception)
+            catch(Exception e)
             {
                 List<MenuItem> fakemenuitemlist = new List<MenuItem>();
-                MenuItem fakemenuitem = new MenuItem(1, "error", "an error occured", 0.0f, 0, 0, "error");
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
                 fakemenuitemlist.Add(fakemenuitem);
                 return fakemenuitemlist;
             }
@@ -63,36 +81,45 @@ namespace ChapooLogic
         {
             try
             {
-                return MenuItem_db.GetById(menuItemID);
+                MenuItem menuItem = MenuItem_db.GetById(menuItemID);
+
+                if(menuItem == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuItem;
             }
-            catch  (Exception)
+            catch(Exception e)
             {
-                MenuItem fakemenuitem = new MenuItem(1, "error", "an error occured", 0.0f, 0, 0, "error");
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
                 return fakemenuitem;
             }
         }
 
-        public void EditMenuItem(string product, int aantal)
+        public string EditMenuItem(string product, int aantal)
         {
             try
             {
                 MenuItem_db.EditMenuItem(product, aantal);
+                return "Menu item met succes aangepast!";
             }
-            catch (Exception)
+            catch(Exception e)
             {
-                Console.WriteLine("Error occured while adding an Item");
+                return e.ToString();
             }
         }
 
-        public void DeleteMenuItem(string product, int aantal)
+        public string DeleteMenuItem(string product, int aantal)
         {
             try
             {
+
                 MenuItem_db.DeleteMenuItem(product, aantal);
+                return "Menu item succesvol verwijderd!";
             }
-            catch (Exception)
+            catch(Exception e)
             {
-                Console.WriteLine("Error occured while deleting an Item");
+                return e.ToString();
             }
         }
     
@@ -100,11 +127,16 @@ namespace ChapooLogic
         {
             try
             {
-                return MenuItem_db.Db_GetMenuItem(MenuKaartSoort, SoortType);
+                MenuItem menuItem = MenuItem_db.Db_GetMenuItem(MenuKaartSoort, SoortType);
+                if(menuItem == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuItem;
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                MenuItem fakemenuitem = new MenuItem(1, "error", "an error occured", 0.0f, 0, 0, "error");
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
                 return fakemenuitem;
             }
 

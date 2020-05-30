@@ -73,20 +73,22 @@ namespace ChapooDAL
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
         // Edit with product and aantal
-        public void EditMenuItem(string product, int aantal)
+        public string EditMenuItem(string product, int aantal)
         {
             string query = "UPDATE MenuItem SET aantalvoorraad = @product WHERE omschrijving = @product AND aantal == @aantal";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@product", product), new SqlParameter("@aantal", aantal) };
             ExecuteEditQuery(query, sqlParameters);
+            return "Menu item met succes aangepast!";
         }
 
         // Delete with product and aantal
-        public void DeleteMenuItem(string product, int aantal)
+        public string DeleteMenuItem(string product, int aantal)
         {
             string query = "DELETE FROM menuItem WHERE omschrijving = '@product' AND aantalvoorraad = @aantal";
             
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@omschrijving", product), new SqlParameter("@aantal", aantal) };
             ExecuteEditQuery(query, sqlParameters);
+            return "Menu item succesvol verwijderd!";
         }
 
         private MenuItem ReadMenuItem(DataTable dataTable)

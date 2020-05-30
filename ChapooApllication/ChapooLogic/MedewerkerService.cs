@@ -26,7 +26,7 @@ namespace ChapooLogic
 
                 return medewerkerlist;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 List<Medewerker> fakemedewerkerlist = new List<Medewerker>();
 
@@ -51,7 +51,7 @@ namespace ChapooLogic
                 }
                 return medewerker;
             }
-            catch(ArgumentNullException e)
+            catch(Exception e)
             {
                 Medewerker fakemedewerker = new Medewerker(9999999, e.ToString(), "something went wrong", "oh no", 9999);
                 return fakemedewerker;
@@ -72,7 +72,7 @@ namespace ChapooLogic
                 return medewerker;
 
             }
-            catch (ArgumentNullException e)
+            catch (Exception e)
             {
                 Medewerker fakeMedewerker = new Medewerker(1, e.ToString(), "news:", "nonExisting", 9999);
                 return fakeMedewerker;
@@ -83,7 +83,8 @@ namespace ChapooLogic
         {
             try
             {
-                return Medewerker_db.AddNewMedewerker(medewerkerID, voornaam, achternaam, type, inlogcode);
+                Medewerker_db.AddNewMedewerker(medewerkerID, voornaam, achternaam, type, inlogcode);
+                return "Succesvol een nieuwe medewerker toegevoegd!";
             }
             catch(Exception e)
             {
@@ -95,7 +96,8 @@ namespace ChapooLogic
         {
             try
             {
-                return Medewerker_db.DeleteMedewerker(medewerkerID);
+                Medewerker_db.DeleteMedewerker(medewerkerID);
+                return "Medewerker succesvol verwijderd!";
             }
             catch (Exception e)
             {
