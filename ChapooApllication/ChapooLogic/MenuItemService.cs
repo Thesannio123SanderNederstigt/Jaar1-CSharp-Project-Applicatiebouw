@@ -41,7 +41,20 @@ namespace ChapooLogic
                 return fakemenuitem;
             }
         }
-        
+
+        public void AddMenuItem(string product, int aantal)
+        {
+            try
+            {
+                MenuItem_db.AddMenuItem(product, aantal);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error occured while adding an Item");
+            }
+        }
+
+
         public MenuItem ReadMenuItem(string MenuKaartSoort, string SoortType)
         {
             try

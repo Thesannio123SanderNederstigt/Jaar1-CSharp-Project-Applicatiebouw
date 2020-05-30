@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kassa_FormClosing);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kassa));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Joel",
             "Postma",
             "eigenaar",
             "1111"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Eik",
             "Revers",
@@ -143,8 +142,8 @@
             this.pnl_KassaVoorraadKeuze = new System.Windows.Forms.Panel();
             this.pictureBx_TerugNaarHoofdscherm1_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa = new System.Windows.Forms.PictureBox();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa = new System.Windows.Forms.Button();
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaDinerMenuoverzicht = new System.Windows.Forms.Panel();
@@ -330,6 +329,7 @@
             this.btn_BarKeuzeBestelling_Kassa.TabIndex = 6;
             this.btn_BarKeuzeBestelling_Kassa.Text = "Bar";
             this.btn_BarKeuzeBestelling_Kassa.UseVisualStyleBackColor = true;
+            this.btn_BarKeuzeBestelling_Kassa.Click += new System.EventHandler(this.btn_BarKeuzeBestelling_Kassa_Click);
             // 
             // btn_KeukenKeuzeBestelling_Kassa
             // 
@@ -339,6 +339,7 @@
             this.btn_KeukenKeuzeBestelling_Kassa.TabIndex = 7;
             this.btn_KeukenKeuzeBestelling_Kassa.Text = "Keuken";
             this.btn_KeukenKeuzeBestelling_Kassa.UseVisualStyleBackColor = true;
+            this.btn_KeukenKeuzeBestelling_Kassa.Click += new System.EventHandler(this.btn_KeukenKeuzeBestelling_Kassa_Click);
             // 
             // pnl_KassaKeuzeBestellingen
             // 
@@ -769,6 +770,7 @@
             this.btn_ToevoegenPersoneel.TabIndex = 62;
             this.btn_ToevoegenPersoneel.Text = "Toevoegen";
             this.btn_ToevoegenPersoneel.UseVisualStyleBackColor = false;
+            this.btn_ToevoegenPersoneel.Click += new System.EventHandler(this.btn_ToevoegenPersoneel_Click);
             // 
             // txt_PersoneelsbeheerID
             // 
@@ -806,6 +808,7 @@
             this.btn_InkomstenPersoneelsbeheer_Kassa.TabIndex = 12;
             this.btn_InkomstenPersoneelsbeheer_Kassa.Text = "Inkomsten";
             this.btn_InkomstenPersoneelsbeheer_Kassa.UseVisualStyleBackColor = true;
+            this.btn_InkomstenPersoneelsbeheer_Kassa.Click += new System.EventHandler(this.btn_InkomstenPersoneelsbeheer_Kassa_Click);
             // 
             // btn_PersoneelsbeheerPersoneelsoverzicht_Kassa
             // 
@@ -815,6 +818,7 @@
             this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.TabIndex = 11;
             this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.Text = "Personeelsbeheer";
             this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.UseVisualStyleBackColor = true;
+            this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.Click += new System.EventHandler(this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa_Click);
             // 
             // btn_BestellingenPersoneelsoverzicht_Kassa
             // 
@@ -824,6 +828,7 @@
             this.btn_BestellingenPersoneelsoverzicht_Kassa.TabIndex = 10;
             this.btn_BestellingenPersoneelsoverzicht_Kassa.Text = "Bestellingen";
             this.btn_BestellingenPersoneelsoverzicht_Kassa.UseVisualStyleBackColor = true;
+            this.btn_BestellingenPersoneelsoverzicht_Kassa.Click += new System.EventHandler(this.btn_BestellingenPersoneelsoverzicht_Kassa_Click);
             // 
             // btn_VoorraadPersoneelsoverzicht_Kassa
             // 
@@ -833,6 +838,7 @@
             this.btn_VoorraadPersoneelsoverzicht_Kassa.TabIndex = 9;
             this.btn_VoorraadPersoneelsoverzicht_Kassa.Text = "Voorraad";
             this.btn_VoorraadPersoneelsoverzicht_Kassa.UseVisualStyleBackColor = true;
+            this.btn_VoorraadPersoneelsoverzicht_Kassa.Click += new System.EventHandler(this.btn_VoorraadPersoneelsoverzicht_Kassa_Click);
             // 
             // btn_OpslaanPersoneelsbeheer_Kassa
             // 
@@ -843,6 +849,7 @@
             this.btn_OpslaanPersoneelsbeheer_Kassa.TabIndex = 8;
             this.btn_OpslaanPersoneelsbeheer_Kassa.Text = "Opslaan";
             this.btn_OpslaanPersoneelsbeheer_Kassa.UseVisualStyleBackColor = false;
+            this.btn_OpslaanPersoneelsbeheer_Kassa.Click += new System.EventHandler(this.btn_OpslaanPersoneelsbeheer_Kassa_Click);
             // 
             // btn_VerwijderenPersoneelsBeheer_Kassa
             // 
@@ -853,6 +860,7 @@
             this.btn_VerwijderenPersoneelsBeheer_Kassa.TabIndex = 7;
             this.btn_VerwijderenPersoneelsBeheer_Kassa.Text = "Verwijderen";
             this.btn_VerwijderenPersoneelsBeheer_Kassa.UseVisualStyleBackColor = false;
+            this.btn_VerwijderenPersoneelsBeheer_Kassa.Click += new System.EventHandler(this.btn_VerwijderenPersoneelsBeheer_Kassa_Click);
             // 
             // listView_Personeelsbeheer
             // 
@@ -864,8 +872,8 @@
             this.PersoneelInlogcode});
             this.listView_Personeelsbeheer.HideSelection = false;
             this.listView_Personeelsbeheer.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
+            listViewItem21,
+            listViewItem22});
             this.listView_Personeelsbeheer.Location = new System.Drawing.Point(223, 144);
             this.listView_Personeelsbeheer.Name = "listView_Personeelsbeheer";
             this.listView_Personeelsbeheer.Size = new System.Drawing.Size(556, 488);
@@ -944,7 +952,7 @@
             // 
             this.pictureBx_TerugNaarHoofdscherm4_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBx_TerugNaarHoofdscherm4_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm4_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.Location = new System.Drawing.Point(10, 9);
+            this.pictureBx_TerugNaarHoofdscherm4_Kassa.Location = new System.Drawing.Point(24, 14);
             this.pictureBx_TerugNaarHoofdscherm4_Kassa.Name = "pictureBx_TerugNaarHoofdscherm4_Kassa";
             this.pictureBx_TerugNaarHoofdscherm4_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugNaarHoofdscherm4_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -954,7 +962,7 @@
             // pictureBx_TerugGerechtVoorraadOverzicht_Kassa
             // 
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Image")));
-            this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Location = new System.Drawing.Point(57, 9);
+            this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Location = new System.Drawing.Point(71, 14);
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Name = "pictureBx_TerugGerechtVoorraadOverzicht_Kassa";
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -969,6 +977,7 @@
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht.TabIndex = 26;
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht.Text = "Personeelsbeheer";
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnPersoneelsbeheer_GerechtvooraadOverzicht.Click += new System.EventHandler(this.btnPersoneelsbeheer_GerechtvooraadOverzicht_Click);
             // 
             // btnMenuOverzicht_GerechtVoorraadOverzicht
             // 
@@ -978,6 +987,7 @@
             this.btnMenuOverzicht_GerechtVoorraadOverzicht.TabIndex = 25;
             this.btnMenuOverzicht_GerechtVoorraadOverzicht.Text = "Menu Overzicht";
             this.btnMenuOverzicht_GerechtVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnMenuOverzicht_GerechtVoorraadOverzicht.Click += new System.EventHandler(this.btnMenuOverzicht_GerechtVoorraadOverzicht_Click);
             // 
             // btnBestellingen_GerechtVoorraadOverzicht
             // 
@@ -987,6 +997,7 @@
             this.btnBestellingen_GerechtVoorraadOverzicht.TabIndex = 24;
             this.btnBestellingen_GerechtVoorraadOverzicht.Text = "Bestellingen";
             this.btnBestellingen_GerechtVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnBestellingen_GerechtVoorraadOverzicht.Click += new System.EventHandler(this.btnBestellingen_GerechtVoorraadOverzicht_Click);
             // 
             // btnVooraad_GerechtVoorraadOverzicht
             // 
@@ -996,24 +1007,27 @@
             this.btnVooraad_GerechtVoorraadOverzicht.TabIndex = 23;
             this.btnVooraad_GerechtVoorraadOverzicht.Text = "Voorraad";
             this.btnVooraad_GerechtVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnVooraad_GerechtVoorraadOverzicht.Click += new System.EventHandler(this.btnVooraad_GerechtVoorraadOverzicht_Click);
             // 
             // btnVerwijderen_GerechtvoorraadOverzicht
             // 
-            this.btnVerwijderen_GerechtvoorraadOverzicht.Location = new System.Drawing.Point(836, 327);
+            this.btnVerwijderen_GerechtvoorraadOverzicht.Location = new System.Drawing.Point(836, 360);
             this.btnVerwijderen_GerechtvoorraadOverzicht.Name = "btnVerwijderen_GerechtvoorraadOverzicht";
             this.btnVerwijderen_GerechtvoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnVerwijderen_GerechtvoorraadOverzicht.TabIndex = 22;
             this.btnVerwijderen_GerechtvoorraadOverzicht.Text = "Verwijderen";
             this.btnVerwijderen_GerechtvoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_GerechtvoorraadOverzicht.Click += new System.EventHandler(this.btnVerwijderen_GerechtvoorraadOverzicht_Click);
             // 
             // btnWijzigen_GerechtVoorraadOverzicht
             // 
-            this.btnWijzigen_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(836, 265);
+            this.btnWijzigen_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(836, 304);
             this.btnWijzigen_GerechtVoorraadOverzicht.Name = "btnWijzigen_GerechtVoorraadOverzicht";
             this.btnWijzigen_GerechtVoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnWijzigen_GerechtVoorraadOverzicht.TabIndex = 21;
             this.btnWijzigen_GerechtVoorraadOverzicht.Text = "Wijziging opslaan";
             this.btnWijzigen_GerechtVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_GerechtVoorraadOverzicht.Click += new System.EventHandler(this.btnWijzigen_GerechtVoorraadOverzicht_Click);
             // 
             // label14
             // 
@@ -1052,6 +1066,8 @@
             this.listview_GerechtVoorraadOverzicht.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Product,
             this.Aantal});
+            this.listview_GerechtVoorraadOverzicht.FullRowSelect = true;
+            this.listview_GerechtVoorraadOverzicht.GridLines = true;
             this.listview_GerechtVoorraadOverzicht.HideSelection = false;
             this.listview_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(203, 118);
             this.listview_GerechtVoorraadOverzicht.Name = "listview_GerechtVoorraadOverzicht";
@@ -1059,6 +1075,7 @@
             this.listview_GerechtVoorraadOverzicht.TabIndex = 16;
             this.listview_GerechtVoorraadOverzicht.UseCompatibleStateImageBehavior = false;
             this.listview_GerechtVoorraadOverzicht.View = System.Windows.Forms.View.Details;
+            this.listview_GerechtVoorraadOverzicht.SelectedIndexChanged += new System.EventHandler(this.listview_GerechtVoorraadOverzicht_SelectedIndexChanged);
             // 
             // Product
             // 
@@ -1141,6 +1158,7 @@
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht.TabIndex = 26;
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht.Text = "Personeelsbeheer";
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnPersoneelsbeheer_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnPersoneelsbeheer_DrankVoorraadOverzicht_Click);
             // 
             // btnMenuOverzicht_DrankVoorraadOverzicht
             // 
@@ -1150,6 +1168,7 @@
             this.btnMenuOverzicht_DrankVoorraadOverzicht.TabIndex = 25;
             this.btnMenuOverzicht_DrankVoorraadOverzicht.Text = "Menu Overzicht";
             this.btnMenuOverzicht_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnMenuOverzicht_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnMenuOverzicht_DrankVoorraadOverzicht_Click);
             // 
             // btnBestellingen_DrankVoorraadOverzicht
             // 
@@ -1159,6 +1178,7 @@
             this.btnBestellingen_DrankVoorraadOverzicht.TabIndex = 24;
             this.btnBestellingen_DrankVoorraadOverzicht.Text = "Bestellingen";
             this.btnBestellingen_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnBestellingen_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnBestellingen_DrankVoorraadOverzicht_Click);
             // 
             // btnVoorraad_DrankVoorraadOverzicht
             // 
@@ -1168,6 +1188,7 @@
             this.btnVoorraad_DrankVoorraadOverzicht.TabIndex = 23;
             this.btnVoorraad_DrankVoorraadOverzicht.Text = "Voorraad";
             this.btnVoorraad_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnVoorraad_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnVoorraad_DrankVoorraadOverzicht_Click);
             // 
             // btnVerwijderen_DrankVoorraadOverzicht
             // 
@@ -1177,6 +1198,7 @@
             this.btnVerwijderen_DrankVoorraadOverzicht.TabIndex = 22;
             this.btnVerwijderen_DrankVoorraadOverzicht.Text = "Verwijderen";
             this.btnVerwijderen_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankVoorraadOverzicht_Click);
             // 
             // btnWijzigen_DrankVoorraadOverzicht
             // 
@@ -1186,6 +1208,7 @@
             this.btnWijzigen_DrankVoorraadOverzicht.TabIndex = 21;
             this.btnWijzigen_DrankVoorraadOverzicht.Text = "Wijziging opslaan";
             this.btnWijzigen_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankVoorraadOverzicht_Click);
             // 
             // label15
             // 
@@ -1266,8 +1289,8 @@
             this.pnl_KassaVoorraadKeuze.BackColor = System.Drawing.Color.White;
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.pictureBx_TerugNaarHoofdscherm1_Kassa);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa);
-            this.pnl_KassaVoorraadKeuze.Controls.Add(this.button27);
-            this.pnl_KassaVoorraadKeuze.Controls.Add(this.button26);
+            this.pnl_KassaVoorraadKeuze.Controls.Add(this.btn_GerechtVoorraadKeuzeOverzicht_Kassa);
+            this.pnl_KassaVoorraadKeuze.Controls.Add(this.btn_DrankVoorraadOverzichtKeuze_Kassa);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.label18);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.pictureBox8);
             this.pnl_KassaVoorraadKeuze.Location = new System.Drawing.Point(0, 0);
@@ -1296,23 +1319,25 @@
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.TabIndex = 56;
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.TabStop = false;
             // 
-            // button27
+            // btn_GerechtVoorraadKeuzeOverzicht_Kassa
             // 
-            this.button27.Location = new System.Drawing.Point(263, 497);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(522, 119);
-            this.button27.TabIndex = 30;
-            this.button27.Text = "Gerechten";
-            this.button27.UseVisualStyleBackColor = true;
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Location = new System.Drawing.Point(263, 497);
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Name = "btn_GerechtVoorraadKeuzeOverzicht_Kassa";
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Size = new System.Drawing.Size(522, 119);
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.TabIndex = 30;
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Text = "Gerechten";
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.UseVisualStyleBackColor = true;
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Click += new System.EventHandler(this.btn_GerechtVoorraadKeuzeOverzicht_Kassa_Click);
             // 
-            // button26
+            // btn_DrankVoorraadOverzichtKeuze_Kassa
             // 
-            this.button26.Location = new System.Drawing.Point(263, 327);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(522, 119);
-            this.button26.TabIndex = 29;
-            this.button26.Text = "Drank";
-            this.button26.UseVisualStyleBackColor = true;
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Location = new System.Drawing.Point(263, 327);
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Name = "btn_DrankVoorraadOverzichtKeuze_Kassa";
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Size = new System.Drawing.Size(522, 119);
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.TabIndex = 29;
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Text = "Drank";
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.UseVisualStyleBackColor = true;
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Click += new System.EventHandler(this.btn_DrankVoorraadOverzichtKeuze_Kassa_Click);
             // 
             // label18
             // 
@@ -1387,6 +1412,7 @@
             this.pictureBx_TerugDinermenuOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBx_TerugDinermenuOverzicht_Kassa.TabIndex = 56;
             this.pictureBx_TerugDinermenuOverzicht_Kassa.TabStop = false;
+            this.pictureBx_TerugDinermenuOverzicht_Kassa.Click += new System.EventHandler(this.pictureBx_TerugDinermenuOverzicht_Kassa_Click);
             // 
             // btnToevoegen_DinerMenuOverzicht
             // 
@@ -1396,6 +1422,7 @@
             this.btnToevoegen_DinerMenuOverzicht.TabIndex = 54;
             this.btnToevoegen_DinerMenuOverzicht.Text = "Toevoegen";
             this.btnToevoegen_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnToevoegen_DinerMenuOverzicht.Click += new System.EventHandler(this.btnToevoegen_DinerMenuOverzicht_Click);
             // 
             // label36
             // 
@@ -1517,6 +1544,7 @@
             this.btnPersoneelsbeheer_DinerMenuOverzicht.TabIndex = 39;
             this.btnPersoneelsbeheer_DinerMenuOverzicht.Text = "Personeelsbeheer";
             this.btnPersoneelsbeheer_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnPersoneelsbeheer_DinerMenuOverzicht.Click += new System.EventHandler(this.btnPersoneelsbeheer_DinerMenuOverzicht_Click);
             // 
             // btnMenuOverzicht_DinermenuOverzicht
             // 
@@ -1526,6 +1554,7 @@
             this.btnMenuOverzicht_DinermenuOverzicht.TabIndex = 38;
             this.btnMenuOverzicht_DinermenuOverzicht.Text = "Menu Overzicht";
             this.btnMenuOverzicht_DinermenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnMenuOverzicht_DinermenuOverzicht.Click += new System.EventHandler(this.btnMenuOverzicht_DinermenuOverzicht_Click);
             // 
             // btnBestellingen_Dinermenuoverzicht
             // 
@@ -1535,6 +1564,7 @@
             this.btnBestellingen_Dinermenuoverzicht.TabIndex = 37;
             this.btnBestellingen_Dinermenuoverzicht.Text = "Bestellingen";
             this.btnBestellingen_Dinermenuoverzicht.UseVisualStyleBackColor = true;
+            this.btnBestellingen_Dinermenuoverzicht.Click += new System.EventHandler(this.btnBestellingen_Dinermenuoverzicht_Click);
             // 
             // btnVoorraad_DinerMenuOverzicht
             // 
@@ -1544,6 +1574,7 @@
             this.btnVoorraad_DinerMenuOverzicht.TabIndex = 36;
             this.btnVoorraad_DinerMenuOverzicht.Text = "Voorraad";
             this.btnVoorraad_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnVoorraad_DinerMenuOverzicht.Click += new System.EventHandler(this.btnVoorraad_DinerMenuOverzicht_Click);
             // 
             // btnVerwijderen_DinerMenuOverzicht
             // 
@@ -1553,6 +1584,7 @@
             this.btnVerwijderen_DinerMenuOverzicht.TabIndex = 35;
             this.btnVerwijderen_DinerMenuOverzicht.Text = "Verwijderen";
             this.btnVerwijderen_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_DinerMenuOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DinerMenuOverzicht_Click);
             // 
             // btnOpslaan_DinerMenuOverzicht
             // 
@@ -1562,6 +1594,7 @@
             this.btnOpslaan_DinerMenuOverzicht.TabIndex = 34;
             this.btnOpslaan_DinerMenuOverzicht.Text = "Wijziging opslaan";
             this.btnOpslaan_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnOpslaan_DinerMenuOverzicht.Click += new System.EventHandler(this.btnOpslaan_DinerMenuOverzicht_Click);
             // 
             // listView_DinerMenuOverzicht
             // 
@@ -1580,6 +1613,7 @@
             this.listView_DinerMenuOverzicht.TabIndex = 29;
             this.listView_DinerMenuOverzicht.UseCompatibleStateImageBehavior = false;
             this.listView_DinerMenuOverzicht.View = System.Windows.Forms.View.Details;
+            this.listView_DinerMenuOverzicht.SelectedIndexChanged += new System.EventHandler(this.listView_DinerMenuOverzicht_SelectedIndexChanged);
             // 
             // columnHeader10
             // 
@@ -1679,6 +1713,7 @@
             this.btnDinerMenu_MenuoverzichtKeuze.TabIndex = 15;
             this.btnDinerMenu_MenuoverzichtKeuze.Text = "Diner Menu";
             this.btnDinerMenu_MenuoverzichtKeuze.UseVisualStyleBackColor = true;
+            this.btnDinerMenu_MenuoverzichtKeuze.Click += new System.EventHandler(this.btnDinerMenu_MenuoverzichtKeuze_Click);
             // 
             // btnLunchMenu_MenuoverzichtKeuze
             // 
@@ -1688,6 +1723,7 @@
             this.btnLunchMenu_MenuoverzichtKeuze.TabIndex = 14;
             this.btnLunchMenu_MenuoverzichtKeuze.Text = "Lunch Menu";
             this.btnLunchMenu_MenuoverzichtKeuze.UseVisualStyleBackColor = true;
+            this.btnLunchMenu_MenuoverzichtKeuze.Click += new System.EventHandler(this.btnLunchMenu_MenuoverzichtKeuze_Click);
             // 
             // btnDrankMenu_MenuoverzichtKeuze
             // 
@@ -1697,6 +1733,7 @@
             this.btnDrankMenu_MenuoverzichtKeuze.TabIndex = 13;
             this.btnDrankMenu_MenuoverzichtKeuze.Text = "Drank Menu";
             this.btnDrankMenu_MenuoverzichtKeuze.UseVisualStyleBackColor = true;
+            this.btnDrankMenu_MenuoverzichtKeuze.Click += new System.EventHandler(this.btnDrankMenu_MenuoverzichtKeuze_Click);
             // 
             // pictureBox9
             // 
@@ -1780,6 +1817,7 @@
             this.btnToevoegen_DrankMenuOverzicht.TabIndex = 54;
             this.btnToevoegen_DrankMenuOverzicht.Text = "Toevoegen";
             this.btnToevoegen_DrankMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnToevoegen_DrankMenuOverzicht.Click += new System.EventHandler(this.btnToevoegen_DrankMenuOverzicht_Click);
             // 
             // label29
             // 
@@ -1901,6 +1939,7 @@
             this.btnPersoneelsbeheer_DrankMenuOverzicht.TabIndex = 39;
             this.btnPersoneelsbeheer_DrankMenuOverzicht.Text = "Personeelsbeheer";
             this.btnPersoneelsbeheer_DrankMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnPersoneelsbeheer_DrankMenuOverzicht.Click += new System.EventHandler(this.btnPersoneelsbeheer_DrankMenuOverzicht_Click);
             // 
             // btnMenuOverzicht_DrankMenuOverzicht
             // 
@@ -1910,6 +1949,7 @@
             this.btnMenuOverzicht_DrankMenuOverzicht.TabIndex = 38;
             this.btnMenuOverzicht_DrankMenuOverzicht.Text = "Menu Overzicht";
             this.btnMenuOverzicht_DrankMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnMenuOverzicht_DrankMenuOverzicht.Click += new System.EventHandler(this.btnMenuOverzicht_DrankMenuOverzicht_Click);
             // 
             // btnBestellingen_DrankMenuOverzicht
             // 
@@ -1919,6 +1959,7 @@
             this.btnBestellingen_DrankMenuOverzicht.TabIndex = 37;
             this.btnBestellingen_DrankMenuOverzicht.Text = "Bestellingen";
             this.btnBestellingen_DrankMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnBestellingen_DrankMenuOverzicht.Click += new System.EventHandler(this.btnBestellingen_DrankMenuOverzicht_Click);
             // 
             // btnVoorraad_DrankMenuOverzicht
             // 
@@ -1928,6 +1969,7 @@
             this.btnVoorraad_DrankMenuOverzicht.TabIndex = 36;
             this.btnVoorraad_DrankMenuOverzicht.Text = "Voorraad";
             this.btnVoorraad_DrankMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnVoorraad_DrankMenuOverzicht.Click += new System.EventHandler(this.btnVoorraad_DrankMenuOverzicht_Click);
             // 
             // btnVerwijderen_DrankMenuOverzicht
             // 
@@ -1937,6 +1979,7 @@
             this.btnVerwijderen_DrankMenuOverzicht.TabIndex = 35;
             this.btnVerwijderen_DrankMenuOverzicht.Text = "Verwijderen";
             this.btnVerwijderen_DrankMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_DrankMenuOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankMenuOverzicht_Click);
             // 
             // btnWijzigen_DrankMenuOverzicht
             // 
@@ -1946,6 +1989,7 @@
             this.btnWijzigen_DrankMenuOverzicht.TabIndex = 34;
             this.btnWijzigen_DrankMenuOverzicht.Text = "Wijziging opslaan";
             this.btnWijzigen_DrankMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_DrankMenuOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankMenuOverzicht_Click);
             // 
             // listViewDrankmenuOverzicht
             // 
@@ -2082,6 +2126,7 @@
             this.btnToevoegen_Lunchmenuoverzicht.TabIndex = 54;
             this.btnToevoegen_Lunchmenuoverzicht.Text = "Toevoegen";
             this.btnToevoegen_Lunchmenuoverzicht.UseVisualStyleBackColor = true;
+            this.btnToevoegen_Lunchmenuoverzicht.Click += new System.EventHandler(this.btnToevoegen_Lunchmenuoverzicht_Click);
             // 
             // label20
             // 
@@ -2203,6 +2248,7 @@
             this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.TabIndex = 39;
             this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.Text = "Personeelsbeheer";
             this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.UseVisualStyleBackColor = true;
+            this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.Click += new System.EventHandler(this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41_Click);
             // 
             // btn_MenuOverzichtLunchmenuoverzicht_Kassan41
             // 
@@ -2212,6 +2258,7 @@
             this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.TabIndex = 38;
             this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.Text = "Menu Overzicht";
             this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.UseVisualStyleBackColor = true;
+            this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.Click += new System.EventHandler(this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41_Click);
             // 
             // btn_BestellingenLunchmenuoverzicht_Kassan41
             // 
@@ -2221,6 +2268,7 @@
             this.btn_BestellingenLunchmenuoverzicht_Kassan41.TabIndex = 37;
             this.btn_BestellingenLunchmenuoverzicht_Kassan41.Text = "Bestellingen";
             this.btn_BestellingenLunchmenuoverzicht_Kassan41.UseVisualStyleBackColor = true;
+            this.btn_BestellingenLunchmenuoverzicht_Kassan41.Click += new System.EventHandler(this.btn_BestellingenLunchmenuoverzicht_Kassan41_Click);
             // 
             // btn_VoorraadLunchmenuoverzicht_Kassa
             // 
@@ -2230,6 +2278,7 @@
             this.btn_VoorraadLunchmenuoverzicht_Kassa.TabIndex = 36;
             this.btn_VoorraadLunchmenuoverzicht_Kassa.Text = "Voorraad";
             this.btn_VoorraadLunchmenuoverzicht_Kassa.UseVisualStyleBackColor = true;
+            this.btn_VoorraadLunchmenuoverzicht_Kassa.Click += new System.EventHandler(this.btn_VoorraadLunchmenuoverzicht_Kassa_Click);
             // 
             // btnVerwijderen_Lunchmenuoverzicht
             // 
@@ -2239,6 +2288,7 @@
             this.btnVerwijderen_Lunchmenuoverzicht.TabIndex = 35;
             this.btnVerwijderen_Lunchmenuoverzicht.Text = "Verwijderen";
             this.btnVerwijderen_Lunchmenuoverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_Lunchmenuoverzicht.Click += new System.EventHandler(this.btnVerwijderen_Lunchmenuoverzicht_Click);
             // 
             // btnOpslaan_Lunchmenuoverzicht
             // 
@@ -2248,6 +2298,7 @@
             this.btnOpslaan_Lunchmenuoverzicht.TabIndex = 34;
             this.btnOpslaan_Lunchmenuoverzicht.Text = "Wijziging opslaan";
             this.btnOpslaan_Lunchmenuoverzicht.UseVisualStyleBackColor = true;
+            this.btnOpslaan_Lunchmenuoverzicht.Click += new System.EventHandler(this.btnOpslaan_Lunchmenuoverzicht_Click);
             // 
             // listView_LunchMenuOverzicht_Kassa
             // 
@@ -2334,7 +2385,7 @@
             // 
             // btn_MenuOverzichtHoofdscherm_Kassa
             // 
-            this.btn_MenuOverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(200, 311);
+            this.btn_MenuOverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(185, 314);
             this.btn_MenuOverzichtHoofdscherm_Kassa.Name = "btn_MenuOverzichtHoofdscherm_Kassa";
             this.btn_MenuOverzichtHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
             this.btn_MenuOverzichtHoofdscherm_Kassa.TabIndex = 5;
@@ -2350,6 +2401,7 @@
             this.btn_VoorraadHoofdscherm_Kassa.TabIndex = 6;
             this.btn_VoorraadHoofdscherm_Kassa.Text = "Voorraad";
             this.btn_VoorraadHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            this.btn_VoorraadHoofdscherm_Kassa.Click += new System.EventHandler(this.btn_VoorraadHoofdscherm_Kassa_Click);
             // 
             // btn_BestellingenHoofdscherm_Kassa
             // 
@@ -2359,6 +2411,7 @@
             this.btn_BestellingenHoofdscherm_Kassa.TabIndex = 7;
             this.btn_BestellingenHoofdscherm_Kassa.Text = "Bestellingen";
             this.btn_BestellingenHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            this.btn_BestellingenHoofdscherm_Kassa.Click += new System.EventHandler(this.btn_BestellingenHoofdscherm_Kassa_Click);
             // 
             // btn_PersoneelsbeheerHoofdscherm_Kassa
             // 
@@ -2368,6 +2421,7 @@
             this.btn_PersoneelsbeheerHoofdscherm_Kassa.TabIndex = 8;
             this.btn_PersoneelsbeheerHoofdscherm_Kassa.Text = "Personeelsbeheer";
             this.btn_PersoneelsbeheerHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Click += new System.EventHandler(this.btn_PersoneelsbeheerHoofdscherm_Kassa_Click);
             // 
             // btn_TafeloverzichtHoofdscherm_Kassa
             // 
@@ -2377,6 +2431,7 @@
             this.btn_TafeloverzichtHoofdscherm_Kassa.TabIndex = 9;
             this.btn_TafeloverzichtHoofdscherm_Kassa.Text = "Tafeloverzicht";
             this.btn_TafeloverzichtHoofdscherm_Kassa.UseVisualStyleBackColor = true;
+            this.btn_TafeloverzichtHoofdscherm_Kassa.Click += new System.EventHandler(this.btn_TafeloverzichtHoofdscherm_Kassa_Click);
             // 
             // label1
             // 
@@ -2421,20 +2476,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
+            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
+            this.Controls.Add(this.pnl_KassaDrankMenuoverzicht);
             this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaHoofdscherm);
-            this.Controls.Add(this.pnl_KassaLunchMenuoverizcht);
-            this.Controls.Add(this.pnl_KassaVoorraadoverzichtDrank);
-            this.Controls.Add(this.pnl_KassaDrankMenuoverzicht);
             this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
-            this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
-            this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
-            this.Controls.Add(this.pnl_KassaTafeloverzicht);
             this.Controls.Add(this.pnl_KassaVoorraadKeuze);
-            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
+            this.Controls.Add(this.pnl_KassaLunchMenuoverizcht);
+            this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
+            this.Controls.Add(this.pnl_KassaTafeloverzicht);
+            this.Controls.Add(this.pnl_KassaVoorraadoverzichtDrank);
             this.Controls.Add(this.pnl_Inkomstenoverzicht);
             this.Name = "Kassa";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kassa_FormClosing);
             this.pnl_KassaKeuzeBestellingen.ResumeLayout(false);
             this.pnl_KassaKeuzeBestellingen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm_Kassa)).EndInit();
@@ -2577,8 +2633,8 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel pnl_KassaVoorraadKeuze;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button btn_GerechtVoorraadKeuzeOverzicht_Kassa;
+        private System.Windows.Forms.Button btn_DrankVoorraadOverzichtKeuze_Kassa;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btnDinerMenu_MenuoverzichtKeuze;

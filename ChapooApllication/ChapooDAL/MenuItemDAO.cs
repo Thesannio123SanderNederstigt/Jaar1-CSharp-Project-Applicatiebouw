@@ -58,6 +58,13 @@ namespace ChapooDAL
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public void AddMenuItem(string product, int aantal)
+        {
+            string query = "UPDATE MenuItem SET aantalvoorraad = 35 WHERE omschrijving = @product AND aantal == @aantal";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@product", product), new SqlParameter("@aantal", aantal) };
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
         private MenuItem ReadMenuItem(DataTable dataTable)
         {
             MenuItem menuitem = null;
