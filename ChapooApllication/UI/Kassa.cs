@@ -113,12 +113,43 @@ namespace UI
         {
             HidePanels();
             pnl_KassaVoorraadoverzichtDrank.Show();
+            listView_DrankVoorraadOverzicht.Show();
+
+            MenuItemService menuItemService = new MenuItemService();
+            List<ChapooModel.MenuItem> menuItemList = menuItemService.Get_Dranken_MenuItems();
+
+            listView_DrankVoorraadOverzicht.Clear();
+            listView_DrankVoorraadOverzicht.Columns.Add("Product", 350);
+            listView_DrankVoorraadOverzicht.Columns.Add("Aantal", 100);
+
+            foreach (ChapooModel.MenuItem menuItem in menuItemList)
+            {
+                ListViewItem listViewItem = new ListViewItem(menuItem.omschrijving);
+                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
+
+                listView_DrankVoorraadOverzicht.Items.Add(listViewItem);
+            }
         }
         
         private void btn_GerechtVoorraadKeuzeOverzicht_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
             pnl_KassaVoorraadoverzichtGerecht.Show();
+            listview_GerechtVoorraadOverzicht.Show();
+
+            MenuItemService menuItemService = new MenuItemService();
+            List<ChapooModel.MenuItem> menuItemList = menuItemService.Get_Gerechten_MenuItems();
+
+            listview_GerechtVoorraadOverzicht.Clear();
+            listview_GerechtVoorraadOverzicht.Columns.Add("Producten",350);
+            listview_GerechtVoorraadOverzicht.Columns.Add("Aantal in voorraad", 100);
+
+            foreach (ChapooModel.MenuItem menuItem in menuItemList)
+            {
+                ListViewItem listViewItem = new ListViewItem(menuItem.omschrijving);
+                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
+                listview_GerechtVoorraadOverzicht.Items.Add(listViewItem);
+            }
         }
 
         // Event handler voor Diner menu Overzicht Scherm
@@ -287,15 +318,42 @@ namespace UI
 
         private void btnWijzigen_DrankVoorraadOverzicht_Click(object sender, EventArgs e)
         {
+            string product = txtProduct_DrankVoorraadOverzicht.Text;
+            int aantal = int.Parse(txtAantal_DrankVoorraadOverzicht.Text);
 
+            MenuItemService menuItemService = new MenuItemService();
+            menuItemService.EditMenuItem(product, aantal);
+            pnl_KassaVoorraadoverzichtDrank.Show();
+            listView_DrankVoorraadOverzicht.Show();
         }
 
         private void btnVerwijderen_DrankVoorraadOverzicht_Click(object sender, EventArgs e)
         {
+            string product = txtProduct_DrankVoorraadOverzicht.Text;
+            int aantal = int.Parse(txtAantal_DrankVoorraadOverzicht.Text);
 
+            MenuItemService menuItemService = new MenuItemService();
+            menuItemService.DeleteMenuItem(product, aantal);
+            pnl_KassaVoorraadoverzichtDrank.Show();
+            listView_DrankVoorraadOverzicht.Show();
+
+        }
+        private void listView_DrankVoorraadOverzicht_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listView_Drankvoorraad = listView_DrankVoorraadOverzicht.SelectedItems;
+
+            if (listView_Drankvoorraad.Count > 0)
+            {
+                int index = listView_DrankVoorraadOverzicht.SelectedIndices[0];
+                txtProduct_DrankVoorraadOverzicht.Text = listView_DrankVoorraadOverzicht.Items[index].SubItems[0].Text.ToString();
+                txtAantal_DrankVoorraadOverzicht.Text = listView_DrankVoorraadOverzicht.Items[index].SubItems[1].Text;
+
+            }
         }
 
         // Event Handlers voor Gerecht Voorraad Overzicht Scherm
+
+
         private void btnVooraad_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
         {
             HidePanels();
@@ -325,7 +383,7 @@ namespace UI
             string productNaam = txtProduct_GerechtVoorraadoverzicht.Text;
             int aantal = int.Parse(txtAantal_GerechtVoorraadoverzicht.Text);
             ChapooLogic.MenuItemService menuItemService = new ChapooLogic.MenuItemService();
-            menuItemService.AddMenuItem(productNaam, aantal);
+            menuItemService.EditMenuItem(productNaam, aantal);
             pnl_KassaVoorraadoverzichtGerecht.Show();
         }
 
@@ -336,7 +394,14 @@ namespace UI
 
         private void listview_GerechtVoorraadOverzicht_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            ListView.SelectedListViewItemCollection listView_GerechtVoorraad = listview_GerechtVoorraadOverzicht.SelectedItems;
+
+            if(listView_GerechtVoorraad.Count > 0)
+            {
+                int index = listview_GerechtVoorraadOverzicht.SelectedIndices[0];
+                txtProduct_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.SelectedItems[index].SubItems[0].Text;
+                txtAantal_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.SelectedItems[index].SubItems[1].Text.ToString();
+            }
         }
 
 
