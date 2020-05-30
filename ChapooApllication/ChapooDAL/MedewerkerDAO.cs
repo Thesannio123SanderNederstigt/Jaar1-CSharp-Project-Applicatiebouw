@@ -72,18 +72,20 @@ namespace ChapooDAL
             return medewerker;
         }
 
-        public void AddNewMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
+        public string AddNewMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
         {
             string query = "INSERT INTO Medewerker(ID, voornaam, achternaam, type, inlogcode)VALUES(@medewerkerID,@voornaam, @achternaam, @type, @inlogcode)";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", medewerkerID), new SqlParameter("@voornaam",voornaam), new SqlParameter("@type", achternaam), new SqlParameter("@type", type), new SqlParameter("@inlogcode", inlogcode) };
             ExecuteEditQuery(query, sqlParameters);
+            return "Succesvol een nieuwe medewerker toegevoegd!";
         }
 
-        public void DeleteMedewerker(int medewerkerID)
+        public string DeleteMedewerker(int medewerkerID)
         {
             string query = "DELETE * FROM Medewerker WHERE ID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter ("@id", medewerkerID)};
             ExecuteEditQuery(query, sqlParameters);
+            return "Medewerker succesvol verwijderd!";
         }
 
 

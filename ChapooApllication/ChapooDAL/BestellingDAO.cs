@@ -71,25 +71,28 @@ namespace ChapooDAL
             return bestelling;
         }
 
-        public void AddBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string AddBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             string query = "INSERT Bestelling(besteltijd, status, tafelID, rekeningID, opmerking) VALUES (@Besteltijd, @Status, @TafelID, @RekeningID, @Opmerking)";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Besteltijd", besteltijd), new SqlParameter("@Status", status), new SqlParameter("@TafelID", tafelID), new SqlParameter("@RekeningID", rekeningID), new SqlParameter("@Opmerking", opmerking) };
             ExecuteEditQuery(query, sqlParameters);
+            return "Bestelling succesvol toegevoegd!";
         }
 
-        public void EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             string query = "UPDATE Bestelling SET besteltijd = @Besteltijd, status = @Status, tafelID = @TafelID, rekeningID = @RekeningID, opmerking = @Opmerking WHERE ID = @Id";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", BestellingID), new SqlParameter("@Besteltijd", besteltijd), new SqlParameter("@Status", status), new SqlParameter("@TafelID", tafelID), new SqlParameter("@RekeningID", rekeningID), new SqlParameter("@Opmerking", opmerking) };
             ExecuteEditQuery(query, sqlParameters);
+            return "Bestelling met succes aangepast!";
         }
 
-        public void DeleteBestelling(int BestellingID)
+        public string DeleteBestelling(int BestellingID)
         {
             string query = "DELETE FROM Bestelling WHERE ID = @Id";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", BestellingID) };
             ExecuteEditQuery(query, sqlParameters);
+            return "Bestelling succesvol verwijderd!";
         }
 
     }

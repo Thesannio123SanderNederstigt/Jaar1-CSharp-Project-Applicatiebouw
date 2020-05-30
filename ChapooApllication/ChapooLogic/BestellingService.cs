@@ -17,12 +17,18 @@ namespace ChapooLogic
         {
             try
             {
-                return Bestelling_db.Get_All_Bestellingen();
+                List<Bestelling> bestellingslijst = Bestelling_db.Get_All_Bestellingen();
+
+                if(bestellingslijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return bestellingslijst;
             }
-            catch(Exception)
+            catch(ArgumentNullException e)
             {
                 List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
-                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, "error");
+                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
                 fakeBestellingLijst.Add(fakeBestelling);
                 return fakeBestellingLijst;
             }
@@ -33,48 +39,54 @@ namespace ChapooLogic
         {
             try
             {
-                return Bestelling_db.GetById(bestellingID);
+                Bestelling bestelling = Bestelling_db.GetById(bestellingID);
+
+                if(bestelling == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return bestelling;
             }
-            catch (Exception)
+            catch(ArgumentNullException e)
             {
-                Bestelling fakebestelling = new Bestelling(1, DateTime.Now, false, 1, 1, "error");
+                Bestelling fakebestelling = new Bestelling(1, DateTime.Now, false, 1, 1, e.ToString());
                 return fakebestelling;
             }
         }
 
-        public void AddNewBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string AddNewBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             try
             {
-                Bestelling_db.AddBestelling(besteltijd, status, tafelID, rekeningID, opmerking);
+                return Bestelling_db.AddBestelling(besteltijd, status, tafelID, rekeningID, opmerking);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw new Exception($"No bestelling was added :(");
+                return e.ToString();
             }
         }
 
-        public void EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             try
             {
-                Bestelling_db.EditBestelling(BestellingID, besteltijd, status, tafelID, rekeningID, opmerking);
+                return Bestelling_db.EditBestelling(BestellingID, besteltijd, status, tafelID, rekeningID, opmerking);
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw new Exception($"The bestelling wasn't altered because an error occurred");
+                return e.ToString();
             }
         }
 
-        public void DeleteBestelling(int BestellingID)
+        public string DeleteBestelling(int BestellingID)
         {
             try
             {
-                Bestelling_db.DeleteBestelling(BestellingID);
+                return Bestelling_db.DeleteBestelling(BestellingID);
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw new Exception($"The bestelling could not be deleted :(");
+                return e.ToString();
             }
         }
     }
