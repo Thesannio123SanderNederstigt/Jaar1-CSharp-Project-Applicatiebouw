@@ -20,25 +20,24 @@ D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwReposi
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe.config
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csprojAssemblyReference.cache
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bar.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Handheld.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe.config
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.pdb
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.dll
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.dll
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.dll
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.pdb
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.pdb
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.pdb
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bar.resources
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Handheld.resources
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
+C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb

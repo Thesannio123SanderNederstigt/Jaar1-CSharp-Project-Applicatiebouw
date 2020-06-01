@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using ChapooDAL;
 using ChapooModel;
-using System.Data.SqlTypes;
-using System.Data.SqlClient;
 
 namespace ChapooLogic
 {
@@ -19,12 +17,23 @@ namespace ChapooLogic
         {
             try
             {
-                return Medewerker_db.Get_All_Medewerkers();
+                List<Medewerker> medewerkerlist = Medewerker_db.Get_All_Medewerkers();
+
+                if(medewerkerlist == null)
+                {
+                    throw new ArgumentNullException();
+                }
+
+                return medewerkerlist;
             }
-            catch(Exception)
+            catch(Exception e)
             {
                 List<Medewerker> fakemedewerkerlist = new List<Medewerker>();
-                Medewerker fakemedewerker = new Medewerker(99999999, "error", "something went wrong", "oh no", 9999);
+
+                Medewerker fakemedewerker = new Medewerker(99999999, e.ToString(), "something went wrong", "oh no", 9999);
+
+                fakemedewerkerlist.Add(fakemedewerker);
+
                 return fakemedewerkerlist;
             }
 
@@ -34,11 +43,17 @@ namespace ChapooLogic
         {
             try
             {
-                return Medewerker_db.GetById(medewerkerID);
+                Medewerker medewerker = Medewerker_db.GetById(medewerkerID);
+
+                if (medewerker == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return medewerker;
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                Medewerker fakemedewerker = new Medewerker(9999999, "error", "something went wrong", "oh no", 9999);
+                Medewerker fakemedewerker = new Medewerker(9999999, e.ToString(), "something went wrong", "oh no", 9999);
                 return fakemedewerker;
             }
         }
@@ -48,42 +63,45 @@ namespace ChapooLogic
             try
             {
                 Medewerker medewerker = Medewerker_db.GetByLogincode(loginCode);
+
                 if (medewerker == null)
                 {
-                    medewerker = new Medewerker(999999, "Gotten null result", "From the database", "Fake", 99999);
-                    return medewerker;
+
+                    throw new ArgumentNullException();
                 }
-                return Medewerker_db.GetByLogincode(loginCode);
+                return medewerker;
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Medewerker fakeMedewerker = new Medewerker(1, "Query error logincode", "news:", "nonExisting", 9999);
+                Medewerker fakeMedewerker = new Medewerker(1, e.ToString(), "news:", "nonExisting", 9999);
                 return fakeMedewerker;
             }
         }
 
-        public void AddNewMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
+        public string AddNewMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
         {
             try
             {
                 Medewerker_db.AddNewMedewerker(medewerkerID, voornaam, achternaam, type, inlogcode);
+                return "Succesvol een nieuwe medewerker toegevoegd!";
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw new Exception("Could not add a new Medewerker.");
+                return e.ToString();
             }
         }
 
-        public void DeleteMedewerker(int medewerkerID)
+        public string DeleteMedewerker(int medewerkerID)
         {
             try
             {
                 Medewerker_db.DeleteMedewerker(medewerkerID);
+                return "Medewerker succesvol verwijderd!";
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw new Exception("Could not delete a Medewerker.");
+                return e.ToString();
             }
         }
 

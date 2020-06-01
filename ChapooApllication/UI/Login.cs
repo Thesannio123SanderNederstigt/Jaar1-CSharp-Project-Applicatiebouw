@@ -130,13 +130,13 @@ namespace UI
                 {
                     Kassa kassa = new Kassa();
                     kassa.Show();
-                    //this.Visible = false;
+                    this.Visible = false;
                 }
                 else if (medewerker.type == "chef-kok")
                 {
                     Keuken keuken = new Keuken();
                     keuken.Show();
-                    //this.Visible = false;
+                    this.Visible = false;
                 }
                 else if (medewerker.type == "bediening")
                 {
@@ -146,9 +146,9 @@ namespace UI
                 }
                 else if (medewerker.type == "barmedewerker")
                 {
-                    Bar bar = new Bar();
+                    Keuken bar = new Keuken();
                     bar.Show();
-                    //this.Visible = false;
+                    this.Visible = false;
                 }
                 else
                 {
@@ -162,6 +162,14 @@ namespace UI
                 EnableWarning();
                 loginString = "";
                 lbl_CurrentLogincode.Text = loginString;
+            }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Environment.Exit(0);
             }
         }
     }

@@ -18,12 +18,20 @@ namespace ChapooLogic
         {
             try
             {
-                return Tafel_db.Get_All_Tafels();
+                List<Tafel> tafellijst = Tafel_db.Get_All_Tafels();
+
+                if(tafellijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return tafellijst;
             }
-            catch(Exception)
+            catch(Exception e)
             {
+                string error = e.ToString();
+
                 List<Tafel> fakeTafelLijst = new List<Tafel>();
-                Tafel fakeTafel = new Tafel(11, true, 1);
+                Tafel fakeTafel = new Tafel(error.Length, true, 1);
                 fakeTafelLijst.Add(fakeTafel);
                 return fakeTafelLijst;
             }
@@ -34,11 +42,18 @@ namespace ChapooLogic
         {
             try
             {
-                return Tafel_db.GetById(tafelID);
+                Tafel tafel = Tafel_db.GetById(tafelID);
+                if(tafel ==null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return tafel;
             }
-            catch(Exception)
-            {
-                Tafel fakeTafel = new Tafel(11, true, 1);
+            catch(Exception e)
+            { 
+
+                string error = e.ToString();
+                Tafel fakeTafel = new Tafel(error.Length, true, 1);
                 return fakeTafel;
             }
         }
@@ -48,12 +63,19 @@ namespace ChapooLogic
         {
             try
             {
-                return Tafel_db.GetTafelByStatus(status);
+                List<Tafel> tafellijst = Tafel_db.GetTafelByStatus(status);
+
+                if (tafellijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return tafellijst;
             }
-            catch(Exception)
+            catch(Exception e)
             {
+                string error = e.ToString();
                 List<Tafel> fakeTafelLijst = new List<Tafel>();
-                Tafel fakeTafel = new Tafel(11, true, 1);
+                Tafel fakeTafel = new Tafel(error.Length, true, 1);
                 fakeTafelLijst.Add(fakeTafel);
                 return fakeTafelLijst;
             }

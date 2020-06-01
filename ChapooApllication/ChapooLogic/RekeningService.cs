@@ -16,12 +16,18 @@ namespace ChapooLogic
         {
             try
             {
-                return Rekening_db.Get_All_Rekeningen();
+                List<Rekening> rekeninglijst = Rekening_db.Get_All_Rekeningen();
+
+                if(rekeninglijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return rekeninglijst;
             }
-            catch(Exception)
+            catch(Exception e)
             {
                 List<Rekening> fakerekeninglist = new List<Rekening>();
-                Rekening fakerekening = new Rekening(1, 1, "error", 1, true, "error");
+                Rekening fakerekening = new Rekening(1, 1, e.ToString(), 1, true, "error");
                 fakerekeninglist.Add(fakerekening);
                 return fakerekeninglist;
             }
@@ -32,11 +38,17 @@ namespace ChapooLogic
         {
             try
             {
-                return Rekening_db.GetById(RekeningID);
+                Rekening rekening = Rekening_db.GetById(RekeningID);
+
+                if(rekening == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return rekening;
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                Rekening fakerekening = new Rekening(1, 1, "error", 1, true, "error");
+                Rekening fakerekening = new Rekening(1, 1, e.ToString(), 1, true, "error");
                 return fakerekening;
             }
         }
@@ -45,48 +57,57 @@ namespace ChapooLogic
         {
             try
             {
-                return Rekening_db.GetByTafelId(tafel.ID);
+                Rekening rekening = Rekening_db.GetByTafelId(tafel.ID);
+
+                if(rekening == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return rekening;
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                Rekening fakerekening = new Rekening(1, 1, "error", 1, true, "error");
+                Rekening fakerekening = new Rekening(1, 1, e.ToString(), 1, true, "error");
                 return fakerekening;
             }
         }
 
-        public void AddNewRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking, int tafelID)
+        public string AddNewRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking, int tafelID)
         {
             try
             {
                 Rekening_db.AddRekening(fooi, betaalwijze, betaalStatus, opmerking, tafelID);
+                return "Rekening succesvol toegevoegd!";
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw new Exception($"The Rekening wasn't created because an error occurred");
+                return e.ToString();
             }
         }
 
-        public void EditRekening(int ID, float fooi, string betaalwijze, bool betaalStatus, string opmerking)
+        public string EditRekening(int ID, float fooi, string betaalwijze, bool betaalStatus, string opmerking)
         {
             try
             {
                 Rekening_db.EditRekening(ID, fooi, betaalwijze, betaalStatus, opmerking);
+                return "Rekening met succes gewijzigd!";
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw new Exception($"The Rekening wasn't altered because an error occurred");
+                return e.ToString();
             }
         }
         
-        public void DeleteRekening(int RekeningID) 
+        public string DeleteRekening(int RekeningID) 
         {
             try
             {
                 Rekening_db.DeleteRekening(RekeningID);
+                return "Rekening succevol verwijderd!";
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                throw new Exception($"The Rekening wasn't deleted because an error occurred");
+                return e.ToString();
             }
         
         
