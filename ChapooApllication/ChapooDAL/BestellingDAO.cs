@@ -19,6 +19,13 @@ namespace ChapooDAL
             return ReadBestellingen (ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public List<Bestelling> Get8CurrentOrders()
+        {
+            string query = "SELECT tafelID, MIN(besteltijd) AS [besteltijd], ID, [status], rekeningID, opmerking FROM Bestelling GROUP BY tafelID, ID, besteltijd, [status], rekeningID, opmerking";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadBestellingen (ExecuteSelectQuery(query, sqlParameters));
+        }
+
         private List<Bestelling> ReadBestellingen(DataTable dataTable)
         {
 
@@ -94,6 +101,8 @@ namespace ChapooDAL
             ExecuteEditQuery(query, sqlParameters);
             return "Bestelling succesvol verwijderd!";
         }
+
+
 
     }
 }

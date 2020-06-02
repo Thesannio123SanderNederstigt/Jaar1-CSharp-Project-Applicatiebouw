@@ -27,18 +27,18 @@ namespace UI
 
         void LoginCodeGenerate(string givenValue)
         {
-            if (loginString.Length >= 1 && givenValue == "X")
+            if (txt_LoginScherm.Text.Length >= 1 && givenValue == "X")
             {
-                loginString = loginString.Remove(loginString.Length - 1, 1);
-            } else if(loginString.Length == 0 && givenValue == "X")
+                txt_LoginScherm.Text = txt_LoginScherm.Text.Remove(loginString.Length - 1, 1);
+            }
+            else if (txt_LoginScherm.Text.Length == 0 && givenValue == "X")
             {
-                loginString = "";
+                txt_LoginScherm.Text = "";
             }
             else
             {
-                loginString += givenValue;
+                txt_LoginScherm.Text += givenValue;
             }
-            lbl_CurrentLogincode.Text = loginString;
         }
 
         // Numpad Button functies
@@ -113,14 +113,24 @@ namespace UI
             pnl_LoginWarning.Visible = false;
             pnl_LoginWarning.Enabled = false;
             pnl_Login.Enabled = true;
+            txt_LoginScherm.Clear();
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
+            loginString = txt_LoginScherm.Text;
             // Tonen van juiste Form op basis van inlogcode + functie van gebruiker
             if (loginString.Length == 4)
             {
-                int loginCode = int.Parse(loginString);
+                int loginCode;
+                if (!int.TryParse(txt_LoginScherm.Text, out loginCode))
+                {
+                    EnableWarning();
+                }
+                else
+                {
+                    loginCode = int.Parse(loginString);
+                }
 
                 MedewerkerService medewerkerservice = new MedewerkerService();
                 Medewerker medewerker = medewerkerservice.GetByLogincode(loginCode);
@@ -152,14 +162,16 @@ namespace UI
                 }
                 else
                 {
+                    Console.WriteLine(loginString);
                     EnableWarning();
                 }
                 loginString = "";
                 lbl_CurrentLogincode.Text = loginString;
             }
-            else if(loginString.Length != 4)
+            else if (loginString.Length != 4)
             {
                 EnableWarning();
+                Console.WriteLine(loginString);
                 loginString = "";
                 lbl_CurrentLogincode.Text = loginString;
             }

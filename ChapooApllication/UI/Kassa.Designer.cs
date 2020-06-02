@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kassa));
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1",
             "Joel",
             "Postma",
             "eigenaar",
             "1111"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "2",
             "Eik",
             "Revers",
@@ -872,8 +872,8 @@
             this.PersoneelInlogcode});
             this.listView_Personeelsbeheer.HideSelection = false;
             this.listView_Personeelsbeheer.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8});
+            listViewItem1,
+            listViewItem2});
             this.listView_Personeelsbeheer.Location = new System.Drawing.Point(223, 144);
             this.listView_Personeelsbeheer.Name = "listView_Personeelsbeheer";
             this.listView_Personeelsbeheer.Size = new System.Drawing.Size(556, 488);
@@ -1250,7 +1250,7 @@
             this.listView_DrankVoorraadOverzicht.HideSelection = false;
             this.listView_DrankVoorraadOverzicht.Location = new System.Drawing.Point(203, 118);
             this.listView_DrankVoorraadOverzicht.Name = "listView_DrankVoorraadOverzicht";
-            this.listView_DrankVoorraadOverzicht.Size = new System.Drawing.Size(598, 596);
+            this.listView_DrankVoorraadOverzicht.Size = new System.Drawing.Size(608, 596);
             this.listView_DrankVoorraadOverzicht.TabIndex = 16;
             this.listView_DrankVoorraadOverzicht.UseCompatibleStateImageBehavior = false;
             this.listView_DrankVoorraadOverzicht.View = System.Windows.Forms.View.Details;
@@ -2477,11 +2477,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
+            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
             this.Controls.Add(this.pnl_KassaVoorraadoverzichtDrank);
             this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
-            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
             this.Controls.Add(this.pnl_KassaDrankMenuoverzicht);
-            this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
             this.Controls.Add(this.pnl_KassaVoorraadKeuze);
