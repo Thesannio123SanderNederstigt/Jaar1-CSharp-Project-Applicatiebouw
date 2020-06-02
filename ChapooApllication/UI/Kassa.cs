@@ -118,6 +118,18 @@ namespace UI
             pnl_KassaDinerMenuoverzicht.Show();
 
             MenuItemService menuItemService = new MenuItemService();
+            foreach(ChapooModel.MenuItem menuItem in menuItemService.GetMenuItems())
+            {
+                ListViewItem listViewItem = new ListViewItem(menuItem.ID.ToString());
+                listViewItem.SubItems.Add(menuItem.omschrijving);
+                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
+                listViewItem.SubItems.Add(menuItem.btw.ToString());
+                listViewItem.SubItems.Add(menuItem.categorie);
+                listViewItem.SubItems.Add(menuItem.menukaartsoort);
+                listViewItem.SubItems.Add(menuItem.prijs.ToString());
+
+                listView_DinerMenuOverzicht.Items.Add(listViewItem);
+            }
             
         }
 
@@ -251,7 +263,18 @@ namespace UI
 
         private void btnToevoegen_DinerMenuOverzicht_Click(object sender, EventArgs e)
         {
-            
+            MenuItemService menuItemService = new MenuItemService();
+            int id = int.Parse(txtID_DinerMenuOverzicht.Text);
+            string omschrijving = txtOmschrijving_DinerMenuOverzicht.Text;
+            int inVoorraad = int.Parse(txtInVoorraad_DinermenuOverzicht.Text);
+            int BTW = int.Parse(txtBTW_DinerMenuOverzicht.Text);
+            string categorie = txtCategorie_DinerMenuOverzicht.Text;
+            string menuSoort = txtMenuSoort_DinerMenuOverzicht.Text;
+            float prijs = float.Parse(txtPrijs_DinerMenuOverzicht.Text);
+
+            menuItemService.AddMenuItem(id, omschrijving, inVoorraad, BTW, categorie, menuSoort, prijs);
+            pnl_KassaDinerMenuoverzicht.Show();
+
         }
 
         private void btnOpslaan_DinerMenuOverzicht_Click(object sender, EventArgs e)
@@ -261,7 +284,7 @@ namespace UI
 
         private void btnVerwijderen_DinerMenuOverzicht_Click(object sender, EventArgs e)
         {
-
+            MenuItemService menuItemService = new MenuItemService();
         }
 
         private void listView_DinerMenuOverzicht_SelectedIndexChanged(object sender, EventArgs e)

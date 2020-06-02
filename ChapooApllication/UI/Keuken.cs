@@ -1,4 +1,6 @@
-﻿using System;
+﻿  using ChapooLogic;
+using ChapooModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +27,37 @@ namespace UI
         {
             InitializeComponent();
             HidePanels();
+            Select8Orders();
+        }
+
+        private void Select8Orders()
+        {
+            for (int i = 1; i < 9; i++)
+            {
+                BestellingService bestelservice = new BestellingService();
+                List<Bestelling> bestellinglist = bestelservice.GetEightOrders();
+                ListViewItem li = new ListViewItem();
+
+                string listviewname = "lv_Tafel";
+
+                foreach (Bestelling b in bestellinglist)
+                {
+                    listviewname += listviewname + i;
+
+                    //invullen in de juiste listview
+
+                    /* moet nog aangepast worden naar juiste DB teruggave
+                    li.SubItems.Add(b.omschrijving);
+                    li.SubItems.Add(b.aantal);
+                    */
+
+                    // TODO: kijken hoe we de listviews oproepen dmv string/loop
+                    
+                }
+
+
+            }
+
         }
 
         //eventhandlers voor op het startscherm panel (pnl_KeukenBarStart)
@@ -55,91 +88,113 @@ namespace UI
             pnl_KeukenBarStart.Show();
         }
 
-        private void lBox_Bestelling1_SelectedIndexChanged(object sender, EventArgs e)
+
+        // Listviews binnenkomende bestellingen
+        private void lv_Tafel1_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
-
+            lbl_Bestelling1.ForeColor = Color.Orange;
         }
+
 
         private void btn_Tafel1More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+
         }
 
-        private void lBox_Bestelling2_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void lv_Tafel2_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling2.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_Bestelling3_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_Tafel3_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling3.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_Bestelling4_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_Tafel4_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling4.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_Bestelling5_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_Tafel5_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling5.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_Bestelling6_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_Tafel6_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling6.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_Bestelling7_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_Tafel7_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling7.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_Bestelling8_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_Tafel8_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling8.ForeColor = Color.Orange;
+
         }
 
-        private void lbl_Bestelling1_Click(object sender, EventArgs e)
+
+        // Groupboxes voor binnengekomen bestelingen
+        private void gBox_Tafel1_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_Bestelling2_Click(object sender, EventArgs e)
+        private void gBox_Tafel2_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_Bestelling3_Click(object sender, EventArgs e)
+        private void gBox_Tafel3_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_Bestelling4_Click(object sender, EventArgs e)
+        private void gBox_Tafel4_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_Bestelling5_Click(object sender, EventArgs e)
+        private void gBox_Tafel5_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_Bestelling6_Click(object sender, EventArgs e)
+        private void gBox_Tafel6_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_Bestelling7_Click(object sender, EventArgs e)
+        private void gBox_Tafel7_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_Bestelling8_Click(object sender, EventArgs e)
+        private void gBox_Tafel8_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
+
 
         private void btn_GereedBestelling_Click(object sender, EventArgs e)
         {
@@ -156,6 +211,7 @@ namespace UI
         {
             //verwijderen van geselecteerde bestelling (welk label is geselecteerd)
         }
+
 
         //eventhandlers/methoden voor het tafel panel van de inkomende bestellingen (pnl_TafelBinnenkomendeBestelling)
         private void pictureBx_TerugInkomendeBestellingen_Click(object sender, EventArgs e)
@@ -178,89 +234,101 @@ namespace UI
             pnl_KeukenBarStart.Show();
         }
 
-        private void lBox_AFBestelling1_SelectedIndexChanged(object sender, EventArgs e)
+        // Listviews Afgeronde bestellingen
+        private void lv_AfBestelling1_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling1.ForeColor = Color.Orange;
         }
 
-        private void btn_Tafel1AFMore_Click(object sender, EventArgs e)
+        private void lv_AfBestelling2_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling2.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_AFBestelling2_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_AfBestelling3_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling3.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_AFBestelling3_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_AfBestelling4_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling4.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_AFBestelling4_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_AfBestelling5_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling5.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_AFBestelling5_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_AfBestelling6_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling6.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_AFBestelling6_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_AfBestelling7_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling7.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_AFBestelling7_SelectedIndexChanged(object sender, EventArgs e)
+        private void lv_AfBestelling8_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
+            lbl_AFBestelling8.ForeColor = Color.Orange;
+
         }
 
-        private void lBox_AFBestelling8_SelectedIndexChanged(object sender, EventArgs e)
+        // Groupboxes voor afgeronde bestellingen
+        private void gBox_AFTafel1_Enter(object sender, EventArgs e)
         {
-            pnl_TafelAfgerondeBestelling.Show();
+
         }
 
-        private void lbl_AFBestelling1_Click(object sender, EventArgs e)
+        private void gBox_AFTafel2_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_AFBestelling2_Click(object sender, EventArgs e)
+        private void gBox_AFTafel3_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_AFBestelling3_Click(object sender, EventArgs e)
+        private void gBox_AFTafel4_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_AFBestelling4_Click(object sender, EventArgs e)
+        private void gBox_AFTafel5_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_AFBestelling5_Click(object sender, EventArgs e)
+        private void gBox_AFTafel6_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_AFBestelling6_Click(object sender, EventArgs e)
+        private void gBox_AFTafel7_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
+
         }
 
-        private void lbl_AFBestelling7_Click(object sender, EventArgs e)
+        private void gBox_AFTafel8_Enter(object sender, EventArgs e)
         {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
-        }
 
-        private void lbl_AFBestelling8_Click(object sender, EventArgs e)
-        {
-            //kleur van het label aanpassen, doorgeven als globaal geselecteerde variabele (meegeven aan de code voor de gereed voor serveren knop) om te verwerken
         }
 
         private void btn_Binnenkomendestelling_Click(object sender, EventArgs e)
@@ -296,5 +364,7 @@ namespace UI
             HidePanels();
 
         }
+
+
     }
 }

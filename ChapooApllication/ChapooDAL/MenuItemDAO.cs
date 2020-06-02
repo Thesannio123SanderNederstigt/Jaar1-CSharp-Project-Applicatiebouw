@@ -66,6 +66,17 @@ namespace ChapooDAL
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public string AddMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
+        {
+            string query = "INSERT INTO menuItem VALUES(@ID, @omschrijving, @inVoorraad, @BTW, @categorie, @menuSoort, @prijs)";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@ID",ID), new SqlParameter("@omschrijving", omschrijving),
+            new SqlParameter("@inVoorraad", inVoorraad),  new SqlParameter("@BTW", BTW),
+            new SqlParameter("@categorie", categorie),  new SqlParameter("@menuSoort", menuSoort),  new SqlParameter("@prijs", prijs) };
+            ExecuteEditQuery(query, sqlParameters);
+
+            return "MenuItem met succes toegevoegd";
+        }
+
         public MenuItem Db_GetMenuItem(string MenuKaartSoort, string SoortType)
         {
             string query = "SELECT * FROM MenuItem Where menukaartsoort = @MenuKaartSoort and categorie = @SoortType";
@@ -80,6 +91,15 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@product", product), new SqlParameter("@aantal", aantal) };
             ExecuteEditQuery(query, sqlParameters);
             return "Menu item met succes aangepast!";
+        }
+
+        public string DeleteMenuItemByID(int ID)
+        {
+            string query = "DELETE FROM menuItem WHERE ID = @id";
+
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", ID)};
+            ExecuteEditQuery(query, sqlParameters);
+            return "Menu item succesvol verwijderd!";
         }
 
         // Delete with product and aantal

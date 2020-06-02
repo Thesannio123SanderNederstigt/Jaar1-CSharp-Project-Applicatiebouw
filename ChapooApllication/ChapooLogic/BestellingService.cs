@@ -54,6 +54,27 @@ namespace ChapooLogic
             }
         }
 
+        public List<Bestelling> GetEightOrders()
+        {
+            try
+            {
+                List<Bestelling> bestellingslijst = Bestelling_db.Get8CurrentOrders();
+
+                if (bestellingslijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return bestellingslijst;
+            }
+            catch(Exception e)
+            {
+                List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
+                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
+                fakeBestellingLijst.Add(fakeBestelling);
+                return fakeBestellingLijst;
+            }
+        }
+
         public string AddNewBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             try

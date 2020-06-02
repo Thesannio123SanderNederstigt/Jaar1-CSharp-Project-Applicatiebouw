@@ -13,6 +13,8 @@ namespace ChapooLogic
     {
         private readonly MenuItemDAO MenuItem_db = new MenuItemDAO();
 
+    
+
         //methoden voor de menu Items
         public List<MenuItem> GetMenuItems()
         {
@@ -104,6 +106,19 @@ namespace ChapooLogic
                 return "Menu item met succes aangepast!";
             }
             catch(Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+        public string AddMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
+        {
+            try
+            {
+                MenuItem_db.AddMenuItem(ID,omschrijving,inVoorraad,BTW, categorie, menuSoort, prijs);
+                return "Menu item succesvol toegevoegd!";
+            }
+            catch (Exception e)
             {
                 return e.ToString();
             }
