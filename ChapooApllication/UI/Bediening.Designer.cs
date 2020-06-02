@@ -60,6 +60,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.LunchPNL = new System.Windows.Forms.Panel();
+            this.button17 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel11Dropdown = new System.Windows.Forms.Panel();
@@ -99,6 +103,10 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.DrankPNL = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -135,23 +143,15 @@
             this.timer10 = new System.Windows.Forms.Timer(this.components);
             this.timer11 = new System.Windows.Forms.Timer(this.components);
             this.WijzigenPNL = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.pnlTafels.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
@@ -531,6 +531,46 @@
             this.LunchPNL.Size = new System.Drawing.Size(721, 974);
             this.LunchPNL.TabIndex = 28;
             this.LunchPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.LightGreen;
+            this.button17.Location = new System.Drawing.Point(40, 737);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(300, 64);
+            this.button17.TabIndex = 42;
+            this.button17.Text = "Voeg toe tot bestelling";
+            this.button17.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.label3.Location = new System.Drawing.Point(538, 754);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 36);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "0";
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.Salmon;
+            this.button20.Location = new System.Drawing.Point(588, 737);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(75, 64);
+            this.button20.TabIndex = 45;
+            this.button20.Text = "Min";
+            this.button20.UseVisualStyleBackColor = false;
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.LightGreen;
+            this.button21.Location = new System.Drawing.Point(445, 737);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 64);
+            this.button21.TabIndex = 44;
+            this.button21.Text = "Plus";
+            this.button21.UseVisualStyleBackColor = false;
             // 
             // button33
             // 
@@ -977,6 +1017,46 @@
             this.DrankPNL.TabIndex = 30;
             this.DrankPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DrankPNL_Paint);
             // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.LightGreen;
+            this.button16.Location = new System.Drawing.Point(49, 737);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(300, 64);
+            this.button16.TabIndex = 41;
+            this.button16.Text = "Voeg toe tot bestelling";
+            this.button16.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.label12.Location = new System.Drawing.Point(547, 754);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 36);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "0";
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.Salmon;
+            this.button18.Location = new System.Drawing.Point(597, 737);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 64);
+            this.button18.TabIndex = 44;
+            this.button18.Text = "Min";
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.LightGreen;
+            this.button19.Location = new System.Drawing.Point(454, 737);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(75, 64);
+            this.button19.TabIndex = 43;
+            this.button19.Text = "Plus";
+            this.button19.UseVisualStyleBackColor = false;
+            // 
             // button31
             // 
             this.button31.BackColor = System.Drawing.Color.LightGreen;
@@ -1273,9 +1353,9 @@
             // 
             this.listView10.BackColor = System.Drawing.SystemColors.Window;
             this.listView10.HideSelection = false;
-            this.listView10.Location = new System.Drawing.Point(48, 232);
+            this.listView10.Location = new System.Drawing.Point(48, 209);
             this.listView10.Name = "listView10";
-            this.listView10.Size = new System.Drawing.Size(625, 316);
+            this.listView10.Size = new System.Drawing.Size(625, 329);
             this.listView10.TabIndex = 24;
             this.listView10.UseCompatibleStateImageBehavior = false;
             // 
@@ -1343,6 +1423,36 @@
             this.WijzigenPNL.TabIndex = 31;
             this.WijzigenPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Moccasin;
+            this.button13.Location = new System.Drawing.Point(203, 211);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(198, 65);
+            this.button13.TabIndex = 45;
+            this.button13.Text = "Aantal Wijzigen";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.PaleGreen;
+            this.button14.Location = new System.Drawing.Point(410, 211);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(214, 65);
+            this.button14.TabIndex = 44;
+            this.button14.Text = "Wijziging Opslaan";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Salmon;
+            this.button15.Location = new System.Drawing.Point(-1, 211);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(198, 65);
+            this.button15.TabIndex = 43;
+            this.button15.Text = "Item Verwijderen";
+            this.button15.UseVisualStyleBackColor = false;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -1403,122 +1513,12 @@
             this.button12.Text = "Bestelling Verwijderen";
             this.button12.UseVisualStyleBackColor = false;
             // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Moccasin;
-            this.button13.Location = new System.Drawing.Point(203, 211);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(198, 65);
-            this.button13.TabIndex = 45;
-            this.button13.Text = "Aantal Wijzigen";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.PaleGreen;
-            this.button14.Location = new System.Drawing.Point(410, 211);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(214, 65);
-            this.button14.TabIndex = 44;
-            this.button14.Text = "Wijziging Opslaan";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Salmon;
-            this.button15.Location = new System.Drawing.Point(-1, 211);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(198, 65);
-            this.button15.TabIndex = 43;
-            this.button15.Text = "Item Verwijderen";
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.LightGreen;
-            this.button16.Location = new System.Drawing.Point(49, 737);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(300, 64);
-            this.button16.TabIndex = 41;
-            this.button16.Text = "Voeg toe tot bestelling";
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label12.Location = new System.Drawing.Point(547, 754);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 36);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "0";
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.Salmon;
-            this.button18.Location = new System.Drawing.Point(597, 737);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 64);
-            this.button18.TabIndex = 44;
-            this.button18.Text = "Min";
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.LightGreen;
-            this.button19.Location = new System.Drawing.Point(454, 737);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 64);
-            this.button19.TabIndex = 43;
-            this.button19.Text = "Plus";
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.LightGreen;
-            this.button17.Location = new System.Drawing.Point(40, 737);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(300, 64);
-            this.button17.TabIndex = 42;
-            this.button17.Text = "Voeg toe tot bestelling";
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label3.Location = new System.Drawing.Point(538, 754);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 36);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "0";
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.Salmon;
-            this.button20.Location = new System.Drawing.Point(588, 737);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 64);
-            this.button20.TabIndex = 45;
-            this.button20.Text = "Min";
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.LightGreen;
-            this.button21.Location = new System.Drawing.Point(445, 737);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 64);
-            this.button21.TabIndex = 44;
-            this.button21.Text = "Plus";
-            this.button21.UseVisualStyleBackColor = false;
-            // 
             // Bediening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(5978, 1044);
+            this.ClientSize = new System.Drawing.Size(5978, 1049);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button12);
