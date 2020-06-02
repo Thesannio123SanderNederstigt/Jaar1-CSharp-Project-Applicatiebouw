@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keuken));
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veal Tartare",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Crab-salmon",
             "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veal Tartare",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Crab-salmon",
             "1"}, -1);
             this.pnl_KeukenBarStart = new System.Windows.Forms.Panel();
@@ -220,6 +220,7 @@
             this.btn_StartVoorraad.TabIndex = 27;
             this.btn_StartVoorraad.Text = "Voorraad overzicht";
             this.btn_StartVoorraad.UseVisualStyleBackColor = true;
+            this.btn_StartVoorraad.Click += new System.EventHandler(this.btn_StartVoorraad_Click);
             // 
             // btn_StartInkomende
             // 
@@ -398,8 +399,8 @@
             this.listView_BestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_BestelItems.HideSelection = false;
             this.listView_BestelItems.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6});
+            listViewItem1,
+            listViewItem2});
             this.listView_BestelItems.Location = new System.Drawing.Point(21, 81);
             this.listView_BestelItems.Name = "listView_BestelItems";
             this.listView_BestelItems.Size = new System.Drawing.Size(857, 390);
@@ -979,8 +980,8 @@
             this.listView_AFBestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_AFBestelItems.HideSelection = false;
             this.listView_AFBestelItems.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8});
+            listViewItem3,
+            listViewItem4});
             this.listView_AFBestelItems.Location = new System.Drawing.Point(21, 81);
             this.listView_AFBestelItems.Name = "listView_AFBestelItems";
             this.listView_AFBestelItems.Size = new System.Drawing.Size(857, 390);
@@ -1507,7 +1508,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1904, 1005);
             this.Controls.Add(this.pnl_KeukenBarStart);
             this.Controls.Add(this.pnl_BinnenkomendeBestellingen);
             this.Controls.Add(this.pnl_AfgerondeBestellingen);

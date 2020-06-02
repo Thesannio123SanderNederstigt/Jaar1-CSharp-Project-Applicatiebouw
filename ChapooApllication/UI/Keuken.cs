@@ -289,5 +289,12 @@ namespace UI
             }
         }
 
+        // TODO: Optioneel nog een panel toevoegen
+        private void btn_StartVoorraad_Click(object sender, EventArgs e)
+        {
+            // Hide en Show de goede panels
+            HidePanels();
+
+        }
     }
 }

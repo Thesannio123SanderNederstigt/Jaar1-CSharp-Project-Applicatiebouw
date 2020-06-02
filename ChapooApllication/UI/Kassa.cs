@@ -21,9 +21,7 @@ namespace UI
             pnl_Inkomstenoverzicht.Hide();
             pnl_KassaDinerMenuoverzicht.Hide();
             pnl_KassaDrankMenuoverzicht.Hide();
-
             pnl_KassaHoofdscherm.Hide();
-
             pnl_KassaKeuzeBestellingen.Hide();
             pnl_KassaLunchMenuoverizcht.Hide();
             pnl_KassaMenuoverzichtKeuze.Hide();
@@ -32,6 +30,18 @@ namespace UI
             pnl_KassaVoorraadKeuze.Hide();
             pnl_KassaVoorraadoverzichtDrank.Hide();
             pnl_KassaVoorraadoverzichtGerecht.Hide();
+        }
+
+        public void RefreshVoorraadGerecht(MenuItemService menuItemService)
+        {
+            List<ChapooModel.MenuItem> menuItemList = menuItemService.Get_Gerechten_MenuItems();
+
+            foreach (ChapooModel.MenuItem menuItem in menuItemList)
+            {
+                ListViewItem listViewItem = new ListViewItem(menuItem.omschrijving);
+                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
+                listview_GerechtVoorraadOverzicht.Items.Add(listViewItem);
+            }
         }
         public Kassa()
         {
@@ -106,6 +116,9 @@ namespace UI
         {
             HidePanels();
             pnl_KassaDinerMenuoverzicht.Show();
+
+            MenuItemService menuItemService = new MenuItemService();
+            
         }
 
         // Event Handlers voor VoorraadOverzichtKeuze Scherm
@@ -136,15 +149,78 @@ namespace UI
             listview_GerechtVoorraadOverzicht.Show();
 
             MenuItemService menuItemService = new MenuItemService();
-            List<ChapooModel.MenuItem> menuItemList = menuItemService.Get_Gerechten_MenuItems();
+            RefreshVoorraadGerecht(menuItemService);
 
+        }
+
+        // Event Handlers voor Gerecht Voorraad Overzicht Scherm
+
+        private void btnVooraad_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaVoorraadKeuze.Show();
+        }
+
+        private void btnBestellingen_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaKeuzeBestellingen.Show();
+        }
+
+        private void btnMenuOverzicht_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaMenuoverzichtKeuze.Show();
+        }
+
+        private void btnPersoneelsbeheer_GerechtvooraadOverzicht_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaPersoneelsbeheer.Show();
+        }
+
+        private void btnWijzigen_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
+        {
+            string productNaam = txtProduct_GerechtVoorraadoverzicht.Text;
+            int aantal = int.Parse(txtAantal_GerechtVoorraadoverzicht.Text);
+            MenuItemService menuItemService = new MenuItemService();
+            menuItemService.EditMenuItem(productNaam, aantal);
+
+            txtProduct_GerechtVoorraadoverzicht.Clear();
+            txtAantal_GerechtVoorraadoverzicht.Clear();
             listview_GerechtVoorraadOverzicht.Items.Clear();
 
-            foreach (ChapooModel.MenuItem menuItem in menuItemList)
+            RefreshVoorraadGerecht(menuItemService);
+            pnl_KassaVoorraadoverzichtGerecht.Show();
+
+        }
+
+        private void btnVerwijderen_GerechtvoorraadOverzicht_Click(object sender, EventArgs e)
+        {
+            string productNaam = txtProduct_GerechtVoorraadoverzicht.Text;
+            int aantal = int.Parse(txtAantal_GerechtVoorraadoverzicht.Text);
+
+            MenuItemService menuItemService = new MenuItemService();
+            menuItemService.DeleteMenuItem(productNaam, aantal);
+
+            txtProduct_GerechtVoorraadoverzicht.Clear();
+            txtAantal_GerechtVoorraadoverzicht.Clear();
+            listview_GerechtVoorraadOverzicht.Items.Clear();
+
+            RefreshVoorraadGerecht(menuItemService);
+            pnl_KassaVoorraadoverzichtGerecht.Show();
+
+        }
+
+        private void listview_GerechtVoorraadOverzicht_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listView_GerechtVoorraad = listview_GerechtVoorraadOverzicht.SelectedItems;
+
+            if (listView_GerechtVoorraad.Count > 0)
             {
-                ListViewItem listViewItem = new ListViewItem(menuItem.omschrijving);
-                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
-                listview_GerechtVoorraadOverzicht.Items.Add(listViewItem);
+                int index = listview_GerechtVoorraadOverzicht.SelectedIndices[0];
+                txtProduct_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.Items[index].SubItems[0].Text;
+                txtAantal_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.Items[index].SubItems[1].Text;
             }
         }
 
@@ -190,7 +266,19 @@ namespace UI
 
         private void listView_DinerMenuOverzicht_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ListView.SelectedListViewItemCollection listView_DinerMenu = listView_DinerMenuOverzicht.SelectedItems;
 
+            if (listView_DinerMenu.Count > 0)
+            {
+                int index = listView_DinerMenuOverzicht.SelectedIndices[0];
+                txtID_DinerMenuOverzicht.Text = listView_DinerMenuOverzicht.Items[index].SubItems[0].Text;
+                txtOmschrijving_DinerMenuOverzicht.Text = listView_DinerMenuOverzicht.Items[index].SubItems[1].Text;
+                txtInVoorraad_DinermenuOverzicht.Text = listView_DinerMenuOverzicht.Items[index].SubItems[2].Text;
+                txtBTW_DinerMenuOverzicht.Text = listView_DinerMenuOverzicht.Items[index].SubItems[3].Text;
+                txtCategorie_DinerMenuOverzicht.Text = listView_DinerMenuOverzicht.Items[index].SubItems[4].Text;
+                txtMenuSoort_DinerMenuOverzicht.Text = listView_DinerMenuOverzicht.Items[index].SubItems[5].Text;
+                txtPrijs_DinerMenuOverzicht.Text = listView_DinerMenuOverzicht.Items[index].SubItems[6].Text;
+            }
         }
 
         private void pictureBx_TerugDinermenuOverzicht_Kassa_Click(object sender, EventArgs e)
@@ -347,58 +435,7 @@ namespace UI
             }
         }
 
-        // Event Handlers voor Gerecht Voorraad Overzicht Scherm
-
-
-        private void btnVooraad_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaVoorraadKeuze.Show();
-        }
-
-        private void btnBestellingen_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaKeuzeBestellingen.Show();
-        }
-
-        private void btnMenuOverzicht_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaMenuoverzichtKeuze.Show();
-        }
-
-        private void btnPersoneelsbeheer_GerechtvooraadOverzicht_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaPersoneelsbeheer.Show();
-        }
-
-        private void btnWijzigen_GerechtVoorraadOverzicht_Click(object sender, EventArgs e)
-        {
-            string productNaam = txtProduct_GerechtVoorraadoverzicht.Text;
-            int aantal = int.Parse(txtAantal_GerechtVoorraadoverzicht.Text);
-            ChapooLogic.MenuItemService menuItemService = new ChapooLogic.MenuItemService();
-            menuItemService.EditMenuItem(productNaam, aantal);
-            pnl_KassaVoorraadoverzichtGerecht.Show();
-        }
-
-        private void btnVerwijderen_GerechtvoorraadOverzicht_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listview_GerechtVoorraadOverzicht_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ListView.SelectedListViewItemCollection listView_GerechtVoorraad = listview_GerechtVoorraadOverzicht.SelectedItems;
-
-            if(listView_GerechtVoorraad.Count > 0)
-            {
-                int index = listview_GerechtVoorraadOverzicht.SelectedIndices[0];
-                txtProduct_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.Items[index].SubItems[0].Text;
-                txtAantal_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.Items[index].SubItems[1].Text;
-            }
-        }
+   
 
 
 

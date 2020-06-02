@@ -57,6 +57,7 @@ namespace ChapooDAL
             return menuitems;
         }
 
+        
         //Get MenuItem by ID
         public MenuItem GetById(int menuitemID)
         {
@@ -75,7 +76,7 @@ namespace ChapooDAL
         // Edit with product and aantal
         public string EditMenuItem(string product, int aantal)
         {
-            string query = "UPDATE MenuItem SET aantalvoorraad = @product WHERE omschrijving = @product AND aantal == @aantal";
+            string query = "UPDATE MenuItem SET aantalvoorraad = @aantal WHERE omschrijving = @product";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@product", product), new SqlParameter("@aantal", aantal) };
             ExecuteEditQuery(query, sqlParameters);
             return "Menu item met succes aangepast!";
@@ -84,9 +85,9 @@ namespace ChapooDAL
         // Delete with product and aantal
         public string DeleteMenuItem(string product, int aantal)
         {
-            string query = "DELETE FROM menuItem WHERE omschrijving = '@product' AND aantalvoorraad = @aantal";
+            string query = "DELETE FROM menuItem WHERE omschrijving = @product AND aantalvoorraad = @aantal";
             
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@omschrijving", product), new SqlParameter("@aantal", aantal) };
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@product", product), new SqlParameter("@aantal", aantal) };
             ExecuteEditQuery(query, sqlParameters);
             return "Menu item succesvol verwijderd!";
         }
