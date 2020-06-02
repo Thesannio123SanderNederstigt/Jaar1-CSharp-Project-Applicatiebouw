@@ -8,3 +8,9 @@ C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllica
 C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\bin\Debug\ChapooModel.pdb
 C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.dll
 C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.pdb
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\bin\Debug\ChapooModel.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\bin\Debug\ChapooModel.pdb
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.csprojAssemblyReference.cache
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.csproj.CoreCompileInputs.cache
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.pdb

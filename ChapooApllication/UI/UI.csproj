@@ -144,5 +144,17 @@
   <ItemGroup>
     <None Include="Resources\Expand Arrow_20px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple-icon-114x114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android-icon-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android-icon-36x36.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

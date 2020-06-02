@@ -139,7 +139,13 @@ namespace ChapooLogic
                 MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
                 return fakemenuitem;
             }
+        }
 
+
+        // test om soort en cat gelijk te vinden 
+        public List<MenuItem> GetItems(string MenuKaartSoort, string Categorie)
+        {
+            return MenuItem_db.GetByCat(MenuKaartSoort, Categorie);
         }
     }
 }

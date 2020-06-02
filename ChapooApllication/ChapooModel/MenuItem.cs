@@ -16,7 +16,6 @@ namespace ChapooModel
         public int aantalInVoorraad { get; set; }
         public string categorie { get;  set; }
 
-
         public MenuItem(int ID, string menukaartsoort, string omschrijving, float prijs, int btw, int aantalInVoorraad, string categorie)
         {
             this.ID = ID;
