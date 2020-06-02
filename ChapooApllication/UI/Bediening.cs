@@ -45,7 +45,7 @@ namespace UI
         {
             TijdLBL.Text = DateTime.Now.ToShortDateString();
             DatumLBL.Text = DateTime.Now.ToShortTimeString();
-            ShowPanel("DinerPNL");
+            ShowPanel("DrankPNL");
         }
         private void HidePanels()
         {
@@ -57,7 +57,7 @@ namespace UI
             LunchPNL.Hide();
             DinerPNL.Hide();
             OverzichtPNL.Hide();
-            DrankPNL.Hide();
+            
 
         }
         private void ShowPanel(string PanelName)
@@ -197,7 +197,82 @@ namespace UI
 
             else if (PanelName == "DrankPNL")
             {
+                DrankPNL.Show();
 
+                // Lijst maken en vullen voor Nagerecht
+                List<ChapooModel.MenuItem> FrisList = MenuItemService.GetItems("Dranken", "Frisdrank");
+
+                ListViewDrankFris.Items.Clear();
+
+                foreach (ChapooModel.MenuItem M in FrisList)
+                {
+                    ListViewItem List = new ListViewItem(M.ID.ToString());
+                    List.Tag = M;
+                    List.SubItems.Add(M.omschrijving);
+                    List.SubItems.Add(M.aantalInVoorraad.ToString());
+
+                    ListViewDrankFris.Items.Add(List);
+                }
+
+                // Lijst maken en vullen voor Nagerecht
+                List<ChapooModel.MenuItem> TapList = MenuItemService.GetItems("Dranken", "Tap");
+
+                ListViewDrankTap.Items.Clear();
+
+                foreach (ChapooModel.MenuItem M in TapList)
+                {
+                    ListViewItem List = new ListViewItem(M.ID.ToString());
+                    List.Tag = M;
+                    List.SubItems.Add(M.omschrijving);
+                    List.SubItems.Add(M.aantalInVoorraad.ToString());
+
+                    ListViewDrankTap.Items.Add(List);
+                }
+
+                // Lijst maken en vullen voor Nagerecht
+                List<ChapooModel.MenuItem> GedList = MenuItemService.GetItems("Dranken", "Gedistilleerd");
+
+                ListViewDrankGed.Items.Clear();
+
+                foreach (ChapooModel.MenuItem M in GedList)
+                {
+                    ListViewItem List = new ListViewItem(M.ID.ToString());
+                    List.Tag = M;
+                    List.SubItems.Add(M.omschrijving);
+                    List.SubItems.Add(M.aantalInVoorraad.ToString());
+
+                    ListViewDrankGed.Items.Add(List);
+                }
+
+                // Lijst maken en vullen voor Nagerecht
+                List<ChapooModel.MenuItem> WijnList = MenuItemService.GetItems("Dranken", "Wijn");
+
+                ListViewDrankWijn.Items.Clear();
+
+                foreach (ChapooModel.MenuItem M in WijnList)
+                {
+                    ListViewItem List = new ListViewItem(M.ID.ToString());
+                    List.Tag = M;
+                    List.SubItems.Add(M.omschrijving);
+                    List.SubItems.Add(M.aantalInVoorraad.ToString());
+
+                    ListViewDrankWijn.Items.Add(List);
+                }
+
+                // Lijst maken en vullen voor Nagerecht
+                List<ChapooModel.MenuItem> TheeList = MenuItemService.GetItems("Dranken", "Thee");
+
+                ListViewDrankThee.Items.Clear();
+
+                foreach (ChapooModel.MenuItem M in TheeList)
+                {
+                    ListViewItem List = new ListViewItem(M.ID.ToString());
+                    List.Tag = M;
+                    List.SubItems.Add(M.omschrijving);
+                    List.SubItems.Add(M.aantalInVoorraad.ToString());
+
+                    ListViewDrankThee.Items.Add(List);
+                }
             }
 
             else if (PanelName == "OverzichtPNL")
@@ -310,146 +385,186 @@ namespace UI
         }
         // moet nog gedaan worden 
 
-        private void timer4_Tick(object sender, EventArgs e) // FRISDRANK DRANK
+        private void timerDFris_Tick(object sender, EventArgs e) // FRISDRANK DRANK
         {
             if (isNeer)
             {
-                DrankVoorBTN.Image = Resources.Collapse_Arrow_20px;
-                panel5.Height += 10;
-                if (panel5.Size == panel5.MaximumSize)
+                DrankFrisBTN.Image = Resources.Collapse_Arrow_20px;
+                DFrisDropdown.Height += 10;
+                if (DFrisDropdown.Size == DFrisDropdown.MaximumSize)
                 {
-                    timer4.Stop();
+                    timerDFris.Stop();
                     isNeer = false;
+                    DTapDropdown.Height -= 10;
+                    DTapDropdown.Size = DFrisDropdown.MinimumSize;
+                    DGedDropdown.Height -= 10;
+                    DGedDropdown.Size = DFrisDropdown.MinimumSize;
+                    DWijnDropdown.Height -= 10;
+                    DWijnDropdown.Size = DFrisDropdown.MinimumSize;
+                    DTheeDropdown.Height -= 10;
+                    DTheeDropdown.Size = DFrisDropdown.MinimumSize;
                 }
             }
             else
             {
-                DrankVoorBTN.Image = Resources.Expand_Arrow_20px;
-                panel5.Height -= 10;
-                if (panel5.Size == panel5.MinimumSize)
+                DrankFrisBTN.Image = Resources.Expand_Arrow_20px;
+                DFrisDropdown.Height -= 10;
+                if (DFrisDropdown.Size == DFrisDropdown.MinimumSize)
                 {
-                    timer4.Stop();
+                    timerDFris.Stop();
                     isNeer = true;
                 }
             }
         }
-        private void DrankVoorBTN_Click(object sender, EventArgs e)
+        private void DrankFrisBTN_Click(object sender, EventArgs e)
         {
-            timer4.Start();
+            timerDFris.Start();
         }
         //
-        private void timer5_Tick(object sender, EventArgs e) // TAP DRANK 
+        private void timerDTap_Tick(object sender, EventArgs e) // TAP DRANK 
         {
             if (isNeer)
             {
-                DrankTussenBTN.Image = Resources.Collapse_Arrow_20px;
-                panel6.Height += 10;
-                if (panel6.Size == panel6.MaximumSize)
+                DrankTapBTN.Image = Resources.Collapse_Arrow_20px;
+                DTapDropdown.Height += 10;
+                if (DTapDropdown.Size == DTapDropdown.MaximumSize)
                 {
-                    timer5.Stop();
+                    timerDTap.Stop();
                     isNeer = false;
+                    DFrisDropdown.Height -= 10;
+                    DFrisDropdown.Size = DTapDropdown.MinimumSize;
+                    DGedDropdown.Height -= 10;
+                    DGedDropdown.Size = DTapDropdown.MinimumSize;
+                    DWijnDropdown.Height -= 10;
+                    DWijnDropdown.Size = DTapDropdown.MinimumSize;
+                    DTheeDropdown.Height -= 10;
+                    DTheeDropdown.Size = DTapDropdown.MinimumSize;
                 }
             }
             else
             {
-                DrankTussenBTN.Image = Resources.Expand_Arrow_20px;
-                panel6.Height -= 10;
-                if (panel6.Size == panel6.MinimumSize)
+                DrankTapBTN.Image = Resources.Expand_Arrow_20px;
+                DTapDropdown.Height -= 10;
+                if (DTapDropdown.Size == DTapDropdown.MinimumSize)
                 {
-                    timer5.Stop();
+                    timerDTap.Stop();
                     isNeer = true;
                 }
             }
         }
-        private void DrankTussenBTN_Click(object sender, EventArgs e)
+        private void DrankTapBTN_Click(object sender, EventArgs e)
         {
-            timer5.Start();
+            timerDTap.Start();
         }
         //
-        private void timer6_Tick(object sender, EventArgs e) //GEDISTILLEERD DRANK
+        private void timerDGed_Tick(object sender, EventArgs e) //GEDISTILLEERD DRANK
         {
             if (isNeer)
             {
-                DrankHoofdBTN.Image = Resources.Collapse_Arrow_20px;
-                panel7.Height += 10;
-                if (panel7.Size == panel7.MaximumSize)
+                DrankGedBTN.Image = Resources.Collapse_Arrow_20px;
+                DGedDropdown.Height += 10;
+                if (DGedDropdown.Size == DGedDropdown.MaximumSize)
                 {
-                    timer6.Stop();
+                    timerDGed.Stop();
                     isNeer = false;
+                    DFrisDropdown.Height -= 10;
+                    DFrisDropdown.Size = DGedDropdown.MinimumSize;
+                    DTapDropdown.Height -= 10;
+                    DTapDropdown.Size = DGedDropdown.MinimumSize;
+                    DWijnDropdown.Height -= 10;
+                    DWijnDropdown.Size = DGedDropdown.MinimumSize;
+                    DTheeDropdown.Height -= 10;
+                    DTheeDropdown.Size = DGedDropdown.MinimumSize;
                 }
             }
             else
             {
-                DrankHoofdBTN.Image = Resources.Expand_Arrow_20px;
-                panel7.Height -= 10;
-                if (panel7.Size == panel7.MinimumSize)
+                DrankGedBTN.Image = Resources.Expand_Arrow_20px;
+                DGedDropdown.Height -= 10;
+                if (DGedDropdown.Size == DGedDropdown.MinimumSize)
                 {
-                    timer6.Stop();
+                    timerDGed.Stop();
                     isNeer = true;
                 }
             }
         }
 
-        private void DrankHoofdBTN_Click(object sender, EventArgs e)
+        private void DrankGedBTN_Click(object sender, EventArgs e)
         {
-            timer6.Start();
+            timerDGed.Start();
         }
         //
-        private void timer7_Tick(object sender, EventArgs e) //WIJN DRANK
+        private void timerDWijn_Tick(object sender, EventArgs e) //WIJN DRANK
         {
             if (isNeer)
             {
-                DrankNaBTN.Image = Resources.Collapse_Arrow_20px;
-                panel8.Height += 10;
-                if (panel8.Size == panel8.MaximumSize)
+                DrankWijnBTN.Image = Resources.Collapse_Arrow_20px;
+                DWijnDropdown.Height += 10;
+                if (DWijnDropdown.Size == DWijnDropdown.MaximumSize)
                 {
-                    timer7.Stop();
+                    timerDWijn.Stop();
                     isNeer = false;
+                    DFrisDropdown.Height -= 10;
+                    DFrisDropdown.Size = DWijnDropdown.MinimumSize;
+                    DTapDropdown.Height -= 10;
+                    DTapDropdown.Size = DWijnDropdown.MinimumSize;
+                    DGedDropdown.Height -= 10;
+                    DGedDropdown.Size = DWijnDropdown.MinimumSize;
+                    DTheeDropdown.Height -= 10;
+                    DTheeDropdown.Size = DWijnDropdown.MinimumSize;
                 }
             }
             else
             {
-                DrankNaBTN.Image = Resources.Expand_Arrow_20px;
-                panel8.Height -= 10;
-                if (panel8.Size == panel8.MinimumSize)
+                DrankWijnBTN.Image = Resources.Expand_Arrow_20px;
+                DWijnDropdown.Height -= 10;
+                if (DWijnDropdown.Size == DWijnDropdown.MinimumSize)
                 {
-                    timer7.Stop();
+                    timerDWijn.Stop();
                     isNeer = true;
                 }
             }
         }
-        private void DrankNaBTN_Click(object sender, EventArgs e)
+        private void DrankWijnBTN_Click(object sender, EventArgs e)
         {
-            timer7.Start();
+            timerDWijn.Start();
         }
         //
 
-        private void timer8_Tick(object sender, EventArgs e) // KOFFIE/THEE DRANK
+        private void timerDThee_Tick(object sender, EventArgs e) // KOFFIE/THEE DRANK
         {
             if (isNeer)
             {
-                button25.Image = Resources.Collapse_Arrow_20px;
-                panel1.Height += 10;
-                if (panel1.Size == panel1.MaximumSize)
+                DrankTheeBTN.Image = Resources.Collapse_Arrow_20px;
+                DTheeDropdown.Height += 10;
+                if (DTheeDropdown.Size == DTheeDropdown.MaximumSize)
                 {
-                    timer8.Stop();
+                    timerDThee.Stop();
                     isNeer = false;
+                    DFrisDropdown.Height -= 10;
+                    DFrisDropdown.Size = DTheeDropdown.MinimumSize;
+                    DTapDropdown.Height -= 10;
+                    DTapDropdown.Size = DTheeDropdown.MinimumSize;
+                    DGedDropdown.Height -= 10;
+                    DGedDropdown.Size = DTheeDropdown.MinimumSize;
+                    DWijnDropdown.Height -= 10;
+                    DWijnDropdown.Size = DTheeDropdown.MinimumSize;
                 }
             }
             else
             {
-                button25.Image = Resources.Expand_Arrow_20px;
-                panel1.Height -= 10;
-                if (panel1.Size == panel1.MinimumSize)
+                DrankTheeBTN.Image = Resources.Expand_Arrow_20px;
+                DTheeDropdown.Height -= 10;
+                if (DTheeDropdown.Size == DTheeDropdown.MinimumSize)
                 {
-                    timer8.Stop();
+                    timerDThee.Stop();
                     isNeer = true;
                 }
             }
         }
-        private void button25_Click(object sender, EventArgs e)
+        private void DrankTheeBTN_Click(object sender, EventArgs e)
         {
-            timer8.Start();
+            timerDThee.Start();
         }
         //
 
