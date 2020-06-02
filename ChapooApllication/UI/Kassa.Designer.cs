@@ -1250,7 +1250,7 @@
             this.listView_DrankVoorraadOverzicht.HideSelection = false;
             this.listView_DrankVoorraadOverzicht.Location = new System.Drawing.Point(203, 118);
             this.listView_DrankVoorraadOverzicht.Name = "listView_DrankVoorraadOverzicht";
-            this.listView_DrankVoorraadOverzicht.Size = new System.Drawing.Size(598, 596);
+            this.listView_DrankVoorraadOverzicht.Size = new System.Drawing.Size(608, 596);
             this.listView_DrankVoorraadOverzicht.TabIndex = 16;
             this.listView_DrankVoorraadOverzicht.UseCompatibleStateImageBehavior = false;
             this.listView_DrankVoorraadOverzicht.View = System.Windows.Forms.View.Details;

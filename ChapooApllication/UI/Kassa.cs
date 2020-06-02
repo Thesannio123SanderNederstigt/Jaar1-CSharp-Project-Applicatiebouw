@@ -118,9 +118,7 @@ namespace UI
             MenuItemService menuItemService = new MenuItemService();
             List<ChapooModel.MenuItem> menuItemList = menuItemService.Get_Dranken_MenuItems();
 
-            listView_DrankVoorraadOverzicht.Clear();
-            listView_DrankVoorraadOverzicht.Columns.Add("Product", 350);
-            listView_DrankVoorraadOverzicht.Columns.Add("Aantal", 100);
+            listView_DrankVoorraadOverzicht.Items.Clear();
 
             foreach (ChapooModel.MenuItem menuItem in menuItemList)
             {
@@ -140,9 +138,7 @@ namespace UI
             MenuItemService menuItemService = new MenuItemService();
             List<ChapooModel.MenuItem> menuItemList = menuItemService.Get_Gerechten_MenuItems();
 
-            listview_GerechtVoorraadOverzicht.Clear();
-            listview_GerechtVoorraadOverzicht.Columns.Add("Producten",350);
-            listview_GerechtVoorraadOverzicht.Columns.Add("Aantal in voorraad", 100);
+            listview_GerechtVoorraadOverzicht.Items.Clear();
 
             foreach (ChapooModel.MenuItem menuItem in menuItemList)
             {
@@ -399,8 +395,8 @@ namespace UI
             if(listView_GerechtVoorraad.Count > 0)
             {
                 int index = listview_GerechtVoorraadOverzicht.SelectedIndices[0];
-                txtProduct_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.SelectedItems[index].SubItems[0].Text;
-                txtAantal_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.SelectedItems[index].SubItems[1].Text.ToString();
+                txtProduct_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.Items[index].SubItems[0].Text;
+                txtAantal_GerechtVoorraadoverzicht.Text = listview_GerechtVoorraadOverzicht.Items[index].SubItems[1].Text;
             }
         }
 
