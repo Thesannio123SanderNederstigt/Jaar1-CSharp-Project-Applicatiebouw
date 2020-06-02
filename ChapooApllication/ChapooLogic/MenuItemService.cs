@@ -115,7 +115,7 @@ namespace ChapooLogic
         {
             try
             {
-                MenuItem_db.AddMenuItem(ID,omschrijving,inVoorraad,BTW, categorie, menuSoort, prijs);
+               // MenuItem_db.AddMenuItem(ID,omschrijving,inVoorraad,BTW, categorie, menuSoort, prijs);
                 return "Menu item succesvol toegevoegd!";
             }
             catch (Exception e)

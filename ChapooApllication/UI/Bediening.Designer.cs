@@ -47,16 +47,16 @@
             this.btnT9 = new System.Windows.Forms.Button();
             this.btnT10 = new System.Windows.Forms.Button();
             this.TafelNummerPNL = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BTNBestellen = new System.Windows.Forms.Button();
+            this.BTNRekening = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BestellingPNL = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.BTNDiner = new System.Windows.Forms.Button();
+            this.BTNLunch = new System.Windows.Forms.Button();
+            this.BTNDrank = new System.Windows.Forms.Button();
+            this.BTNOverzicht = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.LunchPNL = new System.Windows.Forms.Panel();
@@ -90,39 +90,6 @@
             this.timerLH = new System.Windows.Forms.Timer(this.components);
             this.timerLN = new System.Windows.Forms.Timer(this.components);
             this.timerDFris = new System.Windows.Forms.Timer(this.components);
-            this.DinerPNL = new System.Windows.Forms.Panel();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.DVDropdown = new System.Windows.Forms.Panel();
-            this.ListViewDinerV = new System.Windows.Forms.ListView();
-            this.DVID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DVNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DVVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DinerVoorBTN = new System.Windows.Forms.Button();
-            this.DTDropdown = new System.Windows.Forms.Panel();
-            this.ListViewDinerT = new System.Windows.Forms.ListView();
-            this.DTID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DinerTussenBTN = new System.Windows.Forms.Button();
-            this.DHDropdown = new System.Windows.Forms.Panel();
-            this.ListViewDinerH = new System.Windows.Forms.ListView();
-            this.DHID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DHNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DHVooraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DinerHoofdBTN = new System.Windows.Forms.Button();
-            this.DNDropdown = new System.Windows.Forms.Panel();
-            this.ListViewDinerN = new System.Windows.Forms.ListView();
-            this.DNID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DNNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DNVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DinerNaBTN = new System.Windows.Forms.Button();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.DrankPNL = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -132,18 +99,33 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.DFrisDropdown = new System.Windows.Forms.Panel();
             this.ListViewDrankFris = new System.Windows.Forms.ListView();
+            this.DFrisID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DFrisNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DFrisVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrankFrisBTN = new System.Windows.Forms.Button();
             this.DTapDropdown = new System.Windows.Forms.Panel();
             this.ListViewDrankTap = new System.Windows.Forms.ListView();
+            this.DTapID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DTapNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DTapVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrankTapBTN = new System.Windows.Forms.Button();
             this.DGedDropdown = new System.Windows.Forms.Panel();
             this.ListViewDrankGed = new System.Windows.Forms.ListView();
+            this.DGedID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DGedNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DGedVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrankGedBTN = new System.Windows.Forms.Button();
             this.DWijnDropdown = new System.Windows.Forms.Panel();
             this.ListViewDrankWijn = new System.Windows.Forms.ListView();
+            this.DWijnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DWijnNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DWijnVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrankWijnBTN = new System.Windows.Forms.Button();
             this.DTheeDropdown = new System.Windows.Forms.Panel();
             this.ListViewDrankThee = new System.Windows.Forms.ListView();
+            this.DTheeID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DTheeNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DTheeVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DrankTheeBTN = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -176,21 +158,39 @@
             this.ChapooLogo = new System.Windows.Forms.Panel();
             this.BTNReturn = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.DFrisID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DFrisNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DFrisVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTapID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTapNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTapVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DGedID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DGedNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DGedVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DWijnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DWijnNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DWijnVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTheeID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTheeNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DTheeVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DVDropdown = new System.Windows.Forms.Panel();
+            this.ListViewDinerV = new System.Windows.Forms.ListView();
+            this.DVID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DVNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DVVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DinerVoorBTN = new System.Windows.Forms.Button();
+            this.DTDropdown = new System.Windows.Forms.Panel();
+            this.ListViewDinerT = new System.Windows.Forms.ListView();
+            this.DTID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DTNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DTVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DinerTussenBTN = new System.Windows.Forms.Button();
+            this.DHDropdown = new System.Windows.Forms.Panel();
+            this.ListViewDinerH = new System.Windows.Forms.ListView();
+            this.DHID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DHNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DHVooraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DinerHoofdBTN = new System.Windows.Forms.Button();
+            this.DNDropdown = new System.Windows.Forms.Panel();
+            this.ListViewDinerN = new System.Windows.Forms.ListView();
+            this.DNID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DNNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DNVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DinerNaBTN = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.DinerPNL = new System.Windows.Forms.Panel();
             this.TafelPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
@@ -204,13 +204,6 @@
             this.LHDropdown.SuspendLayout();
             this.LNDropdown.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.DinerPNL.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            this.DVDropdown.SuspendLayout();
-            this.DTDropdown.SuspendLayout();
-            this.DHDropdown.SuspendLayout();
-            this.DNDropdown.SuspendLayout();
-            this.panel17.SuspendLayout();
             this.DrankPNL.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.DFrisDropdown.SuspendLayout();
@@ -222,6 +215,13 @@
             this.OverzichtPNL.SuspendLayout();
             this.panel20.SuspendLayout();
             this.WijzigenPNL.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.DVDropdown.SuspendLayout();
+            this.DTDropdown.SuspendLayout();
+            this.DHDropdown.SuspendLayout();
+            this.DNDropdown.SuspendLayout();
+            this.DinerPNL.SuspendLayout();
             this.SuspendLayout();
             // 
             // TijdLBL
@@ -421,8 +421,8 @@
             // TafelNummerPNL
             // 
             this.TafelNummerPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.TafelNummerPNL.Controls.Add(this.button3);
-            this.TafelNummerPNL.Controls.Add(this.button2);
+            this.TafelNummerPNL.Controls.Add(this.BTNBestellen);
+            this.TafelNummerPNL.Controls.Add(this.BTNRekening);
             this.TafelNummerPNL.Controls.Add(this.button1);
             this.TafelNummerPNL.Controls.Add(this.panel2);
             this.TafelNummerPNL.Location = new System.Drawing.Point(0, 73);
@@ -432,28 +432,29 @@
             this.TafelNummerPNL.TabIndex = 24;
             this.TafelNummerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_2);
             // 
-            // button3
+            // BTNBestellen
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
-            this.button3.Location = new System.Drawing.Point(48, 409);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(625, 155);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Bestellen";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BTNBestellen.FlatAppearance.BorderSize = 0;
+            this.BTNBestellen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
+            this.BTNBestellen.Location = new System.Drawing.Point(48, 409);
+            this.BTNBestellen.Margin = new System.Windows.Forms.Padding(2);
+            this.BTNBestellen.Name = "BTNBestellen";
+            this.BTNBestellen.Size = new System.Drawing.Size(625, 155);
+            this.BTNBestellen.TabIndex = 27;
+            this.BTNBestellen.Text = "Bestellen";
+            this.BTNBestellen.UseVisualStyleBackColor = true;
+            this.BTNBestellen.Click += new System.EventHandler(this.BTNBestellen_Click);
             // 
-            // button2
+            // BTNRekening
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
-            this.button2.Location = new System.Drawing.Point(48, 212);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(625, 155);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Rekening";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.BTNRekening.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
+            this.BTNRekening.Location = new System.Drawing.Point(48, 212);
+            this.BTNRekening.Name = "BTNRekening";
+            this.BTNRekening.Size = new System.Drawing.Size(625, 155);
+            this.BTNRekening.TabIndex = 26;
+            this.BTNRekening.Text = "Rekening";
+            this.BTNRekening.UseVisualStyleBackColor = true;
+            this.BTNRekening.Click += new System.EventHandler(this.BTNRekening_Click);
             // 
             // button1
             // 
@@ -490,10 +491,10 @@
             // BestellingPNL
             // 
             this.BestellingPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BestellingPNL.Controls.Add(this.button4);
-            this.BestellingPNL.Controls.Add(this.button8);
-            this.BestellingPNL.Controls.Add(this.button5);
-            this.BestellingPNL.Controls.Add(this.button6);
+            this.BestellingPNL.Controls.Add(this.BTNDiner);
+            this.BestellingPNL.Controls.Add(this.BTNLunch);
+            this.BestellingPNL.Controls.Add(this.BTNDrank);
+            this.BestellingPNL.Controls.Add(this.BTNOverzicht);
             this.BestellingPNL.Controls.Add(this.panel4);
             this.BestellingPNL.Location = new System.Drawing.Point(0, 73);
             this.BestellingPNL.Margin = new System.Windows.Forms.Padding(2);
@@ -502,47 +503,51 @@
             this.BestellingPNL.TabIndex = 25;
             this.BestellingPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button4
+            // BTNDiner
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
-            this.button4.Location = new System.Drawing.Point(48, 409);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(625, 155);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "Diner";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BTNDiner.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
+            this.BTNDiner.Location = new System.Drawing.Point(48, 394);
+            this.BTNDiner.Margin = new System.Windows.Forms.Padding(2);
+            this.BTNDiner.Name = "BTNDiner";
+            this.BTNDiner.Size = new System.Drawing.Size(625, 155);
+            this.BTNDiner.TabIndex = 33;
+            this.BTNDiner.Text = "Diner";
+            this.BTNDiner.UseVisualStyleBackColor = true;
+            this.BTNDiner.Click += new System.EventHandler(this.BTNDiner_Click);
             // 
-            // button8
+            // BTNLunch
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
-            this.button8.Location = new System.Drawing.Point(48, 211);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(625, 155);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Lunch";
-            this.button8.UseVisualStyleBackColor = true;
+            this.BTNLunch.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
+            this.BTNLunch.Location = new System.Drawing.Point(48, 211);
+            this.BTNLunch.Name = "BTNLunch";
+            this.BTNLunch.Size = new System.Drawing.Size(625, 155);
+            this.BTNLunch.TabIndex = 32;
+            this.BTNLunch.Text = "Lunch";
+            this.BTNLunch.UseVisualStyleBackColor = true;
+            this.BTNLunch.Click += new System.EventHandler(this.BTNLunch_Click);
             // 
-            // button5
+            // BTNDrank
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
-            this.button5.Location = new System.Drawing.Point(48, 602);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(625, 155);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "Drank";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BTNDrank.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
+            this.BTNDrank.Location = new System.Drawing.Point(49, 591);
+            this.BTNDrank.Margin = new System.Windows.Forms.Padding(2);
+            this.BTNDrank.Name = "BTNDrank";
+            this.BTNDrank.Size = new System.Drawing.Size(625, 155);
+            this.BTNDrank.TabIndex = 30;
+            this.BTNDrank.Text = "Drank";
+            this.BTNDrank.UseVisualStyleBackColor = true;
+            this.BTNDrank.Click += new System.EventHandler(this.BTNDrank_Click);
             // 
-            // button6
+            // BTNOverzicht
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
-            this.button6.Location = new System.Drawing.Point(48, 780);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(625, 155);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "Bestelling Overzicht";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BTNOverzicht.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.9F);
+            this.BTNOverzicht.Location = new System.Drawing.Point(48, 780);
+            this.BTNOverzicht.Name = "BTNOverzicht";
+            this.BTNOverzicht.Size = new System.Drawing.Size(625, 155);
+            this.BTNOverzicht.TabIndex = 29;
+            this.BTNOverzicht.Text = "Bestelling Overzicht";
+            this.BTNOverzicht.UseVisualStyleBackColor = true;
+            this.BTNOverzicht.Click += new System.EventHandler(this.BTNOverzicht_Click);
             // 
             // panel4
             // 
@@ -864,341 +869,6 @@
             this.timerDFris.Interval = 15;
             this.timerDFris.Tick += new System.EventHandler(this.timerDFris_Tick);
             // 
-            // DinerPNL
-            // 
-            this.DinerPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.DinerPNL.Controls.Add(this.button32);
-            this.DinerPNL.Controls.Add(this.button28);
-            this.DinerPNL.Controls.Add(this.label13);
-            this.DinerPNL.Controls.Add(this.button29);
-            this.DinerPNL.Controls.Add(this.button30);
-            this.DinerPNL.Controls.Add(this.flowLayoutPanel2);
-            this.DinerPNL.Controls.Add(this.panel17);
-            this.DinerPNL.Location = new System.Drawing.Point(2, 69);
-            this.DinerPNL.Margin = new System.Windows.Forms.Padding(2);
-            this.DinerPNL.Name = "DinerPNL";
-            this.DinerPNL.Size = new System.Drawing.Size(721, 974);
-            this.DinerPNL.TabIndex = 29;
-            this.DinerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DinerPNL_Paint);
-            // 
-            // button32
-            // 
-            this.button32.BackColor = System.Drawing.Color.LightGreen;
-            this.button32.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button32.Location = new System.Drawing.Point(48, 877);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(625, 64);
-            this.button32.TabIndex = 41;
-            this.button32.Text = "Bekijk bestelling overzicht";
-            this.button32.UseVisualStyleBackColor = false;
-            // 
-            // button28
-            // 
-            this.button28.BackColor = System.Drawing.Color.LightGreen;
-            this.button28.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button28.Location = new System.Drawing.Point(52, 737);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(300, 64);
-            this.button28.TabIndex = 36;
-            this.button28.Text = "Voeg toe tot bestelling";
-            this.button28.UseVisualStyleBackColor = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label13.Location = new System.Drawing.Point(550, 754);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 36);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "0";
-            // 
-            // button29
-            // 
-            this.button29.BackColor = System.Drawing.Color.Salmon;
-            this.button29.Location = new System.Drawing.Point(600, 737);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 64);
-            this.button29.TabIndex = 39;
-            this.button29.Text = "Min";
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // button30
-            // 
-            this.button30.BackColor = System.Drawing.Color.LightGreen;
-            this.button30.Location = new System.Drawing.Point(457, 737);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 64);
-            this.button30.TabIndex = 38;
-            this.button30.Text = "Plus";
-            this.button30.UseVisualStyleBackColor = false;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.DVDropdown);
-            this.flowLayoutPanel2.Controls.Add(this.DTDropdown);
-            this.flowLayoutPanel2.Controls.Add(this.DHDropdown);
-            this.flowLayoutPanel2.Controls.Add(this.DNDropdown);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(48, 209);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(645, 473);
-            this.flowLayoutPanel2.TabIndex = 25;
-            // 
-            // DVDropdown
-            // 
-            this.DVDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.DVDropdown.Controls.Add(this.ListViewDinerV);
-            this.DVDropdown.Controls.Add(this.DinerVoorBTN);
-            this.DVDropdown.Location = new System.Drawing.Point(3, 3);
-            this.DVDropdown.MaximumSize = new System.Drawing.Size(626, 256);
-            this.DVDropdown.MinimumSize = new System.Drawing.Size(626, 64);
-            this.DVDropdown.Name = "DVDropdown";
-            this.DVDropdown.Size = new System.Drawing.Size(626, 64);
-            this.DVDropdown.TabIndex = 28;
-            // 
-            // ListViewDinerV
-            // 
-            this.ListViewDinerV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.DVID,
-            this.DVNaam,
-            this.DVVoorraad});
-            this.ListViewDinerV.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.ListViewDinerV.HideSelection = false;
-            this.ListViewDinerV.Location = new System.Drawing.Point(1, 61);
-            this.ListViewDinerV.Name = "ListViewDinerV";
-            this.ListViewDinerV.Size = new System.Drawing.Size(622, 198);
-            this.ListViewDinerV.TabIndex = 28;
-            this.ListViewDinerV.UseCompatibleStateImageBehavior = false;
-            this.ListViewDinerV.View = System.Windows.Forms.View.Details;
-            // 
-            // DVID
-            // 
-            this.DVID.Text = "ID";
-            // 
-            // DVNaam
-            // 
-            this.DVNaam.Text = "Naam";
-            this.DVNaam.Width = 439;
-            // 
-            // DVVoorraad
-            // 
-            this.DVVoorraad.Text = "Voorraad";
-            this.DVVoorraad.Width = 114;
-            // 
-            // DinerVoorBTN
-            // 
-            this.DinerVoorBTN.BackColor = System.Drawing.Color.Silver;
-            this.DinerVoorBTN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DinerVoorBTN.FlatAppearance.BorderSize = 0;
-            this.DinerVoorBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
-            this.DinerVoorBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
-            this.DinerVoorBTN.Location = new System.Drawing.Point(0, 0);
-            this.DinerVoorBTN.Name = "DinerVoorBTN";
-            this.DinerVoorBTN.Size = new System.Drawing.Size(626, 64);
-            this.DinerVoorBTN.TabIndex = 27;
-            this.DinerVoorBTN.Text = "Voorgerechten";
-            this.DinerVoorBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DinerVoorBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.DinerVoorBTN.UseVisualStyleBackColor = false;
-            this.DinerVoorBTN.Click += new System.EventHandler(this.DinerVoorBTN_Click);
-            // 
-            // DTDropdown
-            // 
-            this.DTDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.DTDropdown.Controls.Add(this.ListViewDinerT);
-            this.DTDropdown.Controls.Add(this.DinerTussenBTN);
-            this.DTDropdown.Location = new System.Drawing.Point(3, 73);
-            this.DTDropdown.MaximumSize = new System.Drawing.Size(626, 256);
-            this.DTDropdown.MinimumSize = new System.Drawing.Size(626, 64);
-            this.DTDropdown.Name = "DTDropdown";
-            this.DTDropdown.Size = new System.Drawing.Size(626, 64);
-            this.DTDropdown.TabIndex = 29;
-            // 
-            // ListViewDinerT
-            // 
-            this.ListViewDinerT.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.DTID,
-            this.DTNaam,
-            this.DTVoorraad});
-            this.ListViewDinerT.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.ListViewDinerT.HideSelection = false;
-            this.ListViewDinerT.Location = new System.Drawing.Point(1, 61);
-            this.ListViewDinerT.Name = "ListViewDinerT";
-            this.ListViewDinerT.Size = new System.Drawing.Size(622, 198);
-            this.ListViewDinerT.TabIndex = 28;
-            this.ListViewDinerT.UseCompatibleStateImageBehavior = false;
-            this.ListViewDinerT.View = System.Windows.Forms.View.Details;
-            // 
-            // DTID
-            // 
-            this.DTID.Text = "ID";
-            // 
-            // DTNaam
-            // 
-            this.DTNaam.Text = "Naam";
-            this.DTNaam.Width = 444;
-            // 
-            // DTVoorraad
-            // 
-            this.DTVoorraad.Text = "Voorraad";
-            this.DTVoorraad.Width = 111;
-            // 
-            // DinerTussenBTN
-            // 
-            this.DinerTussenBTN.BackColor = System.Drawing.Color.Silver;
-            this.DinerTussenBTN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DinerTussenBTN.FlatAppearance.BorderSize = 0;
-            this.DinerTussenBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
-            this.DinerTussenBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
-            this.DinerTussenBTN.Location = new System.Drawing.Point(0, 0);
-            this.DinerTussenBTN.Name = "DinerTussenBTN";
-            this.DinerTussenBTN.Size = new System.Drawing.Size(626, 64);
-            this.DinerTussenBTN.TabIndex = 27;
-            this.DinerTussenBTN.Text = "Tussengerecht";
-            this.DinerTussenBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DinerTussenBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.DinerTussenBTN.UseVisualStyleBackColor = false;
-            this.DinerTussenBTN.Click += new System.EventHandler(this.DinerTussenBTN_Click);
-            // 
-            // DHDropdown
-            // 
-            this.DHDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.DHDropdown.Controls.Add(this.ListViewDinerH);
-            this.DHDropdown.Controls.Add(this.DinerHoofdBTN);
-            this.DHDropdown.Location = new System.Drawing.Point(3, 143);
-            this.DHDropdown.MaximumSize = new System.Drawing.Size(626, 256);
-            this.DHDropdown.MinimumSize = new System.Drawing.Size(626, 64);
-            this.DHDropdown.Name = "DHDropdown";
-            this.DHDropdown.Size = new System.Drawing.Size(626, 64);
-            this.DHDropdown.TabIndex = 30;
-            // 
-            // ListViewDinerH
-            // 
-            this.ListViewDinerH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.DHID,
-            this.DHNaam,
-            this.DHVooraad});
-            this.ListViewDinerH.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.ListViewDinerH.HideSelection = false;
-            this.ListViewDinerH.Location = new System.Drawing.Point(1, 61);
-            this.ListViewDinerH.Name = "ListViewDinerH";
-            this.ListViewDinerH.Size = new System.Drawing.Size(622, 198);
-            this.ListViewDinerH.TabIndex = 28;
-            this.ListViewDinerH.UseCompatibleStateImageBehavior = false;
-            this.ListViewDinerH.View = System.Windows.Forms.View.Details;
-            // 
-            // DHID
-            // 
-            this.DHID.Text = "ID";
-            // 
-            // DHNaam
-            // 
-            this.DHNaam.Text = "Naam";
-            this.DHNaam.Width = 445;
-            // 
-            // DHVooraad
-            // 
-            this.DHVooraad.Text = "Voorraad";
-            this.DHVooraad.Width = 112;
-            // 
-            // DinerHoofdBTN
-            // 
-            this.DinerHoofdBTN.BackColor = System.Drawing.Color.Silver;
-            this.DinerHoofdBTN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DinerHoofdBTN.FlatAppearance.BorderSize = 0;
-            this.DinerHoofdBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
-            this.DinerHoofdBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
-            this.DinerHoofdBTN.Location = new System.Drawing.Point(0, 0);
-            this.DinerHoofdBTN.Name = "DinerHoofdBTN";
-            this.DinerHoofdBTN.Size = new System.Drawing.Size(626, 64);
-            this.DinerHoofdBTN.TabIndex = 27;
-            this.DinerHoofdBTN.Text = "Hoofdgerecht";
-            this.DinerHoofdBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DinerHoofdBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.DinerHoofdBTN.UseVisualStyleBackColor = false;
-            this.DinerHoofdBTN.Click += new System.EventHandler(this.DinerHoofdBTN_Click);
-            // 
-            // DNDropdown
-            // 
-            this.DNDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.DNDropdown.Controls.Add(this.ListViewDinerN);
-            this.DNDropdown.Controls.Add(this.DinerNaBTN);
-            this.DNDropdown.Location = new System.Drawing.Point(3, 213);
-            this.DNDropdown.MaximumSize = new System.Drawing.Size(626, 256);
-            this.DNDropdown.MinimumSize = new System.Drawing.Size(626, 64);
-            this.DNDropdown.Name = "DNDropdown";
-            this.DNDropdown.Size = new System.Drawing.Size(626, 64);
-            this.DNDropdown.TabIndex = 31;
-            // 
-            // ListViewDinerN
-            // 
-            this.ListViewDinerN.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.DNID,
-            this.DNNaam,
-            this.DNVoorraad});
-            this.ListViewDinerN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.ListViewDinerN.HideSelection = false;
-            this.ListViewDinerN.Location = new System.Drawing.Point(1, 61);
-            this.ListViewDinerN.Name = "ListViewDinerN";
-            this.ListViewDinerN.Size = new System.Drawing.Size(622, 198);
-            this.ListViewDinerN.TabIndex = 28;
-            this.ListViewDinerN.UseCompatibleStateImageBehavior = false;
-            this.ListViewDinerN.View = System.Windows.Forms.View.Details;
-            // 
-            // DNID
-            // 
-            this.DNID.Text = "ID";
-            // 
-            // DNNaam
-            // 
-            this.DNNaam.Text = "Naam";
-            this.DNNaam.Width = 440;
-            // 
-            // DNVoorraad
-            // 
-            this.DNVoorraad.Text = "Voorraad";
-            this.DNVoorraad.Width = 116;
-            // 
-            // DinerNaBTN
-            // 
-            this.DinerNaBTN.BackColor = System.Drawing.Color.Silver;
-            this.DinerNaBTN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DinerNaBTN.FlatAppearance.BorderSize = 0;
-            this.DinerNaBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
-            this.DinerNaBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
-            this.DinerNaBTN.Location = new System.Drawing.Point(0, 0);
-            this.DinerNaBTN.Name = "DinerNaBTN";
-            this.DinerNaBTN.Size = new System.Drawing.Size(626, 64);
-            this.DinerNaBTN.TabIndex = 27;
-            this.DinerNaBTN.Text = "Nagerecht";
-            this.DinerNaBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.DinerNaBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.DinerNaBTN.UseVisualStyleBackColor = false;
-            this.DinerNaBTN.Click += new System.EventHandler(this.DinerNaBTN_Click);
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel17.Controls.Add(this.label6);
-            this.panel17.Location = new System.Drawing.Point(48, 74);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(625, 103);
-            this.panel17.TabIndex = 23;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label6.Location = new System.Drawing.Point(243, 19);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 70);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Diner";
-            // 
             // DrankPNL
             // 
             this.DrankPNL.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1299,7 +969,7 @@
             this.DFrisID,
             this.DFrisNaam,
             this.DFrisVoorraad});
-            this.ListViewDrankFris.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.ListViewDrankFris.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F);
             this.ListViewDrankFris.HideSelection = false;
             this.ListViewDrankFris.Location = new System.Drawing.Point(1, 61);
             this.ListViewDrankFris.Name = "ListViewDrankFris";
@@ -1307,6 +977,20 @@
             this.ListViewDrankFris.TabIndex = 28;
             this.ListViewDrankFris.UseCompatibleStateImageBehavior = false;
             this.ListViewDrankFris.View = System.Windows.Forms.View.Details;
+            // 
+            // DFrisID
+            // 
+            this.DFrisID.Text = "ID";
+            // 
+            // DFrisNaam
+            // 
+            this.DFrisNaam.Text = "Naam";
+            this.DFrisNaam.Width = 433;
+            // 
+            // DFrisVoorraad
+            // 
+            this.DFrisVoorraad.Text = "Voorraad";
+            this.DFrisVoorraad.Width = 117;
             // 
             // DrankFrisBTN
             // 
@@ -1352,6 +1036,20 @@
             this.ListViewDrankTap.UseCompatibleStateImageBehavior = false;
             this.ListViewDrankTap.View = System.Windows.Forms.View.Details;
             // 
+            // DTapID
+            // 
+            this.DTapID.Text = "ID";
+            // 
+            // DTapNaam
+            // 
+            this.DTapNaam.Text = "Naam";
+            this.DTapNaam.Width = 440;
+            // 
+            // DTapVoorraad
+            // 
+            this.DTapVoorraad.Text = "Voorraad";
+            this.DTapVoorraad.Width = 114;
+            // 
             // DrankTapBTN
             // 
             this.DrankTapBTN.BackColor = System.Drawing.Color.Silver;
@@ -1395,6 +1093,20 @@
             this.ListViewDrankGed.TabIndex = 28;
             this.ListViewDrankGed.UseCompatibleStateImageBehavior = false;
             this.ListViewDrankGed.View = System.Windows.Forms.View.Details;
+            // 
+            // DGedID
+            // 
+            this.DGedID.Text = "ID";
+            // 
+            // DGedNaam
+            // 
+            this.DGedNaam.Text = "Naam";
+            this.DGedNaam.Width = 441;
+            // 
+            // DGedVoorraad
+            // 
+            this.DGedVoorraad.Text = "Voorraad";
+            this.DGedVoorraad.Width = 113;
             // 
             // DrankGedBTN
             // 
@@ -1440,6 +1152,20 @@
             this.ListViewDrankWijn.UseCompatibleStateImageBehavior = false;
             this.ListViewDrankWijn.View = System.Windows.Forms.View.Details;
             // 
+            // DWijnID
+            // 
+            this.DWijnID.Text = "ID";
+            // 
+            // DWijnNaam
+            // 
+            this.DWijnNaam.Text = "Naam";
+            this.DWijnNaam.Width = 435;
+            // 
+            // DWijnVoorraad
+            // 
+            this.DWijnVoorraad.Text = "Voorraad";
+            this.DWijnVoorraad.Width = 119;
+            // 
             // DrankWijnBTN
             // 
             this.DrankWijnBTN.BackColor = System.Drawing.Color.Silver;
@@ -1483,6 +1209,20 @@
             this.ListViewDrankThee.TabIndex = 28;
             this.ListViewDrankThee.UseCompatibleStateImageBehavior = false;
             this.ListViewDrankThee.View = System.Windows.Forms.View.Details;
+            // 
+            // DTheeID
+            // 
+            this.DTheeID.Text = "ID";
+            // 
+            // DTheeNaam
+            // 
+            this.DTheeNaam.Text = "Naam";
+            this.DTheeNaam.Width = 440;
+            // 
+            // DTheeVoorraad
+            // 
+            this.DTheeVoorraad.Text = "Voorraad";
+            this.DTheeVoorraad.Width = 113;
             // 
             // DrankTheeBTN
             // 
@@ -1791,91 +1531,356 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // DFrisID
+            // panel17
             // 
-            this.DFrisID.Text = "ID";
+            this.panel17.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel17.Controls.Add(this.label6);
+            this.panel17.Location = new System.Drawing.Point(48, 74);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(625, 103);
+            this.panel17.TabIndex = 23;
             // 
-            // DFrisNaam
+            // label6
             // 
-            this.DFrisNaam.Text = "Naam";
-            this.DFrisNaam.Width = 433;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.label6.Location = new System.Drawing.Point(243, 19);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 70);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Diner";
             // 
-            // DFrisVoorraad
+            // flowLayoutPanel2
             // 
-            this.DFrisVoorraad.Text = "Voorraad";
-            this.DFrisVoorraad.Width = 117;
+            this.flowLayoutPanel2.Controls.Add(this.DVDropdown);
+            this.flowLayoutPanel2.Controls.Add(this.DTDropdown);
+            this.flowLayoutPanel2.Controls.Add(this.DHDropdown);
+            this.flowLayoutPanel2.Controls.Add(this.DNDropdown);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(48, 209);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(645, 473);
+            this.flowLayoutPanel2.TabIndex = 25;
             // 
-            // DTapID
+            // DVDropdown
             // 
-            this.DTapID.Text = "ID";
+            this.DVDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.DVDropdown.Controls.Add(this.ListViewDinerV);
+            this.DVDropdown.Controls.Add(this.DinerVoorBTN);
+            this.DVDropdown.Location = new System.Drawing.Point(3, 3);
+            this.DVDropdown.MaximumSize = new System.Drawing.Size(626, 256);
+            this.DVDropdown.MinimumSize = new System.Drawing.Size(626, 64);
+            this.DVDropdown.Name = "DVDropdown";
+            this.DVDropdown.Size = new System.Drawing.Size(626, 64);
+            this.DVDropdown.TabIndex = 28;
             // 
-            // DTapNaam
+            // ListViewDinerV
             // 
-            this.DTapNaam.Text = "Naam";
-            this.DTapNaam.Width = 440;
+            this.ListViewDinerV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DVID,
+            this.DVNaam,
+            this.DVVoorraad});
+            this.ListViewDinerV.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.ListViewDinerV.HideSelection = false;
+            this.ListViewDinerV.Location = new System.Drawing.Point(1, 61);
+            this.ListViewDinerV.Name = "ListViewDinerV";
+            this.ListViewDinerV.Size = new System.Drawing.Size(622, 198);
+            this.ListViewDinerV.TabIndex = 28;
+            this.ListViewDinerV.UseCompatibleStateImageBehavior = false;
+            this.ListViewDinerV.View = System.Windows.Forms.View.Details;
             // 
-            // DTapVoorraad
+            // DVID
             // 
-            this.DTapVoorraad.Text = "Voorraad";
-            this.DTapVoorraad.Width = 114;
+            this.DVID.Text = "ID";
             // 
-            // DGedID
+            // DVNaam
             // 
-            this.DGedID.Text = "ID";
+            this.DVNaam.Text = "Naam";
+            this.DVNaam.Width = 439;
             // 
-            // DGedNaam
+            // DVVoorraad
             // 
-            this.DGedNaam.Text = "Naam";
-            this.DGedNaam.Width = 441;
+            this.DVVoorraad.Text = "Voorraad";
+            this.DVVoorraad.Width = 114;
             // 
-            // DGedVoorraad
+            // DinerVoorBTN
             // 
-            this.DGedVoorraad.Text = "Voorraad";
-            this.DGedVoorraad.Width = 113;
+            this.DinerVoorBTN.BackColor = System.Drawing.Color.Silver;
+            this.DinerVoorBTN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DinerVoorBTN.FlatAppearance.BorderSize = 0;
+            this.DinerVoorBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
+            this.DinerVoorBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
+            this.DinerVoorBTN.Location = new System.Drawing.Point(0, 0);
+            this.DinerVoorBTN.Name = "DinerVoorBTN";
+            this.DinerVoorBTN.Size = new System.Drawing.Size(626, 64);
+            this.DinerVoorBTN.TabIndex = 27;
+            this.DinerVoorBTN.Text = "Voorgerechten";
+            this.DinerVoorBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DinerVoorBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.DinerVoorBTN.UseVisualStyleBackColor = false;
+            this.DinerVoorBTN.Click += new System.EventHandler(this.DinerVoorBTN_Click);
             // 
-            // DWijnID
+            // DTDropdown
             // 
-            this.DWijnID.Text = "ID";
+            this.DTDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.DTDropdown.Controls.Add(this.ListViewDinerT);
+            this.DTDropdown.Controls.Add(this.DinerTussenBTN);
+            this.DTDropdown.Location = new System.Drawing.Point(3, 73);
+            this.DTDropdown.MaximumSize = new System.Drawing.Size(626, 256);
+            this.DTDropdown.MinimumSize = new System.Drawing.Size(626, 64);
+            this.DTDropdown.Name = "DTDropdown";
+            this.DTDropdown.Size = new System.Drawing.Size(626, 64);
+            this.DTDropdown.TabIndex = 29;
             // 
-            // DWijnNaam
+            // ListViewDinerT
             // 
-            this.DWijnNaam.Text = "Naam";
-            this.DWijnNaam.Width = 435;
+            this.ListViewDinerT.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DTID,
+            this.DTNaam,
+            this.DTVoorraad});
+            this.ListViewDinerT.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.ListViewDinerT.HideSelection = false;
+            this.ListViewDinerT.Location = new System.Drawing.Point(1, 61);
+            this.ListViewDinerT.Name = "ListViewDinerT";
+            this.ListViewDinerT.Size = new System.Drawing.Size(622, 198);
+            this.ListViewDinerT.TabIndex = 28;
+            this.ListViewDinerT.UseCompatibleStateImageBehavior = false;
+            this.ListViewDinerT.View = System.Windows.Forms.View.Details;
             // 
-            // DWijnVoorraad
+            // DTID
             // 
-            this.DWijnVoorraad.Text = "Voorraad";
-            this.DWijnVoorraad.Width = 119;
+            this.DTID.Text = "ID";
             // 
-            // DTheeID
+            // DTNaam
             // 
-            this.DTheeID.Text = "ID";
+            this.DTNaam.Text = "Naam";
+            this.DTNaam.Width = 444;
             // 
-            // DTheeNaam
+            // DTVoorraad
             // 
-            this.DTheeNaam.Text = "Naam";
-            this.DTheeNaam.Width = 440;
+            this.DTVoorraad.Text = "Voorraad";
+            this.DTVoorraad.Width = 111;
             // 
-            // DTheeVoorraad
+            // DinerTussenBTN
             // 
-            this.DTheeVoorraad.Text = "Voorraad";
-            this.DTheeVoorraad.Width = 113;
+            this.DinerTussenBTN.BackColor = System.Drawing.Color.Silver;
+            this.DinerTussenBTN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DinerTussenBTN.FlatAppearance.BorderSize = 0;
+            this.DinerTussenBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
+            this.DinerTussenBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
+            this.DinerTussenBTN.Location = new System.Drawing.Point(0, 0);
+            this.DinerTussenBTN.Name = "DinerTussenBTN";
+            this.DinerTussenBTN.Size = new System.Drawing.Size(626, 64);
+            this.DinerTussenBTN.TabIndex = 27;
+            this.DinerTussenBTN.Text = "Tussengerecht";
+            this.DinerTussenBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DinerTussenBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.DinerTussenBTN.UseVisualStyleBackColor = false;
+            this.DinerTussenBTN.Click += new System.EventHandler(this.DinerTussenBTN_Click);
+            // 
+            // DHDropdown
+            // 
+            this.DHDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.DHDropdown.Controls.Add(this.ListViewDinerH);
+            this.DHDropdown.Controls.Add(this.DinerHoofdBTN);
+            this.DHDropdown.Location = new System.Drawing.Point(3, 143);
+            this.DHDropdown.MaximumSize = new System.Drawing.Size(626, 256);
+            this.DHDropdown.MinimumSize = new System.Drawing.Size(626, 64);
+            this.DHDropdown.Name = "DHDropdown";
+            this.DHDropdown.Size = new System.Drawing.Size(626, 64);
+            this.DHDropdown.TabIndex = 30;
+            // 
+            // ListViewDinerH
+            // 
+            this.ListViewDinerH.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DHID,
+            this.DHNaam,
+            this.DHVooraad});
+            this.ListViewDinerH.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.ListViewDinerH.HideSelection = false;
+            this.ListViewDinerH.Location = new System.Drawing.Point(1, 61);
+            this.ListViewDinerH.Name = "ListViewDinerH";
+            this.ListViewDinerH.Size = new System.Drawing.Size(622, 198);
+            this.ListViewDinerH.TabIndex = 28;
+            this.ListViewDinerH.UseCompatibleStateImageBehavior = false;
+            this.ListViewDinerH.View = System.Windows.Forms.View.Details;
+            // 
+            // DHID
+            // 
+            this.DHID.Text = "ID";
+            // 
+            // DHNaam
+            // 
+            this.DHNaam.Text = "Naam";
+            this.DHNaam.Width = 445;
+            // 
+            // DHVooraad
+            // 
+            this.DHVooraad.Text = "Voorraad";
+            this.DHVooraad.Width = 112;
+            // 
+            // DinerHoofdBTN
+            // 
+            this.DinerHoofdBTN.BackColor = System.Drawing.Color.Silver;
+            this.DinerHoofdBTN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DinerHoofdBTN.FlatAppearance.BorderSize = 0;
+            this.DinerHoofdBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
+            this.DinerHoofdBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
+            this.DinerHoofdBTN.Location = new System.Drawing.Point(0, 0);
+            this.DinerHoofdBTN.Name = "DinerHoofdBTN";
+            this.DinerHoofdBTN.Size = new System.Drawing.Size(626, 64);
+            this.DinerHoofdBTN.TabIndex = 27;
+            this.DinerHoofdBTN.Text = "Hoofdgerecht";
+            this.DinerHoofdBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DinerHoofdBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.DinerHoofdBTN.UseVisualStyleBackColor = false;
+            this.DinerHoofdBTN.Click += new System.EventHandler(this.DinerHoofdBTN_Click);
+            // 
+            // DNDropdown
+            // 
+            this.DNDropdown.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.DNDropdown.Controls.Add(this.ListViewDinerN);
+            this.DNDropdown.Controls.Add(this.DinerNaBTN);
+            this.DNDropdown.Location = new System.Drawing.Point(3, 213);
+            this.DNDropdown.MaximumSize = new System.Drawing.Size(626, 256);
+            this.DNDropdown.MinimumSize = new System.Drawing.Size(626, 64);
+            this.DNDropdown.Name = "DNDropdown";
+            this.DNDropdown.Size = new System.Drawing.Size(626, 64);
+            this.DNDropdown.TabIndex = 31;
+            // 
+            // ListViewDinerN
+            // 
+            this.ListViewDinerN.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DNID,
+            this.DNNaam,
+            this.DNVoorraad});
+            this.ListViewDinerN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.ListViewDinerN.HideSelection = false;
+            this.ListViewDinerN.Location = new System.Drawing.Point(1, 61);
+            this.ListViewDinerN.Name = "ListViewDinerN";
+            this.ListViewDinerN.Size = new System.Drawing.Size(622, 198);
+            this.ListViewDinerN.TabIndex = 28;
+            this.ListViewDinerN.UseCompatibleStateImageBehavior = false;
+            this.ListViewDinerN.View = System.Windows.Forms.View.Details;
+            // 
+            // DNID
+            // 
+            this.DNID.Text = "ID";
+            // 
+            // DNNaam
+            // 
+            this.DNNaam.Text = "Naam";
+            this.DNNaam.Width = 440;
+            // 
+            // DNVoorraad
+            // 
+            this.DNVoorraad.Text = "Voorraad";
+            this.DNVoorraad.Width = 116;
+            // 
+            // DinerNaBTN
+            // 
+            this.DinerNaBTN.BackColor = System.Drawing.Color.Silver;
+            this.DinerNaBTN.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DinerNaBTN.FlatAppearance.BorderSize = 0;
+            this.DinerNaBTN.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20.9F);
+            this.DinerNaBTN.Image = global::UI.Properties.Resources.Expand_Arrow_20px;
+            this.DinerNaBTN.Location = new System.Drawing.Point(0, 0);
+            this.DinerNaBTN.Name = "DinerNaBTN";
+            this.DinerNaBTN.Size = new System.Drawing.Size(626, 64);
+            this.DinerNaBTN.TabIndex = 27;
+            this.DinerNaBTN.Text = "Nagerecht";
+            this.DinerNaBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DinerNaBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.DinerNaBTN.UseVisualStyleBackColor = false;
+            this.DinerNaBTN.Click += new System.EventHandler(this.DinerNaBTN_Click);
+            // 
+            // button30
+            // 
+            this.button30.BackColor = System.Drawing.Color.LightGreen;
+            this.button30.Location = new System.Drawing.Point(457, 737);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(75, 64);
+            this.button30.TabIndex = 38;
+            this.button30.Text = "Plus";
+            this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button29
+            // 
+            this.button29.BackColor = System.Drawing.Color.Salmon;
+            this.button29.Location = new System.Drawing.Point(600, 737);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(75, 64);
+            this.button29.TabIndex = 39;
+            this.button29.Text = "Min";
+            this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.label13.Location = new System.Drawing.Point(550, 754);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(33, 36);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "0";
+            // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.LightGreen;
+            this.button28.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.button28.Location = new System.Drawing.Point(52, 737);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(300, 64);
+            this.button28.TabIndex = 36;
+            this.button28.Text = "Voeg toe tot bestelling";
+            this.button28.UseVisualStyleBackColor = false;
+            // 
+            // button32
+            // 
+            this.button32.BackColor = System.Drawing.Color.LightGreen;
+            this.button32.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.button32.Location = new System.Drawing.Point(48, 877);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(625, 64);
+            this.button32.TabIndex = 41;
+            this.button32.Text = "Bekijk bestelling overzicht";
+            this.button32.UseVisualStyleBackColor = false;
+            // 
+            // DinerPNL
+            // 
+            this.DinerPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DinerPNL.Controls.Add(this.button32);
+            this.DinerPNL.Controls.Add(this.button28);
+            this.DinerPNL.Controls.Add(this.label13);
+            this.DinerPNL.Controls.Add(this.button29);
+            this.DinerPNL.Controls.Add(this.button30);
+            this.DinerPNL.Controls.Add(this.flowLayoutPanel2);
+            this.DinerPNL.Controls.Add(this.panel17);
+            this.DinerPNL.Location = new System.Drawing.Point(2, 69);
+            this.DinerPNL.Margin = new System.Windows.Forms.Padding(2);
+            this.DinerPNL.Name = "DinerPNL";
+            this.DinerPNL.Size = new System.Drawing.Size(721, 974);
+            this.DinerPNL.TabIndex = 29;
+            this.DinerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DinerPNL_Paint);
             // 
             // Bediening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(725, 1044);
+            this.ClientSize = new System.Drawing.Size(723, 1047);
+            this.Controls.Add(this.BestellingPNL);
+            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.LunchPNL);
             this.Controls.Add(this.DinerPNL);
             this.Controls.Add(this.ChapooLogo);
             this.Controls.Add(this.BTNReturn);
             this.Controls.Add(this.TafelPNL);
-            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.OverzichtPNL);
-            this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.WijzigenPNL);
             this.Controls.Add(this.DatumLBL);
             this.Controls.Add(this.TijdLBL);
@@ -1906,15 +1911,6 @@
             this.LNDropdown.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.DinerPNL.ResumeLayout(false);
-            this.DinerPNL.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.DVDropdown.ResumeLayout(false);
-            this.DTDropdown.ResumeLayout(false);
-            this.DHDropdown.ResumeLayout(false);
-            this.DNDropdown.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
             this.DrankPNL.ResumeLayout(false);
             this.DrankPNL.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
@@ -1931,6 +1927,15 @@
             this.panel20.PerformLayout();
             this.WijzigenPNL.ResumeLayout(false);
             this.WijzigenPNL.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.DVDropdown.ResumeLayout(false);
+            this.DTDropdown.ResumeLayout(false);
+            this.DHDropdown.ResumeLayout(false);
+            this.DNDropdown.ResumeLayout(false);
+            this.DinerPNL.ResumeLayout(false);
+            this.DinerPNL.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1946,12 +1951,12 @@
         private System.Windows.Forms.Panel BestellingPNL;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BTNRekening;
+        private System.Windows.Forms.Button BTNBestellen;
+        private System.Windows.Forms.Button BTNDiner;
+        private System.Windows.Forms.Button BTNLunch;
+        private System.Windows.Forms.Button BTNDrank;
+        private System.Windows.Forms.Button BTNOverzicht;
         private System.Windows.Forms.Panel LunchPNL;
         private System.Windows.Forms.Button LunchVoorBTN;
         private System.Windows.Forms.Panel panel10;
@@ -1962,9 +1967,6 @@
         private System.Windows.Forms.Timer timerLH;
         private System.Windows.Forms.Timer timerLN;
         private System.Windows.Forms.Timer timerDFris;
-        private System.Windows.Forms.Panel DinerPNL;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListView ListViewLunchV;
         private System.Windows.Forms.Panel DrankPNL;
         private System.Windows.Forms.Panel panel24;
@@ -2003,19 +2005,6 @@
         private System.Windows.Forms.Panel DWijnDropdown;
         private System.Windows.Forms.ListView ListViewDrankWijn;
         private System.Windows.Forms.Button DrankWijnBTN;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel DVDropdown;
-        private System.Windows.Forms.ListView ListViewDinerV;
-        private System.Windows.Forms.Button DinerVoorBTN;
-        private System.Windows.Forms.Panel DTDropdown;
-        private System.Windows.Forms.ListView ListViewDinerT;
-        private System.Windows.Forms.Button DinerTussenBTN;
-        private System.Windows.Forms.Panel DHDropdown;
-        private System.Windows.Forms.ListView ListViewDinerH;
-        private System.Windows.Forms.Button DinerHoofdBTN;
-        private System.Windows.Forms.Panel DNDropdown;
-        private System.Windows.Forms.ListView ListViewDinerN;
-        private System.Windows.Forms.Button DinerNaBTN;
         private System.Windows.Forms.Panel OverzichtPNL;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -2027,12 +2016,7 @@
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Timer timerDTap;
         private System.Windows.Forms.Timer timerDGed;
@@ -2071,18 +2055,6 @@
         private System.Windows.Forms.ColumnHeader LNID;
         private System.Windows.Forms.ColumnHeader LNNaam;
         private System.Windows.Forms.ColumnHeader LNVoorraad;
-        private System.Windows.Forms.ColumnHeader DVID;
-        private System.Windows.Forms.ColumnHeader DVNaam;
-        private System.Windows.Forms.ColumnHeader DVVoorraad;
-        private System.Windows.Forms.ColumnHeader DTID;
-        private System.Windows.Forms.ColumnHeader DTNaam;
-        private System.Windows.Forms.ColumnHeader DTVoorraad;
-        private System.Windows.Forms.ColumnHeader DHID;
-        private System.Windows.Forms.ColumnHeader DHNaam;
-        private System.Windows.Forms.ColumnHeader DHVooraad;
-        private System.Windows.Forms.ColumnHeader DNID;
-        private System.Windows.Forms.ColumnHeader DNNaam;
-        private System.Windows.Forms.ColumnHeader DNVoorraad;
         private System.Windows.Forms.ColumnHeader DFrisID;
         private System.Windows.Forms.ColumnHeader DFrisNaam;
         private System.Windows.Forms.ColumnHeader DFrisVoorraad;
@@ -2098,5 +2070,38 @@
         private System.Windows.Forms.ColumnHeader DTheeID;
         private System.Windows.Forms.ColumnHeader DTheeNaam;
         private System.Windows.Forms.ColumnHeader DTheeVoorraad;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Panel DVDropdown;
+        private System.Windows.Forms.ListView ListViewDinerV;
+        private System.Windows.Forms.ColumnHeader DVID;
+        private System.Windows.Forms.ColumnHeader DVNaam;
+        private System.Windows.Forms.ColumnHeader DVVoorraad;
+        private System.Windows.Forms.Button DinerVoorBTN;
+        private System.Windows.Forms.Panel DTDropdown;
+        private System.Windows.Forms.ListView ListViewDinerT;
+        private System.Windows.Forms.ColumnHeader DTID;
+        private System.Windows.Forms.ColumnHeader DTNaam;
+        private System.Windows.Forms.ColumnHeader DTVoorraad;
+        private System.Windows.Forms.Button DinerTussenBTN;
+        private System.Windows.Forms.Panel DHDropdown;
+        private System.Windows.Forms.ListView ListViewDinerH;
+        private System.Windows.Forms.ColumnHeader DHID;
+        private System.Windows.Forms.ColumnHeader DHNaam;
+        private System.Windows.Forms.ColumnHeader DHVooraad;
+        private System.Windows.Forms.Button DinerHoofdBTN;
+        private System.Windows.Forms.Panel DNDropdown;
+        private System.Windows.Forms.ListView ListViewDinerN;
+        private System.Windows.Forms.ColumnHeader DNID;
+        private System.Windows.Forms.ColumnHeader DNNaam;
+        private System.Windows.Forms.ColumnHeader DNVoorraad;
+        private System.Windows.Forms.Button DinerNaBTN;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Panel DinerPNL;
     }
 }

@@ -27,7 +27,7 @@ namespace UI
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Ben je zeker dat je wilt afmelden?\n" +
-                "      Er wordt niks opgeslagen", "Afmelden", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                "      Er wordt niks opgeslagen", "Afmelden", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -39,17 +39,15 @@ namespace UI
             
         }
 
-
-
         private void Bediening_Load(object sender, EventArgs e)
         {
             TijdLBL.Text = DateTime.Now.ToShortDateString();
             DatumLBL.Text = DateTime.Now.ToShortTimeString();
-            ShowPanel("DrankPNL");
+            ShowPanel("TafelPNL");
         }
         private void HidePanels()
         {
-            
+            DrankPNL.Hide();
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
             TafelPNL.Hide();
@@ -72,10 +70,12 @@ namespace UI
             else if(PanelName == "TafelNummerPNL")
             {
                 TafelNummerPNL.Show();
+
             }
 
             else if (PanelName == "BestellingPNL")
             {
+                BestellingPNL.Show();
 
             }
 
@@ -134,6 +134,7 @@ namespace UI
             else if (PanelName == "DinerPNL")
             {
                 DinerPNL.Show();
+
                 // Lijst maken en vullen voor Voorgerecht
                 List<ChapooModel.MenuItem> VList = MenuItemService.GetItems("Diner", "Voorgerecht");
 
@@ -199,7 +200,7 @@ namespace UI
             {
                 DrankPNL.Show();
 
-                // Lijst maken en vullen voor Nagerecht
+                // Lijst maken en vullen voor Frisdrank
                 List<ChapooModel.MenuItem> FrisList = MenuItemService.GetItems("Dranken", "Frisdrank");
 
                 ListViewDrankFris.Items.Clear();
@@ -214,7 +215,7 @@ namespace UI
                     ListViewDrankFris.Items.Add(List);
                 }
 
-                // Lijst maken en vullen voor Nagerecht
+                // Lijst maken en vullen voor Tap
                 List<ChapooModel.MenuItem> TapList = MenuItemService.GetItems("Dranken", "Tap");
 
                 ListViewDrankTap.Items.Clear();
@@ -229,7 +230,7 @@ namespace UI
                     ListViewDrankTap.Items.Add(List);
                 }
 
-                // Lijst maken en vullen voor Nagerecht
+                // Lijst maken en vullen voor Gedistilleerd
                 List<ChapooModel.MenuItem> GedList = MenuItemService.GetItems("Dranken", "Gedistilleerd");
 
                 ListViewDrankGed.Items.Clear();
@@ -244,7 +245,7 @@ namespace UI
                     ListViewDrankGed.Items.Add(List);
                 }
 
-                // Lijst maken en vullen voor Nagerecht
+                // Lijst maken en vullen voor Wijn
                 List<ChapooModel.MenuItem> WijnList = MenuItemService.GetItems("Dranken", "Wijn");
 
                 ListViewDrankWijn.Items.Clear();
@@ -259,7 +260,7 @@ namespace UI
                     ListViewDrankWijn.Items.Add(List);
                 }
 
-                // Lijst maken en vullen voor Nagerecht
+                // Lijst maken en vullen voor Thee
                 List<ChapooModel.MenuItem> TheeList = MenuItemService.GetItems("Dranken", "Thee");
 
                 ListViewDrankThee.Items.Clear();
@@ -719,11 +720,6 @@ namespace UI
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
 
@@ -851,27 +847,57 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
         }
-
         private void btnT10_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
         }
-
-
-
-
-
-
-
         private void panel11_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
-
         private void TijdLBL_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BTNBestellen_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Hide();
+            BestellingPNL.Show();
+
+        }
+        private void BTNRekening_Click(object sender, EventArgs e)
+        {
+      
+        }
+
+        private void BTNLunch_Click(object sender, EventArgs e)
+        {
+            LunchPNL.Show();
+            TafelNummerPNL.Hide();
+            BestellingPNL.Hide();
+        }
+
+        private void BTNDiner_Click(object sender, EventArgs e)
+        {
+            DinerPNL.Show();
+            TafelNummerPNL.Hide();
+            BestellingPNL.Hide();
+        }
+
+        private void BTNDrank_Click(object sender, EventArgs e)
+        {
+            DrankPNL.Show();
+            TafelNummerPNL.Hide();
+            BestellingPNL.Hide();
+        }
+
+        private void BTNOverzicht_Click(object sender, EventArgs e)
+        {
+            OverzichtPNL.Show();
+            TafelNummerPNL.Hide();
+            BestellingPNL.Hide();
         }
     }
 }
