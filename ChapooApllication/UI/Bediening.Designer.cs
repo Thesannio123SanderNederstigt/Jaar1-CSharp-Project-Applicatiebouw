@@ -60,10 +60,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.LunchPNL = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.BTNVoegToeL = new System.Windows.Forms.Button();
+            this.ALBLLunch = new System.Windows.Forms.Label();
+            this.BTNMinLunch = new System.Windows.Forms.Button();
+            this.BTNPlusLunch = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.LVDropdown = new System.Windows.Forms.Panel();
@@ -92,9 +92,9 @@
             this.timerDFris = new System.Windows.Forms.Timer(this.components);
             this.DrankPNL = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.ALBLDrank = new System.Windows.Forms.Label();
+            this.BTNMinDrank = new System.Windows.Forms.Button();
+            this.BTNPlusDrank = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.DFrisDropdown = new System.Windows.Forms.Panel();
@@ -130,9 +130,9 @@
             this.panel24 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.OverzichtPNL = new System.Windows.Forms.Panel();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
+            this.BTNItemAanpassen = new System.Windows.Forms.Button();
+            this.BTNBestellingPlaatsen = new System.Windows.Forms.Button();
+            this.BTNBestellingVerwijderen = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -148,12 +148,11 @@
             this.timerDT = new System.Windows.Forms.Timer(this.components);
             this.timerDH = new System.Windows.Forms.Timer(this.components);
             this.WijzigenPNL = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.BTNWijzigingOplsaan = new System.Windows.Forms.Button();
+            this.BTNItemVerwijderen = new System.Windows.Forms.Button();
+            this.ALBLWijzigen = new System.Windows.Forms.Label();
+            this.BTNMinWijzigen = new System.Windows.Forms.Button();
+            this.BTNPlusWijzigen = new System.Windows.Forms.Button();
             this.timerDN = new System.Windows.Forms.Timer(this.components);
             this.ChapooLogo = new System.Windows.Forms.Panel();
             this.BTNReturn = new System.Windows.Forms.Button();
@@ -185,10 +184,10 @@
             this.DNNaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DNVoorraad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DinerNaBTN = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button28 = new System.Windows.Forms.Button();
+            this.BTNPlusDiner = new System.Windows.Forms.Button();
+            this.BTNMinDiner = new System.Windows.Forms.Button();
+            this.ALBLDiner = new System.Windows.Forms.Label();
+            this.BTNVoegToeDiner = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.DinerPNL = new System.Windows.Forms.Panel();
             this.TafelPNL.SuspendLayout();
@@ -574,10 +573,10 @@
             // LunchPNL
             // 
             this.LunchPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.LunchPNL.Controls.Add(this.button17);
-            this.LunchPNL.Controls.Add(this.label3);
-            this.LunchPNL.Controls.Add(this.button20);
-            this.LunchPNL.Controls.Add(this.button21);
+            this.LunchPNL.Controls.Add(this.BTNVoegToeL);
+            this.LunchPNL.Controls.Add(this.ALBLLunch);
+            this.LunchPNL.Controls.Add(this.BTNMinLunch);
+            this.LunchPNL.Controls.Add(this.BTNPlusLunch);
             this.LunchPNL.Controls.Add(this.button33);
             this.LunchPNL.Controls.Add(this.flowLayoutPanel1);
             this.LunchPNL.Controls.Add(this.panel10);
@@ -588,46 +587,48 @@
             this.LunchPNL.TabIndex = 28;
             this.LunchPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
-            // button17
+            // BTNVoegToeL
             // 
-            this.button17.BackColor = System.Drawing.Color.LightGreen;
-            this.button17.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button17.Location = new System.Drawing.Point(40, 737);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(300, 64);
-            this.button17.TabIndex = 42;
-            this.button17.Text = "Voeg toe tot bestelling";
-            this.button17.UseVisualStyleBackColor = false;
+            this.BTNVoegToeL.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNVoegToeL.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.BTNVoegToeL.Location = new System.Drawing.Point(40, 737);
+            this.BTNVoegToeL.Name = "BTNVoegToeL";
+            this.BTNVoegToeL.Size = new System.Drawing.Size(300, 64);
+            this.BTNVoegToeL.TabIndex = 42;
+            this.BTNVoegToeL.Text = "Voeg toe tot bestelling";
+            this.BTNVoegToeL.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // ALBLLunch
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label3.Location = new System.Drawing.Point(538, 754);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 36);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "0";
+            this.ALBLLunch.AutoSize = true;
+            this.ALBLLunch.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.ALBLLunch.Location = new System.Drawing.Point(538, 754);
+            this.ALBLLunch.Name = "ALBLLunch";
+            this.ALBLLunch.Size = new System.Drawing.Size(33, 36);
+            this.ALBLLunch.TabIndex = 43;
+            this.ALBLLunch.Text = "0";
             // 
-            // button20
+            // BTNMinLunch
             // 
-            this.button20.BackColor = System.Drawing.Color.Salmon;
-            this.button20.Location = new System.Drawing.Point(588, 737);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 64);
-            this.button20.TabIndex = 45;
-            this.button20.Text = "Min";
-            this.button20.UseVisualStyleBackColor = false;
+            this.BTNMinLunch.BackColor = System.Drawing.Color.Salmon;
+            this.BTNMinLunch.Location = new System.Drawing.Point(588, 737);
+            this.BTNMinLunch.Name = "BTNMinLunch";
+            this.BTNMinLunch.Size = new System.Drawing.Size(75, 64);
+            this.BTNMinLunch.TabIndex = 45;
+            this.BTNMinLunch.Text = "Min";
+            this.BTNMinLunch.UseVisualStyleBackColor = false;
+            this.BTNMinLunch.Click += new System.EventHandler(this.BTNMinLunch_Click);
             // 
-            // button21
+            // BTNPlusLunch
             // 
-            this.button21.BackColor = System.Drawing.Color.LightGreen;
-            this.button21.Location = new System.Drawing.Point(445, 737);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 64);
-            this.button21.TabIndex = 44;
-            this.button21.Text = "Plus";
-            this.button21.UseVisualStyleBackColor = false;
+            this.BTNPlusLunch.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNPlusLunch.Location = new System.Drawing.Point(445, 737);
+            this.BTNPlusLunch.Name = "BTNPlusLunch";
+            this.BTNPlusLunch.Size = new System.Drawing.Size(75, 64);
+            this.BTNPlusLunch.TabIndex = 44;
+            this.BTNPlusLunch.Text = "Plus";
+            this.BTNPlusLunch.UseVisualStyleBackColor = false;
+            this.BTNPlusLunch.Click += new System.EventHandler(this.BTNPlusLunch_Click);
             // 
             // button33
             // 
@@ -639,6 +640,7 @@
             this.button33.TabIndex = 41;
             this.button33.Text = "Bekijk bestelling overzicht";
             this.button33.UseVisualStyleBackColor = false;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -822,7 +824,7 @@
             this.LunchNaBTN.Name = "LunchNaBTN";
             this.LunchNaBTN.Size = new System.Drawing.Size(626, 64);
             this.LunchNaBTN.TabIndex = 27;
-            this.LunchNaBTN.Text = "Nagerecht";
+            this.LunchNaBTN.Text = "Nagerecht  ";
             this.LunchNaBTN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.LunchNaBTN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.LunchNaBTN.UseVisualStyleBackColor = false;
@@ -873,9 +875,9 @@
             // 
             this.DrankPNL.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DrankPNL.Controls.Add(this.button16);
-            this.DrankPNL.Controls.Add(this.label12);
-            this.DrankPNL.Controls.Add(this.button18);
-            this.DrankPNL.Controls.Add(this.button19);
+            this.DrankPNL.Controls.Add(this.ALBLDrank);
+            this.DrankPNL.Controls.Add(this.BTNMinDrank);
+            this.DrankPNL.Controls.Add(this.BTNPlusDrank);
             this.DrankPNL.Controls.Add(this.button31);
             this.DrankPNL.Controls.Add(this.flowLayoutPanel3);
             this.DrankPNL.Controls.Add(this.panel24);
@@ -897,35 +899,37 @@
             this.button16.Text = "Voeg toe tot bestelling";
             this.button16.UseVisualStyleBackColor = false;
             // 
-            // label12
+            // ALBLDrank
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label12.Location = new System.Drawing.Point(547, 754);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 36);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "0";
+            this.ALBLDrank.AutoSize = true;
+            this.ALBLDrank.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.ALBLDrank.Location = new System.Drawing.Point(547, 754);
+            this.ALBLDrank.Name = "ALBLDrank";
+            this.ALBLDrank.Size = new System.Drawing.Size(33, 36);
+            this.ALBLDrank.TabIndex = 42;
+            this.ALBLDrank.Text = "0";
             // 
-            // button18
+            // BTNMinDrank
             // 
-            this.button18.BackColor = System.Drawing.Color.Salmon;
-            this.button18.Location = new System.Drawing.Point(597, 737);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 64);
-            this.button18.TabIndex = 44;
-            this.button18.Text = "Min";
-            this.button18.UseVisualStyleBackColor = false;
+            this.BTNMinDrank.BackColor = System.Drawing.Color.Salmon;
+            this.BTNMinDrank.Location = new System.Drawing.Point(597, 737);
+            this.BTNMinDrank.Name = "BTNMinDrank";
+            this.BTNMinDrank.Size = new System.Drawing.Size(75, 64);
+            this.BTNMinDrank.TabIndex = 44;
+            this.BTNMinDrank.Text = "Min";
+            this.BTNMinDrank.UseVisualStyleBackColor = false;
+            this.BTNMinDrank.Click += new System.EventHandler(this.BTNMinDrank_Click);
             // 
-            // button19
+            // BTNPlusDrank
             // 
-            this.button19.BackColor = System.Drawing.Color.LightGreen;
-            this.button19.Location = new System.Drawing.Point(454, 737);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 64);
-            this.button19.TabIndex = 43;
-            this.button19.Text = "Plus";
-            this.button19.UseVisualStyleBackColor = false;
+            this.BTNPlusDrank.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNPlusDrank.Location = new System.Drawing.Point(454, 737);
+            this.BTNPlusDrank.Name = "BTNPlusDrank";
+            this.BTNPlusDrank.Size = new System.Drawing.Size(75, 64);
+            this.BTNPlusDrank.TabIndex = 43;
+            this.BTNPlusDrank.Text = "Plus";
+            this.BTNPlusDrank.UseVisualStyleBackColor = false;
+            this.BTNPlusDrank.Click += new System.EventHandler(this.BTNPlusDrank_Click);
             // 
             // button31
             // 
@@ -1265,9 +1269,9 @@
             // OverzichtPNL
             // 
             this.OverzichtPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.OverzichtPNL.Controls.Add(this.button24);
-            this.OverzichtPNL.Controls.Add(this.button23);
-            this.OverzichtPNL.Controls.Add(this.button22);
+            this.OverzichtPNL.Controls.Add(this.BTNItemAanpassen);
+            this.OverzichtPNL.Controls.Add(this.BTNBestellingPlaatsen);
+            this.OverzichtPNL.Controls.Add(this.BTNBestellingVerwijderen);
             this.OverzichtPNL.Controls.Add(this.richTextBox1);
             this.OverzichtPNL.Controls.Add(this.label11);
             this.OverzichtPNL.Controls.Add(this.label10);
@@ -1279,38 +1283,39 @@
             this.OverzichtPNL.Name = "OverzichtPNL";
             this.OverzichtPNL.Size = new System.Drawing.Size(721, 974);
             this.OverzichtPNL.TabIndex = 30;
+            this.OverzichtPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.OverzichtPNL_Paint);
             // 
-            // button24
+            // BTNItemAanpassen
             // 
-            this.button24.BackColor = System.Drawing.Color.Moccasin;
-            this.button24.Location = new System.Drawing.Point(254, 876);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(198, 65);
-            this.button24.TabIndex = 31;
-            this.button24.Text = "Bestelling Aanpassen";
-            this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.BTNItemAanpassen.BackColor = System.Drawing.Color.Moccasin;
+            this.BTNItemAanpassen.Location = new System.Drawing.Point(254, 876);
+            this.BTNItemAanpassen.Name = "BTNItemAanpassen";
+            this.BTNItemAanpassen.Size = new System.Drawing.Size(198, 65);
+            this.BTNItemAanpassen.TabIndex = 31;
+            this.BTNItemAanpassen.Text = "Aanpassen";
+            this.BTNItemAanpassen.UseVisualStyleBackColor = false;
+            this.BTNItemAanpassen.Click += new System.EventHandler(this.button24_Click);
             // 
-            // button23
+            // BTNBestellingPlaatsen
             // 
-            this.button23.BackColor = System.Drawing.Color.PaleGreen;
-            this.button23.Location = new System.Drawing.Point(461, 876);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(214, 65);
-            this.button23.TabIndex = 30;
-            this.button23.Text = "Bevestig Bestelling";
-            this.button23.UseVisualStyleBackColor = false;
+            this.BTNBestellingPlaatsen.BackColor = System.Drawing.Color.PaleGreen;
+            this.BTNBestellingPlaatsen.Location = new System.Drawing.Point(461, 876);
+            this.BTNBestellingPlaatsen.Name = "BTNBestellingPlaatsen";
+            this.BTNBestellingPlaatsen.Size = new System.Drawing.Size(214, 65);
+            this.BTNBestellingPlaatsen.TabIndex = 30;
+            this.BTNBestellingPlaatsen.Text = "Bevestig Bestelling";
+            this.BTNBestellingPlaatsen.UseVisualStyleBackColor = false;
             // 
-            // button22
+            // BTNBestellingVerwijderen
             // 
-            this.button22.BackColor = System.Drawing.Color.Salmon;
-            this.button22.Location = new System.Drawing.Point(50, 876);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(198, 65);
-            this.button22.TabIndex = 29;
-            this.button22.Text = "Bestelling Verwijderen";
-            this.button22.UseVisualStyleBackColor = false;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.BTNBestellingVerwijderen.BackColor = System.Drawing.Color.Salmon;
+            this.BTNBestellingVerwijderen.Location = new System.Drawing.Point(50, 876);
+            this.BTNBestellingVerwijderen.Name = "BTNBestellingVerwijderen";
+            this.BTNBestellingVerwijderen.Size = new System.Drawing.Size(198, 65);
+            this.BTNBestellingVerwijderen.TabIndex = 29;
+            this.BTNBestellingVerwijderen.Text = "Bestelling Verwijderen";
+            this.BTNBestellingVerwijderen.UseVisualStyleBackColor = false;
+            this.BTNBestellingVerwijderen.Click += new System.EventHandler(this.button22_Click);
             // 
             // richTextBox1
             // 
@@ -1336,9 +1341,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.label10.Location = new System.Drawing.Point(559, 551);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 36);
+            this.label10.Size = new System.Drawing.Size(33, 36);
             this.label10.TabIndex = 26;
-            this.label10.Text = "$35,-";
+            this.label10.Text = "0";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
@@ -1421,77 +1426,68 @@
             // WijzigenPNL
             // 
             this.WijzigenPNL.BackColor = System.Drawing.Color.Gainsboro;
-            this.WijzigenPNL.Controls.Add(this.button13);
-            this.WijzigenPNL.Controls.Add(this.button14);
-            this.WijzigenPNL.Controls.Add(this.button15);
-            this.WijzigenPNL.Controls.Add(this.label14);
-            this.WijzigenPNL.Controls.Add(this.button10);
-            this.WijzigenPNL.Controls.Add(this.button11);
-            this.WijzigenPNL.Location = new System.Drawing.Point(63, 89);
+            this.WijzigenPNL.Controls.Add(this.BTNWijzigingOplsaan);
+            this.WijzigenPNL.Controls.Add(this.BTNItemVerwijderen);
+            this.WijzigenPNL.Controls.Add(this.ALBLWijzigen);
+            this.WijzigenPNL.Controls.Add(this.BTNMinWijzigen);
+            this.WijzigenPNL.Controls.Add(this.BTNPlusWijzigen);
+            this.WijzigenPNL.Location = new System.Drawing.Point(50, 703);
             this.WijzigenPNL.Name = "WijzigenPNL";
             this.WijzigenPNL.Size = new System.Drawing.Size(625, 309);
             this.WijzigenPNL.TabIndex = 31;
             this.WijzigenPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
-            // button13
+            // BTNWijzigingOplsaan
             // 
-            this.button13.BackColor = System.Drawing.Color.Moccasin;
-            this.button13.Location = new System.Drawing.Point(203, 211);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(198, 65);
-            this.button13.TabIndex = 45;
-            this.button13.Text = "Aantal Wijzigen";
-            this.button13.UseVisualStyleBackColor = false;
+            this.BTNWijzigingOplsaan.BackColor = System.Drawing.Color.PaleGreen;
+            this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(307, 211);
+            this.BTNWijzigingOplsaan.Name = "BTNWijzigingOplsaan";
+            this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(317, 65);
+            this.BTNWijzigingOplsaan.TabIndex = 44;
+            this.BTNWijzigingOplsaan.Text = "Wijziging Opslaan";
+            this.BTNWijzigingOplsaan.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // BTNItemVerwijderen
             // 
-            this.button14.BackColor = System.Drawing.Color.PaleGreen;
-            this.button14.Location = new System.Drawing.Point(410, 211);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(214, 65);
-            this.button14.TabIndex = 44;
-            this.button14.Text = "Wijziging Opslaan";
-            this.button14.UseVisualStyleBackColor = false;
+            this.BTNItemVerwijderen.BackColor = System.Drawing.Color.Salmon;
+            this.BTNItemVerwijderen.Location = new System.Drawing.Point(-1, 211);
+            this.BTNItemVerwijderen.Name = "BTNItemVerwijderen";
+            this.BTNItemVerwijderen.Size = new System.Drawing.Size(302, 65);
+            this.BTNItemVerwijderen.TabIndex = 43;
+            this.BTNItemVerwijderen.Text = "Item Verwijderen";
+            this.BTNItemVerwijderen.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // ALBLWijzigen
             // 
-            this.button15.BackColor = System.Drawing.Color.Salmon;
-            this.button15.Location = new System.Drawing.Point(-1, 211);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(198, 65);
-            this.button15.TabIndex = 43;
-            this.button15.Text = "Item Verwijderen";
-            this.button15.UseVisualStyleBackColor = false;
+            this.ALBLWijzigen.AutoSize = true;
+            this.ALBLWijzigen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.ALBLWijzigen.Location = new System.Drawing.Point(494, 91);
+            this.ALBLWijzigen.Name = "ALBLWijzigen";
+            this.ALBLWijzigen.Size = new System.Drawing.Size(33, 36);
+            this.ALBLWijzigen.TabIndex = 40;
+            this.ALBLWijzigen.Text = "0";
             // 
-            // label14
+            // BTNMinWijzigen
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label14.Location = new System.Drawing.Point(494, 91);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(33, 36);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "0";
+            this.BTNMinWijzigen.BackColor = System.Drawing.Color.Salmon;
+            this.BTNMinWijzigen.Location = new System.Drawing.Point(544, 74);
+            this.BTNMinWijzigen.Name = "BTNMinWijzigen";
+            this.BTNMinWijzigen.Size = new System.Drawing.Size(75, 64);
+            this.BTNMinWijzigen.TabIndex = 42;
+            this.BTNMinWijzigen.Text = "Min";
+            this.BTNMinWijzigen.UseVisualStyleBackColor = false;
+            this.BTNMinWijzigen.Click += new System.EventHandler(this.BTNMinWijzigen_Click);
             // 
-            // button10
+            // BTNPlusWijzigen
             // 
-            this.button10.BackColor = System.Drawing.Color.Salmon;
-            this.button10.Location = new System.Drawing.Point(544, 74);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 64);
-            this.button10.TabIndex = 42;
-            this.button10.Text = "Min";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.LightGreen;
-            this.button11.Location = new System.Drawing.Point(401, 74);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 64);
-            this.button11.TabIndex = 41;
-            this.button11.Text = "Plus";
-            this.button11.UseVisualStyleBackColor = false;
+            this.BTNPlusWijzigen.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNPlusWijzigen.Location = new System.Drawing.Point(401, 74);
+            this.BTNPlusWijzigen.Name = "BTNPlusWijzigen";
+            this.BTNPlusWijzigen.Size = new System.Drawing.Size(75, 64);
+            this.BTNPlusWijzigen.TabIndex = 41;
+            this.BTNPlusWijzigen.Text = "Plus";
+            this.BTNPlusWijzigen.UseVisualStyleBackColor = false;
+            this.BTNPlusWijzigen.Click += new System.EventHandler(this.BTNPlusWijzigen_Click);
             // 
             // timerDN
             // 
@@ -1795,48 +1791,48 @@
             this.DinerNaBTN.UseVisualStyleBackColor = false;
             this.DinerNaBTN.Click += new System.EventHandler(this.DinerNaBTN_Click);
             // 
-            // button30
+            // BTNPlusDiner
             // 
-            this.button30.BackColor = System.Drawing.Color.LightGreen;
-            this.button30.Location = new System.Drawing.Point(457, 737);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 64);
-            this.button30.TabIndex = 38;
-            this.button30.Text = "Plus";
-            this.button30.UseVisualStyleBackColor = false;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
+            this.BTNPlusDiner.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNPlusDiner.Location = new System.Drawing.Point(457, 737);
+            this.BTNPlusDiner.Name = "BTNPlusDiner";
+            this.BTNPlusDiner.Size = new System.Drawing.Size(75, 64);
+            this.BTNPlusDiner.TabIndex = 38;
+            this.BTNPlusDiner.Text = "Plus";
+            this.BTNPlusDiner.UseVisualStyleBackColor = false;
+            this.BTNPlusDiner.Click += new System.EventHandler(this.BTNPlusDiner_Click);
             // 
-            // button29
+            // BTNMinDiner
             // 
-            this.button29.BackColor = System.Drawing.Color.Salmon;
-            this.button29.Location = new System.Drawing.Point(600, 737);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 64);
-            this.button29.TabIndex = 39;
-            this.button29.Text = "Min";
-            this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
+            this.BTNMinDiner.BackColor = System.Drawing.Color.Salmon;
+            this.BTNMinDiner.Location = new System.Drawing.Point(600, 737);
+            this.BTNMinDiner.Name = "BTNMinDiner";
+            this.BTNMinDiner.Size = new System.Drawing.Size(75, 64);
+            this.BTNMinDiner.TabIndex = 39;
+            this.BTNMinDiner.Text = "Min";
+            this.BTNMinDiner.UseVisualStyleBackColor = false;
+            this.BTNMinDiner.Click += new System.EventHandler(this.BTNMinDiner_Click);
             // 
-            // label13
+            // ALBLDiner
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label13.Location = new System.Drawing.Point(550, 754);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 36);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "0";
+            this.ALBLDiner.AutoSize = true;
+            this.ALBLDiner.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.ALBLDiner.Location = new System.Drawing.Point(550, 754);
+            this.ALBLDiner.Name = "ALBLDiner";
+            this.ALBLDiner.Size = new System.Drawing.Size(33, 36);
+            this.ALBLDiner.TabIndex = 37;
+            this.ALBLDiner.Text = "0";
             // 
-            // button28
+            // BTNVoegToeDiner
             // 
-            this.button28.BackColor = System.Drawing.Color.LightGreen;
-            this.button28.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button28.Location = new System.Drawing.Point(52, 737);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(300, 64);
-            this.button28.TabIndex = 36;
-            this.button28.Text = "Voeg toe tot bestelling";
-            this.button28.UseVisualStyleBackColor = false;
+            this.BTNVoegToeDiner.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNVoegToeDiner.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.BTNVoegToeDiner.Location = new System.Drawing.Point(52, 737);
+            this.BTNVoegToeDiner.Name = "BTNVoegToeDiner";
+            this.BTNVoegToeDiner.Size = new System.Drawing.Size(300, 64);
+            this.BTNVoegToeDiner.TabIndex = 36;
+            this.BTNVoegToeDiner.Text = "Voeg toe tot bestelling";
+            this.BTNVoegToeDiner.UseVisualStyleBackColor = false;
             // 
             // button32
             // 
@@ -1853,10 +1849,10 @@
             // 
             this.DinerPNL.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DinerPNL.Controls.Add(this.button32);
-            this.DinerPNL.Controls.Add(this.button28);
-            this.DinerPNL.Controls.Add(this.label13);
-            this.DinerPNL.Controls.Add(this.button29);
-            this.DinerPNL.Controls.Add(this.button30);
+            this.DinerPNL.Controls.Add(this.BTNVoegToeDiner);
+            this.DinerPNL.Controls.Add(this.ALBLDiner);
+            this.DinerPNL.Controls.Add(this.BTNMinDiner);
+            this.DinerPNL.Controls.Add(this.BTNPlusDiner);
             this.DinerPNL.Controls.Add(this.flowLayoutPanel2);
             this.DinerPNL.Controls.Add(this.panel17);
             this.DinerPNL.Location = new System.Drawing.Point(2, 69);
@@ -1872,16 +1868,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(723, 1047);
-            this.Controls.Add(this.BestellingPNL);
-            this.Controls.Add(this.TafelNummerPNL);
+            this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.WijzigenPNL);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.LunchPNL);
             this.Controls.Add(this.DinerPNL);
+            this.Controls.Add(this.TafelNummerPNL);
+            this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.ChapooLogo);
             this.Controls.Add(this.BTNReturn);
             this.Controls.Add(this.TafelPNL);
-            this.Controls.Add(this.OverzichtPNL);
-            this.Controls.Add(this.WijzigenPNL);
             this.Controls.Add(this.DatumLBL);
             this.Controls.Add(this.TijdLBL);
             this.Controls.Add(this.btnExit);
@@ -2013,9 +2009,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button BTNItemAanpassen;
+        private System.Windows.Forms.Button BTNBestellingPlaatsen;
+        private System.Windows.Forms.Button BTNBestellingVerwijderen;
         private System.Windows.Forms.Button button33;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Timer timerDTap;
@@ -2026,20 +2022,19 @@
         private System.Windows.Forms.Timer timerDT;
         private System.Windows.Forms.Timer timerDH;
         private System.Windows.Forms.Panel WijzigenPNL;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Label ALBLWijzigen;
+        private System.Windows.Forms.Button BTNMinWijzigen;
+        private System.Windows.Forms.Button BTNPlusWijzigen;
+        private System.Windows.Forms.Button BTNWijzigingOplsaan;
+        private System.Windows.Forms.Button BTNItemVerwijderen;
+        private System.Windows.Forms.Button BTNVoegToeL;
+        private System.Windows.Forms.Label ALBLLunch;
+        private System.Windows.Forms.Button BTNMinLunch;
+        private System.Windows.Forms.Button BTNPlusLunch;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Label ALBLDrank;
+        private System.Windows.Forms.Button BTNMinDrank;
+        private System.Windows.Forms.Button BTNPlusDrank;
         private System.Windows.Forms.Panel DTheeDropdown;
         private System.Windows.Forms.ListView ListViewDrankThee;
         private System.Windows.Forms.Button DrankTheeBTN;
@@ -2097,10 +2092,10 @@
         private System.Windows.Forms.ColumnHeader DNNaam;
         private System.Windows.Forms.ColumnHeader DNVoorraad;
         private System.Windows.Forms.Button DinerNaBTN;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button BTNPlusDiner;
+        private System.Windows.Forms.Button BTNMinDiner;
+        private System.Windows.Forms.Label ALBLDiner;
+        private System.Windows.Forms.Button BTNVoegToeDiner;
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Panel DinerPNL;
     }
