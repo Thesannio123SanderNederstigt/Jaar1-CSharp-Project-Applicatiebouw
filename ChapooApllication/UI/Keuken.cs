@@ -27,38 +27,243 @@ namespace UI
         {
             InitializeComponent();
             HidePanels();
-            Select8Orders();
+
         }
 
-        private void Select8Orders()
+        private void SelectCurrentOrders()
         {
-            for (int i = 1; i < 9; i++)
+            BestellingService bestelservice = new BestellingService();
+            List<Bestelling> bestellinglist = bestelservice.GetOrders();
+            List<int> numberlist = new List<int>();
+
+            foreach (Bestelling b in bestellinglist)
             {
-                BestellingService bestelservice = new BestellingService();
-                List<Bestelling> bestellinglist = bestelservice.GetEightOrders();
-                ListViewItem li = new ListViewItem();
-
-                string listviewname = "lv_Tafel";
-
-                foreach (Bestelling b in bestellinglist)
+                if (b.status == false) //om alleen huidige bestellingen te krijgen
                 {
-                    listviewname += listviewname + i;
-
-                    //invullen in de juiste listview
-
-                    /* moet nog aangepast worden naar juiste DB teruggave
-                    li.SubItems.Add(b.omschrijving);
-                    li.SubItems.Add(b.aantal);
-                    */
-
-                    // TODO: kijken hoe we de listviews oproepen dmv string/loop
-                    
+                    int tafelID = b.tafelID;
+                    numberlist.Add(tafelID);
                 }
-
 
             }
 
+            string listviewname = "lv_Tafel";
+
+            int tafelID2 = 0;
+
+            for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
+            {
+                tafelID2 = numberlist[i];
+
+
+                ListView lv = new System.Windows.Forms.ListView();
+                CreateListView(lv, i, tafelID2);
+
+                lv.Name = listviewname + i;
+
+
+
+                List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(tafelID2);
+
+
+                CreateOptionalButtons(Bestellinglistview, i);
+
+                lv.Items.Clear();
+
+                foreach (Bestelling b in Bestellinglistview)
+                {
+                    ListViewItem li = new ListViewItem(b.opmerking.ToString());
+                    li.SubItems.Add(b.tafelID.ToString());
+
+                    lv.Items.Add(li);
+                }
+
+            }
         }
+
+        private void CreateListView(ListView lv, int i, int tafelID2)
+        {
+            lv.Bounds = new Rectangle(new Point(0, 40), new Size(307, 244));
+            ColumnHeader col_MenuItem = new ColumnHeader();
+            col_MenuItem.Text = "Menu Item";
+            col_MenuItem.Width = 243;
+            col_MenuItem.TextAlign = HorizontalAlignment.Left;
+            ColumnHeader col_Aantal = new ColumnHeader();
+            col_Aantal.Text = "Aantal";
+            col_Aantal.Width = 60;
+            col_Aantal.TextAlign = HorizontalAlignment.Left;
+            lv.Columns.Add(col_MenuItem);
+            lv.Columns.Add(col_Aantal);
+            lv.HideSelection = false;
+            lv.TabIndex = 42;
+            lv.UseCompatibleStateImageBehavior = false;
+            lv.View = System.Windows.Forms.View.Details;
+
+            switch (i)
+            {
+                case 0:
+                    {
+                        gBox_Tafel1.Controls.Add(lv);
+                        lbl_Bestelling1.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel1_SelectedIndexChanged);
+                    }
+                    break;
+                case 1:
+                    {
+                        gBox_Tafel2.Controls.Add(lv);
+                        lbl_Bestelling2.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel2_SelectedIndexChanged);
+                    }
+                    break;
+                case 2:
+                    {
+                        gBox_Tafel3.Controls.Add(lv);
+                        lbl_Bestelling3.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel3_SelectedIndexChanged);
+                    }
+                    break;
+                case 3:
+                    {
+                        gBox_Tafel4.Controls.Add(lv);
+                        lbl_Bestelling4.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel4_SelectedIndexChanged);
+                    }
+                    break;
+                case 4:
+                    {
+                        gBox_Tafel5.Controls.Add(lv);
+                        lbl_Bestelling5.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel5_SelectedIndexChanged);
+                    }
+                    break;
+                case 5:
+                    {
+                        gBox_Tafel6.Controls.Add(lv);
+                        lbl_Bestelling6.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel6_SelectedIndexChanged);
+                    }
+                    break;
+                case 6:
+                    {
+                        gBox_Tafel7.Controls.Add(lv);
+                        lbl_Bestelling7.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel7_SelectedIndexChanged);
+                    }
+                    break;
+                case 7:
+                    {
+                        gBox_Tafel8.Controls.Add(lv);
+                        lbl_Bestelling8.Text += tafelID2;
+                        lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel8_SelectedIndexChanged);
+                    }
+                    break;
+            }
+        }
+
+        private void CreateOptionalButtons(List<Bestelling> Bestellinglist, int i)
+        {
+            int aantal = Bestellinglist.Count();
+
+            if (aantal < 10)
+            {
+                return;
+            }
+            else
+            {
+                Button button = new System.Windows.Forms.Button();
+                button.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                button.Location = new System.Drawing.Point(117, 286);
+                button.Size = new System.Drawing.Size(67, 28);
+                button.TabIndex = 41;
+                button.Text = "˙˙˙";
+                button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+                button.UseVisualStyleBackColor = true;
+
+                switch (i)
+                {
+                    case 0:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 1 aanmaken
+                            button.Name = "btn_Tafel1More";
+                            gBox_Tafel1.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel1More_Click);
+                        }
+                        break;
+                    case 1:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 2
+                            button.Name = "btn_Tafel2More";
+                            gBox_Tafel2.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel2More_Click);
+                        }
+                        break;
+                    case 2:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 3
+                            button.Name = "btn_Tafel3More";
+                            gBox_Tafel3.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel3More_Click);
+                        }
+                        break;
+                    case 3:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 4
+                            button.Name = "btn_Tafel4More";
+                            gBox_Tafel4.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel4More_Click);
+                        }
+                        break;
+                    case 4:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 5
+                            button.Name = "btn_Tafel5More";
+                            gBox_Tafel5.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel5More_Click);
+                        }
+                        break;
+                    case 5:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 6
+                            button.Name = "btn_Tafel2More";
+                            gBox_Tafel6.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel6More_Click);
+                        }
+                        break;
+                    case 6:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 7
+                            button.Name = "btn_Tafel7More";
+                            gBox_Tafel7.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel7More_Click);
+                        }
+                        break;
+                    case 7:
+                        {
+                            //specifieke eigenschappen voor de knop in groupbox 8
+                            button.Name = "btn_Tafel8More";
+                            gBox_Tafel8.Controls.Add(button);
+                            button.Click += new System.EventHandler(btn_Tafel8More_Click);
+                        }
+                        break;
+
+                }
+            }
+
+        }
+
+
+        private void TextLabelReset()
+        {
+            lbl_Bestelling1.Text = "Tafel ";
+            lbl_Bestelling2.Text = "Tafel ";
+            lbl_Bestelling3.Text = "Tafel ";
+            lbl_Bestelling4.Text = "Tafel ";
+            lbl_Bestelling5.Text = "Tafel ";
+            lbl_Bestelling6.Text = "Tafel ";
+            lbl_Bestelling7.Text = "Tafel ";
+            lbl_Bestelling8.Text = "Tafel ";
+        }
+
+
 
         //eventhandlers voor op het startscherm panel (pnl_KeukenBarStart)
         private void pictureBx_Uitloggen_Keuken_Click(object sender, EventArgs e)
@@ -73,6 +278,7 @@ namespace UI
         {
             pnl_KeukenBarStart.Hide();
             pnl_BinnenkomendeBestellingen.Show();
+            SelectCurrentOrders();
         }
 
         private void btn_StartAfgeronde_Click(object sender, EventArgs e)
@@ -84,6 +290,7 @@ namespace UI
         //eventhandlers/methoden op/binnen het pnl_BinnenkomendeBestellingen
         private void pictureBx_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
+            TextLabelReset();
             pnl_BinnenkomendeBestellingen.Hide();
             pnl_KeukenBarStart.Show();
         }
@@ -94,13 +301,6 @@ namespace UI
         {
             pnl_TafelBinnenkomendeBestelling.Show();
             lbl_Bestelling1.ForeColor = Color.Orange;
-        }
-
-
-        private void btn_Tafel1More_Click(object sender, EventArgs e)
-        {
-            pnl_TafelBinnenkomendeBestelling.Show();
-
         }
 
 
@@ -151,6 +351,47 @@ namespace UI
             pnl_TafelBinnenkomendeBestelling.Show();
             lbl_Bestelling8.ForeColor = Color.Orange;
 
+        }
+
+        private void btn_Tafel1More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
+
+        }
+
+        private void btn_Tafel2More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
+        }
+
+        private void btn_Tafel3More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
+        }
+
+        private void btn_Tafel4More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
+        }
+
+        private void btn_Tafel5More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
+        }
+
+        private void btn_Tafel6More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
+        }
+
+        private void btn_Tafel7More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
+        }
+
+        private void btn_Tafel8More_Click(object sender, EventArgs e)
+        {
+            pnl_TafelBinnenkomendeBestelling.Show();
         }
 
 

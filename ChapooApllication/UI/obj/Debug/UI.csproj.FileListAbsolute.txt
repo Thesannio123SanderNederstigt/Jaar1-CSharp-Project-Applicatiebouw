@@ -63,3 +63,25 @@ C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe.config
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.dll
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.dll
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.dll
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csprojAssemblyReference.cache
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bar.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Handheld.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb

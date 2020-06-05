@@ -29,7 +29,7 @@ namespace UI
         {
             if (txt_LoginScherm.Text.Length >= 1 && givenValue == "X")
             {
-                txt_LoginScherm.Text = txt_LoginScherm.Text.Remove(loginString.Length - 1, 1);
+                txt_LoginScherm.Text = txt_LoginScherm.Text.Remove(txt_LoginScherm.Text.Length - 1, 1);
             }
             else if (txt_LoginScherm.Text.Length == 0 && givenValue == "X")
             {

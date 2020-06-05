@@ -19,7 +19,7 @@ namespace ChapooDAL
             return ReadBestellingen (ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Bestelling> Get8CurrentOrders()
+        public List<Bestelling> GetCurrentOrders()
         {
             string query = "SELECT tafelID, MIN(besteltijd) AS [besteltijd], ID, [status], rekeningID, opmerking FROM Bestelling GROUP BY tafelID, ID, besteltijd, [status], rekeningID, opmerking";
             SqlParameter[] sqlParameters = new SqlParameter[0];
@@ -47,7 +47,34 @@ namespace ChapooDAL
             return bestellingen;
         }
 
-        
+        public List<Bestelling> GetBestellingMenuItems(int tafelID)
+        {
+            string query = "SELECT MenuItem.omschrijving, COUNT(MenuItem.omschrijving) AS [aantal], Bestelling.ID, rekeningID FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.tafelID = @id GROUP BY MenuItem.omschrijving, Bestelling.ID, rekeningID";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", tafelID) };
+            return ReadSpecialBestelling(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private List<Bestelling> ReadSpecialBestelling(DataTable dataTable)
+        {
+            List<Bestelling> bestellingen = new List<Bestelling>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                int ID = (int)dr["ID"];
+                DateTime besteltijd = DateTime.Now;
+                bool status = false;
+                int tafelID = (int)dr["aantal"];
+                int rekeningID = (int)dr["rekeningID"];
+                string opmerking = (string)dr["omschrijving"];
+
+                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, rekeningID, opmerking);
+                bestellingen.Add(bestelling);
+            }
+
+            return bestellingen;
+        }
+
+
 
         // Get Bestelling by ID
         public Bestelling GetById(int bestellingID)
