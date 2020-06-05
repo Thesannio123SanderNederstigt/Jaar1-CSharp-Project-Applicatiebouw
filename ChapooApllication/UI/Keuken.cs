@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -71,8 +72,8 @@ namespace UI
 
                 foreach (Bestelling b in Bestellinglistview)
                 {
-                    ListViewItem li = new ListViewItem(b.opmerking.ToString());
-                    li.SubItems.Add(b.tafelID.ToString());
+                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                    li.SubItems.Add(b.aantal.ToString());
 
                     lv.Items.Add(li);
                 }
@@ -301,6 +302,37 @@ namespace UI
         {
             pnl_TafelBinnenkomendeBestelling.Show();
             lbl_Bestelling1.ForeColor = Color.Orange;
+
+            int tafelID;
+            string label = lbl_Bestelling1.Text;
+            char last = lbl_Bestelling1.Text.Last();
+            int num = int.Parse(last.ToString());
+
+            if (last.Equals(0))
+            {
+                string result = label.Substring(label.Length - Math.Min(2, label.Length));
+                tafelID = int.Parse(result);
+            }
+            else
+            {
+                tafelID = num;
+            }
+            lbl_Tafel.Text = "Tafel ";
+            lbl_Tafel.Text += tafelID;
+
+            BestellingService bestelservice = new BestellingService();
+            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(tafelID);
+
+            listView_BestelItems.Items.Clear();
+
+            foreach(Bestelling b in Bestellinglistview)
+            {
+                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                li.SubItems.Add(b.aantal.ToString());
+                li.SubItems.Add(b.opmerking.ToString());
+                listView_BestelItems.Items.Add(li);
+            }
+
         }
 
 
@@ -458,6 +490,7 @@ namespace UI
         private void pictureBx_TerugInkomendeBestellingen_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Hide();
+            lbl_Tafel.Text = "Tafel ";
         }
 
         private void btnGereedMenuItem_Click_1(object sender, EventArgs e)
@@ -606,6 +639,20 @@ namespace UI
 
         }
 
+        private void listView_BestelItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = listView_BestelItems.SelectedItems;
 
+            if(listviewitems.Count > 0)
+            {
+                int index = listView_BestelItems.SelectedIndices[0];
+                txtMenuItem.Text = listView_BestelItems.Items[index].SubItems[0].Text;
+                txtAantal.Text = listView_BestelItems.Items[index].SubItems[1].Text;
+                txt_Opmerkingen.Text = listView_BestelItems.Items[index].SubItems[2].Text;
+
+            }
+
+
+        }
     }
 }

@@ -61,13 +61,40 @@ namespace ChapooDAL
             foreach (DataRow dr in dataTable.Rows)
             {
                 int ID = (int)dr["ID"];
-                DateTime besteltijd = DateTime.Now;
                 bool status = false;
-                int tafelID = (int)dr["aantal"];
+                int aantal = (int)dr["aantal"];
                 int rekeningID = (int)dr["rekeningID"];
-                string opmerking = (string)dr["omschrijving"];
+                string opmerking = null;
+                string omschrijving = (string)dr["omschrijving"];
 
-                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, rekeningID, opmerking);
+                Bestelling bestelling = new Bestelling(omschrijving, opmerking, status, aantal, ID, rekeningID);
+                bestellingen.Add(bestelling);
+            }
+
+            return bestellingen;
+        }
+
+        public List<Bestelling> GetBestellingOpmerking(int tafelID)
+        {
+            string query = "SELECT MenuItem.omschrijving, CASE WHEN Bestelling_MenuItem.opmerking IS NULL THEN '' ELSE Bestelling_MenuItem.opmerking END AS [opmerking], COUNT(MenuItem.omschrijving) AS [Aantal], Bestelling.ID AS [BestellingID] FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.tafelID = @id GROUP BY MenuItem.omschrijving, Bestelling_MenuItem.opmerking, Bestelling.ID ORDER BY omschrijving";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", tafelID) };
+            return ReadAnotherSpecialBestelling(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private List<Bestelling> ReadAnotherSpecialBestelling(DataTable dataTable)
+        {
+            List<Bestelling> bestellingen = new List<Bestelling>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                int ID = (int)dr["BestellingID"];
+                bool status = false;
+                int aantal = (int)dr["Aantal"];
+                int rekeningID = 1;
+                string opmerking = (string)dr["opmerking"];
+                string omschrijving = (string)dr["omschrijving"];
+
+                Bestelling bestelling = new Bestelling(omschrijving, opmerking, status, aantal, ID, rekeningID);
                 bestellingen.Add(bestelling);
             }
 
