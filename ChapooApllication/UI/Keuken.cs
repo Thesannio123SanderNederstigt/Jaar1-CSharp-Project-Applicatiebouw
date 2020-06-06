@@ -493,11 +493,9 @@ namespace UI
         {
             //verwerken van gereed melden geselecteerde bestelling (welk label is geselecteerd)
 
-            //zorgen voor het krijgen van een bestellingid van de huidige bestelling in een listview nadat deze geselecteerd is door op de bijbehorende groupbox te klikken (waar deze listview zich in bevind)
-            int bestellingID = int.Parse(lbl_BestellingID.Text);
-
             if (lbl_BestellingID.Text != "")
             {
+                int bestellingID = int.Parse(lbl_BestellingID.Text);
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.UpdateBestelling(bestellingID);
             }
