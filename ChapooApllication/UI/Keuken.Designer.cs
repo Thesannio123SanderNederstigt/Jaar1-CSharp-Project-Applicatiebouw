@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keuken));
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
             "Veal Tartare",
             "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
             "Crab-salmon",
             "1"}, -1);
             this.pnl_KeukenBarStart = new System.Windows.Forms.Panel();
@@ -154,6 +154,15 @@
             this.lbl_AfgerondeBestellingen = new System.Windows.Forms.Label();
             this.btn_VerwijderAfgerondeBestelling = new System.Windows.Forms.Button();
             this.ChapooLogoAfgerondeBetselling = new System.Windows.Forms.PictureBox();
+            this.lbl_Bestelling1ID = new System.Windows.Forms.Label();
+            this.lbl_BestellingID = new System.Windows.Forms.Label();
+            this.lbl_Bestelling5ID = new System.Windows.Forms.Label();
+            this.lbl_Bestelling4ID = new System.Windows.Forms.Label();
+            this.lbl_Bestelling8ID = new System.Windows.Forms.Label();
+            this.lbl_Bestelling2ID = new System.Windows.Forms.Label();
+            this.lbl_Bestelling3ID = new System.Windows.Forms.Label();
+            this.lbl_Bestelling6ID = new System.Windows.Forms.Label();
+            this.lbl_Bestelling7ID = new System.Windows.Forms.Label();
             this.pnl_KeukenBarStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Keuken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChapooLogoBestellingStartScherm)).BeginInit();
@@ -453,6 +462,7 @@
             // 
             // gBoxBestellingen
             // 
+            this.gBoxBestellingen.Controls.Add(this.lbl_BestellingID);
             this.gBoxBestellingen.Controls.Add(this.lblTijd8);
             this.gBoxBestellingen.Controls.Add(this.gBox_Tafel8);
             this.gBoxBestellingen.Controls.Add(this.lblTijd7);
@@ -488,6 +498,7 @@
             // 
             // gBox_Tafel8
             // 
+            this.gBox_Tafel8.Controls.Add(this.lbl_Bestelling8ID);
             this.gBox_Tafel8.Controls.Add(this.lbl_Bestelling8);
             this.gBox_Tafel8.Location = new System.Drawing.Point(1480, 399);
             this.gBox_Tafel8.Name = "gBox_Tafel8";
@@ -520,6 +531,7 @@
             // 
             // gBox_Tafel7
             // 
+            this.gBox_Tafel7.Controls.Add(this.lbl_Bestelling7ID);
             this.gBox_Tafel7.Controls.Add(this.lbl_Bestelling7);
             this.gBox_Tafel7.Location = new System.Drawing.Point(1033, 399);
             this.gBox_Tafel7.Name = "gBox_Tafel7";
@@ -552,6 +564,7 @@
             // 
             // gBox_Tafel6
             // 
+            this.gBox_Tafel6.Controls.Add(this.lbl_Bestelling6ID);
             this.gBox_Tafel6.Controls.Add(this.lbl_Bestelling6);
             this.gBox_Tafel6.Location = new System.Drawing.Point(580, 399);
             this.gBox_Tafel6.Name = "gBox_Tafel6";
@@ -584,6 +597,7 @@
             // 
             // gBox_Tafel5
             // 
+            this.gBox_Tafel5.Controls.Add(this.lbl_Bestelling5ID);
             this.gBox_Tafel5.Controls.Add(this.lbl_Bestelling5);
             this.gBox_Tafel5.Location = new System.Drawing.Point(109, 399);
             this.gBox_Tafel5.Name = "gBox_Tafel5";
@@ -616,6 +630,7 @@
             // 
             // gBox_Tafel4
             // 
+            this.gBox_Tafel4.Controls.Add(this.lbl_Bestelling4ID);
             this.gBox_Tafel4.Controls.Add(this.lbl_Bestelling4);
             this.gBox_Tafel4.Location = new System.Drawing.Point(1480, 41);
             this.gBox_Tafel4.Name = "gBox_Tafel4";
@@ -648,6 +663,7 @@
             // 
             // gBox_Tafel3
             // 
+            this.gBox_Tafel3.Controls.Add(this.lbl_Bestelling3ID);
             this.gBox_Tafel3.Controls.Add(this.lbl_Bestelling3);
             this.gBox_Tafel3.Location = new System.Drawing.Point(1033, 41);
             this.gBox_Tafel3.Name = "gBox_Tafel3";
@@ -680,6 +696,7 @@
             // 
             // gBox_Tafel2
             // 
+            this.gBox_Tafel2.Controls.Add(this.lbl_Bestelling2ID);
             this.gBox_Tafel2.Controls.Add(this.lbl_Bestelling2);
             this.gBox_Tafel2.Location = new System.Drawing.Point(580, 41);
             this.gBox_Tafel2.Name = "gBox_Tafel2";
@@ -712,6 +729,7 @@
             // 
             // gBox_Tafel1
             // 
+            this.gBox_Tafel1.Controls.Add(this.lbl_Bestelling1ID);
             this.gBox_Tafel1.Controls.Add(this.lbl_Bestelling1);
             this.gBox_Tafel1.Location = new System.Drawing.Point(109, 41);
             this.gBox_Tafel1.Name = "gBox_Tafel1";
@@ -899,8 +917,8 @@
             this.listView_AFBestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_AFBestelItems.HideSelection = false;
             this.listView_AFBestelItems.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8});
+            listViewItem17,
+            listViewItem18});
             this.listView_AFBestelItems.Location = new System.Drawing.Point(21, 81);
             this.listView_AFBestelItems.Name = "listView_AFBestelItems";
             this.listView_AFBestelItems.Size = new System.Drawing.Size(857, 390);
@@ -1432,6 +1450,105 @@
             this.ChapooLogoAfgerondeBetselling.TabIndex = 22;
             this.ChapooLogoAfgerondeBetselling.TabStop = false;
             // 
+            // lbl_Bestelling1ID
+            // 
+            this.lbl_Bestelling1ID.AutoSize = true;
+            this.lbl_Bestelling1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling1ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling1ID.Location = new System.Drawing.Point(76, 46);
+            this.lbl_Bestelling1ID.Name = "lbl_Bestelling1ID";
+            this.lbl_Bestelling1ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling1ID.TabIndex = 41;
+            this.lbl_Bestelling1ID.Visible = false;
+            // 
+            // lbl_BestellingID
+            // 
+            this.lbl_BestellingID.AutoSize = true;
+            this.lbl_BestellingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingID.Location = new System.Drawing.Point(38, 26);
+            this.lbl_BestellingID.Name = "lbl_BestellingID";
+            this.lbl_BestellingID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingID.TabIndex = 42;
+            this.lbl_BestellingID.Visible = false;
+            // 
+            // lbl_Bestelling5ID
+            // 
+            this.lbl_Bestelling5ID.AutoSize = true;
+            this.lbl_Bestelling5ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling5ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling5ID.Location = new System.Drawing.Point(50, 31);
+            this.lbl_Bestelling5ID.Name = "lbl_Bestelling5ID";
+            this.lbl_Bestelling5ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling5ID.TabIndex = 42;
+            this.lbl_Bestelling5ID.Visible = false;
+            // 
+            // lbl_Bestelling4ID
+            // 
+            this.lbl_Bestelling4ID.AutoSize = true;
+            this.lbl_Bestelling4ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling4ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling4ID.Location = new System.Drawing.Point(38, 25);
+            this.lbl_Bestelling4ID.Name = "lbl_Bestelling4ID";
+            this.lbl_Bestelling4ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling4ID.TabIndex = 43;
+            this.lbl_Bestelling4ID.Visible = false;
+            // 
+            // lbl_Bestelling8ID
+            // 
+            this.lbl_Bestelling8ID.AutoSize = true;
+            this.lbl_Bestelling8ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling8ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling8ID.Location = new System.Drawing.Point(38, 28);
+            this.lbl_Bestelling8ID.Name = "lbl_Bestelling8ID";
+            this.lbl_Bestelling8ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling8ID.TabIndex = 44;
+            this.lbl_Bestelling8ID.Visible = false;
+            // 
+            // lbl_Bestelling2ID
+            // 
+            this.lbl_Bestelling2ID.AutoSize = true;
+            this.lbl_Bestelling2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling2ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling2ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling2ID.Name = "lbl_Bestelling2ID";
+            this.lbl_Bestelling2ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling2ID.TabIndex = 45;
+            this.lbl_Bestelling2ID.Visible = false;
+            // 
+            // lbl_Bestelling3ID
+            // 
+            this.lbl_Bestelling3ID.AutoSize = true;
+            this.lbl_Bestelling3ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling3ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling3ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling3ID.Name = "lbl_Bestelling3ID";
+            this.lbl_Bestelling3ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling3ID.TabIndex = 45;
+            this.lbl_Bestelling3ID.Visible = false;
+            // 
+            // lbl_Bestelling6ID
+            // 
+            this.lbl_Bestelling6ID.AutoSize = true;
+            this.lbl_Bestelling6ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling6ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling6ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling6ID.Name = "lbl_Bestelling6ID";
+            this.lbl_Bestelling6ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling6ID.TabIndex = 45;
+            this.lbl_Bestelling6ID.Visible = false;
+            // 
+            // lbl_Bestelling7ID
+            // 
+            this.lbl_Bestelling7ID.AutoSize = true;
+            this.lbl_Bestelling7ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling7ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling7ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling7ID.Name = "lbl_Bestelling7ID";
+            this.lbl_Bestelling7ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling7ID.TabIndex = 45;
+            this.lbl_Bestelling7ID.Visible = false;
+            // 
             // Keuken
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1620,5 +1737,14 @@
         private System.Windows.Forms.ListView lv_AfBestelling1;
         private System.Windows.Forms.ColumnHeader col_AfMenuItem1;
         private System.Windows.Forms.ColumnHeader col_AfAantal1;
+        private System.Windows.Forms.Label lbl_Bestelling1ID;
+        private System.Windows.Forms.Label lbl_BestellingID;
+        private System.Windows.Forms.Label lbl_Bestelling5ID;
+        private System.Windows.Forms.Label lbl_Bestelling4ID;
+        private System.Windows.Forms.Label lbl_Bestelling8ID;
+        private System.Windows.Forms.Label lbl_Bestelling2ID;
+        private System.Windows.Forms.Label lbl_Bestelling3ID;
+        private System.Windows.Forms.Label lbl_Bestelling7ID;
+        private System.Windows.Forms.Label lbl_Bestelling6ID;
     }
 }

@@ -49,7 +49,7 @@ namespace ChapooDAL
 
         public List<Bestelling> GetBestellingMenuItems(int tafelID)
         {
-            string query = "SELECT MenuItem.omschrijving, COUNT(MenuItem.omschrijving) AS [aantal], Bestelling.ID, rekeningID FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.tafelID = @id GROUP BY MenuItem.omschrijving, Bestelling.ID, rekeningID";
+            string query = "SELECT MenuItem.omschrijving, COUNT(MenuItem.omschrijving) AS [aantal], Bestelling.ID, rekeningID, Bestelling_MenuItem.[status] FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.tafelID = @id GROUP BY Bestelling_MenuItem.[status], MenuItem.omschrijving, Bestelling.ID, rekeningID";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", tafelID) };
             return ReadSpecialBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -61,7 +61,7 @@ namespace ChapooDAL
             foreach (DataRow dr in dataTable.Rows)
             {
                 int ID = (int)dr["ID"];
-                bool status = false;
+                bool status = (bool)dr["status"];
                 int aantal = (int)dr["aantal"];
                 int rekeningID = (int)dr["rekeningID"];
                 string opmerking = null;
@@ -76,7 +76,7 @@ namespace ChapooDAL
 
         public List<Bestelling> GetBestellingOpmerking(int tafelID)
         {
-            string query = "SELECT MenuItem.omschrijving, CASE WHEN Bestelling_MenuItem.opmerking IS NULL THEN '' ELSE Bestelling_MenuItem.opmerking END AS [opmerking], COUNT(MenuItem.omschrijving) AS [Aantal], Bestelling.ID AS [BestellingID] FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.tafelID = @id GROUP BY MenuItem.omschrijving, Bestelling_MenuItem.opmerking, Bestelling.ID ORDER BY omschrijving";
+            string query = "SELECT MenuItem.omschrijving, CASE WHEN Bestelling_MenuItem.opmerking IS NULL THEN '' ELSE Bestelling_MenuItem.opmerking END AS [opmerking], COUNT(MenuItem.omschrijving) AS [Aantal], Bestelling.ID AS [BestellingID], Bestelling_MenuItem.ID AS [BestellingMenuItemID], Bestelling_MenuItem.[status] FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.tafelID = @id GROUP BY MenuItem.omschrijving, Bestelling_MenuItem.opmerking, Bestelling.ID, Bestelling_MenuItem.ID, Bestelling_MenuItem.[status] ORDER BY omschrijving";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", tafelID) };
             return ReadAnotherSpecialBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -88,9 +88,9 @@ namespace ChapooDAL
             foreach (DataRow dr in dataTable.Rows)
             {
                 int ID = (int)dr["BestellingID"];
-                bool status = false;
+                bool status = (bool)dr["status"];
                 int aantal = (int)dr["Aantal"];
-                int rekeningID = 1;
+                int rekeningID = (int)dr["BestellingMenuItemID"];
                 string opmerking = (string)dr["opmerking"];
                 string omschrijving = (string)dr["omschrijving"];
 
@@ -101,6 +101,21 @@ namespace ChapooDAL
             return bestellingen;
         }
 
+        public string UpdateBestellingMenuItem(int BestellingMenuItemID, string opmerking)
+        {
+            string query = "UPDATE Bestelling_MenuItem SET [status] = 1, opmerking = @opmerking WHERE ID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", BestellingMenuItemID), new SqlParameter("@opmerking", opmerking) };
+            ExecuteEditQuery(query, sqlParameters);
+            return "Menu Bestellingitem succesvol bijgewerkt!";
+        }
+
+        public string UpdateBestelling(int BestellingID)
+        {
+            string query = "UPDATE Bestelling SET [status] = 1 WHERE ID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", BestellingID) };
+            ExecuteEditQuery(query, sqlParameters);
+            return "Bestelling status succesvol gewijzigd!";
+        }
 
 
         // Get Bestelling by ID

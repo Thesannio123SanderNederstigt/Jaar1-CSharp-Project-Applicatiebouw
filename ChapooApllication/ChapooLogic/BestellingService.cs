@@ -117,6 +117,32 @@ namespace ChapooLogic
             }
         }
 
+        public string UpdateBestellingMenuItem(int BestellingMenuItemID, string opmerking)
+        {
+            try
+            {
+                Bestelling_db.UpdateBestellingMenuItem(BestellingMenuItemID, opmerking);
+                return "Menu Bestellingitem succesvol bijgewerkt!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+        public string UpdateBestelling(int BestellingID)
+        {
+            try
+            {
+                Bestelling_db.UpdateBestelling(BestellingID);
+                return "Bestelling status succesvol gewijzigd!";
+            }
+            catch(Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
         public string AddNewBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             try
