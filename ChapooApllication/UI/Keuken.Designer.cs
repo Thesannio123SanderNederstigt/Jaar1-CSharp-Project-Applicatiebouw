@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Keuken));
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Veal Tartare",
-            "2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Crab-salmon",
-            "1"}, -1);
             this.pnl_KeukenBarStart = new System.Windows.Forms.Panel();
             this.pictureBx_Uitloggen_Keuken = new System.Windows.Forms.PictureBox();
             this.btn_StartVoorraad = new System.Windows.Forms.Button();
@@ -60,29 +54,38 @@
             this.lbl_Tafel = new System.Windows.Forms.Label();
             this.btn_AfgerondeBestelling = new System.Windows.Forms.Button();
             this.gBoxBestellingen = new System.Windows.Forms.GroupBox();
+            this.lbl_BestellingID = new System.Windows.Forms.Label();
             this.lblTijd8 = new System.Windows.Forms.Label();
             this.gBox_Tafel8 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling8ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling8 = new System.Windows.Forms.Label();
             this.lblTijd7 = new System.Windows.Forms.Label();
             this.gBox_Tafel7 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling7ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling7 = new System.Windows.Forms.Label();
             this.lblTijd6 = new System.Windows.Forms.Label();
             this.gBox_Tafel6 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling6ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling6 = new System.Windows.Forms.Label();
             this.lblTijd5 = new System.Windows.Forms.Label();
             this.gBox_Tafel5 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling5ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling5 = new System.Windows.Forms.Label();
             this.lblTijd4 = new System.Windows.Forms.Label();
             this.gBox_Tafel4 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling4ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling4 = new System.Windows.Forms.Label();
             this.lblTijd3 = new System.Windows.Forms.Label();
             this.gBox_Tafel3 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling3ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling3 = new System.Windows.Forms.Label();
             this.lblTijd2 = new System.Windows.Forms.Label();
             this.gBox_Tafel2 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling2ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling2 = new System.Windows.Forms.Label();
             this.lblTijd1 = new System.Windows.Forms.Label();
             this.gBox_Tafel1 = new System.Windows.Forms.GroupBox();
+            this.lbl_Bestelling1ID = new System.Windows.Forms.Label();
             this.lbl_Bestelling1 = new System.Windows.Forms.Label();
             this.lbl_Bestellingen = new System.Windows.Forms.Label();
             this.btn_GereedBestelling = new System.Windows.Forms.Button();
@@ -92,6 +95,7 @@
             this.pictureBxAF_KeukenBarStartscherm_Keuken = new System.Windows.Forms.PictureBox();
             this.btn_Binnenkomendestelling = new System.Windows.Forms.Button();
             this.gBoxAfgerondeBestellingen = new System.Windows.Forms.GroupBox();
+            this.lbl_BestellingAFID = new System.Windows.Forms.Label();
             this.lblAFTijd8 = new System.Windows.Forms.Label();
             this.pnl_TafelAfgerondeBestelling = new System.Windows.Forms.Panel();
             this.pictureBx_TerugAfgerondeBestellingen = new System.Windows.Forms.PictureBox();
@@ -104,65 +108,39 @@
             this.lbl_AFDatumTijd = new System.Windows.Forms.Label();
             this.lbl_AFTafel = new System.Windows.Forms.Label();
             this.gBox_AFTafel8 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling8 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_afAantal8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_BestellingAF8ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling8 = new System.Windows.Forms.Label();
             this.lblAFTijd7 = new System.Windows.Forms.Label();
             this.gBox_AFTafel7 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling7 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_afAantal7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_BestellingAF7ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling7 = new System.Windows.Forms.Label();
             this.lblAFTijd6 = new System.Windows.Forms.Label();
             this.gBox_AFTafel6 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling6 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_afAantal6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_BestellingAF6ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling6 = new System.Windows.Forms.Label();
             this.lblAFTijd5 = new System.Windows.Forms.Label();
             this.gBox_AFTafel5 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling5 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_afAantal5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_BestellingAF5ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling5 = new System.Windows.Forms.Label();
             this.lblAFTijd4 = new System.Windows.Forms.Label();
             this.gBox_AFTafel4 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling4 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_afAantal4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_BestellingAF4ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling4 = new System.Windows.Forms.Label();
             this.lblAFTijd3 = new System.Windows.Forms.Label();
             this.gBox_AFTafel3 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling3 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_afAantal3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_BestellingAF3ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling3 = new System.Windows.Forms.Label();
             this.lblAFTijd2 = new System.Windows.Forms.Label();
             this.gBox_AFTafel2 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling2 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_afAantal2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lbl_BestellingAF2ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling2 = new System.Windows.Forms.Label();
             this.lblAFTijd1 = new System.Windows.Forms.Label();
             this.gBox_AFTafel1 = new System.Windows.Forms.GroupBox();
-            this.lv_AfBestelling1 = new System.Windows.Forms.ListView();
-            this.col_AfMenuItem1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_AfAantal1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btn_Tafel1AFMore = new System.Windows.Forms.Button();
+            this.lbl_BestellingAF1ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling1 = new System.Windows.Forms.Label();
             this.lbl_AfgerondeBestellingen = new System.Windows.Forms.Label();
             this.btn_VerwijderAfgerondeBestelling = new System.Windows.Forms.Button();
             this.ChapooLogoAfgerondeBetselling = new System.Windows.Forms.PictureBox();
-            this.lbl_Bestelling1ID = new System.Windows.Forms.Label();
-            this.lbl_BestellingID = new System.Windows.Forms.Label();
-            this.lbl_Bestelling5ID = new System.Windows.Forms.Label();
-            this.lbl_Bestelling4ID = new System.Windows.Forms.Label();
-            this.lbl_Bestelling8ID = new System.Windows.Forms.Label();
-            this.lbl_Bestelling2ID = new System.Windows.Forms.Label();
-            this.lbl_Bestelling3ID = new System.Windows.Forms.Label();
-            this.lbl_Bestelling6ID = new System.Windows.Forms.Label();
-            this.lbl_Bestelling7ID = new System.Windows.Forms.Label();
             this.pnl_KeukenBarStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Keuken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChapooLogoBestellingStartScherm)).BeginInit();
@@ -434,9 +412,8 @@
             this.lbl_DatumTijd.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_DatumTijd.Location = new System.Drawing.Point(731, 27);
             this.lbl_DatumTijd.Name = "lbl_DatumTijd";
-            this.lbl_DatumTijd.Size = new System.Drawing.Size(147, 25);
+            this.lbl_DatumTijd.Size = new System.Drawing.Size(0, 25);
             this.lbl_DatumTijd.TabIndex = 60;
-            this.lbl_DatumTijd.Text = "17-05-20 12:30";
             // 
             // lbl_Tafel
             // 
@@ -485,6 +462,17 @@
             this.gBoxBestellingen.TabIndex = 39;
             this.gBoxBestellingen.TabStop = false;
             // 
+            // lbl_BestellingID
+            // 
+            this.lbl_BestellingID.AutoSize = true;
+            this.lbl_BestellingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingID.Location = new System.Drawing.Point(38, 26);
+            this.lbl_BestellingID.Name = "lbl_BestellingID";
+            this.lbl_BestellingID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingID.TabIndex = 42;
+            this.lbl_BestellingID.Visible = false;
+            // 
             // lblTijd8
             // 
             this.lblTijd8.AutoSize = true;
@@ -492,9 +480,8 @@
             this.lblTijd8.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd8.Location = new System.Drawing.Point(1554, 374);
             this.lblTijd8.Name = "lblTijd8";
-            this.lblTijd8.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd8.Size = new System.Drawing.Size(0, 25);
             this.lblTijd8.TabIndex = 74;
-            this.lblTijd8.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel8
             // 
@@ -505,7 +492,18 @@
             this.gBox_Tafel8.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel8.TabIndex = 73;
             this.gBox_Tafel8.TabStop = false;
-            this.gBox_Tafel8.Enter += new System.EventHandler(this.gBox_Tafel8_Enter);
+            this.gBox_Tafel8.Click += new System.EventHandler(this.gBox_Tafel8_Click);
+            // 
+            // lbl_Bestelling8ID
+            // 
+            this.lbl_Bestelling8ID.AutoSize = true;
+            this.lbl_Bestelling8ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling8ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling8ID.Location = new System.Drawing.Point(38, 28);
+            this.lbl_Bestelling8ID.Name = "lbl_Bestelling8ID";
+            this.lbl_Bestelling8ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling8ID.TabIndex = 44;
+            this.lbl_Bestelling8ID.Visible = false;
             // 
             // lbl_Bestelling8
             // 
@@ -525,9 +523,8 @@
             this.lblTijd7.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd7.Location = new System.Drawing.Point(1107, 374);
             this.lblTijd7.Name = "lblTijd7";
-            this.lblTijd7.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd7.Size = new System.Drawing.Size(0, 25);
             this.lblTijd7.TabIndex = 72;
-            this.lblTijd7.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel7
             // 
@@ -538,7 +535,18 @@
             this.gBox_Tafel7.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel7.TabIndex = 71;
             this.gBox_Tafel7.TabStop = false;
-            this.gBox_Tafel7.Enter += new System.EventHandler(this.gBox_Tafel7_Enter);
+            this.gBox_Tafel7.Click += new System.EventHandler(this.gBox_Tafel7_Click);
+            // 
+            // lbl_Bestelling7ID
+            // 
+            this.lbl_Bestelling7ID.AutoSize = true;
+            this.lbl_Bestelling7ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling7ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling7ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling7ID.Name = "lbl_Bestelling7ID";
+            this.lbl_Bestelling7ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling7ID.TabIndex = 45;
+            this.lbl_Bestelling7ID.Visible = false;
             // 
             // lbl_Bestelling7
             // 
@@ -558,9 +566,8 @@
             this.lblTijd6.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd6.Location = new System.Drawing.Point(654, 374);
             this.lblTijd6.Name = "lblTijd6";
-            this.lblTijd6.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd6.Size = new System.Drawing.Size(0, 25);
             this.lblTijd6.TabIndex = 70;
-            this.lblTijd6.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel6
             // 
@@ -571,7 +578,18 @@
             this.gBox_Tafel6.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel6.TabIndex = 69;
             this.gBox_Tafel6.TabStop = false;
-            this.gBox_Tafel6.Enter += new System.EventHandler(this.gBox_Tafel6_Enter);
+            this.gBox_Tafel6.Click += new System.EventHandler(this.gBox_Tafel6_Click);
+            // 
+            // lbl_Bestelling6ID
+            // 
+            this.lbl_Bestelling6ID.AutoSize = true;
+            this.lbl_Bestelling6ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling6ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling6ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling6ID.Name = "lbl_Bestelling6ID";
+            this.lbl_Bestelling6ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling6ID.TabIndex = 45;
+            this.lbl_Bestelling6ID.Visible = false;
             // 
             // lbl_Bestelling6
             // 
@@ -591,9 +609,8 @@
             this.lblTijd5.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd5.Location = new System.Drawing.Point(183, 374);
             this.lblTijd5.Name = "lblTijd5";
-            this.lblTijd5.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd5.Size = new System.Drawing.Size(0, 25);
             this.lblTijd5.TabIndex = 68;
-            this.lblTijd5.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel5
             // 
@@ -604,7 +621,18 @@
             this.gBox_Tafel5.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel5.TabIndex = 67;
             this.gBox_Tafel5.TabStop = false;
-            this.gBox_Tafel5.Enter += new System.EventHandler(this.gBox_Tafel5_Enter);
+            this.gBox_Tafel5.Click += new System.EventHandler(this.gBox_Tafel5_Click);
+            // 
+            // lbl_Bestelling5ID
+            // 
+            this.lbl_Bestelling5ID.AutoSize = true;
+            this.lbl_Bestelling5ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling5ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling5ID.Location = new System.Drawing.Point(50, 31);
+            this.lbl_Bestelling5ID.Name = "lbl_Bestelling5ID";
+            this.lbl_Bestelling5ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling5ID.TabIndex = 42;
+            this.lbl_Bestelling5ID.Visible = false;
             // 
             // lbl_Bestelling5
             // 
@@ -624,9 +652,8 @@
             this.lblTijd4.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd4.Location = new System.Drawing.Point(1554, 16);
             this.lblTijd4.Name = "lblTijd4";
-            this.lblTijd4.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd4.Size = new System.Drawing.Size(0, 25);
             this.lblTijd4.TabIndex = 66;
-            this.lblTijd4.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel4
             // 
@@ -637,7 +664,18 @@
             this.gBox_Tafel4.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel4.TabIndex = 65;
             this.gBox_Tafel4.TabStop = false;
-            this.gBox_Tafel4.Enter += new System.EventHandler(this.gBox_Tafel4_Enter);
+            this.gBox_Tafel4.Click += new System.EventHandler(this.gBox_Tafel4_Click);
+            // 
+            // lbl_Bestelling4ID
+            // 
+            this.lbl_Bestelling4ID.AutoSize = true;
+            this.lbl_Bestelling4ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling4ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling4ID.Location = new System.Drawing.Point(38, 25);
+            this.lbl_Bestelling4ID.Name = "lbl_Bestelling4ID";
+            this.lbl_Bestelling4ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling4ID.TabIndex = 43;
+            this.lbl_Bestelling4ID.Visible = false;
             // 
             // lbl_Bestelling4
             // 
@@ -657,9 +695,8 @@
             this.lblTijd3.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd3.Location = new System.Drawing.Point(1107, 16);
             this.lblTijd3.Name = "lblTijd3";
-            this.lblTijd3.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd3.Size = new System.Drawing.Size(0, 25);
             this.lblTijd3.TabIndex = 64;
-            this.lblTijd3.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel3
             // 
@@ -670,7 +707,18 @@
             this.gBox_Tafel3.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel3.TabIndex = 63;
             this.gBox_Tafel3.TabStop = false;
-            this.gBox_Tafel3.Enter += new System.EventHandler(this.gBox_Tafel3_Enter);
+            this.gBox_Tafel3.Click += new System.EventHandler(this.gBox_Tafel3_Click);
+            // 
+            // lbl_Bestelling3ID
+            // 
+            this.lbl_Bestelling3ID.AutoSize = true;
+            this.lbl_Bestelling3ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling3ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling3ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling3ID.Name = "lbl_Bestelling3ID";
+            this.lbl_Bestelling3ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling3ID.TabIndex = 45;
+            this.lbl_Bestelling3ID.Visible = false;
             // 
             // lbl_Bestelling3
             // 
@@ -690,9 +738,8 @@
             this.lblTijd2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd2.Location = new System.Drawing.Point(654, 16);
             this.lblTijd2.Name = "lblTijd2";
-            this.lblTijd2.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd2.Size = new System.Drawing.Size(0, 25);
             this.lblTijd2.TabIndex = 62;
-            this.lblTijd2.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel2
             // 
@@ -703,7 +750,18 @@
             this.gBox_Tafel2.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel2.TabIndex = 61;
             this.gBox_Tafel2.TabStop = false;
-            this.gBox_Tafel2.Enter += new System.EventHandler(this.gBox_Tafel2_Enter);
+            this.gBox_Tafel2.Click += new System.EventHandler(this.gBox_Tafel2_Click);
+            // 
+            // lbl_Bestelling2ID
+            // 
+            this.lbl_Bestelling2ID.AutoSize = true;
+            this.lbl_Bestelling2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling2ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling2ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_Bestelling2ID.Name = "lbl_Bestelling2ID";
+            this.lbl_Bestelling2ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling2ID.TabIndex = 45;
+            this.lbl_Bestelling2ID.Visible = false;
             // 
             // lbl_Bestelling2
             // 
@@ -723,9 +781,8 @@
             this.lblTijd1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblTijd1.Location = new System.Drawing.Point(183, 16);
             this.lblTijd1.Name = "lblTijd1";
-            this.lblTijd1.Size = new System.Drawing.Size(147, 25);
+            this.lblTijd1.Size = new System.Drawing.Size(0, 25);
             this.lblTijd1.TabIndex = 59;
-            this.lblTijd1.Text = "17-05-20 12:30";
             // 
             // gBox_Tafel1
             // 
@@ -736,7 +793,18 @@
             this.gBox_Tafel1.Size = new System.Drawing.Size(307, 321);
             this.gBox_Tafel1.TabIndex = 58;
             this.gBox_Tafel1.TabStop = false;
-            this.gBox_Tafel1.Enter += new System.EventHandler(this.gBox_Tafel1_Enter);
+            this.gBox_Tafel1.Click += new System.EventHandler(this.gBox_Tafel1_Click);
+            // 
+            // lbl_Bestelling1ID
+            // 
+            this.lbl_Bestelling1ID.AutoSize = true;
+            this.lbl_Bestelling1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Bestelling1ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Bestelling1ID.Location = new System.Drawing.Point(76, 46);
+            this.lbl_Bestelling1ID.Name = "lbl_Bestelling1ID";
+            this.lbl_Bestelling1ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_Bestelling1ID.TabIndex = 41;
+            this.lbl_Bestelling1ID.Visible = false;
             // 
             // lbl_Bestelling1
             // 
@@ -830,6 +898,7 @@
             // 
             // gBoxAfgerondeBestellingen
             // 
+            this.gBoxAfgerondeBestellingen.Controls.Add(this.lbl_BestellingAFID);
             this.gBoxAfgerondeBestellingen.Controls.Add(this.lblAFTijd8);
             this.gBoxAfgerondeBestellingen.Controls.Add(this.pnl_TafelAfgerondeBestelling);
             this.gBoxAfgerondeBestellingen.Controls.Add(this.gBox_AFTafel8);
@@ -852,6 +921,17 @@
             this.gBoxAfgerondeBestellingen.Size = new System.Drawing.Size(1900, 736);
             this.gBoxAfgerondeBestellingen.TabIndex = 39;
             this.gBoxAfgerondeBestellingen.TabStop = false;
+            // 
+            // lbl_BestellingAFID
+            // 
+            this.lbl_BestellingAFID.AutoSize = true;
+            this.lbl_BestellingAFID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAFID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAFID.Location = new System.Drawing.Point(33, 51);
+            this.lbl_BestellingAFID.Name = "lbl_BestellingAFID";
+            this.lbl_BestellingAFID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAFID.TabIndex = 79;
+            this.lbl_BestellingAFID.Visible = false;
             // 
             // lblAFTijd8
             // 
@@ -916,9 +996,6 @@
             this.AFAantal});
             this.listView_AFBestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_AFBestelItems.HideSelection = false;
-            this.listView_AFBestelItems.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem17,
-            listViewItem18});
             this.listView_AFBestelItems.Location = new System.Drawing.Point(21, 81);
             this.listView_AFBestelItems.Name = "listView_AFBestelItems";
             this.listView_AFBestelItems.Size = new System.Drawing.Size(857, 390);
@@ -965,43 +1042,31 @@
             this.lbl_AFTafel.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFTafel.Location = new System.Drawing.Point(186, 27);
             this.lbl_AFTafel.Name = "lbl_AFTafel";
-            this.lbl_AFTafel.Size = new System.Drawing.Size(97, 31);
+            this.lbl_AFTafel.Size = new System.Drawing.Size(82, 31);
             this.lbl_AFTafel.TabIndex = 41;
-            this.lbl_AFTafel.Text = "Tafel 1";
+            this.lbl_AFTafel.Text = "Tafel ";
             // 
             // gBox_AFTafel8
             // 
-            this.gBox_AFTafel8.Controls.Add(this.lv_AfBestelling8);
+            this.gBox_AFTafel8.Controls.Add(this.lbl_BestellingAF8ID);
             this.gBox_AFTafel8.Controls.Add(this.lbl_AFBestelling8);
             this.gBox_AFTafel8.Location = new System.Drawing.Point(1480, 399);
             this.gBox_AFTafel8.Name = "gBox_AFTafel8";
             this.gBox_AFTafel8.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel8.TabIndex = 73;
             this.gBox_AFTafel8.TabStop = false;
-            this.gBox_AFTafel8.Enter += new System.EventHandler(this.gBox_AFTafel8_Enter);
+            this.gBox_AFTafel8.Click += new System.EventHandler(this.gBox_AFTafel8_Click);
             // 
-            // lv_AfBestelling8
+            // lbl_BestellingAF8ID
             // 
-            this.lv_AfBestelling8.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem8,
-            this.col_afAantal8});
-            this.lv_AfBestelling8.HideSelection = false;
-            this.lv_AfBestelling8.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling8.Name = "lv_AfBestelling8";
-            this.lv_AfBestelling8.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling8.TabIndex = 45;
-            this.lv_AfBestelling8.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling8.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling8.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling8_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem8
-            // 
-            this.col_AfMenuItem8.Text = "Menu Item";
-            this.col_AfMenuItem8.Width = 241;
-            // 
-            // col_afAantal8
-            // 
-            this.col_afAantal8.Text = "Aantal";
+            this.lbl_BestellingAF8ID.AutoSize = true;
+            this.lbl_BestellingAF8ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF8ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF8ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF8ID.Name = "lbl_BestellingAF8ID";
+            this.lbl_BestellingAF8ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF8ID.TabIndex = 45;
+            this.lbl_BestellingAF8ID.Visible = false;
             // 
             // lbl_AFBestelling8
             // 
@@ -1010,9 +1075,9 @@
             this.lbl_AFBestelling8.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling8.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling8.Name = "lbl_AFBestelling8";
-            this.lbl_AFBestelling8.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling8.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling8.TabIndex = 40;
-            this.lbl_AFBestelling8.Text = "Tafel 8";
+            this.lbl_AFBestelling8.Text = "Tafel ";
             // 
             // lblAFTijd7
             // 
@@ -1027,37 +1092,25 @@
             // 
             // gBox_AFTafel7
             // 
-            this.gBox_AFTafel7.Controls.Add(this.lv_AfBestelling7);
+            this.gBox_AFTafel7.Controls.Add(this.lbl_BestellingAF7ID);
             this.gBox_AFTafel7.Controls.Add(this.lbl_AFBestelling7);
             this.gBox_AFTafel7.Location = new System.Drawing.Point(1033, 399);
             this.gBox_AFTafel7.Name = "gBox_AFTafel7";
             this.gBox_AFTafel7.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel7.TabIndex = 71;
             this.gBox_AFTafel7.TabStop = false;
-            this.gBox_AFTafel7.Enter += new System.EventHandler(this.gBox_AFTafel7_Enter);
+            this.gBox_AFTafel7.Click += new System.EventHandler(this.gBox_AFTafel7_Click);
             // 
-            // lv_AfBestelling7
+            // lbl_BestellingAF7ID
             // 
-            this.lv_AfBestelling7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem7,
-            this.col_afAantal7});
-            this.lv_AfBestelling7.HideSelection = false;
-            this.lv_AfBestelling7.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling7.Name = "lv_AfBestelling7";
-            this.lv_AfBestelling7.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling7.TabIndex = 45;
-            this.lv_AfBestelling7.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling7.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling7.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling7_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem7
-            // 
-            this.col_AfMenuItem7.Text = "Menu Item";
-            this.col_AfMenuItem7.Width = 241;
-            // 
-            // col_afAantal7
-            // 
-            this.col_afAantal7.Text = "Aantal";
+            this.lbl_BestellingAF7ID.AutoSize = true;
+            this.lbl_BestellingAF7ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF7ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF7ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF7ID.Name = "lbl_BestellingAF7ID";
+            this.lbl_BestellingAF7ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF7ID.TabIndex = 45;
+            this.lbl_BestellingAF7ID.Visible = false;
             // 
             // lbl_AFBestelling7
             // 
@@ -1066,9 +1119,9 @@
             this.lbl_AFBestelling7.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling7.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling7.Name = "lbl_AFBestelling7";
-            this.lbl_AFBestelling7.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling7.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling7.TabIndex = 40;
-            this.lbl_AFBestelling7.Text = "Tafel 7";
+            this.lbl_AFBestelling7.Text = "Tafel ";
             // 
             // lblAFTijd6
             // 
@@ -1083,37 +1136,25 @@
             // 
             // gBox_AFTafel6
             // 
-            this.gBox_AFTafel6.Controls.Add(this.lv_AfBestelling6);
+            this.gBox_AFTafel6.Controls.Add(this.lbl_BestellingAF6ID);
             this.gBox_AFTafel6.Controls.Add(this.lbl_AFBestelling6);
             this.gBox_AFTafel6.Location = new System.Drawing.Point(580, 399);
             this.gBox_AFTafel6.Name = "gBox_AFTafel6";
             this.gBox_AFTafel6.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel6.TabIndex = 69;
             this.gBox_AFTafel6.TabStop = false;
-            this.gBox_AFTafel6.Enter += new System.EventHandler(this.gBox_AFTafel6_Enter);
+            this.gBox_AFTafel6.Click += new System.EventHandler(this.gBox_AFTafel6_Click);
             // 
-            // lv_AfBestelling6
+            // lbl_BestellingAF6ID
             // 
-            this.lv_AfBestelling6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem6,
-            this.col_afAantal6});
-            this.lv_AfBestelling6.HideSelection = false;
-            this.lv_AfBestelling6.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling6.Name = "lv_AfBestelling6";
-            this.lv_AfBestelling6.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling6.TabIndex = 45;
-            this.lv_AfBestelling6.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling6.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling6.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling6_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem6
-            // 
-            this.col_AfMenuItem6.Text = "Menu Item";
-            this.col_AfMenuItem6.Width = 241;
-            // 
-            // col_afAantal6
-            // 
-            this.col_afAantal6.Text = "Aantal";
+            this.lbl_BestellingAF6ID.AutoSize = true;
+            this.lbl_BestellingAF6ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF6ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF6ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF6ID.Name = "lbl_BestellingAF6ID";
+            this.lbl_BestellingAF6ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF6ID.TabIndex = 45;
+            this.lbl_BestellingAF6ID.Visible = false;
             // 
             // lbl_AFBestelling6
             // 
@@ -1122,9 +1163,9 @@
             this.lbl_AFBestelling6.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling6.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling6.Name = "lbl_AFBestelling6";
-            this.lbl_AFBestelling6.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling6.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling6.TabIndex = 40;
-            this.lbl_AFBestelling6.Text = "Tafel 6";
+            this.lbl_AFBestelling6.Text = "Tafel ";
             // 
             // lblAFTijd5
             // 
@@ -1139,37 +1180,25 @@
             // 
             // gBox_AFTafel5
             // 
-            this.gBox_AFTafel5.Controls.Add(this.lv_AfBestelling5);
+            this.gBox_AFTafel5.Controls.Add(this.lbl_BestellingAF5ID);
             this.gBox_AFTafel5.Controls.Add(this.lbl_AFBestelling5);
             this.gBox_AFTafel5.Location = new System.Drawing.Point(109, 399);
             this.gBox_AFTafel5.Name = "gBox_AFTafel5";
             this.gBox_AFTafel5.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel5.TabIndex = 67;
             this.gBox_AFTafel5.TabStop = false;
-            this.gBox_AFTafel5.Enter += new System.EventHandler(this.gBox_AFTafel5_Enter);
+            this.gBox_AFTafel5.Click += new System.EventHandler(this.gBox_AFTafel5_Click);
             // 
-            // lv_AfBestelling5
+            // lbl_BestellingAF5ID
             // 
-            this.lv_AfBestelling5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem5,
-            this.col_afAantal5});
-            this.lv_AfBestelling5.HideSelection = false;
-            this.lv_AfBestelling5.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling5.Name = "lv_AfBestelling5";
-            this.lv_AfBestelling5.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling5.TabIndex = 45;
-            this.lv_AfBestelling5.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling5.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling5.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling5_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem5
-            // 
-            this.col_AfMenuItem5.Text = "Menu Item";
-            this.col_AfMenuItem5.Width = 241;
-            // 
-            // col_afAantal5
-            // 
-            this.col_afAantal5.Text = "Aantal";
+            this.lbl_BestellingAF5ID.AutoSize = true;
+            this.lbl_BestellingAF5ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF5ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF5ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF5ID.Name = "lbl_BestellingAF5ID";
+            this.lbl_BestellingAF5ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF5ID.TabIndex = 45;
+            this.lbl_BestellingAF5ID.Visible = false;
             // 
             // lbl_AFBestelling5
             // 
@@ -1178,9 +1207,9 @@
             this.lbl_AFBestelling5.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling5.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling5.Name = "lbl_AFBestelling5";
-            this.lbl_AFBestelling5.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling5.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling5.TabIndex = 40;
-            this.lbl_AFBestelling5.Text = "Tafel 5";
+            this.lbl_AFBestelling5.Text = "Tafel ";
             // 
             // lblAFTijd4
             // 
@@ -1195,37 +1224,25 @@
             // 
             // gBox_AFTafel4
             // 
-            this.gBox_AFTafel4.Controls.Add(this.lv_AfBestelling4);
+            this.gBox_AFTafel4.Controls.Add(this.lbl_BestellingAF4ID);
             this.gBox_AFTafel4.Controls.Add(this.lbl_AFBestelling4);
             this.gBox_AFTafel4.Location = new System.Drawing.Point(1480, 41);
             this.gBox_AFTafel4.Name = "gBox_AFTafel4";
             this.gBox_AFTafel4.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel4.TabIndex = 65;
             this.gBox_AFTafel4.TabStop = false;
-            this.gBox_AFTafel4.Enter += new System.EventHandler(this.gBox_AFTafel4_Enter);
+            this.gBox_AFTafel4.Click += new System.EventHandler(this.gBox_AFTafel4_Click);
             // 
-            // lv_AfBestelling4
+            // lbl_BestellingAF4ID
             // 
-            this.lv_AfBestelling4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem4,
-            this.col_afAantal4});
-            this.lv_AfBestelling4.HideSelection = false;
-            this.lv_AfBestelling4.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling4.Name = "lv_AfBestelling4";
-            this.lv_AfBestelling4.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling4.TabIndex = 45;
-            this.lv_AfBestelling4.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling4.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling4.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling4_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem4
-            // 
-            this.col_AfMenuItem4.Text = "Menu Item";
-            this.col_AfMenuItem4.Width = 241;
-            // 
-            // col_afAantal4
-            // 
-            this.col_afAantal4.Text = "Aantal";
+            this.lbl_BestellingAF4ID.AutoSize = true;
+            this.lbl_BestellingAF4ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF4ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF4ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF4ID.Name = "lbl_BestellingAF4ID";
+            this.lbl_BestellingAF4ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF4ID.TabIndex = 45;
+            this.lbl_BestellingAF4ID.Visible = false;
             // 
             // lbl_AFBestelling4
             // 
@@ -1234,9 +1251,9 @@
             this.lbl_AFBestelling4.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling4.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling4.Name = "lbl_AFBestelling4";
-            this.lbl_AFBestelling4.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling4.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling4.TabIndex = 40;
-            this.lbl_AFBestelling4.Text = "Tafel 4";
+            this.lbl_AFBestelling4.Text = "Tafel ";
             // 
             // lblAFTijd3
             // 
@@ -1251,37 +1268,25 @@
             // 
             // gBox_AFTafel3
             // 
-            this.gBox_AFTafel3.Controls.Add(this.lv_AfBestelling3);
+            this.gBox_AFTafel3.Controls.Add(this.lbl_BestellingAF3ID);
             this.gBox_AFTafel3.Controls.Add(this.lbl_AFBestelling3);
             this.gBox_AFTafel3.Location = new System.Drawing.Point(1033, 41);
             this.gBox_AFTafel3.Name = "gBox_AFTafel3";
             this.gBox_AFTafel3.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel3.TabIndex = 63;
             this.gBox_AFTafel3.TabStop = false;
-            this.gBox_AFTafel3.Enter += new System.EventHandler(this.gBox_AFTafel3_Enter);
+            this.gBox_AFTafel3.Click += new System.EventHandler(this.gBox_AFTafel3_Click);
             // 
-            // lv_AfBestelling3
+            // lbl_BestellingAF3ID
             // 
-            this.lv_AfBestelling3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem,
-            this.col_afAantal3});
-            this.lv_AfBestelling3.HideSelection = false;
-            this.lv_AfBestelling3.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling3.Name = "lv_AfBestelling3";
-            this.lv_AfBestelling3.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling3.TabIndex = 45;
-            this.lv_AfBestelling3.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling3.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling3.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling3_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem
-            // 
-            this.col_AfMenuItem.Text = "Menu Item";
-            this.col_AfMenuItem.Width = 241;
-            // 
-            // col_afAantal3
-            // 
-            this.col_afAantal3.Text = "Aantal";
+            this.lbl_BestellingAF3ID.AutoSize = true;
+            this.lbl_BestellingAF3ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF3ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF3ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF3ID.Name = "lbl_BestellingAF3ID";
+            this.lbl_BestellingAF3ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF3ID.TabIndex = 45;
+            this.lbl_BestellingAF3ID.Visible = false;
             // 
             // lbl_AFBestelling3
             // 
@@ -1290,9 +1295,9 @@
             this.lbl_AFBestelling3.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling3.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling3.Name = "lbl_AFBestelling3";
-            this.lbl_AFBestelling3.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling3.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling3.TabIndex = 40;
-            this.lbl_AFBestelling3.Text = "Tafel 3";
+            this.lbl_AFBestelling3.Text = "Tafel ";
             // 
             // lblAFTijd2
             // 
@@ -1307,48 +1312,36 @@
             // 
             // gBox_AFTafel2
             // 
-            this.gBox_AFTafel2.Controls.Add(this.lv_AfBestelling2);
+            this.gBox_AFTafel2.Controls.Add(this.lbl_BestellingAF2ID);
             this.gBox_AFTafel2.Controls.Add(this.lbl_AFBestelling2);
             this.gBox_AFTafel2.Location = new System.Drawing.Point(580, 41);
             this.gBox_AFTafel2.Name = "gBox_AFTafel2";
             this.gBox_AFTafel2.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel2.TabIndex = 61;
             this.gBox_AFTafel2.TabStop = false;
-            this.gBox_AFTafel2.Enter += new System.EventHandler(this.gBox_AFTafel2_Enter);
+            this.gBox_AFTafel2.Click += new System.EventHandler(this.gBox_AFTafel2_Click);
             // 
-            // lv_AfBestelling2
+            // lbl_BestellingAF2ID
             // 
-            this.lv_AfBestelling2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem2,
-            this.col_afAantal2});
-            this.lv_AfBestelling2.HideSelection = false;
-            this.lv_AfBestelling2.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling2.Name = "lv_AfBestelling2";
-            this.lv_AfBestelling2.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling2.TabIndex = 44;
-            this.lv_AfBestelling2.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling2.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling2.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling2_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem2
-            // 
-            this.col_AfMenuItem2.Text = "Menu Item";
-            this.col_AfMenuItem2.Width = 241;
-            // 
-            // col_afAantal2
-            // 
-            this.col_afAantal2.Text = "Aantal";
+            this.lbl_BestellingAF2ID.AutoSize = true;
+            this.lbl_BestellingAF2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF2ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF2ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF2ID.Name = "lbl_BestellingAF2ID";
+            this.lbl_BestellingAF2ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF2ID.TabIndex = 44;
+            this.lbl_BestellingAF2ID.Visible = false;
             // 
             // lbl_AFBestelling2
             // 
             this.lbl_AFBestelling2.AutoSize = true;
             this.lbl_AFBestelling2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AFBestelling2.ForeColor = System.Drawing.Color.Orange;
+            this.lbl_AFBestelling2.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling2.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling2.Name = "lbl_AFBestelling2";
-            this.lbl_AFBestelling2.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling2.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling2.TabIndex = 40;
-            this.lbl_AFBestelling2.Text = "Tafel 2";
+            this.lbl_AFBestelling2.Text = "Tafel ";
             // 
             // lblAFTijd1
             // 
@@ -1363,60 +1356,36 @@
             // 
             // gBox_AFTafel1
             // 
-            this.gBox_AFTafel1.Controls.Add(this.lv_AfBestelling1);
-            this.gBox_AFTafel1.Controls.Add(this.btn_Tafel1AFMore);
+            this.gBox_AFTafel1.Controls.Add(this.lbl_BestellingAF1ID);
             this.gBox_AFTafel1.Controls.Add(this.lbl_AFBestelling1);
             this.gBox_AFTafel1.Location = new System.Drawing.Point(109, 41);
             this.gBox_AFTafel1.Name = "gBox_AFTafel1";
             this.gBox_AFTafel1.Size = new System.Drawing.Size(307, 321);
             this.gBox_AFTafel1.TabIndex = 58;
             this.gBox_AFTafel1.TabStop = false;
-            this.gBox_AFTafel1.Enter += new System.EventHandler(this.gBox_AFTafel1_Enter);
+            this.gBox_AFTafel1.Click += new System.EventHandler(this.gBox_AFTafel1_Click);
             // 
-            // lv_AfBestelling1
+            // lbl_BestellingAF1ID
             // 
-            this.lv_AfBestelling1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.col_AfMenuItem1,
-            this.col_AfAantal1});
-            this.lv_AfBestelling1.HideSelection = false;
-            this.lv_AfBestelling1.Location = new System.Drawing.Point(0, 38);
-            this.lv_AfBestelling1.Name = "lv_AfBestelling1";
-            this.lv_AfBestelling1.Size = new System.Drawing.Size(307, 244);
-            this.lv_AfBestelling1.TabIndex = 43;
-            this.lv_AfBestelling1.UseCompatibleStateImageBehavior = false;
-            this.lv_AfBestelling1.View = System.Windows.Forms.View.Details;
-            this.lv_AfBestelling1.SelectedIndexChanged += new System.EventHandler(this.lv_AfBestelling1_SelectedIndexChanged);
-            // 
-            // col_AfMenuItem1
-            // 
-            this.col_AfMenuItem1.Text = "Menu Item";
-            this.col_AfMenuItem1.Width = 241;
-            // 
-            // col_AfAantal1
-            // 
-            this.col_AfAantal1.Text = "Aantal";
-            // 
-            // btn_Tafel1AFMore
-            // 
-            this.btn_Tafel1AFMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Tafel1AFMore.Location = new System.Drawing.Point(117, 286);
-            this.btn_Tafel1AFMore.Name = "btn_Tafel1AFMore";
-            this.btn_Tafel1AFMore.Size = new System.Drawing.Size(67, 28);
-            this.btn_Tafel1AFMore.TabIndex = 42;
-            this.btn_Tafel1AFMore.Text = "˙˙˙";
-            this.btn_Tafel1AFMore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Tafel1AFMore.UseVisualStyleBackColor = true;
+            this.lbl_BestellingAF1ID.AutoSize = true;
+            this.lbl_BestellingAF1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_BestellingAF1ID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_BestellingAF1ID.Location = new System.Drawing.Point(153, 159);
+            this.lbl_BestellingAF1ID.Name = "lbl_BestellingAF1ID";
+            this.lbl_BestellingAF1ID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_BestellingAF1ID.TabIndex = 43;
+            this.lbl_BestellingAF1ID.Visible = false;
             // 
             // lbl_AFBestelling1
             // 
             this.lbl_AFBestelling1.AutoSize = true;
             this.lbl_AFBestelling1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AFBestelling1.ForeColor = System.Drawing.Color.OliveDrab;
+            this.lbl_AFBestelling1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lbl_AFBestelling1.Location = new System.Drawing.Point(111, 10);
             this.lbl_AFBestelling1.Name = "lbl_AFBestelling1";
-            this.lbl_AFBestelling1.Size = new System.Drawing.Size(72, 25);
+            this.lbl_AFBestelling1.Size = new System.Drawing.Size(61, 25);
             this.lbl_AFBestelling1.TabIndex = 40;
-            this.lbl_AFBestelling1.Text = "Tafel 1";
+            this.lbl_AFBestelling1.Text = "Tafel ";
             // 
             // lbl_AfgerondeBestellingen
             // 
@@ -1449,105 +1418,6 @@
             this.ChapooLogoAfgerondeBetselling.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ChapooLogoAfgerondeBetselling.TabIndex = 22;
             this.ChapooLogoAfgerondeBetselling.TabStop = false;
-            // 
-            // lbl_Bestelling1ID
-            // 
-            this.lbl_Bestelling1ID.AutoSize = true;
-            this.lbl_Bestelling1ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling1ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling1ID.Location = new System.Drawing.Point(76, 46);
-            this.lbl_Bestelling1ID.Name = "lbl_Bestelling1ID";
-            this.lbl_Bestelling1ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling1ID.TabIndex = 41;
-            this.lbl_Bestelling1ID.Visible = false;
-            // 
-            // lbl_BestellingID
-            // 
-            this.lbl_BestellingID.AutoSize = true;
-            this.lbl_BestellingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BestellingID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_BestellingID.Location = new System.Drawing.Point(38, 26);
-            this.lbl_BestellingID.Name = "lbl_BestellingID";
-            this.lbl_BestellingID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_BestellingID.TabIndex = 42;
-            this.lbl_BestellingID.Visible = false;
-            // 
-            // lbl_Bestelling5ID
-            // 
-            this.lbl_Bestelling5ID.AutoSize = true;
-            this.lbl_Bestelling5ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling5ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling5ID.Location = new System.Drawing.Point(50, 31);
-            this.lbl_Bestelling5ID.Name = "lbl_Bestelling5ID";
-            this.lbl_Bestelling5ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling5ID.TabIndex = 42;
-            this.lbl_Bestelling5ID.Visible = false;
-            // 
-            // lbl_Bestelling4ID
-            // 
-            this.lbl_Bestelling4ID.AutoSize = true;
-            this.lbl_Bestelling4ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling4ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling4ID.Location = new System.Drawing.Point(38, 25);
-            this.lbl_Bestelling4ID.Name = "lbl_Bestelling4ID";
-            this.lbl_Bestelling4ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling4ID.TabIndex = 43;
-            this.lbl_Bestelling4ID.Visible = false;
-            // 
-            // lbl_Bestelling8ID
-            // 
-            this.lbl_Bestelling8ID.AutoSize = true;
-            this.lbl_Bestelling8ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling8ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling8ID.Location = new System.Drawing.Point(38, 28);
-            this.lbl_Bestelling8ID.Name = "lbl_Bestelling8ID";
-            this.lbl_Bestelling8ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling8ID.TabIndex = 44;
-            this.lbl_Bestelling8ID.Visible = false;
-            // 
-            // lbl_Bestelling2ID
-            // 
-            this.lbl_Bestelling2ID.AutoSize = true;
-            this.lbl_Bestelling2ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling2ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling2ID.Location = new System.Drawing.Point(153, 159);
-            this.lbl_Bestelling2ID.Name = "lbl_Bestelling2ID";
-            this.lbl_Bestelling2ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling2ID.TabIndex = 45;
-            this.lbl_Bestelling2ID.Visible = false;
-            // 
-            // lbl_Bestelling3ID
-            // 
-            this.lbl_Bestelling3ID.AutoSize = true;
-            this.lbl_Bestelling3ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling3ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling3ID.Location = new System.Drawing.Point(153, 159);
-            this.lbl_Bestelling3ID.Name = "lbl_Bestelling3ID";
-            this.lbl_Bestelling3ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling3ID.TabIndex = 45;
-            this.lbl_Bestelling3ID.Visible = false;
-            // 
-            // lbl_Bestelling6ID
-            // 
-            this.lbl_Bestelling6ID.AutoSize = true;
-            this.lbl_Bestelling6ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling6ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling6ID.Location = new System.Drawing.Point(153, 159);
-            this.lbl_Bestelling6ID.Name = "lbl_Bestelling6ID";
-            this.lbl_Bestelling6ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling6ID.TabIndex = 45;
-            this.lbl_Bestelling6ID.Visible = false;
-            // 
-            // lbl_Bestelling7ID
-            // 
-            this.lbl_Bestelling7ID.AutoSize = true;
-            this.lbl_Bestelling7ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bestelling7ID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_Bestelling7ID.Location = new System.Drawing.Point(153, 159);
-            this.lbl_Bestelling7ID.Name = "lbl_Bestelling7ID";
-            this.lbl_Bestelling7ID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_Bestelling7ID.TabIndex = 45;
-            this.lbl_Bestelling7ID.Visible = false;
             // 
             // Keuken
             // 
@@ -1687,7 +1557,6 @@
         private System.Windows.Forms.PictureBox pictureBx_Uitloggen_Keuken;
         private System.Windows.Forms.PictureBox pictureBx_KeukenBarStartscherm_Keuken;
         private System.Windows.Forms.PictureBox pictureBxAF_KeukenBarStartscherm_Keuken;
-        private System.Windows.Forms.Button btn_Tafel1AFMore;
         private System.Windows.Forms.Panel pnl_TafelBinnenkomendeBestelling;
         private System.Windows.Forms.PictureBox pictureBx_TerugInkomendeBestellingen;
         private System.Windows.Forms.Label lbl_Aantal;
@@ -1713,30 +1582,6 @@
         private System.Windows.Forms.Label lbl_AFBestelling;
         private System.Windows.Forms.Label lbl_AFDatumTijd;
         private System.Windows.Forms.Label lbl_AFTafel;
-        private System.Windows.Forms.ListView lv_AfBestelling8;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem8;
-        private System.Windows.Forms.ColumnHeader col_afAantal8;
-        private System.Windows.Forms.ListView lv_AfBestelling7;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem7;
-        private System.Windows.Forms.ColumnHeader col_afAantal7;
-        private System.Windows.Forms.ListView lv_AfBestelling6;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem6;
-        private System.Windows.Forms.ColumnHeader col_afAantal6;
-        private System.Windows.Forms.ListView lv_AfBestelling5;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem5;
-        private System.Windows.Forms.ColumnHeader col_afAantal5;
-        private System.Windows.Forms.ListView lv_AfBestelling4;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem4;
-        private System.Windows.Forms.ColumnHeader col_afAantal4;
-        private System.Windows.Forms.ListView lv_AfBestelling3;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem;
-        private System.Windows.Forms.ColumnHeader col_afAantal3;
-        private System.Windows.Forms.ListView lv_AfBestelling2;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem2;
-        private System.Windows.Forms.ColumnHeader col_afAantal2;
-        private System.Windows.Forms.ListView lv_AfBestelling1;
-        private System.Windows.Forms.ColumnHeader col_AfMenuItem1;
-        private System.Windows.Forms.ColumnHeader col_AfAantal1;
         private System.Windows.Forms.Label lbl_Bestelling1ID;
         private System.Windows.Forms.Label lbl_BestellingID;
         private System.Windows.Forms.Label lbl_Bestelling5ID;
@@ -1746,5 +1591,14 @@
         private System.Windows.Forms.Label lbl_Bestelling3ID;
         private System.Windows.Forms.Label lbl_Bestelling7ID;
         private System.Windows.Forms.Label lbl_Bestelling6ID;
+        private System.Windows.Forms.Label lbl_BestellingAFID;
+        private System.Windows.Forms.Label lbl_BestellingAF1ID;
+        private System.Windows.Forms.Label lbl_BestellingAF2ID;
+        private System.Windows.Forms.Label lbl_BestellingAF3ID;
+        private System.Windows.Forms.Label lbl_BestellingAF4ID;
+        private System.Windows.Forms.Label lbl_BestellingAF5ID;
+        private System.Windows.Forms.Label lbl_BestellingAF7ID;
+        private System.Windows.Forms.Label lbl_BestellingAF6ID;
+        private System.Windows.Forms.Label lbl_BestellingAF8ID;
     }
 }
