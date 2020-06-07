@@ -54,16 +54,7 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTafelTest(ExecuteSelectQuery(query, sqlParameters));
         }
-
-        //Get all Tables 
-        public List<Tafel> Get_All_Tafels()
-        {
-            string query = "SELECT ID, [status] FROM [Tafel]";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTafels(ExecuteSelectQuery(query, sqlParameters));
-        }        
-
-
+ 
         //Get tafel by ID
         public Tafel GetById(int tafelID)
         {

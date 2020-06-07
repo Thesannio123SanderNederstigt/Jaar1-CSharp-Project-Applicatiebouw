@@ -135,7 +135,7 @@ namespace UI
                 DateTime besteltijd;
                 current = false;
 
-                for (int i = 0; i < 7; i++) //van 0 t/m 7 maximaal
+                for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
                 {
                     tafelID2 = numberlist[i];
 

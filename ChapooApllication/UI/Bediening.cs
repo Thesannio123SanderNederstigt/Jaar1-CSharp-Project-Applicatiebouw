@@ -99,7 +99,6 @@ namespace UI
         //test
         private void TafelStatus()
         {
-            
             tafels = TafelService.GetTafel();
 
             for (int i = 0; i < tafels.Count; i++)
@@ -110,7 +109,7 @@ namespace UI
                 }
                 else if (tafels[i].status == false)
                 {
-                    buttons[i].BackColor = Color.Salmon;
+                    buttons[i].BackColor = Color.Red;
                 }
             }
         }
