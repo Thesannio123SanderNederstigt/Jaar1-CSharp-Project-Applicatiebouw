@@ -50,8 +50,8 @@
             this.BTNBestellen = new System.Windows.Forms.Button();
             this.BTNRekening = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.PNL = new System.Windows.Forms.Panel();
+            this.LBLTafelNummer = new System.Windows.Forms.Label();
             this.BestellingPNL = new System.Windows.Forms.Panel();
             this.BTNDiner = new System.Windows.Forms.Button();
             this.BTNLunch = new System.Windows.Forms.Button();
@@ -194,7 +194,7 @@
             this.HoofdschermPNL.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.TafelNummerPNL.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.PNL.SuspendLayout();
             this.BestellingPNL.SuspendLayout();
             this.panel4.SuspendLayout();
             this.LunchPNL.SuspendLayout();
@@ -423,7 +423,7 @@
             this.TafelNummerPNL.Controls.Add(this.BTNBestellen);
             this.TafelNummerPNL.Controls.Add(this.BTNRekening);
             this.TafelNummerPNL.Controls.Add(this.button1);
-            this.TafelNummerPNL.Controls.Add(this.panel2);
+            this.TafelNummerPNL.Controls.Add(this.PNL);
             this.TafelNummerPNL.Location = new System.Drawing.Point(0, 73);
             this.TafelNummerPNL.Margin = new System.Windows.Forms.Padding(2);
             this.TafelNummerPNL.Name = "TafelNummerPNL";
@@ -465,27 +465,27 @@
             this.button1.Text = "Rekening";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // PNL
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(48, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(625, 103);
-            this.panel2.TabIndex = 23;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.PNL.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PNL.Controls.Add(this.LBLTafelNummer);
+            this.PNL.Location = new System.Drawing.Point(48, 74);
+            this.PNL.Margin = new System.Windows.Forms.Padding(2);
+            this.PNL.Name = "PNL";
+            this.PNL.Size = new System.Drawing.Size(625, 103);
+            this.PNL.TabIndex = 23;
+            this.PNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // LBLTafelNummer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label1.Location = new System.Drawing.Point(243, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 70);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tafel";
+            this.LBLTafelNummer.AutoSize = true;
+            this.LBLTafelNummer.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.LBLTafelNummer.Location = new System.Drawing.Point(243, 19);
+            this.LBLTafelNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBLTafelNummer.Name = "LBLTafelNummer";
+            this.LBLTafelNummer.Size = new System.Drawing.Size(147, 70);
+            this.LBLTafelNummer.TabIndex = 5;
+            this.LBLTafelNummer.Text = "Tafel";
             // 
             // BestellingPNL
             // 
@@ -1870,13 +1870,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(723, 1047);
+            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.TafelPNL);
             this.Controls.Add(this.LunchPNL);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.DinerPNL);
             this.Controls.Add(this.OverzichtPNL);
             this.Controls.Add(this.WijzigenPNL);
-            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.ChapooLogo);
             this.Controls.Add(this.BTNReturn);
@@ -1896,8 +1896,8 @@
             this.HoofdschermPNL.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.TafelNummerPNL.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.PNL.ResumeLayout(false);
+            this.PNL.PerformLayout();
             this.BestellingPNL.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1969,8 +1969,8 @@
         private System.Windows.Forms.Panel DrankPNL;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel PNL;
+        private System.Windows.Forms.Label LBLTafelNummer;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Button btnT1;
         private System.Windows.Forms.Button btnT2;

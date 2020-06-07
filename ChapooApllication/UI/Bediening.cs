@@ -109,7 +109,7 @@ namespace UI
                 }
                 else if (tafels[i].status == false)
                 {
-                    buttons[i].BackColor = Color.Salmon;
+                    buttons[i].BackColor = Color.Red;
                 }
             }
         }
@@ -117,6 +117,7 @@ namespace UI
         {
             tafel = tafels[0];
             TafelNummerPNL.Show();
+            LBLTafelNummer.Text = "Tafel 1";
             TafelPNL.Hide();
 
         }
@@ -444,6 +445,7 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[1];
+            LBLTafelNummer.Text = "Tafel 2";
         }
 
         private void btnT3_Click(object sender, EventArgs e)
@@ -451,6 +453,7 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[2];
+            LBLTafelNummer.Text = "Tafel 3";
         }
 
         private void btnT4_Click(object sender, EventArgs e)
@@ -458,6 +461,7 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[3];
+            LBLTafelNummer.Text = "Tafel 4";
         }
 
         private void btnT5_Click(object sender, EventArgs e)
@@ -465,6 +469,7 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[4];
+            LBLTafelNummer.Text = "Tafel 5";
         }
 
         private void btnT6_Click(object sender, EventArgs e)
@@ -472,6 +477,7 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[5];
+            LBLTafelNummer.Text = "Tafel 6";
         }
 
         private void btnT7_Click(object sender, EventArgs e)
@@ -479,6 +485,7 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[6];
+            LBLTafelNummer.Text = "Tafel 7";
         }
 
         private void btnT8_Click(object sender, EventArgs e)
@@ -486,6 +493,7 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[7];
+            LBLTafelNummer.Text = "Tafel 8";
         }
 
         private void btnT9_Click(object sender, EventArgs e)
@@ -493,12 +501,14 @@ namespace UI
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[8];
+            LBLTafelNummer.Text = "Tafel 9";
         }
         private void btnT10_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
             tafel = tafels[9];
+            LBLTafelNummer.Text = "Tafel 10";
         }
         private void panel11_Paint_1(object sender, PaintEventArgs e)
         {

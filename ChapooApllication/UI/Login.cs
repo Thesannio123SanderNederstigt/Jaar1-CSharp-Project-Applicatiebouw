@@ -131,7 +131,6 @@ namespace UI
                 {
                     loginCode = int.Parse(loginString);
                 }
-
                 MedewerkerService medewerkerservice = new MedewerkerService();
                 Medewerker medewerker = medewerkerservice.GetByLogincode(loginCode);
                 Username = $"{medewerker.voornaam} {medewerker.achternaam}";
@@ -150,9 +149,9 @@ namespace UI
                 }
                 else if (medewerker.type == "bediening")
                 {
-                    Bediening handheld = new Bediening();
-                    handheld.Show();
-                    //this.Visible = false;
+                    Bediening bediening = new Bediening();
+                    bediening.Show();
+                    this.Visible = false;
                 }
                 else if (medewerker.type == "barmedewerker")
                 {
