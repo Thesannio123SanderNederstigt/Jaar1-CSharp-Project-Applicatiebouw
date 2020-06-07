@@ -18,7 +18,7 @@ namespace ChapooLogic
         {
             try
             {
-                List<Tafel> tafellijst = Tafel_db.Get_All_Tafels();
+                List<Tafel> tafellijst = Tafel_db.GetTafels();
 
                 if(tafellijst == null)
                 {
@@ -84,7 +84,7 @@ namespace ChapooLogic
         // test gillian 
         public List<Tafel> GetTafeltest()
         {
-            return Tafel_db.Get_All_Tafels();
+            return Tafel_db.GetTafels();
         }
 
         public List<Tafel> GeTafelStatus(bool status)
@@ -99,10 +99,7 @@ namespace ChapooLogic
 
         public List<Tafel> GetTafel()
         {
-            List<Tafel> testlijst = new List<Tafel>();
-            testlijst = Tafel_db.GetTafels();
-
-            return testlijst;
+            return Tafel_db.GetTafels();
         }
     }
 }
