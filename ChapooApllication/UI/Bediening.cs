@@ -21,7 +21,7 @@ namespace UI
         private BestellingService BestellingService = new BestellingService();
         private bool isNeer;
         private Tafel tafel; //zodat ik het niet bij elke btn# click moet zetten
-        private List<Tafel> tafels = new List<Tafel>(); //voor de "TafelStatus" void en btn# click
+        private List<Tafel> tafels; //voor de "TafelStatus" void en btn# click
         private List<Button> buttons; // voor de "TafelPNL" en "TafelStatus" voids
 
         private void BTNReturn_Click(object sender, EventArgs e)
@@ -99,8 +99,8 @@ namespace UI
         //test
         private void TafelStatus()
         {
-            TafelService tafelservice = new TafelService();
-            tafels = tafelservice.GetTafel();
+            
+            tafels = TafelService.GetTafel();
 
             for (int i = 0; i < tafels.Count; i++)
             {
@@ -110,7 +110,7 @@ namespace UI
                 }
                 else if (tafels[i].status == false)
                 {
-                    buttons[i].BackColor = Color.Red;
+                    buttons[i].BackColor = Color.Salmon;
                 }
             }
         }

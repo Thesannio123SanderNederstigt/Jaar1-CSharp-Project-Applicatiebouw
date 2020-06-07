@@ -99,10 +99,7 @@ namespace ChapooLogic
 
         public List<Tafel> GetTafel()
         {
-            List<Tafel> testlijst = new List<Tafel>();
-            testlijst = Tafel_db.GetTafels();
-
-            return testlijst;
+            return Tafel_db.GetTafels();
         }
     }
 }
