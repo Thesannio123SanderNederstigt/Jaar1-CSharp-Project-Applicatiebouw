@@ -20,5 +20,10 @@ namespace ChapooModel
             this.status = status;
             this.medewerkerID = medewerkerid;
         }
+        public Tafel(int id, bool status)
+        {
+            this.ID = id;
+            this.status = status;
+        }
     }
 }

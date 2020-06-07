@@ -34,16 +34,13 @@ namespace ChapooDAL
             return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        // Voor 
+        // Om menu item bij menukaart en categorie te krijgen
         public List<MenuItem> GetByCat(string MenuKaartSoort, string Categorie)
         {
             string query = $"SELECT ID, menukaartsoort, categorie, prijs, btw, omschrijving, aantalvoorraad FROM MenuItem where menukaartsoort = '{MenuKaartSoort}' and categorie = '{Categorie}'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
         }
-
-        //
-
         private List<MenuItem> ReadMenuItems(DataTable dataTable)
         {
             List<MenuItem> menuitems = new List<MenuItem>();
@@ -74,7 +71,7 @@ namespace ChapooDAL
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //get by type and sort test
+        //get by type and sort TEST
         public MenuItem Db_GetMenuItem(string MenuKaartSoort, string SoortType)
         {
             string query = "SELECT * FROM MenuItem Where menukaartsoort = @MenuKaartSoort and categorie = @SoortType";

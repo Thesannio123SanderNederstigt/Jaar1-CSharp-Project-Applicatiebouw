@@ -47,8 +47,6 @@ namespace ChapooDAL
             return bestellingen;
         }
 
-        
-
         // Get Bestelling by ID
         public Bestelling GetById(int bestellingID)
         {
@@ -56,8 +54,6 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[]  { new SqlParameter("@id", bestellingID) };
             return ReadBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
-
-
 
         private Bestelling ReadBestelling(DataTable dataTable)
         {

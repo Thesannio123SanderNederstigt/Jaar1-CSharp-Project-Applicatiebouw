@@ -157,7 +157,7 @@ namespace ChapooLogic
         }
 
 
-        // test om soort en cat gelijk te vinden 
+        // test om soort en cat menuitem te krijgen
         public List<MenuItem> GetItems(string MenuKaartSoort, string Categorie)
         {
             return MenuItem_db.GetByCat(MenuKaartSoort, Categorie);

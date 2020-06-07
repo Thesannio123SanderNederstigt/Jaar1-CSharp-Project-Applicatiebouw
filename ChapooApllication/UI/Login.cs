@@ -150,7 +150,7 @@ namespace UI
                 }
                 else if (medewerker.type == "bediening")
                 {
-                    Handheld handheld = new Handheld();
+                    Bediening handheld = new Bediening();
                     handheld.Show();
                     //this.Visible = false;
                 }
