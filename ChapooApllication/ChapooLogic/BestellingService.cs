@@ -54,11 +54,11 @@ namespace ChapooLogic
             }
         }
 
-        public List<Bestelling> GetOrders()
+        public List<Bestelling> GetOrders(string minMax)
         {
             try
             {
-                List<Bestelling> bestellingslijst = Bestelling_db.GetCurrentOrders();
+                List<Bestelling> bestellingslijst = Bestelling_db.GetCurrentOrders(minMax);
 
                 if (bestellingslijst == null)
                 {

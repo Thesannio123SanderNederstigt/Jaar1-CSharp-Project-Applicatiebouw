@@ -20,6 +20,8 @@ namespace ChapooModel
 
         public int aantal { get; set; }
 
+        public string kaartsoort { get; set; }
+
 
         public Bestelling(int ID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
@@ -31,7 +33,18 @@ namespace ChapooModel
             this.opmerking = opmerking;
         }
 
-        public Bestelling(string omschrijving, string opmerking, bool status, int aantal, int bestellingID, int rekeningID)
+        public Bestelling(int ID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking, string kaartsoort)
+        {
+            this.ID = ID;
+            this.besteltijd = besteltijd;
+            this.status = status;
+            this.tafelID = tafelID;
+            this.rekeningID = rekeningID;
+            this.opmerking = opmerking;
+            this.kaartsoort = kaartsoort;
+        }
+
+        public Bestelling(string omschrijving, string opmerking, bool status, int aantal, int bestellingID, int rekeningID, string kaartsoort)
         {
             this.omschrijving = omschrijving;
             this.opmerking = opmerking;
@@ -39,6 +52,7 @@ namespace ChapooModel
             this.ID = bestellingID;
             this.rekeningID = rekeningID;
             this.aantal = aantal;
+            this.kaartsoort = kaartsoort;
         }
     }
 }
