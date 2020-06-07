@@ -19,10 +19,14 @@ namespace UI
         private RekeningService RekeningService = new RekeningService();
         private TafelService TafelService = new TafelService();
         private BestellingService BestellingService = new BestellingService();
+        private bool isNeer;
+        private Tafel tafel; //zodat ik het niet bij elke btn# click moet zetten
+        private List<Tafel> tafels; //voor de "TafelStatus" void en btn# click
+        private List<Button> buttons; // voor de "TafelPNL" en "TafelStatus" voids
 
         private void BTNReturn_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -35,7 +39,7 @@ namespace UI
 
         public Bediening()
         {
-            InitializeComponent();     
+            InitializeComponent();
         }
 
         private void Bediening_Load(object sender, EventArgs e)
@@ -54,8 +58,6 @@ namespace UI
             LunchPNL.Hide();
             DinerPNL.Hide();
             OverzichtPNL.Hide();
-            
-
         }
         private void ShowPanel(string PanelName)
         {
@@ -64,29 +66,61 @@ namespace UI
             if (PanelName == "TafelPNL")
             {
                 TafelPNL.Show();
+                buttons = new List<Button>();
+                buttons.Add(btnT1);
+                buttons.Add(btnT2);
+                buttons.Add(btnT3);
+                buttons.Add(btnT4);
+                buttons.Add(btnT5);
+                buttons.Add(btnT6);
+                buttons.Add(btnT7);
+                buttons.Add(btnT8);
+                buttons.Add(btnT9);
+                buttons.Add(btnT10);
+                TafelStatus();
             }
 
             else if (PanelName == "TafelNummerPNL")
             {
-
             }
 
             else if (PanelName == "BestellingPNL")
             {
-
             }
 
             else if (PanelName == "OverzichtPNL")
             {
-
             }
 
             else if (PanelName == "WijzigenPNL")
             {
-
             }
         }
-        //
+        //test
+        private void TafelStatus()
+        {
+            tafels = TafelService.GetTafel();
+
+            for (int i = 0; i < tafels.Count; i++)
+            {
+                if (tafels[i].status == true)
+                {
+                    buttons[i].BackColor = Color.LightGreen;
+                }
+                else if (tafels[i].status == false)
+                {
+                    buttons[i].BackColor = Color.Salmon;
+                }
+            }
+        }
+        private void btnT1_Click(object sender, EventArgs e)
+        {
+            tafel = tafels[0];
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+
+        }
+
         public void PlusClick(Label Plus) //Void voor alle plus knoppen 
         {
             int AantalLBL = int.Parse(Plus.Text);
@@ -104,7 +138,7 @@ namespace UI
             }
         }
 
-        public void VulListView(string MenuSoort, string Categorie, ListView ListViewNaam)
+        public void VulListView(string MenuSoort, string Categorie, ListView ListViewNaam) //Dit is om alle lijsten te vullen
         {
             ListViewNaam.Items.Clear();
 
@@ -120,8 +154,7 @@ namespace UI
                 ListViewNaam.Items.Add(List);
             }
         }
-        private bool isNeer;
-        public void TimerClick(Timer TimerNaam, Button BTNNaam, Panel DropDownNaam)
+        public void TimerClick(Timer TimerNaam, Button BTNNaam, Panel DropDownNaam) //Dit is om alle menu balken te openen
         {
             if (isNeer)
             {
@@ -172,7 +205,6 @@ namespace UI
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
         }
-        //Dit is om alle menu lijsten te vullen en de menu te openen
         private void timerDN_Tick(object sender, EventArgs e) // NAGERECHT DINER 
         {
             TimerClick(timerDN, DinerNaBTN, DNDropdown);
@@ -407,64 +439,66 @@ namespace UI
 
         }
 
-        private void btnT1_Click(object sender, EventArgs e)
-        {
-
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-        }
-
         private void btnT2_Click(object sender, EventArgs e)
-        {
+        {      
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[1];
         }
 
         private void btnT3_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[2];
         }
 
         private void btnT4_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[3];
         }
 
         private void btnT5_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[4];
         }
 
         private void btnT6_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[5];
         }
 
         private void btnT7_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[6];
         }
 
         private void btnT8_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[7];
         }
 
         private void btnT9_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[8];
         }
         private void btnT10_Click(object sender, EventArgs e)
         {
             TafelNummerPNL.Show();
             TafelPNL.Hide();
+            tafel = tafels[9];
         }
         private void panel11_Paint_1(object sender, PaintEventArgs e)
         {
@@ -486,14 +520,28 @@ namespace UI
       
         }
 
-        private void button33_Click(object sender, EventArgs e)
+        private void BTNBestellingLunch_Click(object sender, EventArgs e)
         {
+            LunchPNL.Hide();
+            OverzichtPNL.Show();
 
         }
 
         private void OverzichtPNL_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BTNBestellingDiner_Click(object sender, EventArgs e)
+        {
+            OverzichtPNL.Show();
+            DinerPNL.Hide();
+        }
+
+        private void BTNBestellingDrank_Click(object sender, EventArgs e)
+        {
+            DrankPNL.Hide();
+            OverzichtPNL.Show();
         }
     }
 }
