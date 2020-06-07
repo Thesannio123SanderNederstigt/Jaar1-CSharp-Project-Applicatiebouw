@@ -16,6 +16,10 @@ namespace ChapooModel
         public int rekeningID { get; set; }
         public string opmerking { get; set; }
 
+        public string omschrijving { get; set; }
+
+        public int aantal { get; set; }
+
 
         public Bestelling(int ID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
@@ -25,6 +29,16 @@ namespace ChapooModel
             this.tafelID = tafelID;
             this.rekeningID = rekeningID;
             this.opmerking = opmerking;
+        }
+
+        public Bestelling(string omschrijving, string opmerking, bool status, int aantal, int bestellingID, int rekeningID)
+        {
+            this.omschrijving = omschrijving;
+            this.opmerking = opmerking;
+            this.status = status;
+            this.ID = bestellingID;
+            this.rekeningID = rekeningID;
+            this.aantal = aantal;
         }
     }
 }

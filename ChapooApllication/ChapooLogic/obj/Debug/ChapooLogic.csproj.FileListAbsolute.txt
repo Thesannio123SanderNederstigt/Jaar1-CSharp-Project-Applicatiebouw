@@ -30,3 +30,14 @@ C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllica
 C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
 C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.dll
 C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.dll
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.dll
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooModel.dll
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooModel.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csprojAssemblyReference.cache
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CoreCompileInputs.cache
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.dll
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.pdb
