@@ -64,3 +64,4 @@ C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources

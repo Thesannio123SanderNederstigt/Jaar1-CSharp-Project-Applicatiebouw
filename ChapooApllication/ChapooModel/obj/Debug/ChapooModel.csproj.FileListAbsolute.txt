@@ -1,6 +1,5 @@
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooModel\bin\Debug\ChapooModel.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooModel\bin\Debug\ChapooModel.pdb
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.csprojAssemblyReference.cache
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.pdb
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.csproj.CoreCompileInputs.cache

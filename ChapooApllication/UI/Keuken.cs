@@ -16,6 +16,7 @@ namespace UI
     public partial class Keuken : Form
     {
         string Type = Login.MedewerkerType;
+
         bool current;
 
         public void HidePanels()

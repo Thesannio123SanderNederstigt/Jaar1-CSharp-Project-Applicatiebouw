@@ -14,7 +14,7 @@ namespace ChapooLogic
     {
         private readonly TafelDAO Tafel_db = new TafelDAO();
 
-        public List<Tafel> GetTafels()
+        public List<Tafel> GetAllTafels()
         {
             try
             {
@@ -96,9 +96,13 @@ namespace ChapooLogic
         {
             return Tafel_db.Get_By_ID(ID);
         }
+
         public List<Tafel> GetTafel()
         {
-            return Tafel_db.GetTafels();
+            List<Tafel> testlijst = new List<Tafel>();
+            testlijst = Tafel_db.GetTafels();
+
+            return testlijst;
         }
     }
 }
