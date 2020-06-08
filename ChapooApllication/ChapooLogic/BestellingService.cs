@@ -54,11 +54,11 @@ namespace ChapooLogic
             }
         }
 
-        public List<Bestelling> GetOrders()
+        public List<Bestelling> GetOrders(string minMax)
         {
             try
             {
-                List<Bestelling> bestellingslijst = Bestelling_db.GetCurrentOrders();
+                List<Bestelling> bestellingslijst = Bestelling_db.GetCurrentOrders(minMax);
 
                 if (bestellingslijst == null)
                 {
@@ -114,6 +114,32 @@ namespace ChapooLogic
                 Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
                 fakeBestellingLijst.Add(fakeBestelling);
                 return fakeBestellingLijst;
+            }
+        }
+
+        public string UpdateBestellingMenuItem(int BestellingMenuItemID, string opmerking)
+        {
+            try
+            {
+                Bestelling_db.UpdateBestellingMenuItem(BestellingMenuItemID, opmerking);
+                return "Menu Bestellingitem succesvol bijgewerkt!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+        public string UpdateBestelling(int BestellingID)
+        {
+            try
+            {
+                Bestelling_db.UpdateBestelling(BestellingID);
+                return "Bestelling status succesvol gewijzigd!";
+            }
+            catch(Exception e)
+            {
+                return e.ToString();
             }
         }
 

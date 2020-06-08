@@ -50,8 +50,8 @@
             this.BTNBestellen = new System.Windows.Forms.Button();
             this.BTNRekening = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.PNL = new System.Windows.Forms.Panel();
+            this.LBLTafelNummer = new System.Windows.Forms.Label();
             this.BestellingPNL = new System.Windows.Forms.Panel();
             this.BTNDiner = new System.Windows.Forms.Button();
             this.BTNLunch = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@
             this.ALBLLunch = new System.Windows.Forms.Label();
             this.BTNMinLunch = new System.Windows.Forms.Button();
             this.BTNPlusLunch = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
+            this.BTNBestellingLunch = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.LVDropdown = new System.Windows.Forms.Panel();
             this.ListViewLunchV = new System.Windows.Forms.ListView();
@@ -95,7 +95,7 @@
             this.ALBLDrank = new System.Windows.Forms.Label();
             this.BTNMinDrank = new System.Windows.Forms.Button();
             this.BTNPlusDrank = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
+            this.BTNBestellingDrank = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.DFrisDropdown = new System.Windows.Forms.Panel();
             this.ListViewDrankFris = new System.Windows.Forms.ListView();
@@ -188,13 +188,13 @@
             this.BTNMinDiner = new System.Windows.Forms.Button();
             this.ALBLDiner = new System.Windows.Forms.Label();
             this.BTNVoegToeDiner = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
+            this.BTNBestellingDiner = new System.Windows.Forms.Button();
             this.DinerPNL = new System.Windows.Forms.Panel();
             this.TafelPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.TafelNummerPNL.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.PNL.SuspendLayout();
             this.BestellingPNL.SuspendLayout();
             this.panel4.SuspendLayout();
             this.LunchPNL.SuspendLayout();
@@ -299,7 +299,7 @@
             // 
             // btnT1
             // 
-            this.btnT1.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnT1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT1.Location = new System.Drawing.Point(3, 3);
             this.btnT1.Name = "btnT1";
@@ -311,7 +311,7 @@
             // 
             // btnT2
             // 
-            this.btnT2.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT2.Location = new System.Drawing.Point(318, 3);
             this.btnT2.Name = "btnT2";
@@ -323,7 +323,7 @@
             // 
             // btnT3
             // 
-            this.btnT3.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT3.Location = new System.Drawing.Point(3, 151);
             this.btnT3.Name = "btnT3";
@@ -335,7 +335,7 @@
             // 
             // btnT4
             // 
-            this.btnT4.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT4.Location = new System.Drawing.Point(318, 151);
             this.btnT4.Name = "btnT4";
@@ -347,7 +347,7 @@
             // 
             // btnT5
             // 
-            this.btnT5.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT5.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT5.Location = new System.Drawing.Point(3, 299);
             this.btnT5.Name = "btnT5";
@@ -359,7 +359,7 @@
             // 
             // btnT6
             // 
-            this.btnT6.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT6.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT6.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT6.Location = new System.Drawing.Point(318, 299);
             this.btnT6.Name = "btnT6";
@@ -371,7 +371,7 @@
             // 
             // btnT7
             // 
-            this.btnT7.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT7.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT7.Location = new System.Drawing.Point(3, 447);
             this.btnT7.Name = "btnT7";
@@ -383,7 +383,7 @@
             // 
             // btnT8
             // 
-            this.btnT8.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT8.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT8.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT8.Location = new System.Drawing.Point(318, 447);
             this.btnT8.Name = "btnT8";
@@ -395,7 +395,7 @@
             // 
             // btnT9
             // 
-            this.btnT9.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT9.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT9.Location = new System.Drawing.Point(3, 595);
             this.btnT9.Name = "btnT9";
@@ -407,7 +407,7 @@
             // 
             // btnT10
             // 
-            this.btnT10.BackColor = System.Drawing.Color.LightGreen;
+            this.btnT10.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnT10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT10.Location = new System.Drawing.Point(318, 595);
             this.btnT10.Name = "btnT10";
@@ -423,7 +423,7 @@
             this.TafelNummerPNL.Controls.Add(this.BTNBestellen);
             this.TafelNummerPNL.Controls.Add(this.BTNRekening);
             this.TafelNummerPNL.Controls.Add(this.button1);
-            this.TafelNummerPNL.Controls.Add(this.panel2);
+            this.TafelNummerPNL.Controls.Add(this.PNL);
             this.TafelNummerPNL.Location = new System.Drawing.Point(0, 73);
             this.TafelNummerPNL.Margin = new System.Windows.Forms.Padding(2);
             this.TafelNummerPNL.Name = "TafelNummerPNL";
@@ -465,27 +465,27 @@
             this.button1.Text = "Rekening";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // PNL
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(48, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(625, 103);
-            this.panel2.TabIndex = 23;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.PNL.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PNL.Controls.Add(this.LBLTafelNummer);
+            this.PNL.Location = new System.Drawing.Point(48, 74);
+            this.PNL.Margin = new System.Windows.Forms.Padding(2);
+            this.PNL.Name = "PNL";
+            this.PNL.Size = new System.Drawing.Size(625, 103);
+            this.PNL.TabIndex = 23;
+            this.PNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // LBLTafelNummer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label1.Location = new System.Drawing.Point(243, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 70);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tafel";
+            this.LBLTafelNummer.AutoSize = true;
+            this.LBLTafelNummer.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.LBLTafelNummer.Location = new System.Drawing.Point(243, 19);
+            this.LBLTafelNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBLTafelNummer.Name = "LBLTafelNummer";
+            this.LBLTafelNummer.Size = new System.Drawing.Size(147, 70);
+            this.LBLTafelNummer.TabIndex = 5;
+            this.LBLTafelNummer.Text = "Tafel";
             // 
             // BestellingPNL
             // 
@@ -577,7 +577,7 @@
             this.LunchPNL.Controls.Add(this.ALBLLunch);
             this.LunchPNL.Controls.Add(this.BTNMinLunch);
             this.LunchPNL.Controls.Add(this.BTNPlusLunch);
-            this.LunchPNL.Controls.Add(this.button33);
+            this.LunchPNL.Controls.Add(this.BTNBestellingLunch);
             this.LunchPNL.Controls.Add(this.flowLayoutPanel1);
             this.LunchPNL.Controls.Add(this.panel10);
             this.LunchPNL.Location = new System.Drawing.Point(0, 71);
@@ -630,17 +630,17 @@
             this.BTNPlusLunch.UseVisualStyleBackColor = false;
             this.BTNPlusLunch.Click += new System.EventHandler(this.BTNPlusLunch_Click);
             // 
-            // button33
+            // BTNBestellingLunch
             // 
-            this.button33.BackColor = System.Drawing.Color.LightGreen;
-            this.button33.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button33.Location = new System.Drawing.Point(52, 877);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(625, 64);
-            this.button33.TabIndex = 41;
-            this.button33.Text = "Bekijk bestelling overzicht";
-            this.button33.UseVisualStyleBackColor = false;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
+            this.BTNBestellingLunch.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNBestellingLunch.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.BTNBestellingLunch.Location = new System.Drawing.Point(52, 877);
+            this.BTNBestellingLunch.Name = "BTNBestellingLunch";
+            this.BTNBestellingLunch.Size = new System.Drawing.Size(625, 64);
+            this.BTNBestellingLunch.TabIndex = 41;
+            this.BTNBestellingLunch.Text = "Bekijk bestelling overzicht";
+            this.BTNBestellingLunch.UseVisualStyleBackColor = false;
+            this.BTNBestellingLunch.Click += new System.EventHandler(this.BTNBestellingLunch_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -878,7 +878,7 @@
             this.DrankPNL.Controls.Add(this.ALBLDrank);
             this.DrankPNL.Controls.Add(this.BTNMinDrank);
             this.DrankPNL.Controls.Add(this.BTNPlusDrank);
-            this.DrankPNL.Controls.Add(this.button31);
+            this.DrankPNL.Controls.Add(this.BTNBestellingDrank);
             this.DrankPNL.Controls.Add(this.flowLayoutPanel3);
             this.DrankPNL.Controls.Add(this.panel24);
             this.DrankPNL.Location = new System.Drawing.Point(2, 71);
@@ -931,16 +931,17 @@
             this.BTNPlusDrank.UseVisualStyleBackColor = false;
             this.BTNPlusDrank.Click += new System.EventHandler(this.BTNPlusDrank_Click);
             // 
-            // button31
+            // BTNBestellingDrank
             // 
-            this.button31.BackColor = System.Drawing.Color.LightGreen;
-            this.button31.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button31.Location = new System.Drawing.Point(52, 877);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(625, 64);
-            this.button31.TabIndex = 40;
-            this.button31.Text = "Bekijk bestelling overzicht";
-            this.button31.UseVisualStyleBackColor = false;
+            this.BTNBestellingDrank.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNBestellingDrank.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.BTNBestellingDrank.Location = new System.Drawing.Point(52, 877);
+            this.BTNBestellingDrank.Name = "BTNBestellingDrank";
+            this.BTNBestellingDrank.Size = new System.Drawing.Size(625, 64);
+            this.BTNBestellingDrank.TabIndex = 40;
+            this.BTNBestellingDrank.Text = "Bekijk bestelling overzicht";
+            this.BTNBestellingDrank.UseVisualStyleBackColor = false;
+            this.BTNBestellingDrank.Click += new System.EventHandler(this.BTNBestellingDrank_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -1834,21 +1835,22 @@
             this.BTNVoegToeDiner.Text = "Voeg toe tot bestelling";
             this.BTNVoegToeDiner.UseVisualStyleBackColor = false;
             // 
-            // button32
+            // BTNBestellingDiner
             // 
-            this.button32.BackColor = System.Drawing.Color.LightGreen;
-            this.button32.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button32.Location = new System.Drawing.Point(48, 877);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(625, 64);
-            this.button32.TabIndex = 41;
-            this.button32.Text = "Bekijk bestelling overzicht";
-            this.button32.UseVisualStyleBackColor = false;
+            this.BTNBestellingDiner.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNBestellingDiner.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.BTNBestellingDiner.Location = new System.Drawing.Point(48, 877);
+            this.BTNBestellingDiner.Name = "BTNBestellingDiner";
+            this.BTNBestellingDiner.Size = new System.Drawing.Size(625, 64);
+            this.BTNBestellingDiner.TabIndex = 41;
+            this.BTNBestellingDiner.Text = "Bekijk bestelling overzicht";
+            this.BTNBestellingDiner.UseVisualStyleBackColor = false;
+            this.BTNBestellingDiner.Click += new System.EventHandler(this.BTNBestellingDiner_Click);
             // 
             // DinerPNL
             // 
             this.DinerPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.DinerPNL.Controls.Add(this.button32);
+            this.DinerPNL.Controls.Add(this.BTNBestellingDiner);
             this.DinerPNL.Controls.Add(this.BTNVoegToeDiner);
             this.DinerPNL.Controls.Add(this.ALBLDiner);
             this.DinerPNL.Controls.Add(this.BTNMinDiner);
@@ -1868,16 +1870,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(723, 1047);
+            this.Controls.Add(this.TafelNummerPNL);
+            this.Controls.Add(this.TafelPNL);
+            this.Controls.Add(this.LunchPNL);
+            this.Controls.Add(this.DrankPNL);
+            this.Controls.Add(this.DinerPNL);
             this.Controls.Add(this.OverzichtPNL);
             this.Controls.Add(this.WijzigenPNL);
-            this.Controls.Add(this.DrankPNL);
-            this.Controls.Add(this.LunchPNL);
-            this.Controls.Add(this.DinerPNL);
-            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.ChapooLogo);
             this.Controls.Add(this.BTNReturn);
-            this.Controls.Add(this.TafelPNL);
             this.Controls.Add(this.DatumLBL);
             this.Controls.Add(this.TijdLBL);
             this.Controls.Add(this.btnExit);
@@ -1894,8 +1896,8 @@
             this.HoofdschermPNL.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.TafelNummerPNL.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.PNL.ResumeLayout(false);
+            this.PNL.PerformLayout();
             this.BestellingPNL.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1967,8 +1969,8 @@
         private System.Windows.Forms.Panel DrankPNL;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel PNL;
+        private System.Windows.Forms.Label LBLTafelNummer;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Button btnT1;
         private System.Windows.Forms.Button btnT2;
@@ -2012,8 +2014,8 @@
         private System.Windows.Forms.Button BTNItemAanpassen;
         private System.Windows.Forms.Button BTNBestellingPlaatsen;
         private System.Windows.Forms.Button BTNBestellingVerwijderen;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Button BTNBestellingLunch;
+        private System.Windows.Forms.Button BTNBestellingDrank;
         private System.Windows.Forms.Timer timerDTap;
         private System.Windows.Forms.Timer timerDGed;
         private System.Windows.Forms.Timer timerDWijn;
@@ -2096,7 +2098,7 @@
         private System.Windows.Forms.Button BTNMinDiner;
         private System.Windows.Forms.Label ALBLDiner;
         private System.Windows.Forms.Button BTNVoegToeDiner;
-        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button BTNBestellingDiner;
         private System.Windows.Forms.Panel DinerPNL;
     }
 }

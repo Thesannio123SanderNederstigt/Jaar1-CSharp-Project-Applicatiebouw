@@ -24,6 +24,7 @@ namespace UI
         // Methode om de numpads naar een inlogcode te krijgen
         private string loginString = "";
         public static string Username = "";
+        public static string MedewerkerType = "";
 
         void LoginCodeGenerate(string givenValue)
         {
@@ -131,31 +132,34 @@ namespace UI
                 {
                     loginCode = int.Parse(loginString);
                 }
-
                 MedewerkerService medewerkerservice = new MedewerkerService();
                 Medewerker medewerker = medewerkerservice.GetByLogincode(loginCode);
                 Username = $"{medewerker.voornaam} {medewerker.achternaam}";
 
                 if (medewerker.type == "eigenaar")
                 {
+                    MedewerkerType = medewerker.type;
                     Kassa kassa = new Kassa();
                     kassa.Show();
                     this.Visible = false;
                 }
                 else if (medewerker.type == "chef-kok")
                 {
+                    MedewerkerType = medewerker.type;
                     Keuken keuken = new Keuken();
                     keuken.Show();
                     this.Visible = false;
                 }
                 else if (medewerker.type == "bediening")
                 {
-                    Handheld handheld = new Handheld();
-                    handheld.Show();
-                    //this.Visible = false;
+                    MedewerkerType = medewerker.type;
+                    Bediening bediening = new Bediening();
+                    bediening.Show();
+                    this.Visible = false;
                 }
                 else if (medewerker.type == "barmedewerker")
                 {
+                    MedewerkerType = medewerker.type;
                     Keuken bar = new Keuken();
                     bar.Show();
                     this.Visible = false;

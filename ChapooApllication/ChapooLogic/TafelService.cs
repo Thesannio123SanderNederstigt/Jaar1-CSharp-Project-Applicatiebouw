@@ -14,11 +14,11 @@ namespace ChapooLogic
     {
         private readonly TafelDAO Tafel_db = new TafelDAO();
 
-        public List<Tafel> GetTafels()
+        public List<Tafel> GetAllTafels()
         {
             try
             {
-                List<Tafel> tafellijst = Tafel_db.Get_All_Tafels();
+                List<Tafel> tafellijst = Tafel_db.GetTafels();
 
                 if(tafellijst == null)
                 {
@@ -80,5 +80,26 @@ namespace ChapooLogic
                 return fakeTafelLijst;
             }
         } 
+
+        // test gillian 
+        public List<Tafel> GetTafeltest()
+        {
+            return Tafel_db.GetTafels();
+        }
+
+        public List<Tafel> GeTafelStatus(bool status)
+        {
+            return Tafel_db.GetTafelByStatus(status);
+        }
+
+        public Tafel ID_Status(int ID)
+        {
+            return Tafel_db.Get_By_ID(ID);
+        }
+
+        public List<Tafel> GetTafel()
+        {
+            return Tafel_db.GetTafels();
+        }
     }
 }

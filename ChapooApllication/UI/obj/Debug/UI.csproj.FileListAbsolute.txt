@@ -63,6 +63,8 @@ C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe.config
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.pdb
@@ -80,6 +82,7 @@ S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\U
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
