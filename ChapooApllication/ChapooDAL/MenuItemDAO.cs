@@ -108,6 +108,15 @@ namespace ChapooDAL
             new SqlParameter("@categorie", categorie),  new SqlParameter("@menuSoort", menuSoort),  new SqlParameter("@prijs", prijs) };
             ExecuteEditQuery(query, sqlParameters);
         }
+        
+        public string EditAllMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
+        {
+            string query = "UPDATE MenuItem SET omschrijving = @omschrijving, aantalvoorraad = @inVoorraad, btw = @BTW, categorie = @categorie, menukaartsoort = @menuSoort, prijs = @prijs WHERE ID = @ID";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@ID", ID), new SqlParameter("@omschrijving", omschrijving), new SqlParameter("@aantalvoorraad", inVoorraad), new SqlParameter("@BTW", BTW), 
+                new SqlParameter("@categorie", categorie), new SqlParameter("@menuSoort", menuSoort), new SqlParameter("@prijs", prijs) };
+            ExecuteEditQuery(query, sqlParameters);
+            return "Menu item met succes aangepast!";
+        }
         // Edit with product and aantal
         public string EditMenuItem(string product, int aantal)
         {

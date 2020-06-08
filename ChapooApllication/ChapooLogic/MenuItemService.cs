@@ -139,6 +139,19 @@ namespace ChapooLogic
             }
         }
 
+        public string EditAllMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
+        {
+            try
+            {
+                MenuItem_db.EditAllMenuItem(ID, omschrijving, inVoorraad, BTW, categorie, menuSoort, prijs);
+                return "Menu item met succes aangepast!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
         public string EditMenuItem(string product, int aantal)
         {
             try

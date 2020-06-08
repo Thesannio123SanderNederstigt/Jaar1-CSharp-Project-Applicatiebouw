@@ -1,4 +1,4 @@
-﻿  using ChapooLogic;
+﻿using ChapooLogic;
 using ChapooModel;
 using System;
 using System.Collections.Generic;
@@ -37,54 +37,62 @@ namespace UI
 
         private void SelectCurrentOrders()
         {
-            if(Type == "chef-kok")
+            List<Bestelling> bestellinglist = new List<Bestelling>();
+
+             BestellingService bestelservice = new BestellingService();
+
+            if (Type == "chef-kok")
             {
+               bestellinglist = bestelservice.GetOrders("DESC"); //het filteren op Dranken gebeurd nu in de GetCurrentOrders query helaas...
+            }
+            else if (Type == "barmedewerker")
+            {
+                bestellinglist = bestelservice.GetDrinkOrders("DESC");
+            }
 
-                BestellingService bestelservice = new BestellingService();
-                List<Bestelling> bestellinglist = bestelservice.GetOrders("MIN");
-                List<int> numberlist = new List<int>();
+             List<int> numberlist = new List<int>();
 
-                foreach (Bestelling b in bestellinglist)
+            foreach (Bestelling b in bestellinglist)
+            {
+                if (b.status == false) //om alleen huidige bestellingen te krijgen
                 {
-                    if (b.status == false && b.kaartsoort != "Dranken") //om alleen huidige bestellingen te krijgen
-                    {
-                        int tafelID = b.tafelID;
-                        numberlist.Add(tafelID);
-                    }
-
+                    int tafelID = b.tafelID;
+                    numberlist.Add(tafelID);
                 }
 
-                string listviewname = "lv_Tafel";
+            }
 
-                int tafelID2 = 0;
-                int bestellingID = 0;
-                DateTime besteltijd;
-                current = true;
+            string listviewname = "lv_Tafel";
 
-                for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
+            int tafelID2 = 0;
+            int bestellingID = 0;
+            DateTime besteltijd;
+            current = true;
+
+            for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
+            {
+                tafelID2 = numberlist[i];
+
+                Bestelling bestelling = bestellinglist[i];
+                bestellingID = bestelling.ID;
+                besteltijd = bestelling.besteltijd;
+
+
+                ListView lv = new System.Windows.Forms.ListView();
+                CreateListView(lv, i, tafelID2, bestellingID, besteltijd, current);
+
+                lv.Name = listviewname + i;
+
+                List<Bestelling> Bestellinglist = bestelservice.GetBestellingListView(bestellingID);
+
+
+                CreateOptionalButtons(Bestellinglist, i, current);
+
+                lv.Items.Clear();
+
+                if (Type == "chef-kok")
                 {
-                    tafelID2 = numberlist[i];
-
-                    Bestelling bestelling = bestellinglist[i];
-                    bestellingID = bestelling.ID;
-                    besteltijd = bestelling.besteltijd;
-
-
-                    ListView lv = new System.Windows.Forms.ListView();
-                    CreateListView(lv, i, tafelID2, bestellingID, besteltijd, current);
-
-                    lv.Name = listviewname + i;
-
-
-
-                    List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(tafelID2);
-
-
-                    CreateOptionalButtons(Bestellinglistview, i, current);
-
-                    lv.Items.Clear();
-
-                    foreach (Bestelling b in Bestellinglistview)
+                    foreach (Bestelling b in Bestellinglist)
                     {
                         if (b.status == false && b.kaartsoort != "Dranken")
                         {
@@ -95,71 +103,12 @@ namespace UI
                         }
 
                     }
-
-                    if(numberlist.Count >= 7)
-                    {
-                        return;
-                    }
                 }
-            }
-            else if (Type == "barmedewerker")
-            {
-
-            }
-
-        }
-
-        private void SelectClearedOrders()
-        {
-            if (Type == "chef-kok")
-            {
-
-                BestellingService bestelservice = new BestellingService();
-                List<Bestelling> bestellinglist = bestelservice.GetOrders("MAX");
-                List<int> numberlist = new List<int>();
-
-                foreach (Bestelling b in bestellinglist)
+                else if (Type == "barmedewerker")
                 {
-                    if (b.status == true && b.kaartsoort != "Dranken") //om alleen huidige bestellingen te krijgen
+                    foreach (Bestelling b in Bestellinglist)
                     {
-                        int tafelID = b.tafelID;
-                        numberlist.Add(tafelID);
-                    }
-
-                }
-
-                string listviewname = "lv_Tafel";
-
-                int tafelID2 = 0;
-                int bestellingID = 0;
-                DateTime besteltijd;
-                current = false;
-
-                for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
-                {
-                    tafelID2 = numberlist[i];
-
-                    Bestelling bestelling = bestellinglist[i];
-                    bestellingID = bestelling.ID;
-                    besteltijd = bestelling.besteltijd;
-
-                    ListView lv = new System.Windows.Forms.ListView();
-                    CreateListView(lv, i, tafelID2, bestellingID, besteltijd, current);
-
-                    lv.Name = listviewname + i;
-
-
-
-                    List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(tafelID2);
-
-
-                    CreateOptionalButtons(Bestellinglistview, i, current);
-
-                    lv.Items.Clear();
-
-                    foreach (Bestelling b in Bestellinglistview)
-                    {
-                        if (b.status == true && b.kaartsoort != "Dranken")
+                        if (b.status == false && b.kaartsoort == "Dranken")
                         {
                             ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                             li.SubItems.Add(b.aantal.ToString());
@@ -168,18 +117,105 @@ namespace UI
                         }
 
                     }
-
-                    if (numberlist.Count >= 7)
-                    {
-                        return;
-                    }
-
                 }
+
+                if(numberlist.Count >= 7)
+                {
+                    return;
+                }
+            }
+
+        }
+
+        private void SelectClearedOrders()
+        {
+            List<Bestelling> bestellinglist = new List<Bestelling>();
+
+            BestellingService bestelservice = new BestellingService();
+
+            if (Type == "chef-kok")
+            {
+                bestellinglist = bestelservice.GetOrders("ASC");
             }
             else if (Type == "barmedewerker")
             {
+                bestellinglist = bestelservice.GetDrinkOrders("ASC");
+            }
+
+
+            List<int> numberlist = new List<int>();
+
+            foreach (Bestelling b in bestellinglist)
+            {
+                if (b.status == true) //om alleen huidige bestellingen te krijgen
+                {
+                    int tafelID = b.tafelID;
+                    numberlist.Add(tafelID);
+                }
 
             }
+
+            string listviewname = "lv_Tafel";
+
+            int tafelID2 = 0;
+            int bestellingID = 0;
+            DateTime besteltijd;
+            current = false;
+
+            for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
+            {
+                tafelID2 = numberlist[i];
+
+                Bestelling bestelling = bestellinglist[i];
+                bestellingID = bestelling.ID;
+                besteltijd = bestelling.besteltijd;
+
+                ListView lv = new System.Windows.Forms.ListView();
+                CreateListView(lv, i, tafelID2, bestellingID, besteltijd, current);
+
+                lv.Name = listviewname + i;
+
+
+
+                List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(bestellingID);
+
+
+                CreateOptionalButtons(Bestellinglistview, i, current);
+
+                lv.Items.Clear();
+
+                foreach (Bestelling b in Bestellinglistview)
+                {
+                    if(Type == "chef-kok")
+                    {
+                        if (b.status == true && b.kaartsoort != "Dranken")
+                        {
+                            ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                            li.SubItems.Add(b.aantal.ToString());
+
+                            lv.Items.Add(li);
+                        }
+                    }
+                    else if(Type == "barmedewerker")
+                    {
+                        if (b.status == true && b.kaartsoort == "Dranken")
+                        {
+                            ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                            li.SubItems.Add(b.aantal.ToString());
+
+                            lv.Items.Add(li);
+                        }
+                    }
+
+                }
+
+                if (numberlist.Count >= 7)
+                {
+                    return;
+                }
+
+            }
+
         }
 
         private void CreateListView(ListView lv, int i, int tafelID2, int bestellingID, DateTime besteltijd, bool current)
@@ -207,7 +243,7 @@ namespace UI
                     case 0:
                         {
                             gBox_Tafel1.Controls.Add(lv);
-                            lblTijd1.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd1.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling1.Text = "Tafel " + tafelID2;
                             lbl_Bestelling1ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel1_SelectedIndexChanged);
@@ -216,7 +252,7 @@ namespace UI
                     case 1:
                         {
                             gBox_Tafel2.Controls.Add(lv);
-                            lblTijd2.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd2.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling2.Text = "Tafel " + tafelID2;
                             lbl_Bestelling2ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel2_SelectedIndexChanged);
@@ -225,7 +261,7 @@ namespace UI
                     case 2:
                         {
                             gBox_Tafel3.Controls.Add(lv);
-                            lblTijd3.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd3.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling3.Text = "Tafel " + tafelID2;
                             lbl_Bestelling3ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel3_SelectedIndexChanged);
@@ -234,7 +270,7 @@ namespace UI
                     case 3:
                         {
                             gBox_Tafel4.Controls.Add(lv);
-                            lblTijd4.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd4.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling4.Text = "Tafel " + tafelID2;
                             lbl_Bestelling4ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel4_SelectedIndexChanged);
@@ -243,7 +279,7 @@ namespace UI
                     case 4:
                         {
                             gBox_Tafel5.Controls.Add(lv);
-                            lblTijd5.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd5.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling5.Text = "Tafel " + tafelID2;
                             lbl_Bestelling5ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel5_SelectedIndexChanged);
@@ -252,7 +288,7 @@ namespace UI
                     case 5:
                         {
                             gBox_Tafel6.Controls.Add(lv);
-                            lblTijd6.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd6.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling6.Text = "Tafel " + tafelID2;
                             lbl_Bestelling6ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel6_SelectedIndexChanged);
@@ -261,7 +297,7 @@ namespace UI
                     case 6:
                         {
                             gBox_Tafel7.Controls.Add(lv);
-                            lblTijd7.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd7.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling7.Text = "Tafel " + tafelID2;
                             lbl_Bestelling7ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel7_SelectedIndexChanged);
@@ -270,7 +306,7 @@ namespace UI
                     case 7:
                         {
                             gBox_Tafel8.Controls.Add(lv);
-                            lblTijd8.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblTijd8.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_Bestelling8.Text = "Tafel " + tafelID2;
                             lbl_Bestelling8ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_Tafel8_SelectedIndexChanged);
@@ -286,7 +322,7 @@ namespace UI
                     case 0:
                         {
                             gBox_AFTafel1.Controls.Add(lv);
-                            lblAFTijd1.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd1.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling1.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF1ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel1_SelectedIndexChanged);
@@ -295,7 +331,7 @@ namespace UI
                     case 1:
                         {
                             gBox_AFTafel2.Controls.Add(lv);
-                            lblAFTijd2.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd2.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling2.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF2ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel2_SelectedIndexChanged);
@@ -304,7 +340,7 @@ namespace UI
                     case 2:
                         {
                             gBox_AFTafel3.Controls.Add(lv);
-                            lblAFTijd3.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd3.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling3.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF3ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel3_SelectedIndexChanged);
@@ -313,7 +349,7 @@ namespace UI
                     case 3:
                         {
                             gBox_AFTafel4.Controls.Add(lv);
-                            lblAFTijd4.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd4.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling4.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF4ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel4_SelectedIndexChanged);
@@ -322,7 +358,7 @@ namespace UI
                     case 4:
                         {
                             gBox_AFTafel5.Controls.Add(lv);
-                            lblAFTijd5.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd5.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling5.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF5ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel5_SelectedIndexChanged);
@@ -331,7 +367,7 @@ namespace UI
                     case 5:
                         {
                             gBox_AFTafel6.Controls.Add(lv);
-                            lblAFTijd6.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd6.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling6.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF6ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel6_SelectedIndexChanged);
@@ -340,7 +376,7 @@ namespace UI
                     case 6:
                         {
                             gBox_AFTafel7.Controls.Add(lv);
-                            lblAFTijd7.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd7.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling7.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF7ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel7_SelectedIndexChanged);
@@ -349,7 +385,7 @@ namespace UI
                     case 7:
                         {
                             gBox_AFTafel8.Controls.Add(lv);
-                            lblAFTijd8.Text = besteltijd.ToString("dd/MM/yy hh:mm");
+                            lblAFTijd8.Text = besteltijd.ToString("dd/MM/yy HH:mm");
                             lbl_AFBestelling8.Text = "Tafel " + tafelID2;
                             lbl_BestellingAF8ID.Text = bestellingID.ToString();
                             lv.SelectedIndexChanged += new System.EventHandler(lv_AFTafel8_SelectedIndexChanged);
@@ -614,6 +650,44 @@ namespace UI
 
         }
 
+        private void TextLabelColorReset()
+        {
+            string ID = lbl_BestellingID.Text;
+
+            if (ID == lbl_Bestelling1ID.Text)
+            {
+                lbl_Bestelling1ID.ForeColor = SystemColors.GrayText;
+            }
+            else if (ID == lbl_Bestelling2ID.Text)
+            {
+                lbl_Bestelling2ID.ForeColor = SystemColors.GrayText;
+            }
+            else if (ID == lbl_Bestelling3ID.Text)
+            {
+                lbl_Bestelling3ID.ForeColor = SystemColors.GrayText;
+            }
+            else if (ID == lbl_Bestelling4ID.Text)
+            {
+                lbl_Bestelling4ID.ForeColor = SystemColors.GrayText;
+            }
+            else if (ID == lbl_Bestelling5ID.Text)
+            {
+                lbl_Bestelling5ID.ForeColor = SystemColors.GrayText;
+            }
+            else if (ID == lbl_Bestelling6ID.Text)
+            {
+                lbl_Bestelling6ID.ForeColor = SystemColors.GrayText;
+            }
+            else if (ID == lbl_Bestelling7ID.Text)
+            {
+                lbl_Bestelling7ID.ForeColor = SystemColors.GrayText;
+            }
+            else if (ID == lbl_Bestelling8ID.Text)
+            {
+                lbl_Bestelling8ID.ForeColor = SystemColors.GrayText;
+            }
+        }
+
 
 
         //eventhandlers voor op het startscherm panel (pnl_KeukenBarStart)
@@ -715,48 +789,56 @@ namespace UI
         private void btn_Tafel1More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling1.ForeColor = Color.Orange;
             FillTafelPanel1();
         }
 
         private void btn_Tafel2More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling2.ForeColor = Color.Orange;
             FillTafelPanel2();
         }
 
         private void btn_Tafel3More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling3.ForeColor = Color.Orange;
             FillTafelPanel3();
         }
 
         private void btn_Tafel4More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling4.ForeColor = Color.Orange;
             FillTafelPanel4();
         }
 
         private void btn_Tafel5More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling5.ForeColor = Color.Orange;
             FillTafelPanel5();
         }
 
         private void btn_Tafel6More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling6.ForeColor = Color.Orange;
             FillTafelPanel6();
         }
 
         private void btn_Tafel7More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling7.ForeColor = Color.Orange;
             FillTafelPanel7();
         }
 
         private void btn_Tafel8More_Click(object sender, EventArgs e)
         {
             pnl_TafelBinnenkomendeBestelling.Show();
+            lbl_Bestelling8.ForeColor = Color.Orange;
             FillTafelPanel8();
         }
 
@@ -842,6 +924,7 @@ namespace UI
                 int bestellingID = int.Parse(lbl_BestellingID.Text);
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.UpdateBestelling(bestellingID);
+                TextLabelColorReset();
             }
 
             lbl_BestellingID.Text = "";
@@ -851,6 +934,10 @@ namespace UI
         private void btn_AfgerondeBestelling_Click(object sender, EventArgs e)
         {
             pnl_BinnenkomendeBestellingen.Hide();
+            DeleteListViews();
+            TextLabelReset();
+            ResetGroupBoxSystemColors();
+            
             pnl_AfgerondeBestellingen.Show();
             SelectClearedOrders();
         }
@@ -863,6 +950,7 @@ namespace UI
                 int bestellingID = int.Parse(lbl_BestellingID.Text);
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.DeleteBestelling(bestellingID);
+                TextLabelColorReset();
             }
 
             lbl_BestellingID.Text = "";
@@ -897,7 +985,8 @@ namespace UI
                 txtMenuItem.Text = listView_BestelItems.Items[index].SubItems[0].Text;
                 txtAantal.Text = listView_BestelItems.Items[index].SubItems[1].Text;
                 txt_Opmerkingen.Text = listView_BestelItems.Items[index].SubItems[2].Text;
-                lbl_Bestelling.Text = "Bestelling " + listView_BestelItems.Items[index].SubItems[3].Text;
+                //lbl_Bestelling.Text = "Bestelling " + listView_BestelItems.Items[index].SubItems[3].Text;
+                lbl_Bestelling.Text = "Bestelling " + lbl_TafelBestellingID.Text;
 
             }
 
@@ -911,10 +1000,10 @@ namespace UI
             int index = listView_BestelItems.SelectedIndices[0];
             int BestellingMenuItemID = int.Parse(listView_BestelItems.Items[index].SubItems[3].Text);
             string opmerking = listView_BestelItems.Items[index].SubItems[2].Text;
-            opmerking = txt_Opmerkingen.Text;
+            //opmerking = txt_Opmerkingen.Text;
 
             BestellingService bestellingservice = new BestellingService();
-            bestellingservice.UpdateBestellingMenuItem(BestellingMenuItemID, opmerking);
+            bestellingservice.UpdateBestellingMenuItems(BestellingMenuItemID);
             EntireOrderCheck();
             DeleteListViews();
             SelectCurrentOrders();
@@ -923,33 +1012,21 @@ namespace UI
 
         private void EntireOrderCheck()
         {
-            string label = lbl_Tafel.Text;
-            char last = lbl_Tafel.Text.Last();
-            int tafelID;
-            int num = int.Parse(last.ToString());
 
-            if (last.Equals(0))
-            {
-                string result = label.Substring(label.Length - Math.Min(2, label.Length));
-                tafelID = int.Parse(result);
-            }
-            else
-            {
-                tafelID = num;
-            }
+            int bestellingID = int.Parse(lbl_TafelBestellingID.Text);
+
 
             BestellingService bestelservice = new BestellingService();
-            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(tafelID);
+            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(bestellingID);
 
             listView_BestelItems.Items.Clear();
 
             foreach (Bestelling b in Bestellinglistview)
             {
-                if (b.status == false && b.kaartsoort != "Dranken")
+                if (b.status == false)
                 {
                     ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                     li.SubItems.Add(b.aantal.ToString());
-                    li.SubItems.Add(b.opmerking.ToString());
                     li.SubItems.Add(b.rekeningID.ToString());
                     listView_BestelItems.Items.Add(li);
                 }
@@ -958,13 +1035,13 @@ namespace UI
 
             int aantal = listView_BestelItems.Items.Count;
 
-            if (aantal < 1 || aantal == 0 && (aantal < 0) == false) //eigenlijk dus als dit nul (0) is en alle menu items in de bestelling al gereed zijn gemeldt
+            if (aantal == 0 && (aantal > 0) == false) //eigenlijk dus als dit nul (0) is en alle menu items in de bestelling al gereed zijn gemeldt
             {
                 //zet hier dan de gehele bestelling op gereed (dezelfde functionaliteit als de 'gereed voor serveren' knop
                 Bestelling b = Bestellinglistview[0];
                 int BestellingID = b.ID; //hopen dat deze niet NULL is gemaakt (dus niet is meegegeven) in dit listview object
                 bestelservice.UpdateBestelling(BestellingID);
-
+                TextLabelColorReset();
             }
         }
 
@@ -976,7 +1053,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd1.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling1ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillTafelPanel2()
@@ -987,7 +1066,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd2.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling2ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillTafelPanel3()
@@ -998,7 +1079,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd3.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling3ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillTafelPanel4()
@@ -1009,7 +1092,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd4.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling4ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillTafelPanel5()
@@ -1020,7 +1105,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd5.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling5ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillTafelPanel6()
@@ -1031,7 +1118,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd6.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling6ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillTafelPanel7()
@@ -1042,7 +1131,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd7.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling7ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillTafelPanel8()
@@ -1053,10 +1144,12 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd8.Text;
 
-            FillTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_Bestelling8ID.Text);
+
+            FillTafelPanel(label, last, num, bestellingID);
         }
 
-        private void FillTafelPanel(string label, char last, int num)
+        private void FillTafelPanel(string label, char last, int num, int bestellingID)
         {
             int tafelID;
 
@@ -1069,26 +1162,49 @@ namespace UI
             {
                 tafelID = num;
             }
+
             lbl_Tafel.Text = "Tafel ";
             lbl_Tafel.Text += tafelID;
+            lbl_TafelBestellingID.Text = bestellingID.ToString();
 
             BestellingService bestelservice = new BestellingService();
-            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(tafelID);
+            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(bestellingID);
 
             listView_BestelItems.Items.Clear();
 
-            foreach (Bestelling b in Bestellinglistview)
+            if(Type == "chef-kok")
             {
-                if(b.status == false)
+                foreach (Bestelling b in Bestellinglistview)
                 {
-                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                    li.SubItems.Add(b.aantal.ToString());
-                    li.SubItems.Add(b.opmerking.ToString());
-                    li.SubItems.Add(b.rekeningID.ToString());
-                    listView_BestelItems.Items.Add(li);
-                }
+                    if (b.status == false && b.kaartsoort != "Dranken")
+                    {
+                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                        li.SubItems.Add(b.aantal.ToString());
+                        li.SubItems.Add(b.opmerking.ToString());
+                        li.SubItems.Add(b.rekeningID.ToString()); //eigenlijk het bestellingmenuitemID wat nodig is
+                        listView_BestelItems.Items.Add(li);
+                    }
 
+                }
             }
+            else if(Type == "barmedewerker")
+            {
+                foreach (Bestelling b in Bestellinglistview)
+                {
+                    if (b.status == false && b.kaartsoort == "Dranken")
+                    {
+                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                        li.SubItems.Add(b.aantal.ToString());
+                        li.SubItems.Add(b.opmerking.ToString());
+                        li.SubItems.Add(b.rekeningID.ToString()); //hier zit het bestellingID in het rekeningID gestopt
+                        listView_BestelItems.Items.Add(li);
+                    }
+
+                }
+            }
+
+
+            txt_Opmerkingen.Enabled = false;
         }
 
         //eventhandlers/methoden die op het Afgerondenbestellingen panel staan
@@ -1105,14 +1221,12 @@ namespace UI
         private void lv_AFTafel1_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling1.ForeColor = Color.Orange;
             FillAFTafelPanel1();
         }
 
         private void lv_AFTafel2_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling2.ForeColor = Color.Orange;
             FillAFTafelPanel2();
 
         }
@@ -1120,42 +1234,36 @@ namespace UI
         private void lv_AFTafel3_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling3.ForeColor = Color.Orange;
             FillAFTafelPanel3();
         }
 
         private void lv_AFTafel4_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling4.ForeColor = Color.Orange;
             FillAFTafelPanel4();
         }
 
         private void lv_AFTafel5_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling5.ForeColor = Color.Orange;
             FillAFTafelPanel5();
         }
 
         private void lv_AFTafel6_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling6.ForeColor = Color.Orange;
             FillAFTafelPanel6();
         }
 
         private void lv_AFTafel7_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling7.ForeColor = Color.Orange;
             FillAFTafelPanel7();
         }
 
         private void lv_AFTafel8_SelectedIndexChanged(object sender, EventArgs e)
         {
             pnl_TafelAfgerondeBestelling.Show();
-            lbl_AFBestelling8.ForeColor = Color.Orange;
             FillAFTafelPanel8();
         }
 
@@ -1284,7 +1392,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd1.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF1ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillAFTafelPanel2()
@@ -1295,7 +1405,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd2.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF2ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillAFTafelPanel3()
@@ -1306,7 +1418,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd3.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF3ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillAFTafelPanel4()
@@ -1317,7 +1431,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd4.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF4ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillAFTafelPanel5()
@@ -1328,7 +1444,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd5.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF5ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillAFTafelPanel6()
@@ -1339,7 +1457,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd6.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF6ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillAFTafelPanel7()
@@ -1350,7 +1470,9 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd7.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF7ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
         private void FillAFTafelPanel8()
@@ -1361,10 +1483,12 @@ namespace UI
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd8.Text;
 
-            FillAFTafelPanel(label, last, num);
+            int bestellingID = int.Parse(lbl_BestellingAF8ID.Text);
+
+            FillAFTafelPanel(label, last, num, bestellingID);
         }
 
-        private void FillAFTafelPanel(string label, char last, int num)
+        private void FillAFTafelPanel(string label, char last, int num, int bestellingID)
         {
             int tafelID;
 
@@ -1379,30 +1503,55 @@ namespace UI
             }
             lbl_AFTafel.Text = "Tafel ";
             lbl_AFTafel.Text += tafelID;
+            lbl_TafelBestellingAFID.Text = bestellingID.ToString();
 
             BestellingService bestelservice = new BestellingService();
-            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(tafelID);
+            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(bestellingID);
 
             listView_BestelItems.Items.Clear();
 
-            foreach (Bestelling b in Bestellinglistview)
+            if(Type == "chef-kok")
             {
-                if (b.status == true)
+                foreach (Bestelling b in Bestellinglistview)
                 {
-                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                    li.SubItems.Add(b.aantal.ToString());
-                    li.SubItems.Add(b.opmerking.ToString());
-                    li.SubItems.Add(b.rekeningID.ToString());
-                    listView_BestelItems.Items.Add(li);
-                }
+                    if (b.status == true && b.kaartsoort != "Dranken")
+                    {
+                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                        li.SubItems.Add(b.aantal.ToString());
+                        li.SubItems.Add(b.opmerking.ToString());
+                        li.SubItems.Add(b.rekeningID.ToString());
+                        listView_BestelItems.Items.Add(li);
+                    }
 
+                }
             }
+            else if(Type == "barmedewerker")
+            {
+                foreach (Bestelling b in Bestellinglistview)
+                {
+                    if (b.status == true && b.kaartsoort == "Dranken")
+                    {
+                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                        li.SubItems.Add(b.aantal.ToString());
+                        li.SubItems.Add(b.opmerking.ToString());
+                        li.SubItems.Add(b.rekeningID.ToString());
+                        listView_BestelItems.Items.Add(li);
+                    }
+
+                }
+            }
+
+
         }
 
 
         private void btn_Binnenkomendestelling_Click(object sender, EventArgs e)
         {
             pnl_AfgerondeBestellingen.Hide();
+            DeleteListViews();
+            TextLabelReset();
+            ResetGroupBoxAFSystemColors();
+
             pnl_BinnenkomendeBestellingen.Show();
             SelectCurrentOrders();
         }
@@ -1431,7 +1580,7 @@ namespace UI
 
             DeleteListViews();
             TextLabelReset();
-            ResetGroupBoxSystemColors();
+            ResetGroupBoxAFSystemColors();
             SelectClearedOrders();
 
 
