@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using ChapooModel;
 using ChapooLogic;
+using MenuItem = ChapooModel.MenuItem;
 
 namespace UI
 {
@@ -104,21 +105,10 @@ namespace UI
         {
             HidePanels();
             pnl_KassaDrankMenuoverzicht.Show();
-        }
-
-        private void btnLunchMenu_MenuoverzichtKeuze_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaLunchMenuoverizcht.Show();
-        }
-
-        private void btnDinerMenu_MenuoverzichtKeuze_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaDinerMenuoverzicht.Show();
-
+            listViewDrankmenuOverzicht.Items.Clear();
             MenuItemService menuItemService = new MenuItemService();
-            foreach(ChapooModel.MenuItem menuItem in menuItemService.GetMenuItems())
+            List<MenuItem> menuItemList = menuItemService.Get_Dranken_MenuItems();
+            foreach (MenuItem menuItem in menuItemList)
             {
                 ListViewItem listViewItem = new ListViewItem(menuItem.ID.ToString());
                 listViewItem.SubItems.Add(menuItem.omschrijving);
@@ -126,11 +116,57 @@ namespace UI
                 listViewItem.SubItems.Add(menuItem.btw.ToString());
                 listViewItem.SubItems.Add(menuItem.categorie);
                 listViewItem.SubItems.Add(menuItem.menukaartsoort);
-                listViewItem.SubItems.Add(menuItem.prijs.ToString());
+                listViewItem.SubItems.Add(menuItem.prijs.ToString("€ 0.00"));
+
+                listViewDrankmenuOverzicht.Items.Add(listViewItem);
+            }
+        }
+
+        private void btnLunchMenu_MenuoverzichtKeuze_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaLunchMenuoverizcht.Show();
+            listView_LunchMenuOverzicht_Kassa.Items.Clear();
+            MenuItemService menuItemService = new MenuItemService();            
+            List<MenuItem> menuItemList = new List<MenuItem>();
+            menuItemList = menuItemService.Get_LunchMenuKaart();
+            
+            foreach (MenuItem menuItem in menuItemList)
+            {
+                ListViewItem listViewItem = new ListViewItem(menuItem.ID.ToString());
+                listViewItem.SubItems.Add(menuItem.omschrijving);
+                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
+                listViewItem.SubItems.Add(menuItem.btw.ToString());
+                listViewItem.SubItems.Add(menuItem.categorie);
+                listViewItem.SubItems.Add(menuItem.menukaartsoort);
+                listViewItem.SubItems.Add(menuItem.prijs.ToString("€ 0.00"));
+
+                listView_LunchMenuOverzicht_Kassa.Items.Add(listViewItem);
+            }
+        }
+
+        private void btnDinerMenu_MenuoverzichtKeuze_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaDinerMenuoverzicht.Show();
+            listView_DinerMenuOverzicht.Items.Clear();
+            MenuItemService menuItemService = new MenuItemService();
+            List<ChapooModel.MenuItem> menuItemList = menuItemService.Get_DinerMenuKaart();
+
+
+            foreach (ChapooModel.MenuItem menuItem in menuItemList)
+            {
+                ListViewItem listViewItem = new ListViewItem(menuItem.ID.ToString());
+                listViewItem.SubItems.Add(menuItem.omschrijving);
+                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
+                listViewItem.SubItems.Add(menuItem.btw.ToString());
+                listViewItem.SubItems.Add(menuItem.categorie);
+                listViewItem.SubItems.Add(menuItem.menukaartsoort);
+                listViewItem.SubItems.Add(menuItem.prijs.ToString("€ 0.00"));
 
                 listView_DinerMenuOverzicht.Items.Add(listViewItem);
             }
-            
+
         }
 
         // Event Handlers voor VoorraadOverzichtKeuze Scherm

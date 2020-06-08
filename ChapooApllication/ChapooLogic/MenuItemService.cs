@@ -36,6 +36,47 @@ namespace ChapooLogic
                 return fakemenuitemlist;
             }
         }
+        public List<MenuItem> Get_LunchMenuKaart()
+        {
+            try
+            {
+                List<MenuItem> menuitemlijst = MenuItem_db.Get_LunchMenuKaart();
+
+                if (menuitemlijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuitemlijst;
+            }
+            catch (Exception e)
+            {
+                List<MenuItem> fakemenuitemlist = new List<MenuItem>();
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
+                fakemenuitemlist.Add(fakemenuitem);
+                return fakemenuitemlist;
+            }
+        }
+
+        public List<MenuItem> Get_DinerMenuKaart()
+        {
+            try
+            {
+                List<MenuItem> menuitemlijst = MenuItem_db.Get_DinerMenuKaart_MenuItems();
+
+                if (menuitemlijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuitemlijst;
+            }
+            catch (Exception e)
+            {
+                List<MenuItem> fakemenuitemlist = new List<MenuItem>();
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
+                fakemenuitemlist.Add(fakemenuitem);
+                return fakemenuitemlist;
+            }
+        }
 
         public List<MenuItem> Get_Gerechten_MenuItems()
         {
@@ -115,7 +156,7 @@ namespace ChapooLogic
         {
             try
             {
-               // MenuItem_db.AddMenuItem(ID,omschrijving,inVoorraad,BTW, categorie, menuSoort, prijs);
+                MenuItem_db.AddMenuItem(ID,omschrijving,inVoorraad,BTW, categorie, menuSoort, prijs);
                 return "Menu item succesvol toegevoegd!";
             }
             catch (Exception e)
@@ -137,7 +178,8 @@ namespace ChapooLogic
                 return e.ToString();
             }
         }
-    
+       
+
         public MenuItem ReadMenuItem(string MenuKaartSoort, string SoortType)
         {
             try

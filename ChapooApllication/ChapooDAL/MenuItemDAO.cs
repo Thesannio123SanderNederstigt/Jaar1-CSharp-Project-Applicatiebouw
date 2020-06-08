@@ -27,6 +27,20 @@ namespace ChapooDAL
             return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public List<MenuItem> Get_DinerMenuKaart_MenuItems()
+        {
+            string query = "SELECT ID, omschrijving, aantalvoorraad, btw, categorie, menukaartsoort, prijs FROM MenuItem WHERE menukaartsoort = 'Diner'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<MenuItem> Get_LunchMenuKaart()
+        {
+            string query = "SELECT ID, omschrijving, aantalvoorraad, btw, categorie, menukaartsoort, prijs FROM MenuItem WHERE menukaartsoort = 'Lunch'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
+        }
+
         public List<MenuItem> Get_Dranken_MenuItems()
         {
             string query = "SELECT ID, menukaartsoort, categorie, prijs, btw, omschrijving, aantalvoorraad FROM MenuItem WHERE menukaartsoort = 'Dranken'";
@@ -74,6 +88,8 @@ namespace ChapooDAL
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        
+
         //get by type and sort test
         public MenuItem Db_GetMenuItem(string MenuKaartSoort, string SoortType)
         {
@@ -81,6 +97,16 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@MenuKaartSoort", MenuKaartSoort),
                 new SqlParameter("@SoortType", SoortType) };
             return ReadMenuItem(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+
+        public void AddMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
+        {
+            string query = "INSERT INTO menuItem(ID, omschrijving, aantalvoorraad, btw, categorie, menukaartsoort, prijs) VALUES(@ID,@omschrijving,@inVoorraad,@BTW,@categorie,@menuSoort,@prijs)";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@ID",ID), new SqlParameter("@omschrijving", omschrijving),
+            new SqlParameter("@inVoorraad", inVoorraad),  new SqlParameter("@BTW", BTW),
+            new SqlParameter("@categorie", categorie),  new SqlParameter("@menuSoort", menuSoort),  new SqlParameter("@prijs", prijs) };
+            ExecuteEditQuery(query, sqlParameters);
         }
         // Edit with product and aantal
         public string EditMenuItem(string product, int aantal)
