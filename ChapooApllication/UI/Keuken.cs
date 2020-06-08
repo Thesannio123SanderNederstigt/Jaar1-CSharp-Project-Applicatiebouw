@@ -535,6 +535,17 @@ namespace UI
             gBox_Tafel6.Controls.RemoveByKey("lv_Tafel5");
             gBox_Tafel7.Controls.RemoveByKey("lv_Tafel6");
             gBox_Tafel8.Controls.RemoveByKey("lv_Tafel7");
+
+            gBox_AFTafel1.Controls.RemoveByKey("lv_Tafel0");
+            gBox_AFTafel2.Controls.RemoveByKey("lv_Tafel1");
+            gBox_AFTafel3.Controls.RemoveByKey("lv_Tafel2");
+            gBox_AFTafel4.Controls.RemoveByKey("lv_Tafel3");
+            gBox_AFTafel5.Controls.RemoveByKey("lv_Tafel4");
+            gBox_AFTafel6.Controls.RemoveByKey("lv_Tafel5");
+            gBox_AFTafel7.Controls.RemoveByKey("lv_Tafel6");
+            gBox_AFTafel8.Controls.RemoveByKey("lv_Tafel7");
+
+
         }
         
 
@@ -1084,6 +1095,9 @@ namespace UI
         private void pictureBxAF_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
             pnl_AfgerondeBestellingen.Hide();
+            DeleteListViews();
+            TextLabelReset();
+            ResetGroupBoxAFSystemColors();
             pnl_KeukenBarStart.Show();
         }
 
