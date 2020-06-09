@@ -713,15 +713,15 @@ namespace UI
         private void btn_StartInkomende_Click(object sender, EventArgs e)
         {
             pnl_KeukenBarStart.Hide();
-            pnl_BinnenkomendeBestellingen.Show();
-            SelectCurrentOrders();
+            LoadBinnenkomendeBestellingen();
+
+
         }
 
         private void btn_StartAfgeronde_Click(object sender, EventArgs e)
         {
             pnl_KeukenBarStart.Hide();
-            pnl_AfgerondeBestellingen.Show();
-            SelectClearedOrders();
+            LoadAfgerondeBestellingen();
         }
 
         private void btn_StartVoorraad_Click(object sender, EventArgs e)
@@ -948,7 +948,7 @@ namespace UI
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.UpdateBestelling(bestellingID);
                 TextLabelColorReset();
-                SelectCurrentOrders();
+                LoadBinnenkomendeBestellingen();
             }
 
             lbl_BestellingID.Text = "";
@@ -957,11 +957,16 @@ namespace UI
 
         private void btn_AfgerondeBestelling_Click(object sender, EventArgs e)
         {
+            LoadAfgerondeBestellingen();
+        }
+
+        private void LoadAfgerondeBestellingen()
+        {
             pnl_BinnenkomendeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();
             ResetGroupBoxSystemColors();
-            
+
             pnl_AfgerondeBestellingen.Show();
             SelectClearedOrders();
         }
@@ -975,7 +980,7 @@ namespace UI
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.DeleteBestelling(bestellingID);
                 TextLabelColorReset();
-                SelectCurrentOrders();
+                LoadBinnenkomendeBestellingen();
             }
 
             lbl_BestellingID.Text = "";
@@ -1581,6 +1586,11 @@ namespace UI
 
         private void btn_Binnenkomendestelling_Click(object sender, EventArgs e)
         {
+            LoadBinnenkomendeBestellingen();
+        }
+
+        private void LoadBinnenkomendeBestellingen()
+        {
             pnl_AfgerondeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();
@@ -1598,7 +1608,7 @@ namespace UI
                 int bestellingID = int.Parse(lbl_BestellingAFID.Text);
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.DeleteBestelling(bestellingID);
-                SelectClearedOrders();
+                LoadAfgerondeBestellingen();
             }
 
             lbl_BestellingAFID.Text = "";
