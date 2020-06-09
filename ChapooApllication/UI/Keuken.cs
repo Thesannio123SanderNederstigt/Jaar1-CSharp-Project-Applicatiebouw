@@ -948,6 +948,7 @@ namespace UI
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.UpdateBestelling(bestellingID);
                 TextLabelColorReset();
+                SelectCurrentOrders();
             }
 
             lbl_BestellingID.Text = "";
@@ -974,6 +975,7 @@ namespace UI
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.DeleteBestelling(bestellingID);
                 TextLabelColorReset();
+                SelectCurrentOrders();
             }
 
             lbl_BestellingID.Text = "";
@@ -1050,7 +1052,7 @@ namespace UI
                 {
                     ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                     li.SubItems.Add(b.aantal.ToString());
-                    li.SubItems.Add(b.rekeningID.ToString());
+                    li.SubItems.Add(b.ID.ToString());
                     listView_BestelItems.Items.Add(li);
                 }
 
@@ -1204,7 +1206,7 @@ namespace UI
                         ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                         li.SubItems.Add(b.aantal.ToString());
                         li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.rekeningID.ToString()); //eigenlijk het bestellingmenuitemID wat nodig is
+                        li.SubItems.Add(b.bestellingmenuitemID.ToString()); //eigenlijk het bestellingmenuitemID wat nodig is
                         listView_BestelItems.Items.Add(li);
                     }
 
@@ -1219,7 +1221,7 @@ namespace UI
                         ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                         li.SubItems.Add(b.aantal.ToString());
                         li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.rekeningID.ToString()); //hier zit het bestellingID in het rekeningID gestopt
+                        li.SubItems.Add(b.bestellingmenuitemID.ToString()); //hier zit het bestellingmenuitemID in het rekeningID gestopt
                         listView_BestelItems.Items.Add(li);
                     }
 
@@ -1540,9 +1542,8 @@ namespace UI
                         ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                         li.SubItems.Add(b.aantal.ToString());
                         li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.rekeningID.ToString());
+                        li.SubItems.Add(b.bestellingmenuitemID.ToString());
                         listView_AFBestelItems.Items.Add(li);
-                        //txt_AFOpmerkingen.Text = b.opmerking.ToString();
                     }
 
                 }
@@ -1556,7 +1557,7 @@ namespace UI
                         ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                         li.SubItems.Add(b.aantal.ToString());
                         li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.rekeningID.ToString());
+                        li.SubItems.Add(b.bestellingmenuitemID.ToString());
                         listView_BestelItems.Items.Add(li);
 
                     }
@@ -1597,6 +1598,7 @@ namespace UI
                 int bestellingID = int.Parse(lbl_BestellingAFID.Text);
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.DeleteBestelling(bestellingID);
+                SelectClearedOrders();
             }
 
             lbl_BestellingAFID.Text = "";

@@ -1448,8 +1448,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1005);
-            this.Controls.Add(this.pnl_BinnenkomendeBestellingen);
             this.Controls.Add(this.pnl_AfgerondeBestellingen);
+            this.Controls.Add(this.pnl_BinnenkomendeBestellingen);
             this.Controls.Add(this.pnl_KeukenBarStart);
             this.Name = "Keuken";
             this.Text = "Bestellingscherm";

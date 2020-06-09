@@ -14,7 +14,7 @@ namespace ChapooDAL
         // Get all Bestellingen
         public List<Bestelling> Get_All_Bestellingen()
         {
-            string query = "SELECT ID, besteltijd, status, tafelID, rekeningID, menuItemID FROM Bestelling";
+            string query = "SELECT ID, besteltijd, status, tafelID, menuItemID FROM Bestelling";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadBestellingen (ExecuteSelectQuery(query, sqlParameters));
         }
@@ -30,10 +30,9 @@ namespace ChapooDAL
                 DateTime besteltijd = (DateTime)dr["besteltijd"];
                 bool status = (bool)dr["status"];
                 int tafelID = (int)dr["tafelID"];
-                int rekeningID = (int)dr["rekeningID"];
                 string opmerking = (string)dr["opmerking"];
 
-                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, rekeningID, opmerking);
+                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, opmerking);
                 bestellingen.Add(bestelling);
             }
 
@@ -44,10 +43,10 @@ namespace ChapooDAL
         public List<Bestelling> GetCurrentOrders(string minMax)
         {
             string query = "SELECT Bestelling.tafelID, Bestelling.besteltijd AS [besteltijd], Bestelling.ID, Bestelling.[status], " +
-                "Bestelling.rekeningID, CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS [opmerking], MenuItem.menukaartsoort AS [kaartsoort] " + 
+                " CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS [opmerking], MenuItem.menukaartsoort AS [kaartsoort] " + 
                 "FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID " +
                 "WHERE menukaartsoort != 'Dranken' GROUP BY Bestelling.tafelID, Bestelling.ID, besteltijd, Bestelling.[status], " + 
-                $"Bestelling.rekeningID, Bestelling.opmerking, MenuItem.menukaartsoort ORDER BY kaartsoort {minMax}";
+                $"Bestelling.opmerking, MenuItem.menukaartsoort ORDER BY kaartsoort {minMax}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadBestellingenKaart(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -55,10 +54,10 @@ namespace ChapooDAL
         public List<Bestelling> GetCurrentDrinkOrders(string minMax)
         {
             string query = "SELECT Bestelling.tafelID, Bestelling.besteltijd AS [besteltijd], Bestelling.ID, Bestelling.[status], " +
-                "Bestelling.rekeningID, CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS [opmerking], MenuItem.menukaartsoort AS [kaartsoort] " +
+                " CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS [opmerking], MenuItem.menukaartsoort AS [kaartsoort] " +
                 "FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID " +
                 "WHERE menukaartsoort = 'Dranken' GROUP BY Bestelling.tafelID, Bestelling.ID, besteltijd, Bestelling.[status], " +
-                $"Bestelling.rekeningID, Bestelling.opmerking, MenuItem.menukaartsoort ORDER BY kaartsoort {minMax}";
+                $"Bestelling.opmerking, MenuItem.menukaartsoort ORDER BY kaartsoort {minMax}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadBestellingenKaart(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -75,11 +74,10 @@ namespace ChapooDAL
                 DateTime besteltijd = (DateTime)dr["besteltijd"];
                 bool status = (bool)dr["status"];
                 int tafelID = (int)dr["tafelID"];
-                int rekeningID = (int)dr["rekeningID"];
                 string opmerking = (string)dr["opmerking"];
                 string kaartsoort = (string)dr["kaartsoort"];
 
-                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, rekeningID, opmerking, kaartsoort);
+                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, opmerking, kaartsoort);
                 bestellingen.Add(bestelling);
             }
 
@@ -88,10 +86,10 @@ namespace ChapooDAL
 
         public List<Bestelling> GetBestellingMenuItems(int bestellingID)
         {
-            string query = "SELECT MenuItem.omschrijving, Bestelling_MenuItem.aantal, Bestelling.ID, rekeningID, Bestelling_MenuItem.[status], " +
+            string query = "SELECT MenuItem.omschrijving, Bestelling_MenuItem.aantal, Bestelling.ID, Bestelling_MenuItem.[status], " +
                 "MenuItem.menukaartsoort AS [kaartsoort] FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID " +
                 "JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.ID = @id  " +
-                "GROUP BY Bestelling_MenuItem.[status], MenuItem.omschrijving, Bestelling_MenuItem.aantal, Bestelling.ID, rekeningID, MenuItem.menukaartsoort";
+                "GROUP BY Bestelling_MenuItem.[status], MenuItem.omschrijving, Bestelling_MenuItem.aantal, Bestelling.ID, MenuItem.menukaartsoort";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", bestellingID) };
             return ReadSpecialBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -105,12 +103,12 @@ namespace ChapooDAL
                 int ID = (int)dr["ID"];
                 bool status = (bool)dr["status"];
                 int aantal = (int)dr["aantal"];
-                int rekeningID = (int)dr["rekeningID"];
                 string opmerking = "";
+                int bestellingmenuitemID = ID;
                 string omschrijving = (string)dr["omschrijving"];
                 string kaartsoort = (string)dr["kaartsoort"];
 
-                Bestelling bestelling = new Bestelling(omschrijving, opmerking, status, aantal, ID, rekeningID, kaartsoort);
+                Bestelling bestelling = new Bestelling(omschrijving, opmerking, status, aantal, ID, bestellingmenuitemID, kaartsoort);
                 bestellingen.Add(bestelling);
             }
 
@@ -140,12 +138,12 @@ namespace ChapooDAL
                 int ID = (int)dr["BestellingID"];
                 bool status = (bool)dr["status"];
                 int aantal = (int)dr["Aantal"];
-                int rekeningID = (int)dr["BestellingMenuItemID"];
+                int bestellingmenuitemID = (int)dr["BestellingMenuItemID"];
                 string opmerking = (string)dr["opmerking"]; //zorgen dat dit de algemene opmerking van de bestelling ophaald! (is nu zo)
                 string omschrijving = (string)dr["omschrijving"];
                 string kaartsoort = (string)dr["kaartsoort"];
 
-                Bestelling bestelling = new Bestelling(omschrijving, opmerking, status, aantal, ID, rekeningID, kaartsoort);
+                Bestelling bestelling = new Bestelling(omschrijving, opmerking, status, aantal, ID, bestellingmenuitemID, kaartsoort);
                 bestellingen.Add(bestelling);
             }
 
@@ -174,7 +172,7 @@ namespace ChapooDAL
         // Get Bestelling by ID
         public Bestelling GetById(int bestellingID)
         {
-            string query = "SELECT ID, besteltijd, status, tafelID, rekeningID, menuItemID FROM Bestelling WHERE ID = @id";
+            string query = "SELECT ID, besteltijd, status, tafelID, menuItemID FROM Bestelling WHERE ID = @id";
             SqlParameter[] sqlParameters = new SqlParameter[]  { new SqlParameter("@id", bestellingID) };
             return ReadBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -191,29 +189,28 @@ namespace ChapooDAL
                 DateTime besteltijd = (DateTime)dr["besteltijd"];
                 bool status = (bool)dr["status"];
                 int tafelID = (int)dr["tafelID"];
-                int rekeningID = (int)dr["rekeningID"];
                 string opmerking = (string)dr["opmerking"];
 
-                bestelling = new Bestelling(ID, besteltijd, status, tafelID, rekeningID, opmerking);
+                bestelling = new Bestelling(ID, besteltijd, status, tafelID, opmerking);
             }
 
             return bestelling;
         }
 
-        public string AddBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string AddBestelling(DateTime besteltijd, bool status, int tafelID, string opmerking)
         {
-            string query = "INSERT Bestelling(besteltijd, status, tafelID, rekeningID, opmerking) VALUES (@Besteltijd, @Status, @TafelID, @RekeningID, @Opmerking)";
+            string query = "INSERT Bestelling(besteltijd, status, tafelID, opmerking) VALUES (@Besteltijd, @Status, @TafelID, @Opmerking)";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Besteltijd", besteltijd), new SqlParameter("@Status", status), 
-                new SqlParameter("@TafelID", tafelID), new SqlParameter("@RekeningID", rekeningID), new SqlParameter("@Opmerking", opmerking) };
+                new SqlParameter("@TafelID", tafelID), new SqlParameter("@Opmerking", opmerking) };
             ExecuteEditQuery(query, sqlParameters);
             return "Bestelling succesvol toegevoegd!";
         }
 
-        public string EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, string opmerking)
         {
-            string query = "UPDATE Bestelling SET besteltijd = @Besteltijd, status = @Status, tafelID = @TafelID, rekeningID = @RekeningID, opmerking = @Opmerking WHERE ID = @Id";
+            string query = "UPDATE Bestelling SET besteltijd = @Besteltijd, status = @Status, tafelID = @TafelID, opmerking = @Opmerking WHERE ID = @Id";
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", BestellingID), new SqlParameter("@Besteltijd", besteltijd), 
-                new SqlParameter("@Status", status), new SqlParameter("@TafelID", tafelID), new SqlParameter("@RekeningID", rekeningID), new SqlParameter("@Opmerking", opmerking) };
+                new SqlParameter("@Status", status), new SqlParameter("@TafelID", tafelID), new SqlParameter("@Opmerking", opmerking) };
             ExecuteEditQuery(query, sqlParameters);
             return "Bestelling met succes aangepast!";
         }

@@ -28,7 +28,7 @@ namespace ChapooLogic
             catch(Exception e)
             {
                 List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
-                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
+                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, e.ToString());
                 fakeBestellingLijst.Add(fakeBestelling);
                 return fakeBestellingLijst;
             }
@@ -49,7 +49,7 @@ namespace ChapooLogic
             }
             catch(Exception e)
             {
-                Bestelling fakebestelling = new Bestelling(1, DateTime.Now, false, 1, 1, e.ToString());
+                Bestelling fakebestelling = new Bestelling(1, DateTime.Now, false, 1, e.ToString());
                 return fakebestelling;
             }
         }
@@ -69,7 +69,7 @@ namespace ChapooLogic
             catch(Exception e)
             {
                 List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
-                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
+                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, e.ToString());
                 fakeBestellingLijst.Add(fakeBestelling);
                 return fakeBestellingLijst;
             }
@@ -90,7 +90,7 @@ namespace ChapooLogic
             catch(Exception e)
             {
                 List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
-                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
+                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, e.ToString());
                 fakeBestellingLijst.Add(fakeBestelling);
                 return fakeBestellingLijst;
             }
@@ -111,7 +111,7 @@ namespace ChapooLogic
             catch (Exception e)
             {
                 List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
-                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
+                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, e.ToString());
                 fakeBestellingLijst.Add(fakeBestelling);
                 return fakeBestellingLijst;
             }
@@ -132,7 +132,7 @@ namespace ChapooLogic
             catch (Exception e)
             {
                 List<Bestelling> fakeBestellingLijst = new List<Bestelling>();
-                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, 1, e.ToString());
+                Bestelling fakeBestelling = new Bestelling(1, DateTime.Now, true, 1, e.ToString());
                 fakeBestellingLijst.Add(fakeBestelling);
                 return fakeBestellingLijst;
             }
@@ -164,11 +164,11 @@ namespace ChapooLogic
             }
         }
 
-        public string AddNewBestelling(DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string AddNewBestelling(DateTime besteltijd, bool status, int tafelID, string opmerking)
         {
             try
             {
-                Bestelling_db.AddBestelling(besteltijd, status, tafelID, rekeningID, opmerking);
+                Bestelling_db.AddBestelling(besteltijd, status, tafelID, opmerking);
                 return "Bestelling succesvol toegevoegd!";
             }
             catch(Exception e)
@@ -177,11 +177,11 @@ namespace ChapooLogic
             }
         }
 
-        public string EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
+        public string EditBestelling(int BestellingID, DateTime besteltijd, bool status, int tafelID, string opmerking)
         {
             try
             {
-                Bestelling_db.EditBestelling(BestellingID, besteltijd, status, tafelID, rekeningID, opmerking);
+                Bestelling_db.EditBestelling(BestellingID, besteltijd, status, tafelID, opmerking);
                 return "Bestelling met succes aangepast!";
             }
             catch(Exception e)
