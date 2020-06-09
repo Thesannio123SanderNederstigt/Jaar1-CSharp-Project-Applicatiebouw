@@ -16,6 +16,7 @@ namespace UI
     public partial class Keuken : Form
     {
         string Type = Login.MedewerkerType;
+        string Overzicht = Kassa.Bestellingoverzicht;
 
         bool current;
 
@@ -31,7 +32,15 @@ namespace UI
         public Keuken()
         {
             InitializeComponent();
+
             HidePanels();
+
+            if(Overzicht == "kok" || Overzicht == "bar")
+            {
+                pnl_KeukenBarStart.Hide();
+                pnl_BinnenkomendeBestellingen.Show();
+                SelectCurrentOrders();
+            }
 
         }
 
@@ -41,23 +50,24 @@ namespace UI
 
              BestellingService bestelservice = new BestellingService();
 
-            if (Type == "chef-kok")
+            if (Type == "chef-kok" || Overzicht == "kok")
             {
                bestellinglist = bestelservice.GetOrders("DESC"); //het filteren op Dranken gebeurd nu in de GetCurrentOrders query helaas...
             }
-            else if (Type == "barmedewerker")
+            else if (Type == "barmedewerker" || Overzicht == "bar")
             {
                 bestellinglist = bestelservice.GetDrinkOrders("DESC");
             }
 
-             List<int> numberlist = new List<int>();
+             List<int> bestellingnumberlist = new List<int>();
 
             foreach (Bestelling b in bestellinglist)
             {
                 if (b.status == false) //om alleen huidige bestellingen te krijgen
                 {
                     int tafelID = b.tafelID;
-                    numberlist.Add(tafelID);
+                    int bestellingID = b.ID;
+                    bestellingnumberlist.Add(bestellingID);
                 }
 
             }
@@ -65,32 +75,32 @@ namespace UI
             string listviewname = "lv_Tafel";
 
             int tafelID2 = 0;
-            int bestellingID = 0;
+            int bestellingID2 = 0;
             DateTime besteltijd;
             current = true;
 
-            for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
+            for (int i = 0; i < bestellingnumberlist.Count; i++) //van 0 t/m 7 maximaal
             {
-                tafelID2 = numberlist[i];
+                bestellingID2 = bestellingnumberlist[i];
 
                 Bestelling bestelling = bestellinglist[i];
-                bestellingID = bestelling.ID;
+                tafelID2 = bestelling.tafelID;
                 besteltijd = bestelling.besteltijd;
 
 
                 ListView lv = new System.Windows.Forms.ListView();
-                CreateListView(lv, i, tafelID2, bestellingID, besteltijd, current);
+                CreateListView(lv, i, tafelID2, bestellingID2, besteltijd, current);
 
                 lv.Name = listviewname + i;
 
-                List<Bestelling> Bestellinglist = bestelservice.GetBestellingListView(bestellingID);
+                List<Bestelling> Bestellinglist = bestelservice.GetBestellingListView(bestellingID2);
 
 
                 CreateOptionalButtons(Bestellinglist, i, current);
 
                 lv.Items.Clear();
 
-                if (Type == "chef-kok")
+                if (Type == "chef-kok" || Overzicht == "kok")
                 {
                     foreach (Bestelling b in Bestellinglist)
                     {
@@ -104,7 +114,7 @@ namespace UI
 
                     }
                 }
-                else if (Type == "barmedewerker")
+                else if (Type == "barmedewerker" || Overzicht == "bar")
                 {
                     foreach (Bestelling b in Bestellinglist)
                     {
@@ -119,7 +129,7 @@ namespace UI
                     }
                 }
 
-                if(numberlist.Count >= 7)
+                if(bestellingnumberlist.Count >= 7)
                 {
                     return;
                 }
@@ -133,24 +143,25 @@ namespace UI
 
             BestellingService bestelservice = new BestellingService();
 
-            if (Type == "chef-kok")
+            if (Type == "chef-kok" || Overzicht == "kok")
             {
                 bestellinglist = bestelservice.GetOrders("ASC");
             }
-            else if (Type == "barmedewerker")
+            else if (Type == "barmedewerker" || Overzicht == "bar")
             {
                 bestellinglist = bestelservice.GetDrinkOrders("ASC");
             }
 
 
-            List<int> numberlist = new List<int>();
+            List<int> bestellingnumberlist = new List<int>();
 
             foreach (Bestelling b in bestellinglist)
             {
                 if (b.status == true) //om alleen huidige bestellingen te krijgen
                 {
                     int tafelID = b.tafelID;
-                    numberlist.Add(tafelID);
+                    int bestellingID = b.ID;
+                    bestellingnumberlist.Add(bestellingID);
                 }
 
             }
@@ -158,26 +169,26 @@ namespace UI
             string listviewname = "lv_Tafel";
 
             int tafelID2 = 0;
-            int bestellingID = 0;
+            int bestellingID2 = 0;
             DateTime besteltijd;
             current = false;
 
-            for (int i = 0; i < numberlist.Count; i++) //van 0 t/m 7 maximaal
+            for (int i = 0; i < bestellingnumberlist.Count; i++) //van 0 t/m 7 maximaal
             {
-                tafelID2 = numberlist[i];
+                bestellingID2 = bestellingnumberlist[i];
 
                 Bestelling bestelling = bestellinglist[i];
-                bestellingID = bestelling.ID;
+                tafelID2 = bestelling.tafelID;
                 besteltijd = bestelling.besteltijd;
 
                 ListView lv = new System.Windows.Forms.ListView();
-                CreateListView(lv, i, tafelID2, bestellingID, besteltijd, current);
+                CreateListView(lv, i, tafelID2, bestellingID2, besteltijd, current);
 
                 lv.Name = listviewname + i;
 
 
 
-                List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(bestellingID);
+                List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(bestellingID2);
 
 
                 CreateOptionalButtons(Bestellinglistview, i, current);
@@ -186,9 +197,9 @@ namespace UI
 
                 foreach (Bestelling b in Bestellinglistview)
                 {
-                    if(Type == "chef-kok")
+                    if(Type == "chef-kok" || Overzicht == "kok")
                     {
-                        if (b.status == true && b.kaartsoort != "Dranken")
+                        if (b.kaartsoort != "Dranken")
                         {
                             ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                             li.SubItems.Add(b.aantal.ToString());
@@ -196,9 +207,9 @@ namespace UI
                             lv.Items.Add(li);
                         }
                     }
-                    else if(Type == "barmedewerker")
+                    else if(Type == "barmedewerker" || Overzicht == "bar")
                     {
-                        if (b.status == true && b.kaartsoort == "Dranken")
+                        if (b.kaartsoort == "Dranken")
                         {
                             ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                             li.SubItems.Add(b.aantal.ToString());
@@ -209,7 +220,7 @@ namespace UI
 
                 }
 
-                if (numberlist.Count >= 7)
+                if (bestellingnumberlist.Count >= 7)
                 {
                     return;
                 }
@@ -713,7 +724,19 @@ namespace UI
             SelectClearedOrders();
         }
 
-        //eventhandlers/methoden op/binnen het pnl_BinnenkomendeBestellingen
+        private void btn_StartVoorraad_Click(object sender, EventArgs e)
+        {
+            // Hide en Show de goede panels
+            HidePanels();
+
+            this.Visible = false;
+            Kassa kassa = new Kassa();
+            kassa.Show();
+
+
+        }
+
+        //eventhandlers/methoden binnen het pnl_BinnenkomendeBestellingen
         private void pictureBx_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
             pnl_BinnenkomendeBestellingen.Hide();
@@ -1172,7 +1195,7 @@ namespace UI
 
             listView_BestelItems.Items.Clear();
 
-            if(Type == "chef-kok")
+            if(Type == "chef-kok" || Overzicht == "kok")
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
@@ -1187,7 +1210,7 @@ namespace UI
 
                 }
             }
-            else if(Type == "barmedewerker")
+            else if(Type == "barmedewerker" || Overzicht == "bar")
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
@@ -1203,8 +1226,6 @@ namespace UI
                 }
             }
 
-
-            txt_Opmerkingen.Enabled = false;
         }
 
         //eventhandlers/methoden die op het Afgerondenbestellingen panel staan
@@ -1508,34 +1529,36 @@ namespace UI
             BestellingService bestelservice = new BestellingService();
             List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(bestellingID);
 
-            listView_BestelItems.Items.Clear();
+            listView_AFBestelItems.Items.Clear();
 
-            if(Type == "chef-kok")
+            if(Type == "chef-kok" || Overzicht == "kok")
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
-                    if (b.status == true && b.kaartsoort != "Dranken")
+                    if (b.kaartsoort != "Dranken")
                     {
                         ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                         li.SubItems.Add(b.aantal.ToString());
                         li.SubItems.Add(b.opmerking.ToString());
                         li.SubItems.Add(b.rekeningID.ToString());
-                        listView_BestelItems.Items.Add(li);
+                        listView_AFBestelItems.Items.Add(li);
+                        //txt_AFOpmerkingen.Text = b.opmerking.ToString();
                     }
 
                 }
             }
-            else if(Type == "barmedewerker")
+            else if(Type == "barmedewerker" || Overzicht == "bar")
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
-                    if (b.status == true && b.kaartsoort == "Dranken")
+                    if (b.kaartsoort == "Dranken")
                     {
                         ListViewItem li = new ListViewItem(b.omschrijving.ToString());
                         li.SubItems.Add(b.aantal.ToString());
                         li.SubItems.Add(b.opmerking.ToString());
                         li.SubItems.Add(b.rekeningID.ToString());
                         listView_BestelItems.Items.Add(li);
+
                     }
 
                 }
@@ -1544,6 +1567,16 @@ namespace UI
 
         }
 
+        private void listView_AFBestelItems_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = listView_AFBestelItems.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = listView_AFBestelItems.SelectedIndices[0];
+                txt_AFOpmerkingen.Text = listView_AFBestelItems.Items[index].SubItems[2].Text;
+            }
+        }
 
         private void btn_Binnenkomendestelling_Click(object sender, EventArgs e)
         {
@@ -1594,16 +1627,6 @@ namespace UI
                 Environment.Exit(0);
             }
         }
-
-        // TODO: Optioneel nog een panel toevoegen
-        private void btn_StartVoorraad_Click(object sender, EventArgs e)
-        {
-            // Hide en Show de goede panels
-            HidePanels();
-
-        }
-
-
 
     }
 }

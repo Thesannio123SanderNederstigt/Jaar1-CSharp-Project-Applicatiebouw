@@ -2486,10 +2486,10 @@
             this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
             this.Controls.Add(this.pnl_KassaVoorraadoverzichtDrank);
+            this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
             this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
             this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_KassaVoorraadKeuze);
-            this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
             this.Controls.Add(this.pnl_KassaTafeloverzicht);
             this.Controls.Add(this.pnl_Inkomstenoverzicht);
             this.Name = "Kassa";

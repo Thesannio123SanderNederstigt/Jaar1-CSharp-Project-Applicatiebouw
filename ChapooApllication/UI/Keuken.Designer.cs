@@ -38,6 +38,7 @@
             this.pnl_BinnenkomendeBestellingen = new System.Windows.Forms.Panel();
             this.pictureBx_KeukenBarStartscherm_Keuken = new System.Windows.Forms.PictureBox();
             this.pnl_TafelBinnenkomendeBestelling = new System.Windows.Forms.Panel();
+            this.lbl_TafelBestellingID = new System.Windows.Forms.Label();
             this.pictureBx_TerugInkomendeBestellingen = new System.Windows.Forms.PictureBox();
             this.lbl_Aantal = new System.Windows.Forms.Label();
             this.lbl_MenuItem = new System.Windows.Forms.Label();
@@ -98,6 +99,7 @@
             this.lbl_BestellingAFID = new System.Windows.Forms.Label();
             this.lblAFTijd8 = new System.Windows.Forms.Label();
             this.pnl_TafelAfgerondeBestelling = new System.Windows.Forms.Panel();
+            this.lbl_TafelBestellingAFID = new System.Windows.Forms.Label();
             this.pictureBx_TerugAfgerondeBestellingen = new System.Windows.Forms.PictureBox();
             this.lbl_AFOpmerkingen = new System.Windows.Forms.Label();
             this.txt_AFOpmerkingen = new System.Windows.Forms.TextBox();
@@ -141,8 +143,6 @@
             this.lbl_AfgerondeBestellingen = new System.Windows.Forms.Label();
             this.btn_VerwijderAfgerondeBestelling = new System.Windows.Forms.Button();
             this.ChapooLogoAfgerondeBetselling = new System.Windows.Forms.PictureBox();
-            this.lbl_TafelBestellingID = new System.Windows.Forms.Label();
-            this.lbl_TafelBestellingAFID = new System.Windows.Forms.Label();
             this.pnl_KeukenBarStart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Keuken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChapooLogoBestellingStartScherm)).BeginInit();
@@ -285,10 +285,21 @@
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_Bestelling);
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_DatumTijd);
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_Tafel);
-            this.pnl_TafelBinnenkomendeBestelling.Location = new System.Drawing.Point(469, 116);
+            this.pnl_TafelBinnenkomendeBestelling.Location = new System.Drawing.Point(469, 112);
             this.pnl_TafelBinnenkomendeBestelling.Name = "pnl_TafelBinnenkomendeBestelling";
             this.pnl_TafelBinnenkomendeBestelling.Size = new System.Drawing.Size(911, 744);
             this.pnl_TafelBinnenkomendeBestelling.TabIndex = 79;
+            // 
+            // lbl_TafelBestellingID
+            // 
+            this.lbl_TafelBestellingID.AutoSize = true;
+            this.lbl_TafelBestellingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelBestellingID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_TafelBestellingID.Location = new System.Drawing.Point(343, 45);
+            this.lbl_TafelBestellingID.Name = "lbl_TafelBestellingID";
+            this.lbl_TafelBestellingID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_TafelBestellingID.TabIndex = 78;
+            this.lbl_TafelBestellingID.Visible = false;
             // 
             // pictureBx_TerugInkomendeBestellingen
             // 
@@ -352,6 +363,7 @@
             // 
             // txt_Opmerkingen
             // 
+            this.txt_Opmerkingen.Enabled = false;
             this.txt_Opmerkingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Opmerkingen.Location = new System.Drawing.Point(21, 617);
             this.txt_Opmerkingen.Multiline = true;
@@ -964,6 +976,17 @@
             this.pnl_TafelAfgerondeBestelling.Size = new System.Drawing.Size(911, 682);
             this.pnl_TafelAfgerondeBestelling.TabIndex = 78;
             // 
+            // lbl_TafelBestellingAFID
+            // 
+            this.lbl_TafelBestellingAFID.AutoSize = true;
+            this.lbl_TafelBestellingAFID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TafelBestellingAFID.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_TafelBestellingAFID.Location = new System.Drawing.Point(306, 45);
+            this.lbl_TafelBestellingAFID.Name = "lbl_TafelBestellingAFID";
+            this.lbl_TafelBestellingAFID.Size = new System.Drawing.Size(0, 2);
+            this.lbl_TafelBestellingAFID.TabIndex = 79;
+            this.lbl_TafelBestellingAFID.Visible = false;
+            // 
             // pictureBx_TerugAfgerondeBestellingen
             // 
             this.pictureBx_TerugAfgerondeBestellingen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugAfgerondeBestellingen.Image")));
@@ -988,6 +1011,8 @@
             // 
             // txt_AFOpmerkingen
             // 
+            this.txt_AFOpmerkingen.Enabled = false;
+            this.txt_AFOpmerkingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_AFOpmerkingen.Location = new System.Drawing.Point(21, 543);
             this.txt_AFOpmerkingen.Multiline = true;
             this.txt_AFOpmerkingen.Name = "txt_AFOpmerkingen";
@@ -1007,6 +1032,7 @@
             this.listView_AFBestelItems.TabIndex = 62;
             this.listView_AFBestelItems.UseCompatibleStateImageBehavior = false;
             this.listView_AFBestelItems.View = System.Windows.Forms.View.Details;
+            this.listView_AFBestelItems.SelectedIndexChanged += new System.EventHandler(this.listView_AFBestelItems_SelectedIndexChanged);
             // 
             // AFMenuItem
             // 
@@ -1416,28 +1442,6 @@
             this.ChapooLogoAfgerondeBetselling.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ChapooLogoAfgerondeBetselling.TabIndex = 22;
             this.ChapooLogoAfgerondeBetselling.TabStop = false;
-            // 
-            // lbl_TafelBestellingID
-            // 
-            this.lbl_TafelBestellingID.AutoSize = true;
-            this.lbl_TafelBestellingID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelBestellingID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_TafelBestellingID.Location = new System.Drawing.Point(343, 45);
-            this.lbl_TafelBestellingID.Name = "lbl_TafelBestellingID";
-            this.lbl_TafelBestellingID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_TafelBestellingID.TabIndex = 78;
-            this.lbl_TafelBestellingID.Visible = false;
-            // 
-            // lbl_TafelBestellingAFID
-            // 
-            this.lbl_TafelBestellingAFID.AutoSize = true;
-            this.lbl_TafelBestellingAFID.Font = new System.Drawing.Font("Microsoft Sans Serif", 1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TafelBestellingAFID.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_TafelBestellingAFID.Location = new System.Drawing.Point(306, 45);
-            this.lbl_TafelBestellingAFID.Name = "lbl_TafelBestellingAFID";
-            this.lbl_TafelBestellingAFID.Size = new System.Drawing.Size(0, 2);
-            this.lbl_TafelBestellingAFID.TabIndex = 79;
-            this.lbl_TafelBestellingAFID.Visible = false;
             // 
             // Keuken
             // 

@@ -16,8 +16,9 @@ namespace UI
 {
     public partial class Kassa : Form
     {
-
-       public void HidePanels()
+        string Type = Login.MedewerkerType;
+        public static string Bestellingoverzicht = "";
+        public void HidePanels()
         {
             pnl_Inkomstenoverzicht.Hide();
             pnl_KassaDinerMenuoverzicht.Hide();
@@ -47,7 +48,19 @@ namespace UI
         public Kassa()
         {
             InitializeComponent();
-            
+
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+
+            if (Type == "chef-kok")
+            {
+                pnl_KassaVoorraadoverzichtGerecht.Show();
+            }
+            else if(Type == "barmedewerker")
+            {
+                pnl_KassaVoorraadoverzichtDrank.Show();
+            }
+
         }
 
         private void pictureBx_Uitloggen_Kassa_Click(object sender, EventArgs e)
@@ -92,6 +105,17 @@ namespace UI
         {
             HidePanels();
             pnl_KassaPersoneelsbeheer.Show();
+            //listView_Personeelsbeheer.Items.Clear();
+            MedewerkerService medewerkerService = new MedewerkerService();
+            List<Medewerker> medewerkerList = medewerkerService.GetMedewerkers();
+            foreach (Medewerker medewerker in medewerkerList)
+            {
+                ListViewItem listviewItem = new ListViewItem(medewerker.ID.ToString());
+                listviewItem.SubItems.Add(medewerker.voornaam);
+                listviewItem.SubItems.Add(medewerker.achternaam);
+                listviewItem.SubItems.Add(medewerker.type);
+                listviewItem.SubItems.Add(medewerker.inlogcode.ToString());
+            }
         }
 
         private void btn_BestellingenHoofdscherm_Kassa_Click(object sender, EventArgs e)
@@ -358,18 +382,23 @@ namespace UI
 
         private void pictureBx_TerugDinermenuOverzicht_Kassa_Click(object sender, EventArgs e)
         {
-
+            HidePanels();
+            pnl_KassaMenuoverzichtKeuze.Show();
         }
 
         // Event Handlers voor KeuzeBestelling Scherm
         private void btn_BarKeuzeBestelling_Kassa_Click(object sender, EventArgs e)
         {
-
+            Bestellingoverzicht = "bar";
+            Keuken keuken = new Keuken();
+            keuken.Show();
         }
 
         private void btn_KeukenKeuzeBestelling_Kassa_Click(object sender, EventArgs e)
         {
-
+            Bestellingoverzicht = "kok";
+            Keuken keuken = new Keuken();
+            keuken.Show();
         }
 
         // Event Handlers voor Personeels Overzicht Scherm
@@ -389,6 +418,20 @@ namespace UI
         {
             HidePanels();
             pnl_KassaPersoneelsbeheer.Show();
+            listView_Personeelsbeheer.Items.Clear();
+            MedewerkerService medewerkerService = new MedewerkerService();
+            List<ChapooModel.Medewerker> medewerkerList = medewerkerService.GetMedewerkers();
+            foreach (ChapooModel.Medewerker medewerker in medewerkerList)
+            {
+                ListViewItem listviewItem = new ListViewItem(medewerker.ID.ToString());
+                listviewItem.SubItems.Add(medewerker.voornaam);
+                listviewItem.SubItems.Add(medewerker.achternaam);
+                listviewItem.SubItems.Add(medewerker.type);
+                listviewItem.SubItems.Add(medewerker.inlogcode.ToString());
+
+                listView_Personeelsbeheer.Items.Add(listviewItem);
+            }
+
         }
 
         private void btn_InkomstenPersoneelsbeheer_Kassa_Click(object sender, EventArgs e)
@@ -667,6 +710,64 @@ namespace UI
                 txtMenuSoort_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[5].Text;
                 txtPrijs_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[6].Text.ToString();
             }
+        }
+
+        private void pictureBx_TerugMenuOverzichtKeuze_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+        }
+
+        private void pictureBx_TerugOverzichtPersoneel_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+
+        }
+
+        private void pictureBx_TerugTafeloverzicht_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+
+        }
+
+        private void pictureBx_TerugKeuzebestelling_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+
+        }
+
+        private void pictureBx_TerugVoorraadKeuzeOverzicht_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+
+        }
+
+        private void pictureBx_TerugGerechtVoorraadOverzicht_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaVoorraadKeuze.Show();
+        }
+
+        private void pictureBx_TerugDrankvoorraadOverzicht_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaVoorraadKeuze.Show();
+        }
+
+        private void pictureBx_TerugLunchMenuOverzicht_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaMenuoverzichtKeuze.Show();
+        }
+
+        private void pictureBox_Terug_DrankmenuoverzichtKassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaMenuoverzichtKeuze.Show();
         }
 
 
