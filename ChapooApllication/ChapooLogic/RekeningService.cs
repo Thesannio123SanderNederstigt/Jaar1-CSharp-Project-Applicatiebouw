@@ -109,9 +109,17 @@ namespace ChapooLogic
             {
                 return e.ToString();
             }
-        
-        
         }
+
+        public void CheckRekeningItem(int ID)
+        {
+            Rekening_db.CheckRekening(ID);
+        }
+
+        //public string GetTafelByID(int ID)
+        //{
+        //    return Rekening_db.GetTafelByID(ID);
+        //}
 
     }
 }

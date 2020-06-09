@@ -217,5 +217,10 @@ namespace ChapooLogic
         {
             return MenuItem_db.GetByCat(MenuKaartSoort, Categorie);
         }
+
+        public MenuItem GetMenuItemByID(int menuItemID)
+        {
+            return MenuItem_db.GetById(menuItemID);
+        }
     }
 }
