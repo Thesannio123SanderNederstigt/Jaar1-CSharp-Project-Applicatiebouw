@@ -92,6 +92,19 @@ namespace ChapooLogic
             }
         }
 
+        public string UpdateMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
+        {
+            try
+            {
+                Medewerker_db.UpdateMedewerker(medewerkerID, voornaam, achternaam, type, inlogcode);
+                return "Medewerker is succesvol aangepast!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
         public string DeleteMedewerker(int medewerkerID)
         {
             try

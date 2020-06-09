@@ -75,15 +75,23 @@ namespace ChapooDAL
         public string AddNewMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
         {
             string query = "INSERT INTO Medewerker(ID, voornaam, achternaam, type, inlogcode)VALUES(@medewerkerID,@voornaam, @achternaam, @type, @inlogcode)";
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", medewerkerID), new SqlParameter("@voornaam",voornaam), new SqlParameter("@type", achternaam), new SqlParameter("@type", type), new SqlParameter("@inlogcode", inlogcode) };
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@medewerkerID", medewerkerID), new SqlParameter("@voornaam", voornaam), new SqlParameter("@achternaam", achternaam), new SqlParameter("@type", type), new SqlParameter("@inlogcode", inlogcode) };
             ExecuteEditQuery(query, sqlParameters);
             return "Succesvol een nieuwe medewerker toegevoegd!";
         }
 
+        public string UpdateMedewerker(int medewerkerID, string voornaam, string achternaam, string type, int inlogcode)
+        {
+            string query = "UPDATE medewerker SET voornaam = @voornaam, achternaam = @achternaam, type = @type, inlogcode = @inlogcode WHERE ID = @medewerkerID";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@medewerkerid", medewerkerID), new SqlParameter("@voornaam", voornaam),
+            new SqlParameter("@achternaam", achternaam), new SqlParameter("@type", type), new SqlParameter("@inlogcode", inlogcode)};
+            ExecuteEditQuery(query, sqlParameters);
+            return "Succesvol update van medewerker uitgevoerd!";
+        }
         public string DeleteMedewerker(int medewerkerID)
         {
-            string query = "DELETE * FROM Medewerker WHERE ID = @id";
-            SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter ("@id", medewerkerID)};
+            string query = "DELETE FROM Medewerker WHERE ID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", medewerkerID) };
             ExecuteEditQuery(query, sqlParameters);
             return "Medewerker succesvol verwijderd!";
         }
