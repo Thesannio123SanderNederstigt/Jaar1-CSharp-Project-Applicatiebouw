@@ -1526,7 +1526,7 @@ namespace UI
             }
             lbl_AFTafel.Text = "Tafel ";
             lbl_AFTafel.Text += tafelID;
-            lbl_TafelBestellingAFID.Text = bestellingID.ToString();
+            lbl_BestellingAFID.Text = bestellingID.ToString();
 
             BestellingService bestelservice = new BestellingService();
             List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(bestellingID);

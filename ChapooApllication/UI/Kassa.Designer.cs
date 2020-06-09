@@ -2100,27 +2100,6 @@
             this.pnl_KassaLunchMenuoverizcht.Size = new System.Drawing.Size(1008, 730);
             this.pnl_KassaLunchMenuoverizcht.TabIndex = 55;
             // 
-            // pictureBx_TerugNaarHoofdschermLunchMenu_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.Location = new System.Drawing.Point(10, 9);
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.Name = "pictureBx_TerugNaarHoofdschermLunchMenu_Kassa";
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.TabIndex = 59;
-            this.pictureBx_TerugNaarHoofdschermLunchMenu_Kassa.TabStop = false;
-            // 
-            // pictureBx_TerugLunchMenuOverzicht_Kassa
-            // 
-            this.pictureBx_TerugLunchMenuOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugLunchMenuOverzicht_Kassa.Image")));
-            this.pictureBx_TerugLunchMenuOverzicht_Kassa.Location = new System.Drawing.Point(57, 9);
-            this.pictureBx_TerugLunchMenuOverzicht_Kassa.Name = "pictureBx_TerugLunchMenuOverzicht_Kassa";
-            this.pictureBx_TerugLunchMenuOverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugLunchMenuOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugLunchMenuOverzicht_Kassa.TabIndex = 56;
-            this.pictureBx_TerugLunchMenuOverzicht_Kassa.TabStop = false;
-            // 
             // btnToevoegen_Lunchmenuoverzicht
             // 
             this.btnToevoegen_Lunchmenuoverzicht.Location = new System.Drawing.Point(342, 606);
