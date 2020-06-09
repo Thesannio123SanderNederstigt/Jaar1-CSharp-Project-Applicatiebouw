@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BestellingService.cs" />
+    <Compile Include="Bestelling_MenuItemService.cs" />
     <Compile Include="MedewerkerService.cs" />
     <Compile Include="MenuItemService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -102,6 +102,20 @@ namespace ChapooDAL
             ExecuteEditQuery(query, sqlParameters);
             return "Rekening succevol verwijderd!";
         }
+        public string CheckRekening(int ID)
+        {
+            string query =$"IF NOT EXISTS(SELECT * FROM Rekening WHERE tafelID='{ID}' AND betaalstatus='False') \n"+
+                          $"INSERT INTO Rekening(tafelID, betaalstatus) Select '{ID}', 'False'" ;
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+            return "RekeningWijzigen";
+        }
+        public Rekening GetTafelByID(int TafelID)
+        {
+            string query = "SELECT ID, fooi, betaalwijze, tafelID, betaalstatus, opmerking FROM Rekening WHERE tafelID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", TafelID) };
+            return ReadRekening(ExecuteSelectQuery(query, sqlParameters));
+        }
 
     }
 }

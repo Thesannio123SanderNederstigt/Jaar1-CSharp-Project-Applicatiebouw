@@ -15,14 +15,9 @@ namespace ChapooModel
         public int tafelID { get; set; }
         public int rekeningID { get; set; }
         public string opmerking { get; set; }
-
         public string omschrijving { get; set; }
-
         public int aantal { get; set; }
-
         public string kaartsoort { get; set; }
-
-
         public Bestelling(int ID, DateTime besteltijd, bool status, int tafelID, int rekeningID, string opmerking)
         {
             this.ID = ID;

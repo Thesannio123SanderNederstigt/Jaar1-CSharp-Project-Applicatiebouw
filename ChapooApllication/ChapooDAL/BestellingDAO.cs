@@ -209,6 +209,19 @@ namespace ChapooDAL
             return "Bestelling succesvol verwijderd!";
         }
 
+        //private Bestelling LeesBestellingID(DataTable dataTable)
+        //{
+        //    Bestelling bestelling = new Bestelling();
+        //    foreach(DataRow dr in dataTable.Rows)
+        //    {
+        //        bestelling.ID = (int)dr[""];
+        //    }
+
+
+        //    return bestelling;
+        //
+
+
 
 
     }

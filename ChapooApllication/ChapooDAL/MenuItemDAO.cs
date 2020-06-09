@@ -41,6 +41,8 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
         }
+        //public MenuItem GetMenuItem
+
         private List<MenuItem> ReadMenuItems(DataTable dataTable)
         {
             List<MenuItem> menuitems = new List<MenuItem>();
