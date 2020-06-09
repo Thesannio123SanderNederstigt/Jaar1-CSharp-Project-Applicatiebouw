@@ -18,6 +18,7 @@ namespace UI
     {
         string Type = Login.MedewerkerType;
         public static string Bestellingoverzicht = "";
+        private static string menuKeuze = "";
         public void HidePanels()
         {
             pnl_Inkomstenoverzicht.Hide();
@@ -104,8 +105,7 @@ namespace UI
         private void btn_PersoneelsbeheerHoofdscherm_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
-            pnl_KassaPersoneelsbeheer.Show();
-            //listView_Personeelsbeheer.Items.Clear();
+            listView_Personeelsbeheer.Items.Clear();
             MedewerkerService medewerkerService = new MedewerkerService();
             List<Medewerker> medewerkerList = medewerkerService.GetMedewerkers();
             foreach (Medewerker medewerker in medewerkerList)
@@ -115,7 +115,11 @@ namespace UI
                 listviewItem.SubItems.Add(medewerker.achternaam);
                 listviewItem.SubItems.Add(medewerker.type);
                 listviewItem.SubItems.Add(medewerker.inlogcode.ToString());
+
+                listView_Personeelsbeheer.Items.Add(listviewItem);
             }
+            
+            pnl_KassaPersoneelsbeheer.Show();
         }
 
         private void btn_BestellingenHoofdscherm_Kassa_Click(object sender, EventArgs e)
@@ -127,77 +131,76 @@ namespace UI
         // Event handlers voor Menu Overzicht Keuze
         private void btnDrankMenu_MenuoverzichtKeuze_Click(object sender, EventArgs e)
         {
+            menuKeuze = "DrankMenu";
+            lbl_Overzicht.Text = "Drank Overzicht";
             HidePanels();
             pnl_KassaDrankMenuoverzicht.Show();
-            listViewDrankmenuOverzicht.Items.Clear();
-            MenuItemService menuItemService = new MenuItemService();
-            List<MenuItem> menuItemList = menuItemService.Get_Dranken_MenuItems();
-            foreach (MenuItem menuItem in menuItemList)
-            {
-                ListViewItem listViewItem = new ListViewItem(menuItem.ID.ToString());
-                listViewItem.SubItems.Add(menuItem.omschrijving);
-                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
-                listViewItem.SubItems.Add(menuItem.btw.ToString());
-                listViewItem.SubItems.Add(menuItem.categorie);
-                listViewItem.SubItems.Add(menuItem.menukaartsoort);
-                listViewItem.SubItems.Add(menuItem.prijs.ToString("€ 0.00"));
+            lv_MenuOverzicht.Items.Clear();
 
-                listViewDrankmenuOverzicht.Items.Add(listViewItem);
-            }
+            menuItemFiller(menuKeuze);
         }
 
         private void btnLunchMenu_MenuoverzichtKeuze_Click(object sender, EventArgs e)
         {
+            menuKeuze = "LunchMenu";
+            lbl_Overzicht.Text = "Lunch Overzicht";
             HidePanels();
-            pnl_KassaLunchMenuoverizcht.Show();
-            listView_LunchMenuOverzicht_Kassa.Items.Clear();
-            MenuItemService menuItemService = new MenuItemService();            
-            List<MenuItem> menuItemList = new List<MenuItem>();
-            menuItemList = menuItemService.Get_LunchMenuKaart();
-            
-            foreach (MenuItem menuItem in menuItemList)
-            {
-                ListViewItem listViewItem = new ListViewItem(menuItem.ID.ToString());
-                listViewItem.SubItems.Add(menuItem.omschrijving);
-                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
-                listViewItem.SubItems.Add(menuItem.btw.ToString());
-                listViewItem.SubItems.Add(menuItem.categorie);
-                listViewItem.SubItems.Add(menuItem.menukaartsoort);
-                listViewItem.SubItems.Add(menuItem.prijs.ToString("€ 0.00"));
+            pnl_KassaDrankMenuoverzicht.Show();
+            lv_MenuOverzicht.Items.Clear();
 
-                listView_LunchMenuOverzicht_Kassa.Items.Add(listViewItem);
-            }
+            menuItemFiller(menuKeuze);
         }
 
         private void btnDinerMenu_MenuoverzichtKeuze_Click(object sender, EventArgs e)
         {
+            menuKeuze = "DinerMenu";
+            lbl_Overzicht.Text = "Diner Overzicht";
             HidePanels();
-            pnl_KassaDinerMenuoverzicht.Show();
-            listView_DinerMenuOverzicht.Items.Clear();
+            pnl_KassaDrankMenuoverzicht.Show();
+            lv_MenuOverzicht.Items.Clear();
+
+            menuItemFiller(menuKeuze);
+
+        }
+
+        public List<ListViewItem> menuItemFiller(string menuKeuze)
+        {
             MenuItemService menuItemService = new MenuItemService();
-            List<MenuItem> menuItemList = menuItemService.Get_DinerMenuKaart();
-
-
-            foreach (MenuItem menuItem in menuItemList)
+            List<ListViewItem> listviewlist = new List<ListViewItem>();
+            List<MenuItem> thisList = new List<MenuItem>();
+            if (menuKeuze == "DrankMenu")
             {
-                ListViewItem listViewItem = new ListViewItem(menuItem.ID.ToString());
-                listViewItem.SubItems.Add(menuItem.omschrijving);
-                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
-                listViewItem.SubItems.Add(menuItem.btw.ToString());
-                listViewItem.SubItems.Add(menuItem.categorie);
-                listViewItem.SubItems.Add(menuItem.menukaartsoort);
-                listViewItem.SubItems.Add(menuItem.prijs.ToString("€ 0.00"));
+                thisList = menuItemService.Get_Dranken_MenuItems();
+            }
+            else if (menuKeuze == "LunchMenu")
+            {
+                thisList = menuItemService.Get_LunchMenuKaart();
+            }
+            else if (menuKeuze == "DinerMenu")
+            {
+                thisList = menuItemService.Get_DinerMenuKaart();
+            }
+            foreach (MenuItem m in thisList)
+            {
+                ListViewItem listViewItem = new ListViewItem(m.ID.ToString());
+                listViewItem.SubItems.Add(m.omschrijving);
+                listViewItem.SubItems.Add(m.aantalInVoorraad.ToString());
+                listViewItem.SubItems.Add(m.btw.ToString());
+                listViewItem.SubItems.Add(m.categorie);
+                listViewItem.SubItems.Add(m.menukaartsoort);
+                listViewItem.SubItems.Add(m.prijs.ToString("€ 0.00"));
 
-                listView_DinerMenuOverzicht.Items.Add(listViewItem);
+                lv_MenuOverzicht.Items.Add(listViewItem);
+                listviewlist.Add(listViewItem);
             }
 
+            return listviewlist;
         }
 
         // Event Handlers voor VoorraadOverzichtKeuze Scherm
         private void btn_DrankVoorraadOverzichtKeuze_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
-            pnl_KassaVoorraadoverzichtDrank.Show();
             listView_DrankVoorraadOverzicht.Show();
 
             MenuItemService menuItemService = new MenuItemService();
@@ -212,17 +215,18 @@ namespace UI
 
                 listView_DrankVoorraadOverzicht.Items.Add(listViewItem);
             }
+            pnl_KassaVoorraadoverzichtDrank.Show();
         }
         
         private void btn_GerechtVoorraadKeuzeOverzicht_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
+            listview_GerechtVoorraadOverzicht.Items.Clear();
             pnl_KassaVoorraadoverzichtGerecht.Show();
-            listview_GerechtVoorraadOverzicht.Show();
-
+            
             MenuItemService menuItemService = new MenuItemService();
             RefreshVoorraadGerecht(menuItemService);
-
+ 
         }
 
         // Event Handlers voor Gerecht Voorraad Overzicht Scherm
@@ -413,15 +417,20 @@ namespace UI
             HidePanels();
             pnl_KassaKeuzeBestellingen.Show();
         }
+        private void btn_MenuoverzichtPersoneelsbeheer_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaMenuoverzichtKeuze.Show();
+        }
 
         private void btn_PersoneelsbeheerPersoneelsoverzicht_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
-            pnl_KassaPersoneelsbeheer.Show();
             listView_Personeelsbeheer.Items.Clear();
+
             MedewerkerService medewerkerService = new MedewerkerService();
-            List<ChapooModel.Medewerker> medewerkerList = medewerkerService.GetMedewerkers();
-            foreach (ChapooModel.Medewerker medewerker in medewerkerList)
+            List<Medewerker> medewerkerList = medewerkerService.GetMedewerkers();
+            foreach (Medewerker medewerker in medewerkerList)
             {
                 ListViewItem listviewItem = new ListViewItem(medewerker.ID.ToString());
                 listviewItem.SubItems.Add(medewerker.voornaam);
@@ -431,12 +440,7 @@ namespace UI
 
                 listView_Personeelsbeheer.Items.Add(listviewItem);
             }
-
-        }
-
-        private void btn_InkomstenPersoneelsbeheer_Kassa_Click(object sender, EventArgs e)
-        {
-            
+            pnl_KassaPersoneelsbeheer.Show();
         }
 
         private void btn_VerwijderenPersoneelsBeheer_Kassa_Click(object sender, EventArgs e)
@@ -630,8 +634,8 @@ namespace UI
             }
         }
 
-   
 
+ 
 
 
         // Event Handlers voor Drank Menu Overzicht Scherm
@@ -669,7 +673,7 @@ namespace UI
             int BTW = int.Parse(txtBTW_DrankMenuOverzicht.Text);
             string categorie = txtCategorie_DrankMenuOverzicht.Text;
             string menuSoort = txtMenuSoort_DrankMenuOverzicht.Text;
-            float prijs = int.Parse(txtPrijs_DrankMenuOverzicht.Text);
+            float prijs = float.Parse(txtPrijs_DrankMenuOverzicht.Text);
             menuItemService.AddMenuItem(ID, omschrijving, inVoorraad, BTW, categorie, menuSoort, prijs);
         }
 
@@ -698,52 +702,30 @@ namespace UI
 
         private void listViewDrankmenuOverzicht_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListView.SelectedListViewItemCollection listView_DrankMenu = listViewDrankmenuOverzicht.SelectedItems;
+            ListView.SelectedListViewItemCollection listView_DrankMenu = lv_MenuOverzicht.SelectedItems;
             if(listView_DrankMenu.Count > 0)
             {
-                int index = listViewDrankmenuOverzicht.SelectedIndices[0];
-                txtID_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[0].Text.ToString();
-                txtOmschrijving_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[1].Text;
-                txtInVoorraad_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[2].Text.ToString();
-                txtBTW_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[3].Text.ToString();
-                txtCategorie_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[4].Text;
-                txtMenuSoort_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[5].Text;
-                txtPrijs_DrankMenuOverzicht.Text = listViewDrankmenuOverzicht.Items[index].SubItems[6].Text.ToString();
+                int index = lv_MenuOverzicht.SelectedIndices[0];
+                txtID_DrankMenuOverzicht.Text = lv_MenuOverzicht.Items[index].SubItems[0].Text.ToString();
+                txtOmschrijving_DrankMenuOverzicht.Text = lv_MenuOverzicht.Items[index].SubItems[1].Text;
+                txtInVoorraad_DrankMenuOverzicht.Text = lv_MenuOverzicht.Items[index].SubItems[2].Text.ToString();
+                txtBTW_DrankMenuOverzicht.Text = lv_MenuOverzicht.Items[index].SubItems[3].Text.ToString();
+                txtCategorie_DrankMenuOverzicht.Text = lv_MenuOverzicht.Items[index].SubItems[4].Text;
+                txtMenuSoort_DrankMenuOverzicht.Text = lv_MenuOverzicht.Items[index].SubItems[5].Text;
+                txtPrijs_DrankMenuOverzicht.Text = lv_MenuOverzicht.Items[index].SubItems[6].Text.ToString();
             }
-        }
-
-        private void pictureBx_TerugMenuOverzichtKeuze_Kassa_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaHoofdscherm.Show();
-        }
-
-        private void pictureBx_TerugOverzichtPersoneel_Kassa_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaHoofdscherm.Show();
-
         }
 
         private void pictureBx_TerugTafeloverzicht_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
             pnl_KassaHoofdscherm.Show();
-
-        }
-
-        private void pictureBx_TerugKeuzebestelling_Kassa_Click(object sender, EventArgs e)
-        {
-            HidePanels();
-            pnl_KassaHoofdscherm.Show();
-
         }
 
         private void pictureBx_TerugVoorraadKeuzeOverzicht_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
             pnl_KassaHoofdscherm.Show();
-
         }
 
         private void pictureBx_TerugGerechtVoorraadOverzicht_Kassa_Click(object sender, EventArgs e)
@@ -752,13 +734,25 @@ namespace UI
             pnl_KassaVoorraadKeuze.Show();
         }
 
+        private void pictureBx_TerugKeuzebestelling_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+        }
+
         private void pictureBx_TerugDrankvoorraadOverzicht_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
             pnl_KassaVoorraadKeuze.Show();
         }
 
-        private void pictureBx_TerugLunchMenuOverzicht_Kassa_Click(object sender, EventArgs e)
+        private void pictureBx_TerugMenuOverzichtKeuze_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+        }
+
+        private void pictureBx_TerugLunchMenu_Kassa_Click(object sender, EventArgs e)
         {
             HidePanels();
             pnl_KassaMenuoverzichtKeuze.Show();
@@ -770,7 +764,11 @@ namespace UI
             pnl_KassaMenuoverzichtKeuze.Show();
         }
 
-
+        private void pictureBx_TerugOverzichtPersoneel_Kassa_Click(object sender, EventArgs e)
+        {
+            HidePanels();
+            pnl_KassaHoofdscherm.Show();
+        }
 
 
     }
