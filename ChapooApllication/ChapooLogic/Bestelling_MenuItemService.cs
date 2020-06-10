@@ -17,6 +17,10 @@ namespace ChapooLogic
         {
             return Bestelling_MenuItem_db.Get_Bestelling_MenuItem(BestellingID);
         }
+        public List<Bestelling_MenuItem> GetBestelling(int BestellingID)
+        {
+            return Bestelling_MenuItem_db.Get_Bestelling(BestellingID);
+        }
         public void CreateBestellingMenuItem(Bestelling_MenuItem bestelling_MenuItem)
         {
             Bestelling_MenuItem_db.Add_New_Bestelling_MenuItem(bestelling_MenuItem);

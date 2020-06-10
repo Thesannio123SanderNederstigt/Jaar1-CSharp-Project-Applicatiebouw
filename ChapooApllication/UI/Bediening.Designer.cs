@@ -37,7 +37,6 @@
             this.TafelEXITPNL = new System.Windows.Forms.Button();
             this.TafelDateLBL = new System.Windows.Forms.Label();
             this.TafelTimeLBL = new System.Windows.Forms.Label();
-            this.TafelTerugBTN = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
             this.HoofdschermPNL = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.btnT10 = new System.Windows.Forms.Button();
             this.TafelNummerPNL = new System.Windows.Forms.Panel();
             this.TafelNummer_TopPNL = new System.Windows.Forms.Panel();
-            this.TafelNummerExitBTN = new System.Windows.Forms.Button();
             this.TafelNummerDateLBL = new System.Windows.Forms.Label();
             this.TafelNummerTimeLBL = new System.Windows.Forms.Label();
             this.TafelNummerTerugBT = new System.Windows.Forms.Button();
@@ -66,7 +64,6 @@
             this.LBLTafelNummer = new System.Windows.Forms.Label();
             this.BestellingPNL = new System.Windows.Forms.Panel();
             this.Bestelling_TopPNL = new System.Windows.Forms.Panel();
-            this.BestellingExitBTN = new System.Windows.Forms.Button();
             this.BestellingDateLBL = new System.Windows.Forms.Label();
             this.BestellingTimeLBL = new System.Windows.Forms.Label();
             this.BestellingTerugBTN = new System.Windows.Forms.Button();
@@ -79,7 +76,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.LunchPNL = new System.Windows.Forms.Panel();
             this.Lunch_TopPNL = new System.Windows.Forms.Panel();
-            this.LunchExitBTN = new System.Windows.Forms.Button();
             this.LunchDateLBL = new System.Windows.Forms.Label();
             this.LunchTimeLBL = new System.Windows.Forms.Label();
             this.LunchTerugBTN = new System.Windows.Forms.Button();
@@ -116,12 +112,11 @@
             this.timerDFris = new System.Windows.Forms.Timer(this.components);
             this.DrankPNL = new System.Windows.Forms.Panel();
             this.Drank_TopPNL = new System.Windows.Forms.Panel();
-            this.DrankExitBTN = new System.Windows.Forms.Button();
             this.DrankDATELBL = new System.Windows.Forms.Label();
             this.DrankTIMELBL = new System.Windows.Forms.Label();
             this.DrankTerugBTN = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
+            this.BTNVoegToeDrank = new System.Windows.Forms.Button();
             this.ALBLDrank = new System.Windows.Forms.Label();
             this.BTNMinDrank = new System.Windows.Forms.Button();
             this.BTNPlusDrank = new System.Windows.Forms.Button();
@@ -174,8 +169,7 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.Overzicht_TopPNL = new System.Windows.Forms.Panel();
-            this.OverzichtExitBTN = new System.Windows.Forms.Button();
-            this.BTNReturnBTN = new System.Windows.Forms.Button();
+            this.OverzichtReturnBTN = new System.Windows.Forms.Button();
             this.ChapooLogo = new System.Windows.Forms.Panel();
             this.timerDTap = new System.Windows.Forms.Timer(this.components);
             this.timerDGed = new System.Windows.Forms.Timer(this.components);
@@ -225,7 +219,6 @@
             this.BTNBestellingDiner = new System.Windows.Forms.Button();
             this.DinerPNL = new System.Windows.Forms.Panel();
             this.Diner_TopPNL = new System.Windows.Forms.Panel();
-            this.DinerEXITBTN = new System.Windows.Forms.Button();
             this.DinerDateLBL = new System.Windows.Forms.Label();
             this.DinerTimeLBL = new System.Windows.Forms.Label();
             this.DinerTerugLBL = new System.Windows.Forms.Button();
@@ -366,7 +359,6 @@
             this.Tafel_TopPNL.Controls.Add(this.TafelEXITPNL);
             this.Tafel_TopPNL.Controls.Add(this.TafelDateLBL);
             this.Tafel_TopPNL.Controls.Add(this.TafelTimeLBL);
-            this.Tafel_TopPNL.Controls.Add(this.TafelTerugBTN);
             this.Tafel_TopPNL.Controls.Add(this.panel19);
             this.Tafel_TopPNL.Location = new System.Drawing.Point(0, 0);
             this.Tafel_TopPNL.Name = "Tafel_TopPNL";
@@ -383,6 +375,7 @@
             this.TafelEXITPNL.Size = new System.Drawing.Size(51, 51);
             this.TafelEXITPNL.TabIndex = 16;
             this.TafelEXITPNL.UseVisualStyleBackColor = false;
+            this.TafelEXITPNL.Click += new System.EventHandler(this.TafelEXITPNL_Click);
             // 
             // TafelDateLBL
             // 
@@ -405,17 +398,6 @@
             this.TafelTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.TafelTimeLBL.TabIndex = 14;
             this.TafelTimeLBL.Text = "Time";
-            // 
-            // TafelTerugBTN
-            // 
-            this.TafelTerugBTN.BackColor = System.Drawing.Color.White;
-            this.TafelTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.TafelTerugBTN.Location = new System.Drawing.Point(119, 11);
-            this.TafelTerugBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.TafelTerugBTN.Name = "TafelTerugBTN";
-            this.TafelTerugBTN.Size = new System.Drawing.Size(58, 49);
-            this.TafelTerugBTN.TabIndex = 32;
-            this.TafelTerugBTN.UseVisualStyleBackColor = false;
             // 
             // panel19
             // 
@@ -603,7 +585,6 @@
             // TafelNummer_TopPNL
             // 
             this.TafelNummer_TopPNL.BackColor = System.Drawing.Color.White;
-            this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerExitBTN);
             this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerDateLBL);
             this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerTimeLBL);
             this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerTerugBT);
@@ -612,17 +593,6 @@
             this.TafelNummer_TopPNL.Name = "TafelNummer_TopPNL";
             this.TafelNummer_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.TafelNummer_TopPNL.TabIndex = 35;
-            // 
-            // TafelNummerExitBTN
-            // 
-            this.TafelNummerExitBTN.BackColor = System.Drawing.Color.White;
-            this.TafelNummerExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.TafelNummerExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.TafelNummerExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.TafelNummerExitBTN.Name = "TafelNummerExitBTN";
-            this.TafelNummerExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.TafelNummerExitBTN.TabIndex = 16;
-            this.TafelNummerExitBTN.UseVisualStyleBackColor = false;
             // 
             // TafelNummerDateLBL
             // 
@@ -656,6 +626,7 @@
             this.TafelNummerTerugBT.Size = new System.Drawing.Size(58, 49);
             this.TafelNummerTerugBT.TabIndex = 32;
             this.TafelNummerTerugBT.UseVisualStyleBackColor = false;
+            this.TafelNummerTerugBT.Click += new System.EventHandler(this.TafelNummerTerugBT_Click);
             // 
             // panel21
             // 
@@ -741,7 +712,6 @@
             // Bestelling_TopPNL
             // 
             this.Bestelling_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Bestelling_TopPNL.Controls.Add(this.BestellingExitBTN);
             this.Bestelling_TopPNL.Controls.Add(this.BestellingDateLBL);
             this.Bestelling_TopPNL.Controls.Add(this.BestellingTimeLBL);
             this.Bestelling_TopPNL.Controls.Add(this.BestellingTerugBTN);
@@ -750,17 +720,6 @@
             this.Bestelling_TopPNL.Name = "Bestelling_TopPNL";
             this.Bestelling_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Bestelling_TopPNL.TabIndex = 41;
-            // 
-            // BestellingExitBTN
-            // 
-            this.BestellingExitBTN.BackColor = System.Drawing.Color.White;
-            this.BestellingExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.BestellingExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.BestellingExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.BestellingExitBTN.Name = "BestellingExitBTN";
-            this.BestellingExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.BestellingExitBTN.TabIndex = 16;
-            this.BestellingExitBTN.UseVisualStyleBackColor = false;
             // 
             // BestellingDateLBL
             // 
@@ -794,6 +753,7 @@
             this.BestellingTerugBTN.Size = new System.Drawing.Size(58, 49);
             this.BestellingTerugBTN.TabIndex = 32;
             this.BestellingTerugBTN.UseVisualStyleBackColor = false;
+            this.BestellingTerugBTN.Click += new System.EventHandler(this.BestellingTerugBTN_Click);
             // 
             // panel9
             // 
@@ -893,7 +853,6 @@
             // Lunch_TopPNL
             // 
             this.Lunch_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Lunch_TopPNL.Controls.Add(this.LunchExitBTN);
             this.Lunch_TopPNL.Controls.Add(this.LunchDateLBL);
             this.Lunch_TopPNL.Controls.Add(this.LunchTimeLBL);
             this.Lunch_TopPNL.Controls.Add(this.LunchTerugBTN);
@@ -902,17 +861,6 @@
             this.Lunch_TopPNL.Name = "Lunch_TopPNL";
             this.Lunch_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Lunch_TopPNL.TabIndex = 41;
-            // 
-            // LunchExitBTN
-            // 
-            this.LunchExitBTN.BackColor = System.Drawing.Color.White;
-            this.LunchExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.LunchExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.LunchExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.LunchExitBTN.Name = "LunchExitBTN";
-            this.LunchExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.LunchExitBTN.TabIndex = 16;
-            this.LunchExitBTN.UseVisualStyleBackColor = false;
             // 
             // LunchDateLBL
             // 
@@ -946,6 +894,7 @@
             this.LunchTerugBTN.Size = new System.Drawing.Size(58, 49);
             this.LunchTerugBTN.TabIndex = 32;
             this.LunchTerugBTN.UseVisualStyleBackColor = false;
+            this.LunchTerugBTN.Click += new System.EventHandler(this.LunchTerugBTN_Click);
             // 
             // panel18
             // 
@@ -1245,7 +1194,7 @@
             // 
             this.DrankPNL.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DrankPNL.Controls.Add(this.Drank_TopPNL);
-            this.DrankPNL.Controls.Add(this.button16);
+            this.DrankPNL.Controls.Add(this.BTNVoegToeDrank);
             this.DrankPNL.Controls.Add(this.ALBLDrank);
             this.DrankPNL.Controls.Add(this.BTNMinDrank);
             this.DrankPNL.Controls.Add(this.BTNPlusDrank);
@@ -1262,7 +1211,6 @@
             // Drank_TopPNL
             // 
             this.Drank_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Drank_TopPNL.Controls.Add(this.DrankExitBTN);
             this.Drank_TopPNL.Controls.Add(this.DrankDATELBL);
             this.Drank_TopPNL.Controls.Add(this.DrankTIMELBL);
             this.Drank_TopPNL.Controls.Add(this.DrankTerugBTN);
@@ -1271,17 +1219,6 @@
             this.Drank_TopPNL.Name = "Drank_TopPNL";
             this.Drank_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Drank_TopPNL.TabIndex = 41;
-            // 
-            // DrankExitBTN
-            // 
-            this.DrankExitBTN.BackColor = System.Drawing.Color.White;
-            this.DrankExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.DrankExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.DrankExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.DrankExitBTN.Name = "DrankExitBTN";
-            this.DrankExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.DrankExitBTN.TabIndex = 16;
-            this.DrankExitBTN.UseVisualStyleBackColor = false;
             // 
             // DrankDATELBL
             // 
@@ -1315,6 +1252,7 @@
             this.DrankTerugBTN.Size = new System.Drawing.Size(58, 49);
             this.DrankTerugBTN.TabIndex = 32;
             this.DrankTerugBTN.UseVisualStyleBackColor = false;
+            this.DrankTerugBTN.Click += new System.EventHandler(this.DrankTerugBTN_Click);
             // 
             // panel15
             // 
@@ -1325,16 +1263,17 @@
             this.panel15.Size = new System.Drawing.Size(113, 51);
             this.panel15.TabIndex = 33;
             // 
-            // button16
+            // BTNVoegToeDrank
             // 
-            this.button16.BackColor = System.Drawing.Color.LightGreen;
-            this.button16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button16.Location = new System.Drawing.Point(49, 737);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(300, 64);
-            this.button16.TabIndex = 41;
-            this.button16.Text = "Voeg toe tot bestelling";
-            this.button16.UseVisualStyleBackColor = false;
+            this.BTNVoegToeDrank.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNVoegToeDrank.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.BTNVoegToeDrank.Location = new System.Drawing.Point(49, 737);
+            this.BTNVoegToeDrank.Name = "BTNVoegToeDrank";
+            this.BTNVoegToeDrank.Size = new System.Drawing.Size(300, 64);
+            this.BTNVoegToeDrank.TabIndex = 41;
+            this.BTNVoegToeDrank.Text = "Voeg toe tot bestelling";
+            this.BTNVoegToeDrank.UseVisualStyleBackColor = false;
+            this.BTNVoegToeDrank.Click += new System.EventHandler(this.BTNVoegToeDrank_Click);
             // 
             // ALBLDrank
             // 
@@ -1757,7 +1696,7 @@
             this.BTNBestellingVerwijderen.TabIndex = 29;
             this.BTNBestellingVerwijderen.Text = "Bestelling Verwijderen";
             this.BTNBestellingVerwijderen.UseVisualStyleBackColor = false;
-            this.BTNBestellingVerwijderen.Click += new System.EventHandler(this.button22_Click);
+            this.BTNBestellingVerwijderen.Click += new System.EventHandler(this.BTNBestellingVerwijderen_Click);
             // 
             // richTextBox1
             // 
@@ -1854,39 +1793,26 @@
             // Overzicht_TopPNL
             // 
             this.Overzicht_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Overzicht_TopPNL.Controls.Add(this.OverzichtExitBTN);
             this.Overzicht_TopPNL.Controls.Add(this.OverzichtDateLBL);
             this.Overzicht_TopPNL.Controls.Add(this.OverzichtTimeLBL);
-            this.Overzicht_TopPNL.Controls.Add(this.BTNReturnBTN);
+            this.Overzicht_TopPNL.Controls.Add(this.OverzichtReturnBTN);
             this.Overzicht_TopPNL.Controls.Add(this.ChapooLogo);
             this.Overzicht_TopPNL.Location = new System.Drawing.Point(0, 0);
             this.Overzicht_TopPNL.Name = "Overzicht_TopPNL";
             this.Overzicht_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Overzicht_TopPNL.TabIndex = 34;
             // 
-            // OverzichtExitBTN
+            // OverzichtReturnBTN
             // 
-            this.OverzichtExitBTN.BackColor = System.Drawing.Color.White;
-            this.OverzichtExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.OverzichtExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.OverzichtExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.OverzichtExitBTN.Name = "OverzichtExitBTN";
-            this.OverzichtExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.OverzichtExitBTN.TabIndex = 16;
-            this.OverzichtExitBTN.UseVisualStyleBackColor = false;
-            this.OverzichtExitBTN.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // BTNReturnBTN
-            // 
-            this.BTNReturnBTN.BackColor = System.Drawing.Color.White;
-            this.BTNReturnBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.BTNReturnBTN.Location = new System.Drawing.Point(119, 11);
-            this.BTNReturnBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.BTNReturnBTN.Name = "BTNReturnBTN";
-            this.BTNReturnBTN.Size = new System.Drawing.Size(58, 49);
-            this.BTNReturnBTN.TabIndex = 32;
-            this.BTNReturnBTN.UseVisualStyleBackColor = false;
-            this.BTNReturnBTN.Click += new System.EventHandler(this.BTNReturn_Click);
+            this.OverzichtReturnBTN.BackColor = System.Drawing.Color.White;
+            this.OverzichtReturnBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.OverzichtReturnBTN.Location = new System.Drawing.Point(119, 11);
+            this.OverzichtReturnBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.OverzichtReturnBTN.Name = "OverzichtReturnBTN";
+            this.OverzichtReturnBTN.Size = new System.Drawing.Size(58, 49);
+            this.OverzichtReturnBTN.TabIndex = 32;
+            this.OverzichtReturnBTN.UseVisualStyleBackColor = false;
+            this.OverzichtReturnBTN.Click += new System.EventHandler(this.OverzichtReturnBTN_Click);
             // 
             // ChapooLogo
             // 
@@ -2310,6 +2236,7 @@
             this.BTNVoegToeDiner.TabIndex = 36;
             this.BTNVoegToeDiner.Text = "Voeg toe tot bestelling";
             this.BTNVoegToeDiner.UseVisualStyleBackColor = false;
+            this.BTNVoegToeDiner.Click += new System.EventHandler(this.BTNVoegToeDiner_Click);
             // 
             // BTNBestellingDiner
             // 
@@ -2344,7 +2271,6 @@
             // Diner_TopPNL
             // 
             this.Diner_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Diner_TopPNL.Controls.Add(this.DinerEXITBTN);
             this.Diner_TopPNL.Controls.Add(this.DinerDateLBL);
             this.Diner_TopPNL.Controls.Add(this.DinerTimeLBL);
             this.Diner_TopPNL.Controls.Add(this.DinerTerugLBL);
@@ -2353,17 +2279,6 @@
             this.Diner_TopPNL.Name = "Diner_TopPNL";
             this.Diner_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Diner_TopPNL.TabIndex = 41;
-            // 
-            // DinerEXITBTN
-            // 
-            this.DinerEXITBTN.BackColor = System.Drawing.Color.White;
-            this.DinerEXITBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.DinerEXITBTN.Location = new System.Drawing.Point(41, 11);
-            this.DinerEXITBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.DinerEXITBTN.Name = "DinerEXITBTN";
-            this.DinerEXITBTN.Size = new System.Drawing.Size(51, 51);
-            this.DinerEXITBTN.TabIndex = 16;
-            this.DinerEXITBTN.UseVisualStyleBackColor = false;
             // 
             // DinerDateLBL
             // 
@@ -2397,6 +2312,7 @@
             this.DinerTerugLBL.Size = new System.Drawing.Size(58, 49);
             this.DinerTerugLBL.TabIndex = 32;
             this.DinerTerugLBL.UseVisualStyleBackColor = false;
+            this.DinerTerugLBL.Click += new System.EventHandler(this.DinerTerugLBL_Click);
             // 
             // panel16
             // 
@@ -2874,13 +2790,13 @@
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(726, 1047);
             this.Controls.Add(this.DrankPNL);
-            this.Controls.Add(this.DinerPNL);
-            this.Controls.Add(this.TafelPNL);
-            this.Controls.Add(this.TafelNummerPNL);
-            this.Controls.Add(this.OverzichtPNL);
-            this.Controls.Add(this.LunchPNL);
-            this.Controls.Add(this.AfrekenenPNL);
             this.Controls.Add(this.BestellingPNL);
+            this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.TafelNummerPNL);
+            this.Controls.Add(this.TafelPNL);
+            this.Controls.Add(this.LunchPNL);
+            this.Controls.Add(this.DinerPNL);
+            this.Controls.Add(this.AfrekenenPNL);
             this.Controls.Add(this.AfgerondPNL);
             this.Controls.Add(this.RekeningPNL);
             this.Controls.Add(this.WijzigenPNL);
@@ -2980,7 +2896,6 @@
         private System.Windows.Forms.Label OverzichtDateLBL;
         private System.Windows.Forms.Label OverzichtTimeLBL;
         private System.Windows.Forms.Panel TafelPNL;
-        private System.Windows.Forms.Button OverzichtExitBTN;
         private System.Windows.Forms.Panel TafelNummerPNL;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel BestellingPNL;
@@ -3070,7 +2985,7 @@
         private System.Windows.Forms.Label ALBLLunch;
         private System.Windows.Forms.Button BTNMinLunch;
         private System.Windows.Forms.Button BTNPlusLunch;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button BTNVoegToeDrank;
         private System.Windows.Forms.Label ALBLDrank;
         private System.Windows.Forms.Button BTNMinDrank;
         private System.Windows.Forms.Button BTNPlusDrank;
@@ -3078,7 +2993,7 @@
         private System.Windows.Forms.ListView ListViewDrankThee;
         private System.Windows.Forms.Button DrankTheeBTN;
         private System.Windows.Forms.Timer timerDN;
-        private System.Windows.Forms.Button BTNReturnBTN;
+        private System.Windows.Forms.Button OverzichtReturnBTN;
         private System.Windows.Forms.ColumnHeader LVID;
         private System.Windows.Forms.ColumnHeader LVNaam;
         private System.Windows.Forms.ColumnHeader LVVoorraad;
@@ -3145,34 +3060,28 @@
         private System.Windows.Forms.Button TafelEXITPNL;
         private System.Windows.Forms.Label TafelDateLBL;
         private System.Windows.Forms.Label TafelTimeLBL;
-        private System.Windows.Forms.Button TafelTerugBTN;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel TafelNummer_TopPNL;
-        private System.Windows.Forms.Button TafelNummerExitBTN;
         private System.Windows.Forms.Label TafelNummerDateLBL;
         private System.Windows.Forms.Label TafelNummerTimeLBL;
         private System.Windows.Forms.Button TafelNummerTerugBT;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel Bestelling_TopPNL;
-        private System.Windows.Forms.Button BestellingExitBTN;
         private System.Windows.Forms.Label BestellingDateLBL;
         private System.Windows.Forms.Label BestellingTimeLBL;
         private System.Windows.Forms.Button BestellingTerugBTN;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel Lunch_TopPNL;
-        private System.Windows.Forms.Button LunchExitBTN;
         private System.Windows.Forms.Label LunchDateLBL;
         private System.Windows.Forms.Label LunchTimeLBL;
         private System.Windows.Forms.Button LunchTerugBTN;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel Drank_TopPNL;
-        private System.Windows.Forms.Button DrankExitBTN;
         private System.Windows.Forms.Label DrankDATELBL;
         private System.Windows.Forms.Label DrankTIMELBL;
         private System.Windows.Forms.Button DrankTerugBTN;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel Diner_TopPNL;
-        private System.Windows.Forms.Button DinerEXITBTN;
         private System.Windows.Forms.Label DinerDateLBL;
         private System.Windows.Forms.Label DinerTimeLBL;
         private System.Windows.Forms.Button DinerTerugLBL;

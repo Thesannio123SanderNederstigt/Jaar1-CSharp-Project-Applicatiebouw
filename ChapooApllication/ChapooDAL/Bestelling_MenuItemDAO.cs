@@ -32,6 +32,12 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
+        public List<Bestelling_MenuItem> Get_Bestelling(int BestellingID)
+        {
+            string query = $"select B.menuItemID,M.omschrijving, B.aantal from Bestelling_MenuItem as B join MenuItem as M on M.ID = B.menuItemID where B.bestellingID = '{BestellingID}'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
 
         public void Remove_Bestelling_MenuItem(int Bestelling_MenuItemID)
         {
@@ -53,6 +59,8 @@ namespace ChapooDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+
+
         private List<Bestelling_MenuItem> ReadTables(DataTable dataTable)
         {
             List<Bestelling_MenuItem> bestelling_MenuItems = new List<Bestelling_MenuItem>();
@@ -65,7 +73,8 @@ namespace ChapooDAL
                     BestellingID = (int)dr["BestellingID"],
                     Aantal = (int)dr["aantal"],
                     Status = (bool)dr["status"],
-                    Opmerking = (string)dr["opmerking"]
+                    Opmerking = (string)dr["opmerking"],
+                    Omschrijving = (string)dr["omschrijving"]
 
                 };
                 bestelling_MenuItems.Add(bestelling_MenuItem);

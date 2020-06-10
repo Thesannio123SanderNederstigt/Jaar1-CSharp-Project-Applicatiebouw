@@ -23,7 +23,6 @@ namespace UI
         private Tafel  tafel; //zodat ik het niet bij elke btn# click moet zetten
         private List<Tafel> tafels; //voor de "TafelStatus" void en btn# click
         private List<Button> buttons; // voor de "TafelPNL" en "TafelStatus" voids
-
         private List<Bestelling_MenuItem> Bestelling_MenuItems;
         private List<ChapooModel.MenuItem> menuItems; //ChappoModel omdat ik anders de model laag niet in kan.
         public Bestelling Bestelling;
@@ -31,16 +30,18 @@ namespace UI
 
         private Bestelling_MenuItemService bestelling_MenuItemService = new Bestelling_MenuItemService();
 
-        private void BTNReturn_Click(object sender, EventArgs e)
+        private void OverzichtReturnBTN_Click(object sender, EventArgs e)
         {
-            TafelNummerPNL.Show();
+            BestellingPNL.Show();
+            OverzichtPNL.Hide();
         }
-        private void btnExit_Click(object sender, EventArgs e)
+        private void TafelEXITPNL_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ben je zeker dat je wilt afmelden?\n" +
-                                "      Er wordt niks opgeslagen", "Afmelden", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Ben je zeker dat je wilt afmelden?", "Afmelden", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Application.Exit();
+                Login login = new Login();
+                login.Show();
+                this.Visible = false;
             }
         }
 
@@ -49,12 +50,30 @@ namespace UI
             InitializeComponent();
         }
 
+
+        public void Date_Time(Label Date, Label Time)
+        {
+            Date.Text = DateTime.Now.ToShortDateString();
+            Time.Text = DateTime.Now.ToShortTimeString();
+        }
+
         private void Bediening_Load(object sender, EventArgs e)
         {
-
-            OverzichtDateLBL.Text = DateTime.Now.ToShortDateString();
-            OverzichtTimeLBL.Text = DateTime.Now.ToShortTimeString();
             ShowPanel("TafelPNL");
+            Date_Time(TafelDateLBL, TafelTimeLBL);
+            TafelPNL.Show();
+            buttons = new List<Button>();
+            buttons.Add(btnT1);
+            buttons.Add(btnT2);
+            buttons.Add(btnT3);
+            buttons.Add(btnT4);
+            buttons.Add(btnT5);
+            buttons.Add(btnT6);
+            buttons.Add(btnT7);
+            buttons.Add(btnT8);
+            buttons.Add(btnT9);
+            buttons.Add(btnT10);
+            TafelStatus();
         }
         private void HidePanels()
         {
@@ -72,33 +91,26 @@ namespace UI
         private void ShowPanel(string PanelName)
         {
             HidePanels();
-
             if (PanelName == "TafelPNL")
             {
                 TafelPNL.Show();
-                buttons = new List<Button>();
-                buttons.Add(btnT1);
-                buttons.Add(btnT2);
-                buttons.Add(btnT3);
-                buttons.Add(btnT4);
-                buttons.Add(btnT5);
-                buttons.Add(btnT6);
-                buttons.Add(btnT7);
-                buttons.Add(btnT8);
-                buttons.Add(btnT9);
-                buttons.Add(btnT10);
-                TafelStatus();
             }
-
         }
+        //Item(s) aan een bestelling toevoegen
         private void BTNVoegToeL_Click(object sender, EventArgs e)
         {
             BestellingToevoegen(ListViewLunchV, ALBLLunch);
-            BestellingToevoegen(ListViewLunchH, ALBLLunch);
-            BestellingToevoegen(ListViewLunchN, ALBLLunch);
-
+            
         }
-
+        private void BTNVoegToeDrank_Click(object sender, EventArgs e)
+        {
+            BestellingToevoegen(ListViewDrankFris, ALBLDrank);
+        }
+        private void BTNVoegToeDiner_Click(object sender, EventArgs e)
+        {
+            BestellingToevoegen(ListViewDinerV, ALBLDiner);
+        }
+        //Om te kunnen selecteren wat je in een bestelling toevoegt
         public void BestellingToevoegen(ListView listView, Label label)
         {
             ListViewItem item = listView.SelectedItems[0];
@@ -153,7 +165,21 @@ namespace UI
                 List.SubItems.Add($"{Bestelling_MenuItems[i].Aantal.ToString()}");
                 ListViewOverzicht.Items.Add(List);
             }
+        }
+        public void CheckBestellingLijst()
+        {
+            int ID = Bestelling.ID;
+            ListViewOverzicht.Items.Clear();
+            Bestelling_MenuItems = bestelling_MenuItemService.GetBestelling(ID);
+            foreach (Bestelling_MenuItem B in Bestelling_MenuItems)
+            {
+                ListViewItem List = new ListViewItem(B.ID.ToString());
+                List.Tag = B;
+                List.SubItems.Add(B.Omschrijving);
+                List.SubItems.Add(B.Aantal.ToString());
 
+                ListViewOverzicht.Items.Add(List);
+            }
         }
 
         //om de Listview in de Bestellingoverzicht te vullen 
@@ -169,7 +195,7 @@ namespace UI
             }
 
         }
-        //test
+        //Om de status van een tafel te krijgen
         private void TafelStatus() //om de tafel status terug te krijgen
         {
             tafels = TafelService.GetTafel();
@@ -186,10 +212,12 @@ namespace UI
                 }
             }
         }
-        private void BTNBestellen_Click(object sender, EventArgs e)//om een bestelling te plaatsen
+        //om een bestelling te plaatsen
+        private void BTNBestellen_Click(object sender, EventArgs e)
         {           
             TafelNummerPNL.Hide();
             BestellingPNL.Show();
+            Date_Time(BestellingDateLBL, BestellingTimeLBL);
 
             Bestelling = BestellingService.Create_Bestelling(tafel);
             tafel.status = false;
@@ -198,14 +226,15 @@ namespace UI
                 TafelService.Change_Status(tafel.ID);
             }
         }
-        public void PlusClick(Label Plus) //Void voor alle plus knoppen 
+        //Void voor alle plus knoppen 
+        public void PlusClick(Label Plus)
         {
             int AantalLBL = int.Parse(Plus.Text);
             AantalLBL++;
             Plus.Text = AantalLBL.ToString();
         }
-
-        public void MinClick(Label Min) //void voor alle min knoppen
+        //void voor alle min knoppen
+        public void MinClick(Label Min)
         {
             int AantalLBL = int.Parse(Min.Text);
             if (AantalLBL > 0)
@@ -214,8 +243,8 @@ namespace UI
                 Min.Text = AantalLBL.ToString();
             }
         }
-
-        public void VulListView(string MenuSoort, string Categorie, ListView ListViewNaam) //Dit is om alle lijsten te vullen
+        //Dit is om alle lijsten te vullen
+        public void VulListView(string MenuSoort, string Categorie, ListView ListViewNaam)
         {
             ListViewNaam.Items.Clear();
 
@@ -231,7 +260,8 @@ namespace UI
                 ListViewNaam.Items.Add(List);
             }
         }
-        public void TimerClick(Timer TimerNaam, Button BTNNaam, Panel DropDownNaam) //Dit is om alle menu balken te openen
+        //Dit is om alle menu balken te openen
+        public void TimerClick(Timer TimerNaam, Button BTNNaam, Panel DropDownNaam)
         {
             if (isNeer)
             {
@@ -254,26 +284,28 @@ namespace UI
                 }
             }
         }
+        //Om naar alle menu's te gaan
         private void BTNLunch_Click(object sender, EventArgs e)
         {
             LunchPNL.Show();
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
             TafelPNL.Hide();
+            Date_Time(LunchDateLBL, LunchTimeLBL);
         }
-
         private void BTNDiner_Click(object sender, EventArgs e)
         {
             DinerPNL.Show();
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
+            Date_Time(DinerDateLBL, DinerTimeLBL);
         }
-
         private void BTNDrank_Click(object sender, EventArgs e)
         {
             DrankPNL.Show();
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
+            Date_Time(DrankDATELBL, DrankTIMELBL);
         }
 
         private void BTNOverzicht_Click(object sender, EventArgs e)
@@ -281,13 +313,15 @@ namespace UI
             OverzichtPNL.Show();
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
+            Date_Time(OverzichtDateLBL, OverzichtTimeLBL);
+            CheckBestelling();
+
+
         }
         private void timerDN_Tick(object sender, EventArgs e) // NAGERECHT DINER 
         {
             TimerClick(timerDN, DinerNaBTN, DNDropdown);
         }
-
-
         private void DinerNaBTN_Click(object sender, EventArgs e)
         {
             timerDN.Start();
@@ -342,7 +376,6 @@ namespace UI
         {
             timerLH.Start();
             VulListView("Lunch", "Hoofdgerecht", ListViewLunchH);
-           
         }
         //
         private void timerLN_Tick(object sender, EventArgs e) //LUNCH NAGERECHT
@@ -354,7 +387,7 @@ namespace UI
             timerLN.Start();
             VulListView("Lunch", "Nagerecht", ListViewLunchN);
         }
-
+        //
         private void timerDFris_Tick(object sender, EventArgs e) // FRISDRANK DRANK
         {
             TimerClick(timerDFris, DrankFrisBTN, DFrisDropdown);
@@ -404,7 +437,7 @@ namespace UI
             timerDThee.Start();
             VulListView("Dranken", "Thee", ListViewDrankThee);
         }
-        // Alle plus en min knoppen voor de 3 panels
+        // Alle plus en min knoppen voor de Lunch, Diner, Drank, Wijzingen panels
         private void BTNPlusDrank_Click(object sender, EventArgs e)
         {
             PlusClick(ALBLDrank);
@@ -416,7 +449,6 @@ namespace UI
         private void BTNPlusLunch_Click(object sender, EventArgs e)
         {
             PlusClick(ALBLLunch);
-
         }
         private void BTNMinLunch_Click(object sender, EventArgs e)
         {
@@ -438,6 +470,87 @@ namespace UI
         {
             MinClick(ALBLWijzigen);
         }
+        //tafel knoppen 
+        private void btnT1_Click(object sender, EventArgs e)
+        {
+            tafel = tafels[0];
+            TafelNummerPNL.Show();
+            LBLTafelNummer.Text = "Tafel 1";
+            TafelPNL.Hide();
+        }
+
+        private void btnT2_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[1];
+            LBLTafelNummer.Text = "Tafel 2";
+        }
+
+        private void btnT3_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[2];
+            LBLTafelNummer.Text = "Tafel 3";
+        }
+
+        private void btnT4_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[3];
+            LBLTafelNummer.Text = "Tafel 4";
+        }
+        private void btnT5_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[4];
+            LBLTafelNummer.Text = "Tafel 5";
+        }
+        private void btnT6_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[5];
+            LBLTafelNummer.Text = "Tafel 6";
+        }
+        private void btnT7_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[6];
+            LBLTafelNummer.Text = "Tafel 7";
+        }
+        private void btnT8_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[7];
+            LBLTafelNummer.Text = "Tafel 8";
+        }
+        private void btnT9_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[8];
+            LBLTafelNummer.Text = "Tafel 9";
+        }
+        private void btnT10_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Show();
+            TafelPNL.Hide();
+            tafel = tafels[9];
+            LBLTafelNummer.Text = "Tafel 10";
+        }
+
+
+
+
+
+
+
         // Per ongeluk geklikt 
         private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
@@ -502,100 +615,24 @@ namespace UI
 
         }
 
-        private void button22_Click(object sender, EventArgs e)
+        private void BTNBestellingVerwijderen_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Weet je zeker dat je de bestelling wilt verwijderen?\n" +
+                                "Bestelling en inhoud worden niet opgeslagen", "Bestelling verwijderen ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void BTNItemAanpassen_Click(object sender, EventArgs e)
         {
-            WijzigenPNL.BringToFront();
-            OverzichtPNL.SendToBack();
-            
+            WijzigenPNL.Visible = true;
+            OverzichtPNL.SendToBack();   
         }
 
         private void listView6_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-        //tafel knoppen 
-        private void btnT1_Click(object sender, EventArgs e)
-        {
-            tafel = tafels[0];
-            TafelNummerPNL.Show();
-            LBLTafelNummer.Text = "Tafel 1";
-            TafelPNL.Hide();
-        }
-
-        private void btnT2_Click(object sender, EventArgs e)
-        {      
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[1];
-            LBLTafelNummer.Text = "Tafel 2";
-        }
-
-        private void btnT3_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[2];
-            LBLTafelNummer.Text = "Tafel 3";
-        }
-
-        private void btnT4_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[3];
-            LBLTafelNummer.Text = "Tafel 4";
-        }
-
-        private void btnT5_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[4];
-            LBLTafelNummer.Text = "Tafel 5";
-        }
-
-        private void btnT6_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[5];
-            LBLTafelNummer.Text = "Tafel 6";
-        }
-
-        private void btnT7_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[6];
-            LBLTafelNummer.Text = "Tafel 7";
-        }
-
-        private void btnT8_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[7];
-            LBLTafelNummer.Text = "Tafel 8";
-        }
-
-        private void btnT9_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[8];
-            LBLTafelNummer.Text = "Tafel 9";
-        }
-        private void btnT10_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Show();
-            TafelPNL.Hide();
-            tafel = tafels[9];
-            LBLTafelNummer.Text = "Tafel 10";
         }
         private void panel11_Paint_1(object sender, PaintEventArgs e)
         {
@@ -607,15 +644,13 @@ namespace UI
         }
         private void BTNRekening_Click(object sender, EventArgs e)
         {
-      
+            Date_Time(RekeningDateLBL, RekeningTimeLBL);
         }
 
         private void BTNBestellingLunch_Click(object sender, EventArgs e)
         {
             LunchPNL.Hide();
             OverzichtPNL.Show();
-
-
         }
 
         private void OverzichtPNL_Paint(object sender, PaintEventArgs e)
@@ -633,6 +668,38 @@ namespace UI
         {
             DrankPNL.Hide();
             OverzichtPNL.Show();
+            
+        }
+        private void DinerTerugLBL_Click(object sender, EventArgs e)
+        {
+            DinerPNL.Hide();
+            BestellingPNL.Show();
+        }
+
+        private void LunchTerugBTN_Click(object sender, EventArgs e)
+        {
+            LunchPNL.Hide();
+            BestellingPNL.Show();
+        }
+        private void DrankTerugBTN_Click(object sender, EventArgs e)
+        {
+            DrankPNL.Hide();
+            BestellingPNL.Show();
+        }
+
+        private void BestellingTerugBTN_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Weet je zeker dat je terug wilt gaan?\n" +
+                                "Bestelling en inhoud worden niet opgeslagen", "Tafel overzicht", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void TafelNummerTerugBT_Click(object sender, EventArgs e)
+        {
+            TafelNummerPNL.Hide();
+            TafelPNL.Show();
         }
     }
 }
