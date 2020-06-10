@@ -2872,7 +2872,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(482, 696);
+            this.ClientSize = new System.Drawing.Size(726, 1047);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.DinerPNL);
             this.Controls.Add(this.TafelPNL);
