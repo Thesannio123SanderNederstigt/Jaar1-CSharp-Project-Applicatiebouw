@@ -30,9 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bediening));
-            this.TijdLBL = new System.Windows.Forms.Label();
-            this.DatumLBL = new System.Windows.Forms.Label();
+            this.OverzichtDateLBL = new System.Windows.Forms.Label();
+            this.OverzichtTimeLBL = new System.Windows.Forms.Label();
             this.TafelPNL = new System.Windows.Forms.Panel();
+            this.Tafel_TopPNL = new System.Windows.Forms.Panel();
+            this.TafelEXITPNL = new System.Windows.Forms.Button();
+            this.TafelDateLBL = new System.Windows.Forms.Label();
+            this.TafelTimeLBL = new System.Windows.Forms.Label();
+            this.TafelTerugBTN = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
             this.HoofdschermPNL = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,12 +53,24 @@
             this.btnT9 = new System.Windows.Forms.Button();
             this.btnT10 = new System.Windows.Forms.Button();
             this.TafelNummerPNL = new System.Windows.Forms.Panel();
+            this.TafelNummer_TopPNL = new System.Windows.Forms.Panel();
+            this.TafelNummerExitBTN = new System.Windows.Forms.Button();
+            this.TafelNummerDateLBL = new System.Windows.Forms.Label();
+            this.TafelNummerTimeLBL = new System.Windows.Forms.Label();
+            this.TafelNummerTerugBT = new System.Windows.Forms.Button();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.BTNBestellen = new System.Windows.Forms.Button();
             this.BTNRekening = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.PNL = new System.Windows.Forms.Panel();
             this.LBLTafelNummer = new System.Windows.Forms.Label();
             this.BestellingPNL = new System.Windows.Forms.Panel();
+            this.Bestelling_TopPNL = new System.Windows.Forms.Panel();
+            this.BestellingExitBTN = new System.Windows.Forms.Button();
+            this.BestellingDateLBL = new System.Windows.Forms.Label();
+            this.BestellingTimeLBL = new System.Windows.Forms.Label();
+            this.BestellingTerugBTN = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.BTNDiner = new System.Windows.Forms.Button();
             this.BTNLunch = new System.Windows.Forms.Button();
             this.BTNDrank = new System.Windows.Forms.Button();
@@ -60,6 +78,12 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.LunchPNL = new System.Windows.Forms.Panel();
+            this.Lunch_TopPNL = new System.Windows.Forms.Panel();
+            this.LunchExitBTN = new System.Windows.Forms.Button();
+            this.LunchDateLBL = new System.Windows.Forms.Label();
+            this.LunchTimeLBL = new System.Windows.Forms.Label();
+            this.LunchTerugBTN = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.BTNVoegToeL = new System.Windows.Forms.Button();
             this.ALBLLunch = new System.Windows.Forms.Label();
             this.BTNMinLunch = new System.Windows.Forms.Button();
@@ -91,6 +115,12 @@
             this.timerLN = new System.Windows.Forms.Timer(this.components);
             this.timerDFris = new System.Windows.Forms.Timer(this.components);
             this.DrankPNL = new System.Windows.Forms.Panel();
+            this.Drank_TopPNL = new System.Windows.Forms.Panel();
+            this.DrankExitBTN = new System.Windows.Forms.Button();
+            this.DrankDATELBL = new System.Windows.Forms.Label();
+            this.DrankTIMELBL = new System.Windows.Forms.Label();
+            this.DrankTerugBTN = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
             this.ALBLDrank = new System.Windows.Forms.Label();
             this.BTNMinDrank = new System.Windows.Forms.Button();
@@ -143,6 +173,10 @@
             this.BOAantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel20 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.Overzicht_TopPNL = new System.Windows.Forms.Panel();
+            this.OverzichtExitBTN = new System.Windows.Forms.Button();
+            this.BTNReturnBTN = new System.Windows.Forms.Button();
+            this.ChapooLogo = new System.Windows.Forms.Panel();
             this.timerDTap = new System.Windows.Forms.Timer(this.components);
             this.timerDGed = new System.Windows.Forms.Timer(this.components);
             this.timerDWijn = new System.Windows.Forms.Timer(this.components);
@@ -190,16 +224,30 @@
             this.BTNVoegToeDiner = new System.Windows.Forms.Button();
             this.BTNBestellingDiner = new System.Windows.Forms.Button();
             this.DinerPNL = new System.Windows.Forms.Panel();
-            this.ChapooLogo = new System.Windows.Forms.Panel();
-            this.BTNReturn = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.Overzicht_TopPNL = new System.Windows.Forms.Panel();
+            this.Diner_TopPNL = new System.Windows.Forms.Panel();
+            this.DinerEXITBTN = new System.Windows.Forms.Button();
+            this.DinerDateLBL = new System.Windows.Forms.Label();
+            this.DinerTimeLBL = new System.Windows.Forms.Label();
+            this.DinerTerugLBL = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.AfgerondPNL = new System.Windows.Forms.Panel();
+            this.Afgerond_TopPNL = new System.Windows.Forms.Panel();
+            this.AfgerondExitBTN = new System.Windows.Forms.Button();
+            this.AfgerondDateLBL = new System.Windows.Forms.Label();
+            this.AfgerondTimeLBL = new System.Windows.Forms.Label();
+            this.AfgerondTerugBTN = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.AfrekenenPNL = new System.Windows.Forms.Panel();
+            this.Afrekenen_TopPNL = new System.Windows.Forms.Panel();
+            this.AfrekenenExitBTN = new System.Windows.Forms.Button();
+            this.AfrekenenDateLBL = new System.Windows.Forms.Label();
+            this.AfrekenenTimeLBL = new System.Windows.Forms.Label();
+            this.AfrekenenTerugBTN = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -210,6 +258,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.RekeningPNL = new System.Windows.Forms.Panel();
+            this.Rekening_TopPNL = new System.Windows.Forms.Panel();
+            this.RekeningExitBTN = new System.Windows.Forms.Button();
+            this.RekeningDateLBL = new System.Windows.Forms.Label();
+            this.RekeningTimeLBL = new System.Windows.Forms.Label();
+            this.RekeningTerugBTN = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -218,74 +272,25 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.Bestelling_TopPNL = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.Rekening_TopPNL = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.Afgerond_TopPNL = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.Afrekenen_TopPNL = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.Drank_TopPNL = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.button14 = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.Diner_TopPNL = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.Lunch_TopPNL = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.Tafel_TopPNL = new System.Windows.Forms.Panel();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.TafelNummer_TopPNL = new System.Windows.Forms.Panel();
-            this.button22 = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.panel21 = new System.Windows.Forms.Panel();
             this.TafelPNL.SuspendLayout();
+            this.Tafel_TopPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.TafelNummerPNL.SuspendLayout();
+            this.TafelNummer_TopPNL.SuspendLayout();
             this.PNL.SuspendLayout();
             this.BestellingPNL.SuspendLayout();
+            this.Bestelling_TopPNL.SuspendLayout();
             this.panel4.SuspendLayout();
             this.LunchPNL.SuspendLayout();
+            this.Lunch_TopPNL.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.LVDropdown.SuspendLayout();
             this.LHDropdown.SuspendLayout();
             this.LNDropdown.SuspendLayout();
             this.panel10.SuspendLayout();
             this.DrankPNL.SuspendLayout();
+            this.Drank_TopPNL.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.DFrisDropdown.SuspendLayout();
             this.DTapDropdown.SuspendLayout();
@@ -295,6 +300,7 @@
             this.panel24.SuspendLayout();
             this.OverzichtPNL.SuspendLayout();
             this.panel20.SuspendLayout();
+            this.Overzicht_TopPNL.SuspendLayout();
             this.WijzigenPNL.SuspendLayout();
             this.panel17.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -303,49 +309,43 @@
             this.DHDropdown.SuspendLayout();
             this.DNDropdown.SuspendLayout();
             this.DinerPNL.SuspendLayout();
-            this.Overzicht_TopPNL.SuspendLayout();
+            this.Diner_TopPNL.SuspendLayout();
             this.AfgerondPNL.SuspendLayout();
+            this.Afgerond_TopPNL.SuspendLayout();
             this.panel13.SuspendLayout();
             this.AfrekenenPNL.SuspendLayout();
+            this.Afrekenen_TopPNL.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.RekeningPNL.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.Bestelling_TopPNL.SuspendLayout();
             this.Rekening_TopPNL.SuspendLayout();
-            this.Afgerond_TopPNL.SuspendLayout();
-            this.Afrekenen_TopPNL.SuspendLayout();
-            this.Drank_TopPNL.SuspendLayout();
-            this.Diner_TopPNL.SuspendLayout();
-            this.Lunch_TopPNL.SuspendLayout();
-            this.Tafel_TopPNL.SuspendLayout();
-            this.TafelNummer_TopPNL.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TijdLBL
+            // OverzichtDateLBL
             // 
-            this.TijdLBL.AutoSize = true;
-            this.TijdLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.TijdLBL.Location = new System.Drawing.Point(505, 34);
-            this.TijdLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TijdLBL.Name = "TijdLBL";
-            this.TijdLBL.Size = new System.Drawing.Size(63, 30);
-            this.TijdLBL.TabIndex = 13;
-            this.TijdLBL.Text = "Date";
-            this.TijdLBL.Click += new System.EventHandler(this.TijdLBL_Click);
+            this.OverzichtDateLBL.AutoSize = true;
+            this.OverzichtDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.OverzichtDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.OverzichtDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OverzichtDateLBL.Name = "OverzichtDateLBL";
+            this.OverzichtDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.OverzichtDateLBL.TabIndex = 13;
+            this.OverzichtDateLBL.Text = "Date";
+            this.OverzichtDateLBL.Click += new System.EventHandler(this.TijdLBL_Click);
             // 
-            // DatumLBL
+            // OverzichtTimeLBL
             // 
-            this.DatumLBL.AutoSize = true;
-            this.DatumLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.DatumLBL.Location = new System.Drawing.Point(605, 34);
-            this.DatumLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DatumLBL.Name = "DatumLBL";
-            this.DatumLBL.Size = new System.Drawing.Size(66, 30);
-            this.DatumLBL.TabIndex = 14;
-            this.DatumLBL.Text = "Time";
+            this.OverzichtTimeLBL.AutoSize = true;
+            this.OverzichtTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.OverzichtTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.OverzichtTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OverzichtTimeLBL.Name = "OverzichtTimeLBL";
+            this.OverzichtTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.OverzichtTimeLBL.TabIndex = 14;
+            this.OverzichtTimeLBL.Text = "Time";
             // 
             // TafelPNL
             // 
@@ -359,6 +359,72 @@
             this.TafelPNL.Size = new System.Drawing.Size(721, 1041);
             this.TafelPNL.TabIndex = 15;
             this.TafelPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // Tafel_TopPNL
+            // 
+            this.Tafel_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Tafel_TopPNL.Controls.Add(this.TafelEXITPNL);
+            this.Tafel_TopPNL.Controls.Add(this.TafelDateLBL);
+            this.Tafel_TopPNL.Controls.Add(this.TafelTimeLBL);
+            this.Tafel_TopPNL.Controls.Add(this.TafelTerugBTN);
+            this.Tafel_TopPNL.Controls.Add(this.panel19);
+            this.Tafel_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Tafel_TopPNL.Name = "Tafel_TopPNL";
+            this.Tafel_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Tafel_TopPNL.TabIndex = 35;
+            // 
+            // TafelEXITPNL
+            // 
+            this.TafelEXITPNL.BackColor = System.Drawing.Color.White;
+            this.TafelEXITPNL.Image = global::UI.Properties.Resources.logout__3_;
+            this.TafelEXITPNL.Location = new System.Drawing.Point(41, 11);
+            this.TafelEXITPNL.Margin = new System.Windows.Forms.Padding(2);
+            this.TafelEXITPNL.Name = "TafelEXITPNL";
+            this.TafelEXITPNL.Size = new System.Drawing.Size(51, 51);
+            this.TafelEXITPNL.TabIndex = 16;
+            this.TafelEXITPNL.UseVisualStyleBackColor = false;
+            // 
+            // TafelDateLBL
+            // 
+            this.TafelDateLBL.AutoSize = true;
+            this.TafelDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.TafelDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.TafelDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TafelDateLBL.Name = "TafelDateLBL";
+            this.TafelDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.TafelDateLBL.TabIndex = 13;
+            this.TafelDateLBL.Text = "Date";
+            // 
+            // TafelTimeLBL
+            // 
+            this.TafelTimeLBL.AutoSize = true;
+            this.TafelTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.TafelTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.TafelTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TafelTimeLBL.Name = "TafelTimeLBL";
+            this.TafelTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.TafelTimeLBL.TabIndex = 14;
+            this.TafelTimeLBL.Text = "Time";
+            // 
+            // TafelTerugBTN
+            // 
+            this.TafelTerugBTN.BackColor = System.Drawing.Color.White;
+            this.TafelTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.TafelTerugBTN.Location = new System.Drawing.Point(119, 11);
+            this.TafelTerugBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.TafelTerugBTN.Name = "TafelTerugBTN";
+            this.TafelTerugBTN.Size = new System.Drawing.Size(58, 49);
+            this.TafelTerugBTN.TabIndex = 32;
+            this.TafelTerugBTN.UseVisualStyleBackColor = false;
+            // 
+            // panel19
+            // 
+            this.panel19.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel19.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel19.Location = new System.Drawing.Point(302, 11);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(113, 51);
+            this.panel19.TabIndex = 33;
             // 
             // HoofdschermPNL
             // 
@@ -534,6 +600,72 @@
             this.TafelNummerPNL.TabIndex = 24;
             this.TafelNummerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_2);
             // 
+            // TafelNummer_TopPNL
+            // 
+            this.TafelNummer_TopPNL.BackColor = System.Drawing.Color.White;
+            this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerExitBTN);
+            this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerDateLBL);
+            this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerTimeLBL);
+            this.TafelNummer_TopPNL.Controls.Add(this.TafelNummerTerugBT);
+            this.TafelNummer_TopPNL.Controls.Add(this.panel21);
+            this.TafelNummer_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.TafelNummer_TopPNL.Name = "TafelNummer_TopPNL";
+            this.TafelNummer_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.TafelNummer_TopPNL.TabIndex = 35;
+            // 
+            // TafelNummerExitBTN
+            // 
+            this.TafelNummerExitBTN.BackColor = System.Drawing.Color.White;
+            this.TafelNummerExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.TafelNummerExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.TafelNummerExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.TafelNummerExitBTN.Name = "TafelNummerExitBTN";
+            this.TafelNummerExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.TafelNummerExitBTN.TabIndex = 16;
+            this.TafelNummerExitBTN.UseVisualStyleBackColor = false;
+            // 
+            // TafelNummerDateLBL
+            // 
+            this.TafelNummerDateLBL.AutoSize = true;
+            this.TafelNummerDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.TafelNummerDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.TafelNummerDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TafelNummerDateLBL.Name = "TafelNummerDateLBL";
+            this.TafelNummerDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.TafelNummerDateLBL.TabIndex = 13;
+            this.TafelNummerDateLBL.Text = "Date";
+            // 
+            // TafelNummerTimeLBL
+            // 
+            this.TafelNummerTimeLBL.AutoSize = true;
+            this.TafelNummerTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.TafelNummerTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.TafelNummerTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TafelNummerTimeLBL.Name = "TafelNummerTimeLBL";
+            this.TafelNummerTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.TafelNummerTimeLBL.TabIndex = 14;
+            this.TafelNummerTimeLBL.Text = "Time";
+            // 
+            // TafelNummerTerugBT
+            // 
+            this.TafelNummerTerugBT.BackColor = System.Drawing.Color.White;
+            this.TafelNummerTerugBT.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.TafelNummerTerugBT.Location = new System.Drawing.Point(119, 11);
+            this.TafelNummerTerugBT.Margin = new System.Windows.Forms.Padding(2);
+            this.TafelNummerTerugBT.Name = "TafelNummerTerugBT";
+            this.TafelNummerTerugBT.Size = new System.Drawing.Size(58, 49);
+            this.TafelNummerTerugBT.TabIndex = 32;
+            this.TafelNummerTerugBT.UseVisualStyleBackColor = false;
+            // 
+            // panel21
+            // 
+            this.panel21.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel21.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel21.Location = new System.Drawing.Point(302, 11);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(113, 51);
+            this.panel21.TabIndex = 33;
+            // 
             // BTNBestellen
             // 
             this.BTNBestellen.FlatAppearance.BorderSize = 0;
@@ -605,6 +737,72 @@
             this.BestellingPNL.Size = new System.Drawing.Size(721, 1041);
             this.BestellingPNL.TabIndex = 25;
             this.BestellingPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // Bestelling_TopPNL
+            // 
+            this.Bestelling_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Bestelling_TopPNL.Controls.Add(this.BestellingExitBTN);
+            this.Bestelling_TopPNL.Controls.Add(this.BestellingDateLBL);
+            this.Bestelling_TopPNL.Controls.Add(this.BestellingTimeLBL);
+            this.Bestelling_TopPNL.Controls.Add(this.BestellingTerugBTN);
+            this.Bestelling_TopPNL.Controls.Add(this.panel9);
+            this.Bestelling_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Bestelling_TopPNL.Name = "Bestelling_TopPNL";
+            this.Bestelling_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Bestelling_TopPNL.TabIndex = 41;
+            // 
+            // BestellingExitBTN
+            // 
+            this.BestellingExitBTN.BackColor = System.Drawing.Color.White;
+            this.BestellingExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.BestellingExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.BestellingExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.BestellingExitBTN.Name = "BestellingExitBTN";
+            this.BestellingExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.BestellingExitBTN.TabIndex = 16;
+            this.BestellingExitBTN.UseVisualStyleBackColor = false;
+            // 
+            // BestellingDateLBL
+            // 
+            this.BestellingDateLBL.AutoSize = true;
+            this.BestellingDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.BestellingDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.BestellingDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BestellingDateLBL.Name = "BestellingDateLBL";
+            this.BestellingDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.BestellingDateLBL.TabIndex = 13;
+            this.BestellingDateLBL.Text = "Date";
+            // 
+            // BestellingTimeLBL
+            // 
+            this.BestellingTimeLBL.AutoSize = true;
+            this.BestellingTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.BestellingTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.BestellingTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BestellingTimeLBL.Name = "BestellingTimeLBL";
+            this.BestellingTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.BestellingTimeLBL.TabIndex = 14;
+            this.BestellingTimeLBL.Text = "Time";
+            // 
+            // BestellingTerugBTN
+            // 
+            this.BestellingTerugBTN.BackColor = System.Drawing.Color.White;
+            this.BestellingTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.BestellingTerugBTN.Location = new System.Drawing.Point(119, 11);
+            this.BestellingTerugBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.BestellingTerugBTN.Name = "BestellingTerugBTN";
+            this.BestellingTerugBTN.Size = new System.Drawing.Size(58, 49);
+            this.BestellingTerugBTN.TabIndex = 32;
+            this.BestellingTerugBTN.UseVisualStyleBackColor = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel9.Location = new System.Drawing.Point(302, 11);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(113, 51);
+            this.panel9.TabIndex = 33;
             // 
             // BTNDiner
             // 
@@ -691,6 +889,72 @@
             this.LunchPNL.Size = new System.Drawing.Size(721, 1041);
             this.LunchPNL.TabIndex = 28;
             this.LunchPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // Lunch_TopPNL
+            // 
+            this.Lunch_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Lunch_TopPNL.Controls.Add(this.LunchExitBTN);
+            this.Lunch_TopPNL.Controls.Add(this.LunchDateLBL);
+            this.Lunch_TopPNL.Controls.Add(this.LunchTimeLBL);
+            this.Lunch_TopPNL.Controls.Add(this.LunchTerugBTN);
+            this.Lunch_TopPNL.Controls.Add(this.panel18);
+            this.Lunch_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Lunch_TopPNL.Name = "Lunch_TopPNL";
+            this.Lunch_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Lunch_TopPNL.TabIndex = 41;
+            // 
+            // LunchExitBTN
+            // 
+            this.LunchExitBTN.BackColor = System.Drawing.Color.White;
+            this.LunchExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.LunchExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.LunchExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.LunchExitBTN.Name = "LunchExitBTN";
+            this.LunchExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.LunchExitBTN.TabIndex = 16;
+            this.LunchExitBTN.UseVisualStyleBackColor = false;
+            // 
+            // LunchDateLBL
+            // 
+            this.LunchDateLBL.AutoSize = true;
+            this.LunchDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.LunchDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.LunchDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LunchDateLBL.Name = "LunchDateLBL";
+            this.LunchDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.LunchDateLBL.TabIndex = 13;
+            this.LunchDateLBL.Text = "Date";
+            // 
+            // LunchTimeLBL
+            // 
+            this.LunchTimeLBL.AutoSize = true;
+            this.LunchTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.LunchTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.LunchTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LunchTimeLBL.Name = "LunchTimeLBL";
+            this.LunchTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.LunchTimeLBL.TabIndex = 14;
+            this.LunchTimeLBL.Text = "Time";
+            // 
+            // LunchTerugBTN
+            // 
+            this.LunchTerugBTN.BackColor = System.Drawing.Color.White;
+            this.LunchTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.LunchTerugBTN.Location = new System.Drawing.Point(119, 11);
+            this.LunchTerugBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.LunchTerugBTN.Name = "LunchTerugBTN";
+            this.LunchTerugBTN.Size = new System.Drawing.Size(58, 49);
+            this.LunchTerugBTN.TabIndex = 32;
+            this.LunchTerugBTN.UseVisualStyleBackColor = false;
+            // 
+            // panel18
+            // 
+            this.panel18.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel18.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel18.Location = new System.Drawing.Point(302, 11);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(113, 51);
+            this.panel18.TabIndex = 33;
             // 
             // BTNVoegToeL
             // 
@@ -994,6 +1258,72 @@
             this.DrankPNL.Size = new System.Drawing.Size(721, 1041);
             this.DrankPNL.TabIndex = 30;
             this.DrankPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DrankPNL_Paint);
+            // 
+            // Drank_TopPNL
+            // 
+            this.Drank_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Drank_TopPNL.Controls.Add(this.DrankExitBTN);
+            this.Drank_TopPNL.Controls.Add(this.DrankDATELBL);
+            this.Drank_TopPNL.Controls.Add(this.DrankTIMELBL);
+            this.Drank_TopPNL.Controls.Add(this.DrankTerugBTN);
+            this.Drank_TopPNL.Controls.Add(this.panel15);
+            this.Drank_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Drank_TopPNL.Name = "Drank_TopPNL";
+            this.Drank_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Drank_TopPNL.TabIndex = 41;
+            // 
+            // DrankExitBTN
+            // 
+            this.DrankExitBTN.BackColor = System.Drawing.Color.White;
+            this.DrankExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.DrankExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.DrankExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.DrankExitBTN.Name = "DrankExitBTN";
+            this.DrankExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.DrankExitBTN.TabIndex = 16;
+            this.DrankExitBTN.UseVisualStyleBackColor = false;
+            // 
+            // DrankDATELBL
+            // 
+            this.DrankDATELBL.AutoSize = true;
+            this.DrankDATELBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.DrankDATELBL.Location = new System.Drawing.Point(505, 34);
+            this.DrankDATELBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DrankDATELBL.Name = "DrankDATELBL";
+            this.DrankDATELBL.Size = new System.Drawing.Size(63, 30);
+            this.DrankDATELBL.TabIndex = 13;
+            this.DrankDATELBL.Text = "Date";
+            // 
+            // DrankTIMELBL
+            // 
+            this.DrankTIMELBL.AutoSize = true;
+            this.DrankTIMELBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.DrankTIMELBL.Location = new System.Drawing.Point(605, 34);
+            this.DrankTIMELBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DrankTIMELBL.Name = "DrankTIMELBL";
+            this.DrankTIMELBL.Size = new System.Drawing.Size(66, 30);
+            this.DrankTIMELBL.TabIndex = 14;
+            this.DrankTIMELBL.Text = "Time";
+            // 
+            // DrankTerugBTN
+            // 
+            this.DrankTerugBTN.BackColor = System.Drawing.Color.White;
+            this.DrankTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.DrankTerugBTN.Location = new System.Drawing.Point(119, 11);
+            this.DrankTerugBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.DrankTerugBTN.Name = "DrankTerugBTN";
+            this.DrankTerugBTN.Size = new System.Drawing.Size(58, 49);
+            this.DrankTerugBTN.TabIndex = 32;
+            this.DrankTerugBTN.UseVisualStyleBackColor = false;
+            // 
+            // panel15
+            // 
+            this.panel15.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel15.Location = new System.Drawing.Point(302, 11);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(113, 51);
+            this.panel15.TabIndex = 33;
             // 
             // button16
             // 
@@ -1521,6 +1851,53 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Bestelling Overzicht";
             // 
+            // Overzicht_TopPNL
+            // 
+            this.Overzicht_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Overzicht_TopPNL.Controls.Add(this.OverzichtExitBTN);
+            this.Overzicht_TopPNL.Controls.Add(this.OverzichtDateLBL);
+            this.Overzicht_TopPNL.Controls.Add(this.OverzichtTimeLBL);
+            this.Overzicht_TopPNL.Controls.Add(this.BTNReturnBTN);
+            this.Overzicht_TopPNL.Controls.Add(this.ChapooLogo);
+            this.Overzicht_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Overzicht_TopPNL.Name = "Overzicht_TopPNL";
+            this.Overzicht_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Overzicht_TopPNL.TabIndex = 34;
+            // 
+            // OverzichtExitBTN
+            // 
+            this.OverzichtExitBTN.BackColor = System.Drawing.Color.White;
+            this.OverzichtExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.OverzichtExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.OverzichtExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.OverzichtExitBTN.Name = "OverzichtExitBTN";
+            this.OverzichtExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.OverzichtExitBTN.TabIndex = 16;
+            this.OverzichtExitBTN.UseVisualStyleBackColor = false;
+            this.OverzichtExitBTN.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // BTNReturnBTN
+            // 
+            this.BTNReturnBTN.BackColor = System.Drawing.Color.White;
+            this.BTNReturnBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.BTNReturnBTN.Location = new System.Drawing.Point(119, 11);
+            this.BTNReturnBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.BTNReturnBTN.Name = "BTNReturnBTN";
+            this.BTNReturnBTN.Size = new System.Drawing.Size(58, 49);
+            this.BTNReturnBTN.TabIndex = 32;
+            this.BTNReturnBTN.UseVisualStyleBackColor = false;
+            this.BTNReturnBTN.Click += new System.EventHandler(this.BTNReturn_Click);
+            // 
+            // ChapooLogo
+            // 
+            this.ChapooLogo.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.ChapooLogo.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.ChapooLogo.Location = new System.Drawing.Point(302, 11);
+            this.ChapooLogo.Name = "ChapooLogo";
+            this.ChapooLogo.Size = new System.Drawing.Size(113, 51);
+            this.ChapooLogo.TabIndex = 33;
+            this.ChapooLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint_1);
+            // 
             // timerDTap
             // 
             this.timerDTap.Interval = 15;
@@ -1564,7 +1941,7 @@
             this.WijzigenPNL.Controls.Add(this.ALBLWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNMinWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNPlusWijzigen);
-            this.WijzigenPNL.Location = new System.Drawing.Point(50, 703);
+            this.WijzigenPNL.Location = new System.Drawing.Point(60, 675);
             this.WijzigenPNL.Name = "WijzigenPNL";
             this.WijzigenPNL.Size = new System.Drawing.Size(625, 309);
             this.WijzigenPNL.TabIndex = 31;
@@ -1964,52 +2341,71 @@
             this.DinerPNL.TabIndex = 29;
             this.DinerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DinerPNL_Paint);
             // 
-            // ChapooLogo
+            // Diner_TopPNL
             // 
-            this.ChapooLogo.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.ChapooLogo.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.ChapooLogo.Location = new System.Drawing.Point(302, 11);
-            this.ChapooLogo.Name = "ChapooLogo";
-            this.ChapooLogo.Size = new System.Drawing.Size(113, 51);
-            this.ChapooLogo.TabIndex = 33;
-            this.ChapooLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint_1);
+            this.Diner_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Diner_TopPNL.Controls.Add(this.DinerEXITBTN);
+            this.Diner_TopPNL.Controls.Add(this.DinerDateLBL);
+            this.Diner_TopPNL.Controls.Add(this.DinerTimeLBL);
+            this.Diner_TopPNL.Controls.Add(this.DinerTerugLBL);
+            this.Diner_TopPNL.Controls.Add(this.panel16);
+            this.Diner_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Diner_TopPNL.Name = "Diner_TopPNL";
+            this.Diner_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Diner_TopPNL.TabIndex = 41;
             // 
-            // BTNReturn
+            // DinerEXITBTN
             // 
-            this.BTNReturn.BackColor = System.Drawing.Color.White;
-            this.BTNReturn.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.BTNReturn.Location = new System.Drawing.Point(119, 11);
-            this.BTNReturn.Margin = new System.Windows.Forms.Padding(2);
-            this.BTNReturn.Name = "BTNReturn";
-            this.BTNReturn.Size = new System.Drawing.Size(58, 49);
-            this.BTNReturn.TabIndex = 32;
-            this.BTNReturn.UseVisualStyleBackColor = false;
-            this.BTNReturn.Click += new System.EventHandler(this.BTNReturn_Click);
+            this.DinerEXITBTN.BackColor = System.Drawing.Color.White;
+            this.DinerEXITBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.DinerEXITBTN.Location = new System.Drawing.Point(41, 11);
+            this.DinerEXITBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.DinerEXITBTN.Name = "DinerEXITBTN";
+            this.DinerEXITBTN.Size = new System.Drawing.Size(51, 51);
+            this.DinerEXITBTN.TabIndex = 16;
+            this.DinerEXITBTN.UseVisualStyleBackColor = false;
             // 
-            // btnExit
+            // DinerDateLBL
             // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.Image = global::UI.Properties.Resources.logout__3_;
-            this.btnExit.Location = new System.Drawing.Point(41, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(51, 51);
-            this.btnExit.TabIndex = 16;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.DinerDateLBL.AutoSize = true;
+            this.DinerDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.DinerDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.DinerDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DinerDateLBL.Name = "DinerDateLBL";
+            this.DinerDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.DinerDateLBL.TabIndex = 13;
+            this.DinerDateLBL.Text = "Date";
             // 
-            // Overzicht_TopPNL
+            // DinerTimeLBL
             // 
-            this.Overzicht_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Overzicht_TopPNL.Controls.Add(this.btnExit);
-            this.Overzicht_TopPNL.Controls.Add(this.TijdLBL);
-            this.Overzicht_TopPNL.Controls.Add(this.DatumLBL);
-            this.Overzicht_TopPNL.Controls.Add(this.BTNReturn);
-            this.Overzicht_TopPNL.Controls.Add(this.ChapooLogo);
-            this.Overzicht_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Overzicht_TopPNL.Name = "Overzicht_TopPNL";
-            this.Overzicht_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Overzicht_TopPNL.TabIndex = 34;
+            this.DinerTimeLBL.AutoSize = true;
+            this.DinerTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.DinerTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.DinerTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DinerTimeLBL.Name = "DinerTimeLBL";
+            this.DinerTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.DinerTimeLBL.TabIndex = 14;
+            this.DinerTimeLBL.Text = "Time";
+            // 
+            // DinerTerugLBL
+            // 
+            this.DinerTerugLBL.BackColor = System.Drawing.Color.White;
+            this.DinerTerugLBL.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.DinerTerugLBL.Location = new System.Drawing.Point(119, 11);
+            this.DinerTerugLBL.Margin = new System.Windows.Forms.Padding(2);
+            this.DinerTerugLBL.Name = "DinerTerugLBL";
+            this.DinerTerugLBL.Size = new System.Drawing.Size(58, 49);
+            this.DinerTerugLBL.TabIndex = 32;
+            this.DinerTerugLBL.UseVisualStyleBackColor = false;
+            // 
+            // panel16
+            // 
+            this.panel16.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel16.Location = new System.Drawing.Point(302, 11);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(113, 51);
+            this.panel16.TabIndex = 33;
             // 
             // AfgerondPNL
             // 
@@ -2023,6 +2419,72 @@
             this.AfgerondPNL.Name = "AfgerondPNL";
             this.AfgerondPNL.Size = new System.Drawing.Size(721, 1039);
             this.AfgerondPNL.TabIndex = 40;
+            // 
+            // Afgerond_TopPNL
+            // 
+            this.Afgerond_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Afgerond_TopPNL.Controls.Add(this.AfgerondExitBTN);
+            this.Afgerond_TopPNL.Controls.Add(this.AfgerondDateLBL);
+            this.Afgerond_TopPNL.Controls.Add(this.AfgerondTimeLBL);
+            this.Afgerond_TopPNL.Controls.Add(this.AfgerondTerugBTN);
+            this.Afgerond_TopPNL.Controls.Add(this.panel12);
+            this.Afgerond_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Afgerond_TopPNL.Name = "Afgerond_TopPNL";
+            this.Afgerond_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Afgerond_TopPNL.TabIndex = 41;
+            // 
+            // AfgerondExitBTN
+            // 
+            this.AfgerondExitBTN.BackColor = System.Drawing.Color.White;
+            this.AfgerondExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.AfgerondExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.AfgerondExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.AfgerondExitBTN.Name = "AfgerondExitBTN";
+            this.AfgerondExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.AfgerondExitBTN.TabIndex = 16;
+            this.AfgerondExitBTN.UseVisualStyleBackColor = false;
+            // 
+            // AfgerondDateLBL
+            // 
+            this.AfgerondDateLBL.AutoSize = true;
+            this.AfgerondDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.AfgerondDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.AfgerondDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AfgerondDateLBL.Name = "AfgerondDateLBL";
+            this.AfgerondDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.AfgerondDateLBL.TabIndex = 13;
+            this.AfgerondDateLBL.Text = "Date";
+            // 
+            // AfgerondTimeLBL
+            // 
+            this.AfgerondTimeLBL.AutoSize = true;
+            this.AfgerondTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.AfgerondTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.AfgerondTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AfgerondTimeLBL.Name = "AfgerondTimeLBL";
+            this.AfgerondTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.AfgerondTimeLBL.TabIndex = 14;
+            this.AfgerondTimeLBL.Text = "Time";
+            // 
+            // AfgerondTerugBTN
+            // 
+            this.AfgerondTerugBTN.BackColor = System.Drawing.Color.White;
+            this.AfgerondTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.AfgerondTerugBTN.Location = new System.Drawing.Point(119, 11);
+            this.AfgerondTerugBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.AfgerondTerugBTN.Name = "AfgerondTerugBTN";
+            this.AfgerondTerugBTN.Size = new System.Drawing.Size(58, 49);
+            this.AfgerondTerugBTN.TabIndex = 32;
+            this.AfgerondTerugBTN.UseVisualStyleBackColor = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel12.Location = new System.Drawing.Point(302, 11);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(113, 51);
+            this.panel12.TabIndex = 33;
             // 
             // label18
             // 
@@ -2080,6 +2542,72 @@
             this.AfrekenenPNL.Name = "AfrekenenPNL";
             this.AfrekenenPNL.Size = new System.Drawing.Size(721, 1039);
             this.AfrekenenPNL.TabIndex = 39;
+            // 
+            // Afrekenen_TopPNL
+            // 
+            this.Afrekenen_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenExitBTN);
+            this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenDateLBL);
+            this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenTimeLBL);
+            this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenTerugBTN);
+            this.Afrekenen_TopPNL.Controls.Add(this.panel14);
+            this.Afrekenen_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Afrekenen_TopPNL.Name = "Afrekenen_TopPNL";
+            this.Afrekenen_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Afrekenen_TopPNL.TabIndex = 41;
+            // 
+            // AfrekenenExitBTN
+            // 
+            this.AfrekenenExitBTN.BackColor = System.Drawing.Color.White;
+            this.AfrekenenExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.AfrekenenExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.AfrekenenExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.AfrekenenExitBTN.Name = "AfrekenenExitBTN";
+            this.AfrekenenExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.AfrekenenExitBTN.TabIndex = 16;
+            this.AfrekenenExitBTN.UseVisualStyleBackColor = false;
+            // 
+            // AfrekenenDateLBL
+            // 
+            this.AfrekenenDateLBL.AutoSize = true;
+            this.AfrekenenDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.AfrekenenDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.AfrekenenDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AfrekenenDateLBL.Name = "AfrekenenDateLBL";
+            this.AfrekenenDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.AfrekenenDateLBL.TabIndex = 13;
+            this.AfrekenenDateLBL.Text = "Date";
+            // 
+            // AfrekenenTimeLBL
+            // 
+            this.AfrekenenTimeLBL.AutoSize = true;
+            this.AfrekenenTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.AfrekenenTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.AfrekenenTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.AfrekenenTimeLBL.Name = "AfrekenenTimeLBL";
+            this.AfrekenenTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.AfrekenenTimeLBL.TabIndex = 14;
+            this.AfrekenenTimeLBL.Text = "Time";
+            // 
+            // AfrekenenTerugBTN
+            // 
+            this.AfrekenenTerugBTN.BackColor = System.Drawing.Color.White;
+            this.AfrekenenTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.AfrekenenTerugBTN.Location = new System.Drawing.Point(119, 11);
+            this.AfrekenenTerugBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.AfrekenenTerugBTN.Name = "AfrekenenTerugBTN";
+            this.AfrekenenTerugBTN.Size = new System.Drawing.Size(58, 49);
+            this.AfrekenenTerugBTN.TabIndex = 32;
+            this.AfrekenenTerugBTN.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            this.panel14.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel14.Location = new System.Drawing.Point(302, 11);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(113, 51);
+            this.panel14.TabIndex = 33;
             // 
             // panel6
             // 
@@ -2193,6 +2721,72 @@
             this.RekeningPNL.Size = new System.Drawing.Size(721, 1039);
             this.RekeningPNL.TabIndex = 38;
             // 
+            // Rekening_TopPNL
+            // 
+            this.Rekening_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Rekening_TopPNL.Controls.Add(this.RekeningExitBTN);
+            this.Rekening_TopPNL.Controls.Add(this.RekeningDateLBL);
+            this.Rekening_TopPNL.Controls.Add(this.RekeningTimeLBL);
+            this.Rekening_TopPNL.Controls.Add(this.RekeningTerugBTN);
+            this.Rekening_TopPNL.Controls.Add(this.panel11);
+            this.Rekening_TopPNL.Location = new System.Drawing.Point(2, 3);
+            this.Rekening_TopPNL.Name = "Rekening_TopPNL";
+            this.Rekening_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Rekening_TopPNL.TabIndex = 41;
+            // 
+            // RekeningExitBTN
+            // 
+            this.RekeningExitBTN.BackColor = System.Drawing.Color.White;
+            this.RekeningExitBTN.Image = global::UI.Properties.Resources.logout__3_;
+            this.RekeningExitBTN.Location = new System.Drawing.Point(41, 11);
+            this.RekeningExitBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.RekeningExitBTN.Name = "RekeningExitBTN";
+            this.RekeningExitBTN.Size = new System.Drawing.Size(51, 51);
+            this.RekeningExitBTN.TabIndex = 16;
+            this.RekeningExitBTN.UseVisualStyleBackColor = false;
+            // 
+            // RekeningDateLBL
+            // 
+            this.RekeningDateLBL.AutoSize = true;
+            this.RekeningDateLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.RekeningDateLBL.Location = new System.Drawing.Point(505, 34);
+            this.RekeningDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RekeningDateLBL.Name = "RekeningDateLBL";
+            this.RekeningDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.RekeningDateLBL.TabIndex = 13;
+            this.RekeningDateLBL.Text = "Date";
+            // 
+            // RekeningTimeLBL
+            // 
+            this.RekeningTimeLBL.AutoSize = true;
+            this.RekeningTimeLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.RekeningTimeLBL.Location = new System.Drawing.Point(605, 34);
+            this.RekeningTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RekeningTimeLBL.Name = "RekeningTimeLBL";
+            this.RekeningTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.RekeningTimeLBL.TabIndex = 14;
+            this.RekeningTimeLBL.Text = "Time";
+            // 
+            // RekeningTerugBTN
+            // 
+            this.RekeningTerugBTN.BackColor = System.Drawing.Color.White;
+            this.RekeningTerugBTN.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.RekeningTerugBTN.Location = new System.Drawing.Point(119, 11);
+            this.RekeningTerugBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.RekeningTerugBTN.Name = "RekeningTerugBTN";
+            this.RekeningTerugBTN.Size = new System.Drawing.Size(58, 49);
+            this.RekeningTerugBTN.TabIndex = 32;
+            this.RekeningTerugBTN.UseVisualStyleBackColor = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel11.Location = new System.Drawing.Point(302, 11);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(113, 51);
+            this.panel11.TabIndex = 33;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.PaleGreen;
@@ -2273,606 +2867,12 @@
             this.label13.TabIndex = 5;
             this.label13.Text = "Afrekenen";
             // 
-            // Bestelling_TopPNL
-            // 
-            this.Bestelling_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Bestelling_TopPNL.Controls.Add(this.button5);
-            this.Bestelling_TopPNL.Controls.Add(this.label19);
-            this.Bestelling_TopPNL.Controls.Add(this.label20);
-            this.Bestelling_TopPNL.Controls.Add(this.button6);
-            this.Bestelling_TopPNL.Controls.Add(this.panel9);
-            this.Bestelling_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Bestelling_TopPNL.Name = "Bestelling_TopPNL";
-            this.Bestelling_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Bestelling_TopPNL.TabIndex = 41;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Image = global::UI.Properties.Resources.logout__3_;
-            this.button5.Location = new System.Drawing.Point(41, 11);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(51, 51);
-            this.button5.TabIndex = 16;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label19.Location = new System.Drawing.Point(505, 34);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(63, 30);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "Date";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label20.Location = new System.Drawing.Point(605, 34);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(66, 30);
-            this.label20.TabIndex = 14;
-            this.label20.Text = "Time";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button6.Location = new System.Drawing.Point(119, 11);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(58, 49);
-            this.button6.TabIndex = 32;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel9.Location = new System.Drawing.Point(302, 11);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(113, 51);
-            this.panel9.TabIndex = 33;
-            // 
-            // Rekening_TopPNL
-            // 
-            this.Rekening_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Rekening_TopPNL.Controls.Add(this.button7);
-            this.Rekening_TopPNL.Controls.Add(this.label22);
-            this.Rekening_TopPNL.Controls.Add(this.label23);
-            this.Rekening_TopPNL.Controls.Add(this.button8);
-            this.Rekening_TopPNL.Controls.Add(this.panel11);
-            this.Rekening_TopPNL.Location = new System.Drawing.Point(2, 3);
-            this.Rekening_TopPNL.Name = "Rekening_TopPNL";
-            this.Rekening_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Rekening_TopPNL.TabIndex = 41;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.Image = global::UI.Properties.Resources.logout__3_;
-            this.button7.Location = new System.Drawing.Point(41, 11);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(51, 51);
-            this.button7.TabIndex = 16;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label22.Location = new System.Drawing.Point(505, 34);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(63, 30);
-            this.label22.TabIndex = 13;
-            this.label22.Text = "Date";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label23.Location = new System.Drawing.Point(605, 34);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(66, 30);
-            this.label23.TabIndex = 14;
-            this.label23.Text = "Time";
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.White;
-            this.button8.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button8.Location = new System.Drawing.Point(119, 11);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(58, 49);
-            this.button8.TabIndex = 32;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // panel11
-            // 
-            this.panel11.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel11.Location = new System.Drawing.Point(302, 11);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(113, 51);
-            this.panel11.TabIndex = 33;
-            // 
-            // Afgerond_TopPNL
-            // 
-            this.Afgerond_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Afgerond_TopPNL.Controls.Add(this.button9);
-            this.Afgerond_TopPNL.Controls.Add(this.label24);
-            this.Afgerond_TopPNL.Controls.Add(this.label25);
-            this.Afgerond_TopPNL.Controls.Add(this.button10);
-            this.Afgerond_TopPNL.Controls.Add(this.panel12);
-            this.Afgerond_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Afgerond_TopPNL.Name = "Afgerond_TopPNL";
-            this.Afgerond_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Afgerond_TopPNL.TabIndex = 41;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Image = global::UI.Properties.Resources.logout__3_;
-            this.button9.Location = new System.Drawing.Point(41, 11);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(51, 51);
-            this.button9.TabIndex = 16;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label24.Location = new System.Drawing.Point(505, 34);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(63, 30);
-            this.label24.TabIndex = 13;
-            this.label24.Text = "Date";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label25.Location = new System.Drawing.Point(605, 34);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(66, 30);
-            this.label25.TabIndex = 14;
-            this.label25.Text = "Time";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.White;
-            this.button10.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button10.Location = new System.Drawing.Point(119, 11);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(58, 49);
-            this.button10.TabIndex = 32;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // panel12
-            // 
-            this.panel12.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel12.Location = new System.Drawing.Point(302, 11);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(113, 51);
-            this.panel12.TabIndex = 33;
-            // 
-            // Afrekenen_TopPNL
-            // 
-            this.Afrekenen_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Afrekenen_TopPNL.Controls.Add(this.button11);
-            this.Afrekenen_TopPNL.Controls.Add(this.label26);
-            this.Afrekenen_TopPNL.Controls.Add(this.label27);
-            this.Afrekenen_TopPNL.Controls.Add(this.button12);
-            this.Afrekenen_TopPNL.Controls.Add(this.panel14);
-            this.Afrekenen_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Afrekenen_TopPNL.Name = "Afrekenen_TopPNL";
-            this.Afrekenen_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Afrekenen_TopPNL.TabIndex = 41;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.White;
-            this.button11.Image = global::UI.Properties.Resources.logout__3_;
-            this.button11.Location = new System.Drawing.Point(41, 11);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(51, 51);
-            this.button11.TabIndex = 16;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label26.Location = new System.Drawing.Point(505, 34);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(63, 30);
-            this.label26.TabIndex = 13;
-            this.label26.Text = "Date";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label27.Location = new System.Drawing.Point(605, 34);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(66, 30);
-            this.label27.TabIndex = 14;
-            this.label27.Text = "Time";
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.White;
-            this.button12.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button12.Location = new System.Drawing.Point(119, 11);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(58, 49);
-            this.button12.TabIndex = 32;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // panel14
-            // 
-            this.panel14.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel14.Location = new System.Drawing.Point(302, 11);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(113, 51);
-            this.panel14.TabIndex = 33;
-            // 
-            // Drank_TopPNL
-            // 
-            this.Drank_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Drank_TopPNL.Controls.Add(this.button13);
-            this.Drank_TopPNL.Controls.Add(this.label28);
-            this.Drank_TopPNL.Controls.Add(this.label29);
-            this.Drank_TopPNL.Controls.Add(this.button14);
-            this.Drank_TopPNL.Controls.Add(this.panel15);
-            this.Drank_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Drank_TopPNL.Name = "Drank_TopPNL";
-            this.Drank_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Drank_TopPNL.TabIndex = 41;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.White;
-            this.button13.Image = global::UI.Properties.Resources.logout__3_;
-            this.button13.Location = new System.Drawing.Point(41, 11);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(51, 51);
-            this.button13.TabIndex = 16;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label28.Location = new System.Drawing.Point(505, 34);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(63, 30);
-            this.label28.TabIndex = 13;
-            this.label28.Text = "Date";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label29.Location = new System.Drawing.Point(605, 34);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(66, 30);
-            this.label29.TabIndex = 14;
-            this.label29.Text = "Time";
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.White;
-            this.button14.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button14.Location = new System.Drawing.Point(119, 11);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(58, 49);
-            this.button14.TabIndex = 32;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // panel15
-            // 
-            this.panel15.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel15.Location = new System.Drawing.Point(302, 11);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(113, 51);
-            this.panel15.TabIndex = 33;
-            // 
-            // Diner_TopPNL
-            // 
-            this.Diner_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Diner_TopPNL.Controls.Add(this.button15);
-            this.Diner_TopPNL.Controls.Add(this.label30);
-            this.Diner_TopPNL.Controls.Add(this.label31);
-            this.Diner_TopPNL.Controls.Add(this.button17);
-            this.Diner_TopPNL.Controls.Add(this.panel16);
-            this.Diner_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Diner_TopPNL.Name = "Diner_TopPNL";
-            this.Diner_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Diner_TopPNL.TabIndex = 41;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.White;
-            this.button15.Image = global::UI.Properties.Resources.logout__3_;
-            this.button15.Location = new System.Drawing.Point(41, 11);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(51, 51);
-            this.button15.TabIndex = 16;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label30.Location = new System.Drawing.Point(505, 34);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(63, 30);
-            this.label30.TabIndex = 13;
-            this.label30.Text = "Date";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label31.Location = new System.Drawing.Point(605, 34);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(66, 30);
-            this.label31.TabIndex = 14;
-            this.label31.Text = "Time";
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.White;
-            this.button17.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button17.Location = new System.Drawing.Point(119, 11);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(58, 49);
-            this.button17.TabIndex = 32;
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // panel16
-            // 
-            this.panel16.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel16.Location = new System.Drawing.Point(302, 11);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(113, 51);
-            this.panel16.TabIndex = 33;
-            // 
-            // Lunch_TopPNL
-            // 
-            this.Lunch_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Lunch_TopPNL.Controls.Add(this.button18);
-            this.Lunch_TopPNL.Controls.Add(this.label32);
-            this.Lunch_TopPNL.Controls.Add(this.label33);
-            this.Lunch_TopPNL.Controls.Add(this.button19);
-            this.Lunch_TopPNL.Controls.Add(this.panel18);
-            this.Lunch_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Lunch_TopPNL.Name = "Lunch_TopPNL";
-            this.Lunch_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Lunch_TopPNL.TabIndex = 41;
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.White;
-            this.button18.Image = global::UI.Properties.Resources.logout__3_;
-            this.button18.Location = new System.Drawing.Point(41, 11);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(51, 51);
-            this.button18.TabIndex = 16;
-            this.button18.UseVisualStyleBackColor = false;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label32.Location = new System.Drawing.Point(505, 34);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(63, 30);
-            this.label32.TabIndex = 13;
-            this.label32.Text = "Date";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label33.Location = new System.Drawing.Point(605, 34);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(66, 30);
-            this.label33.TabIndex = 14;
-            this.label33.Text = "Time";
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.White;
-            this.button19.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button19.Location = new System.Drawing.Point(119, 11);
-            this.button19.Margin = new System.Windows.Forms.Padding(2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(58, 49);
-            this.button19.TabIndex = 32;
-            this.button19.UseVisualStyleBackColor = false;
-            // 
-            // panel18
-            // 
-            this.panel18.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel18.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel18.Location = new System.Drawing.Point(302, 11);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(113, 51);
-            this.panel18.TabIndex = 33;
-            // 
-            // Tafel_TopPNL
-            // 
-            this.Tafel_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Tafel_TopPNL.Controls.Add(this.button20);
-            this.Tafel_TopPNL.Controls.Add(this.label34);
-            this.Tafel_TopPNL.Controls.Add(this.label35);
-            this.Tafel_TopPNL.Controls.Add(this.button21);
-            this.Tafel_TopPNL.Controls.Add(this.panel19);
-            this.Tafel_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.Tafel_TopPNL.Name = "Tafel_TopPNL";
-            this.Tafel_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.Tafel_TopPNL.TabIndex = 35;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.White;
-            this.button20.Image = global::UI.Properties.Resources.logout__3_;
-            this.button20.Location = new System.Drawing.Point(41, 11);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(51, 51);
-            this.button20.TabIndex = 16;
-            this.button20.UseVisualStyleBackColor = false;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label34.Location = new System.Drawing.Point(505, 34);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(63, 30);
-            this.label34.TabIndex = 13;
-            this.label34.Text = "Date";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label35.Location = new System.Drawing.Point(605, 34);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(66, 30);
-            this.label35.TabIndex = 14;
-            this.label35.Text = "Time";
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.White;
-            this.button21.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button21.Location = new System.Drawing.Point(119, 11);
-            this.button21.Margin = new System.Windows.Forms.Padding(2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(58, 49);
-            this.button21.TabIndex = 32;
-            this.button21.UseVisualStyleBackColor = false;
-            // 
-            // panel19
-            // 
-            this.panel19.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel19.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel19.Location = new System.Drawing.Point(302, 11);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(113, 51);
-            this.panel19.TabIndex = 33;
-            // 
-            // TafelNummer_TopPNL
-            // 
-            this.TafelNummer_TopPNL.BackColor = System.Drawing.Color.White;
-            this.TafelNummer_TopPNL.Controls.Add(this.button22);
-            this.TafelNummer_TopPNL.Controls.Add(this.label36);
-            this.TafelNummer_TopPNL.Controls.Add(this.label37);
-            this.TafelNummer_TopPNL.Controls.Add(this.button23);
-            this.TafelNummer_TopPNL.Controls.Add(this.panel21);
-            this.TafelNummer_TopPNL.Location = new System.Drawing.Point(0, 0);
-            this.TafelNummer_TopPNL.Name = "TafelNummer_TopPNL";
-            this.TafelNummer_TopPNL.Size = new System.Drawing.Size(719, 67);
-            this.TafelNummer_TopPNL.TabIndex = 35;
-            // 
-            // button22
-            // 
-            this.button22.BackColor = System.Drawing.Color.White;
-            this.button22.Image = global::UI.Properties.Resources.logout__3_;
-            this.button22.Location = new System.Drawing.Point(41, 11);
-            this.button22.Margin = new System.Windows.Forms.Padding(2);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(51, 51);
-            this.button22.TabIndex = 16;
-            this.button22.UseVisualStyleBackColor = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label36.Location = new System.Drawing.Point(505, 34);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(63, 30);
-            this.label36.TabIndex = 13;
-            this.label36.Text = "Date";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.label37.Location = new System.Drawing.Point(605, 34);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(66, 30);
-            this.label37.TabIndex = 14;
-            this.label37.Text = "Time";
-            // 
-            // button23
-            // 
-            this.button23.BackColor = System.Drawing.Color.White;
-            this.button23.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.button23.Location = new System.Drawing.Point(119, 11);
-            this.button23.Margin = new System.Windows.Forms.Padding(2);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(58, 49);
-            this.button23.TabIndex = 32;
-            this.button23.UseVisualStyleBackColor = false;
-            // 
-            // panel21
-            // 
-            this.panel21.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel21.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel21.Location = new System.Drawing.Point(302, 11);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(113, 51);
-            this.panel21.TabIndex = 33;
-            // 
             // Bediening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(724, 1045);
+            this.ClientSize = new System.Drawing.Size(482, 696);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.DinerPNL);
             this.Controls.Add(this.TafelPNL);
@@ -2893,17 +2893,25 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Bediening_Load);
             this.TafelPNL.ResumeLayout(false);
+            this.Tafel_TopPNL.ResumeLayout(false);
+            this.Tafel_TopPNL.PerformLayout();
             this.HoofdschermPNL.ResumeLayout(false);
             this.HoofdschermPNL.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.TafelNummerPNL.ResumeLayout(false);
+            this.TafelNummer_TopPNL.ResumeLayout(false);
+            this.TafelNummer_TopPNL.PerformLayout();
             this.PNL.ResumeLayout(false);
             this.PNL.PerformLayout();
             this.BestellingPNL.ResumeLayout(false);
+            this.Bestelling_TopPNL.ResumeLayout(false);
+            this.Bestelling_TopPNL.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.LunchPNL.ResumeLayout(false);
             this.LunchPNL.PerformLayout();
+            this.Lunch_TopPNL.ResumeLayout(false);
+            this.Lunch_TopPNL.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.LVDropdown.ResumeLayout(false);
             this.LHDropdown.ResumeLayout(false);
@@ -2912,6 +2920,8 @@
             this.panel10.PerformLayout();
             this.DrankPNL.ResumeLayout(false);
             this.DrankPNL.PerformLayout();
+            this.Drank_TopPNL.ResumeLayout(false);
+            this.Drank_TopPNL.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.DFrisDropdown.ResumeLayout(false);
             this.DTapDropdown.ResumeLayout(false);
@@ -2924,6 +2934,8 @@
             this.OverzichtPNL.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
+            this.Overzicht_TopPNL.ResumeLayout(false);
+            this.Overzicht_TopPNL.PerformLayout();
             this.WijzigenPNL.ResumeLayout(false);
             this.WijzigenPNL.PerformLayout();
             this.panel17.ResumeLayout(false);
@@ -2935,13 +2947,17 @@
             this.DNDropdown.ResumeLayout(false);
             this.DinerPNL.ResumeLayout(false);
             this.DinerPNL.PerformLayout();
-            this.Overzicht_TopPNL.ResumeLayout(false);
-            this.Overzicht_TopPNL.PerformLayout();
+            this.Diner_TopPNL.ResumeLayout(false);
+            this.Diner_TopPNL.PerformLayout();
             this.AfgerondPNL.ResumeLayout(false);
             this.AfgerondPNL.PerformLayout();
+            this.Afgerond_TopPNL.ResumeLayout(false);
+            this.Afgerond_TopPNL.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             this.AfrekenenPNL.ResumeLayout(false);
+            this.Afrekenen_TopPNL.ResumeLayout(false);
+            this.Afrekenen_TopPNL.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -2952,35 +2968,19 @@
             this.panel3.PerformLayout();
             this.RekeningPNL.ResumeLayout(false);
             this.RekeningPNL.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.Bestelling_TopPNL.ResumeLayout(false);
-            this.Bestelling_TopPNL.PerformLayout();
             this.Rekening_TopPNL.ResumeLayout(false);
             this.Rekening_TopPNL.PerformLayout();
-            this.Afgerond_TopPNL.ResumeLayout(false);
-            this.Afgerond_TopPNL.PerformLayout();
-            this.Afrekenen_TopPNL.ResumeLayout(false);
-            this.Afrekenen_TopPNL.PerformLayout();
-            this.Drank_TopPNL.ResumeLayout(false);
-            this.Drank_TopPNL.PerformLayout();
-            this.Diner_TopPNL.ResumeLayout(false);
-            this.Diner_TopPNL.PerformLayout();
-            this.Lunch_TopPNL.ResumeLayout(false);
-            this.Lunch_TopPNL.PerformLayout();
-            this.Tafel_TopPNL.ResumeLayout(false);
-            this.Tafel_TopPNL.PerformLayout();
-            this.TafelNummer_TopPNL.ResumeLayout(false);
-            this.TafelNummer_TopPNL.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label TijdLBL;
-        private System.Windows.Forms.Label DatumLBL;
+        private System.Windows.Forms.Label OverzichtDateLBL;
+        private System.Windows.Forms.Label OverzichtTimeLBL;
         private System.Windows.Forms.Panel TafelPNL;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button OverzichtExitBTN;
         private System.Windows.Forms.Panel TafelNummerPNL;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel BestellingPNL;
@@ -3078,7 +3078,7 @@
         private System.Windows.Forms.ListView ListViewDrankThee;
         private System.Windows.Forms.Button DrankTheeBTN;
         private System.Windows.Forms.Timer timerDN;
-        private System.Windows.Forms.Button BTNReturn;
+        private System.Windows.Forms.Button BTNReturnBTN;
         private System.Windows.Forms.ColumnHeader LVID;
         private System.Windows.Forms.ColumnHeader LVNaam;
         private System.Windows.Forms.ColumnHeader LVVoorraad;
@@ -3142,47 +3142,47 @@
         private System.Windows.Forms.ColumnHeader BOAantal;
         private System.Windows.Forms.Panel Overzicht_TopPNL;
         private System.Windows.Forms.Panel Tafel_TopPNL;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button TafelEXITPNL;
+        private System.Windows.Forms.Label TafelDateLBL;
+        private System.Windows.Forms.Label TafelTimeLBL;
+        private System.Windows.Forms.Button TafelTerugBTN;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel TafelNummer_TopPNL;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button TafelNummerExitBTN;
+        private System.Windows.Forms.Label TafelNummerDateLBL;
+        private System.Windows.Forms.Label TafelNummerTimeLBL;
+        private System.Windows.Forms.Button TafelNummerTerugBT;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel Bestelling_TopPNL;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BestellingExitBTN;
+        private System.Windows.Forms.Label BestellingDateLBL;
+        private System.Windows.Forms.Label BestellingTimeLBL;
+        private System.Windows.Forms.Button BestellingTerugBTN;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel Lunch_TopPNL;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button LunchExitBTN;
+        private System.Windows.Forms.Label LunchDateLBL;
+        private System.Windows.Forms.Label LunchTimeLBL;
+        private System.Windows.Forms.Button LunchTerugBTN;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel Drank_TopPNL;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button DrankExitBTN;
+        private System.Windows.Forms.Label DrankDATELBL;
+        private System.Windows.Forms.Label DrankTIMELBL;
+        private System.Windows.Forms.Button DrankTerugBTN;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel Diner_TopPNL;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button DinerEXITBTN;
+        private System.Windows.Forms.Label DinerDateLBL;
+        private System.Windows.Forms.Label DinerTimeLBL;
+        private System.Windows.Forms.Button DinerTerugLBL;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel AfgerondPNL;
         private System.Windows.Forms.Panel Afgerond_TopPNL;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button AfgerondExitBTN;
+        private System.Windows.Forms.Label AfgerondDateLBL;
+        private System.Windows.Forms.Label AfgerondTimeLBL;
+        private System.Windows.Forms.Button AfgerondTerugBTN;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button4;
@@ -3190,10 +3190,10 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel AfrekenenPNL;
         private System.Windows.Forms.Panel Afrekenen_TopPNL;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button AfrekenenExitBTN;
+        private System.Windows.Forms.Label AfrekenenDateLBL;
+        private System.Windows.Forms.Label AfrekenenTimeLBL;
+        private System.Windows.Forms.Button AfrekenenTerugBTN;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label15;
@@ -3206,10 +3206,10 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel RekeningPNL;
         private System.Windows.Forms.Panel Rekening_TopPNL;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button RekeningExitBTN;
+        private System.Windows.Forms.Label RekeningDateLBL;
+        private System.Windows.Forms.Label RekeningTimeLBL;
+        private System.Windows.Forms.Button RekeningTerugBTN;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.RichTextBox richTextBox2;

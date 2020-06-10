@@ -52,8 +52,8 @@ namespace UI
         private void Bediening_Load(object sender, EventArgs e)
         {
 
-            TijdLBL.Text = DateTime.Now.ToShortDateString();
-            DatumLBL.Text = DateTime.Now.ToShortTimeString();
+            OverzichtDateLBL.Text = DateTime.Now.ToShortDateString();
+            OverzichtTimeLBL.Text = DateTime.Now.ToShortTimeString();
             ShowPanel("TafelPNL");
         }
         private void HidePanels()
