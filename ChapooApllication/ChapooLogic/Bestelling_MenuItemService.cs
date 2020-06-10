@@ -17,10 +17,25 @@ namespace ChapooLogic
         {
             return Bestelling_MenuItem_db.Get_Bestelling_MenuItem(BestellingID);
         }
-
         public void CreateBestellingMenuItem(Bestelling_MenuItem bestelling_MenuItem)
         {
             Bestelling_MenuItem_db.Add_New_Bestelling_MenuItem(bestelling_MenuItem);
+        }
+        public void DeleteBestellingMenuItem(int bestelling_MenuItem)
+        {
+            Bestelling_MenuItem_db.Remove_Bestelling_MenuItem(bestelling_MenuItem);
+        }
+        public void SetNewAantal (int ID, int aantal)
+        {
+            Bestelling_MenuItem_db.Set_New_Aantal(ID, aantal);
+        }
+        public void DeleteMenuItem(int MenuItemID)
+        {
+            Bestelling_MenuItem_db.Remove_MenuItem(MenuItemID);
+        }
+        public void TESTCreateBestellingMenuItem(int MenuItemID, int ID, int Aantal)
+        {
+            Bestelling_MenuItem_db.New_Bestelling_MenuItem(MenuItemID, ID, Aantal);
         }
     }
 }

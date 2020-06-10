@@ -202,5 +202,17 @@ namespace ChapooLogic
                 return e.ToString();
             }
         }
+
+        public Bestelling Create_Bestelling(Tafel tafel)
+        {
+            return Bestelling_db.Create_Bestelling(tafel);
+        }
+
+        public int GetNieuuwsteID()
+        {
+            return Bestelling_db.NieuwsteBestelling();
+        }
+
+
     }
 }

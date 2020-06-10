@@ -88,3 +88,4 @@ S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\U
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.dll
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.pdb
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Rekening.resources

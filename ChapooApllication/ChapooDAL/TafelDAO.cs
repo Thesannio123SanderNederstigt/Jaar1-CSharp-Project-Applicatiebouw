@@ -70,6 +70,13 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@status", status) };
             return ReadTafels(ExecuteSelectQuery(query, sqlParameters));
         }
+        //verander tafel status
+        public void Tafel_Status(int tafelID)
+        {
+            string query = $"Update [Tafel] Set [status] = 'False' Where [ID] = '{tafelID}'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
         private Tafel ReadTafel(DataTable dataTable)
         {
@@ -81,7 +88,6 @@ namespace ChapooDAL
             bool status = (bool)dr["status"];
             int medewerkerID = (int)dr["medewerkerID"];
             tafel = new Tafel(ID, status, medewerkerID);
-
             }
             return tafel;
         }
