@@ -1,20 +1,3 @@
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.dll
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.pdb
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.dll
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.dll
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.dll
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.dll
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.dll
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.pdb
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.xml
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.xml
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.xml
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.xml
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csprojAssemblyReference.cache
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CopyComplete
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.dll
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.pdb
-D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CoreCompileInputs.cache
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.dll
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.pdb
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.dll
