@@ -159,6 +159,14 @@ namespace ChapooDAL
             return "Menu Bestellingitem succesvol bijgewerkt!";
         }
 
+        public string UpdateBestellingMenuItems(int BestellingID)
+        {
+            string query = "UPDATE Bestelling_MenuItem SET [status] = 1 WHERE bestellingID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", BestellingID) };
+            ExecuteEditQuery(query, sqlParameters);
+            return "Menu Bestellingitem succesvol bijgewerkt!";
+        }
+
         //bijwerken van een gehele bestelling
         public string UpdateBestelling(int BestellingID)
         {
@@ -172,8 +180,8 @@ namespace ChapooDAL
         // Get Bestelling by ID
         public Bestelling GetById(int bestellingID)
         {
-            string query = "SELECT ID, besteltijd, status, tafelID, menuItemID FROM Bestelling WHERE ID = @id";
-            SqlParameter[] sqlParameters = new SqlParameter[]  { new SqlParameter("@id", bestellingID) };
+            string query = "SELECT ID, besteltijd, status, tafelID, CASE WHEN opmerking IS NULL THEN '' ELSE opmerking END AS [opmerking] FROM Bestelling WHERE ID = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", bestellingID) };
             return ReadBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
 

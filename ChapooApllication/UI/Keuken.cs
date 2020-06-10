@@ -15,9 +15,11 @@ namespace UI
 {
     public partial class Keuken : Form
     {
-        string Type = Login.MedewerkerType;
+        //string Type = Login.MedewerkerType;
+        User user = Login.user;
         string Overzicht = Kassa.Bestellingoverzicht;
 
+        bool inkomend;
         bool current;
 
         public void HidePanels()
@@ -35,41 +37,67 @@ namespace UI
 
             HidePanels();
 
-            if(Overzicht == "kok" || Overzicht == "bar")
+            if (Overzicht == "kok" || Overzicht == "bar")
             {
                 pnl_KeukenBarStart.Hide();
                 pnl_BinnenkomendeBestellingen.Show();
-                SelectCurrentOrders();
+                inkomend = true;
+                SelectOrders();
             }
 
         }
 
-        private void SelectCurrentOrders()
+
+        private void SelectOrders()
         {
             List<Bestelling> bestellinglist = new List<Bestelling>();
 
-             BestellingService bestelservice = new BestellingService();
+            BestellingService bestelservice = new BestellingService();
 
-            if (Type == "chef-kok" || Overzicht == "kok")
+            if (user == User.ChefKok || Overzicht == "kok")
             {
-               bestellinglist = bestelservice.GetOrders("DESC"); //het filteren op Dranken gebeurd nu in de GetCurrentOrders query helaas...
+                if (inkomend == true)
+                {
+                    bestellinglist = bestelservice.GetOrders("DESC");
+                }
+                else
+                {
+                    bestellinglist = bestelservice.GetOrders("ASC");
+                }
             }
-            else if (Type == "barmedewerker" || Overzicht == "bar")
+            else if (user == User.Barpersoneel || Overzicht == "bar")
             {
-                bestellinglist = bestelservice.GetDrinkOrders("DESC");
+                if (inkomend == true)
+                {
+                    bestellinglist = bestelservice.GetDrinkOrders("DESC");
+                }
+                else
+                {
+                    bestellinglist = bestelservice.GetDrinkOrders("ASC");
+                }
             }
 
-             List<int> bestellingnumberlist = new List<int>();
-
+            List<int> bestellingnumberlist = new List<int>();
             foreach (Bestelling b in bestellinglist)
             {
-                if (b.status == false) //om alleen huidige bestellingen te krijgen
+                if (inkomend == true)
                 {
-                    int tafelID = b.tafelID;
-                    int bestellingID = b.ID;
-                    bestellingnumberlist.Add(bestellingID);
+                    if (b.status == false) //om alleen huidige bestellingen te krijgen
+                    {
+                        int tafelID = b.tafelID;
+                        int bestellingID = b.ID;
+                        bestellingnumberlist.Add(bestellingID);
+                    }
                 }
-
+                if(inkomend == false)
+                {
+                    if (b.status == true) //om alleen afgeronde bestellingen te krijgen
+                    {
+                        int tafelID = b.tafelID;
+                        int bestellingID = b.ID;
+                        bestellingnumberlist.Add(bestellingID);
+                    }
+                }
             }
 
             string listviewname = "lv_Tafel";
@@ -77,16 +105,24 @@ namespace UI
             int tafelID2 = 0;
             int bestellingID2 = 0;
             DateTime besteltijd;
-            current = true;
+
+            if (inkomend == true)
+            {
+                current = true;
+            }
+            else
+            {
+                current = false;
+            }
+
 
             for (int i = 0; i < bestellingnumberlist.Count; i++) //van 0 t/m 7 maximaal
             {
                 bestellingID2 = bestellingnumberlist[i];
 
-                Bestelling bestelling = bestellinglist[i];
+                Bestelling bestelling = bestelservice.GetSingleBestelling(bestellingID2);
                 tafelID2 = bestelling.tafelID;
                 besteltijd = bestelling.besteltijd;
-
 
                 ListView lv = new System.Windows.Forms.ListView();
                 CreateListView(lv, i, tafelID2, bestellingID2, besteltijd, current);
@@ -94,139 +130,67 @@ namespace UI
                 lv.Name = listviewname + i;
 
                 List<Bestelling> Bestellinglist = bestelservice.GetBestellingListView(bestellingID2);
-
-
                 CreateOptionalButtons(Bestellinglist, i, current);
 
                 lv.Items.Clear();
 
-                if (Type == "chef-kok" || Overzicht == "kok")
+                if (user == User.ChefKok || Overzicht == "kok")
                 {
                     foreach (Bestelling b in Bestellinglist)
                     {
-                        if (b.status == false && b.kaartsoort != "Dranken")
+                        if (inkomend == true)
                         {
-                            ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                            li.SubItems.Add(b.aantal.ToString());
+                            if (b.status == false && b.kaartsoort != "Dranken")
+                            {
+                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                li.SubItems.Add(b.aantal.ToString());
 
-                            lv.Items.Add(li);
+                                lv.Items.Add(li);
+                            }
                         }
+                        else
+                        {
+                            if (b.kaartsoort != "Dranken")
+                            {
+                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                li.SubItems.Add(b.aantal.ToString());
 
+                                lv.Items.Add(li);
+                            }
+                        }
                     }
                 }
-                else if (Type == "barmedewerker" || Overzicht == "bar")
+                else if (user == User.Barpersoneel || Overzicht == "bar")
                 {
                     foreach (Bestelling b in Bestellinglist)
                     {
-                        if (b.status == false && b.kaartsoort == "Dranken")
+                        if (inkomend == true)
                         {
-                            ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                            li.SubItems.Add(b.aantal.ToString());
+                            if (b.status == false && b.kaartsoort == "Dranken")
+                            {
+                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                li.SubItems.Add(b.aantal.ToString());
 
-                            lv.Items.Add(li);
+                                lv.Items.Add(li);
+                            }
                         }
-
-                    }
-                }
-
-                if(bestellingnumberlist.Count >= 7)
-                {
-                    return;
-                }
-            }
-
-        }
-
-        private void SelectClearedOrders()
-        {
-            List<Bestelling> bestellinglist = new List<Bestelling>();
-
-            BestellingService bestelservice = new BestellingService();
-
-            if (Type == "chef-kok" || Overzicht == "kok")
-            {
-                bestellinglist = bestelservice.GetOrders("ASC");
-            }
-            else if (Type == "barmedewerker" || Overzicht == "bar")
-            {
-                bestellinglist = bestelservice.GetDrinkOrders("ASC");
-            }
-
-
-            List<int> bestellingnumberlist = new List<int>();
-
-            foreach (Bestelling b in bestellinglist)
-            {
-                if (b.status == true) //om alleen huidige bestellingen te krijgen
-                {
-                    int tafelID = b.tafelID;
-                    int bestellingID = b.ID;
-                    bestellingnumberlist.Add(bestellingID);
-                }
-
-            }
-
-            string listviewname = "lv_Tafel";
-
-            int tafelID2 = 0;
-            int bestellingID2 = 0;
-            DateTime besteltijd;
-            current = false;
-
-            for (int i = 0; i < bestellingnumberlist.Count; i++) //van 0 t/m 7 maximaal
-            {
-                bestellingID2 = bestellingnumberlist[i];
-
-                Bestelling bestelling = bestellinglist[i];
-                tafelID2 = bestelling.tafelID;
-                besteltijd = bestelling.besteltijd;
-
-                ListView lv = new System.Windows.Forms.ListView();
-                CreateListView(lv, i, tafelID2, bestellingID2, besteltijd, current);
-
-                lv.Name = listviewname + i;
-
-
-
-                List<Bestelling> Bestellinglistview = bestelservice.GetBestellingListView(bestellingID2);
-
-
-                CreateOptionalButtons(Bestellinglistview, i, current);
-
-                lv.Items.Clear();
-
-                foreach (Bestelling b in Bestellinglistview)
-                {
-                    if(Type == "chef-kok" || Overzicht == "kok")
-                    {
-                        if (b.kaartsoort != "Dranken")
+                        else
                         {
-                            ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                            li.SubItems.Add(b.aantal.ToString());
+                            if (b.kaartsoort == "Dranken")
+                            {
+                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                li.SubItems.Add(b.aantal.ToString());
 
-                            lv.Items.Add(li);
+                                lv.Items.Add(li);
+                            }
                         }
                     }
-                    else if(Type == "barmedewerker" || Overzicht == "bar")
-                    {
-                        if (b.kaartsoort == "Dranken")
-                        {
-                            ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                            li.SubItems.Add(b.aantal.ToString());
-
-                            lv.Items.Add(li);
-                        }
-                    }
-
                 }
-
                 if (bestellingnumberlist.Count >= 7)
                 {
                     return;
                 }
-
             }
-
         }
 
         private void CreateListView(ListView lv, int i, int tafelID2, int bestellingID, DateTime besteltijd, bool current)
@@ -425,7 +389,7 @@ namespace UI
                 button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
                 button.UseVisualStyleBackColor = true;
 
-                if(current == true)
+                if (current == true)
                 {
                     switch (i)
                     {
@@ -572,134 +536,76 @@ namespace UI
 
         }
 
+        // Methode om de listviews te verwijderen
         private void DeleteListViews()
         {
-            gBox_Tafel1.Controls.RemoveByKey("lv_Tafel0");
-            gBox_Tafel2.Controls.RemoveByKey("lv_Tafel1");
-            gBox_Tafel3.Controls.RemoveByKey("lv_Tafel2");
-            gBox_Tafel4.Controls.RemoveByKey("lv_Tafel3");
-            gBox_Tafel5.Controls.RemoveByKey("lv_Tafel4");
-            gBox_Tafel6.Controls.RemoveByKey("lv_Tafel5");
-            gBox_Tafel7.Controls.RemoveByKey("lv_Tafel6");
-            gBox_Tafel8.Controls.RemoveByKey("lv_Tafel7");
-
-            gBox_AFTafel1.Controls.RemoveByKey("lv_Tafel0");
-            gBox_AFTafel2.Controls.RemoveByKey("lv_Tafel1");
-            gBox_AFTafel3.Controls.RemoveByKey("lv_Tafel2");
-            gBox_AFTafel4.Controls.RemoveByKey("lv_Tafel3");
-            gBox_AFTafel5.Controls.RemoveByKey("lv_Tafel4");
-            gBox_AFTafel6.Controls.RemoveByKey("lv_Tafel5");
-            gBox_AFTafel7.Controls.RemoveByKey("lv_Tafel6");
-            gBox_AFTafel8.Controls.RemoveByKey("lv_Tafel7");
-
-
+            foreach(Panel panel in this.Controls)
+            {
+                foreach(Control groupbox in panel.Controls)
+                {
+                    if(groupbox.GetType() == typeof(GroupBox))
+                    {
+                        foreach(Control listview in groupbox.Controls)
+                        {
+                            if(listview.GetType() == typeof(ListView))
+                            {
+                                groupbox.Controls.Remove(listview);
+                            }
+                        }
+                    }
+                }
+            }
         }
-        
 
+        // Methode om de labels binnen de groepboxen te resetten / legen
         private void TextLabelReset()
         {
-            //resetten labels binnenkomende bestellingen scherm
-            lbl_Bestelling1.Text = "Tafel ";
-            lbl_Bestelling2.Text = "Tafel ";
-            lbl_Bestelling3.Text = "Tafel ";
-            lbl_Bestelling4.Text = "Tafel ";
-            lbl_Bestelling5.Text = "Tafel ";
-            lbl_Bestelling6.Text = "Tafel ";
-            lbl_Bestelling7.Text = "Tafel ";
-            lbl_Bestelling8.Text = "Tafel ";
-
-            lblTijd1.Text = "";
-            lblTijd2.Text = "";
-            lblTijd3.Text = "";
-            lblTijd4.Text = "";
-            lblTijd5.Text = "";
-            lblTijd6.Text = "";
-            lblTijd7.Text = "";
-            lblTijd8.Text = "";
-
-            lbl_BestellingID.Text = "";
-
-            lbl_Bestelling1ID.Text = "";
-            lbl_Bestelling2ID.Text = "";
-            lbl_Bestelling3ID.Text = "";
-            lbl_Bestelling4ID.Text = "";
-            lbl_Bestelling5ID.Text = "";
-            lbl_Bestelling6ID.Text = "";
-            lbl_Bestelling7ID.Text = "";
-            lbl_Bestelling8ID.Text = "";
-
-
-            //resetten labels afgerond bestellingscherm
-            lbl_AFBestelling1.Text = "Tafel ";
-            lbl_AFBestelling2.Text = "Tafel ";
-            lbl_AFBestelling3.Text = "Tafel ";
-            lbl_AFBestelling4.Text = "Tafel ";
-            lbl_AFBestelling5.Text = "Tafel ";
-            lbl_AFBestelling6.Text = "Tafel ";
-            lbl_AFBestelling7.Text = "Tafel ";
-            lbl_AFBestelling8.Text = "Tafel ";
-
-            lblAFTijd1.Text = "";
-            lblAFTijd2.Text = "";
-            lblAFTijd3.Text = "";
-            lblAFTijd4.Text = "";
-            lblAFTijd5.Text = "";
-            lblAFTijd6.Text = "";
-            lblAFTijd7.Text = "";
-            lblAFTijd8.Text = "";
-
-            lbl_BestellingAFID.Text = "";
-
-            lbl_BestellingAF1ID.Text = "";
-            lbl_BestellingAF2ID.Text = "";
-            lbl_BestellingAF3ID.Text = "";
-            lbl_BestellingAF4ID.Text = "";
-            lbl_BestellingAF5ID.Text = "";
-            lbl_BestellingAF6ID.Text = "";
-            lbl_BestellingAF7ID.Text = "";
-            lbl_BestellingAF8ID.Text = "";
-
+            foreach (Panel panel in this.Controls)
+            {
+                foreach (Control groupbox in panel.Controls)
+                {
+                    if (groupbox.GetType() == typeof(GroupBox))
+                    {
+                        foreach (Control label in groupbox.Controls)
+                        {
+                            if (label.GetType() == typeof(Label))
+                            {
+                                if (label.Name.Contains("lbl_Bestelling"))
+                                {
+                                    label.Text = "";
+                                }
+                                if (label.Name.Contains("Tijd"))
+                                {
+                                    label.Text = "";
+                                }
+                                if(label.Name.Contains("lbl_Bestellingen") & !label.Name.Contains("ID"))
+                                {
+                                    label.Text = "Tafel ";
+                                }
+                            }
+                        }
+                    }
+                 }
+            }
         }
 
+        // Methode om de kleuren van de labels weer terug te zetten
         private void TextLabelColorReset()
         {
-            string ID = lbl_BestellingID.Text;
-
-            if (ID == lbl_Bestelling1ID.Text)
+            foreach(Panel panel in this.Controls)
             {
-                lbl_Bestelling1ID.ForeColor = SystemColors.GrayText;
-            }
-            else if (ID == lbl_Bestelling2ID.Text)
-            {
-                lbl_Bestelling2ID.ForeColor = SystemColors.GrayText;
-            }
-            else if (ID == lbl_Bestelling3ID.Text)
-            {
-                lbl_Bestelling3ID.ForeColor = SystemColors.GrayText;
-            }
-            else if (ID == lbl_Bestelling4ID.Text)
-            {
-                lbl_Bestelling4ID.ForeColor = SystemColors.GrayText;
-            }
-            else if (ID == lbl_Bestelling5ID.Text)
-            {
-                lbl_Bestelling5ID.ForeColor = SystemColors.GrayText;
-            }
-            else if (ID == lbl_Bestelling6ID.Text)
-            {
-                lbl_Bestelling6ID.ForeColor = SystemColors.GrayText;
-            }
-            else if (ID == lbl_Bestelling7ID.Text)
-            {
-                lbl_Bestelling7ID.ForeColor = SystemColors.GrayText;
-            }
-            else if (ID == lbl_Bestelling8ID.Text)
-            {
-                lbl_Bestelling8ID.ForeColor = SystemColors.GrayText;
+                foreach(Control groupbox in panel.Controls)
+                {
+                    if(groupbox.GetType() == typeof(GroupBox))
+                    {
+                        foreach(Control label in groupbox.Controls)
+                        {
+                            label.ForeColor = SystemColors.GrayText;
+                        }
+                    }
+                }
             }
         }
-
-
 
         //eventhandlers voor op het startscherm panel (pnl_KeukenBarStart)
         private void pictureBx_Uitloggen_Keuken_Click(object sender, EventArgs e)
@@ -714,8 +620,6 @@ namespace UI
         {
             pnl_KeukenBarStart.Hide();
             LoadBinnenkomendeBestellingen();
-
-
         }
 
         private void btn_StartAfgeronde_Click(object sender, EventArgs e)
@@ -867,21 +771,19 @@ namespace UI
 
         private void ResetGroupBoxSystemColors()
         {
-            gBox_Tafel1.BackColor = SystemColors.Control;
-            gBox_Tafel2.BackColor = SystemColors.Control;
-            gBox_Tafel3.BackColor = SystemColors.Control;
-            gBox_Tafel4.BackColor = SystemColors.Control;
-            gBox_Tafel5.BackColor = SystemColors.Control;
-            gBox_Tafel6.BackColor = SystemColors.Control;
-            gBox_Tafel7.BackColor = SystemColors.Control;
-            gBox_Tafel8.BackColor = SystemColors.Control;
+            foreach(Panel panel in this.Controls)
+            {
+                foreach(Control groupbox in panel.Controls)
+                {
+                    if(groupbox.GetType() == typeof(GroupBox))
+                    {
+                        groupbox.BackColor = SystemColors.Control;
+                    }
+                }
+            }
         }
 
-
-
-
         // Groupboxes voor binnengekomen bestelingen
-
         private void gBox_Tafel1_Click(object sender, EventArgs e)
         {
             ResetGroupBoxSystemColors();
@@ -947,6 +849,7 @@ namespace UI
                 int bestellingID = int.Parse(lbl_BestellingID.Text);
                 BestellingService bestelservice = new BestellingService();
                 bestelservice.UpdateBestelling(bestellingID);
+                bestelservice.UpdateBestellingMenuItems(bestellingID);
                 TextLabelColorReset();
                 LoadBinnenkomendeBestellingen();
             }
@@ -968,13 +871,14 @@ namespace UI
             ResetGroupBoxSystemColors();
 
             pnl_AfgerondeBestellingen.Show();
-            SelectClearedOrders();
+            inkomend = false;
+            SelectOrders();
         }
 
         private void btn_VerwijderBestelling_Click(object sender, EventArgs e)
         {
             //verwijderen van geselecteerde bestelling (welk label is geselecteerd)
-            if(lbl_BestellingID.Text != "")
+            if (lbl_BestellingID.Text != "")
             {
                 int bestellingID = int.Parse(lbl_BestellingID.Text);
                 BestellingService bestelservice = new BestellingService();
@@ -1000,7 +904,8 @@ namespace UI
             DeleteListViews();
             TextLabelReset();
             ResetGroupBoxSystemColors();
-            SelectCurrentOrders();
+            inkomend = true;
+            SelectOrders();
 
             pnl_TafelBinnenkomendeBestelling.Hide();
         }
@@ -1033,13 +938,14 @@ namespace UI
             //opmerking = txt_Opmerkingen.Text;
 
             BestellingService bestellingservice = new BestellingService();
-            bestellingservice.UpdateBestellingMenuItems(BestellingMenuItemID);
+            bestellingservice.UpdateBestellingMenuItem(BestellingMenuItemID);
             EntireOrderCheck();
             DeleteListViews();
-            SelectCurrentOrders();
+            LoadBinnenkomendeBestellingen();
             pnl_TafelBinnenkomendeBestelling.Hide();
         }
 
+        // Methode om de volledige order te krijgen binnen de andere listview
         private void EntireOrderCheck()
         {
 
@@ -1063,6 +969,7 @@ namespace UI
 
             }
 
+
             int aantal = listView_BestelItems.Items.Count;
 
             if (aantal == 0 && (aantal > 0) == false) //eigenlijk dus als dit nul (0) is en alle menu items in de bestelling al gereed zijn gemeldt
@@ -1075,6 +982,7 @@ namespace UI
             }
         }
 
+        
         private void FillTafelPanel1()
         {
 
@@ -1179,6 +1087,8 @@ namespace UI
             FillTafelPanel(label, last, num, bestellingID);
         }
 
+
+        // Methode om de tafel panels te vullen met de juiste gegevens
         private void FillTafelPanel(string label, char last, int num, int bestellingID)
         {
             int tafelID;
@@ -1192,7 +1102,6 @@ namespace UI
             {
                 tafelID = num;
             }
-
             lbl_Tafel.Text = "Tafel ";
             lbl_Tafel.Text += tafelID;
             lbl_TafelBestellingID.Text = bestellingID.ToString();
@@ -1200,40 +1109,48 @@ namespace UI
             BestellingService bestelservice = new BestellingService();
             List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(bestellingID);
 
-            listView_BestelItems.Items.Clear();
-
-            if(Type == "chef-kok" || Overzicht == "kok")
+            if (user == User.ChefKok || Overzicht == "kok")
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
                     if (b.status == false && b.kaartsoort != "Dranken")
                     {
-                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                        li.SubItems.Add(b.aantal.ToString());
-                        li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.bestellingmenuitemID.ToString()); //eigenlijk het bestellingmenuitemID wat nodig is
-                        listView_BestelItems.Items.Add(li);
+                        addStuff(bestellingID);
                     }
-
+                }
+                if (user == User.Barpersoneel || Overzicht == "kok")
+                {
+                    foreach (Bestelling b in Bestellinglistview)
+                    {
+                        if (b.status == false && b.kaartsoort != "Dranken")
+                        {
+                            addStuff(bestellingID);
+                        }
+                    }
                 }
             }
-            else if(Type == "barmedewerker" || Overzicht == "bar")
+        
+        }
+        // Deze wordt gebruikt om alle bestellingen te vullen in de listviews
+        private List<Bestelling> addStuff(int ID)
+        {
+            listView_BestelItems.Items.Clear();
+            BestellingService bestelservice = new BestellingService();
+            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(ID);
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
-                    if (b.status == false && b.kaartsoort == "Dranken")
-                    {
-                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                        li.SubItems.Add(b.aantal.ToString());
-                        li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.bestellingmenuitemID.ToString()); //hier zit het bestellingmenuitemID in het rekeningID gestopt
-                        listView_BestelItems.Items.Add(li);
-                    }
-
+                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                    li.SubItems.Add(b.aantal.ToString());
+                    li.SubItems.Add(b.opmerking.ToString());
+                    li.SubItems.Add(b.bestellingmenuitemID.ToString());
+                    listView_BestelItems.Items.Add(li);
                 }
             }
-
+            return Bestellinglistview;
         }
+
+
 
         //eventhandlers/methoden die op het Afgerondenbestellingen panel staan
         private void pictureBxAF_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
@@ -1241,7 +1158,7 @@ namespace UI
             pnl_AfgerondeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             pnl_KeukenBarStart.Show();
         }
 
@@ -1343,71 +1260,58 @@ namespace UI
             FillAFTafelPanel8();
         }
 
-        private void ResetGroupBoxAFSystemColors()
-        {
-            gBox_AFTafel1.BackColor = SystemColors.Control;
-            gBox_AFTafel2.BackColor = SystemColors.Control;
-            gBox_AFTafel3.BackColor = SystemColors.Control;
-            gBox_AFTafel4.BackColor = SystemColors.Control;
-            gBox_AFTafel5.BackColor = SystemColors.Control;
-            gBox_AFTafel6.BackColor = SystemColors.Control;
-            gBox_AFTafel7.BackColor = SystemColors.Control;
-            gBox_AFTafel8.BackColor = SystemColors.Control;
-        }
-
-        // Groupboxes voor afgeronde bestellingen
         private void gBox_AFTafel1_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF1ID.Text;
             gBox_AFTafel1.BackColor = Color.LightBlue;
         }
 
         private void gBox_AFTafel2_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF2ID.Text;
             gBox_AFTafel2.BackColor = Color.LightBlue;
         }
 
         private void gBox_AFTafel3_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF3ID.Text;
             gBox_AFTafel3.BackColor = Color.LightBlue;
         }
 
         private void gBox_AFTafel4_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF4ID.Text;
             gBox_AFTafel4.BackColor = Color.LightBlue;
         }
 
         private void gBox_AFTafel5_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF5ID.Text;
             gBox_AFTafel5.BackColor = Color.LightBlue;
         }
 
         private void gBox_AFTafel6_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF6ID.Text;
             gBox_AFTafel6.BackColor = Color.LightBlue;
         }
 
         private void gBox_AFTafel7_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF7ID.Text;
             gBox_AFTafel7.BackColor = Color.LightBlue;
         }
 
         private void gBox_AFTafel8_Click(object sender, EventArgs e)
         {
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
             lbl_BestellingAFID.Text = lbl_BestellingAF8ID.Text;
             gBox_AFTafel8.BackColor = Color.LightBlue;
         }
@@ -1538,33 +1442,24 @@ namespace UI
 
             listView_AFBestelItems.Items.Clear();
 
-            if(Type == "chef-kok" || Overzicht == "kok")
+            if (user == User.ChefKok || Overzicht == "kok")
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
                     if (b.kaartsoort != "Dranken")
                     {
-                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                        li.SubItems.Add(b.aantal.ToString());
-                        li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.bestellingmenuitemID.ToString());
-                        listView_AFBestelItems.Items.Add(li);
+                        addStuff(bestellingID);
                     }
 
                 }
             }
-            else if(Type == "barmedewerker" || Overzicht == "bar")
+            else if (user == User.Barpersoneel || Overzicht == "bar")
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
                     if (b.kaartsoort == "Dranken")
                     {
-                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                        li.SubItems.Add(b.aantal.ToString());
-                        li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.bestellingmenuitemID.ToString());
-                        listView_BestelItems.Items.Add(li);
-
+                        addStuff(bestellingID);
                     }
 
                 }
@@ -1594,10 +1489,11 @@ namespace UI
             pnl_AfgerondeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();
-            ResetGroupBoxAFSystemColors();
+            ResetGroupBoxSystemColors();
 
             pnl_BinnenkomendeBestellingen.Show();
-            SelectCurrentOrders();
+            inkomend = true;
+            SelectOrders();   
         }
 
         private void btn_VerwijderAfgerondeBestelling_Click(object sender, EventArgs e)
@@ -1625,8 +1521,9 @@ namespace UI
 
             DeleteListViews();
             TextLabelReset();
-            ResetGroupBoxAFSystemColors();
-            SelectClearedOrders();
+            ResetGroupBoxSystemColors();
+            inkomend = false;
+            SelectOrders();
 
 
             pnl_TafelAfgerondeBestelling.Hide();

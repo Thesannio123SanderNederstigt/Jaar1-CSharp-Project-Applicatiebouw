@@ -14,6 +14,13 @@ using System.Windows.Forms;
 
 namespace UI
 {
+    public enum User
+    {
+        Eigenaar,
+        ChefKok,
+        Barpersoneel,
+        Bediening
+    }
     public partial class Login : Form
     {
         public Login()
@@ -24,7 +31,8 @@ namespace UI
         // Methode om de numpads naar een inlogcode te krijgen
         private string loginString = "";
         public static string Username = "";
-        public static string MedewerkerType = "";
+        //public static string MedewerkerType = "";
+        public static User user;
 
         void LoginCodeGenerate(string givenValue)
         {
@@ -138,28 +146,32 @@ namespace UI
 
                 if (medewerker.type == "eigenaar")
                 {
-                    MedewerkerType = medewerker.type;
+                    user = User.Eigenaar;
+                    //MedewerkerType = medewerker.type;
                     Kassa kassa = new Kassa();
                     kassa.Show();
                     this.Visible = false;
                 }
                 else if (medewerker.type == "chef-kok")
                 {
-                    MedewerkerType = medewerker.type;
+                    user = User.ChefKok;
+                    //MedewerkerType = medewerker.type;
                     Keuken keuken = new Keuken();
                     keuken.Show();
                     this.Visible = false;
                 }
                 else if (medewerker.type == "bediening")
                 {
-                    MedewerkerType = medewerker.type;
+                    user = User.Bediening;
+                    //MedewerkerType = medewerker.type;
                     Bediening bediening = new Bediening();
                     bediening.Show();
                     this.Visible = false;
                 }
                 else if (medewerker.type == "barmedewerker")
                 {
-                    MedewerkerType = medewerker.type;
+                    user = User.Barpersoneel;
+                    //MedewerkerType = medewerker.type;
                     Keuken bar = new Keuken();
                     bar.Show();
                     this.Visible = false;

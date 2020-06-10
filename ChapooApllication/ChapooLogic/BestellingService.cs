@@ -138,11 +138,24 @@ namespace ChapooLogic
             }
         }
 
-        public string UpdateBestellingMenuItems(int BestellingMenuItemID)
+        public string UpdateBestellingMenuItem(int BestellingMenuItemID)
         {
             try
             {
                 Bestelling_db.UpdateBestellingMenuItem(BestellingMenuItemID);
+                return "Menu Bestellingitem succesvol bijgewerkt!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+        }
+
+        public string UpdateBestellingMenuItems(int BestellingID)
+        {
+            try
+            {
+                Bestelling_db.UpdateBestellingMenuItems(BestellingID);
                 return "Menu Bestellingitem succesvol bijgewerkt!";
             }
             catch (Exception e)
