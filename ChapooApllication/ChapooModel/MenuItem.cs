@@ -26,5 +26,6 @@ namespace ChapooModel
             this.aantalInVoorraad = aantalInVoorraad;
             this.categorie = categorie;
         }
+
     }
 }

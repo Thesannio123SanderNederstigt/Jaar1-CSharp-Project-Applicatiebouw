@@ -20,15 +20,16 @@ namespace UI
         private TafelService TafelService = new TafelService();
         private BestellingService BestellingService = new BestellingService();
         private bool isNeer;
-        private Tafel tafel; //zodat ik het niet bij elke btn# click moet zetten
+        private Tafel  tafel; //zodat ik het niet bij elke btn# click moet zetten
         private List<Tafel> tafels; //voor de "TafelStatus" void en btn# click
         private List<Button> buttons; // voor de "TafelPNL" en "TafelStatus" voids
+
         private List<Bestelling_MenuItem> Bestelling_MenuItems;
-        private List<ChapooModel.MenuItem> menuItems; //ChappoModel omdat ik ander de model laag niet in kan.
-        public Bestelling Bestelling { get; set; }  
+        private List<ChapooModel.MenuItem> menuItems; //ChappoModel omdat ik anders de model laag niet in kan.
+        public Bestelling Bestelling;
         public Rekening Rekening { get; set; }
 
-        private Bestelling_MenuItemService Bestelling_MenuItemService;
+        private Bestelling_MenuItemService bestelling_MenuItemService = new Bestelling_MenuItemService();
 
         private void BTNReturn_Click(object sender, EventArgs e)
         {
@@ -86,58 +87,54 @@ namespace UI
                 TafelStatus();
             }
 
-            else if (PanelName == "TafelNummerPNL")
-            {
-            }
-
-            else if (PanelName == "BestellingPNL")
-            {
-                
-            }
-
-            else if (PanelName == "OverzichtPNL")
-            {
-                
-
-            }
-
-            else if (PanelName == "WijzigenPNL")
-            {
-            }
         }
         private void BTNVoegToeL_Click(object sender, EventArgs e)
         {
-            Bestelling_MenuItemService = new Bestelling_MenuItemService();
-            ChapooModel.Bestelling_MenuItem bestelling_MenuItem = new Bestelling_MenuItem();
-            bestelling_MenuItem.MenuItemID = int.Parse(ListViewLunchV.SelectedItems[0].ToString().Substring(15, 2));
-            bestelling_MenuItem.Aantal = int.Parse(ALBLLunch.Text);
-            bestelling_MenuItem.Status = false;
-            bestelling_MenuItem.Bestelling = Bestelling;
+            BestellingToevoegen(ListViewLunchV, ALBLLunch);
+            BestellingToevoegen(ListViewLunchH, ALBLLunch);
+            BestellingToevoegen(ListViewLunchN, ALBLLunch);
 
-            if (bestelling_MenuItem.Aantal > 0)
+        }
+
+        public void BestellingToevoegen(ListView listView, Label label)
+        {
+            ListViewItem item = listView.SelectedItems[0];
+            ChapooModel.MenuItem menuItem = (ChapooModel.MenuItem)item.Tag;
+
+
+            Bestelling_MenuItem Item = new Bestelling_MenuItem()
             {
-                if (menuItems[bestelling_MenuItem.MenuItemID - 1].aantalInVoorraad >= bestelling_MenuItem.Aantal)
+                MenuItem = menuItem,
+                BestellingID = BestellingService.GetNieuuwsteID(),
+                Aantal = int.Parse(label.Text),
+            };
+
+            menuItems = MenuItemService.GetMenuItems();
+
+            if (int.Parse(label.Text) > 0)//hoger dan 1
+            {
+                if (menuItems[Item.Aantal].aantalInVoorraad >= Item.Aantal)
                 {
-                    Bestelling_MenuItemService.CreateBestellingMenuItem(bestelling_MenuItem);
-                    MessageBox.Show("Toegevoegd aan bestelling!)");
+                    bestelling_MenuItemService.TESTCreateBestellingMenuItem(menuItem.ID, BestellingService.GetNieuuwsteID(), int.Parse(label.Text));
+                    MessageBox.Show("Item(s) toegevoegd aan bestelling !");
                 }
                 else
                 {
-                    MessageBox.Show("Niet genoeg op vorraad!");
+                    MessageBox.Show("Niet genoeg items op voorraad !");
                 }
             }
             else
             {
-                MessageBox.Show("Voer een juist aantal in!");
+                MessageBox.Show("Aantal is niet hoger dan 0 !!!");
             }
-            ALBLLunch.Text = 0.ToString();
+            label.Text = 0.ToString();
         }
 
         //om de bestelling te controleren
         public void CheckBestelling()
         {
             int ID = Bestelling.ID;
-            Bestelling_MenuItems = Bestelling_MenuItemService.GetBestellingMenuItem(ID);
+            Bestelling_MenuItems = bestelling_MenuItemService.GetBestellingMenuItem(ID);
             menuItems = new List<ChapooModel.MenuItem>();
 
             foreach (Bestelling_MenuItem bestelling_MenuItem in Bestelling_MenuItems)
@@ -166,13 +163,11 @@ namespace UI
                 List.SubItems.Add($"{menuItems[i].omschrijving.ToString()}");
                 List.SubItems.Add($"{Bestelling_MenuItems[i].Aantal.ToString()}");
                 ListViewOverzicht.Items.Add(List);
-
-
             }
 
         }
         //test
-        private void TafelStatus()
+        private void TafelStatus() //om de tafel status terug te krijgen
         {
             tafels = TafelService.GetTafel();
 
@@ -188,11 +183,17 @@ namespace UI
                 }
             }
         }
-        private void BTNBestellen_Click(object sender, EventArgs e)
-        {
+        private void BTNBestellen_Click(object sender, EventArgs e)//om een bestelling te plaatsen
+        {           
             TafelNummerPNL.Hide();
             BestellingPNL.Show();
 
+            Bestelling = BestellingService.Create_Bestelling(tafel);
+            tafel.status = false;
+            if (tafel.status != false)
+            {
+                TafelService.Change_Status(tafel.ID);
+            }
         }
         public void PlusClick(Label Plus) //Void voor alle plus knoppen 
         {
@@ -215,9 +216,9 @@ namespace UI
         {
             ListViewNaam.Items.Clear();
 
-            List<ChapooModel.MenuItem> ViewList = MenuItemService.GetItems($"{MenuSoort}", $"{Categorie}");
+            menuItems = MenuItemService.GetItems($"{MenuSoort}", $"{Categorie}");
 
-            foreach (ChapooModel.MenuItem M in ViewList)
+            foreach (ChapooModel.MenuItem M in menuItems)
             {
                 ListViewItem List = new ListViewItem(M.ID.ToString());
                 List.Tag = M;
@@ -503,9 +504,11 @@ namespace UI
 
         }
 
-        private void button24_Click(object sender, EventArgs e)
+        private void BTNItemAanpassen_Click(object sender, EventArgs e)
         {
-
+            WijzigenPNL.BringToFront();
+            OverzichtPNL.SendToBack();
+            
         }
 
         private void listView6_SelectedIndexChanged(object sender, EventArgs e)

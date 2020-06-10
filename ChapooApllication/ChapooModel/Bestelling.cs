@@ -47,5 +47,11 @@ namespace ChapooModel
             this.aantal = aantal;
             this.kaartsoort = kaartsoort;
         }
+
+        //gemaakt om alleen de bestelling ID terug te krijgen
+        public Bestelling(int bestellingID)
+        {
+            this.ID = bestellingID;
+        }
     }
 }

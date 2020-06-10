@@ -157,8 +157,6 @@
             this.BTNMinWijzigen = new System.Windows.Forms.Button();
             this.BTNPlusWijzigen = new System.Windows.Forms.Button();
             this.timerDN = new System.Windows.Forms.Timer(this.components);
-            this.BTNReturn = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -192,31 +190,10 @@
             this.BTNVoegToeDiner = new System.Windows.Forms.Button();
             this.BTNBestellingDiner = new System.Windows.Forms.Button();
             this.DinerPNL = new System.Windows.Forms.Panel();
-            this.RekeningPNL = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.AfrekenenPNL = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.AfgerondPNL = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
             this.ChapooLogo = new System.Windows.Forms.Panel();
+            this.BTNReturn = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.TafelPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
@@ -248,25 +225,17 @@
             this.DHDropdown.SuspendLayout();
             this.DNDropdown.SuspendLayout();
             this.DinerPNL.SuspendLayout();
-            this.RekeningPNL.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.AfrekenenPNL.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.AfgerondPNL.SuspendLayout();
-            this.panel13.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TijdLBL
             // 
             this.TijdLBL.AutoSize = true;
             this.TijdLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.TijdLBL.Location = new System.Drawing.Point(508, 41);
+            this.TijdLBL.Location = new System.Drawing.Point(505, 34);
             this.TijdLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TijdLBL.Name = "TijdLBL";
-            this.TijdLBL.Size = new System.Drawing.Size(42, 21);
+            this.TijdLBL.Size = new System.Drawing.Size(63, 30);
             this.TijdLBL.TabIndex = 13;
             this.TijdLBL.Text = "Date";
             this.TijdLBL.Click += new System.EventHandler(this.TijdLBL_Click);
@@ -275,10 +244,10 @@
             // 
             this.DatumLBL.AutoSize = true;
             this.DatumLBL.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
-            this.DatumLBL.Location = new System.Drawing.Point(608, 41);
+            this.DatumLBL.Location = new System.Drawing.Point(605, 34);
             this.DatumLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DatumLBL.Name = "DatumLBL";
-            this.DatumLBL.Size = new System.Drawing.Size(44, 21);
+            this.DatumLBL.Size = new System.Drawing.Size(66, 30);
             this.DatumLBL.TabIndex = 14;
             this.DatumLBL.Text = "Time";
             // 
@@ -311,7 +280,7 @@
             this.label8.Location = new System.Drawing.Point(227, 16);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 47);
+            this.label8.Size = new System.Drawing.Size(173, 70);
             this.label8.TabIndex = 5;
             this.label8.Text = "Tafels";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -519,7 +488,7 @@
             this.LBLTafelNummer.Location = new System.Drawing.Point(243, 19);
             this.LBLTafelNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBLTafelNummer.Name = "LBLTafelNummer";
-            this.LBLTafelNummer.Size = new System.Drawing.Size(100, 47);
+            this.LBLTafelNummer.Size = new System.Drawing.Size(147, 70);
             this.LBLTafelNummer.TabIndex = 5;
             this.LBLTafelNummer.Text = "Tafel";
             // 
@@ -601,7 +570,7 @@
             this.label2.Location = new System.Drawing.Point(179, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 47);
+            this.label2.Size = new System.Drawing.Size(258, 70);
             this.label2.TabIndex = 5;
             this.label2.Text = "Bestelling";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -616,10 +585,10 @@
             this.LunchPNL.Controls.Add(this.BTNBestellingLunch);
             this.LunchPNL.Controls.Add(this.flowLayoutPanel1);
             this.LunchPNL.Controls.Add(this.panel10);
-            this.LunchPNL.Location = new System.Drawing.Point(0, 107);
+            this.LunchPNL.Location = new System.Drawing.Point(0, 71);
             this.LunchPNL.Margin = new System.Windows.Forms.Padding(2);
             this.LunchPNL.Name = "LunchPNL";
-            this.LunchPNL.Size = new System.Drawing.Size(1082, 1461);
+            this.LunchPNL.Size = new System.Drawing.Size(721, 976);
             this.LunchPNL.TabIndex = 28;
             this.LunchPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
@@ -641,7 +610,7 @@
             this.ALBLLunch.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLLunch.Location = new System.Drawing.Point(538, 754);
             this.ALBLLunch.Name = "ALBLLunch";
-            this.ALBLLunch.Size = new System.Drawing.Size(22, 24);
+            this.ALBLLunch.Size = new System.Drawing.Size(33, 36);
             this.ALBLLunch.TabIndex = 43;
             this.ALBLLunch.Text = "0";
             // 
@@ -884,7 +853,7 @@
             this.label5.Location = new System.Drawing.Point(243, 19);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 47);
+            this.label5.Size = new System.Drawing.Size(173, 70);
             this.label5.TabIndex = 5;
             this.label5.Text = "Lunch";
             // 
@@ -942,7 +911,7 @@
             this.ALBLDrank.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLDrank.Location = new System.Drawing.Point(547, 754);
             this.ALBLDrank.Name = "ALBLDrank";
-            this.ALBLDrank.Size = new System.Drawing.Size(22, 24);
+            this.ALBLDrank.Size = new System.Drawing.Size(33, 36);
             this.ALBLDrank.TabIndex = 42;
             this.ALBLDrank.Text = "0";
             // 
@@ -1300,7 +1269,7 @@
             this.label7.Location = new System.Drawing.Point(232, 16);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 47);
+            this.label7.Size = new System.Drawing.Size(169, 70);
             this.label7.TabIndex = 5;
             this.label7.Text = "Drank";
             // 
@@ -1333,7 +1302,7 @@
             this.BTNItemAanpassen.TabIndex = 31;
             this.BTNItemAanpassen.Text = "Aanpassen";
             this.BTNItemAanpassen.UseVisualStyleBackColor = false;
-            this.BTNItemAanpassen.Click += new System.EventHandler(this.button24_Click);
+            this.BTNItemAanpassen.Click += new System.EventHandler(this.BTNItemAanpassen_Click);
             // 
             // BTNBestellingPlaatsen
             // 
@@ -1372,7 +1341,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.label11.Location = new System.Drawing.Point(52, 633);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 24);
+            this.label11.Size = new System.Drawing.Size(185, 36);
             this.label11.TabIndex = 27;
             this.label11.Text = "Opmerkingen:";
             // 
@@ -1382,7 +1351,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.label10.Location = new System.Drawing.Point(559, 551);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 24);
+            this.label10.Size = new System.Drawing.Size(33, 36);
             this.label10.TabIndex = 26;
             this.label10.Text = "0";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -1393,7 +1362,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.label9.Location = new System.Drawing.Point(52, 551);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 24);
+            this.label9.Size = new System.Drawing.Size(99, 36);
             this.label9.TabIndex = 25;
             this.label9.Text = "Totaal:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -1446,7 +1415,7 @@
             this.label4.Location = new System.Drawing.Point(79, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(349, 47);
+            this.label4.Size = new System.Drawing.Size(510, 70);
             this.label4.TabIndex = 5;
             this.label4.Text = "Bestelling Overzicht";
             // 
@@ -1525,7 +1494,7 @@
             this.ALBLWijzigen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLWijzigen.Location = new System.Drawing.Point(494, 91);
             this.ALBLWijzigen.Name = "ALBLWijzigen";
-            this.ALBLWijzigen.Size = new System.Drawing.Size(22, 24);
+            this.ALBLWijzigen.Size = new System.Drawing.Size(33, 36);
             this.ALBLWijzigen.TabIndex = 40;
             this.ALBLWijzigen.Text = "0";
             // 
@@ -1556,30 +1525,6 @@
             this.timerDN.Interval = 15;
             this.timerDN.Tick += new System.EventHandler(this.timerDN_Tick);
             // 
-            // BTNReturn
-            // 
-            this.BTNReturn.BackColor = System.Drawing.Color.White;
-            this.BTNReturn.Image = global::UI.Properties.Resources.android_icon_36x36;
-            this.BTNReturn.Location = new System.Drawing.Point(122, 18);
-            this.BTNReturn.Margin = new System.Windows.Forms.Padding(2);
-            this.BTNReturn.Name = "BTNReturn";
-            this.BTNReturn.Size = new System.Drawing.Size(58, 49);
-            this.BTNReturn.TabIndex = 32;
-            this.BTNReturn.UseVisualStyleBackColor = false;
-            this.BTNReturn.Click += new System.EventHandler(this.BTNReturn_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
-            this.btnExit.Image = global::UI.Properties.Resources.logout__3_;
-            this.btnExit.Location = new System.Drawing.Point(44, 18);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(51, 51);
-            this.btnExit.TabIndex = 16;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -1597,7 +1542,7 @@
             this.label6.Location = new System.Drawing.Point(243, 19);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 47);
+            this.label6.Size = new System.Drawing.Size(155, 70);
             this.label6.TabIndex = 5;
             this.label6.Text = "Diner";
             // 
@@ -1872,7 +1817,7 @@
             this.ALBLDiner.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLDiner.Location = new System.Drawing.Point(550, 754);
             this.ALBLDiner.Name = "ALBLDiner";
-            this.ALBLDiner.Size = new System.Drawing.Size(22, 24);
+            this.ALBLDiner.Size = new System.Drawing.Size(33, 36);
             this.ALBLDiner.TabIndex = 37;
             this.ALBLDiner.Text = "0";
             // 
@@ -1916,297 +1861,68 @@
             this.DinerPNL.TabIndex = 29;
             this.DinerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DinerPNL_Paint);
             // 
-            // RekeningPNL
-            // 
-            this.RekeningPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.RekeningPNL.Controls.Add(this.button3);
-            this.RekeningPNL.Controls.Add(this.richTextBox2);
-            this.RekeningPNL.Controls.Add(this.label1);
-            this.RekeningPNL.Controls.Add(this.label3);
-            this.RekeningPNL.Controls.Add(this.label12);
-            this.RekeningPNL.Controls.Add(this.listView1);
-            this.RekeningPNL.Controls.Add(this.panel2);
-            this.RekeningPNL.Location = new System.Drawing.Point(748, 69);
-            this.RekeningPNL.Margin = new System.Windows.Forms.Padding(2);
-            this.RekeningPNL.Name = "RekeningPNL";
-            this.RekeningPNL.Size = new System.Drawing.Size(721, 974);
-            this.RekeningPNL.TabIndex = 34;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.PaleGreen;
-            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button3.Location = new System.Drawing.Point(48, 876);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(627, 65);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Afronden";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(50, 782);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(625, 59);
-            this.richTextBox2.TabIndex = 28;
-            this.richTextBox2.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label1.Location = new System.Drawing.Point(52, 734);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 24);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Opmerkingen:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label3.Location = new System.Drawing.Point(559, 551);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 24);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label12.Location = new System.Drawing.Point(418, 550);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 24);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Fooi:";
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(48, 209);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(625, 329);
-            this.listView1.TabIndex = 24;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Location = new System.Drawing.Point(48, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(625, 103);
-            this.panel2.TabIndex = 23;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label13.Location = new System.Drawing.Point(184, 16);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(184, 47);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Afrekenen";
-            // 
-            // AfrekenenPNL
-            // 
-            this.AfrekenenPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AfrekenenPNL.Controls.Add(this.panel6);
-            this.AfrekenenPNL.Controls.Add(this.panel7);
-            this.AfrekenenPNL.Controls.Add(this.panel5);
-            this.AfrekenenPNL.Controls.Add(this.button2);
-            this.AfrekenenPNL.Controls.Add(this.panel3);
-            this.AfrekenenPNL.Location = new System.Drawing.Point(1483, 69);
-            this.AfrekenenPNL.Margin = new System.Windows.Forms.Padding(2);
-            this.AfrekenenPNL.Name = "AfrekenenPNL";
-            this.AfrekenenPNL.Size = new System.Drawing.Size(721, 974);
-            this.AfrekenenPNL.TabIndex = 35;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(48, 608);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(625, 142);
-            this.panel6.TabIndex = 32;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label15.Location = new System.Drawing.Point(184, 29);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(207, 47);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Credit card";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Location = new System.Drawing.Point(48, 229);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(625, 142);
-            this.panel7.TabIndex = 32;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label16.Location = new System.Drawing.Point(184, 34);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(144, 47);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Contact";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(48, 421);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(625, 142);
-            this.panel5.TabIndex = 31;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label14.Location = new System.Drawing.Point(184, 34);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 47);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Pin";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.PaleGreen;
-            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
-            this.button2.Location = new System.Drawing.Point(48, 845);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(627, 96);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Betalen";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Location = new System.Drawing.Point(48, 74);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(625, 103);
-            this.panel3.TabIndex = 23;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label17.Location = new System.Drawing.Point(184, 16);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(184, 47);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Afrekenen";
-            // 
-            // AfgerondPNL
-            // 
-            this.AfgerondPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AfgerondPNL.Controls.Add(this.label18);
-            this.AfgerondPNL.Controls.Add(this.button4);
-            this.AfgerondPNL.Controls.Add(this.panel13);
-            this.AfgerondPNL.Location = new System.Drawing.Point(2222, 69);
-            this.AfgerondPNL.Margin = new System.Windows.Forms.Padding(2);
-            this.AfgerondPNL.Name = "AfgerondPNL";
-            this.AfgerondPNL.Size = new System.Drawing.Size(721, 974);
-            this.AfgerondPNL.TabIndex = 36;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label18.Location = new System.Drawing.Point(152, 229);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(274, 24);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "Transactie succesvol afgerond!";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.PaleGreen;
-            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
-            this.button4.Location = new System.Drawing.Point(48, 736);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(627, 205);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Terug naar tafels";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel13.Controls.Add(this.label21);
-            this.panel13.Location = new System.Drawing.Point(48, 74);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(625, 103);
-            this.panel13.TabIndex = 23;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label21.Location = new System.Drawing.Point(184, 16);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(151, 47);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Tafel #";
-            // 
             // ChapooLogo
             // 
             this.ChapooLogo.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
             this.ChapooLogo.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.ChapooLogo.Location = new System.Drawing.Point(305, 18);
+            this.ChapooLogo.Location = new System.Drawing.Point(302, 11);
             this.ChapooLogo.Name = "ChapooLogo";
             this.ChapooLogo.Size = new System.Drawing.Size(113, 51);
             this.ChapooLogo.TabIndex = 33;
             this.ChapooLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint_1);
             // 
+            // BTNReturn
+            // 
+            this.BTNReturn.BackColor = System.Drawing.Color.White;
+            this.BTNReturn.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.BTNReturn.Location = new System.Drawing.Point(119, 11);
+            this.BTNReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.BTNReturn.Name = "BTNReturn";
+            this.BTNReturn.Size = new System.Drawing.Size(58, 49);
+            this.BTNReturn.TabIndex = 32;
+            this.BTNReturn.UseVisualStyleBackColor = false;
+            this.BTNReturn.Click += new System.EventHandler(this.BTNReturn_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::UI.Properties.Resources.logout__3_;
+            this.btnExit.Location = new System.Drawing.Point(41, 11);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(51, 51);
+            this.btnExit.TabIndex = 16;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.TijdLBL);
+            this.panel1.Controls.Add(this.DatumLBL);
+            this.panel1.Controls.Add(this.BTNReturn);
+            this.panel1.Controls.Add(this.ChapooLogo);
+            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(719, 67);
+            this.panel1.TabIndex = 34;
+            // 
             // Bediening
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(4F, 10F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(4271, 1065);
-            this.Controls.Add(this.LunchPNL);
+            this.BackColor = System.Drawing.Color.Snow;
+            this.ClientSize = new System.Drawing.Size(724, 1049);
             this.Controls.Add(this.OverzichtPNL);
             this.Controls.Add(this.TafelNummerPNL);
-            this.Controls.Add(this.AfgerondPNL);
-            this.Controls.Add(this.AfrekenenPNL);
-            this.Controls.Add(this.RekeningPNL);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.LunchPNL);
             this.Controls.Add(this.TafelPNL);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.DinerPNL);
             this.Controls.Add(this.WijzigenPNL);
             this.Controls.Add(this.BestellingPNL);
-            this.Controls.Add(this.ChapooLogo);
-            this.Controls.Add(this.BTNReturn);
-            this.Controls.Add(this.DatumLBL);
-            this.Controls.Add(this.TijdLBL);
-            this.Controls.Add(this.btnExit);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2258,25 +1974,9 @@
             this.DNDropdown.ResumeLayout(false);
             this.DinerPNL.ResumeLayout(false);
             this.DinerPNL.PerformLayout();
-            this.RekeningPNL.ResumeLayout(false);
-            this.RekeningPNL.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.AfrekenenPNL.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.AfgerondPNL.ResumeLayout(false);
-            this.AfgerondPNL.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -2440,33 +2140,10 @@
         private System.Windows.Forms.Button BTNVoegToeDiner;
         private System.Windows.Forms.Button BTNBestellingDiner;
         private System.Windows.Forms.Panel DinerPNL;
-        private System.Windows.Forms.Panel RekeningPNL;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel AfrekenenPNL;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel AfgerondPNL;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel ChapooLogo;
         private System.Windows.Forms.ColumnHeader BOID;
         private System.Windows.Forms.ColumnHeader BONaam;
         private System.Windows.Forms.ColumnHeader BOAantal;
+        private System.Windows.Forms.Panel panel1;
     }
 }

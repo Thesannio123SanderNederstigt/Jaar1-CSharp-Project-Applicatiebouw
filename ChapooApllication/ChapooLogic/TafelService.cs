@@ -92,11 +92,12 @@ namespace ChapooLogic
             return Tafel_db.GetTafelByStatus(status);
         }
 
-        public Tafel ID_Status(int ID)
+        public void Change_Status(int ID)
         {
-            return Tafel_db.Get_By_ID(ID);
+           Tafel_db.Tafel_Status(ID);
         }
 
+        // om de tafel status te krijgen 
         public List<Tafel> GetTafel()
         {
             return Tafel_db.GetTafels();

@@ -14,7 +14,14 @@ namespace ChapooDAL
         public void Add_New_Bestelling_MenuItem(Bestelling_MenuItem bestelling_MenuItem)
         {
             string query = $"Insert into [Bestelling_MenuItem] ( menuItemID, bestellingID, [status], aantal) values " +
-                $"Values ({bestelling_MenuItem.MenuItemID}, {bestelling_MenuItem.Bestelling.ID}, False , {bestelling_MenuItem.Aantal}) ";
+                           $"Values ({bestelling_MenuItem.MenuItemID}, {bestelling_MenuItem.Bestelling.ID}, 'False' , {bestelling_MenuItem.Aantal}) ";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+        public void New_Bestelling_MenuItem(int MenuItemID, int ID, int Aantal) 
+        {
+            string query = $"Insert into [Bestelling_MenuItem] ( menuItemID, bestellingID, [status], aantal) " +
+                           $"Values ({MenuItemID}, {ID}, 'False' , {Aantal}) ";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
@@ -29,6 +36,12 @@ namespace ChapooDAL
         public void Remove_Bestelling_MenuItem(int Bestelling_MenuItemID)
         {
             string query = $"Delete From [Bestelling_MenuItem] Where [ID] = '{Bestelling_MenuItemID}'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+        public void Remove_MenuItem(int MenuItemID)
+        {
+            string query = $"Delete From [Bestelling_MenuItem] Where [menuItemID] = '{MenuItemID}'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }

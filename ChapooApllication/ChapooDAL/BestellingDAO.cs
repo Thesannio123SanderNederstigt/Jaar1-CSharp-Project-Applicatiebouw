@@ -185,8 +185,6 @@ namespace ChapooDAL
             return ReadBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
 
-
-
         private Bestelling ReadBestelling(DataTable dataTable)
         {
             Bestelling bestelling = null;
@@ -201,7 +199,6 @@ namespace ChapooDAL
 
                 bestelling = new Bestelling(ID, besteltijd, status, tafelID, opmerking);
             }
-
             return bestelling;
         }
 
@@ -231,20 +228,39 @@ namespace ChapooDAL
             return "Bestelling succesvol verwijderd!";
         }
 
-        //private Bestelling LeesBestellingID(DataTable dataTable)
-        //{
-        //    Bestelling bestelling = new Bestelling();
-        //    foreach(DataRow dr in dataTable.Rows)
-        //    {
-        //        bestelling.ID = (int)dr[""];
-        //    }
+        //gemaakt door gillian om een bestelling te maken 
+        public Bestelling Create_Bestelling(Tafel tafel)
+        {
+            string query = $"Insert Into [Bestelling] (besteltijd, [status], tafelID)" +
+                            $"Values ('{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff")}', 'False', '{tafel.ID}')" +
+                            $"update Tafel set [status] = 'False' where ID = '{tafel.ID}'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query,sqlParameters);
 
+            string query2 = "Select top(1) [ID] from [Bestelling] order by [ID] desc";
+            SqlParameter[] sqlParameters2 = new SqlParameter[0];
+            return LeesBestellingID(ExecuteSelectQuery(query2, sqlParameters2));
+        }
 
-        //    return bestelling;
-        //
+        //gemaakt om de nieuwste bestellingID mee te nemen bij het vullen van een bestelling
+        public int NieuwsteBestelling()
+        {
+            string query = "Select top(1) [ID] as [NieuwesteID] from [Bestelling] order by [ID] desc";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable dataTable = ExecuteSelectQuery(query, sqlParameters);
+            return (int)dataTable.Rows[0]["NieuwesteID"];
+        }
 
-
-
+        private Bestelling LeesBestellingID(DataTable dataTable)
+        {
+            Bestelling bestelling = null;
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                int ID = (int)dr["ID"];
+                bestelling = new Bestelling(ID);
+            }
+            return bestelling;
+        }
 
     }
 }
