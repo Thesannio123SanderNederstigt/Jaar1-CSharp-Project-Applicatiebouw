@@ -65,6 +65,9 @@ namespace UI
             LunchPNL.Hide();
             DinerPNL.Hide();
             OverzichtPNL.Hide();
+            RekeningPNL.Hide();
+            AfgerondPNL.Hide();
+            AfrekenenPNL.Hide();
         }
         private void ShowPanel(string PanelName)
         {

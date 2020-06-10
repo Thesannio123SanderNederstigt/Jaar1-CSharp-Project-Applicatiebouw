@@ -193,7 +193,85 @@
             this.ChapooLogo = new System.Windows.Forms.Panel();
             this.BTNReturn = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Overzicht_TopPNL = new System.Windows.Forms.Panel();
+            this.AfgerondPNL = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.AfrekenenPNL = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.RekeningPNL = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Bestelling_TopPNL = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.Rekening_TopPNL = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.Afgerond_TopPNL = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.Afrekenen_TopPNL = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.Drank_TopPNL = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.Diner_TopPNL = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.Lunch_TopPNL = new System.Windows.Forms.Panel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.button19 = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.Tafel_TopPNL = new System.Windows.Forms.Panel();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.button21 = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.TafelNummer_TopPNL = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.button23 = new System.Windows.Forms.Button();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.TafelPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
@@ -225,7 +303,25 @@
             this.DHDropdown.SuspendLayout();
             this.DNDropdown.SuspendLayout();
             this.DinerPNL.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.Overzicht_TopPNL.SuspendLayout();
+            this.AfgerondPNL.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.AfrekenenPNL.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.RekeningPNL.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.Bestelling_TopPNL.SuspendLayout();
+            this.Rekening_TopPNL.SuspendLayout();
+            this.Afgerond_TopPNL.SuspendLayout();
+            this.Afrekenen_TopPNL.SuspendLayout();
+            this.Drank_TopPNL.SuspendLayout();
+            this.Diner_TopPNL.SuspendLayout();
+            this.Lunch_TopPNL.SuspendLayout();
+            this.Tafel_TopPNL.SuspendLayout();
+            this.TafelNummer_TopPNL.SuspendLayout();
             this.SuspendLayout();
             // 
             // TijdLBL
@@ -254,12 +350,13 @@
             // TafelPNL
             // 
             this.TafelPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TafelPNL.Controls.Add(this.Tafel_TopPNL);
             this.TafelPNL.Controls.Add(this.HoofdschermPNL);
             this.TafelPNL.Controls.Add(this.flowLayoutPanel4);
-            this.TafelPNL.Location = new System.Drawing.Point(0, 73);
+            this.TafelPNL.Location = new System.Drawing.Point(0, 0);
             this.TafelPNL.Margin = new System.Windows.Forms.Padding(2);
             this.TafelPNL.Name = "TafelPNL";
-            this.TafelPNL.Size = new System.Drawing.Size(721, 974);
+            this.TafelPNL.Size = new System.Drawing.Size(721, 1041);
             this.TafelPNL.TabIndex = 15;
             this.TafelPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -299,7 +396,7 @@
             this.flowLayoutPanel4.Controls.Add(this.btnT10);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(44, 212);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(648, 729);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(648, 744);
             this.flowLayoutPanel4.TabIndex = 0;
             // 
             // btnT1
@@ -425,14 +522,15 @@
             // TafelNummerPNL
             // 
             this.TafelNummerPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TafelNummerPNL.Controls.Add(this.TafelNummer_TopPNL);
             this.TafelNummerPNL.Controls.Add(this.BTNBestellen);
             this.TafelNummerPNL.Controls.Add(this.BTNRekening);
             this.TafelNummerPNL.Controls.Add(this.button1);
             this.TafelNummerPNL.Controls.Add(this.PNL);
-            this.TafelNummerPNL.Location = new System.Drawing.Point(0, 73);
+            this.TafelNummerPNL.Location = new System.Drawing.Point(0, 0);
             this.TafelNummerPNL.Margin = new System.Windows.Forms.Padding(2);
             this.TafelNummerPNL.Name = "TafelNummerPNL";
-            this.TafelNummerPNL.Size = new System.Drawing.Size(721, 974);
+            this.TafelNummerPNL.Size = new System.Drawing.Size(721, 1041);
             this.TafelNummerPNL.TabIndex = 24;
             this.TafelNummerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_2);
             // 
@@ -495,15 +593,16 @@
             // BestellingPNL
             // 
             this.BestellingPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BestellingPNL.Controls.Add(this.Bestelling_TopPNL);
             this.BestellingPNL.Controls.Add(this.BTNDiner);
             this.BestellingPNL.Controls.Add(this.BTNLunch);
             this.BestellingPNL.Controls.Add(this.BTNDrank);
             this.BestellingPNL.Controls.Add(this.BTNOverzicht);
             this.BestellingPNL.Controls.Add(this.panel4);
-            this.BestellingPNL.Location = new System.Drawing.Point(0, 73);
+            this.BestellingPNL.Location = new System.Drawing.Point(0, 0);
             this.BestellingPNL.Margin = new System.Windows.Forms.Padding(2);
             this.BestellingPNL.Name = "BestellingPNL";
-            this.BestellingPNL.Size = new System.Drawing.Size(721, 974);
+            this.BestellingPNL.Size = new System.Drawing.Size(721, 1041);
             this.BestellingPNL.TabIndex = 25;
             this.BestellingPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -578,6 +677,7 @@
             // LunchPNL
             // 
             this.LunchPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.LunchPNL.Controls.Add(this.Lunch_TopPNL);
             this.LunchPNL.Controls.Add(this.BTNVoegToeL);
             this.LunchPNL.Controls.Add(this.ALBLLunch);
             this.LunchPNL.Controls.Add(this.BTNMinLunch);
@@ -585,10 +685,10 @@
             this.LunchPNL.Controls.Add(this.BTNBestellingLunch);
             this.LunchPNL.Controls.Add(this.flowLayoutPanel1);
             this.LunchPNL.Controls.Add(this.panel10);
-            this.LunchPNL.Location = new System.Drawing.Point(0, 71);
+            this.LunchPNL.Location = new System.Drawing.Point(0, 0);
             this.LunchPNL.Margin = new System.Windows.Forms.Padding(2);
             this.LunchPNL.Name = "LunchPNL";
-            this.LunchPNL.Size = new System.Drawing.Size(721, 976);
+            this.LunchPNL.Size = new System.Drawing.Size(721, 1041);
             this.LunchPNL.TabIndex = 28;
             this.LunchPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
@@ -880,6 +980,7 @@
             // DrankPNL
             // 
             this.DrankPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DrankPNL.Controls.Add(this.Drank_TopPNL);
             this.DrankPNL.Controls.Add(this.button16);
             this.DrankPNL.Controls.Add(this.ALBLDrank);
             this.DrankPNL.Controls.Add(this.BTNMinDrank);
@@ -887,10 +988,10 @@
             this.DrankPNL.Controls.Add(this.BTNBestellingDrank);
             this.DrankPNL.Controls.Add(this.flowLayoutPanel3);
             this.DrankPNL.Controls.Add(this.panel24);
-            this.DrankPNL.Location = new System.Drawing.Point(2, 71);
+            this.DrankPNL.Location = new System.Drawing.Point(0, 0);
             this.DrankPNL.Margin = new System.Windows.Forms.Padding(2);
             this.DrankPNL.Name = "DrankPNL";
-            this.DrankPNL.Size = new System.Drawing.Size(721, 974);
+            this.DrankPNL.Size = new System.Drawing.Size(721, 1041);
             this.DrankPNL.TabIndex = 30;
             this.DrankPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DrankPNL_Paint);
             // 
@@ -1285,10 +1386,11 @@
             this.OverzichtPNL.Controls.Add(this.label9);
             this.OverzichtPNL.Controls.Add(this.ListViewOverzicht);
             this.OverzichtPNL.Controls.Add(this.panel20);
-            this.OverzichtPNL.Location = new System.Drawing.Point(0, 73);
+            this.OverzichtPNL.Controls.Add(this.Overzicht_TopPNL);
+            this.OverzichtPNL.Location = new System.Drawing.Point(0, 0);
             this.OverzichtPNL.Margin = new System.Windows.Forms.Padding(2);
             this.OverzichtPNL.Name = "OverzichtPNL";
-            this.OverzichtPNL.Size = new System.Drawing.Size(721, 974);
+            this.OverzichtPNL.Size = new System.Drawing.Size(721, 1043);
             this.OverzichtPNL.TabIndex = 30;
             this.OverzichtPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.OverzichtPNL_Paint);
             // 
@@ -1847,6 +1949,7 @@
             // DinerPNL
             // 
             this.DinerPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.DinerPNL.Controls.Add(this.Diner_TopPNL);
             this.DinerPNL.Controls.Add(this.BTNBestellingDiner);
             this.DinerPNL.Controls.Add(this.BTNVoegToeDiner);
             this.DinerPNL.Controls.Add(this.ALBLDiner);
@@ -1854,10 +1957,10 @@
             this.DinerPNL.Controls.Add(this.BTNPlusDiner);
             this.DinerPNL.Controls.Add(this.flowLayoutPanel2);
             this.DinerPNL.Controls.Add(this.panel17);
-            this.DinerPNL.Location = new System.Drawing.Point(2, 69);
+            this.DinerPNL.Location = new System.Drawing.Point(0, 0);
             this.DinerPNL.Margin = new System.Windows.Forms.Padding(2);
             this.DinerPNL.Name = "DinerPNL";
-            this.DinerPNL.Size = new System.Drawing.Size(721, 974);
+            this.DinerPNL.Size = new System.Drawing.Size(721, 1039);
             this.DinerPNL.TabIndex = 29;
             this.DinerPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.DinerPNL_Paint);
             // 
@@ -1895,34 +1998,892 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panel1
+            // Overzicht_TopPNL
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.TijdLBL);
-            this.panel1.Controls.Add(this.DatumLBL);
-            this.panel1.Controls.Add(this.BTNReturn);
-            this.panel1.Controls.Add(this.ChapooLogo);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 67);
-            this.panel1.TabIndex = 34;
+            this.Overzicht_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Overzicht_TopPNL.Controls.Add(this.btnExit);
+            this.Overzicht_TopPNL.Controls.Add(this.TijdLBL);
+            this.Overzicht_TopPNL.Controls.Add(this.DatumLBL);
+            this.Overzicht_TopPNL.Controls.Add(this.BTNReturn);
+            this.Overzicht_TopPNL.Controls.Add(this.ChapooLogo);
+            this.Overzicht_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Overzicht_TopPNL.Name = "Overzicht_TopPNL";
+            this.Overzicht_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Overzicht_TopPNL.TabIndex = 34;
+            // 
+            // AfgerondPNL
+            // 
+            this.AfgerondPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AfgerondPNL.Controls.Add(this.Afgerond_TopPNL);
+            this.AfgerondPNL.Controls.Add(this.label18);
+            this.AfgerondPNL.Controls.Add(this.button4);
+            this.AfgerondPNL.Controls.Add(this.panel13);
+            this.AfgerondPNL.Location = new System.Drawing.Point(0, 0);
+            this.AfgerondPNL.Margin = new System.Windows.Forms.Padding(2);
+            this.AfgerondPNL.Name = "AfgerondPNL";
+            this.AfgerondPNL.Size = new System.Drawing.Size(721, 1039);
+            this.AfgerondPNL.TabIndex = 40;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.label18.Location = new System.Drawing.Point(152, 229);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(405, 36);
+            this.label18.TabIndex = 31;
+            this.label18.Text = "Transactie succesvol afgerond!";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.PaleGreen;
+            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
+            this.button4.Location = new System.Drawing.Point(48, 736);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(627, 205);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Terug naar tafels";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel13.Controls.Add(this.label21);
+            this.panel13.Location = new System.Drawing.Point(48, 74);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(625, 103);
+            this.panel13.TabIndex = 23;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.label21.Location = new System.Drawing.Point(184, 16);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(223, 70);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Tafel #";
+            // 
+            // AfrekenenPNL
+            // 
+            this.AfrekenenPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AfrekenenPNL.Controls.Add(this.Afrekenen_TopPNL);
+            this.AfrekenenPNL.Controls.Add(this.panel6);
+            this.AfrekenenPNL.Controls.Add(this.panel7);
+            this.AfrekenenPNL.Controls.Add(this.panel5);
+            this.AfrekenenPNL.Controls.Add(this.button2);
+            this.AfrekenenPNL.Controls.Add(this.panel3);
+            this.AfrekenenPNL.Location = new System.Drawing.Point(0, 0);
+            this.AfrekenenPNL.Margin = new System.Windows.Forms.Padding(2);
+            this.AfrekenenPNL.Name = "AfrekenenPNL";
+            this.AfrekenenPNL.Size = new System.Drawing.Size(721, 1039);
+            this.AfrekenenPNL.TabIndex = 39;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel6.Controls.Add(this.label15);
+            this.panel6.Location = new System.Drawing.Point(48, 608);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(625, 142);
+            this.panel6.TabIndex = 32;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.label15.Location = new System.Drawing.Point(184, 29);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(302, 70);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Credit card";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Location = new System.Drawing.Point(48, 229);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(625, 142);
+            this.panel7.TabIndex = 32;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.label16.Location = new System.Drawing.Point(184, 34);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(211, 70);
+            this.label16.TabIndex = 5;
+            this.label16.Text = "Contact";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Location = new System.Drawing.Point(48, 421);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(625, 142);
+            this.panel5.TabIndex = 31;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.label14.Location = new System.Drawing.Point(184, 34);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(106, 70);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Pin";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.PaleGreen;
+            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
+            this.button2.Location = new System.Drawing.Point(48, 845);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(627, 96);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Betalen";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Location = new System.Drawing.Point(48, 74);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(625, 103);
+            this.panel3.TabIndex = 23;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.label17.Location = new System.Drawing.Point(184, 16);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(268, 70);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Afrekenen";
+            // 
+            // RekeningPNL
+            // 
+            this.RekeningPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.RekeningPNL.Controls.Add(this.Rekening_TopPNL);
+            this.RekeningPNL.Controls.Add(this.button3);
+            this.RekeningPNL.Controls.Add(this.richTextBox2);
+            this.RekeningPNL.Controls.Add(this.label1);
+            this.RekeningPNL.Controls.Add(this.label3);
+            this.RekeningPNL.Controls.Add(this.label12);
+            this.RekeningPNL.Controls.Add(this.listView1);
+            this.RekeningPNL.Controls.Add(this.panel2);
+            this.RekeningPNL.Location = new System.Drawing.Point(0, 0);
+            this.RekeningPNL.Margin = new System.Windows.Forms.Padding(2);
+            this.RekeningPNL.Name = "RekeningPNL";
+            this.RekeningPNL.Size = new System.Drawing.Size(721, 1039);
+            this.RekeningPNL.TabIndex = 38;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.PaleGreen;
+            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.button3.Location = new System.Drawing.Point(48, 876);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(627, 65);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Afronden";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(50, 782);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(625, 59);
+            this.richTextBox2.TabIndex = 28;
+            this.richTextBox2.Text = "";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.label1.Location = new System.Drawing.Point(52, 734);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 36);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Opmerkingen:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.label3.Location = new System.Drawing.Point(559, 551);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 36);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.label12.Location = new System.Drawing.Point(418, 550);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 36);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Fooi:";
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Window;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(48, 209);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(625, 329);
+            this.listView1.TabIndex = 24;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Location = new System.Drawing.Point(48, 74);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(625, 103);
+            this.panel2.TabIndex = 23;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.label13.Location = new System.Drawing.Point(184, 16);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(268, 70);
+            this.label13.TabIndex = 5;
+            this.label13.Text = "Afrekenen";
+            // 
+            // Bestelling_TopPNL
+            // 
+            this.Bestelling_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Bestelling_TopPNL.Controls.Add(this.button5);
+            this.Bestelling_TopPNL.Controls.Add(this.label19);
+            this.Bestelling_TopPNL.Controls.Add(this.label20);
+            this.Bestelling_TopPNL.Controls.Add(this.button6);
+            this.Bestelling_TopPNL.Controls.Add(this.panel9);
+            this.Bestelling_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Bestelling_TopPNL.Name = "Bestelling_TopPNL";
+            this.Bestelling_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Bestelling_TopPNL.TabIndex = 41;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Image = global::UI.Properties.Resources.logout__3_;
+            this.button5.Location = new System.Drawing.Point(41, 11);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(51, 51);
+            this.button5.TabIndex = 16;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label19.Location = new System.Drawing.Point(505, 34);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 30);
+            this.label19.TabIndex = 13;
+            this.label19.Text = "Date";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label20.Location = new System.Drawing.Point(605, 34);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(66, 30);
+            this.label20.TabIndex = 14;
+            this.label20.Text = "Time";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button6.Location = new System.Drawing.Point(119, 11);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(58, 49);
+            this.button6.TabIndex = 32;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel9.Location = new System.Drawing.Point(302, 11);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(113, 51);
+            this.panel9.TabIndex = 33;
+            // 
+            // Rekening_TopPNL
+            // 
+            this.Rekening_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Rekening_TopPNL.Controls.Add(this.button7);
+            this.Rekening_TopPNL.Controls.Add(this.label22);
+            this.Rekening_TopPNL.Controls.Add(this.label23);
+            this.Rekening_TopPNL.Controls.Add(this.button8);
+            this.Rekening_TopPNL.Controls.Add(this.panel11);
+            this.Rekening_TopPNL.Location = new System.Drawing.Point(2, 3);
+            this.Rekening_TopPNL.Name = "Rekening_TopPNL";
+            this.Rekening_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Rekening_TopPNL.TabIndex = 41;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.Image = global::UI.Properties.Resources.logout__3_;
+            this.button7.Location = new System.Drawing.Point(41, 11);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(51, 51);
+            this.button7.TabIndex = 16;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label22.Location = new System.Drawing.Point(505, 34);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(63, 30);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Date";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label23.Location = new System.Drawing.Point(605, 34);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(66, 30);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Time";
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.White;
+            this.button8.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button8.Location = new System.Drawing.Point(119, 11);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(58, 49);
+            this.button8.TabIndex = 32;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel11.Location = new System.Drawing.Point(302, 11);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(113, 51);
+            this.panel11.TabIndex = 33;
+            // 
+            // Afgerond_TopPNL
+            // 
+            this.Afgerond_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Afgerond_TopPNL.Controls.Add(this.button9);
+            this.Afgerond_TopPNL.Controls.Add(this.label24);
+            this.Afgerond_TopPNL.Controls.Add(this.label25);
+            this.Afgerond_TopPNL.Controls.Add(this.button10);
+            this.Afgerond_TopPNL.Controls.Add(this.panel12);
+            this.Afgerond_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Afgerond_TopPNL.Name = "Afgerond_TopPNL";
+            this.Afgerond_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Afgerond_TopPNL.TabIndex = 41;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.White;
+            this.button9.Image = global::UI.Properties.Resources.logout__3_;
+            this.button9.Location = new System.Drawing.Point(41, 11);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(51, 51);
+            this.button9.TabIndex = 16;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label24.Location = new System.Drawing.Point(505, 34);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(63, 30);
+            this.label24.TabIndex = 13;
+            this.label24.Text = "Date";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label25.Location = new System.Drawing.Point(605, 34);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(66, 30);
+            this.label25.TabIndex = 14;
+            this.label25.Text = "Time";
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.White;
+            this.button10.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button10.Location = new System.Drawing.Point(119, 11);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(58, 49);
+            this.button10.TabIndex = 32;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // panel12
+            // 
+            this.panel12.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel12.Location = new System.Drawing.Point(302, 11);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(113, 51);
+            this.panel12.TabIndex = 33;
+            // 
+            // Afrekenen_TopPNL
+            // 
+            this.Afrekenen_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Afrekenen_TopPNL.Controls.Add(this.button11);
+            this.Afrekenen_TopPNL.Controls.Add(this.label26);
+            this.Afrekenen_TopPNL.Controls.Add(this.label27);
+            this.Afrekenen_TopPNL.Controls.Add(this.button12);
+            this.Afrekenen_TopPNL.Controls.Add(this.panel14);
+            this.Afrekenen_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Afrekenen_TopPNL.Name = "Afrekenen_TopPNL";
+            this.Afrekenen_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Afrekenen_TopPNL.TabIndex = 41;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.White;
+            this.button11.Image = global::UI.Properties.Resources.logout__3_;
+            this.button11.Location = new System.Drawing.Point(41, 11);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(51, 51);
+            this.button11.TabIndex = 16;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label26.Location = new System.Drawing.Point(505, 34);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(63, 30);
+            this.label26.TabIndex = 13;
+            this.label26.Text = "Date";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label27.Location = new System.Drawing.Point(605, 34);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(66, 30);
+            this.label27.TabIndex = 14;
+            this.label27.Text = "Time";
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.White;
+            this.button12.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button12.Location = new System.Drawing.Point(119, 11);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(58, 49);
+            this.button12.TabIndex = 32;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            this.panel14.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel14.Location = new System.Drawing.Point(302, 11);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(113, 51);
+            this.panel14.TabIndex = 33;
+            // 
+            // Drank_TopPNL
+            // 
+            this.Drank_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Drank_TopPNL.Controls.Add(this.button13);
+            this.Drank_TopPNL.Controls.Add(this.label28);
+            this.Drank_TopPNL.Controls.Add(this.label29);
+            this.Drank_TopPNL.Controls.Add(this.button14);
+            this.Drank_TopPNL.Controls.Add(this.panel15);
+            this.Drank_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Drank_TopPNL.Name = "Drank_TopPNL";
+            this.Drank_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Drank_TopPNL.TabIndex = 41;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.White;
+            this.button13.Image = global::UI.Properties.Resources.logout__3_;
+            this.button13.Location = new System.Drawing.Point(41, 11);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(51, 51);
+            this.button13.TabIndex = 16;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label28.Location = new System.Drawing.Point(505, 34);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(63, 30);
+            this.label28.TabIndex = 13;
+            this.label28.Text = "Date";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label29.Location = new System.Drawing.Point(605, 34);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(66, 30);
+            this.label29.TabIndex = 14;
+            this.label29.Text = "Time";
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.White;
+            this.button14.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button14.Location = new System.Drawing.Point(119, 11);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(58, 49);
+            this.button14.TabIndex = 32;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // panel15
+            // 
+            this.panel15.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel15.Location = new System.Drawing.Point(302, 11);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(113, 51);
+            this.panel15.TabIndex = 33;
+            // 
+            // Diner_TopPNL
+            // 
+            this.Diner_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Diner_TopPNL.Controls.Add(this.button15);
+            this.Diner_TopPNL.Controls.Add(this.label30);
+            this.Diner_TopPNL.Controls.Add(this.label31);
+            this.Diner_TopPNL.Controls.Add(this.button17);
+            this.Diner_TopPNL.Controls.Add(this.panel16);
+            this.Diner_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Diner_TopPNL.Name = "Diner_TopPNL";
+            this.Diner_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Diner_TopPNL.TabIndex = 41;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.White;
+            this.button15.Image = global::UI.Properties.Resources.logout__3_;
+            this.button15.Location = new System.Drawing.Point(41, 11);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(51, 51);
+            this.button15.TabIndex = 16;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label30.Location = new System.Drawing.Point(505, 34);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(63, 30);
+            this.label30.TabIndex = 13;
+            this.label30.Text = "Date";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label31.Location = new System.Drawing.Point(605, 34);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(66, 30);
+            this.label31.TabIndex = 14;
+            this.label31.Text = "Time";
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.White;
+            this.button17.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button17.Location = new System.Drawing.Point(119, 11);
+            this.button17.Margin = new System.Windows.Forms.Padding(2);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(58, 49);
+            this.button17.TabIndex = 32;
+            this.button17.UseVisualStyleBackColor = false;
+            // 
+            // panel16
+            // 
+            this.panel16.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel16.Location = new System.Drawing.Point(302, 11);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(113, 51);
+            this.panel16.TabIndex = 33;
+            // 
+            // Lunch_TopPNL
+            // 
+            this.Lunch_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Lunch_TopPNL.Controls.Add(this.button18);
+            this.Lunch_TopPNL.Controls.Add(this.label32);
+            this.Lunch_TopPNL.Controls.Add(this.label33);
+            this.Lunch_TopPNL.Controls.Add(this.button19);
+            this.Lunch_TopPNL.Controls.Add(this.panel18);
+            this.Lunch_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Lunch_TopPNL.Name = "Lunch_TopPNL";
+            this.Lunch_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Lunch_TopPNL.TabIndex = 41;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.White;
+            this.button18.Image = global::UI.Properties.Resources.logout__3_;
+            this.button18.Location = new System.Drawing.Point(41, 11);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(51, 51);
+            this.button18.TabIndex = 16;
+            this.button18.UseVisualStyleBackColor = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label32.Location = new System.Drawing.Point(505, 34);
+            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(63, 30);
+            this.label32.TabIndex = 13;
+            this.label32.Text = "Date";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label33.Location = new System.Drawing.Point(605, 34);
+            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(66, 30);
+            this.label33.TabIndex = 14;
+            this.label33.Text = "Time";
+            // 
+            // button19
+            // 
+            this.button19.BackColor = System.Drawing.Color.White;
+            this.button19.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button19.Location = new System.Drawing.Point(119, 11);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(58, 49);
+            this.button19.TabIndex = 32;
+            this.button19.UseVisualStyleBackColor = false;
+            // 
+            // panel18
+            // 
+            this.panel18.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel18.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel18.Location = new System.Drawing.Point(302, 11);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(113, 51);
+            this.panel18.TabIndex = 33;
+            // 
+            // Tafel_TopPNL
+            // 
+            this.Tafel_TopPNL.BackColor = System.Drawing.Color.White;
+            this.Tafel_TopPNL.Controls.Add(this.button20);
+            this.Tafel_TopPNL.Controls.Add(this.label34);
+            this.Tafel_TopPNL.Controls.Add(this.label35);
+            this.Tafel_TopPNL.Controls.Add(this.button21);
+            this.Tafel_TopPNL.Controls.Add(this.panel19);
+            this.Tafel_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.Tafel_TopPNL.Name = "Tafel_TopPNL";
+            this.Tafel_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.Tafel_TopPNL.TabIndex = 35;
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.White;
+            this.button20.Image = global::UI.Properties.Resources.logout__3_;
+            this.button20.Location = new System.Drawing.Point(41, 11);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(51, 51);
+            this.button20.TabIndex = 16;
+            this.button20.UseVisualStyleBackColor = false;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label34.Location = new System.Drawing.Point(505, 34);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(63, 30);
+            this.label34.TabIndex = 13;
+            this.label34.Text = "Date";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label35.Location = new System.Drawing.Point(605, 34);
+            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(66, 30);
+            this.label35.TabIndex = 14;
+            this.label35.Text = "Time";
+            // 
+            // button21
+            // 
+            this.button21.BackColor = System.Drawing.Color.White;
+            this.button21.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button21.Location = new System.Drawing.Point(119, 11);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(58, 49);
+            this.button21.TabIndex = 32;
+            this.button21.UseVisualStyleBackColor = false;
+            // 
+            // panel19
+            // 
+            this.panel19.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel19.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel19.Location = new System.Drawing.Point(302, 11);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(113, 51);
+            this.panel19.TabIndex = 33;
+            // 
+            // TafelNummer_TopPNL
+            // 
+            this.TafelNummer_TopPNL.BackColor = System.Drawing.Color.White;
+            this.TafelNummer_TopPNL.Controls.Add(this.button22);
+            this.TafelNummer_TopPNL.Controls.Add(this.label36);
+            this.TafelNummer_TopPNL.Controls.Add(this.label37);
+            this.TafelNummer_TopPNL.Controls.Add(this.button23);
+            this.TafelNummer_TopPNL.Controls.Add(this.panel21);
+            this.TafelNummer_TopPNL.Location = new System.Drawing.Point(0, 0);
+            this.TafelNummer_TopPNL.Name = "TafelNummer_TopPNL";
+            this.TafelNummer_TopPNL.Size = new System.Drawing.Size(719, 67);
+            this.TafelNummer_TopPNL.TabIndex = 35;
+            // 
+            // button22
+            // 
+            this.button22.BackColor = System.Drawing.Color.White;
+            this.button22.Image = global::UI.Properties.Resources.logout__3_;
+            this.button22.Location = new System.Drawing.Point(41, 11);
+            this.button22.Margin = new System.Windows.Forms.Padding(2);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(51, 51);
+            this.button22.TabIndex = 16;
+            this.button22.UseVisualStyleBackColor = false;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label36.Location = new System.Drawing.Point(505, 34);
+            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(63, 30);
+            this.label36.TabIndex = 13;
+            this.label36.Text = "Date";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Tai Le", 12F);
+            this.label37.Location = new System.Drawing.Point(605, 34);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(66, 30);
+            this.label37.TabIndex = 14;
+            this.label37.Text = "Time";
+            // 
+            // button23
+            // 
+            this.button23.BackColor = System.Drawing.Color.White;
+            this.button23.Image = global::UI.Properties.Resources.android_icon_36x36;
+            this.button23.Location = new System.Drawing.Point(119, 11);
+            this.button23.Margin = new System.Windows.Forms.Padding(2);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(58, 49);
+            this.button23.TabIndex = 32;
+            this.button23.UseVisualStyleBackColor = false;
+            // 
+            // panel21
+            // 
+            this.panel21.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.panel21.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.panel21.Location = new System.Drawing.Point(302, 11);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(113, 51);
+            this.panel21.TabIndex = 33;
             // 
             // Bediening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(724, 1049);
-            this.Controls.Add(this.OverzichtPNL);
-            this.Controls.Add(this.TafelNummerPNL);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.LunchPNL);
-            this.Controls.Add(this.TafelPNL);
+            this.ClientSize = new System.Drawing.Size(724, 1045);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.DinerPNL);
-            this.Controls.Add(this.WijzigenPNL);
+            this.Controls.Add(this.TafelPNL);
+            this.Controls.Add(this.TafelNummerPNL);
+            this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.LunchPNL);
+            this.Controls.Add(this.AfrekenenPNL);
             this.Controls.Add(this.BestellingPNL);
+            this.Controls.Add(this.AfgerondPNL);
+            this.Controls.Add(this.RekeningPNL);
+            this.Controls.Add(this.WijzigenPNL);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1974,8 +2935,43 @@
             this.DNDropdown.ResumeLayout(false);
             this.DinerPNL.ResumeLayout(false);
             this.DinerPNL.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Overzicht_TopPNL.ResumeLayout(false);
+            this.Overzicht_TopPNL.PerformLayout();
+            this.AfgerondPNL.ResumeLayout(false);
+            this.AfgerondPNL.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.AfrekenenPNL.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.RekeningPNL.ResumeLayout(false);
+            this.RekeningPNL.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.Bestelling_TopPNL.ResumeLayout(false);
+            this.Bestelling_TopPNL.PerformLayout();
+            this.Rekening_TopPNL.ResumeLayout(false);
+            this.Rekening_TopPNL.PerformLayout();
+            this.Afgerond_TopPNL.ResumeLayout(false);
+            this.Afgerond_TopPNL.PerformLayout();
+            this.Afrekenen_TopPNL.ResumeLayout(false);
+            this.Afrekenen_TopPNL.PerformLayout();
+            this.Drank_TopPNL.ResumeLayout(false);
+            this.Drank_TopPNL.PerformLayout();
+            this.Diner_TopPNL.ResumeLayout(false);
+            this.Diner_TopPNL.PerformLayout();
+            this.Lunch_TopPNL.ResumeLayout(false);
+            this.Lunch_TopPNL.PerformLayout();
+            this.Tafel_TopPNL.ResumeLayout(false);
+            this.Tafel_TopPNL.PerformLayout();
+            this.TafelNummer_TopPNL.ResumeLayout(false);
+            this.TafelNummer_TopPNL.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2144,6 +3140,84 @@
         private System.Windows.Forms.ColumnHeader BOID;
         private System.Windows.Forms.ColumnHeader BONaam;
         private System.Windows.Forms.ColumnHeader BOAantal;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Overzicht_TopPNL;
+        private System.Windows.Forms.Panel Tafel_TopPNL;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel TafelNummer_TopPNL;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel Bestelling_TopPNL;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel Lunch_TopPNL;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Panel Drank_TopPNL;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel Diner_TopPNL;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel AfgerondPNL;
+        private System.Windows.Forms.Panel Afgerond_TopPNL;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel AfrekenenPNL;
+        private System.Windows.Forms.Panel Afrekenen_TopPNL;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel RekeningPNL;
+        private System.Windows.Forms.Panel Rekening_TopPNL;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label13;
     }
 }
