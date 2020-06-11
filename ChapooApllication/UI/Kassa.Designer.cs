@@ -109,20 +109,20 @@
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pnl_KassaVoorraadoverzichtDrank = new System.Windows.Forms.Panel();
+            this.pnl_KassaVoorraadoverzicht = new System.Windows.Forms.Panel();
             this.pictureBx_TerugNaarHoofdscherm5_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
             this.btnMenuOverzicht_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
             this.btnBestellingen_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
             this.btnVoorraad_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
-            this.btnVerwijderen_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
-            this.btnWijzigen_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
+            this.btnVerwijderen_VoorraadOverzicht = new System.Windows.Forms.Button();
+            this.btnWijzigen_VoorraadOverzicht = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtAantal_DrankVoorraadOverzicht = new System.Windows.Forms.TextBox();
-            this.txtProduct_DrankVoorraadOverzicht = new System.Windows.Forms.TextBox();
-            this.listView_DrankVoorraadOverzicht = new System.Windows.Forms.ListView();
+            this.txtAantal_VoorraadOverzicht = new System.Windows.Forms.TextBox();
+            this.txtProduct_VoorraadOverzicht = new System.Windows.Forms.TextBox();
+            this.listView_VoorraadOverzicht = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label17 = new System.Windows.Forms.Label();
@@ -176,30 +176,30 @@
             this.btnDrankMenu_MenuoverzichtKeuze = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.pnl_KassaDrankMenuoverzicht = new System.Windows.Forms.Panel();
+            this.pnl_MenuOverzicht = new System.Windows.Forms.Panel();
             this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBox_Terug_DrankmenuoverzichtKassa = new System.Windows.Forms.PictureBox();
-            this.btnToevoegen_DrankMenuOverzicht = new System.Windows.Forms.Button();
+            this.btnToevoegen_MenuOverzicht = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtPrijs_DrankMenuOverzicht = new System.Windows.Forms.TextBox();
+            this.txtPrijs_MenuOverzicht = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtMenuSoort_DrankMenuOverzicht = new System.Windows.Forms.TextBox();
+            this.txtMenuSoort_MenuOverzicht = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.txtCategorie_DrankMenuOverzicht = new System.Windows.Forms.TextBox();
+            this.txtCategorie_MenuOverzicht = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.txtBTW_DrankMenuOverzicht = new System.Windows.Forms.TextBox();
+            this.txtBTW_MenuOverzicht = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtInVoorraad_DrankMenuOverzicht = new System.Windows.Forms.TextBox();
+            this.txtInVoorraad_MenuOverzicht = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.txtOmschrijving_DrankMenuOverzicht = new System.Windows.Forms.TextBox();
+            this.txtOmschrijving_MenuOverzicht = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtID_DrankMenuOverzicht = new System.Windows.Forms.TextBox();
+            this.txtID_MenuOverzicht = new System.Windows.Forms.TextBox();
             this.btnPersoneelsbeheer_DrankMenuOverzicht = new System.Windows.Forms.Button();
             this.btnMenuOverzicht_DrankMenuOverzicht = new System.Windows.Forms.Button();
             this.btnBestellingen_DrankMenuOverzicht = new System.Windows.Forms.Button();
             this.btnVoorraad_DrankMenuOverzicht = new System.Windows.Forms.Button();
-            this.btnVerwijderen_DrankMenuOverzicht = new System.Windows.Forms.Button();
-            this.btnWijzigen_DrankMenuOverzicht = new System.Windows.Forms.Button();
+            this.btnVerwijderen_MenuOverzicht = new System.Windows.Forms.Button();
+            this.btnWijzigen_MenuOverzicht = new System.Windows.Forms.Button();
             this.lv_MenuOverzicht = new System.Windows.Forms.ListView();
             this.drankmenuID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuOmschrijving = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -252,7 +252,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBx_Uitloggen_Kassa = new System.Windows.Forms.PictureBox();
             this.pnl_KassaHoofdscherm = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_MessageBox = new System.Windows.Forms.Panel();
+            this.btn_OKMessageBox = new System.Windows.Forms.Button();
+            this.lbl_MessageBox = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnl_KassaKeuzeBestellingen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugKeuzebestelling_Kassa)).BeginInit();
@@ -271,7 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm4_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.pnl_KassaVoorraadoverzichtDrank.SuspendLayout();
+            this.pnl_KassaVoorraadoverzicht.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm5_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugDrankvoorraadOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -287,7 +290,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugMenuOverzichtKeuze_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.pnl_KassaDrankMenuoverzicht.SuspendLayout();
+            this.pnl_MenuOverzicht.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Terug_DrankmenuoverzichtKassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -297,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).BeginInit();
             this.pnl_KassaHoofdscherm.SuspendLayout();
+            this.pnl_MessageBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -650,6 +654,8 @@
             // pnl_KassaPersoneelsbeheer
             // 
             this.pnl_KassaPersoneelsbeheer.BackColor = System.Drawing.Color.White;
+            this.pnl_KassaPersoneelsbeheer.Controls.Add(this.comboBox1);
+            this.pnl_KassaPersoneelsbeheer.Controls.Add(this.pnl_MessageBox);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.txt_InlogcodePersoneelsbeheer);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.label48);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.txt_TypePersoneelsbeheer);
@@ -1095,28 +1101,28 @@
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
             // 
-            // pnl_KassaVoorraadoverzichtDrank
+            // pnl_KassaVoorraadoverzicht
             // 
-            this.pnl_KassaVoorraadoverzichtDrank.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.pictureBx_TerugNaarHoofdscherm5_Kassa);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.pictureBx_TerugDrankvoorraadOverzicht_Kassa);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.btnPersoneelsbeheer_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.btnMenuOverzicht_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.btnBestellingen_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.btnVoorraad_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.btnVerwijderen_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.btnWijzigen_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.label15);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.label16);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.txtAantal_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.txtProduct_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.listView_DrankVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.label17);
-            this.pnl_KassaVoorraadoverzichtDrank.Controls.Add(this.pictureBox7);
-            this.pnl_KassaVoorraadoverzichtDrank.Location = new System.Drawing.Point(0, 0);
-            this.pnl_KassaVoorraadoverzichtDrank.Name = "pnl_KassaVoorraadoverzichtDrank";
-            this.pnl_KassaVoorraadoverzichtDrank.Size = new System.Drawing.Size(1005, 730);
-            this.pnl_KassaVoorraadoverzichtDrank.TabIndex = 27;
+            this.pnl_KassaVoorraadoverzicht.BackColor = System.Drawing.Color.White;
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.pictureBx_TerugNaarHoofdscherm5_Kassa);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.pictureBx_TerugDrankvoorraadOverzicht_Kassa);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnPersoneelsbeheer_DrankVoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnMenuOverzicht_DrankVoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnBestellingen_DrankVoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnVoorraad_DrankVoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnVerwijderen_VoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnWijzigen_VoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.label15);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.label16);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.txtAantal_VoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.txtProduct_VoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.listView_VoorraadOverzicht);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.label17);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.pictureBox7);
+            this.pnl_KassaVoorraadoverzicht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_KassaVoorraadoverzicht.Name = "pnl_KassaVoorraadoverzicht";
+            this.pnl_KassaVoorraadoverzicht.Size = new System.Drawing.Size(1005, 730);
+            this.pnl_KassaVoorraadoverzicht.TabIndex = 27;
             // 
             // pictureBx_TerugNaarHoofdscherm5_Kassa
             // 
@@ -1180,25 +1186,25 @@
             this.btnVoorraad_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
             this.btnVoorraad_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnVoorraad_DrankVoorraadOverzicht_Click);
             // 
-            // btnVerwijderen_DrankVoorraadOverzicht
+            // btnVerwijderen_VoorraadOverzicht
             // 
-            this.btnVerwijderen_DrankVoorraadOverzicht.Location = new System.Drawing.Point(836, 327);
-            this.btnVerwijderen_DrankVoorraadOverzicht.Name = "btnVerwijderen_DrankVoorraadOverzicht";
-            this.btnVerwijderen_DrankVoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
-            this.btnVerwijderen_DrankVoorraadOverzicht.TabIndex = 22;
-            this.btnVerwijderen_DrankVoorraadOverzicht.Text = "Verwijderen";
-            this.btnVerwijderen_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
-            this.btnVerwijderen_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankVoorraadOverzicht_Click);
+            this.btnVerwijderen_VoorraadOverzicht.Location = new System.Drawing.Point(836, 327);
+            this.btnVerwijderen_VoorraadOverzicht.Name = "btnVerwijderen_VoorraadOverzicht";
+            this.btnVerwijderen_VoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
+            this.btnVerwijderen_VoorraadOverzicht.TabIndex = 22;
+            this.btnVerwijderen_VoorraadOverzicht.Text = "Verwijderen";
+            this.btnVerwijderen_VoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_VoorraadOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankVoorraadOverzicht_Click);
             // 
-            // btnWijzigen_DrankVoorraadOverzicht
+            // btnWijzigen_VoorraadOverzicht
             // 
-            this.btnWijzigen_DrankVoorraadOverzicht.Location = new System.Drawing.Point(836, 265);
-            this.btnWijzigen_DrankVoorraadOverzicht.Name = "btnWijzigen_DrankVoorraadOverzicht";
-            this.btnWijzigen_DrankVoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
-            this.btnWijzigen_DrankVoorraadOverzicht.TabIndex = 21;
-            this.btnWijzigen_DrankVoorraadOverzicht.Text = "Wijziging opslaan";
-            this.btnWijzigen_DrankVoorraadOverzicht.UseVisualStyleBackColor = true;
-            this.btnWijzigen_DrankVoorraadOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankVoorraadOverzicht_Click);
+            this.btnWijzigen_VoorraadOverzicht.Location = new System.Drawing.Point(836, 265);
+            this.btnWijzigen_VoorraadOverzicht.Name = "btnWijzigen_VoorraadOverzicht";
+            this.btnWijzigen_VoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
+            this.btnWijzigen_VoorraadOverzicht.TabIndex = 21;
+            this.btnWijzigen_VoorraadOverzicht.Text = "Wijziging opslaan";
+            this.btnWijzigen_VoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_VoorraadOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankVoorraadOverzicht_Click);
             // 
             // label15
             // 
@@ -1218,33 +1224,33 @@
             this.label16.TabIndex = 19;
             this.label16.Text = "Product";
             // 
-            // txtAantal_DrankVoorraadOverzicht
+            // txtAantal_VoorraadOverzicht
             // 
-            this.txtAantal_DrankVoorraadOverzicht.Location = new System.Drawing.Point(843, 212);
-            this.txtAantal_DrankVoorraadOverzicht.Name = "txtAantal_DrankVoorraadOverzicht";
-            this.txtAantal_DrankVoorraadOverzicht.Size = new System.Drawing.Size(100, 20);
-            this.txtAantal_DrankVoorraadOverzicht.TabIndex = 18;
+            this.txtAantal_VoorraadOverzicht.Location = new System.Drawing.Point(843, 212);
+            this.txtAantal_VoorraadOverzicht.Name = "txtAantal_VoorraadOverzicht";
+            this.txtAantal_VoorraadOverzicht.Size = new System.Drawing.Size(100, 20);
+            this.txtAantal_VoorraadOverzicht.TabIndex = 18;
             // 
-            // txtProduct_DrankVoorraadOverzicht
+            // txtProduct_VoorraadOverzicht
             // 
-            this.txtProduct_DrankVoorraadOverzicht.Location = new System.Drawing.Point(843, 166);
-            this.txtProduct_DrankVoorraadOverzicht.Name = "txtProduct_DrankVoorraadOverzicht";
-            this.txtProduct_DrankVoorraadOverzicht.Size = new System.Drawing.Size(100, 20);
-            this.txtProduct_DrankVoorraadOverzicht.TabIndex = 17;
+            this.txtProduct_VoorraadOverzicht.Location = new System.Drawing.Point(843, 166);
+            this.txtProduct_VoorraadOverzicht.Name = "txtProduct_VoorraadOverzicht";
+            this.txtProduct_VoorraadOverzicht.Size = new System.Drawing.Size(100, 20);
+            this.txtProduct_VoorraadOverzicht.TabIndex = 17;
             // 
-            // listView_DrankVoorraadOverzicht
+            // listView_VoorraadOverzicht
             // 
-            this.listView_DrankVoorraadOverzicht.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView_VoorraadOverzicht.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView_DrankVoorraadOverzicht.HideSelection = false;
-            this.listView_DrankVoorraadOverzicht.Location = new System.Drawing.Point(203, 118);
-            this.listView_DrankVoorraadOverzicht.Name = "listView_DrankVoorraadOverzicht";
-            this.listView_DrankVoorraadOverzicht.Size = new System.Drawing.Size(608, 596);
-            this.listView_DrankVoorraadOverzicht.TabIndex = 16;
-            this.listView_DrankVoorraadOverzicht.UseCompatibleStateImageBehavior = false;
-            this.listView_DrankVoorraadOverzicht.View = System.Windows.Forms.View.Details;
-            this.listView_DrankVoorraadOverzicht.SelectedIndexChanged += new System.EventHandler(this.listView_DrankVoorraadOverzicht_SelectedIndexChanged);
+            this.listView_VoorraadOverzicht.HideSelection = false;
+            this.listView_VoorraadOverzicht.Location = new System.Drawing.Point(203, 118);
+            this.listView_VoorraadOverzicht.Name = "listView_VoorraadOverzicht";
+            this.listView_VoorraadOverzicht.Size = new System.Drawing.Size(608, 596);
+            this.listView_VoorraadOverzicht.TabIndex = 16;
+            this.listView_VoorraadOverzicht.UseCompatibleStateImageBehavior = false;
+            this.listView_VoorraadOverzicht.View = System.Windows.Forms.View.Details;
+            this.listView_VoorraadOverzicht.SelectedIndexChanged += new System.EventHandler(this.listView_DrankVoorraadOverzicht_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -1261,9 +1267,9 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(597, 6);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(153, 13);
+            this.label17.Size = new System.Drawing.Size(127, 13);
             this.label17.TabIndex = 15;
-            this.label17.Text = "Drankvoorraadoverzicht Kassa";
+            this.label17.Text = "voorraad overzicht Kassa";
             // 
             // pictureBox7
             // 
@@ -1747,39 +1753,39 @@
             this.label19.TabIndex = 11;
             this.label19.Text = "menuoverzicht keuze";
             // 
-            // pnl_KassaDrankMenuoverzicht
+            // pnl_MenuOverzicht
             // 
-            this.pnl_KassaDrankMenuoverzicht.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.pictureBox_Terug_DrankmenuoverzichtKassa);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.btnToevoegen_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label29);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.txtPrijs_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label28);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.txtMenuSoort_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label27);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.txtCategorie_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label26);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.txtBTW_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label25);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.txtInVoorraad_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label24);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.txtOmschrijving_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.label23);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.txtID_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.btnPersoneelsbeheer_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.btnMenuOverzicht_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.btnBestellingen_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.btnVoorraad_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.btnVerwijderen_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.btnWijzigen_DrankMenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.lv_MenuOverzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.lbl_Overzicht);
-            this.pnl_KassaDrankMenuoverzicht.Controls.Add(this.pictureBox10);
-            this.pnl_KassaDrankMenuoverzicht.Location = new System.Drawing.Point(0, 0);
-            this.pnl_KassaDrankMenuoverzicht.Name = "pnl_KassaDrankMenuoverzicht";
-            this.pnl_KassaDrankMenuoverzicht.Size = new System.Drawing.Size(1008, 736);
-            this.pnl_KassaDrankMenuoverzicht.TabIndex = 16;
+            this.pnl_MenuOverzicht.BackColor = System.Drawing.Color.White;
+            this.pnl_MenuOverzicht.Controls.Add(this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa);
+            this.pnl_MenuOverzicht.Controls.Add(this.pictureBox_Terug_DrankmenuoverzichtKassa);
+            this.pnl_MenuOverzicht.Controls.Add(this.btnToevoegen_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.label29);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtPrijs_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.label28);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtMenuSoort_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.label27);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtCategorie_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.label26);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtBTW_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.label25);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtInVoorraad_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.label24);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtOmschrijving_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.label23);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtID_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.btnPersoneelsbeheer_DrankMenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.btnMenuOverzicht_DrankMenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.btnBestellingen_DrankMenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.btnVoorraad_DrankMenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.btnVerwijderen_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.btnWijzigen_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.lv_MenuOverzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.lbl_Overzicht);
+            this.pnl_MenuOverzicht.Controls.Add(this.pictureBox10);
+            this.pnl_MenuOverzicht.Location = new System.Drawing.Point(0, 0);
+            this.pnl_MenuOverzicht.Name = "pnl_MenuOverzicht";
+            this.pnl_MenuOverzicht.Size = new System.Drawing.Size(1008, 736);
+            this.pnl_MenuOverzicht.TabIndex = 16;
             // 
             // pictureBx_TerugNaarHoofdschermDrankMenu_Kassa
             // 
@@ -1803,15 +1809,15 @@
             this.pictureBox_Terug_DrankmenuoverzichtKassa.TabStop = false;
             this.pictureBox_Terug_DrankmenuoverzichtKassa.Click += new System.EventHandler(this.pictureBox_Terug_DrankmenuoverzichtKassa_Click);
             // 
-            // btnToevoegen_DrankMenuOverzicht
+            // btnToevoegen_MenuOverzicht
             // 
-            this.btnToevoegen_DrankMenuOverzicht.Location = new System.Drawing.Point(342, 606);
-            this.btnToevoegen_DrankMenuOverzicht.Name = "btnToevoegen_DrankMenuOverzicht";
-            this.btnToevoegen_DrankMenuOverzicht.Size = new System.Drawing.Size(167, 55);
-            this.btnToevoegen_DrankMenuOverzicht.TabIndex = 54;
-            this.btnToevoegen_DrankMenuOverzicht.Text = "Toevoegen";
-            this.btnToevoegen_DrankMenuOverzicht.UseVisualStyleBackColor = true;
-            this.btnToevoegen_DrankMenuOverzicht.Click += new System.EventHandler(this.btnToevoegen_DrankMenuOverzicht_Click);
+            this.btnToevoegen_MenuOverzicht.Location = new System.Drawing.Point(342, 606);
+            this.btnToevoegen_MenuOverzicht.Name = "btnToevoegen_MenuOverzicht";
+            this.btnToevoegen_MenuOverzicht.Size = new System.Drawing.Size(167, 55);
+            this.btnToevoegen_MenuOverzicht.TabIndex = 54;
+            this.btnToevoegen_MenuOverzicht.Text = "Toevoegen";
+            this.btnToevoegen_MenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnToevoegen_MenuOverzicht.Click += new System.EventHandler(this.btnToevoegen_DrankMenuOverzicht_Click);
             // 
             // label29
             // 
@@ -1822,12 +1828,12 @@
             this.label29.TabIndex = 53;
             this.label29.Text = "Prijs";
             // 
-            // txtPrijs_DrankMenuOverzicht
+            // txtPrijs_MenuOverzicht
             // 
-            this.txtPrijs_DrankMenuOverzicht.Location = new System.Drawing.Point(752, 536);
-            this.txtPrijs_DrankMenuOverzicht.Name = "txtPrijs_DrankMenuOverzicht";
-            this.txtPrijs_DrankMenuOverzicht.Size = new System.Drawing.Size(56, 20);
-            this.txtPrijs_DrankMenuOverzicht.TabIndex = 52;
+            this.txtPrijs_MenuOverzicht.Location = new System.Drawing.Point(752, 536);
+            this.txtPrijs_MenuOverzicht.Name = "txtPrijs_MenuOverzicht";
+            this.txtPrijs_MenuOverzicht.Size = new System.Drawing.Size(56, 20);
+            this.txtPrijs_MenuOverzicht.TabIndex = 52;
             // 
             // label28
             // 
@@ -1838,12 +1844,12 @@
             this.label28.TabIndex = 51;
             this.label28.Text = "Menu Soort";
             // 
-            // txtMenuSoort_DrankMenuOverzicht
+            // txtMenuSoort_MenuOverzicht
             // 
-            this.txtMenuSoort_DrankMenuOverzicht.Location = new System.Drawing.Point(625, 536);
-            this.txtMenuSoort_DrankMenuOverzicht.Name = "txtMenuSoort_DrankMenuOverzicht";
-            this.txtMenuSoort_DrankMenuOverzicht.Size = new System.Drawing.Size(100, 20);
-            this.txtMenuSoort_DrankMenuOverzicht.TabIndex = 50;
+            this.txtMenuSoort_MenuOverzicht.Location = new System.Drawing.Point(625, 536);
+            this.txtMenuSoort_MenuOverzicht.Name = "txtMenuSoort_MenuOverzicht";
+            this.txtMenuSoort_MenuOverzicht.Size = new System.Drawing.Size(100, 20);
+            this.txtMenuSoort_MenuOverzicht.TabIndex = 50;
             // 
             // label27
             // 
@@ -1854,12 +1860,12 @@
             this.label27.TabIndex = 49;
             this.label27.Text = "Categorie";
             // 
-            // txtCategorie_DrankMenuOverzicht
+            // txtCategorie_MenuOverzicht
             // 
-            this.txtCategorie_DrankMenuOverzicht.Location = new System.Drawing.Point(513, 536);
-            this.txtCategorie_DrankMenuOverzicht.Name = "txtCategorie_DrankMenuOverzicht";
-            this.txtCategorie_DrankMenuOverzicht.Size = new System.Drawing.Size(100, 20);
-            this.txtCategorie_DrankMenuOverzicht.TabIndex = 48;
+            this.txtCategorie_MenuOverzicht.Location = new System.Drawing.Point(513, 536);
+            this.txtCategorie_MenuOverzicht.Name = "txtCategorie_MenuOverzicht";
+            this.txtCategorie_MenuOverzicht.Size = new System.Drawing.Size(100, 20);
+            this.txtCategorie_MenuOverzicht.TabIndex = 48;
             // 
             // label26
             // 
@@ -1870,12 +1876,12 @@
             this.label26.TabIndex = 47;
             this.label26.Text = "BTW";
             // 
-            // txtBTW_DrankMenuOverzicht
+            // txtBTW_MenuOverzicht
             // 
-            this.txtBTW_DrankMenuOverzicht.Location = new System.Drawing.Point(467, 535);
-            this.txtBTW_DrankMenuOverzicht.Name = "txtBTW_DrankMenuOverzicht";
-            this.txtBTW_DrankMenuOverzicht.Size = new System.Drawing.Size(29, 20);
-            this.txtBTW_DrankMenuOverzicht.TabIndex = 46;
+            this.txtBTW_MenuOverzicht.Location = new System.Drawing.Point(467, 535);
+            this.txtBTW_MenuOverzicht.Name = "txtBTW_MenuOverzicht";
+            this.txtBTW_MenuOverzicht.Size = new System.Drawing.Size(29, 20);
+            this.txtBTW_MenuOverzicht.TabIndex = 46;
             // 
             // label25
             // 
@@ -1886,12 +1892,12 @@
             this.label25.TabIndex = 45;
             this.label25.Text = "In voorraad";
             // 
-            // txtInVoorraad_DrankMenuOverzicht
+            // txtInVoorraad_MenuOverzicht
             // 
-            this.txtInVoorraad_DrankMenuOverzicht.Location = new System.Drawing.Point(389, 536);
-            this.txtInVoorraad_DrankMenuOverzicht.Name = "txtInVoorraad_DrankMenuOverzicht";
-            this.txtInVoorraad_DrankMenuOverzicht.Size = new System.Drawing.Size(58, 20);
-            this.txtInVoorraad_DrankMenuOverzicht.TabIndex = 44;
+            this.txtInVoorraad_MenuOverzicht.Location = new System.Drawing.Point(389, 536);
+            this.txtInVoorraad_MenuOverzicht.Name = "txtInVoorraad_MenuOverzicht";
+            this.txtInVoorraad_MenuOverzicht.Size = new System.Drawing.Size(58, 20);
+            this.txtInVoorraad_MenuOverzicht.TabIndex = 44;
             // 
             // label24
             // 
@@ -1902,12 +1908,12 @@
             this.label24.TabIndex = 43;
             this.label24.Text = "Omschrijving";
             // 
-            // txtOmschrijving_DrankMenuOverzicht
+            // txtOmschrijving_MenuOverzicht
             // 
-            this.txtOmschrijving_DrankMenuOverzicht.Location = new System.Drawing.Point(261, 535);
-            this.txtOmschrijving_DrankMenuOverzicht.Name = "txtOmschrijving_DrankMenuOverzicht";
-            this.txtOmschrijving_DrankMenuOverzicht.Size = new System.Drawing.Size(100, 20);
-            this.txtOmschrijving_DrankMenuOverzicht.TabIndex = 42;
+            this.txtOmschrijving_MenuOverzicht.Location = new System.Drawing.Point(261, 535);
+            this.txtOmschrijving_MenuOverzicht.Name = "txtOmschrijving_MenuOverzicht";
+            this.txtOmschrijving_MenuOverzicht.Size = new System.Drawing.Size(100, 20);
+            this.txtOmschrijving_MenuOverzicht.TabIndex = 42;
             // 
             // label23
             // 
@@ -1918,12 +1924,12 @@
             this.label23.TabIndex = 41;
             this.label23.Text = "ID";
             // 
-            // txtID_DrankMenuOverzicht
+            // txtID_MenuOverzicht
             // 
-            this.txtID_DrankMenuOverzicht.Location = new System.Drawing.Point(205, 534);
-            this.txtID_DrankMenuOverzicht.Name = "txtID_DrankMenuOverzicht";
-            this.txtID_DrankMenuOverzicht.Size = new System.Drawing.Size(39, 20);
-            this.txtID_DrankMenuOverzicht.TabIndex = 40;
+            this.txtID_MenuOverzicht.Location = new System.Drawing.Point(205, 534);
+            this.txtID_MenuOverzicht.Name = "txtID_MenuOverzicht";
+            this.txtID_MenuOverzicht.Size = new System.Drawing.Size(39, 20);
+            this.txtID_MenuOverzicht.TabIndex = 40;
             // 
             // btnPersoneelsbeheer_DrankMenuOverzicht
             // 
@@ -1965,25 +1971,25 @@
             this.btnVoorraad_DrankMenuOverzicht.UseVisualStyleBackColor = true;
             this.btnVoorraad_DrankMenuOverzicht.Click += new System.EventHandler(this.btnVoorraad_DrankMenuOverzicht_Click);
             // 
-            // btnVerwijderen_DrankMenuOverzicht
+            // btnVerwijderen_MenuOverzicht
             // 
-            this.btnVerwijderen_DrankMenuOverzicht.Location = new System.Drawing.Point(756, 606);
-            this.btnVerwijderen_DrankMenuOverzicht.Name = "btnVerwijderen_DrankMenuOverzicht";
-            this.btnVerwijderen_DrankMenuOverzicht.Size = new System.Drawing.Size(197, 55);
-            this.btnVerwijderen_DrankMenuOverzicht.TabIndex = 35;
-            this.btnVerwijderen_DrankMenuOverzicht.Text = "Verwijderen";
-            this.btnVerwijderen_DrankMenuOverzicht.UseVisualStyleBackColor = true;
-            this.btnVerwijderen_DrankMenuOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankMenuOverzicht_Click);
+            this.btnVerwijderen_MenuOverzicht.Location = new System.Drawing.Point(756, 606);
+            this.btnVerwijderen_MenuOverzicht.Name = "btnVerwijderen_MenuOverzicht";
+            this.btnVerwijderen_MenuOverzicht.Size = new System.Drawing.Size(197, 55);
+            this.btnVerwijderen_MenuOverzicht.TabIndex = 35;
+            this.btnVerwijderen_MenuOverzicht.Text = "Verwijderen";
+            this.btnVerwijderen_MenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_MenuOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankMenuOverzicht_Click);
             // 
-            // btnWijzigen_DrankMenuOverzicht
+            // btnWijzigen_MenuOverzicht
             // 
-            this.btnWijzigen_DrankMenuOverzicht.Location = new System.Drawing.Point(537, 606);
-            this.btnWijzigen_DrankMenuOverzicht.Name = "btnWijzigen_DrankMenuOverzicht";
-            this.btnWijzigen_DrankMenuOverzicht.Size = new System.Drawing.Size(188, 55);
-            this.btnWijzigen_DrankMenuOverzicht.TabIndex = 34;
-            this.btnWijzigen_DrankMenuOverzicht.Text = "Wijziging opslaan";
-            this.btnWijzigen_DrankMenuOverzicht.UseVisualStyleBackColor = true;
-            this.btnWijzigen_DrankMenuOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankMenuOverzicht_Click);
+            this.btnWijzigen_MenuOverzicht.Location = new System.Drawing.Point(537, 606);
+            this.btnWijzigen_MenuOverzicht.Name = "btnWijzigen_MenuOverzicht";
+            this.btnWijzigen_MenuOverzicht.Size = new System.Drawing.Size(188, 55);
+            this.btnWijzigen_MenuOverzicht.TabIndex = 34;
+            this.btnWijzigen_MenuOverzicht.Text = "Wijziging opslaan";
+            this.btnWijzigen_MenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_MenuOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankMenuOverzicht_Click);
             // 
             // lv_MenuOverzicht
             // 
@@ -2044,9 +2050,9 @@
             this.lbl_Overzicht.AutoSize = true;
             this.lbl_Overzicht.Location = new System.Drawing.Point(599, 14);
             this.lbl_Overzicht.Name = "lbl_Overzicht";
-            this.lbl_Overzicht.Size = new System.Drawing.Size(106, 13);
+            this.lbl_Overzicht.Size = new System.Drawing.Size(79, 13);
             this.lbl_Overzicht.TabIndex = 28;
-            this.lbl_Overzicht.Text = "drankmenu overzicht";
+            this.lbl_Overzicht.Text = "menu overzicht";
             // 
             // pictureBox10
             // 
@@ -2457,28 +2463,56 @@
             this.pnl_KassaHoofdscherm.Size = new System.Drawing.Size(1008, 736);
             this.pnl_KassaHoofdscherm.TabIndex = 35;
             // 
-            // panel1
+            // pnl_MessageBox
             // 
-            this.panel1.Location = new System.Drawing.Point(231, 152);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 72;
+            this.pnl_MessageBox.Controls.Add(this.lbl_MessageBox);
+            this.pnl_MessageBox.Controls.Add(this.btn_OKMessageBox);
+            this.pnl_MessageBox.Location = new System.Drawing.Point(301, 261);
+            this.pnl_MessageBox.Name = "pnl_MessageBox";
+            this.pnl_MessageBox.Size = new System.Drawing.Size(410, 169);
+            this.pnl_MessageBox.TabIndex = 72;
+            this.pnl_MessageBox.Visible = false;
+            // 
+            // btn_OKMessageBox
+            // 
+            this.btn_OKMessageBox.Location = new System.Drawing.Point(168, 99);
+            this.btn_OKMessageBox.Name = "btn_OKMessageBox";
+            this.btn_OKMessageBox.Size = new System.Drawing.Size(91, 46);
+            this.btn_OKMessageBox.TabIndex = 0;
+            this.btn_OKMessageBox.Text = "OK";
+            this.btn_OKMessageBox.UseVisualStyleBackColor = true;
+            // 
+            // lbl_MessageBox
+            // 
+            this.lbl_MessageBox.AutoSize = true;
+            this.lbl_MessageBox.Location = new System.Drawing.Point(148, 42);
+            this.lbl_MessageBox.Name = "lbl_MessageBox";
+            this.lbl_MessageBox.Size = new System.Drawing.Size(120, 13);
+            this.lbl_MessageBox.TabIndex = 1;
+            this.lbl_MessageBox.Text = "Dit is een tekst met test ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(760, 73);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 73;
             // 
             // Kassa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
+            this.Controls.Add(this.pnl_KassaHoofdscherm);
+            this.Controls.Add(this.pnl_KassaVoorraadoverzicht);
+            this.Controls.Add(this.pnl_KassaVoorraadKeuze);
+            this.Controls.Add(this.pnl_MenuOverzicht);
             this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
-            this.Controls.Add(this.pnl_KassaVoorraadKeuze);
-            this.Controls.Add(this.pnl_KassaVoorraadoverzichtDrank);
-            this.Controls.Add(this.pnl_KassaDrankMenuoverzicht);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
             this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
             this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
-            this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_KassaTafeloverzicht);
             this.Controls.Add(this.pnl_KassaLunchMenuoverizcht);
             this.Controls.Add(this.pnl_Inkomstenoverzicht);
@@ -2508,8 +2542,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm4_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.pnl_KassaVoorraadoverzichtDrank.ResumeLayout(false);
-            this.pnl_KassaVoorraadoverzichtDrank.PerformLayout();
+            this.pnl_KassaVoorraadoverzicht.ResumeLayout(false);
+            this.pnl_KassaVoorraadoverzicht.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm5_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugDrankvoorraadOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -2528,8 +2562,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugMenuOverzichtKeuze_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.pnl_KassaDrankMenuoverzicht.ResumeLayout(false);
-            this.pnl_KassaDrankMenuoverzicht.PerformLayout();
+            this.pnl_MenuOverzicht.ResumeLayout(false);
+            this.pnl_MenuOverzicht.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Terug_DrankmenuoverzichtKassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -2541,6 +2575,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).EndInit();
             this.pnl_KassaHoofdscherm.ResumeLayout(false);
             this.pnl_KassaHoofdscherm.PerformLayout();
+            this.pnl_MessageBox.ResumeLayout(false);
+            this.pnl_MessageBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2606,18 +2642,18 @@
         private System.Windows.Forms.Button btnVooraad_GerechtVoorraadOverzicht;
         private System.Windows.Forms.Button btnVerwijderen_GerechtvoorraadOverzicht;
         private System.Windows.Forms.Button btnWijzigen_GerechtVoorraadOverzicht;
-        private System.Windows.Forms.Panel pnl_KassaVoorraadoverzichtDrank;
+        private System.Windows.Forms.Panel pnl_KassaVoorraadoverzicht;
         private System.Windows.Forms.Button btnPersoneelsbeheer_DrankVoorraadOverzicht;
         private System.Windows.Forms.Button btnMenuOverzicht_DrankVoorraadOverzicht;
         private System.Windows.Forms.Button btnBestellingen_DrankVoorraadOverzicht;
         private System.Windows.Forms.Button btnVoorraad_DrankVoorraadOverzicht;
-        private System.Windows.Forms.Button btnVerwijderen_DrankVoorraadOverzicht;
-        private System.Windows.Forms.Button btnWijzigen_DrankVoorraadOverzicht;
+        private System.Windows.Forms.Button btnVerwijderen_VoorraadOverzicht;
+        private System.Windows.Forms.Button btnWijzigen_VoorraadOverzicht;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtAantal_DrankVoorraadOverzicht;
-        private System.Windows.Forms.TextBox txtProduct_DrankVoorraadOverzicht;
-        private System.Windows.Forms.ListView listView_DrankVoorraadOverzicht;
+        private System.Windows.Forms.TextBox txtAantal_VoorraadOverzicht;
+        private System.Windows.Forms.TextBox txtProduct_VoorraadOverzicht;
+        private System.Windows.Forms.ListView listView_VoorraadOverzicht;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Label label17;
@@ -2633,25 +2669,25 @@
         private System.Windows.Forms.Button btnDinerMenu_MenuoverzichtKeuze;
         private System.Windows.Forms.Button btnLunchMenu_MenuoverzichtKeuze;
         private System.Windows.Forms.Button btnDrankMenu_MenuoverzichtKeuze;
-        private System.Windows.Forms.Panel pnl_KassaDrankMenuoverzicht;
+        private System.Windows.Forms.Panel pnl_MenuOverzicht;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txtMenuSoort_DrankMenuOverzicht;
+        private System.Windows.Forms.TextBox txtMenuSoort_MenuOverzicht;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtCategorie_DrankMenuOverzicht;
+        private System.Windows.Forms.TextBox txtCategorie_MenuOverzicht;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txtBTW_DrankMenuOverzicht;
+        private System.Windows.Forms.TextBox txtBTW_MenuOverzicht;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txtInVoorraad_DrankMenuOverzicht;
+        private System.Windows.Forms.TextBox txtInVoorraad_MenuOverzicht;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtOmschrijving_DrankMenuOverzicht;
+        private System.Windows.Forms.TextBox txtOmschrijving_MenuOverzicht;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtID_DrankMenuOverzicht;
+        private System.Windows.Forms.TextBox txtID_MenuOverzicht;
         private System.Windows.Forms.Button btnPersoneelsbeheer_DrankMenuOverzicht;
         private System.Windows.Forms.Button btnMenuOverzicht_DrankMenuOverzicht;
         private System.Windows.Forms.Button btnBestellingen_DrankMenuOverzicht;
         private System.Windows.Forms.Button btnVoorraad_DrankMenuOverzicht;
-        private System.Windows.Forms.Button btnVerwijderen_DrankMenuOverzicht;
-        private System.Windows.Forms.Button btnWijzigen_DrankMenuOverzicht;
+        private System.Windows.Forms.Button btnVerwijderen_MenuOverzicht;
+        private System.Windows.Forms.Button btnWijzigen_MenuOverzicht;
         private System.Windows.Forms.ListView lv_MenuOverzicht;
         private System.Windows.Forms.ColumnHeader drankmenuID;
         private System.Windows.Forms.ColumnHeader drankmenuOmschrijving;
@@ -2662,9 +2698,9 @@
         private System.Windows.Forms.ColumnHeader drankmenuPrijs;
         private System.Windows.Forms.Label lbl_Overzicht;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Button btnToevoegen_DrankMenuOverzicht;
+        private System.Windows.Forms.Button btnToevoegen_MenuOverzicht;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox txtPrijs_DrankMenuOverzicht;
+        private System.Windows.Forms.TextBox txtPrijs_MenuOverzicht;
         private System.Windows.Forms.Panel pnl_KassaLunchMenuoverizcht;
         private System.Windows.Forms.Button btnToevoegen_Lunchmenuoverzicht;
         private System.Windows.Forms.Label label20;
@@ -2769,7 +2805,10 @@
         private System.Windows.Forms.PictureBox pictureBx_Uitloggen_Kassa;
         private System.Windows.Forms.Panel pnl_KassaHoofdscherm;
         private System.Windows.Forms.PictureBox pictureBx_TerugLunchMenu_Kassa;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_MessageBox;
+        private System.Windows.Forms.Label lbl_MessageBox;
+        private System.Windows.Forms.Button btn_OKMessageBox;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

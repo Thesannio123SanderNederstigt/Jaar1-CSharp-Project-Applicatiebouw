@@ -100,10 +100,10 @@ namespace ChapooDAL
         }
 
 
-        public void AddMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
+        public void AddMenuItem(string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
         {
-            string query = "INSERT INTO menuItem(ID, omschrijving, aantalvoorraad, btw, categorie, menukaartsoort, prijs) VALUES(@ID,@omschrijving,@inVoorraad,@BTW,@categorie,@menuSoort,@prijs)";
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@ID",ID), new SqlParameter("@omschrijving", omschrijving),
+            string query = "INSERT INTO menuItem(omschrijving, aantalvoorraad, btw, categorie, menukaartsoort, prijs) VALUES(@ID,@omschrijving,@inVoorraad,@BTW,@categorie,@menuSoort,@prijs)";
+            SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter("@omschrijving", omschrijving),
             new SqlParameter("@inVoorraad", inVoorraad),  new SqlParameter("@BTW", BTW),
             new SqlParameter("@categorie", categorie),  new SqlParameter("@menuSoort", menuSoort),  new SqlParameter("@prijs", prijs) };
             ExecuteEditQuery(query, sqlParameters);
@@ -112,7 +112,7 @@ namespace ChapooDAL
         public string EditAllMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
         {
             string query = "UPDATE MenuItem SET omschrijving = @omschrijving, aantalvoorraad = @inVoorraad, btw = @BTW, categorie = @categorie, menukaartsoort = @menuSoort, prijs = @prijs WHERE ID = @ID";
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@ID", ID), new SqlParameter("@omschrijving", omschrijving), new SqlParameter("@aantalvoorraad", inVoorraad), new SqlParameter("@BTW", BTW),
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@ID", ID), new SqlParameter("@omschrijving", omschrijving), new SqlParameter("@inVoorraad", inVoorraad), new SqlParameter("@BTW", BTW),
                 new SqlParameter("@categorie", categorie), new SqlParameter("@menuSoort", menuSoort), new SqlParameter("@prijs", prijs) };
             ExecuteEditQuery(query, sqlParameters);
             return "Menu item met succes aangepast!";
@@ -120,8 +120,8 @@ namespace ChapooDAL
         // Edit with product and aantal
         public string EditMenuItem(string product, int aantal)
         {
-            string query = "UPDATE MenuItem SET aantalvoorraad = @product WHERE omschrijving = @product AND aantal == @aantal";
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@product", product), new SqlParameter("@aantal", aantal) };
+            string query = "UPDATE MenuItem SET aantalvoorraad = @aantal WHERE omschrijving = @product";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@aantal", aantal), new SqlParameter("@product", product) };
             ExecuteEditQuery(query, sqlParameters);
             return "Menu item met succes aangepast!";
         }
@@ -129,9 +129,9 @@ namespace ChapooDAL
         // Delete with product and aantal
         public string DeleteMenuItem(string product, int aantal)
         {
-            string query = "DELETE FROM menuItem WHERE omschrijving = '@product' AND aantalvoorraad = @aantal";
+            string query = "DELETE FROM menuItem WHERE omschrijving = @product AND aantalvoorraad = @aantal";
 
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@omschrijving", product), new SqlParameter("@aantal", aantal) };
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@product", product), new SqlParameter("@aantal", aantal) };
             ExecuteEditQuery(query, sqlParameters);
             return "Menu item succesvol verwijderd!";
         }
