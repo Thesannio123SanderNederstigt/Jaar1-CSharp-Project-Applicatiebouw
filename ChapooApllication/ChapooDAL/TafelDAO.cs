@@ -12,29 +12,29 @@ namespace ChapooDAL
     public class TafelDAO : Connection
     {
         //gillian
-        public List<Tafel> GetTafels()
+        public List<Tafel> Get_Tafel_By_Order_Status()
         {
-            string query = "select T.ID as [tafelID],isnull( B.[tafelID], '0') as [tafelStatus]\n" +
-                            "from Bestelling as B right join Tafel as T on b.tafelID = t.ID";
+            string query = "select T.[ID] as [tafelID], isnull(B.[tafelID], '0') as [Besteld],COUNT(*)\n" +
+                            "from Tafel as T left join Bestelling as B on t.ID = b.tafelID\n" +
+                            "group by t.ID, b.tafelID having count(*) > '0' order by tafelID";
                             
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return LeesTafels(ExecuteSelectQuery(query, sqlParameters));
         }
-        //gillian
         private List<Tafel> LeesTafels(DataTable dataTable)
         {
             List<Tafel> tafel = new List<Tafel>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
+                
                 int TafelID = (int)dr["tafelID"];
-                int TafelStatus = (int)dr["tafelStatus"];
+                int TafelStatus = (int)dr["Besteld"];
                 Tafel tafels = new Tafel(TafelID, TafelStatus);
                 tafel.Add(tafels);
             }
             return tafel;
         }
-
         private List<Tafel> ReadTafels(DataTable dataTable)
         {
             List<Tafel> tafels = new List<Tafel>();
@@ -44,7 +44,7 @@ namespace ChapooDAL
                 int ID = (int)dr["ID"];
                 bool status = (bool)dr["status"];
                 int medewerkerID = (int)dr["medewerkerID"];
-                Tafel tafel = new  Tafel(ID, status, medewerkerID);
+                Tafel tafel = new Tafel(ID, status, medewerkerID);
                 tafels.Add(tafel);
             }
             return tafels;
@@ -74,16 +74,19 @@ namespace ChapooDAL
 
         private Tafel ReadTafel(DataTable dataTable)
         {
-        Tafel tafel = null;
+            Tafel tafel = null;
 
             foreach (DataRow dr in dataTable.Rows)
             {
-            int ID = (int)dr["ID"];
-            bool status = (bool)dr["status"];
-            int medewerkerID = (int)dr["medewerkerID"];
-            tafel = new Tafel(ID, status, medewerkerID);
+                int ID = (int)dr["ID"];
+                bool status = (bool)dr["status"];
+                int medewerkerID = (int)dr["medewerkerID"];
+                tafel = new Tafel(ID, status, medewerkerID);
             }
             return tafel;
         }
+
+
+
     }
 }

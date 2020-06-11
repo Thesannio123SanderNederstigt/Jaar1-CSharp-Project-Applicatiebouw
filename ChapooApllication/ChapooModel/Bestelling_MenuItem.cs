@@ -14,8 +14,9 @@ namespace ChapooModel
         public bool Status { get; set; }
         public string Opmerking { get; set; }
         public int MenuItemID { get; set; }
-        public int  BestellingID {get; set;}
+        public int BestellingID {get; set;}
         public int Aantal { get; set; }
         public string Omschrijving { get; set; }
+
     }
 }

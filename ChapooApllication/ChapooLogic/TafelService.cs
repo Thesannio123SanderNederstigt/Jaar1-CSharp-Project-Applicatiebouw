@@ -18,7 +18,7 @@ namespace ChapooLogic
         {
             try
             {
-                List<Tafel> tafellijst = Tafel_db.GetTafels();
+                List<Tafel> tafellijst = Tafel_db.Get_Tafel_By_Order_Status();
 
                 if(tafellijst == null)
                 {
@@ -86,15 +86,10 @@ namespace ChapooLogic
             return Tafel_db.GetTafelByStatus(status);
         }
 
-        public void Change_Status(int ID)
+       
+        public List<Tafel> TafelBeschikbaar()
         {
-           Tafel_db.Tafel_Status(ID);
-        }
-
-        // om de tafel status te krijgen 
-        public List<Tafel> GetTafel()
-        {
-            return Tafel_db.GetTafels();
+            return Tafel_db.Get_Tafel_By_Order_Status();
         }
     }
 }

@@ -158,7 +158,7 @@
             this.BTNItemAanpassen = new System.Windows.Forms.Button();
             this.BTNBestellingPlaatsen = new System.Windows.Forms.Button();
             this.BTNBestellingVerwijderen = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Text = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -225,7 +225,6 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.AfgerondPNL = new System.Windows.Forms.Panel();
             this.Afgerond_TopPNL = new System.Windows.Forms.Panel();
-            this.AfgerondExitBTN = new System.Windows.Forms.Button();
             this.AfgerondDateLBL = new System.Windows.Forms.Label();
             this.AfgerondTimeLBL = new System.Windows.Forms.Label();
             this.AfgerondTerugBTN = new System.Windows.Forms.Button();
@@ -236,7 +235,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.AfrekenenPNL = new System.Windows.Forms.Panel();
             this.Afrekenen_TopPNL = new System.Windows.Forms.Panel();
-            this.AfrekenenExitBTN = new System.Windows.Forms.Button();
             this.AfrekenenDateLBL = new System.Windows.Forms.Label();
             this.AfrekenenTimeLBL = new System.Windows.Forms.Label();
             this.AfrekenenTerugBTN = new System.Windows.Forms.Button();
@@ -252,7 +250,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.RekeningPNL = new System.Windows.Forms.Panel();
             this.Rekening_TopPNL = new System.Windows.Forms.Panel();
-            this.RekeningExitBTN = new System.Windows.Forms.Button();
             this.RekeningDateLBL = new System.Windows.Forms.Label();
             this.RekeningTimeLBL = new System.Windows.Forms.Label();
             this.RekeningTerugBTN = new System.Windows.Forms.Button();
@@ -1649,7 +1646,7 @@
             this.OverzichtPNL.Controls.Add(this.BTNItemAanpassen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingPlaatsen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingVerwijderen);
-            this.OverzichtPNL.Controls.Add(this.richTextBox1);
+            this.OverzichtPNL.Controls.Add(this.Text);
             this.OverzichtPNL.Controls.Add(this.label11);
             this.OverzichtPNL.Controls.Add(this.label10);
             this.OverzichtPNL.Controls.Add(this.label9);
@@ -1685,6 +1682,7 @@
             this.BTNBestellingPlaatsen.TabIndex = 30;
             this.BTNBestellingPlaatsen.Text = "Bevestig Bestelling";
             this.BTNBestellingPlaatsen.UseVisualStyleBackColor = false;
+            this.BTNBestellingPlaatsen.Click += new System.EventHandler(this.BTNBestellingPlaatsen_Click);
             // 
             // BTNBestellingVerwijderen
             // 
@@ -1698,13 +1696,13 @@
             this.BTNBestellingVerwijderen.UseVisualStyleBackColor = false;
             this.BTNBestellingVerwijderen.Click += new System.EventHandler(this.BTNBestellingVerwijderen_Click);
             // 
-            // richTextBox1
+            // Text
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(50, 672);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(625, 169);
-            this.richTextBox1.TabIndex = 28;
-            this.richTextBox1.Text = "";
+            this.Text.Location = new System.Drawing.Point(50, 672);
+            this.Text.Name = "Text";
+            this.Text.Size = new System.Drawing.Size(625, 169);
+            this.Text.TabIndex = 28;
+            this.Text.Text = "";
             // 
             // label11
             // 
@@ -1867,7 +1865,7 @@
             this.WijzigenPNL.Controls.Add(this.ALBLWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNMinWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNPlusWijzigen);
-            this.WijzigenPNL.Location = new System.Drawing.Point(60, 675);
+            this.WijzigenPNL.Location = new System.Drawing.Point(49, 659);
             this.WijzigenPNL.Name = "WijzigenPNL";
             this.WijzigenPNL.Size = new System.Drawing.Size(625, 309);
             this.WijzigenPNL.TabIndex = 31;
@@ -1876,22 +1874,26 @@
             // BTNWijzigingOplsaan
             // 
             this.BTNWijzigingOplsaan.BackColor = System.Drawing.Color.PaleGreen;
+            this.BTNWijzigingOplsaan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
             this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(307, 211);
             this.BTNWijzigingOplsaan.Name = "BTNWijzigingOplsaan";
             this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(317, 65);
             this.BTNWijzigingOplsaan.TabIndex = 44;
             this.BTNWijzigingOplsaan.Text = "Wijziging Opslaan";
             this.BTNWijzigingOplsaan.UseVisualStyleBackColor = false;
+            this.BTNWijzigingOplsaan.Click += new System.EventHandler(this.BTNWijzigingOplsaan_Click);
             // 
             // BTNItemVerwijderen
             // 
             this.BTNItemVerwijderen.BackColor = System.Drawing.Color.Salmon;
+            this.BTNItemVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
             this.BTNItemVerwijderen.Location = new System.Drawing.Point(-1, 211);
             this.BTNItemVerwijderen.Name = "BTNItemVerwijderen";
             this.BTNItemVerwijderen.Size = new System.Drawing.Size(302, 65);
             this.BTNItemVerwijderen.TabIndex = 43;
             this.BTNItemVerwijderen.Text = "Item Verwijderen";
             this.BTNItemVerwijderen.UseVisualStyleBackColor = false;
+            this.BTNItemVerwijderen.Click += new System.EventHandler(this.BTNItemVerwijderen_Click);
             // 
             // ALBLWijzigen
             // 
@@ -2339,7 +2341,6 @@
             // Afgerond_TopPNL
             // 
             this.Afgerond_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Afgerond_TopPNL.Controls.Add(this.AfgerondExitBTN);
             this.Afgerond_TopPNL.Controls.Add(this.AfgerondDateLBL);
             this.Afgerond_TopPNL.Controls.Add(this.AfgerondTimeLBL);
             this.Afgerond_TopPNL.Controls.Add(this.AfgerondTerugBTN);
@@ -2348,17 +2349,6 @@
             this.Afgerond_TopPNL.Name = "Afgerond_TopPNL";
             this.Afgerond_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Afgerond_TopPNL.TabIndex = 41;
-            // 
-            // AfgerondExitBTN
-            // 
-            this.AfgerondExitBTN.BackColor = System.Drawing.Color.White;
-            this.AfgerondExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.AfgerondExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.AfgerondExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.AfgerondExitBTN.Name = "AfgerondExitBTN";
-            this.AfgerondExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.AfgerondExitBTN.TabIndex = 16;
-            this.AfgerondExitBTN.UseVisualStyleBackColor = false;
             // 
             // AfgerondDateLBL
             // 
@@ -2462,7 +2452,6 @@
             // Afrekenen_TopPNL
             // 
             this.Afrekenen_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenExitBTN);
             this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenDateLBL);
             this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenTimeLBL);
             this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenTerugBTN);
@@ -2471,17 +2460,6 @@
             this.Afrekenen_TopPNL.Name = "Afrekenen_TopPNL";
             this.Afrekenen_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Afrekenen_TopPNL.TabIndex = 41;
-            // 
-            // AfrekenenExitBTN
-            // 
-            this.AfrekenenExitBTN.BackColor = System.Drawing.Color.White;
-            this.AfrekenenExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.AfrekenenExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.AfrekenenExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.AfrekenenExitBTN.Name = "AfrekenenExitBTN";
-            this.AfrekenenExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.AfrekenenExitBTN.TabIndex = 16;
-            this.AfrekenenExitBTN.UseVisualStyleBackColor = false;
             // 
             // AfrekenenDateLBL
             // 
@@ -2640,7 +2618,6 @@
             // Rekening_TopPNL
             // 
             this.Rekening_TopPNL.BackColor = System.Drawing.Color.White;
-            this.Rekening_TopPNL.Controls.Add(this.RekeningExitBTN);
             this.Rekening_TopPNL.Controls.Add(this.RekeningDateLBL);
             this.Rekening_TopPNL.Controls.Add(this.RekeningTimeLBL);
             this.Rekening_TopPNL.Controls.Add(this.RekeningTerugBTN);
@@ -2649,17 +2626,6 @@
             this.Rekening_TopPNL.Name = "Rekening_TopPNL";
             this.Rekening_TopPNL.Size = new System.Drawing.Size(719, 67);
             this.Rekening_TopPNL.TabIndex = 41;
-            // 
-            // RekeningExitBTN
-            // 
-            this.RekeningExitBTN.BackColor = System.Drawing.Color.White;
-            this.RekeningExitBTN.Image = global::UI.Properties.Resources.logout__3_;
-            this.RekeningExitBTN.Location = new System.Drawing.Point(41, 11);
-            this.RekeningExitBTN.Margin = new System.Windows.Forms.Padding(2);
-            this.RekeningExitBTN.Name = "RekeningExitBTN";
-            this.RekeningExitBTN.Size = new System.Drawing.Size(51, 51);
-            this.RekeningExitBTN.TabIndex = 16;
-            this.RekeningExitBTN.UseVisualStyleBackColor = false;
             // 
             // RekeningDateLBL
             // 
@@ -2789,24 +2755,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(726, 1047);
-            this.Controls.Add(this.TafelNummerPNL);
-            this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.DrankPNL);
+            this.Controls.Add(this.DinerPNL);
+            this.Controls.Add(this.WijzigenPNL);
+            this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.TafelPNL);
             this.Controls.Add(this.LunchPNL);
-            this.Controls.Add(this.DinerPNL);
             this.Controls.Add(this.AfrekenenPNL);
             this.Controls.Add(this.AfgerondPNL);
             this.Controls.Add(this.RekeningPNL);
-            this.Controls.Add(this.WijzigenPNL);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Bediening";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Bediening_Load);
             this.TafelPNL.ResumeLayout(false);
             this.Tafel_TopPNL.ResumeLayout(false);
@@ -2962,7 +2927,7 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox Text;
         private System.Windows.Forms.Button BTNItemAanpassen;
         private System.Windows.Forms.Button BTNBestellingPlaatsen;
         private System.Windows.Forms.Button BTNBestellingVerwijderen;
@@ -3088,7 +3053,6 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel AfgerondPNL;
         private System.Windows.Forms.Panel Afgerond_TopPNL;
-        private System.Windows.Forms.Button AfgerondExitBTN;
         private System.Windows.Forms.Label AfgerondDateLBL;
         private System.Windows.Forms.Label AfgerondTimeLBL;
         private System.Windows.Forms.Button AfgerondTerugBTN;
@@ -3099,7 +3063,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel AfrekenenPNL;
         private System.Windows.Forms.Panel Afrekenen_TopPNL;
-        private System.Windows.Forms.Button AfrekenenExitBTN;
         private System.Windows.Forms.Label AfrekenenDateLBL;
         private System.Windows.Forms.Label AfrekenenTimeLBL;
         private System.Windows.Forms.Button AfrekenenTerugBTN;
@@ -3115,7 +3078,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel RekeningPNL;
         private System.Windows.Forms.Panel Rekening_TopPNL;
-        private System.Windows.Forms.Button RekeningExitBTN;
         private System.Windows.Forms.Label RekeningDateLBL;
         private System.Windows.Forms.Label RekeningTimeLBL;
         private System.Windows.Forms.Button RekeningTerugBTN;

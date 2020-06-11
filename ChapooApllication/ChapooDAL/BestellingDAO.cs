@@ -232,8 +232,8 @@ namespace ChapooDAL
         public Bestelling Create_Bestelling(Tafel tafel)
         {
             string query = $"Insert Into [Bestelling] (besteltijd, [status], tafelID)" +
-                            $"Values ('{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff")}', 'False', '{tafel.ID}')" +
-                            $"update Tafel set [status] = 'False' where ID = '{tafel.ID}'";
+                            $"Values ('{DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss.fff")}', 'False', '{tafel.TafelID}')" +
+                            $"update Tafel set [status] = 'False' where ID = '{tafel.TafelID}'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query,sqlParameters);
 

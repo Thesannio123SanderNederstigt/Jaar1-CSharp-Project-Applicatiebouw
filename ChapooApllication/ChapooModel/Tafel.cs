@@ -23,10 +23,11 @@ namespace ChapooModel
             this.status = status;
             this.medewerkerID = medewerkerid;
         }
-        public Tafel(int tafelID, int tafelStatus)
+        public Tafel(int tafelID, int TafelStatus)
         {
             this.TafelID = tafelID;
-            this.TafelStatus = tafelStatus;
+            this.TafelStatus = TafelStatus;
         }
+        
     }
 }
