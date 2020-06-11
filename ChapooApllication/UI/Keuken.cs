@@ -44,7 +44,6 @@ namespace UI
                 inkomend = true;
                 SelectOrders();
             }
-
         }
 
 
@@ -541,16 +540,22 @@ namespace UI
         {
             foreach(Panel panel in this.Controls)
             {
-                foreach(Control groupbox in panel.Controls)
+                foreach(Control outerbox in panel.Controls)
                 {
-                    if(groupbox.GetType() == typeof(GroupBox))
+                    if(outerbox.GetType() == typeof(GroupBox))
                     {
-                        foreach(Control listview in groupbox.Controls)
+                        foreach(Control innerbox in outerbox.Controls)
                         {
-                            if(listview.GetType() == typeof(ListView))
+                            if(innerbox.GetType() == typeof(GroupBox))
                             {
-                                groupbox.Controls.Remove(listview);
-                            }
+                                foreach (Control listview in innerbox.Controls)
+                                {
+                                    if (listview.GetType() == typeof(ListView))
+                                    {
+                                        innerbox.Controls.Remove(listview);
+                                    }
+                                }
+                            }   
                         }
                     }
                 }
@@ -562,25 +567,33 @@ namespace UI
         {
             foreach (Panel panel in this.Controls)
             {
-                foreach (Control groupbox in panel.Controls)
+                foreach (Control outerbox in panel.Controls)
                 {
-                    if (groupbox.GetType() == typeof(GroupBox))
+                    if (outerbox.GetType() == typeof(GroupBox))
                     {
-                        foreach (Control label in groupbox.Controls)
-                        {
-                            if (label.GetType() == typeof(Label))
+                        foreach(Control innerbox in outerbox.Controls) {
+
+                            if(innerbox.GetType() == typeof(Label))
                             {
-                                if (label.Name.Contains("lbl_Bestelling"))
+                                innerbox.Text = "";
+                            }
+
+                            foreach (Control label in innerbox.Controls)
+                            {
+                                if (label.GetType() == typeof(Label))
                                 {
-                                    label.Text = "";
-                                }
-                                if (label.Name.Contains("Tijd"))
-                                {
-                                    label.Text = "";
-                                }
-                                if(label.Name.Contains("lbl_Bestellingen") & !label.Name.Contains("ID"))
-                                {
-                                    label.Text = "Tafel ";
+                                    if (label.Name.Contains("lbl_Bestelling"))
+                                    {
+                                        label.Text = "";
+                                    }
+                                    if (label.Name.Contains("Tijd"))
+                                    {
+                                        label.Text = "";
+                                    }
+                                    if (label.Name.Contains("lbl_Bestelling") & !label.Name.Contains("ID"))
+                                    {
+                                        label.Text = "Tafel ";
+                                    }
                                 }
                             }
                         }
@@ -594,13 +607,22 @@ namespace UI
         {
             foreach(Panel panel in this.Controls)
             {
-                foreach(Control groupbox in panel.Controls)
+                foreach(Control outerbox in panel.Controls)
                 {
-                    if(groupbox.GetType() == typeof(GroupBox))
+                    if(outerbox.GetType() == typeof(GroupBox)) 
                     {
-                        foreach(Control label in groupbox.Controls)
+                        foreach (Control innerbox in outerbox.Controls)
                         {
-                            label.ForeColor = SystemColors.GrayText;
+                            if (innerbox.GetType() == typeof(GroupBox))
+                            {
+                                foreach (Control label in innerbox.Controls)
+                                {
+                                    if (label.GetType() == typeof(Label))
+                                    {
+                                        label.ForeColor = SystemColors.GrayText;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -618,8 +640,11 @@ namespace UI
 
         private void btn_StartInkomende_Click(object sender, EventArgs e)
         {
+
             pnl_KeukenBarStart.Hide();
             LoadBinnenkomendeBestellingen();
+            ResetGroupBoxSystemColors();
+
         }
 
         private void btn_StartAfgeronde_Click(object sender, EventArgs e)
@@ -630,24 +655,27 @@ namespace UI
 
         private void btn_StartVoorraad_Click(object sender, EventArgs e)
         {
-            // Hide en Show de goede panels
-            HidePanels();
-
             this.Visible = false;
             Kassa kassa = new Kassa();
             kassa.Show();
-
-
         }
+        
 
         //eventhandlers/methoden binnen het pnl_BinnenkomendeBestellingen
         private void pictureBx_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
+            if(user == User.Eigenaar)
+            {
+                this.Visible = false;
+                Kassa kassa = new Kassa();
+                kassa.Show();
+            }
             pnl_BinnenkomendeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();
             ResetGroupBoxSystemColors();
             pnl_KeukenBarStart.Show();
+            
         }
 
 
@@ -773,11 +801,17 @@ namespace UI
         {
             foreach(Panel panel in this.Controls)
             {
-                foreach(Control groupbox in panel.Controls)
+                foreach (Control outerbox in panel.Controls)
                 {
-                    if(groupbox.GetType() == typeof(GroupBox))
+                    if (outerbox.GetType() == typeof(GroupBox))
                     {
-                        groupbox.BackColor = SystemColors.Control;
+                        foreach (Control innerbox in outerbox.Controls)
+                        {
+                            if(innerbox.GetType() == typeof(GroupBox))
+                            {
+                                innerbox.BackColor = SystemColors.Control;
+                            }
+                        }
                     }
                 }
             }
@@ -966,7 +1000,6 @@ namespace UI
                     li.SubItems.Add(b.ID.ToString());
                     listView_BestelItems.Items.Add(li);
                 }
-
             }
 
 
@@ -985,12 +1018,10 @@ namespace UI
         
         private void FillTafelPanel1()
         {
-
             string label = lbl_Bestelling1.Text;
             char last = lbl_Bestelling1.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd1.Text;
-
             int bestellingID = int.Parse(lbl_Bestelling1ID.Text);
 
             FillTafelPanel(label, last, num, bestellingID);
@@ -998,12 +1029,10 @@ namespace UI
 
         private void FillTafelPanel2()
         {
-
             string label = lbl_Bestelling2.Text;
             char last = lbl_Bestelling2.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd2.Text;
-
             int bestellingID = int.Parse(lbl_Bestelling2ID.Text);
 
             FillTafelPanel(label, last, num, bestellingID);
@@ -1011,12 +1040,10 @@ namespace UI
 
         private void FillTafelPanel3()
         {
-
             string label = lbl_Bestelling3.Text;
             char last = lbl_Bestelling3.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd3.Text;
-
             int bestellingID = int.Parse(lbl_Bestelling3ID.Text);
 
             FillTafelPanel(label, last, num, bestellingID);
@@ -1024,12 +1051,10 @@ namespace UI
 
         private void FillTafelPanel4()
         {
-
             string label = lbl_Bestelling4.Text;
             char last = lbl_Bestelling4.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd4.Text;
-
             int bestellingID = int.Parse(lbl_Bestelling4ID.Text);
 
             FillTafelPanel(label, last, num, bestellingID);
@@ -1037,12 +1062,10 @@ namespace UI
 
         private void FillTafelPanel5()
         {
-
             string label = lbl_Bestelling5.Text;
             char last = lbl_Bestelling5.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd5.Text;
-
             int bestellingID = int.Parse(lbl_Bestelling5ID.Text);
 
             FillTafelPanel(label, last, num, bestellingID);
@@ -1050,12 +1073,10 @@ namespace UI
 
         private void FillTafelPanel6()
         {
-
             string label = lbl_Bestelling6.Text;
             char last = lbl_Bestelling6.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd6.Text;
-
             int bestellingID = int.Parse(lbl_Bestelling6ID.Text);
 
             FillTafelPanel(label, last, num, bestellingID);
@@ -1063,12 +1084,10 @@ namespace UI
 
         private void FillTafelPanel7()
         {
-
             string label = lbl_Bestelling7.Text;
             char last = lbl_Bestelling7.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_DatumTijd.Text = lblTijd7.Text;
-
             int bestellingID = int.Parse(lbl_Bestelling7ID.Text);
 
             FillTafelPanel(label, last, num, bestellingID);
@@ -1076,7 +1095,6 @@ namespace UI
 
         private void FillTafelPanel8()
         {
-
             string label = lbl_Bestelling8.Text;
             char last = lbl_Bestelling8.Text.Last();
             int num = int.Parse(last.ToString());
@@ -1155,6 +1173,12 @@ namespace UI
         //eventhandlers/methoden die op het Afgerondenbestellingen panel staan
         private void pictureBxAF_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
+            if(user == User.Eigenaar)
+            {
+                this.Visible = false;
+                Kassa kassa = new Kassa();
+                kassa.Show();
+            }
             pnl_AfgerondeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();
@@ -1357,12 +1381,10 @@ namespace UI
 
         private void FillAFTafelPanel4()
         {
-
             string label = lbl_AFBestelling4.Text;
             char last = lbl_AFBestelling4.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd4.Text;
-
             int bestellingID = int.Parse(lbl_BestellingAF4ID.Text);
 
             FillAFTafelPanel(label, last, num, bestellingID);
@@ -1370,12 +1392,10 @@ namespace UI
 
         private void FillAFTafelPanel5()
         {
-
             string label = lbl_AFBestelling5.Text;
             char last = lbl_AFBestelling5.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd5.Text;
-
             int bestellingID = int.Parse(lbl_BestellingAF5ID.Text);
 
             FillAFTafelPanel(label, last, num, bestellingID);
@@ -1383,12 +1403,10 @@ namespace UI
 
         private void FillAFTafelPanel6()
         {
-
             string label = lbl_AFBestelling6.Text;
             char last = lbl_AFBestelling6.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd6.Text;
-
             int bestellingID = int.Parse(lbl_BestellingAF6ID.Text);
 
             FillAFTafelPanel(label, last, num, bestellingID);
@@ -1396,12 +1414,10 @@ namespace UI
 
         private void FillAFTafelPanel7()
         {
-
             string label = lbl_AFBestelling7.Text;
             char last = lbl_AFBestelling7.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd7.Text;
-
             int bestellingID = int.Parse(lbl_BestellingAF7ID.Text);
 
             FillAFTafelPanel(label, last, num, bestellingID);
@@ -1409,12 +1425,10 @@ namespace UI
 
         private void FillAFTafelPanel8()
         {
-
             string label = lbl_AFBestelling8.Text;
             char last = lbl_AFBestelling8.Text.Last();
             int num = int.Parse(last.ToString());
             lbl_AFDatumTijd.Text = lblAFTijd8.Text;
-
             int bestellingID = int.Parse(lbl_BestellingAF8ID.Text);
 
             FillAFTafelPanel(label, last, num, bestellingID);
@@ -1423,7 +1437,6 @@ namespace UI
         private void FillAFTafelPanel(string label, char last, int num, int bestellingID)
         {
             int tafelID;
-
             if (last.Equals(0))
             {
                 string result = label.Substring(label.Length - Math.Min(2, label.Length));
@@ -1433,13 +1446,13 @@ namespace UI
             {
                 tafelID = num;
             }
+
             lbl_AFTafel.Text = "Tafel ";
             lbl_AFTafel.Text += tafelID;
             lbl_BestellingAFID.Text = bestellingID.ToString();
 
             BestellingService bestelservice = new BestellingService();
             List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(bestellingID);
-
             listView_AFBestelItems.Items.Clear();
 
             if (user == User.ChefKok || Overzicht == "kok")
@@ -1450,7 +1463,6 @@ namespace UI
                     {
                         addStuff(bestellingID);
                     }
-
                 }
             }
             else if (user == User.Barpersoneel || Overzicht == "bar")
@@ -1461,11 +1473,8 @@ namespace UI
                     {
                         addStuff(bestellingID);
                     }
-
                 }
             }
-
-
         }
 
         private void listView_AFBestelItems_SelectedIndexChanged(object sender, EventArgs e)
@@ -1481,6 +1490,7 @@ namespace UI
 
         private void btn_Binnenkomendestelling_Click(object sender, EventArgs e)
         {
+            ResetGroupBoxSystemColors();
             LoadBinnenkomendeBestellingen();
         }
 
@@ -1506,7 +1516,6 @@ namespace UI
                 bestelservice.DeleteBestelling(bestellingID);
                 LoadAfgerondeBestellingen();
             }
-
             lbl_BestellingAFID.Text = "";
         }
 

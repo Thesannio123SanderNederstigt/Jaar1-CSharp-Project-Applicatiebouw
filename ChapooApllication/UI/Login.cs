@@ -31,7 +31,6 @@ namespace UI
         // Methode om de numpads naar een inlogcode te krijgen
         private string loginString = "";
         public static string Username = "";
-        //public static string MedewerkerType = "";
         public static User user;
 
         void LoginCodeGenerate(string givenValue)
@@ -105,23 +104,9 @@ namespace UI
             LoginCodeGenerate(Numpad9.Text);
         }
 
-        private void btn_LoginWarningOK_Click(object sender, EventArgs e)
-        {
-            DisableWarning();
-        }
-
         public void EnableWarning()
         {
-            pnl_LoginWarning.Visible = true;
-            pnl_LoginWarning.Enabled = true;
-            pnl_Login.Enabled = false;
-        }
-
-        public void DisableWarning()
-        {
-            pnl_LoginWarning.Visible = false;
-            pnl_LoginWarning.Enabled = false;
-            pnl_Login.Enabled = true;
+            MessageBox.Show("Voer een geldige code in.");
             txt_LoginScherm.Clear();
         }
 

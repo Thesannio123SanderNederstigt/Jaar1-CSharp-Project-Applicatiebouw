@@ -165,11 +165,11 @@ namespace ChapooLogic
             }
         }
 
-        public string AddMenuItem(int ID, string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
+        public string AddMenuItem(string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
         {
             try
             {
-                MenuItem_db.AddMenuItem(ID,omschrijving,inVoorraad,BTW, categorie, menuSoort, prijs);
+                MenuItem_db.AddMenuItem(omschrijving,inVoorraad,BTW, categorie, menuSoort, prijs);
                 return "Menu item succesvol toegevoegd!";
             }
             catch (Exception e)
