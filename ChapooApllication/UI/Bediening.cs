@@ -218,7 +218,7 @@ namespace UI
 
             for (int i = 0; i < tafels.Count; i++)
             {
-                if (tafels[i].status == false)
+                if (tafels[i].TafelStatus > 0)
                 {
                     buttons[i].BackColor = Color.Salmon;
                 }
@@ -727,5 +727,14 @@ namespace UI
             TafelNummerPNL.Hide();
             TafelPNL.Show();
         }
+
+
+        ////////
+        ////////
+        ///////
+        /////// Graag hieronder werken
+        ///////
+        //////
+        //////
     }
 }

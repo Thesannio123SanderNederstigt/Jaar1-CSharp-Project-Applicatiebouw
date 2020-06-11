@@ -14,9 +14,9 @@ namespace ChapooDAL
         //gillian
         public List<Tafel> GetTafels()
         {
-            string query = "select t.ID as [tafelID], t.[status] as [tafelStatus]\n"+
-                            "from Tafel as T\n"+
-                            "join Bestelling as B on t.ID = b.tafelID";
+            string query = "select T.ID as [tafelID],isnull( B.[tafelID], '0') as [tafelStatus]\n" +
+                            "from Bestelling as B right join Tafel as T on b.tafelID = t.ID";
+                            
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return LeesTafels(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -27,9 +27,9 @@ namespace ChapooDAL
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                int ID = (int)dr["tafelID"];
-                bool status = (bool)dr["tafelStatus"];
-                Tafel tafels = new Tafel(ID, status);
+                int TafelID = (int)dr["tafelID"];
+                int TafelStatus = (int)dr["tafelStatus"];
+                Tafel tafels = new Tafel(TafelID, TafelStatus);
                 tafel.Add(tafels);
             }
             return tafel;
@@ -82,21 +82,6 @@ namespace ChapooDAL
             bool status = (bool)dr["status"];
             int medewerkerID = (int)dr["medewerkerID"];
             tafel = new Tafel(ID, status, medewerkerID);
-            }
-            return tafel;
-        }
-
-        private Tafel ReadTafelTest(DataTable dataTable)
-        {
-            Tafel tafel = null;
-
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                int ID = (int)dr["ID"];
-                bool status = (bool)dr["status"];
-
-                tafel = new Tafel(ID, status);
-
             }
             return tafel;
         }
