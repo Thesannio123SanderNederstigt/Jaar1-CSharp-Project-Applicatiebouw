@@ -668,10 +668,6 @@ namespace UI
         {
 
         }
-        private void BTNRekening_Click(object sender, EventArgs e)
-        {
-            Date_Time(RekeningDateLBL, RekeningTimeLBL);
-        }
 
         private void BTNBestellingLunch_Click(object sender, EventArgs e)
         {
@@ -736,5 +732,13 @@ namespace UI
         ///////
         //////
         //////
+        ///
+
+        private void BTNRekening_Click(object sender, EventArgs e)
+        {
+            Date_Time(RekeningDateLBL, RekeningTimeLBL);
+            AfrekenenPNL.Show();
+            TafelNummerPNL.Hide();
+        }
     }
 }
