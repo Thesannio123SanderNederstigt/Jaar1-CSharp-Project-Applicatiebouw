@@ -218,7 +218,7 @@ namespace UI
 
             for (int i = 0; i < tafels.Count; i++)
             {
-                if (tafels[i].status == false)
+                if (tafels[i].TafelStatus > 0)
                 {
                     buttons[i].BackColor = Color.Salmon;
                 }
@@ -668,10 +668,6 @@ namespace UI
         {
 
         }
-        private void BTNRekening_Click(object sender, EventArgs e)
-        {
-            Date_Time(RekeningDateLBL, RekeningTimeLBL);
-        }
 
         private void BTNBestellingLunch_Click(object sender, EventArgs e)
         {
@@ -726,6 +722,23 @@ namespace UI
         {
             TafelNummerPNL.Hide();
             TafelPNL.Show();
+        }
+
+
+        ////////
+        ////////
+        ///////
+        /////// Graag hieronder werken
+        ///////
+        //////
+        //////
+        ///
+
+        private void BTNRekening_Click(object sender, EventArgs e)
+        {
+            Date_Time(RekeningDateLBL, RekeningTimeLBL);
+            AfrekenenPNL.Show();
+            TafelNummerPNL.Hide();
         }
     }
 }

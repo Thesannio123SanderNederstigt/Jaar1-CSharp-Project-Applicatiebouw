@@ -13,7 +13,7 @@ namespace ChapooModel
         public int medewerkerID { get; set; }
 
         public int TafelID { get; set; }
-        public bool tafelStatus { get; set; }
+        public int TafelStatus { get; set; }
 
         private Medewerker medewerker;
 
@@ -23,10 +23,10 @@ namespace ChapooModel
             this.status = status;
             this.medewerkerID = medewerkerid;
         }
-        public Tafel(int id, bool status)
+        public Tafel(int tafelID, int tafelStatus)
         {
-            this.ID = id;
-            this.status = status;
+            this.TafelID = tafelID;
+            this.TafelStatus = tafelStatus;
         }
     }
 }
