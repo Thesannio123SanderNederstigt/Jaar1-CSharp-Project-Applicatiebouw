@@ -11,21 +11,24 @@ namespace ChapooDAL
 {
     public class TafelDAO : Connection
     {
+        //gillian
         public List<Tafel> GetTafels()
         {
-            string query = "Select ID, status from [Tafel]";
+            string query = "select t.ID as [tafelID], t.[status] as [tafelStatus]\n"+
+                            "from Tafel as T\n"+
+                            "join Bestelling as B on t.ID = b.tafelID";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return LeesTafels(ExecuteSelectQuery(query, sqlParameters));
         }
-        //test
+        //gillian
         private List<Tafel> LeesTafels(DataTable dataTable)
         {
             List<Tafel> tafel = new List<Tafel>();
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                int ID = (int)dr["ID"];
-                bool status = (bool)dr["status"];
+                int ID = (int)dr["tafelID"];
+                bool status = (bool)dr["tafelStatus"];
                 Tafel tafels = new Tafel(ID, status);
                 tafel.Add(tafels);
             }
@@ -46,15 +49,6 @@ namespace ChapooDAL
             }
             return tafels;
         }
-
-        //Get all Tables by ID and Status
-        public Tafel Get_By_ID(int ID)
-        {
-            string query = $"SELECT ID, status FROM Tafel WHERE ID = {ID}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTafelTest(ExecuteSelectQuery(query, sqlParameters));
-        }
- 
         //Get tafel by ID
         public Tafel GetById(int tafelID)
         {

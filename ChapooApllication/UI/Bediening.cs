@@ -96,41 +96,57 @@ namespace UI
                 TafelPNL.Show();
             }
         }
+        ListView list, list12, lis1t3, li1st4, li1st5;
         //Item(s) aan een bestelling toevoegen
         private void BTNVoegToeL_Click(object sender, EventArgs e)
         {
-            BestellingToevoegen(ListViewLunchV, ALBLLunch);
-            
+           
+           BestellingToevoegen1(ListViewLunchV, ALBLLunch);
+            BestellingToevoegen1(ListViewLunchN, ALBLLunch);
+
+
+
         }
         private void BTNVoegToeDrank_Click(object sender, EventArgs e)
         {
-            BestellingToevoegen(ListViewDrankFris, ALBLDrank);
+            //BestellingToevoegen1(ListViewDrankFris, ALBLDrank);
+            //BestellingToevoegen2(ListViewDrankTap, ALBLDrank);
+            //BestellingToevoegen3(ListViewDrankGed, ALBLDrank);
+            //BestellingToevoegen4(ListViewDrankWijn, ALBLDrank);
+            //BestellingToevoegen5(ListViewDrankThee, ALBLDrank);
+
         }
         private void BTNVoegToeDiner_Click(object sender, EventArgs e)
         {
-            BestellingToevoegen(ListViewDinerV, ALBLDiner);
+            //BestellingToevoegen1(ListViewDinerV, ALBLDiner);
+           // BestellingToevoegen2(ListViewDinerT, ALBLDiner);
+           // BestellingToevoegen3(ListViewDinerH, ALBLDiner);
+           // BestellingToevoegen4(ListViewDinerN, ALBLDiner);
+            
+
         }
         //Om te kunnen selecteren wat je in een bestelling toevoegt
-        public void BestellingToevoegen(ListView listView, Label label)
+        private void BestellingToevoegen1(ListView listview1, Label label1)
         {
-            ListViewItem item = listView.SelectedItems[0];
-            ChapooModel.MenuItem menuItem = (ChapooModel.MenuItem)item.Tag;
+            ListView.SelectedListViewItemCollection selectedItems1 = listview1.SelectedItems;
+            ListViewItem item1 = selectedItems1[0];
+            ChapooModel.MenuItem menuItem = (ChapooModel.MenuItem)item1.Tag;
 
 
             Bestelling_MenuItem Item = new Bestelling_MenuItem()
             {
                 MenuItem = menuItem,
                 BestellingID = BestellingService.GetNieuuwsteID(),
-                Aantal = int.Parse(label.Text),
+                Aantal = int.Parse(label1.Text),
             };
 
             menuItems = MenuItemService.GetMenuItems();
 
-            if (int.Parse(label.Text) > 0)//hoger dan 1
+            if (int.Parse(label1.Text) > 0)//hoger dan 1
             {
                 if (menuItems[Item.Aantal].aantalInVoorraad >= Item.Aantal)
                 {
-                    bestelling_MenuItemService.TESTCreateBestellingMenuItem(menuItem.ID, BestellingService.GetNieuuwsteID(), int.Parse(label.Text));
+                    bestelling_MenuItemService.TESTCreateBestellingMenuItem(menuItem.ID, BestellingService.GetNieuuwsteID(), int.Parse(label1.Text));
                     MessageBox.Show("Item(s) toegevoegd aan bestelling !");
                 }
                 else
@@ -142,9 +158,9 @@ namespace UI
             {
                 MessageBox.Show("Aantal is niet hoger dan 0 !!!");
             }
-            label.Text = 0.ToString();
+            label1.Text = 0.ToString();
         }
-
+        
         //om de bestelling te controleren
         public void CheckBestelling()
         {
@@ -202,13 +218,13 @@ namespace UI
 
             for (int i = 0; i < tafels.Count; i++)
             {
-                if (tafels[i].status == true)
-                {
-                    buttons[i].BackColor = Color.LightGreen;
-                }
-                else if (tafels[i].status == false)
+                if (tafels[i].status == false)
                 {
                     buttons[i].BackColor = Color.Salmon;
+                }
+                else
+                {
+                    buttons[i].BackColor = Color.LightGreen;
                 }
             }
         }
@@ -376,6 +392,11 @@ namespace UI
         {
             timerLH.Start();
             VulListView("Lunch", "Hoofdgerecht", ListViewLunchH);
+            Button btnsender = (Button)sender;
+            //if (btnsender == BTNVoegToeL)
+            //{
+            //    BestellingToevoegen2(ALBLLunch);
+            //}
         }
         //
         private void timerLN_Tick(object sender, EventArgs e) //LUNCH NAGERECHT
@@ -386,6 +407,11 @@ namespace UI
         {
             timerLN.Start();
             VulListView("Lunch", "Nagerecht", ListViewLunchN);
+            Button btnsender = (Button)sender;
+            //if (btnsender == BTNVoegToeL)
+            //{
+            //    BestellingToevoegen1(ALBLLunch);
+            //}
         }
         //
         private void timerDFris_Tick(object sender, EventArgs e) // FRISDRANK DRANK

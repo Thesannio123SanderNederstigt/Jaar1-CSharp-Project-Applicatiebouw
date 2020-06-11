@@ -90,12 +90,6 @@
     <Compile Include="Rekening.Designer.cs">
       <DependentUpon>Rekening.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tafeltest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tafeltest.Designer.cs">
-      <DependentUpon>Tafeltest.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Bar.resx">
       <DependentUpon>Bar.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,9 +120,6 @@
     </Compile>
     <EmbeddedResource Include="Rekening.resx">
       <DependentUpon>Rekening.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tafeltest.resx">
-      <DependentUpon>Tafeltest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

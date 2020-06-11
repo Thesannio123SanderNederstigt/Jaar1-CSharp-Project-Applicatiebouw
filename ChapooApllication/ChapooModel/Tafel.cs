@@ -12,6 +12,9 @@ namespace ChapooModel
         public bool status { get; set; }
         public int medewerkerID { get; set; }
 
+        public int TafelID { get; set; }
+        public bool tafelStatus { get; set; }
+
         private Medewerker medewerker;
 
         public Tafel(int id, bool status, int medewerkerid)

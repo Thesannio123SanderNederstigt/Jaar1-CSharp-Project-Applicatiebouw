@@ -41,7 +41,6 @@ C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe.config
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.pdb

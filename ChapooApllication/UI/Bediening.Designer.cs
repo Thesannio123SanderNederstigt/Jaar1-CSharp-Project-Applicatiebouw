@@ -262,7 +262,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ListViewRekening = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.TafelPNL.SuspendLayout();
@@ -2629,7 +2629,7 @@
             this.RekeningPNL.Controls.Add(this.label1);
             this.RekeningPNL.Controls.Add(this.label3);
             this.RekeningPNL.Controls.Add(this.label12);
-            this.RekeningPNL.Controls.Add(this.listView1);
+            this.RekeningPNL.Controls.Add(this.ListViewRekening);
             this.RekeningPNL.Controls.Add(this.panel2);
             this.RekeningPNL.Location = new System.Drawing.Point(0, 0);
             this.RekeningPNL.Margin = new System.Windows.Forms.Padding(2);
@@ -2752,15 +2752,15 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "Fooi:";
             // 
-            // listView1
+            // ListViewRekening
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(48, 209);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(625, 329);
-            this.listView1.TabIndex = 24;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.ListViewRekening.BackColor = System.Drawing.SystemColors.Window;
+            this.ListViewRekening.HideSelection = false;
+            this.ListViewRekening.Location = new System.Drawing.Point(48, 209);
+            this.ListViewRekening.Name = "ListViewRekening";
+            this.ListViewRekening.Size = new System.Drawing.Size(625, 329);
+            this.ListViewRekening.TabIndex = 24;
+            this.ListViewRekening.UseCompatibleStateImageBehavior = false;
             // 
             // panel2
             // 
@@ -3125,7 +3125,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ListViewRekening;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
     }

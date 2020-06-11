@@ -81,12 +81,6 @@ namespace ChapooLogic
             }
         } 
 
-        // test gillian 
-        public List<Tafel> GetTafeltest()
-        {
-            return Tafel_db.GetTafels();
-        }
-
         public List<Tafel> GeTafelStatus(bool status)
         {
             return Tafel_db.GetTafelByStatus(status);
