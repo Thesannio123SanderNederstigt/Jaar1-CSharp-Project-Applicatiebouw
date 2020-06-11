@@ -44,7 +44,6 @@ namespace UI
                 inkomend = true;
                 SelectOrders();
             }
-
         }
 
 
@@ -645,6 +644,7 @@ namespace UI
             pnl_KeukenBarStart.Hide();
             LoadBinnenkomendeBestellingen();
             ResetGroupBoxSystemColors();
+
         }
 
         private void btn_StartAfgeronde_Click(object sender, EventArgs e)
@@ -655,24 +655,27 @@ namespace UI
 
         private void btn_StartVoorraad_Click(object sender, EventArgs e)
         {
-            // Hide en Show de goede panels
-            HidePanels();
-
             this.Visible = false;
             Kassa kassa = new Kassa();
             kassa.Show();
-
-
         }
+        
 
         //eventhandlers/methoden binnen het pnl_BinnenkomendeBestellingen
         private void pictureBx_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
+            if(user == User.Eigenaar)
+            {
+                this.Visible = false;
+                Kassa kassa = new Kassa();
+                kassa.Show();
+            }
             pnl_BinnenkomendeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();
             ResetGroupBoxSystemColors();
             pnl_KeukenBarStart.Show();
+            
         }
 
 
@@ -1170,6 +1173,12 @@ namespace UI
         //eventhandlers/methoden die op het Afgerondenbestellingen panel staan
         private void pictureBxAF_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
+            if(user == User.Eigenaar)
+            {
+                this.Visible = false;
+                Kassa kassa = new Kassa();
+                kassa.Show();
+            }
             pnl_AfgerondeBestellingen.Hide();
             DeleteListViews();
             TextLabelReset();

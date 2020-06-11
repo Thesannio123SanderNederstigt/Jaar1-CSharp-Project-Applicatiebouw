@@ -46,23 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bar.Designer.cs">
-      <DependentUpon>Bar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bediening.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Bediening.Designer.cs">
       <DependentUpon>Bediening.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Handheld.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Handheld.Designer.cs">
-      <DependentUpon>Handheld.cs</DependentUpon>
     </Compile>
     <Compile Include="Kassa.cs">
       <SubType>Form</SubType>
@@ -84,20 +72,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rekening.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Rekening.Designer.cs">
-      <DependentUpon>Rekening.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Bar.resx">
-      <DependentUpon>Bar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bediening.resx">
       <DependentUpon>Bediening.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Handheld.resx">
-      <DependentUpon>Handheld.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kassa.resx">
       <DependentUpon>Kassa.cs</DependentUpon>
@@ -118,9 +94,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Rekening.resx">
-      <DependentUpon>Rekening.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

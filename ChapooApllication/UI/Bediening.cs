@@ -216,7 +216,7 @@ namespace UI
         {
             tafels = TafelService.GetTafel();
 
-            for (int i = 0; i < tafels.Count; i++)
+            for (int i = 0; i < tafels.Count -1; i++)
             {
                 if (tafels[i].TafelStatus > 0)
                 {
