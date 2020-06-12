@@ -192,12 +192,35 @@ namespace ChapooLogic
 
         public Bestelling Create_Bestelling(Tafel tafel)
         {
-            return Bestelling_db.Create_Bestelling(tafel);
+            try
+            {
+                Bestelling bestelling = Bestelling_db.Create_Bestelling(tafel);
+
+                if (bestelling == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return bestelling;
+            }
+            catch (Exception e)
+            {
+                Bestelling fakebestelling = new Bestelling(1, DateTime.Now, false, 1, e.ToString());
+                return fakebestelling;
+            }
         }
 
         public int GetNieuuwsteID()
         {
-            return Bestelling_db.NieuwsteBestelling();
+            try
+            {
+                return Bestelling_db.NieuwsteBestelling();
+            }
+            catch (Exception e)
+            {
+                int failed = 0;
+                return failed;
+            }
+
         }
 
 

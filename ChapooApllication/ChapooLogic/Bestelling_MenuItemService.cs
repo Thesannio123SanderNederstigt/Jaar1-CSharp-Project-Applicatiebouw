@@ -15,121 +15,154 @@ namespace ChapooLogic
 
         public List<Bestelling_MenuItem> GetBestellingMenuItem(int BestellingID)
         {
-            return Bestelling_MenuItem_db.Get_Bestelling_MenuItem(BestellingID);
-            //try
-            //{
-            //    List<Bestelling_MenuItem> bestellingslijst = Bestelling_MenuItem_db.Get_Bestelling_MenuItem(BestellingID);
+            try
+            {
+                List<Bestelling_MenuItem> bestellingslijst = Bestelling_MenuItem_db.Get_Bestelling_MenuItem(BestellingID);
 
-            //    if (bestellingslijst == null)
-            //    {
-            //        throw new ArgumentNullException();
-            //    }
-            //    return bestellingslijst;
+                if (bestellingslijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return bestellingslijst;
 
-            //}
-            //catch(Exception e)
-            //{
-            //    List<Bestelling_MenuItem> fakebestellingmenuitemlist = new List<Bestelling_MenuItem>();
-            //    Bestelling_MenuItem item = new Bestelling_MenuItem();
-            //    fakebestellingmenuitemlist.Add(item);
-            //    return fakebestellingmenuitemlist;
-            //}
+            }
+            catch (Exception e)
+            {
+                List<Bestelling_MenuItem> fakebestellingmenuitemlist = new List<Bestelling_MenuItem>();
+                Bestelling_MenuItem item = new Bestelling_MenuItem();
+                fakebestellingmenuitemlist.Add(item);
+                return fakebestellingmenuitemlist;
+            }
 
         }
 
         public List<Bestelling_MenuItem> GetBestelling(int BestellingID)
         {
-            return Bestelling_MenuItem_db.Get_Bestelling(BestellingID);
-            //try
-            //{
-            //    List<Bestelling_MenuItem> trueList = Bestelling_MenuItem_db.Get_Bestelling(BestellingID);
-            //    if(trueList == null)
-            //    {
-            //        throw new ArgumentNullException();
-            //    }
-            //    return trueList;
-            //}
-            //catch(Exception e)
-            //{
-            //    List<Bestelling_MenuItem> fakeBestellingList = new List<Bestelling_MenuItem>();
-            //    Bestelling_MenuItem fakeItem = new Bestelling_MenuItem();
-            //    fakeBestellingList.Add(fakeItem);
+            try
+            {
+                List<Bestelling_MenuItem> trueList = Bestelling_MenuItem_db.Get_Bestelling(BestellingID);
+                if (trueList == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return trueList;
+            }
+            catch (Exception e)
+            {
+                List<Bestelling_MenuItem> fakeBestellingList = new List<Bestelling_MenuItem>();
+                Bestelling_MenuItem fakeItem = new Bestelling_MenuItem();
+                fakeBestellingList.Add(fakeItem);
 
-            //    return fakeBestellingList;
-            //}
+                return fakeBestellingList;
+            }
         }
 
-        public void CreateBestellingMenuItem(Bestelling_MenuItem bestelling_MenuItem)
+        public string CreateBestellingMenuItem(Bestelling_MenuItem bestelling_MenuItem)
         {
-           Bestelling_MenuItem_db.Add_New_Bestelling_MenuItem(bestelling_MenuItem);
-            //try
-            //{
-            //    Bestelling_MenuItem_db.Add_New_Bestelling_MenuItem(bestelling_MenuItem);
-            //    return "Bestelling menuitem met succes aangemaakt!";
-            //}
-            //catch(Exception e)
-            //{
-            //    return e.ToString();
-            //}
+            try
+            {
+                Bestelling_MenuItem_db.Add_New_Bestelling_MenuItem(bestelling_MenuItem);
+                return "Bestelling menuitem met succes aangemaakt!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
 
         }
 
-        public void SetNewAantal (int ID, int aantal, int menuItemID)
+        public string SetNewAantal (int ID, int aantal, int menuItemID)
         {
-            Bestelling_MenuItem_db.Set_New_Aantal(ID, aantal, menuItemID);
-            //try
-            //{
-            //    Bestelling_MenuItem_db.Set_New_Aantal(ID, aantal);
-            //    return "Aantal succesvol gewijzigd!";
-            //}
-            //catch  (Exception e)
-            //{
-            //    return e.ToString();
-            //}
+
+            try
+            {
+                Bestelling_MenuItem_db.Set_New_Aantal(ID, aantal, menuItemID);
+                return "Aantal succesvol gewijzigd!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
 
         }
-        public void DeleteMenuItem(int bestellingID, int MenuItemID)
+        public string DeleteMenuItem(int bestellingID, int MenuItemID)
         {
-            Bestelling_MenuItem_db.Remove_MenuItem(bestellingID,MenuItemID);
-            //try
-            //{
-            //    Bestelling_MenuItem_db.Remove_MenuItem(MenuItemID);
-            //    return "menu Item met succes verwijderd!";
-            //}
-            //catch(Exception e)
-            //{
-            //    return e.ToString();
-            //}
+            try
+            {
+                Bestelling_MenuItem_db.Remove_MenuItem(bestellingID, MenuItemID);
+                return "menu Item met succes verwijderd!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
 
         }
-        public void TESTCreateBestellingMenuItem(int MenuItemID, int ID, int Aantal)
+        public string TESTCreateBestellingMenuItem(int MenuItemID, int ID, int Aantal)
         {
-            Bestelling_MenuItem_db.New_Bestelling_MenuItem(MenuItemID, ID, Aantal);
-            //try
-            //{
-            //    Bestelling_MenuItem_db.New_Bestelling_MenuItem(MenuItemID, ID, Aantal);
-            //    return "Bestelling succesvol aangemaakt!";
-            //}
-            //catch(Exception e)
-            //{
-            //    return e.ToString();
-            //}
+            try
+            {
+                Bestelling_MenuItem_db.New_Bestelling_MenuItem(MenuItemID, ID, Aantal);
+                return "Bestelling succesvol aangemaakt!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
         }
-        public void DeleteBestelling(int bestellingID)
+        public string DeleteBestelling(int bestellingID)
         {
-            Bestelling_MenuItem_db.DeleteBestelling(bestellingID);
+            try
+            {
+                Bestelling_MenuItem_db.DeleteBestelling(bestellingID);
+                return "Bestelling succesvol verwijderd!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
         }
-        public void DeleteBestellingItem(int bestellingID)
+        public string DeleteBestellingItem(int bestellingID)
         {
-            Bestelling_MenuItem_db.DeleteBestellingItem(bestellingID);
+            try
+            {
+                Bestelling_MenuItem_db.DeleteBestellingItem(bestellingID);
+                return "Bestelling Item succesvol verwijderd!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+
+
         }
-        public void UpdateOpmerking(int id, string opmerking)
+
+        public string UpdateOpmerking(int id, string opmerking)
         {
-            Bestelling_MenuItem_db.Update_Opmerking(id, opmerking);
+            try
+            {
+                Bestelling_MenuItem_db.Update_Opmerking(id, opmerking);
+                return "Bestelling succesvol gewijzigd!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+
+
         }
-        public void UpdateVoorraad(int Aantal, int MenuItemID)
+        public string UpdateVoorraad(int Aantal, int MenuItemID)
         {
-            Bestelling_MenuItem_db.Update_Voorraad(Aantal, MenuItemID);
+            try
+            {
+                Bestelling_MenuItem_db.Update_Voorraad(Aantal, MenuItemID);
+                return "Voorraad succesvol gewijzigd!";
+            }
+            catch (Exception e)
+            {
+                return e.ToString();
+            }
+
         }
     }
 }
