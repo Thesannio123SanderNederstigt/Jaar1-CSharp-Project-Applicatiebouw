@@ -27,14 +27,11 @@ S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\U
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.pdb
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.pdb
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csprojAssemblyReference.cache
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bar.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Handheld.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
@@ -62,3 +59,23 @@ C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe.config
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.exe
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\UI.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.dll
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.dll
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.dll
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooDAL.pdb
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csprojAssemblyReference.cache
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.exe
+D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.pdb
