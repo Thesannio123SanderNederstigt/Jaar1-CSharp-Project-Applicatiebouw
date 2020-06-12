@@ -1,13 +1,3 @@
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.dll
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.pdb
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.dll
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooModel.dll
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.pdb
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooModel.pdb
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csprojAssemblyReference.cache
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.dll
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.pdb
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.dll
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.pdb
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.dll

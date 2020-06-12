@@ -32,6 +32,7 @@
             this.btn_BarKeuzeBestelling_Kassa = new System.Windows.Forms.Button();
             this.btn_KeukenKeuzeBestelling_Kassa = new System.Windows.Forms.Button();
             this.pnl_KassaKeuzeBestellingen = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugKeuzebestelling_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_Inkomstenoverzicht = new System.Windows.Forms.Panel();
@@ -61,6 +62,7 @@
             this.btn_KassaTafel2 = new System.Windows.Forms.Button();
             this.btn_KassaTafel1 = new System.Windows.Forms.Button();
             this.pnl_KassaPersoneelsbeheer = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.txt_InlogcodePersoneelsbeheer = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.txt_TypePersoneelsbeheer = new System.Windows.Forms.TextBox();
@@ -87,6 +89,7 @@
             this.PersoneelInlogcode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaVoorraadoverzichtGerecht = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht = new System.Windows.Forms.Button();
             this.btnMenuOverzicht_GerechtVoorraadOverzicht = new System.Windows.Forms.Button();
@@ -103,6 +106,7 @@
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaVoorraadoverzicht = new System.Windows.Forms.Panel();
+            this.txtBoxVoorraadoverzicht = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
             this.btnMenuOverzicht_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
@@ -119,6 +123,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaVoorraadKeuze = new System.Windows.Forms.Panel();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btn_GerechtVoorraadKeuzeOverzicht_Kassa = new System.Windows.Forms.Button();
             this.btn_DrankVoorraadOverzichtKeuze_Kassa = new System.Windows.Forms.Button();
@@ -145,6 +150,7 @@
             this.btnMenuOverzicht_DinermenuOverzicht = new System.Windows.Forms.Button();
             this.btnBestellingen_Dinermenuoverzicht = new System.Windows.Forms.Button();
             this.btnVoorraad_DinerMenuOverzicht = new System.Windows.Forms.Button();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.btnVerwijderen_DinerMenuOverzicht = new System.Windows.Forms.Button();
             this.btnOpslaan_DinerMenuOverzicht = new System.Windows.Forms.Button();
             this.listView_DinerMenuOverzicht = new System.Windows.Forms.ListView();
@@ -155,14 +161,15 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaMenuoverzichtKeuze = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugMenuOverzichtKeuze_Kassa = new System.Windows.Forms.PictureBox();
             this.btnDinerMenu_MenuoverzichtKeuze = new System.Windows.Forms.Button();
             this.btnLunchMenu_MenuoverzichtKeuze = new System.Windows.Forms.Button();
             this.btnDrankMenu_MenuoverzichtKeuze = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pnl_MenuOverzicht = new System.Windows.Forms.Panel();
+            this.txtBoxMenuoverzicht = new System.Windows.Forms.TextBox();
             this.picturebox_MenuOverzichtTerug = new System.Windows.Forms.PictureBox();
             this.btnToevoegen_MenuOverzicht = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
@@ -195,6 +202,7 @@
             this.drankmenuPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaLunchMenuoverizcht = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBoxHeader = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugLunchMenu_Kassa = new System.Windows.Forms.PictureBox();
             this.btnToevoegen_Lunchmenuoverzicht = new System.Windows.Forms.Button();
@@ -234,14 +242,6 @@
             this.btn_TafeloverzichtHoofdscherm_Kassa = new System.Windows.Forms.Button();
             this.pictureBx_Uitloggen_Kassa = new System.Windows.Forms.PictureBox();
             this.pnl_KassaHoofdscherm = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.txtBoxVoorraadoverzicht = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.txtBoxMenuoverzicht = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.pnl_KassaKeuzeBestellingen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugKeuzebestelling_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -272,11 +272,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_MenuOverzichtTerug)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.pnl_KassaLunchMenuoverizcht.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugLunchMenu_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).BeginInit();
             this.pnl_KassaHoofdscherm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_BarKeuzeBestelling_Kassa
@@ -311,6 +311,17 @@
             this.pnl_KassaKeuzeBestellingen.Name = "pnl_KassaKeuzeBestellingen";
             this.pnl_KassaKeuzeBestellingen.Size = new System.Drawing.Size(1005, 730);
             this.pnl_KassaKeuzeBestellingen.TabIndex = 11;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(256, 24);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(489, 45);
+            this.textBox6.TabIndex = 57;
+            this.textBox6.Text = "Keuze bestelling";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBx_TerugKeuzebestelling_Kassa
             // 
@@ -626,6 +637,17 @@
             this.pnl_KassaPersoneelsbeheer.Size = new System.Drawing.Size(1008, 736);
             this.pnl_KassaPersoneelsbeheer.TabIndex = 11;
             // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(223, 74);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(556, 45);
+            this.textBox5.TabIndex = 72;
+            this.textBox5.Text = "Personeelsoverzicht";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txt_InlogcodePersoneelsbeheer
             // 
             this.txt_InlogcodePersoneelsbeheer.Location = new System.Drawing.Point(892, 251);
@@ -864,6 +886,17 @@
             this.pnl_KassaVoorraadoverzichtGerecht.Size = new System.Drawing.Size(1005, 730);
             this.pnl_KassaVoorraadoverzichtGerecht.TabIndex = 9;
             // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(203, 67);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(598, 45);
+            this.textBox4.TabIndex = 58;
+            this.textBox4.Text = "gerecht voorraad overzicht";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // pictureBx_TerugGerechtVoorraadOverzicht_Kassa
             // 
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Image")));
@@ -1025,6 +1058,17 @@
             this.pnl_KassaVoorraadoverzicht.Size = new System.Drawing.Size(1005, 730);
             this.pnl_KassaVoorraadoverzicht.TabIndex = 27;
             // 
+            // txtBoxVoorraadoverzicht
+            // 
+            this.txtBoxVoorraadoverzicht.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtBoxVoorraadoverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxVoorraadoverzicht.Location = new System.Drawing.Point(203, 67);
+            this.txtBoxVoorraadoverzicht.Name = "txtBoxVoorraadoverzicht";
+            this.txtBoxVoorraadoverzicht.Size = new System.Drawing.Size(608, 45);
+            this.txtBoxVoorraadoverzicht.TabIndex = 57;
+            this.txtBoxVoorraadoverzicht.Text = "voorraad overzicht";
+            this.txtBoxVoorraadoverzicht.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // pictureBx_TerugDrankvoorraadOverzicht_Kassa
             // 
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugDrankvoorraadOverzicht_Kassa.Image")));
@@ -1174,6 +1218,17 @@
             this.pnl_KassaVoorraadKeuze.Name = "pnl_KassaVoorraadKeuze";
             this.pnl_KassaVoorraadKeuze.Size = new System.Drawing.Size(1008, 733);
             this.pnl_KassaVoorraadKeuze.TabIndex = 27;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(256, 33);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(525, 45);
+            this.textBox7.TabIndex = 57;
+            this.textBox7.Text = "Voorraad keuze overzicht";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBx_TerugVoorraadKeuzeOverzicht_Kassa
             // 
@@ -1433,6 +1488,16 @@
             this.btnVoorraad_DinerMenuOverzicht.UseVisualStyleBackColor = true;
             this.btnVoorraad_DinerMenuOverzicht.Click += new System.EventHandler(this.btnVoorraad_DinerMenuOverzicht_Click);
             // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox12.Location = new System.Drawing.Point(909, 6);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(93, 58);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 27;
+            this.pictureBox12.TabStop = false;
+            // 
             // btnVerwijderen_DinerMenuOverzicht
             // 
             this.btnVerwijderen_DinerMenuOverzicht.Location = new System.Drawing.Point(614, 599);
@@ -1507,16 +1572,6 @@
             this.columnHeader16.Text = "Prijs";
             this.columnHeader16.Width = 50;
             // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox12.Location = new System.Drawing.Point(909, 6);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(93, 58);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 27;
-            this.pictureBox12.TabStop = false;
-            // 
             // pnl_KassaMenuoverzichtKeuze
             // 
             this.pnl_KassaMenuoverzichtKeuze.BackColor = System.Drawing.Color.White;
@@ -1530,6 +1585,17 @@
             this.pnl_KassaMenuoverzichtKeuze.Name = "pnl_KassaMenuoverzichtKeuze";
             this.pnl_KassaMenuoverzichtKeuze.Size = new System.Drawing.Size(1008, 727);
             this.pnl_KassaMenuoverzichtKeuze.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(286, 18);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(416, 45);
+            this.textBox3.TabIndex = 57;
+            this.textBox3.Text = "Menu overzicht keuze";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBx_TerugMenuOverzichtKeuze_Kassa
             // 
@@ -1614,6 +1680,17 @@
             this.pnl_MenuOverzicht.Name = "pnl_MenuOverzicht";
             this.pnl_MenuOverzicht.Size = new System.Drawing.Size(1008, 736);
             this.pnl_MenuOverzicht.TabIndex = 16;
+            // 
+            // txtBoxMenuoverzicht
+            // 
+            this.txtBoxMenuoverzicht.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtBoxMenuoverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMenuoverzicht.Location = new System.Drawing.Point(203, 70);
+            this.txtBoxMenuoverzicht.Name = "txtBoxMenuoverzicht";
+            this.txtBoxMenuoverzicht.Size = new System.Drawing.Size(688, 45);
+            this.txtBoxMenuoverzicht.TabIndex = 56;
+            this.txtBoxMenuoverzicht.Text = "Menu overzicht";
+            this.txtBoxMenuoverzicht.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // picturebox_MenuOverzichtTerug
             // 
@@ -1904,6 +1981,16 @@
             this.pnl_KassaLunchMenuoverizcht.Name = "pnl_KassaLunchMenuoverizcht";
             this.pnl_KassaLunchMenuoverizcht.Size = new System.Drawing.Size(1008, 730);
             this.pnl_KassaLunchMenuoverizcht.TabIndex = 55;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(905, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 56;
+            this.pictureBox1.TabStop = false;
             // 
             // txtBoxHeader
             // 
@@ -2254,98 +2341,12 @@
             this.pnl_KassaHoofdscherm.Size = new System.Drawing.Size(1008, 736);
             this.pnl_KassaHoofdscherm.TabIndex = 35;
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(286, 18);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(416, 45);
-            this.textBox3.TabIndex = 57;
-            this.textBox3.Text = "Menu overzicht keuze";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(203, 67);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(598, 45);
-            this.textBox4.TabIndex = 58;
-            this.textBox4.Text = "gerecht voorraad overzicht";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtBoxVoorraadoverzicht
-            // 
-            this.txtBoxVoorraadoverzicht.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtBoxVoorraadoverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxVoorraadoverzicht.Location = new System.Drawing.Point(203, 67);
-            this.txtBoxVoorraadoverzicht.Name = "txtBoxVoorraadoverzicht";
-            this.txtBoxVoorraadoverzicht.Size = new System.Drawing.Size(608, 45);
-            this.txtBoxVoorraadoverzicht.TabIndex = 57;
-            this.txtBoxVoorraadoverzicht.Text = "voorraad overzicht";
-            this.txtBoxVoorraadoverzicht.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(223, 74);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(556, 45);
-            this.textBox5.TabIndex = 72;
-            this.textBox5.Text = "Personeelsoverzicht";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtBoxMenuoverzicht
-            // 
-            this.txtBoxMenuoverzicht.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtBoxMenuoverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxMenuoverzicht.Location = new System.Drawing.Point(203, 70);
-            this.txtBoxMenuoverzicht.Name = "txtBoxMenuoverzicht";
-            this.txtBoxMenuoverzicht.Size = new System.Drawing.Size(688, 45);
-            this.txtBoxMenuoverzicht.TabIndex = 56;
-            this.txtBoxMenuoverzicht.Text = "Menu overzicht";
-            this.txtBoxMenuoverzicht.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(256, 24);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(489, 45);
-            this.textBox6.TabIndex = 57;
-            this.textBox6.Text = "Keuze bestelling";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(905, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 66);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 56;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(256, 33);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(525, 45);
-            this.textBox7.TabIndex = 57;
-            this.textBox7.Text = "Voorraad keuze overzicht";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Kassa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaVoorraadKeuze);
             this.Controls.Add(this.pnl_KassaTafeloverzicht);
@@ -2356,7 +2357,6 @@
             this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
             this.Controls.Add(this.pnl_MenuOverzicht);
             this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
-            this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_Inkomstenoverzicht);
             this.Name = "Kassa";
             this.Text = "Form1";
@@ -2402,11 +2402,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.pnl_KassaLunchMenuoverizcht.ResumeLayout(false);
             this.pnl_KassaLunchMenuoverizcht.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugLunchMenu_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).EndInit();
             this.pnl_KassaHoofdscherm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
