@@ -115,7 +115,7 @@
             this.DrankDATELBL = new System.Windows.Forms.Label();
             this.DrankTIMELBL = new System.Windows.Forms.Label();
             this.DrankTerugBTN = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.pnl_DrankChapooLogo = new System.Windows.Forms.Panel();
             this.BTNVoegToeDrank = new System.Windows.Forms.Button();
             this.ALBLDrank = new System.Windows.Forms.Label();
             this.BTNMinDrank = new System.Windows.Forms.Button();
@@ -224,44 +224,55 @@
             this.DinerTerugLBL = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.AfgerondPNL = new System.Windows.Forms.Panel();
+            this.ChapooSnail = new System.Windows.Forms.PictureBox();
             this.Afgerond_TopPNL = new System.Windows.Forms.Panel();
             this.AfgerondDateLBL = new System.Windows.Forms.Label();
             this.AfgerondTimeLBL = new System.Windows.Forms.Label();
             this.AfgerondTerugBTN = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
+            this.pnl_AfgerondChapooLogo = new System.Windows.Forms.Panel();
+            this.lbl_TransactieSuccess = new System.Windows.Forms.Label();
+            this.btn_TerugTafels = new System.Windows.Forms.Button();
+            this.pnl_AfgerondTafelnr = new System.Windows.Forms.Panel();
+            this.lbl_Tafel = new System.Windows.Forms.Label();
             this.AfrekenenPNL = new System.Windows.Forms.Panel();
+            this.PinIcon = new System.Windows.Forms.PictureBox();
+            this.CCIcon = new System.Windows.Forms.PictureBox();
+            this.CashIcon = new System.Windows.Forms.PictureBox();
+            this.btn_Contant = new System.Windows.Forms.Button();
             this.Afrekenen_TopPNL = new System.Windows.Forms.Panel();
             this.AfrekenenDateLBL = new System.Windows.Forms.Label();
             this.AfrekenenTimeLBL = new System.Windows.Forms.Label();
             this.AfrekenenTerugBTN = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
+            this.pnl_afrekenChapooLogo = new System.Windows.Forms.Panel();
+            this.btn_Afronden = new System.Windows.Forms.Button();
+            this.pnl_Afrekenlbl = new System.Windows.Forms.Panel();
+            this.lbl_Afrekenen = new System.Windows.Forms.Label();
+            this.btn_Pinnen = new System.Windows.Forms.Button();
+            this.btn_CC = new System.Windows.Forms.Button();
             this.RekeningPNL = new System.Windows.Forms.Panel();
+            this.lbl_Inclbtwoutput = new System.Windows.Forms.Label();
+            this.lbl_Exclbtwoutput = new System.Windows.Forms.Label();
+            this.lbl_ExclBTW = new System.Windows.Forms.Label();
+            this.lbl_InclBTW = new System.Windows.Forms.Label();
+            this.txt_Fooi = new System.Windows.Forms.TextBox();
+            this.txt_Opmerkingen = new System.Windows.Forms.TextBox();
             this.Rekening_TopPNL = new System.Windows.Forms.Panel();
             this.RekeningDateLBL = new System.Windows.Forms.Label();
             this.RekeningTimeLBL = new System.Windows.Forms.Label();
             this.RekeningTerugBTN = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.pnl_RekeningChapooLogo = new System.Windows.Forms.Panel();
+            this.btn_Betalen = new System.Windows.Forms.Button();
+            this.lbl_Opmerkingen = new System.Windows.Forms.Label();
+            this.lbl_Fooi = new System.Windows.Forms.Label();
             this.ListViewRekening = new System.Windows.Forms.ListView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.Omschrijving = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Prijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BTW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnl_RekeningAfrekenenTekst = new System.Windows.Forms.Panel();
+            this.lbl_RekenenAfrekeken = new System.Windows.Forms.Label();
+            this.lbl_Totaalbedrag = new System.Windows.Forms.Label();
+            this.lbl_Totaaloutput = new System.Windows.Forms.Label();
             this.TafelPNL.SuspendLayout();
             this.Tafel_TopPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
@@ -301,17 +312,18 @@
             this.DinerPNL.SuspendLayout();
             this.Diner_TopPNL.SuspendLayout();
             this.AfgerondPNL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChapooSnail)).BeginInit();
             this.Afgerond_TopPNL.SuspendLayout();
-            this.panel13.SuspendLayout();
+            this.pnl_AfgerondTafelnr.SuspendLayout();
             this.AfrekenenPNL.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PinIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CashIcon)).BeginInit();
             this.Afrekenen_TopPNL.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnl_Afrekenlbl.SuspendLayout();
             this.RekeningPNL.SuspendLayout();
             this.Rekening_TopPNL.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnl_RekeningAfrekenenTekst.SuspendLayout();
             this.SuspendLayout();
             // 
             // OverzichtDateLBL
@@ -321,7 +333,7 @@
             this.OverzichtDateLBL.Location = new System.Drawing.Point(505, 34);
             this.OverzichtDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OverzichtDateLBL.Name = "OverzichtDateLBL";
-            this.OverzichtDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.OverzichtDateLBL.Size = new System.Drawing.Size(42, 21);
             this.OverzichtDateLBL.TabIndex = 13;
             this.OverzichtDateLBL.Text = "Date";
             this.OverzichtDateLBL.Click += new System.EventHandler(this.TijdLBL_Click);
@@ -333,7 +345,7 @@
             this.OverzichtTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.OverzichtTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OverzichtTimeLBL.Name = "OverzichtTimeLBL";
-            this.OverzichtTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.OverzichtTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.OverzichtTimeLBL.TabIndex = 14;
             this.OverzichtTimeLBL.Text = "Time";
             // 
@@ -381,7 +393,7 @@
             this.TafelDateLBL.Location = new System.Drawing.Point(505, 34);
             this.TafelDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelDateLBL.Name = "TafelDateLBL";
-            this.TafelDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.TafelDateLBL.Size = new System.Drawing.Size(42, 21);
             this.TafelDateLBL.TabIndex = 13;
             this.TafelDateLBL.Text = "Date";
             // 
@@ -392,7 +404,7 @@
             this.TafelTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.TafelTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelTimeLBL.Name = "TafelTimeLBL";
-            this.TafelTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.TafelTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.TafelTimeLBL.TabIndex = 14;
             this.TafelTimeLBL.Text = "Time";
             // 
@@ -422,7 +434,7 @@
             this.label8.Location = new System.Drawing.Point(227, 16);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(173, 70);
+            this.label8.Size = new System.Drawing.Size(118, 47);
             this.label8.TabIndex = 5;
             this.label8.Text = "Tafels";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -598,7 +610,7 @@
             this.TafelNummerDateLBL.Location = new System.Drawing.Point(505, 34);
             this.TafelNummerDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelNummerDateLBL.Name = "TafelNummerDateLBL";
-            this.TafelNummerDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.TafelNummerDateLBL.Size = new System.Drawing.Size(42, 21);
             this.TafelNummerDateLBL.TabIndex = 13;
             this.TafelNummerDateLBL.Text = "Date";
             // 
@@ -609,7 +621,7 @@
             this.TafelNummerTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.TafelNummerTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelNummerTimeLBL.Name = "TafelNummerTimeLBL";
-            this.TafelNummerTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.TafelNummerTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.TafelNummerTimeLBL.TabIndex = 14;
             this.TafelNummerTimeLBL.Text = "Time";
             // 
@@ -686,7 +698,7 @@
             this.LBLTafelNummer.Location = new System.Drawing.Point(243, 19);
             this.LBLTafelNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBLTafelNummer.Name = "LBLTafelNummer";
-            this.LBLTafelNummer.Size = new System.Drawing.Size(147, 70);
+            this.LBLTafelNummer.Size = new System.Drawing.Size(100, 47);
             this.LBLTafelNummer.TabIndex = 5;
             this.LBLTafelNummer.Text = "Tafel";
             // 
@@ -725,7 +737,7 @@
             this.BestellingDateLBL.Location = new System.Drawing.Point(505, 34);
             this.BestellingDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BestellingDateLBL.Name = "BestellingDateLBL";
-            this.BestellingDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.BestellingDateLBL.Size = new System.Drawing.Size(42, 21);
             this.BestellingDateLBL.TabIndex = 13;
             this.BestellingDateLBL.Text = "Date";
             // 
@@ -736,7 +748,7 @@
             this.BestellingTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.BestellingTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BestellingTimeLBL.Name = "BestellingTimeLBL";
-            this.BestellingTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.BestellingTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.BestellingTimeLBL.TabIndex = 14;
             this.BestellingTimeLBL.Text = "Time";
             // 
@@ -824,7 +836,7 @@
             this.label2.Location = new System.Drawing.Point(179, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 70);
+            this.label2.Size = new System.Drawing.Size(176, 47);
             this.label2.TabIndex = 5;
             this.label2.Text = "Bestelling";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -866,7 +878,7 @@
             this.LunchDateLBL.Location = new System.Drawing.Point(505, 34);
             this.LunchDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LunchDateLBL.Name = "LunchDateLBL";
-            this.LunchDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.LunchDateLBL.Size = new System.Drawing.Size(42, 21);
             this.LunchDateLBL.TabIndex = 13;
             this.LunchDateLBL.Text = "Date";
             // 
@@ -877,7 +889,7 @@
             this.LunchTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.LunchTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LunchTimeLBL.Name = "LunchTimeLBL";
-            this.LunchTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.LunchTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.LunchTimeLBL.TabIndex = 14;
             this.LunchTimeLBL.Text = "Time";
             // 
@@ -920,7 +932,7 @@
             this.ALBLLunch.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLLunch.Location = new System.Drawing.Point(538, 754);
             this.ALBLLunch.Name = "ALBLLunch";
-            this.ALBLLunch.Size = new System.Drawing.Size(33, 36);
+            this.ALBLLunch.Size = new System.Drawing.Size(22, 24);
             this.ALBLLunch.TabIndex = 43;
             this.ALBLLunch.Text = "0";
             // 
@@ -1163,7 +1175,7 @@
             this.label5.Location = new System.Drawing.Point(243, 19);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 70);
+            this.label5.Size = new System.Drawing.Size(118, 47);
             this.label5.TabIndex = 5;
             this.label5.Text = "Lunch";
             // 
@@ -1211,7 +1223,7 @@
             this.Drank_TopPNL.Controls.Add(this.DrankDATELBL);
             this.Drank_TopPNL.Controls.Add(this.DrankTIMELBL);
             this.Drank_TopPNL.Controls.Add(this.DrankTerugBTN);
-            this.Drank_TopPNL.Controls.Add(this.panel15);
+            this.Drank_TopPNL.Controls.Add(this.pnl_DrankChapooLogo);
             this.Drank_TopPNL.Location = new System.Drawing.Point(0, 0);
             this.Drank_TopPNL.Name = "Drank_TopPNL";
             this.Drank_TopPNL.Size = new System.Drawing.Size(719, 67);
@@ -1224,7 +1236,7 @@
             this.DrankDATELBL.Location = new System.Drawing.Point(505, 34);
             this.DrankDATELBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DrankDATELBL.Name = "DrankDATELBL";
-            this.DrankDATELBL.Size = new System.Drawing.Size(63, 30);
+            this.DrankDATELBL.Size = new System.Drawing.Size(42, 21);
             this.DrankDATELBL.TabIndex = 13;
             this.DrankDATELBL.Text = "Date";
             // 
@@ -1235,7 +1247,7 @@
             this.DrankTIMELBL.Location = new System.Drawing.Point(605, 34);
             this.DrankTIMELBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DrankTIMELBL.Name = "DrankTIMELBL";
-            this.DrankTIMELBL.Size = new System.Drawing.Size(66, 30);
+            this.DrankTIMELBL.Size = new System.Drawing.Size(44, 21);
             this.DrankTIMELBL.TabIndex = 14;
             this.DrankTIMELBL.Text = "Time";
             // 
@@ -1251,14 +1263,14 @@
             this.DrankTerugBTN.UseVisualStyleBackColor = false;
             this.DrankTerugBTN.Click += new System.EventHandler(this.DrankTerugBTN_Click);
             // 
-            // panel15
+            // pnl_DrankChapooLogo
             // 
-            this.panel15.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel15.Location = new System.Drawing.Point(302, 11);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(113, 51);
-            this.panel15.TabIndex = 33;
+            this.pnl_DrankChapooLogo.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.pnl_DrankChapooLogo.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.pnl_DrankChapooLogo.Location = new System.Drawing.Point(302, 11);
+            this.pnl_DrankChapooLogo.Name = "pnl_DrankChapooLogo";
+            this.pnl_DrankChapooLogo.Size = new System.Drawing.Size(113, 51);
+            this.pnl_DrankChapooLogo.TabIndex = 33;
             // 
             // BTNVoegToeDrank
             // 
@@ -1278,7 +1290,7 @@
             this.ALBLDrank.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLDrank.Location = new System.Drawing.Point(547, 754);
             this.ALBLDrank.Name = "ALBLDrank";
-            this.ALBLDrank.Size = new System.Drawing.Size(33, 36);
+            this.ALBLDrank.Size = new System.Drawing.Size(22, 24);
             this.ALBLDrank.TabIndex = 42;
             this.ALBLDrank.Text = "0";
             // 
@@ -1636,7 +1648,7 @@
             this.label7.Location = new System.Drawing.Point(232, 16);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(169, 70);
+            this.label7.Size = new System.Drawing.Size(116, 47);
             this.label7.TabIndex = 5;
             this.label7.Text = "Drank";
             // 
@@ -1710,7 +1722,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.label11.Location = new System.Drawing.Point(52, 633);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(185, 36);
+            this.label11.Size = new System.Drawing.Size(124, 24);
             this.label11.TabIndex = 27;
             this.label11.Text = "Opmerkingen:";
             // 
@@ -1720,7 +1732,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.label10.Location = new System.Drawing.Point(559, 551);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 36);
+            this.label10.Size = new System.Drawing.Size(22, 24);
             this.label10.TabIndex = 26;
             this.label10.Text = "0";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -1731,7 +1743,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.label9.Location = new System.Drawing.Point(52, 551);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 36);
+            this.label9.Size = new System.Drawing.Size(66, 24);
             this.label9.TabIndex = 25;
             this.label9.Text = "Totaal:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -1784,7 +1796,7 @@
             this.label4.Location = new System.Drawing.Point(79, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(510, 70);
+            this.label4.Size = new System.Drawing.Size(349, 47);
             this.label4.TabIndex = 5;
             this.label4.Text = "Bestelling Overzicht";
             // 
@@ -1901,7 +1913,7 @@
             this.ALBLWijzigen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLWijzigen.Location = new System.Drawing.Point(494, 91);
             this.ALBLWijzigen.Name = "ALBLWijzigen";
-            this.ALBLWijzigen.Size = new System.Drawing.Size(33, 36);
+            this.ALBLWijzigen.Size = new System.Drawing.Size(22, 24);
             this.ALBLWijzigen.TabIndex = 40;
             this.ALBLWijzigen.Text = "0";
             // 
@@ -1949,7 +1961,7 @@
             this.label6.Location = new System.Drawing.Point(243, 19);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 70);
+            this.label6.Size = new System.Drawing.Size(106, 47);
             this.label6.TabIndex = 5;
             this.label6.Text = "Diner";
             // 
@@ -2224,7 +2236,7 @@
             this.ALBLDiner.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLDiner.Location = new System.Drawing.Point(550, 754);
             this.ALBLDiner.Name = "ALBLDiner";
-            this.ALBLDiner.Size = new System.Drawing.Size(33, 36);
+            this.ALBLDiner.Size = new System.Drawing.Size(22, 24);
             this.ALBLDiner.TabIndex = 37;
             this.ALBLDiner.Text = "0";
             // 
@@ -2289,7 +2301,7 @@
             this.DinerDateLBL.Location = new System.Drawing.Point(505, 34);
             this.DinerDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DinerDateLBL.Name = "DinerDateLBL";
-            this.DinerDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.DinerDateLBL.Size = new System.Drawing.Size(42, 21);
             this.DinerDateLBL.TabIndex = 13;
             this.DinerDateLBL.Text = "Date";
             // 
@@ -2300,7 +2312,7 @@
             this.DinerTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.DinerTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DinerTimeLBL.Name = "DinerTimeLBL";
-            this.DinerTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.DinerTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.DinerTimeLBL.TabIndex = 14;
             this.DinerTimeLBL.Text = "Time";
             // 
@@ -2328,15 +2340,26 @@
             // AfgerondPNL
             // 
             this.AfgerondPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AfgerondPNL.Controls.Add(this.ChapooSnail);
             this.AfgerondPNL.Controls.Add(this.Afgerond_TopPNL);
-            this.AfgerondPNL.Controls.Add(this.label18);
-            this.AfgerondPNL.Controls.Add(this.button4);
-            this.AfgerondPNL.Controls.Add(this.panel13);
+            this.AfgerondPNL.Controls.Add(this.lbl_TransactieSuccess);
+            this.AfgerondPNL.Controls.Add(this.btn_TerugTafels);
+            this.AfgerondPNL.Controls.Add(this.pnl_AfgerondTafelnr);
             this.AfgerondPNL.Location = new System.Drawing.Point(0, 0);
             this.AfgerondPNL.Margin = new System.Windows.Forms.Padding(2);
             this.AfgerondPNL.Name = "AfgerondPNL";
             this.AfgerondPNL.Size = new System.Drawing.Size(721, 1039);
             this.AfgerondPNL.TabIndex = 40;
+            // 
+            // ChapooSnail
+            // 
+            this.ChapooSnail.Image = ((System.Drawing.Image)(resources.GetObject("ChapooSnail.Image")));
+            this.ChapooSnail.Location = new System.Drawing.Point(183, 349);
+            this.ChapooSnail.Name = "ChapooSnail";
+            this.ChapooSnail.Size = new System.Drawing.Size(370, 330);
+            this.ChapooSnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ChapooSnail.TabIndex = 42;
+            this.ChapooSnail.TabStop = false;
             // 
             // Afgerond_TopPNL
             // 
@@ -2344,7 +2367,7 @@
             this.Afgerond_TopPNL.Controls.Add(this.AfgerondDateLBL);
             this.Afgerond_TopPNL.Controls.Add(this.AfgerondTimeLBL);
             this.Afgerond_TopPNL.Controls.Add(this.AfgerondTerugBTN);
-            this.Afgerond_TopPNL.Controls.Add(this.panel12);
+            this.Afgerond_TopPNL.Controls.Add(this.pnl_AfgerondChapooLogo);
             this.Afgerond_TopPNL.Location = new System.Drawing.Point(0, 0);
             this.Afgerond_TopPNL.Name = "Afgerond_TopPNL";
             this.Afgerond_TopPNL.Size = new System.Drawing.Size(719, 67);
@@ -2357,7 +2380,7 @@
             this.AfgerondDateLBL.Location = new System.Drawing.Point(505, 34);
             this.AfgerondDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfgerondDateLBL.Name = "AfgerondDateLBL";
-            this.AfgerondDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.AfgerondDateLBL.Size = new System.Drawing.Size(42, 21);
             this.AfgerondDateLBL.TabIndex = 13;
             this.AfgerondDateLBL.Text = "Date";
             // 
@@ -2368,7 +2391,7 @@
             this.AfgerondTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.AfgerondTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfgerondTimeLBL.Name = "AfgerondTimeLBL";
-            this.AfgerondTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.AfgerondTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.AfgerondTimeLBL.TabIndex = 14;
             this.AfgerondTimeLBL.Text = "Time";
             // 
@@ -2382,72 +2405,118 @@
             this.AfgerondTerugBTN.Size = new System.Drawing.Size(58, 49);
             this.AfgerondTerugBTN.TabIndex = 32;
             this.AfgerondTerugBTN.UseVisualStyleBackColor = false;
+            this.AfgerondTerugBTN.Click += new System.EventHandler(this.AfgerondTerugBTN_Click);
             // 
-            // panel12
+            // pnl_AfgerondChapooLogo
             // 
-            this.panel12.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel12.Location = new System.Drawing.Point(302, 11);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(113, 51);
-            this.panel12.TabIndex = 33;
+            this.pnl_AfgerondChapooLogo.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.pnl_AfgerondChapooLogo.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.pnl_AfgerondChapooLogo.Location = new System.Drawing.Point(302, 11);
+            this.pnl_AfgerondChapooLogo.Name = "pnl_AfgerondChapooLogo";
+            this.pnl_AfgerondChapooLogo.Size = new System.Drawing.Size(113, 51);
+            this.pnl_AfgerondChapooLogo.TabIndex = 33;
             // 
-            // label18
+            // lbl_TransactieSuccess
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label18.Location = new System.Drawing.Point(152, 229);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(405, 36);
-            this.label18.TabIndex = 31;
-            this.label18.Text = "Transactie succesvol afgerond!";
+            this.lbl_TransactieSuccess.AutoSize = true;
+            this.lbl_TransactieSuccess.Font = new System.Drawing.Font("Microsoft Yi Baiti", 30F);
+            this.lbl_TransactieSuccess.Location = new System.Drawing.Point(128, 261);
+            this.lbl_TransactieSuccess.Name = "lbl_TransactieSuccess";
+            this.lbl_TransactieSuccess.Size = new System.Drawing.Size(461, 40);
+            this.lbl_TransactieSuccess.TabIndex = 31;
+            this.lbl_TransactieSuccess.Text = "Transactie succesvol afgerond!";
             // 
-            // button4
+            // btn_TerugTafels
             // 
-            this.button4.BackColor = System.Drawing.Color.PaleGreen;
-            this.button4.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
-            this.button4.Location = new System.Drawing.Point(48, 736);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(627, 205);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "Terug naar tafels";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_TerugTafels.BackColor = System.Drawing.Color.PaleGreen;
+            this.btn_TerugTafels.Font = new System.Drawing.Font("Microsoft Yi Baiti", 25F);
+            this.btn_TerugTafels.Location = new System.Drawing.Point(48, 736);
+            this.btn_TerugTafels.Name = "btn_TerugTafels";
+            this.btn_TerugTafels.Size = new System.Drawing.Size(627, 205);
+            this.btn_TerugTafels.TabIndex = 30;
+            this.btn_TerugTafels.Text = "Terug naar tafels";
+            this.btn_TerugTafels.UseVisualStyleBackColor = false;
+            this.btn_TerugTafels.Click += new System.EventHandler(this.btn_TerugTafels_Click);
             // 
-            // panel13
+            // pnl_AfgerondTafelnr
             // 
-            this.panel13.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel13.Controls.Add(this.label21);
-            this.panel13.Location = new System.Drawing.Point(48, 74);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(625, 103);
-            this.panel13.TabIndex = 23;
+            this.pnl_AfgerondTafelnr.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnl_AfgerondTafelnr.Controls.Add(this.lbl_Tafel);
+            this.pnl_AfgerondTafelnr.Location = new System.Drawing.Point(48, 74);
+            this.pnl_AfgerondTafelnr.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_AfgerondTafelnr.Name = "pnl_AfgerondTafelnr";
+            this.pnl_AfgerondTafelnr.Size = new System.Drawing.Size(625, 103);
+            this.pnl_AfgerondTafelnr.TabIndex = 23;
             // 
-            // label21
+            // lbl_Tafel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label21.Location = new System.Drawing.Point(184, 16);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(223, 70);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Tafel #";
+            this.lbl_Tafel.AutoSize = true;
+            this.lbl_Tafel.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.lbl_Tafel.Location = new System.Drawing.Point(184, 16);
+            this.lbl_Tafel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Tafel.Name = "lbl_Tafel";
+            this.lbl_Tafel.Size = new System.Drawing.Size(151, 47);
+            this.lbl_Tafel.TabIndex = 5;
+            this.lbl_Tafel.Text = "Tafel #";
             // 
             // AfrekenenPNL
             // 
             this.AfrekenenPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AfrekenenPNL.Controls.Add(this.PinIcon);
+            this.AfrekenenPNL.Controls.Add(this.CCIcon);
+            this.AfrekenenPNL.Controls.Add(this.CashIcon);
+            this.AfrekenenPNL.Controls.Add(this.btn_Contant);
             this.AfrekenenPNL.Controls.Add(this.Afrekenen_TopPNL);
-            this.AfrekenenPNL.Controls.Add(this.panel6);
-            this.AfrekenenPNL.Controls.Add(this.panel7);
-            this.AfrekenenPNL.Controls.Add(this.panel5);
-            this.AfrekenenPNL.Controls.Add(this.button2);
-            this.AfrekenenPNL.Controls.Add(this.panel3);
+            this.AfrekenenPNL.Controls.Add(this.btn_Afronden);
+            this.AfrekenenPNL.Controls.Add(this.pnl_Afrekenlbl);
+            this.AfrekenenPNL.Controls.Add(this.btn_Pinnen);
+            this.AfrekenenPNL.Controls.Add(this.btn_CC);
             this.AfrekenenPNL.Location = new System.Drawing.Point(0, 0);
             this.AfrekenenPNL.Margin = new System.Windows.Forms.Padding(2);
             this.AfrekenenPNL.Name = "AfrekenenPNL";
             this.AfrekenenPNL.Size = new System.Drawing.Size(721, 1039);
             this.AfrekenenPNL.TabIndex = 39;
+            // 
+            // PinIcon
+            // 
+            this.PinIcon.Image = ((System.Drawing.Image)(resources.GetObject("PinIcon.Image")));
+            this.PinIcon.Location = new System.Drawing.Point(76, 433);
+            this.PinIcon.Name = "PinIcon";
+            this.PinIcon.Size = new System.Drawing.Size(117, 99);
+            this.PinIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PinIcon.TabIndex = 45;
+            this.PinIcon.TabStop = false;
+            // 
+            // CCIcon
+            // 
+            this.CCIcon.Image = ((System.Drawing.Image)(resources.GetObject("CCIcon.Image")));
+            this.CCIcon.Location = new System.Drawing.Point(76, 631);
+            this.CCIcon.Name = "CCIcon";
+            this.CCIcon.Size = new System.Drawing.Size(117, 99);
+            this.CCIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CCIcon.TabIndex = 44;
+            this.CCIcon.TabStop = false;
+            // 
+            // CashIcon
+            // 
+            this.CashIcon.Image = ((System.Drawing.Image)(resources.GetObject("CashIcon.Image")));
+            this.CashIcon.Location = new System.Drawing.Point(76, 241);
+            this.CashIcon.Name = "CashIcon";
+            this.CashIcon.Size = new System.Drawing.Size(117, 99);
+            this.CashIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CashIcon.TabIndex = 43;
+            this.CashIcon.TabStop = false;
+            // 
+            // btn_Contant
+            // 
+            this.btn_Contant.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Contant.Location = new System.Drawing.Point(49, 220);
+            this.btn_Contant.Name = "btn_Contant";
+            this.btn_Contant.Size = new System.Drawing.Size(625, 142);
+            this.btn_Contant.TabIndex = 42;
+            this.btn_Contant.Text = "Contant";
+            this.btn_Contant.UseVisualStyleBackColor = true;
+            this.btn_Contant.Click += new System.EventHandler(this.btn_Contant_Click);
             // 
             // Afrekenen_TopPNL
             // 
@@ -2455,7 +2524,7 @@
             this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenDateLBL);
             this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenTimeLBL);
             this.Afrekenen_TopPNL.Controls.Add(this.AfrekenenTerugBTN);
-            this.Afrekenen_TopPNL.Controls.Add(this.panel14);
+            this.Afrekenen_TopPNL.Controls.Add(this.pnl_afrekenChapooLogo);
             this.Afrekenen_TopPNL.Location = new System.Drawing.Point(0, 0);
             this.Afrekenen_TopPNL.Name = "Afrekenen_TopPNL";
             this.Afrekenen_TopPNL.Size = new System.Drawing.Size(719, 67);
@@ -2468,7 +2537,7 @@
             this.AfrekenenDateLBL.Location = new System.Drawing.Point(505, 34);
             this.AfrekenenDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfrekenenDateLBL.Name = "AfrekenenDateLBL";
-            this.AfrekenenDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.AfrekenenDateLBL.Size = new System.Drawing.Size(42, 21);
             this.AfrekenenDateLBL.TabIndex = 13;
             this.AfrekenenDateLBL.Text = "Date";
             // 
@@ -2479,7 +2548,7 @@
             this.AfrekenenTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.AfrekenenTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfrekenenTimeLBL.Name = "AfrekenenTimeLBL";
-            this.AfrekenenTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.AfrekenenTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.AfrekenenTimeLBL.TabIndex = 14;
             this.AfrekenenTimeLBL.Text = "Time";
             // 
@@ -2493,127 +2562,151 @@
             this.AfrekenenTerugBTN.Size = new System.Drawing.Size(58, 49);
             this.AfrekenenTerugBTN.TabIndex = 32;
             this.AfrekenenTerugBTN.UseVisualStyleBackColor = false;
+            this.AfrekenenTerugBTN.Click += new System.EventHandler(this.AfrekenenTerugBTN_Click);
             // 
-            // panel14
+            // pnl_afrekenChapooLogo
             // 
-            this.panel14.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel14.Location = new System.Drawing.Point(302, 11);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(113, 51);
-            this.panel14.TabIndex = 33;
+            this.pnl_afrekenChapooLogo.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.pnl_afrekenChapooLogo.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.pnl_afrekenChapooLogo.Location = new System.Drawing.Point(302, 11);
+            this.pnl_afrekenChapooLogo.Name = "pnl_afrekenChapooLogo";
+            this.pnl_afrekenChapooLogo.Size = new System.Drawing.Size(113, 51);
+            this.pnl_afrekenChapooLogo.TabIndex = 33;
             // 
-            // panel6
+            // btn_Afronden
             // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel6.Controls.Add(this.label15);
-            this.panel6.Location = new System.Drawing.Point(48, 608);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(625, 142);
-            this.panel6.TabIndex = 32;
+            this.btn_Afronden.BackColor = System.Drawing.Color.PaleGreen;
+            this.btn_Afronden.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
+            this.btn_Afronden.Location = new System.Drawing.Point(48, 845);
+            this.btn_Afronden.Name = "btn_Afronden";
+            this.btn_Afronden.Size = new System.Drawing.Size(627, 96);
+            this.btn_Afronden.TabIndex = 30;
+            this.btn_Afronden.Text = "Afronden";
+            this.btn_Afronden.UseVisualStyleBackColor = false;
+            this.btn_Afronden.Click += new System.EventHandler(this.btn_Afronden_Click);
             // 
-            // label15
+            // pnl_Afrekenlbl
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label15.Location = new System.Drawing.Point(184, 29);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(302, 70);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Credit card";
+            this.pnl_Afrekenlbl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnl_Afrekenlbl.Controls.Add(this.lbl_Afrekenen);
+            this.pnl_Afrekenlbl.Location = new System.Drawing.Point(48, 74);
+            this.pnl_Afrekenlbl.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_Afrekenlbl.Name = "pnl_Afrekenlbl";
+            this.pnl_Afrekenlbl.Size = new System.Drawing.Size(625, 103);
+            this.pnl_Afrekenlbl.TabIndex = 23;
             // 
-            // panel7
+            // lbl_Afrekenen
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Location = new System.Drawing.Point(48, 229);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(625, 142);
-            this.panel7.TabIndex = 32;
+            this.lbl_Afrekenen.AutoSize = true;
+            this.lbl_Afrekenen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.lbl_Afrekenen.Location = new System.Drawing.Point(225, 20);
+            this.lbl_Afrekenen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Afrekenen.Name = "lbl_Afrekenen";
+            this.lbl_Afrekenen.Size = new System.Drawing.Size(184, 47);
+            this.lbl_Afrekenen.TabIndex = 5;
+            this.lbl_Afrekenen.Text = "Afrekenen";
             // 
-            // label16
+            // btn_Pinnen
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label16.Location = new System.Drawing.Point(184, 34);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(211, 70);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Contact";
+            this.btn_Pinnen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pinnen.Location = new System.Drawing.Point(48, 413);
+            this.btn_Pinnen.Name = "btn_Pinnen";
+            this.btn_Pinnen.Size = new System.Drawing.Size(625, 142);
+            this.btn_Pinnen.TabIndex = 46;
+            this.btn_Pinnen.Text = "Pinnen";
+            this.btn_Pinnen.UseVisualStyleBackColor = true;
+            this.btn_Pinnen.Click += new System.EventHandler(this.btn_Pinnen_Click);
             // 
-            // panel5
+            // btn_CC
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(48, 421);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(625, 142);
-            this.panel5.TabIndex = 31;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label14.Location = new System.Drawing.Point(184, 34);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 70);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "Pin";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.PaleGreen;
-            this.button2.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
-            this.button2.Location = new System.Drawing.Point(48, 845);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(627, 96);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Betalen";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Location = new System.Drawing.Point(48, 74);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(625, 103);
-            this.panel3.TabIndex = 23;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label17.Location = new System.Drawing.Point(184, 16);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(268, 70);
-            this.label17.TabIndex = 5;
-            this.label17.Text = "Afrekenen";
+            this.btn_CC.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CC.Location = new System.Drawing.Point(47, 609);
+            this.btn_CC.Name = "btn_CC";
+            this.btn_CC.Size = new System.Drawing.Size(625, 142);
+            this.btn_CC.TabIndex = 47;
+            this.btn_CC.Text = "Credit Card";
+            this.btn_CC.UseVisualStyleBackColor = true;
+            this.btn_CC.Click += new System.EventHandler(this.btn_CC_Click);
             // 
             // RekeningPNL
             // 
             this.RekeningPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.RekeningPNL.Controls.Add(this.lbl_Totaaloutput);
+            this.RekeningPNL.Controls.Add(this.lbl_Totaalbedrag);
+            this.RekeningPNL.Controls.Add(this.lbl_Inclbtwoutput);
+            this.RekeningPNL.Controls.Add(this.lbl_Exclbtwoutput);
+            this.RekeningPNL.Controls.Add(this.lbl_ExclBTW);
+            this.RekeningPNL.Controls.Add(this.lbl_InclBTW);
+            this.RekeningPNL.Controls.Add(this.txt_Fooi);
+            this.RekeningPNL.Controls.Add(this.txt_Opmerkingen);
             this.RekeningPNL.Controls.Add(this.Rekening_TopPNL);
-            this.RekeningPNL.Controls.Add(this.button3);
-            this.RekeningPNL.Controls.Add(this.richTextBox2);
-            this.RekeningPNL.Controls.Add(this.label1);
-            this.RekeningPNL.Controls.Add(this.label3);
-            this.RekeningPNL.Controls.Add(this.label12);
+            this.RekeningPNL.Controls.Add(this.btn_Betalen);
+            this.RekeningPNL.Controls.Add(this.lbl_Opmerkingen);
+            this.RekeningPNL.Controls.Add(this.lbl_Fooi);
             this.RekeningPNL.Controls.Add(this.ListViewRekening);
-            this.RekeningPNL.Controls.Add(this.panel2);
+            this.RekeningPNL.Controls.Add(this.pnl_RekeningAfrekenenTekst);
             this.RekeningPNL.Location = new System.Drawing.Point(0, 0);
             this.RekeningPNL.Margin = new System.Windows.Forms.Padding(2);
             this.RekeningPNL.Name = "RekeningPNL";
             this.RekeningPNL.Size = new System.Drawing.Size(721, 1039);
             this.RekeningPNL.TabIndex = 38;
+            // 
+            // lbl_Inclbtwoutput
+            // 
+            this.lbl_Inclbtwoutput.AutoSize = true;
+            this.lbl_Inclbtwoutput.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Inclbtwoutput.Location = new System.Drawing.Point(589, 675);
+            this.lbl_Inclbtwoutput.Name = "lbl_Inclbtwoutput";
+            this.lbl_Inclbtwoutput.Size = new System.Drawing.Size(0, 24);
+            this.lbl_Inclbtwoutput.TabIndex = 47;
+            // 
+            // lbl_Exclbtwoutput
+            // 
+            this.lbl_Exclbtwoutput.AutoSize = true;
+            this.lbl_Exclbtwoutput.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Exclbtwoutput.Location = new System.Drawing.Point(589, 633);
+            this.lbl_Exclbtwoutput.Name = "lbl_Exclbtwoutput";
+            this.lbl_Exclbtwoutput.Size = new System.Drawing.Size(0, 24);
+            this.lbl_Exclbtwoutput.TabIndex = 46;
+            // 
+            // lbl_ExclBTW
+            // 
+            this.lbl_ExclBTW.AutoSize = true;
+            this.lbl_ExclBTW.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_ExclBTW.Location = new System.Drawing.Point(423, 630);
+            this.lbl_ExclBTW.Name = "lbl_ExclBTW";
+            this.lbl_ExclBTW.Size = new System.Drawing.Size(93, 24);
+            this.lbl_ExclBTW.TabIndex = 45;
+            this.lbl_ExclBTW.Text = "excl. btw:";
+            // 
+            // lbl_InclBTW
+            // 
+            this.lbl_InclBTW.AutoSize = true;
+            this.lbl_InclBTW.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_InclBTW.Location = new System.Drawing.Point(425, 673);
+            this.lbl_InclBTW.Name = "lbl_InclBTW";
+            this.lbl_InclBTW.Size = new System.Drawing.Size(88, 24);
+            this.lbl_InclBTW.TabIndex = 44;
+            this.lbl_InclBTW.Text = "incl. btw:";
+            // 
+            // txt_Fooi
+            // 
+            this.txt_Fooi.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Fooi.Location = new System.Drawing.Point(573, 557);
+            this.txt_Fooi.Multiline = true;
+            this.txt_Fooi.Name = "txt_Fooi";
+            this.txt_Fooi.Size = new System.Drawing.Size(100, 46);
+            this.txt_Fooi.TabIndex = 43;
+            this.txt_Fooi.TextChanged += new System.EventHandler(this.txt_Fooi_TextChanged);
+            // 
+            // txt_Opmerkingen
+            // 
+            this.txt_Opmerkingen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Opmerkingen.Location = new System.Drawing.Point(51, 782);
+            this.txt_Opmerkingen.Multiline = true;
+            this.txt_Opmerkingen.Name = "txt_Opmerkingen";
+            this.txt_Opmerkingen.Size = new System.Drawing.Size(624, 59);
+            this.txt_Opmerkingen.TabIndex = 42;
             // 
             // Rekening_TopPNL
             // 
@@ -2621,7 +2714,7 @@
             this.Rekening_TopPNL.Controls.Add(this.RekeningDateLBL);
             this.Rekening_TopPNL.Controls.Add(this.RekeningTimeLBL);
             this.Rekening_TopPNL.Controls.Add(this.RekeningTerugBTN);
-            this.Rekening_TopPNL.Controls.Add(this.panel11);
+            this.Rekening_TopPNL.Controls.Add(this.pnl_RekeningChapooLogo);
             this.Rekening_TopPNL.Location = new System.Drawing.Point(2, 3);
             this.Rekening_TopPNL.Name = "Rekening_TopPNL";
             this.Rekening_TopPNL.Size = new System.Drawing.Size(719, 67);
@@ -2634,7 +2727,7 @@
             this.RekeningDateLBL.Location = new System.Drawing.Point(505, 34);
             this.RekeningDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RekeningDateLBL.Name = "RekeningDateLBL";
-            this.RekeningDateLBL.Size = new System.Drawing.Size(63, 30);
+            this.RekeningDateLBL.Size = new System.Drawing.Size(42, 21);
             this.RekeningDateLBL.TabIndex = 13;
             this.RekeningDateLBL.Text = "Date";
             // 
@@ -2645,7 +2738,7 @@
             this.RekeningTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.RekeningTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RekeningTimeLBL.Name = "RekeningTimeLBL";
-            this.RekeningTimeLBL.Size = new System.Drawing.Size(66, 30);
+            this.RekeningTimeLBL.Size = new System.Drawing.Size(44, 21);
             this.RekeningTimeLBL.TabIndex = 14;
             this.RekeningTimeLBL.Text = "Time";
             // 
@@ -2659,113 +2752,144 @@
             this.RekeningTerugBTN.Size = new System.Drawing.Size(58, 49);
             this.RekeningTerugBTN.TabIndex = 32;
             this.RekeningTerugBTN.UseVisualStyleBackColor = false;
+            this.RekeningTerugBTN.Click += new System.EventHandler(this.RekeningTerugBTN_Click);
             // 
-            // panel11
+            // pnl_RekeningChapooLogo
             // 
-            this.panel11.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
-            this.panel11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
-            this.panel11.Location = new System.Drawing.Point(302, 11);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(113, 51);
-            this.panel11.TabIndex = 33;
+            this.pnl_RekeningChapooLogo.BackgroundImage = global::UI.Properties.Resources.apple_icon_114x114;
+            this.pnl_RekeningChapooLogo.Font = new System.Drawing.Font("Microsoft Yi Baiti", 10F);
+            this.pnl_RekeningChapooLogo.Location = new System.Drawing.Point(302, 11);
+            this.pnl_RekeningChapooLogo.Name = "pnl_RekeningChapooLogo";
+            this.pnl_RekeningChapooLogo.Size = new System.Drawing.Size(113, 51);
+            this.pnl_RekeningChapooLogo.TabIndex = 33;
             // 
-            // button3
+            // btn_Betalen
             // 
-            this.button3.BackColor = System.Drawing.Color.PaleGreen;
-            this.button3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.button3.Location = new System.Drawing.Point(48, 876);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(627, 65);
-            this.button3.TabIndex = 30;
-            this.button3.Text = "Afronden";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_Betalen.BackColor = System.Drawing.Color.PaleGreen;
+            this.btn_Betalen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 20F);
+            this.btn_Betalen.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_Betalen.Location = new System.Drawing.Point(48, 876);
+            this.btn_Betalen.Name = "btn_Betalen";
+            this.btn_Betalen.Size = new System.Drawing.Size(627, 65);
+            this.btn_Betalen.TabIndex = 30;
+            this.btn_Betalen.Text = "Betalen";
+            this.btn_Betalen.UseVisualStyleBackColor = false;
+            this.btn_Betalen.Click += new System.EventHandler(this.btn_Betalen_Click);
             // 
-            // richTextBox2
+            // lbl_Opmerkingen
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(50, 782);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(625, 59);
-            this.richTextBox2.TabIndex = 28;
-            this.richTextBox2.Text = "";
+            this.lbl_Opmerkingen.AutoSize = true;
+            this.lbl_Opmerkingen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Opmerkingen.Location = new System.Drawing.Point(52, 734);
+            this.lbl_Opmerkingen.Name = "lbl_Opmerkingen";
+            this.lbl_Opmerkingen.Size = new System.Drawing.Size(124, 24);
+            this.lbl_Opmerkingen.TabIndex = 27;
+            this.lbl_Opmerkingen.Text = "Opmerkingen:";
             // 
-            // label1
+            // lbl_Fooi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label1.Location = new System.Drawing.Point(52, 734);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 36);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Opmerkingen:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label3.Location = new System.Drawing.Point(559, 551);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 36);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "0";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label12.Location = new System.Drawing.Point(418, 550);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 36);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Fooi:";
+            this.lbl_Fooi.AutoSize = true;
+            this.lbl_Fooi.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Fooi.Location = new System.Drawing.Point(425, 570);
+            this.lbl_Fooi.Name = "lbl_Fooi";
+            this.lbl_Fooi.Size = new System.Drawing.Size(51, 24);
+            this.lbl_Fooi.TabIndex = 25;
+            this.lbl_Fooi.Text = "Fooi:";
             // 
             // ListViewRekening
             // 
             this.ListViewRekening.BackColor = System.Drawing.SystemColors.Window;
+            this.ListViewRekening.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Omschrijving,
+            this.Aantal,
+            this.Prijs,
+            this.BTW});
+            this.ListViewRekening.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListViewRekening.HideSelection = false;
             this.ListViewRekening.Location = new System.Drawing.Point(48, 209);
             this.ListViewRekening.Name = "ListViewRekening";
             this.ListViewRekening.Size = new System.Drawing.Size(625, 329);
             this.ListViewRekening.TabIndex = 24;
             this.ListViewRekening.UseCompatibleStateImageBehavior = false;
+            this.ListViewRekening.View = System.Windows.Forms.View.Details;
+            this.ListViewRekening.SelectedIndexChanged += new System.EventHandler(this.ListViewRekening_SelectedIndexChanged);
             // 
-            // panel2
+            // Omschrijving
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Location = new System.Drawing.Point(48, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(625, 103);
-            this.panel2.TabIndex = 23;
+            this.Omschrijving.Text = "Omschrijving";
+            this.Omschrijving.Width = 411;
             // 
-            // label13
+            // Aantal
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
-            this.label13.Location = new System.Drawing.Point(184, 16);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(268, 70);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "Afrekenen";
+            this.Aantal.Text = "Aantal";
+            this.Aantal.Width = 77;
+            // 
+            // Prijs
+            // 
+            this.Prijs.Text = "Prijs";
+            this.Prijs.Width = 73;
+            // 
+            // BTW
+            // 
+            this.BTW.Text = "BTW";
+            // 
+            // pnl_RekeningAfrekenenTekst
+            // 
+            this.pnl_RekeningAfrekenenTekst.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pnl_RekeningAfrekenenTekst.Controls.Add(this.lbl_RekenenAfrekeken);
+            this.pnl_RekeningAfrekenenTekst.Location = new System.Drawing.Point(48, 74);
+            this.pnl_RekeningAfrekenenTekst.Margin = new System.Windows.Forms.Padding(2);
+            this.pnl_RekeningAfrekenenTekst.Name = "pnl_RekeningAfrekenenTekst";
+            this.pnl_RekeningAfrekenenTekst.Size = new System.Drawing.Size(625, 103);
+            this.pnl_RekeningAfrekenenTekst.TabIndex = 23;
+            // 
+            // lbl_RekenenAfrekeken
+            // 
+            this.lbl_RekenenAfrekeken.AutoSize = true;
+            this.lbl_RekenenAfrekeken.Font = new System.Drawing.Font("Microsoft Yi Baiti", 35F);
+            this.lbl_RekenenAfrekeken.Location = new System.Drawing.Point(225, 16);
+            this.lbl_RekenenAfrekeken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_RekenenAfrekeken.Name = "lbl_RekenenAfrekeken";
+            this.lbl_RekenenAfrekeken.Size = new System.Drawing.Size(184, 47);
+            this.lbl_RekenenAfrekeken.TabIndex = 5;
+            this.lbl_RekenenAfrekeken.Text = "Afrekenen";
+            // 
+            // lbl_Totaalbedrag
+            // 
+            this.lbl_Totaalbedrag.AutoSize = true;
+            this.lbl_Totaalbedrag.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Totaalbedrag.Location = new System.Drawing.Point(423, 718);
+            this.lbl_Totaalbedrag.Name = "lbl_Totaalbedrag";
+            this.lbl_Totaalbedrag.Size = new System.Drawing.Size(66, 24);
+            this.lbl_Totaalbedrag.TabIndex = 48;
+            this.lbl_Totaalbedrag.Text = "Totaal:";
+            // 
+            // lbl_Totaaloutput
+            // 
+            this.lbl_Totaaloutput.AutoSize = true;
+            this.lbl_Totaaloutput.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Totaaloutput.Location = new System.Drawing.Point(569, 718);
+            this.lbl_Totaaloutput.Name = "lbl_Totaaloutput";
+            this.lbl_Totaaloutput.Size = new System.Drawing.Size(0, 24);
+            this.lbl_Totaaloutput.TabIndex = 49;
             // 
             // Bediening
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(4F, 10F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(726, 1047);
-            this.Controls.Add(this.DrankPNL);
-            this.Controls.Add(this.DinerPNL);
-            this.Controls.Add(this.WijzigenPNL);
-            this.Controls.Add(this.BestellingPNL);
+            this.Controls.Add(this.AfgerondPNL);
+            this.Controls.Add(this.AfrekenenPNL);
+            this.Controls.Add(this.RekeningPNL);
             this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.TafelPNL);
             this.Controls.Add(this.LunchPNL);
-            this.Controls.Add(this.AfrekenenPNL);
-            this.Controls.Add(this.AfgerondPNL);
-            this.Controls.Add(this.RekeningPNL);
+            this.Controls.Add(this.DinerPNL);
+            this.Controls.Add(this.WijzigenPNL);
+            this.Controls.Add(this.BestellingPNL);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2832,27 +2956,25 @@
             this.Diner_TopPNL.PerformLayout();
             this.AfgerondPNL.ResumeLayout(false);
             this.AfgerondPNL.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChapooSnail)).EndInit();
             this.Afgerond_TopPNL.ResumeLayout(false);
             this.Afgerond_TopPNL.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
+            this.pnl_AfgerondTafelnr.ResumeLayout(false);
+            this.pnl_AfgerondTafelnr.PerformLayout();
             this.AfrekenenPNL.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PinIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CCIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CashIcon)).EndInit();
             this.Afrekenen_TopPNL.ResumeLayout(false);
             this.Afrekenen_TopPNL.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnl_Afrekenlbl.ResumeLayout(false);
+            this.pnl_Afrekenlbl.PerformLayout();
             this.RekeningPNL.ResumeLayout(false);
             this.RekeningPNL.PerformLayout();
             this.Rekening_TopPNL.ResumeLayout(false);
             this.Rekening_TopPNL.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnl_RekeningAfrekenenTekst.ResumeLayout(false);
+            this.pnl_RekeningAfrekenenTekst.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3045,7 +3167,7 @@
         private System.Windows.Forms.Label DrankDATELBL;
         private System.Windows.Forms.Label DrankTIMELBL;
         private System.Windows.Forms.Button DrankTerugBTN;
-        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel pnl_DrankChapooLogo;
         private System.Windows.Forms.Panel Diner_TopPNL;
         private System.Windows.Forms.Label DinerDateLBL;
         private System.Windows.Forms.Label DinerTimeLBL;
@@ -3056,39 +3178,50 @@
         private System.Windows.Forms.Label AfgerondDateLBL;
         private System.Windows.Forms.Label AfgerondTimeLBL;
         private System.Windows.Forms.Button AfgerondTerugBTN;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel pnl_AfgerondChapooLogo;
+        private System.Windows.Forms.Label lbl_TransactieSuccess;
+        private System.Windows.Forms.Button btn_TerugTafels;
+        private System.Windows.Forms.Panel pnl_AfgerondTafelnr;
+        private System.Windows.Forms.Label lbl_Tafel;
         private System.Windows.Forms.Panel AfrekenenPNL;
         private System.Windows.Forms.Panel Afrekenen_TopPNL;
         private System.Windows.Forms.Label AfrekenenDateLBL;
         private System.Windows.Forms.Label AfrekenenTimeLBL;
         private System.Windows.Forms.Button AfrekenenTerugBTN;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel pnl_afrekenChapooLogo;
+        private System.Windows.Forms.Button btn_Afronden;
+        private System.Windows.Forms.Panel pnl_Afrekenlbl;
+        private System.Windows.Forms.Label lbl_Afrekenen;
         private System.Windows.Forms.Panel RekeningPNL;
         private System.Windows.Forms.Panel Rekening_TopPNL;
         private System.Windows.Forms.Label RekeningDateLBL;
         private System.Windows.Forms.Label RekeningTimeLBL;
         private System.Windows.Forms.Button RekeningTerugBTN;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel pnl_RekeningChapooLogo;
+        private System.Windows.Forms.Button btn_Betalen;
+        private System.Windows.Forms.Label lbl_Opmerkingen;
+        private System.Windows.Forms.Label lbl_Fooi;
         private System.Windows.Forms.ListView ListViewRekening;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel pnl_RekeningAfrekenenTekst;
+        private System.Windows.Forms.Label lbl_RekenenAfrekeken;
+        private System.Windows.Forms.Button btn_Contant;
+        private System.Windows.Forms.PictureBox CashIcon;
+        private System.Windows.Forms.PictureBox PinIcon;
+        private System.Windows.Forms.PictureBox CCIcon;
+        private System.Windows.Forms.Button btn_Pinnen;
+        private System.Windows.Forms.Button btn_CC;
+        private System.Windows.Forms.TextBox txt_Opmerkingen;
+        private System.Windows.Forms.ColumnHeader Omschrijving;
+        private System.Windows.Forms.ColumnHeader Aantal;
+        private System.Windows.Forms.ColumnHeader Prijs;
+        private System.Windows.Forms.ColumnHeader BTW;
+        private System.Windows.Forms.Label lbl_Inclbtwoutput;
+        private System.Windows.Forms.Label lbl_Exclbtwoutput;
+        private System.Windows.Forms.Label lbl_ExclBTW;
+        private System.Windows.Forms.Label lbl_InclBTW;
+        private System.Windows.Forms.TextBox txt_Fooi;
+        private System.Windows.Forms.PictureBox ChapooSnail;
+        private System.Windows.Forms.Label lbl_Totaaloutput;
+        private System.Windows.Forms.Label lbl_Totaalbedrag;
     }
 }

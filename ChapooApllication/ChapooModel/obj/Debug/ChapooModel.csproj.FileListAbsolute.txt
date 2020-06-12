@@ -13,3 +13,4 @@ C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\Cha
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.csproj.CoreCompileInputs.cache
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.dll
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.pdb
+S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooModel\obj\Debug\ChapooModel.csprojAssemblyReference.cache

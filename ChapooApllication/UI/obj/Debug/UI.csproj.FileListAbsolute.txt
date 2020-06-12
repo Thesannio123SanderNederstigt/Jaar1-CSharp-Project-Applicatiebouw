@@ -27,14 +27,11 @@ S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\U
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooLogic.pdb
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\bin\Debug\ChapooModel.pdb
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csprojAssemblyReference.cache
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bar.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Bediening.resources
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Handheld.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Kassa.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Keuken.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Login.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Properties.Resources.resources
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.Tafeltest.resources
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.GenerateResource.cache
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\UI\obj\Debug\UI.csproj.CopyComplete

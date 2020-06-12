@@ -12,11 +12,11 @@ namespace ChapooLogic
     {
         private readonly RekeningDAO Rekening_db = new RekeningDAO();
 
-        public List<Rekening> GetRekeningen()
+        public List<Rekening> GetRekeningen(int tafelID)
         {
             try
             {
-                List<Rekening> rekeninglijst = Rekening_db.Get_All_Rekeningen();
+                List<Rekening> rekeninglijst = Rekening_db.Get_All_Rekeningen(tafelID);
 
                 if(rekeninglijst == null)
                 {
@@ -34,11 +34,11 @@ namespace ChapooLogic
 
         }
 
-        public Rekening GetSingleRekening(int RekeningID)
+        public Rekening GetSingleRekening(int TafelID)
         {
             try
             {
-                Rekening rekening = Rekening_db.GetById(RekeningID);
+                Rekening rekening = Rekening_db.GetById(TafelID);
 
                 if(rekening == null)
                 {
@@ -72,11 +72,80 @@ namespace ChapooLogic
             }
         }
 
-        public string AddNewRekening(float fooi, string betaalwijze, bool betaalStatus, string opmerking, int tafelID)
+        public List<Rekening> GetMenuitems(int tafelID)
         {
             try
             {
-                Rekening_db.AddRekening(fooi, betaalwijze, betaalStatus, opmerking, tafelID);
+                List<Rekening> rekeninglijst = Rekening_db.GetRekeningItems(tafelID);
+
+                if (rekeninglijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return rekeninglijst;
+            }
+            catch (Exception e)
+            {
+                List<Rekening> fakerekeninglist = new List<Rekening>();
+                Rekening fakerekening = new Rekening(e.ToString(), 1, 0.0f, 1);
+                fakerekeninglist.Add(fakerekening);
+                return fakerekeninglist;
+            }
+        }
+
+        public Rekening GetLopendeRekening(int TafelID)
+        {
+            try
+            {
+                Rekening rekening = Rekening_db.GetFalseStatus(TafelID);
+
+                if (rekening == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return rekening;
+            }
+            catch (Exception e)
+            {
+                Rekening fakerekening = new Rekening(1, 1, e.ToString(), 1, true, "error");
+                return fakerekening;
+            }
+        }
+
+        public double GetTotaalBedrag(int rekeningID)
+        {
+            try
+            {
+                double bedrag = Rekening_db.GetBedrag(rekeningID);
+
+                return bedrag;
+            
+            }
+            catch(Exception e)
+            {
+                return double.Parse(e.ToString());
+            }
+        }
+
+        public int GetUpperBTW(int rekeningID)
+        {
+            try
+            {
+                int btw = Rekening_db.GetMaxBTW(rekeningID);
+
+                return btw;
+            }
+            catch(Exception e)
+            {
+                return int.Parse(e.ToString());
+            }
+        }
+
+        public string AddNewRekening(int fooi, string betaalwijze,  int tafelID, bool betaalstatus, string opmerking)
+        {
+            try
+            {
+                Rekening_db.AddRekening(fooi, betaalwijze, tafelID, betaalstatus, opmerking);
                 return "Rekening succesvol toegevoegd!";
             }
             catch(Exception e)
@@ -85,11 +154,11 @@ namespace ChapooLogic
             }
         }
 
-        public string EditRekening(int ID, float fooi, string betaalwijze, bool betaalStatus, string opmerking)
+        public string EditRekening(int rekeningID, float fooi, string betaalwijze, int tafelID, bool betaalStatus, string opmerking)
         {
             try
             {
-                Rekening_db.EditRekening(ID, fooi, betaalwijze, betaalStatus, opmerking);
+                Rekening_db.EditRekening(rekeningID, fooi, betaalwijze, tafelID, betaalStatus, opmerking);
                 return "Rekening met succes gewijzigd!";
             }
             catch(Exception e)
@@ -98,12 +167,12 @@ namespace ChapooLogic
             }
         }
         
-        public string DeleteRekening(int RekeningID) 
+        public string DeleteBestellingen(int tafelID) 
         {
             try
             {
-                Rekening_db.DeleteRekening(RekeningID);
-                return "Rekening succevol verwijderd!";
+                Rekening_db.DeleteBestellingen(tafelID);
+                return "Bestellingen succevol verwijderd!";
             }
             catch(Exception e)
             {
@@ -111,9 +180,18 @@ namespace ChapooLogic
             }
         }
 
-        public void CheckRekeningItem(int ID)
+        public string CheckRekeningItem(int ID)
         {
-            Rekening_db.CheckRekening(ID);
+            try
+            {
+                Rekening_db.CheckRekening(ID);
+                return "Rekeing met succes gechecked!";
+            }
+            catch(Exception e)
+            {
+                return e.ToString();
+            }
+
         }
 
         //public string GetTafelByID(int ID)
