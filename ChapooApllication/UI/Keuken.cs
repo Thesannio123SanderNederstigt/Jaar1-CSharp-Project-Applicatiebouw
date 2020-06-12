@@ -141,20 +141,26 @@ namespace UI
                         {
                             if (b.status == false && b.kaartsoort != "Dranken")
                             {
-                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                                li.SubItems.Add(b.aantal.ToString());
+                                if (b.aantal >= 1)
+                                {
+                                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                    li.SubItems.Add(b.aantal.ToString());
 
-                                lv.Items.Add(li);
+                                    lv.Items.Add(li);
+                                }
                             }
                         }
                         else
                         {
                             if (b.kaartsoort != "Dranken")
                             {
-                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                                li.SubItems.Add(b.aantal.ToString());
+                                if (b.aantal >= 1)
+                                {
+                                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                    li.SubItems.Add(b.aantal.ToString());
 
-                                lv.Items.Add(li);
+                                    lv.Items.Add(li);
+                                }
                             }
                         }
                     }
@@ -167,20 +173,26 @@ namespace UI
                         {
                             if (b.status == false && b.kaartsoort == "Dranken")
                             {
-                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                                li.SubItems.Add(b.aantal.ToString());
+                                if (b.aantal >= 1)
+                                {
+                                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                    li.SubItems.Add(b.aantal.ToString());
 
-                                lv.Items.Add(li);
+                                    lv.Items.Add(li);
+                                }
                             }
                         }
                         else
                         {
                             if (b.kaartsoort == "Dranken")
                             {
-                                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                                li.SubItems.Add(b.aantal.ToString());
+                                if (b.aantal >= 1)
+                                {
+                                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                                    li.SubItems.Add(b.aantal.ToString());
 
-                                lv.Items.Add(li);
+                                    lv.Items.Add(li);
+                                }
                             }
                         }
                     }
@@ -1111,7 +1123,7 @@ namespace UI
         {
             int tafelID;
 
-            if (last.Equals(0))
+            if (num.Equals(0))
             {
                 string result = label.Substring(label.Length - Math.Min(2, label.Length));
                 tafelID = int.Parse(result);
@@ -1136,33 +1148,45 @@ namespace UI
                         addStuff(bestellingID);
                     }
                 }
-                if (user == User.Barpersoneel || Overzicht == "kok")
+               
+            }
+            else if (user == User.Barpersoneel || Overzicht == "bar")
+            {
+                foreach (Bestelling b in Bestellinglistview)
                 {
-                    foreach (Bestelling b in Bestellinglistview)
+                    if (b.status == false && b.kaartsoort == "Dranken")
                     {
-                        if (b.status == false && b.kaartsoort != "Dranken")
-                        {
-                            addStuff(bestellingID);
-                        }
+                        addStuff(bestellingID);
                     }
                 }
             }
-        
+
         }
         // Deze wordt gebruikt om alle bestellingen te vullen in de listviews
         private List<Bestelling> addStuff(int ID)
         {
             listView_BestelItems.Items.Clear();
+            listView_AFBestelItems.Items.Clear();
             BestellingService bestelservice = new BestellingService();
             List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(ID);
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
-                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                    li.SubItems.Add(b.aantal.ToString());
-                    li.SubItems.Add(b.opmerking.ToString());
-                    li.SubItems.Add(b.bestellingmenuitemID.ToString());
-                    listView_BestelItems.Items.Add(li);
+                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                        li.SubItems.Add(b.aantal.ToString());
+                        li.SubItems.Add(b.opmerking.ToString());
+                        li.SubItems.Add(b.bestellingmenuitemID.ToString());
+                    if (b.aantal >= 1)
+                    {
+                        if (current == true)
+                        {
+                            listView_BestelItems.Items.Add(li);
+                        }
+                        else
+                        {
+                            listView_AFBestelItems.Items.Add(li);
+                        }
+                    }
                 }
             }
             return Bestellinglistview;
@@ -1437,7 +1461,7 @@ namespace UI
         private void FillAFTafelPanel(string label, char last, int num, int bestellingID)
         {
             int tafelID;
-            if (last.Equals(0))
+            if (num.Equals(0))
             {
                 string result = label.Substring(label.Length - Math.Min(2, label.Length));
                 tafelID = int.Parse(result);
@@ -1545,6 +1569,7 @@ namespace UI
                 Environment.Exit(0);
             }
         }
+
 
     }
 }

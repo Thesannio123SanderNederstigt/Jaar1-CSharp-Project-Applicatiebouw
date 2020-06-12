@@ -61,6 +61,20 @@ namespace UI
             pnl_KassaVoorraadoverzichtGerecht.Hide();
         }
 
+        public void RefreshText()
+        {
+            foreach(Control panel in this.Controls)
+            {
+                foreach(Control control in panel.Controls)
+                {                    
+                   if(control.GetType() == typeof(TextBox))
+                   {
+                        control.Controls.Clear();
+                   }
+                }          
+            }
+        }
+
         public void RefreshVoorraadGerecht(MenuItemService menuItemService)
         {
             List<MenuItem> menuItemList = menuItemService.Get_Gerechten_MenuItems();
@@ -91,7 +105,6 @@ namespace UI
                 HidePanels();
                 pnl_KassaHoofdscherm.Show();
             }
-
         }
         private void pictureBx_Uitloggen_Kassa_Click(object sender, EventArgs e)
         {
@@ -186,6 +199,7 @@ namespace UI
             lv_MenuOverzicht.Items.Clear();
             menuItemFiller();
 
+            RefreshText();
         }
 
         // Methode om de listviews te vullen op basis van de menu keuzes en voorraad of menukaart
