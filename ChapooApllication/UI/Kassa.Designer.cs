@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kassa));
-            this.label2 = new System.Windows.Forms.Label();
             this.btn_BarKeuzeBestelling_Kassa = new System.Windows.Forms.Button();
             this.btn_KeukenKeuzeBestelling_Kassa = new System.Windows.Forms.Button();
             this.pnl_KassaKeuzeBestellingen = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdscherm_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugKeuzebestelling_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_Inkomstenoverzicht = new System.Windows.Forms.Panel();
@@ -47,7 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_KassaTafeloverzicht = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugTafeloverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -62,12 +60,7 @@
             this.btn_KassaTafel3 = new System.Windows.Forms.Button();
             this.btn_KassaTafel2 = new System.Windows.Forms.Button();
             this.btn_KassaTafel1 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.pnl_KassaPersoneelsbeheer = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pnl_MessageBox = new System.Windows.Forms.Panel();
-            this.lbl_MessageBox = new System.Windows.Forms.Label();
-            this.btn_OKMessageBox = new System.Windows.Forms.Button();
             this.txt_InlogcodePersoneelsbeheer = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.txt_TypePersoneelsbeheer = new System.Windows.Forms.TextBox();
@@ -79,7 +72,6 @@
             this.label44 = new System.Windows.Forms.Label();
             this.btn_ToevoegenPersoneel = new System.Windows.Forms.Button();
             this.txt_PersoneelsbeheerID = new System.Windows.Forms.TextBox();
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugOverzichtPersoneel_Kassa = new System.Windows.Forms.PictureBox();
             this.btn_MenuoverzichtPersoneelsbeheer_Kassa = new System.Windows.Forms.Button();
             this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa = new System.Windows.Forms.Button();
@@ -94,9 +86,7 @@
             this.PersoneelType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PersoneelInlogcode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.pnl_KassaVoorraadoverzichtGerecht = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht = new System.Windows.Forms.Button();
             this.btnMenuOverzicht_GerechtVoorraadOverzicht = new System.Windows.Forms.Button();
@@ -111,10 +101,8 @@
             this.listview_GerechtVoorraadOverzicht = new System.Windows.Forms.ListView();
             this.Product = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Aantal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaVoorraadoverzicht = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
             this.btnMenuOverzicht_DrankVoorraadOverzicht = new System.Windows.Forms.Button();
@@ -129,17 +117,14 @@
             this.listView_VoorraadOverzicht = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label17 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaVoorraadKeuze = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btn_GerechtVoorraadKeuzeOverzicht_Kassa = new System.Windows.Forms.Button();
             this.btn_DrankVoorraadOverzichtKeuze_Kassa = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaDinerMenuoverzicht = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa = new System.Windows.Forms.PictureBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugDinermenuOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.btnToevoegen_DinerMenuOverzicht = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
@@ -170,18 +155,14 @@
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label43 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaMenuoverzichtKeuze = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa = new System.Windows.Forms.PictureBox();
             this.pictureBx_TerugMenuOverzichtKeuze_Kassa = new System.Windows.Forms.PictureBox();
             this.btnDinerMenu_MenuoverzichtKeuze = new System.Windows.Forms.Button();
             this.btnLunchMenu_MenuoverzichtKeuze = new System.Windows.Forms.Button();
             this.btnDrankMenu_MenuoverzichtKeuze = new System.Windows.Forms.Button();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.pnl_MenuOverzicht = new System.Windows.Forms.Panel();
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa = new System.Windows.Forms.PictureBox();
             this.picturebox_MenuOverzichtTerug = new System.Windows.Forms.PictureBox();
             this.btnToevoegen_MenuOverzicht = new System.Windows.Forms.Button();
             this.label29 = new System.Windows.Forms.Label();
@@ -212,9 +193,9 @@
             this.drankmenuCategorie = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuSoort = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.drankmenuPrijs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lbl_Overzicht = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pnl_KassaLunchMenuoverizcht = new System.Windows.Forms.Panel();
+            this.txtBoxHeader = new System.Windows.Forms.TextBox();
             this.pictureBx_TerugLunchMenu_Kassa = new System.Windows.Forms.PictureBox();
             this.btnToevoegen_Lunchmenuoverzicht = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
@@ -245,76 +226,62 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label35 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_MenuOverzichtHoofdscherm_Kassa = new System.Windows.Forms.Button();
             this.btn_VoorraadHoofdscherm_Kassa = new System.Windows.Forms.Button();
             this.btn_BestellingenHoofdscherm_Kassa = new System.Windows.Forms.Button();
             this.btn_PersoneelsbeheerHoofdscherm_Kassa = new System.Windows.Forms.Button();
             this.btn_TafeloverzichtHoofdscherm_Kassa = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBx_Uitloggen_Kassa = new System.Windows.Forms.PictureBox();
             this.pnl_KassaHoofdscherm = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBoxVoorraadoverzicht = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtBoxMenuoverzicht = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.pnl_KassaKeuzeBestellingen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugKeuzebestelling_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnl_Inkomstenoverzicht.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugnaarHoofdschermInkomsten_Kassa)).BeginInit();
             this.pnl_KassaTafeloverzicht.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm2_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugTafeloverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnl_KassaPersoneelsbeheer.SuspendLayout();
-            this.pnl_MessageBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm6_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugOverzichtPersoneel_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnl_KassaVoorraadoverzichtGerecht.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm4_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pnl_KassaVoorraadoverzicht.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm5_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugDrankvoorraadOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.pnl_KassaVoorraadKeuze.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm1_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnl_KassaDinerMenuoverzicht.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm3_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugDinermenuOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.pnl_KassaMenuoverzichtKeuze.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugMenuOverzichtKeuze_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.pnl_MenuOverzicht.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_MenuOverzichtTerug)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.pnl_KassaLunchMenuoverizcht.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugLunchMenu_Kassa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).BeginInit();
             this.pnl_KassaHoofdscherm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(439, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Keuze bestelling";
             // 
             // btn_BarKeuzeBestelling_Kassa
             // 
-            this.btn_BarKeuzeBestelling_Kassa.Location = new System.Drawing.Point(262, 281);
+            this.btn_BarKeuzeBestelling_Kassa.Location = new System.Drawing.Point(256, 163);
             this.btn_BarKeuzeBestelling_Kassa.Name = "btn_BarKeuzeBestelling_Kassa";
             this.btn_BarKeuzeBestelling_Kassa.Size = new System.Drawing.Size(488, 112);
             this.btn_BarKeuzeBestelling_Kassa.TabIndex = 6;
@@ -324,9 +291,9 @@
             // 
             // btn_KeukenKeuzeBestelling_Kassa
             // 
-            this.btn_KeukenKeuzeBestelling_Kassa.Location = new System.Drawing.Point(263, 437);
+            this.btn_KeukenKeuzeBestelling_Kassa.Location = new System.Drawing.Point(256, 340);
             this.btn_KeukenKeuzeBestelling_Kassa.Name = "btn_KeukenKeuzeBestelling_Kassa";
-            this.btn_KeukenKeuzeBestelling_Kassa.Size = new System.Drawing.Size(484, 110);
+            this.btn_KeukenKeuzeBestelling_Kassa.Size = new System.Drawing.Size(489, 110);
             this.btn_KeukenKeuzeBestelling_Kassa.TabIndex = 7;
             this.btn_KeukenKeuzeBestelling_Kassa.Text = "Keuken";
             this.btn_KeukenKeuzeBestelling_Kassa.UseVisualStyleBackColor = true;
@@ -335,32 +302,20 @@
             // pnl_KassaKeuzeBestellingen
             // 
             this.pnl_KassaKeuzeBestellingen.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaKeuzeBestellingen.Controls.Add(this.pictureBx_TerugNaarHoofdscherm_Kassa);
+            this.pnl_KassaKeuzeBestellingen.Controls.Add(this.textBox6);
             this.pnl_KassaKeuzeBestellingen.Controls.Add(this.pictureBx_TerugKeuzebestelling_Kassa);
             this.pnl_KassaKeuzeBestellingen.Controls.Add(this.pictureBox3);
             this.pnl_KassaKeuzeBestellingen.Controls.Add(this.btn_KeukenKeuzeBestelling_Kassa);
             this.pnl_KassaKeuzeBestellingen.Controls.Add(this.btn_BarKeuzeBestelling_Kassa);
-            this.pnl_KassaKeuzeBestellingen.Controls.Add(this.label2);
             this.pnl_KassaKeuzeBestellingen.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaKeuzeBestellingen.Name = "pnl_KassaKeuzeBestellingen";
             this.pnl_KassaKeuzeBestellingen.Size = new System.Drawing.Size(1005, 730);
             this.pnl_KassaKeuzeBestellingen.TabIndex = 11;
             // 
-            // pictureBx_TerugNaarHoofdscherm_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.Location = new System.Drawing.Point(10, 9);
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.Name = "pictureBx_TerugNaarHoofdscherm_Kassa";
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.TabIndex = 57;
-            this.pictureBx_TerugNaarHoofdscherm_Kassa.TabStop = false;
-            // 
             // pictureBx_TerugKeuzebestelling_Kassa
             // 
             this.pictureBx_TerugKeuzebestelling_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugKeuzebestelling_Kassa.Image")));
-            this.pictureBx_TerugKeuzebestelling_Kassa.Location = new System.Drawing.Point(57, 9);
+            this.pictureBx_TerugKeuzebestelling_Kassa.Location = new System.Drawing.Point(24, 18);
             this.pictureBx_TerugKeuzebestelling_Kassa.Name = "pictureBx_TerugKeuzebestelling_Kassa";
             this.pictureBx_TerugKeuzebestelling_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugKeuzebestelling_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -371,9 +326,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(342, 70);
+            this.pictureBox3.Location = new System.Drawing.Point(905, 6);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(313, 165);
+            this.pictureBox3.Size = new System.Drawing.Size(94, 57);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -481,7 +436,7 @@
             // pnl_KassaTafeloverzicht
             // 
             this.pnl_KassaTafeloverzicht.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaTafeloverzicht.Controls.Add(this.pictureBx_TerugNaarHoofdscherm2_Kassa);
+            this.pnl_KassaTafeloverzicht.Controls.Add(this.textBox1);
             this.pnl_KassaTafeloverzicht.Controls.Add(this.pictureBx_TerugTafeloverzicht_Kassa);
             this.pnl_KassaTafeloverzicht.Controls.Add(this.pictureBox4);
             this.pnl_KassaTafeloverzicht.Controls.Add(this.label10);
@@ -496,27 +451,27 @@
             this.pnl_KassaTafeloverzicht.Controls.Add(this.btn_KassaTafel3);
             this.pnl_KassaTafeloverzicht.Controls.Add(this.btn_KassaTafel2);
             this.pnl_KassaTafeloverzicht.Controls.Add(this.btn_KassaTafel1);
-            this.pnl_KassaTafeloverzicht.Controls.Add(this.label8);
             this.pnl_KassaTafeloverzicht.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaTafeloverzicht.Name = "pnl_KassaTafeloverzicht";
             this.pnl_KassaTafeloverzicht.Size = new System.Drawing.Size(1008, 733);
             this.pnl_KassaTafeloverzicht.TabIndex = 8;
             // 
-            // pictureBx_TerugNaarHoofdscherm2_Kassa
+            // textBox1
             // 
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm2_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.Location = new System.Drawing.Point(10, 12);
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.Name = "pictureBx_TerugNaarHoofdscherm2_Kassa";
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdscherm2_Kassa.TabStop = false;
+            this.textBox1.BackColor = System.Drawing.Color.LightGray;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(290, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(380, 45);
+            this.textBox1.TabIndex = 57;
+            this.textBox1.Text = "Tafel overzicht";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBx_TerugTafeloverzicht_Kassa
             // 
             this.pictureBx_TerugTafeloverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugTafeloverzicht_Kassa.Image")));
-            this.pictureBx_TerugTafeloverzicht_Kassa.Location = new System.Drawing.Point(57, 12);
+            this.pictureBx_TerugTafeloverzicht_Kassa.Location = new System.Drawing.Point(24, 18);
             this.pictureBx_TerugTafeloverzicht_Kassa.Name = "pictureBx_TerugTafeloverzicht_Kassa";
             this.pictureBx_TerugTafeloverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugTafeloverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -527,9 +482,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox4.Location = new System.Drawing.Point(843, 9);
+            this.pictureBox4.Location = new System.Drawing.Point(905, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(139, 82);
+            this.pictureBox4.Size = new System.Drawing.Size(100, 66);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -642,20 +597,10 @@
             this.btn_KassaTafel1.Text = "Tafel 1";
             this.btn_KassaTafel1.UseVisualStyleBackColor = true;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(439, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Tafeloverzicht";
-            // 
             // pnl_KassaPersoneelsbeheer
             // 
             this.pnl_KassaPersoneelsbeheer.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaPersoneelsbeheer.Controls.Add(this.comboBox1);
-            this.pnl_KassaPersoneelsbeheer.Controls.Add(this.pnl_MessageBox);
+            this.pnl_KassaPersoneelsbeheer.Controls.Add(this.textBox5);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.txt_InlogcodePersoneelsbeheer);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.label48);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.txt_TypePersoneelsbeheer);
@@ -667,7 +612,6 @@
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.label44);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.btn_ToevoegenPersoneel);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.txt_PersoneelsbeheerID);
-            this.pnl_KassaPersoneelsbeheer.Controls.Add(this.pictureBx_TerugNaarHoofdscherm6_Kassa);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.pictureBx_TerugOverzichtPersoneel_Kassa);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.btn_MenuoverzichtPersoneelsbeheer_Kassa);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa);
@@ -677,47 +621,10 @@
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.btn_VerwijderenPersoneelsBeheer_Kassa);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.listView_Personeelsbeheer);
             this.pnl_KassaPersoneelsbeheer.Controls.Add(this.pictureBox5);
-            this.pnl_KassaPersoneelsbeheer.Controls.Add(this.label11);
             this.pnl_KassaPersoneelsbeheer.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaPersoneelsbeheer.Name = "pnl_KassaPersoneelsbeheer";
             this.pnl_KassaPersoneelsbeheer.Size = new System.Drawing.Size(1008, 736);
             this.pnl_KassaPersoneelsbeheer.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(760, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 73;
-            // 
-            // pnl_MessageBox
-            // 
-            this.pnl_MessageBox.Controls.Add(this.lbl_MessageBox);
-            this.pnl_MessageBox.Controls.Add(this.btn_OKMessageBox);
-            this.pnl_MessageBox.Location = new System.Drawing.Point(301, 261);
-            this.pnl_MessageBox.Name = "pnl_MessageBox";
-            this.pnl_MessageBox.Size = new System.Drawing.Size(410, 169);
-            this.pnl_MessageBox.TabIndex = 72;
-            this.pnl_MessageBox.Visible = false;
-            // 
-            // lbl_MessageBox
-            // 
-            this.lbl_MessageBox.AutoSize = true;
-            this.lbl_MessageBox.Location = new System.Drawing.Point(148, 42);
-            this.lbl_MessageBox.Name = "lbl_MessageBox";
-            this.lbl_MessageBox.Size = new System.Drawing.Size(120, 13);
-            this.lbl_MessageBox.TabIndex = 1;
-            this.lbl_MessageBox.Text = "Dit is een tekst met test ";
-            // 
-            // btn_OKMessageBox
-            // 
-            this.btn_OKMessageBox.Location = new System.Drawing.Point(168, 99);
-            this.btn_OKMessageBox.Name = "btn_OKMessageBox";
-            this.btn_OKMessageBox.Size = new System.Drawing.Size(91, 46);
-            this.btn_OKMessageBox.TabIndex = 0;
-            this.btn_OKMessageBox.Text = "OK";
-            this.btn_OKMessageBox.UseVisualStyleBackColor = true;
             // 
             // txt_InlogcodePersoneelsbeheer
             // 
@@ -810,21 +717,10 @@
             this.txt_PersoneelsbeheerID.Size = new System.Drawing.Size(48, 20);
             this.txt_PersoneelsbeheerID.TabIndex = 61;
             // 
-            // pictureBx_TerugNaarHoofdscherm6_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm6_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.Location = new System.Drawing.Point(10, 14);
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.Name = "pictureBx_TerugNaarHoofdscherm6_Kassa";
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdscherm6_Kassa.TabStop = false;
-            // 
             // pictureBx_TerugOverzichtPersoneel_Kassa
             // 
             this.pictureBx_TerugOverzichtPersoneel_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugOverzichtPersoneel_Kassa.Image")));
-            this.pictureBx_TerugOverzichtPersoneel_Kassa.Location = new System.Drawing.Point(57, 14);
+            this.pictureBx_TerugOverzichtPersoneel_Kassa.Location = new System.Drawing.Point(24, 12);
             this.pictureBx_TerugOverzichtPersoneel_Kassa.Name = "pictureBx_TerugOverzichtPersoneel_Kassa";
             this.pictureBx_TerugOverzichtPersoneel_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugOverzichtPersoneel_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -834,7 +730,7 @@
             // 
             // btn_MenuoverzichtPersoneelsbeheer_Kassa
             // 
-            this.btn_MenuoverzichtPersoneelsbeheer_Kassa.Location = new System.Drawing.Point(22, 520);
+            this.btn_MenuoverzichtPersoneelsbeheer_Kassa.Location = new System.Drawing.Point(22, 510);
             this.btn_MenuoverzichtPersoneelsbeheer_Kassa.Name = "btn_MenuoverzichtPersoneelsbeheer_Kassa";
             this.btn_MenuoverzichtPersoneelsbeheer_Kassa.Size = new System.Drawing.Size(175, 112);
             this.btn_MenuoverzichtPersoneelsbeheer_Kassa.TabIndex = 12;
@@ -844,7 +740,7 @@
             // 
             // btn_PersoneelsbeheerPersoneelsoverzicht_Kassa
             // 
-            this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.Location = new System.Drawing.Point(22, 392);
+            this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.Location = new System.Drawing.Point(22, 367);
             this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.Name = "btn_PersoneelsbeheerPersoneelsoverzicht_Kassa";
             this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.Size = new System.Drawing.Size(175, 112);
             this.btn_PersoneelsbeheerPersoneelsoverzicht_Kassa.TabIndex = 11;
@@ -854,7 +750,7 @@
             // 
             // btn_BestellingenPersoneelsoverzicht_Kassa
             // 
-            this.btn_BestellingenPersoneelsoverzicht_Kassa.Location = new System.Drawing.Point(22, 268);
+            this.btn_BestellingenPersoneelsoverzicht_Kassa.Location = new System.Drawing.Point(24, 218);
             this.btn_BestellingenPersoneelsoverzicht_Kassa.Name = "btn_BestellingenPersoneelsoverzicht_Kassa";
             this.btn_BestellingenPersoneelsoverzicht_Kassa.Size = new System.Drawing.Size(175, 112);
             this.btn_BestellingenPersoneelsoverzicht_Kassa.TabIndex = 10;
@@ -864,7 +760,7 @@
             // 
             // btn_VoorraadPersoneelsoverzicht_Kassa
             // 
-            this.btn_VoorraadPersoneelsoverzicht_Kassa.Location = new System.Drawing.Point(22, 144);
+            this.btn_VoorraadPersoneelsoverzicht_Kassa.Location = new System.Drawing.Point(22, 74);
             this.btn_VoorraadPersoneelsoverzicht_Kassa.Name = "btn_VoorraadPersoneelsoverzicht_Kassa";
             this.btn_VoorraadPersoneelsoverzicht_Kassa.Size = new System.Drawing.Size(175, 112);
             this.btn_VoorraadPersoneelsoverzicht_Kassa.TabIndex = 9;
@@ -875,9 +771,9 @@
             // btn_OpslaanPersoneelsbeheer_Kassa
             // 
             this.btn_OpslaanPersoneelsbeheer_Kassa.BackColor = System.Drawing.Color.OliveDrab;
-            this.btn_OpslaanPersoneelsbeheer_Kassa.Location = new System.Drawing.Point(636, 652);
+            this.btn_OpslaanPersoneelsbeheer_Kassa.Location = new System.Drawing.Point(518, 642);
             this.btn_OpslaanPersoneelsbeheer_Kassa.Name = "btn_OpslaanPersoneelsbeheer_Kassa";
-            this.btn_OpslaanPersoneelsbeheer_Kassa.Size = new System.Drawing.Size(360, 43);
+            this.btn_OpslaanPersoneelsbeheer_Kassa.Size = new System.Drawing.Size(261, 43);
             this.btn_OpslaanPersoneelsbeheer_Kassa.TabIndex = 8;
             this.btn_OpslaanPersoneelsbeheer_Kassa.Text = "Opslaan";
             this.btn_OpslaanPersoneelsbeheer_Kassa.UseVisualStyleBackColor = false;
@@ -886,9 +782,9 @@
             // btn_VerwijderenPersoneelsBeheer_Kassa
             // 
             this.btn_VerwijderenPersoneelsBeheer_Kassa.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_VerwijderenPersoneelsBeheer_Kassa.Location = new System.Drawing.Point(223, 652);
+            this.btn_VerwijderenPersoneelsBeheer_Kassa.Location = new System.Drawing.Point(223, 642);
             this.btn_VerwijderenPersoneelsBeheer_Kassa.Name = "btn_VerwijderenPersoneelsBeheer_Kassa";
-            this.btn_VerwijderenPersoneelsBeheer_Kassa.Size = new System.Drawing.Size(360, 43);
+            this.btn_VerwijderenPersoneelsBeheer_Kassa.Size = new System.Drawing.Size(267, 43);
             this.btn_VerwijderenPersoneelsBeheer_Kassa.TabIndex = 7;
             this.btn_VerwijderenPersoneelsBeheer_Kassa.Text = "Verwijderen";
             this.btn_VerwijderenPersoneelsBeheer_Kassa.UseVisualStyleBackColor = false;
@@ -903,7 +799,7 @@
             this.PersoneelType,
             this.PersoneelInlogcode});
             this.listView_Personeelsbeheer.HideSelection = false;
-            this.listView_Personeelsbeheer.Location = new System.Drawing.Point(223, 144);
+            this.listView_Personeelsbeheer.Location = new System.Drawing.Point(223, 134);
             this.listView_Personeelsbeheer.Name = "listView_Personeelsbeheer";
             this.listView_Personeelsbeheer.Size = new System.Drawing.Size(556, 488);
             this.listView_Personeelsbeheer.TabIndex = 6;
@@ -939,26 +835,17 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox5.Location = new System.Drawing.Point(453, 12);
+            this.pictureBox5.Location = new System.Drawing.Point(905, 6);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(230, 101);
+            this.pictureBox5.Size = new System.Drawing.Size(94, 63);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(510, 123);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 13);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Overzicht Personeel";
-            // 
             // pnl_KassaVoorraadoverzichtGerecht
             // 
             this.pnl_KassaVoorraadoverzichtGerecht.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.pictureBx_TerugNaarHoofdscherm4_Kassa);
+            this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.textBox4);
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa);
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.btnPersoneelsbeheer_GerechtvooraadOverzicht);
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.btnMenuOverzicht_GerechtVoorraadOverzicht);
@@ -971,28 +858,16 @@
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.txtAantal_GerechtVoorraadoverzicht);
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.txtProduct_GerechtVoorraadoverzicht);
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.listview_GerechtVoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.label12);
             this.pnl_KassaVoorraadoverzichtGerecht.Controls.Add(this.pictureBox6);
             this.pnl_KassaVoorraadoverzichtGerecht.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaVoorraadoverzichtGerecht.Name = "pnl_KassaVoorraadoverzichtGerecht";
             this.pnl_KassaVoorraadoverzichtGerecht.Size = new System.Drawing.Size(1005, 730);
             this.pnl_KassaVoorraadoverzichtGerecht.TabIndex = 9;
             // 
-            // pictureBx_TerugNaarHoofdscherm4_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm4_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.Location = new System.Drawing.Point(24, 14);
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.Name = "pictureBx_TerugNaarHoofdscherm4_Kassa";
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdscherm4_Kassa.TabStop = false;
-            // 
             // pictureBx_TerugGerechtVoorraadOverzicht_Kassa
             // 
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Image")));
-            this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Location = new System.Drawing.Point(71, 14);
+            this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Location = new System.Drawing.Point(24, 12);
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Name = "pictureBx_TerugGerechtVoorraadOverzicht_Kassa";
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1002,7 +877,7 @@
             // 
             // btnPersoneelsbeheer_GerechtvooraadOverzicht
             // 
-            this.btnPersoneelsbeheer_GerechtvooraadOverzicht.Location = new System.Drawing.Point(22, 517);
+            this.btnPersoneelsbeheer_GerechtvooraadOverzicht.Location = new System.Drawing.Point(24, 459);
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht.Name = "btnPersoneelsbeheer_GerechtvooraadOverzicht";
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnPersoneelsbeheer_GerechtvooraadOverzicht.TabIndex = 26;
@@ -1012,7 +887,7 @@
             // 
             // btnMenuOverzicht_GerechtVoorraadOverzicht
             // 
-            this.btnMenuOverzicht_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(22, 381);
+            this.btnMenuOverzicht_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(22, 333);
             this.btnMenuOverzicht_GerechtVoorraadOverzicht.Name = "btnMenuOverzicht_GerechtVoorraadOverzicht";
             this.btnMenuOverzicht_GerechtVoorraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnMenuOverzicht_GerechtVoorraadOverzicht.TabIndex = 25;
@@ -1022,7 +897,7 @@
             // 
             // btnBestellingen_GerechtVoorraadOverzicht
             // 
-            this.btnBestellingen_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(22, 251);
+            this.btnBestellingen_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(22, 200);
             this.btnBestellingen_GerechtVoorraadOverzicht.Name = "btnBestellingen_GerechtVoorraadOverzicht";
             this.btnBestellingen_GerechtVoorraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnBestellingen_GerechtVoorraadOverzicht.TabIndex = 24;
@@ -1032,7 +907,7 @@
             // 
             // btnVooraad_GerechtVoorraadOverzicht
             // 
-            this.btnVooraad_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(22, 118);
+            this.btnVooraad_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(22, 67);
             this.btnVooraad_GerechtVoorraadOverzicht.Name = "btnVooraad_GerechtVoorraadOverzicht";
             this.btnVooraad_GerechtVoorraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnVooraad_GerechtVoorraadOverzicht.TabIndex = 23;
@@ -1042,7 +917,7 @@
             // 
             // btnVerwijderen_GerechtvoorraadOverzicht
             // 
-            this.btnVerwijderen_GerechtvoorraadOverzicht.Location = new System.Drawing.Point(836, 360);
+            this.btnVerwijderen_GerechtvoorraadOverzicht.Location = new System.Drawing.Point(830, 303);
             this.btnVerwijderen_GerechtvoorraadOverzicht.Name = "btnVerwijderen_GerechtvoorraadOverzicht";
             this.btnVerwijderen_GerechtvoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnVerwijderen_GerechtvoorraadOverzicht.TabIndex = 22;
@@ -1052,7 +927,7 @@
             // 
             // btnWijzigen_GerechtVoorraadOverzicht
             // 
-            this.btnWijzigen_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(836, 304);
+            this.btnWijzigen_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(830, 238);
             this.btnWijzigen_GerechtVoorraadOverzicht.Name = "btnWijzigen_GerechtVoorraadOverzicht";
             this.btnWijzigen_GerechtVoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnWijzigen_GerechtVoorraadOverzicht.TabIndex = 21;
@@ -1063,7 +938,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(840, 196);
+            this.label14.Location = new System.Drawing.Point(827, 166);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(37, 13);
             this.label14.TabIndex = 20;
@@ -1072,7 +947,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(840, 150);
+            this.label13.Location = new System.Drawing.Point(827, 120);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(44, 13);
             this.label13.TabIndex = 19;
@@ -1080,14 +955,14 @@
             // 
             // txtAantal_GerechtVoorraadoverzicht
             // 
-            this.txtAantal_GerechtVoorraadoverzicht.Location = new System.Drawing.Point(843, 212);
+            this.txtAantal_GerechtVoorraadoverzicht.Location = new System.Drawing.Point(830, 185);
             this.txtAantal_GerechtVoorraadoverzicht.Name = "txtAantal_GerechtVoorraadoverzicht";
             this.txtAantal_GerechtVoorraadoverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtAantal_GerechtVoorraadoverzicht.TabIndex = 18;
             // 
             // txtProduct_GerechtVoorraadoverzicht
             // 
-            this.txtProduct_GerechtVoorraadoverzicht.Location = new System.Drawing.Point(843, 166);
+            this.txtProduct_GerechtVoorraadoverzicht.Location = new System.Drawing.Point(830, 136);
             this.txtProduct_GerechtVoorraadoverzicht.Name = "txtProduct_GerechtVoorraadoverzicht";
             this.txtProduct_GerechtVoorraadoverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtProduct_GerechtVoorraadoverzicht.TabIndex = 17;
@@ -1118,21 +993,12 @@
             this.Aantal.Text = "Aantal";
             this.Aantal.Width = 90;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(597, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(160, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "gerechtvoorraadoverzicht Kassa";
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox6.Location = new System.Drawing.Point(396, 9);
+            this.pictureBox6.Location = new System.Drawing.Point(905, 7);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(182, 106);
+            this.pictureBox6.Size = new System.Drawing.Size(94, 56);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
@@ -1140,7 +1006,7 @@
             // pnl_KassaVoorraadoverzicht
             // 
             this.pnl_KassaVoorraadoverzicht.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.pictureBx_TerugNaarHoofdscherm5_Kassa);
+            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.txtBoxVoorraadoverzicht);
             this.pnl_KassaVoorraadoverzicht.Controls.Add(this.pictureBx_TerugDrankvoorraadOverzicht_Kassa);
             this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnPersoneelsbeheer_DrankVoorraadOverzicht);
             this.pnl_KassaVoorraadoverzicht.Controls.Add(this.btnMenuOverzicht_DrankVoorraadOverzicht);
@@ -1153,28 +1019,16 @@
             this.pnl_KassaVoorraadoverzicht.Controls.Add(this.txtAantal_VoorraadOverzicht);
             this.pnl_KassaVoorraadoverzicht.Controls.Add(this.txtProduct_VoorraadOverzicht);
             this.pnl_KassaVoorraadoverzicht.Controls.Add(this.listView_VoorraadOverzicht);
-            this.pnl_KassaVoorraadoverzicht.Controls.Add(this.label17);
             this.pnl_KassaVoorraadoverzicht.Controls.Add(this.pictureBox7);
             this.pnl_KassaVoorraadoverzicht.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaVoorraadoverzicht.Name = "pnl_KassaVoorraadoverzicht";
             this.pnl_KassaVoorraadoverzicht.Size = new System.Drawing.Size(1005, 730);
             this.pnl_KassaVoorraadoverzicht.TabIndex = 27;
             // 
-            // pictureBx_TerugNaarHoofdscherm5_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm5_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.Location = new System.Drawing.Point(10, 12);
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.Name = "pictureBx_TerugNaarHoofdscherm5_Kassa";
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdscherm5_Kassa.TabStop = false;
-            // 
             // pictureBx_TerugDrankvoorraadOverzicht_Kassa
             // 
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugDrankvoorraadOverzicht_Kassa.Image")));
-            this.pictureBx_TerugDrankvoorraadOverzicht_Kassa.Location = new System.Drawing.Point(55, 12);
+            this.pictureBx_TerugDrankvoorraadOverzicht_Kassa.Location = new System.Drawing.Point(22, 9);
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa.Name = "pictureBx_TerugDrankvoorraadOverzicht_Kassa";
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugDrankvoorraadOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1184,7 +1038,7 @@
             // 
             // btnPersoneelsbeheer_DrankVoorraadOverzicht
             // 
-            this.btnPersoneelsbeheer_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 517);
+            this.btnPersoneelsbeheer_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 437);
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht.Name = "btnPersoneelsbeheer_DrankVoorraadOverzicht";
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnPersoneelsbeheer_DrankVoorraadOverzicht.TabIndex = 26;
@@ -1194,7 +1048,7 @@
             // 
             // btnMenuOverzicht_DrankVoorraadOverzicht
             // 
-            this.btnMenuOverzicht_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 381);
+            this.btnMenuOverzicht_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 319);
             this.btnMenuOverzicht_DrankVoorraadOverzicht.Name = "btnMenuOverzicht_DrankVoorraadOverzicht";
             this.btnMenuOverzicht_DrankVoorraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnMenuOverzicht_DrankVoorraadOverzicht.TabIndex = 25;
@@ -1204,7 +1058,7 @@
             // 
             // btnBestellingen_DrankVoorraadOverzicht
             // 
-            this.btnBestellingen_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 251);
+            this.btnBestellingen_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 196);
             this.btnBestellingen_DrankVoorraadOverzicht.Name = "btnBestellingen_DrankVoorraadOverzicht";
             this.btnBestellingen_DrankVoorraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnBestellingen_DrankVoorraadOverzicht.TabIndex = 24;
@@ -1214,7 +1068,7 @@
             // 
             // btnVoorraad_DrankVoorraadOverzicht
             // 
-            this.btnVoorraad_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 118);
+            this.btnVoorraad_DrankVoorraadOverzicht.Location = new System.Drawing.Point(22, 66);
             this.btnVoorraad_DrankVoorraadOverzicht.Name = "btnVoorraad_DrankVoorraadOverzicht";
             this.btnVoorraad_DrankVoorraadOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnVoorraad_DrankVoorraadOverzicht.TabIndex = 23;
@@ -1245,7 +1099,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(840, 196);
+            this.label15.Location = new System.Drawing.Point(833, 196);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(37, 13);
             this.label15.TabIndex = 20;
@@ -1254,7 +1108,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(840, 150);
+            this.label16.Location = new System.Drawing.Point(833, 150);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 13);
             this.label16.TabIndex = 19;
@@ -1262,14 +1116,14 @@
             // 
             // txtAantal_VoorraadOverzicht
             // 
-            this.txtAantal_VoorraadOverzicht.Location = new System.Drawing.Point(843, 212);
+            this.txtAantal_VoorraadOverzicht.Location = new System.Drawing.Point(836, 212);
             this.txtAantal_VoorraadOverzicht.Name = "txtAantal_VoorraadOverzicht";
             this.txtAantal_VoorraadOverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtAantal_VoorraadOverzicht.TabIndex = 18;
             // 
             // txtProduct_VoorraadOverzicht
             // 
-            this.txtProduct_VoorraadOverzicht.Location = new System.Drawing.Point(843, 166);
+            this.txtProduct_VoorraadOverzicht.Location = new System.Drawing.Point(836, 166);
             this.txtProduct_VoorraadOverzicht.Name = "txtProduct_VoorraadOverzicht";
             this.txtProduct_VoorraadOverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtProduct_VoorraadOverzicht.TabIndex = 17;
@@ -1298,21 +1152,12 @@
             this.columnHeader2.Text = "Aantal";
             this.columnHeader2.Width = 90;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(597, 6);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(127, 13);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "voorraad overzicht Kassa";
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox7.Location = new System.Drawing.Point(383, 6);
+            this.pictureBox7.Location = new System.Drawing.Point(905, 7);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(182, 106);
+            this.pictureBox7.Size = new System.Drawing.Size(94, 56);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 14;
             this.pictureBox7.TabStop = false;
@@ -1320,32 +1165,20 @@
             // pnl_KassaVoorraadKeuze
             // 
             this.pnl_KassaVoorraadKeuze.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaVoorraadKeuze.Controls.Add(this.pictureBx_TerugNaarHoofdscherm1_Kassa);
+            this.pnl_KassaVoorraadKeuze.Controls.Add(this.textBox7);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.btn_GerechtVoorraadKeuzeOverzicht_Kassa);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.btn_DrankVoorraadOverzichtKeuze_Kassa);
-            this.pnl_KassaVoorraadKeuze.Controls.Add(this.label18);
             this.pnl_KassaVoorraadKeuze.Controls.Add(this.pictureBox8);
             this.pnl_KassaVoorraadKeuze.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaVoorraadKeuze.Name = "pnl_KassaVoorraadKeuze";
             this.pnl_KassaVoorraadKeuze.Size = new System.Drawing.Size(1008, 733);
             this.pnl_KassaVoorraadKeuze.TabIndex = 27;
             // 
-            // pictureBx_TerugNaarHoofdscherm1_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm1_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.Location = new System.Drawing.Point(10, 12);
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.Name = "pictureBx_TerugNaarHoofdscherm1_Kassa";
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdscherm1_Kassa.TabStop = false;
-            // 
             // pictureBx_TerugVoorraadKeuzeOverzicht_Kassa
             // 
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Image")));
-            this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Location = new System.Drawing.Point(57, 12);
+            this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Location = new System.Drawing.Point(22, 18);
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Name = "pictureBx_TerugVoorraadKeuzeOverzicht_Kassa";
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1355,9 +1188,9 @@
             // 
             // btn_GerechtVoorraadKeuzeOverzicht_Kassa
             // 
-            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Location = new System.Drawing.Point(263, 497);
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Location = new System.Drawing.Point(256, 370);
             this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Name = "btn_GerechtVoorraadKeuzeOverzicht_Kassa";
-            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Size = new System.Drawing.Size(522, 119);
+            this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Size = new System.Drawing.Size(523, 119);
             this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.TabIndex = 30;
             this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.Text = "Gerechten";
             this.btn_GerechtVoorraadKeuzeOverzicht_Kassa.UseVisualStyleBackColor = true;
@@ -1365,29 +1198,20 @@
             // 
             // btn_DrankVoorraadOverzichtKeuze_Kassa
             // 
-            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Location = new System.Drawing.Point(263, 327);
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Location = new System.Drawing.Point(256, 178);
             this.btn_DrankVoorraadOverzichtKeuze_Kassa.Name = "btn_DrankVoorraadOverzichtKeuze_Kassa";
-            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Size = new System.Drawing.Size(522, 119);
+            this.btn_DrankVoorraadOverzichtKeuze_Kassa.Size = new System.Drawing.Size(523, 119);
             this.btn_DrankVoorraadOverzichtKeuze_Kassa.TabIndex = 29;
             this.btn_DrankVoorraadOverzichtKeuze_Kassa.Text = "Drank";
             this.btn_DrankVoorraadOverzichtKeuze_Kassa.UseVisualStyleBackColor = true;
             this.btn_DrankVoorraadOverzichtKeuze_Kassa.Click += new System.EventHandler(this.btn_DrankVoorraadOverzichtKeuze_Kassa_Click);
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(450, 22);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(128, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Voorraad keuze overzicht";
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox8.Location = new System.Drawing.Point(341, 38);
+            this.pictureBox8.Location = new System.Drawing.Point(874, 3);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(342, 237);
+            this.pictureBox8.Size = new System.Drawing.Size(131, 75);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 27;
             this.pictureBox8.TabStop = false;
@@ -1395,7 +1219,7 @@
             // pnl_KassaDinerMenuoverzicht
             // 
             this.pnl_KassaDinerMenuoverzicht.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.pictureBx_TerugNaarHoofdscherm3_Kassa);
+            this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.textBox2);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.pictureBx_TerugDinermenuOverzicht_Kassa);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.btnToevoegen_DinerMenuOverzicht);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.label36);
@@ -1416,31 +1240,30 @@
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.btnMenuOverzicht_DinermenuOverzicht);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.btnBestellingen_Dinermenuoverzicht);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.btnVoorraad_DinerMenuOverzicht);
+            this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.pictureBox12);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.btnVerwijderen_DinerMenuOverzicht);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.btnOpslaan_DinerMenuOverzicht);
             this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.listView_DinerMenuOverzicht);
-            this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.label43);
-            this.pnl_KassaDinerMenuoverzicht.Controls.Add(this.pictureBox12);
             this.pnl_KassaDinerMenuoverzicht.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaDinerMenuoverzicht.Name = "pnl_KassaDinerMenuoverzicht";
             this.pnl_KassaDinerMenuoverzicht.Size = new System.Drawing.Size(1008, 733);
             this.pnl_KassaDinerMenuoverzicht.TabIndex = 56;
             // 
-            // pictureBx_TerugNaarHoofdscherm3_Kassa
+            // textBox2
             // 
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdscherm3_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.Location = new System.Drawing.Point(10, 12);
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.Name = "pictureBx_TerugNaarHoofdscherm3_Kassa";
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdscherm3_Kassa.TabStop = false;
+            this.textBox2.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(206, 75);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(699, 45);
+            this.textBox2.TabIndex = 61;
+            this.textBox2.Text = "Diner menu overzicht";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBx_TerugDinermenuOverzicht_Kassa
             // 
             this.pictureBx_TerugDinermenuOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugDinermenuOverzicht_Kassa.Image")));
-            this.pictureBx_TerugDinermenuOverzicht_Kassa.Location = new System.Drawing.Point(57, 12);
+            this.pictureBx_TerugDinermenuOverzicht_Kassa.Location = new System.Drawing.Point(24, 9);
             this.pictureBx_TerugDinermenuOverzicht_Kassa.Name = "pictureBx_TerugDinermenuOverzicht_Kassa";
             this.pictureBx_TerugDinermenuOverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugDinermenuOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1450,9 +1273,9 @@
             // 
             // btnToevoegen_DinerMenuOverzicht
             // 
-            this.btnToevoegen_DinerMenuOverzicht.Location = new System.Drawing.Point(342, 606);
+            this.btnToevoegen_DinerMenuOverzicht.Location = new System.Drawing.Point(203, 599);
             this.btnToevoegen_DinerMenuOverzicht.Name = "btnToevoegen_DinerMenuOverzicht";
-            this.btnToevoegen_DinerMenuOverzicht.Size = new System.Drawing.Size(167, 55);
+            this.btnToevoegen_DinerMenuOverzicht.Size = new System.Drawing.Size(186, 53);
             this.btnToevoegen_DinerMenuOverzicht.TabIndex = 54;
             this.btnToevoegen_DinerMenuOverzicht.Text = "Toevoegen";
             this.btnToevoegen_DinerMenuOverzicht.UseVisualStyleBackColor = true;
@@ -1572,7 +1395,7 @@
             // 
             // btnPersoneelsbeheer_DinerMenuOverzicht
             // 
-            this.btnPersoneelsbeheer_DinerMenuOverzicht.Location = new System.Drawing.Point(24, 525);
+            this.btnPersoneelsbeheer_DinerMenuOverzicht.Location = new System.Drawing.Point(24, 459);
             this.btnPersoneelsbeheer_DinerMenuOverzicht.Name = "btnPersoneelsbeheer_DinerMenuOverzicht";
             this.btnPersoneelsbeheer_DinerMenuOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnPersoneelsbeheer_DinerMenuOverzicht.TabIndex = 39;
@@ -1582,7 +1405,7 @@
             // 
             // btnMenuOverzicht_DinermenuOverzicht
             // 
-            this.btnMenuOverzicht_DinermenuOverzicht.Location = new System.Drawing.Point(24, 389);
+            this.btnMenuOverzicht_DinermenuOverzicht.Location = new System.Drawing.Point(24, 333);
             this.btnMenuOverzicht_DinermenuOverzicht.Name = "btnMenuOverzicht_DinermenuOverzicht";
             this.btnMenuOverzicht_DinermenuOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnMenuOverzicht_DinermenuOverzicht.TabIndex = 38;
@@ -1592,7 +1415,7 @@
             // 
             // btnBestellingen_Dinermenuoverzicht
             // 
-            this.btnBestellingen_Dinermenuoverzicht.Location = new System.Drawing.Point(24, 259);
+            this.btnBestellingen_Dinermenuoverzicht.Location = new System.Drawing.Point(24, 200);
             this.btnBestellingen_Dinermenuoverzicht.Name = "btnBestellingen_Dinermenuoverzicht";
             this.btnBestellingen_Dinermenuoverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnBestellingen_Dinermenuoverzicht.TabIndex = 37;
@@ -1602,7 +1425,7 @@
             // 
             // btnVoorraad_DinerMenuOverzicht
             // 
-            this.btnVoorraad_DinerMenuOverzicht.Location = new System.Drawing.Point(24, 126);
+            this.btnVoorraad_DinerMenuOverzicht.Location = new System.Drawing.Point(24, 75);
             this.btnVoorraad_DinerMenuOverzicht.Name = "btnVoorraad_DinerMenuOverzicht";
             this.btnVoorraad_DinerMenuOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnVoorraad_DinerMenuOverzicht.TabIndex = 36;
@@ -1612,7 +1435,7 @@
             // 
             // btnVerwijderen_DinerMenuOverzicht
             // 
-            this.btnVerwijderen_DinerMenuOverzicht.Location = new System.Drawing.Point(756, 606);
+            this.btnVerwijderen_DinerMenuOverzicht.Location = new System.Drawing.Point(614, 599);
             this.btnVerwijderen_DinerMenuOverzicht.Name = "btnVerwijderen_DinerMenuOverzicht";
             this.btnVerwijderen_DinerMenuOverzicht.Size = new System.Drawing.Size(197, 55);
             this.btnVerwijderen_DinerMenuOverzicht.TabIndex = 35;
@@ -1622,9 +1445,9 @@
             // 
             // btnOpslaan_DinerMenuOverzicht
             // 
-            this.btnOpslaan_DinerMenuOverzicht.Location = new System.Drawing.Point(537, 606);
+            this.btnOpslaan_DinerMenuOverzicht.Location = new System.Drawing.Point(409, 599);
             this.btnOpslaan_DinerMenuOverzicht.Name = "btnOpslaan_DinerMenuOverzicht";
-            this.btnOpslaan_DinerMenuOverzicht.Size = new System.Drawing.Size(188, 55);
+            this.btnOpslaan_DinerMenuOverzicht.Size = new System.Drawing.Size(188, 53);
             this.btnOpslaan_DinerMenuOverzicht.TabIndex = 34;
             this.btnOpslaan_DinerMenuOverzicht.Text = "Wijziging opslaan";
             this.btnOpslaan_DinerMenuOverzicht.UseVisualStyleBackColor = true;
@@ -1643,7 +1466,7 @@
             this.listView_DinerMenuOverzicht.HideSelection = false;
             this.listView_DinerMenuOverzicht.Location = new System.Drawing.Point(205, 126);
             this.listView_DinerMenuOverzicht.Name = "listView_DinerMenuOverzicht";
-            this.listView_DinerMenuOverzicht.Size = new System.Drawing.Size(748, 378);
+            this.listView_DinerMenuOverzicht.Size = new System.Drawing.Size(700, 378);
             this.listView_DinerMenuOverzicht.TabIndex = 29;
             this.listView_DinerMenuOverzicht.UseCompatibleStateImageBehavior = false;
             this.listView_DinerMenuOverzicht.View = System.Windows.Forms.View.Details;
@@ -1684,21 +1507,12 @@
             this.columnHeader16.Text = "Prijs";
             this.columnHeader16.Width = 50;
             // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(599, 14);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(107, 13);
-            this.label43.TabIndex = 28;
-            this.label43.Text = "Diner menu overzicht";
-            // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox12.Location = new System.Drawing.Point(385, 14);
+            this.pictureBox12.Location = new System.Drawing.Point(909, 6);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(182, 106);
+            this.pictureBox12.Size = new System.Drawing.Size(93, 58);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 27;
             this.pictureBox12.TabStop = false;
@@ -1706,33 +1520,21 @@
             // pnl_KassaMenuoverzichtKeuze
             // 
             this.pnl_KassaMenuoverzichtKeuze.BackColor = System.Drawing.Color.White;
-            this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa);
+            this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.textBox3);
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.pictureBx_TerugMenuOverzichtKeuze_Kassa);
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.btnDinerMenu_MenuoverzichtKeuze);
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.btnLunchMenu_MenuoverzichtKeuze);
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.btnDrankMenu_MenuoverzichtKeuze);
             this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.pictureBox9);
-            this.pnl_KassaMenuoverzichtKeuze.Controls.Add(this.label19);
             this.pnl_KassaMenuoverzichtKeuze.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaMenuoverzichtKeuze.Name = "pnl_KassaMenuoverzichtKeuze";
             this.pnl_KassaMenuoverzichtKeuze.Size = new System.Drawing.Size(1008, 727);
             this.pnl_KassaMenuoverzichtKeuze.TabIndex = 11;
             // 
-            // pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.Location = new System.Drawing.Point(10, 6);
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.Name = "pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa";
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa.TabStop = false;
-            // 
             // pictureBx_TerugMenuOverzichtKeuze_Kassa
             // 
             this.pictureBx_TerugMenuOverzichtKeuze_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugMenuOverzichtKeuze_Kassa.Image")));
-            this.pictureBx_TerugMenuOverzichtKeuze_Kassa.Location = new System.Drawing.Point(55, 6);
+            this.pictureBx_TerugMenuOverzichtKeuze_Kassa.Location = new System.Drawing.Point(26, 12);
             this.pictureBx_TerugMenuOverzichtKeuze_Kassa.Name = "pictureBx_TerugMenuOverzichtKeuze_Kassa";
             this.pictureBx_TerugMenuOverzichtKeuze_Kassa.Size = new System.Drawing.Size(39, 32);
             this.pictureBx_TerugMenuOverzichtKeuze_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1742,7 +1544,7 @@
             // 
             // btnDinerMenu_MenuoverzichtKeuze
             // 
-            this.btnDinerMenu_MenuoverzichtKeuze.Location = new System.Drawing.Point(290, 517);
+            this.btnDinerMenu_MenuoverzichtKeuze.Location = new System.Drawing.Point(286, 478);
             this.btnDinerMenu_MenuoverzichtKeuze.Name = "btnDinerMenu_MenuoverzichtKeuze";
             this.btnDinerMenu_MenuoverzichtKeuze.Size = new System.Drawing.Size(416, 115);
             this.btnDinerMenu_MenuoverzichtKeuze.TabIndex = 15;
@@ -1752,7 +1554,7 @@
             // 
             // btnLunchMenu_MenuoverzichtKeuze
             // 
-            this.btnLunchMenu_MenuoverzichtKeuze.Location = new System.Drawing.Point(290, 348);
+            this.btnLunchMenu_MenuoverzichtKeuze.Location = new System.Drawing.Point(286, 308);
             this.btnLunchMenu_MenuoverzichtKeuze.Name = "btnLunchMenu_MenuoverzichtKeuze";
             this.btnLunchMenu_MenuoverzichtKeuze.Size = new System.Drawing.Size(416, 119);
             this.btnLunchMenu_MenuoverzichtKeuze.TabIndex = 14;
@@ -1762,7 +1564,7 @@
             // 
             // btnDrankMenu_MenuoverzichtKeuze
             // 
-            this.btnDrankMenu_MenuoverzichtKeuze.Location = new System.Drawing.Point(290, 196);
+            this.btnDrankMenu_MenuoverzichtKeuze.Location = new System.Drawing.Point(286, 137);
             this.btnDrankMenu_MenuoverzichtKeuze.Name = "btnDrankMenu_MenuoverzichtKeuze";
             this.btnDrankMenu_MenuoverzichtKeuze.Size = new System.Drawing.Size(416, 116);
             this.btnDrankMenu_MenuoverzichtKeuze.TabIndex = 13;
@@ -1773,26 +1575,17 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox9.Location = new System.Drawing.Point(353, 12);
+            this.pictureBox9.Location = new System.Drawing.Point(905, 7);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(288, 151);
+            this.pictureBox9.Size = new System.Drawing.Size(97, 57);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 12;
             this.pictureBox9.TabStop = false;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(689, 28);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(108, 13);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "menuoverzicht keuze";
-            // 
             // pnl_MenuOverzicht
             // 
             this.pnl_MenuOverzicht.BackColor = System.Drawing.Color.White;
-            this.pnl_MenuOverzicht.Controls.Add(this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa);
+            this.pnl_MenuOverzicht.Controls.Add(this.txtBoxMenuoverzicht);
             this.pnl_MenuOverzicht.Controls.Add(this.picturebox_MenuOverzichtTerug);
             this.pnl_MenuOverzicht.Controls.Add(this.btnToevoegen_MenuOverzicht);
             this.pnl_MenuOverzicht.Controls.Add(this.label29);
@@ -1816,28 +1609,16 @@
             this.pnl_MenuOverzicht.Controls.Add(this.btnVerwijderen_MenuOverzicht);
             this.pnl_MenuOverzicht.Controls.Add(this.btnWijzigen_MenuOverzicht);
             this.pnl_MenuOverzicht.Controls.Add(this.lv_MenuOverzicht);
-            this.pnl_MenuOverzicht.Controls.Add(this.lbl_Overzicht);
             this.pnl_MenuOverzicht.Controls.Add(this.pictureBox10);
             this.pnl_MenuOverzicht.Location = new System.Drawing.Point(0, 0);
             this.pnl_MenuOverzicht.Name = "pnl_MenuOverzicht";
             this.pnl_MenuOverzicht.Size = new System.Drawing.Size(1008, 736);
             this.pnl_MenuOverzicht.TabIndex = 16;
             // 
-            // pictureBx_TerugNaarHoofdschermDrankMenu_Kassa
-            // 
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.Image")));
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.Location = new System.Drawing.Point(10, 9);
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.Name = "pictureBx_TerugNaarHoofdschermDrankMenu_Kassa";
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.Size = new System.Drawing.Size(39, 32);
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.TabIndex = 60;
-            this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa.TabStop = false;
-            // 
             // picturebox_MenuOverzichtTerug
             // 
             this.picturebox_MenuOverzichtTerug.Image = ((System.Drawing.Image)(resources.GetObject("picturebox_MenuOverzichtTerug.Image")));
-            this.picturebox_MenuOverzichtTerug.Location = new System.Drawing.Point(57, 9);
+            this.picturebox_MenuOverzichtTerug.Location = new System.Drawing.Point(24, 7);
             this.picturebox_MenuOverzichtTerug.Name = "picturebox_MenuOverzichtTerug";
             this.picturebox_MenuOverzichtTerug.Size = new System.Drawing.Size(39, 32);
             this.picturebox_MenuOverzichtTerug.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1847,7 +1628,7 @@
             // 
             // btnToevoegen_MenuOverzicht
             // 
-            this.btnToevoegen_MenuOverzicht.Location = new System.Drawing.Point(342, 606);
+            this.btnToevoegen_MenuOverzicht.Location = new System.Drawing.Point(205, 581);
             this.btnToevoegen_MenuOverzicht.Name = "btnToevoegen_MenuOverzicht";
             this.btnToevoegen_MenuOverzicht.Size = new System.Drawing.Size(167, 55);
             this.btnToevoegen_MenuOverzicht.TabIndex = 54;
@@ -1858,7 +1639,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(753, 520);
+            this.label29.Location = new System.Drawing.Point(765, 520);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(26, 13);
             this.label29.TabIndex = 53;
@@ -1866,7 +1647,7 @@
             // 
             // txtPrijs_MenuOverzicht
             // 
-            this.txtPrijs_MenuOverzicht.Location = new System.Drawing.Point(752, 536);
+            this.txtPrijs_MenuOverzicht.Location = new System.Drawing.Point(768, 536);
             this.txtPrijs_MenuOverzicht.Name = "txtPrijs_MenuOverzicht";
             this.txtPrijs_MenuOverzicht.Size = new System.Drawing.Size(56, 20);
             this.txtPrijs_MenuOverzicht.TabIndex = 52;
@@ -1874,7 +1655,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(622, 520);
+            this.label28.Location = new System.Drawing.Point(643, 520);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(62, 13);
             this.label28.TabIndex = 51;
@@ -1882,7 +1663,7 @@
             // 
             // txtMenuSoort_MenuOverzicht
             // 
-            this.txtMenuSoort_MenuOverzicht.Location = new System.Drawing.Point(625, 536);
+            this.txtMenuSoort_MenuOverzicht.Location = new System.Drawing.Point(646, 536);
             this.txtMenuSoort_MenuOverzicht.Name = "txtMenuSoort_MenuOverzicht";
             this.txtMenuSoort_MenuOverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtMenuSoort_MenuOverzicht.TabIndex = 50;
@@ -1890,7 +1671,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(515, 520);
+            this.label27.Location = new System.Drawing.Point(521, 518);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(52, 13);
             this.label27.TabIndex = 49;
@@ -1898,7 +1679,7 @@
             // 
             // txtCategorie_MenuOverzicht
             // 
-            this.txtCategorie_MenuOverzicht.Location = new System.Drawing.Point(513, 536);
+            this.txtCategorie_MenuOverzicht.Location = new System.Drawing.Point(519, 534);
             this.txtCategorie_MenuOverzicht.Name = "txtCategorie_MenuOverzicht";
             this.txtCategorie_MenuOverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtCategorie_MenuOverzicht.TabIndex = 48;
@@ -1906,7 +1687,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(464, 519);
+            this.label26.Location = new System.Drawing.Point(465, 518);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(32, 13);
             this.label26.TabIndex = 47;
@@ -1914,7 +1695,7 @@
             // 
             // txtBTW_MenuOverzicht
             // 
-            this.txtBTW_MenuOverzicht.Location = new System.Drawing.Point(467, 535);
+            this.txtBTW_MenuOverzicht.Location = new System.Drawing.Point(468, 534);
             this.txtBTW_MenuOverzicht.Name = "txtBTW_MenuOverzicht";
             this.txtBTW_MenuOverzicht.Size = new System.Drawing.Size(29, 20);
             this.txtBTW_MenuOverzicht.TabIndex = 46;
@@ -1922,7 +1703,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(386, 520);
+            this.label25.Location = new System.Drawing.Point(387, 519);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(61, 13);
             this.label25.TabIndex = 45;
@@ -1930,7 +1711,7 @@
             // 
             // txtInVoorraad_MenuOverzicht
             // 
-            this.txtInVoorraad_MenuOverzicht.Location = new System.Drawing.Point(389, 536);
+            this.txtInVoorraad_MenuOverzicht.Location = new System.Drawing.Point(390, 535);
             this.txtInVoorraad_MenuOverzicht.Name = "txtInVoorraad_MenuOverzicht";
             this.txtInVoorraad_MenuOverzicht.Size = new System.Drawing.Size(58, 20);
             this.txtInVoorraad_MenuOverzicht.TabIndex = 44;
@@ -1938,7 +1719,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(258, 518);
+            this.label24.Location = new System.Drawing.Point(259, 517);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(67, 13);
             this.label24.TabIndex = 43;
@@ -1946,7 +1727,7 @@
             // 
             // txtOmschrijving_MenuOverzicht
             // 
-            this.txtOmschrijving_MenuOverzicht.Location = new System.Drawing.Point(261, 535);
+            this.txtOmschrijving_MenuOverzicht.Location = new System.Drawing.Point(262, 534);
             this.txtOmschrijving_MenuOverzicht.Name = "txtOmschrijving_MenuOverzicht";
             this.txtOmschrijving_MenuOverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtOmschrijving_MenuOverzicht.TabIndex = 42;
@@ -1954,7 +1735,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(202, 518);
+            this.label23.Location = new System.Drawing.Point(203, 517);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(18, 13);
             this.label23.TabIndex = 41;
@@ -1962,14 +1743,14 @@
             // 
             // txtID_MenuOverzicht
             // 
-            this.txtID_MenuOverzicht.Location = new System.Drawing.Point(205, 534);
+            this.txtID_MenuOverzicht.Location = new System.Drawing.Point(206, 533);
             this.txtID_MenuOverzicht.Name = "txtID_MenuOverzicht";
             this.txtID_MenuOverzicht.Size = new System.Drawing.Size(39, 20);
             this.txtID_MenuOverzicht.TabIndex = 40;
             // 
             // btnPersoneelsbeheer_DrankMenuOverzicht
             // 
-            this.btnPersoneelsbeheer_DrankMenuOverzicht.Location = new System.Drawing.Point(24, 525);
+            this.btnPersoneelsbeheer_DrankMenuOverzicht.Location = new System.Drawing.Point(26, 434);
             this.btnPersoneelsbeheer_DrankMenuOverzicht.Name = "btnPersoneelsbeheer_DrankMenuOverzicht";
             this.btnPersoneelsbeheer_DrankMenuOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnPersoneelsbeheer_DrankMenuOverzicht.TabIndex = 39;
@@ -1979,7 +1760,7 @@
             // 
             // btnMenuOverzicht_DrankMenuOverzicht
             // 
-            this.btnMenuOverzicht_DrankMenuOverzicht.Location = new System.Drawing.Point(24, 389);
+            this.btnMenuOverzicht_DrankMenuOverzicht.Location = new System.Drawing.Point(26, 319);
             this.btnMenuOverzicht_DrankMenuOverzicht.Name = "btnMenuOverzicht_DrankMenuOverzicht";
             this.btnMenuOverzicht_DrankMenuOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnMenuOverzicht_DrankMenuOverzicht.TabIndex = 38;
@@ -1989,7 +1770,7 @@
             // 
             // btnBestellingen_DrankMenuOverzicht
             // 
-            this.btnBestellingen_DrankMenuOverzicht.Location = new System.Drawing.Point(24, 259);
+            this.btnBestellingen_DrankMenuOverzicht.Location = new System.Drawing.Point(26, 196);
             this.btnBestellingen_DrankMenuOverzicht.Name = "btnBestellingen_DrankMenuOverzicht";
             this.btnBestellingen_DrankMenuOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnBestellingen_DrankMenuOverzicht.TabIndex = 37;
@@ -1999,7 +1780,7 @@
             // 
             // btnVoorraad_DrankMenuOverzicht
             // 
-            this.btnVoorraad_DrankMenuOverzicht.Location = new System.Drawing.Point(24, 126);
+            this.btnVoorraad_DrankMenuOverzicht.Location = new System.Drawing.Point(26, 70);
             this.btnVoorraad_DrankMenuOverzicht.Name = "btnVoorraad_DrankMenuOverzicht";
             this.btnVoorraad_DrankMenuOverzicht.Size = new System.Drawing.Size(142, 97);
             this.btnVoorraad_DrankMenuOverzicht.TabIndex = 36;
@@ -2009,7 +1790,7 @@
             // 
             // btnVerwijderen_MenuOverzicht
             // 
-            this.btnVerwijderen_MenuOverzicht.Location = new System.Drawing.Point(756, 606);
+            this.btnVerwijderen_MenuOverzicht.Location = new System.Drawing.Point(627, 581);
             this.btnVerwijderen_MenuOverzicht.Name = "btnVerwijderen_MenuOverzicht";
             this.btnVerwijderen_MenuOverzicht.Size = new System.Drawing.Size(197, 55);
             this.btnVerwijderen_MenuOverzicht.TabIndex = 35;
@@ -2019,7 +1800,7 @@
             // 
             // btnWijzigen_MenuOverzicht
             // 
-            this.btnWijzigen_MenuOverzicht.Location = new System.Drawing.Point(537, 606);
+            this.btnWijzigen_MenuOverzicht.Location = new System.Drawing.Point(409, 581);
             this.btnWijzigen_MenuOverzicht.Name = "btnWijzigen_MenuOverzicht";
             this.btnWijzigen_MenuOverzicht.Size = new System.Drawing.Size(188, 55);
             this.btnWijzigen_MenuOverzicht.TabIndex = 34;
@@ -2040,7 +1821,7 @@
             this.lv_MenuOverzicht.HideSelection = false;
             this.lv_MenuOverzicht.Location = new System.Drawing.Point(205, 126);
             this.lv_MenuOverzicht.Name = "lv_MenuOverzicht";
-            this.lv_MenuOverzicht.Size = new System.Drawing.Size(748, 378);
+            this.lv_MenuOverzicht.Size = new System.Drawing.Size(686, 378);
             this.lv_MenuOverzicht.TabIndex = 29;
             this.lv_MenuOverzicht.UseCompatibleStateImageBehavior = false;
             this.lv_MenuOverzicht.View = System.Windows.Forms.View.Details;
@@ -2081,21 +1862,12 @@
             this.drankmenuPrijs.Text = "Prijs";
             this.drankmenuPrijs.Width = 50;
             // 
-            // lbl_Overzicht
-            // 
-            this.lbl_Overzicht.AutoSize = true;
-            this.lbl_Overzicht.Location = new System.Drawing.Point(599, 14);
-            this.lbl_Overzicht.Name = "lbl_Overzicht";
-            this.lbl_Overzicht.Size = new System.Drawing.Size(79, 13);
-            this.lbl_Overzicht.TabIndex = 28;
-            this.lbl_Overzicht.Text = "menu overzicht";
-            // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox10.Location = new System.Drawing.Point(385, 14);
+            this.pictureBox10.Location = new System.Drawing.Point(905, 6);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(182, 106);
+            this.pictureBox10.Size = new System.Drawing.Size(97, 57);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 27;
             this.pictureBox10.TabStop = false;
@@ -2103,6 +1875,8 @@
             // pnl_KassaLunchMenuoverizcht
             // 
             this.pnl_KassaLunchMenuoverizcht.BackColor = System.Drawing.Color.White;
+            this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.pictureBox1);
+            this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.txtBoxHeader);
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.pictureBx_TerugLunchMenu_Kassa);
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.btnToevoegen_Lunchmenuoverzicht);
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.label20);
@@ -2126,19 +1900,29 @@
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.btnVerwijderen_Lunchmenuoverzicht);
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.btnOpslaan_Lunchmenuoverzicht);
             this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.listView_LunchMenuOverzicht_Kassa);
-            this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.label35);
-            this.pnl_KassaLunchMenuoverizcht.Controls.Add(this.pictureBox11);
             this.pnl_KassaLunchMenuoverizcht.Location = new System.Drawing.Point(0, 0);
             this.pnl_KassaLunchMenuoverizcht.Name = "pnl_KassaLunchMenuoverizcht";
             this.pnl_KassaLunchMenuoverizcht.Size = new System.Drawing.Size(1008, 730);
             this.pnl_KassaLunchMenuoverizcht.TabIndex = 55;
+            // 
+            // txtBoxHeader
+            // 
+            this.txtBoxHeader.BackColor = System.Drawing.Color.LightGray;
+            this.txtBoxHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxHeader.Location = new System.Drawing.Point(205, 77);
+            this.txtBoxHeader.Name = "txtBoxHeader";
+            this.txtBoxHeader.ReadOnly = true;
+            this.txtBoxHeader.Size = new System.Drawing.Size(700, 45);
+            this.txtBoxHeader.TabIndex = 55;
+            this.txtBoxHeader.Text = "Lunch menu overzicht";
+            this.txtBoxHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBx_TerugLunchMenu_Kassa
             // 
             this.pictureBx_TerugLunchMenu_Kassa.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugLunchMenu_Kassa.ErrorImage")));
             this.pictureBx_TerugLunchMenu_Kassa.Image = global::UI.Properties.Resources.android_icon_36x36;
             this.pictureBx_TerugLunchMenu_Kassa.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugLunchMenu_Kassa.InitialImage")));
-            this.pictureBx_TerugLunchMenu_Kassa.Location = new System.Drawing.Point(22, 9);
+            this.pictureBx_TerugLunchMenu_Kassa.Location = new System.Drawing.Point(22, 6);
             this.pictureBx_TerugLunchMenu_Kassa.Name = "pictureBx_TerugLunchMenu_Kassa";
             this.pictureBx_TerugLunchMenu_Kassa.Size = new System.Drawing.Size(39, 38);
             this.pictureBx_TerugLunchMenu_Kassa.TabIndex = 0;
@@ -2147,7 +1931,7 @@
             // 
             // btnToevoegen_Lunchmenuoverzicht
             // 
-            this.btnToevoegen_Lunchmenuoverzicht.Location = new System.Drawing.Point(342, 606);
+            this.btnToevoegen_Lunchmenuoverzicht.Location = new System.Drawing.Point(206, 606);
             this.btnToevoegen_Lunchmenuoverzicht.Name = "btnToevoegen_Lunchmenuoverzicht";
             this.btnToevoegen_Lunchmenuoverzicht.Size = new System.Drawing.Size(167, 55);
             this.btnToevoegen_Lunchmenuoverzicht.TabIndex = 54;
@@ -2158,7 +1942,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(753, 520);
+            this.label20.Location = new System.Drawing.Point(753, 527);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(26, 13);
             this.label20.TabIndex = 53;
@@ -2166,7 +1950,7 @@
             // 
             // txtPrijs_Lunchmenuoverzicht
             // 
-            this.txtPrijs_Lunchmenuoverzicht.Location = new System.Drawing.Point(752, 536);
+            this.txtPrijs_Lunchmenuoverzicht.Location = new System.Drawing.Point(752, 543);
             this.txtPrijs_Lunchmenuoverzicht.Name = "txtPrijs_Lunchmenuoverzicht";
             this.txtPrijs_Lunchmenuoverzicht.Size = new System.Drawing.Size(56, 20);
             this.txtPrijs_Lunchmenuoverzicht.TabIndex = 52;
@@ -2174,7 +1958,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(622, 520);
+            this.label21.Location = new System.Drawing.Point(622, 527);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 13);
             this.label21.TabIndex = 51;
@@ -2182,7 +1966,7 @@
             // 
             // txtMenuSoort_Lunchmenuoverzicht
             // 
-            this.txtMenuSoort_Lunchmenuoverzicht.Location = new System.Drawing.Point(625, 536);
+            this.txtMenuSoort_Lunchmenuoverzicht.Location = new System.Drawing.Point(625, 543);
             this.txtMenuSoort_Lunchmenuoverzicht.Name = "txtMenuSoort_Lunchmenuoverzicht";
             this.txtMenuSoort_Lunchmenuoverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtMenuSoort_Lunchmenuoverzicht.TabIndex = 50;
@@ -2190,7 +1974,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(515, 520);
+            this.label30.Location = new System.Drawing.Point(515, 527);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(52, 13);
             this.label30.TabIndex = 49;
@@ -2198,7 +1982,7 @@
             // 
             // txtCategorie_Lunchmenuoverzicht
             // 
-            this.txtCategorie_Lunchmenuoverzicht.Location = new System.Drawing.Point(513, 536);
+            this.txtCategorie_Lunchmenuoverzicht.Location = new System.Drawing.Point(513, 543);
             this.txtCategorie_Lunchmenuoverzicht.Name = "txtCategorie_Lunchmenuoverzicht";
             this.txtCategorie_Lunchmenuoverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtCategorie_Lunchmenuoverzicht.TabIndex = 48;
@@ -2206,7 +1990,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(464, 519);
+            this.label31.Location = new System.Drawing.Point(464, 526);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(32, 13);
             this.label31.TabIndex = 47;
@@ -2214,7 +1998,7 @@
             // 
             // txtBTW_Lunchmenuoverzicht
             // 
-            this.txtBTW_Lunchmenuoverzicht.Location = new System.Drawing.Point(467, 535);
+            this.txtBTW_Lunchmenuoverzicht.Location = new System.Drawing.Point(467, 542);
             this.txtBTW_Lunchmenuoverzicht.Name = "txtBTW_Lunchmenuoverzicht";
             this.txtBTW_Lunchmenuoverzicht.Size = new System.Drawing.Size(29, 20);
             this.txtBTW_Lunchmenuoverzicht.TabIndex = 46;
@@ -2222,7 +2006,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(386, 520);
+            this.label32.Location = new System.Drawing.Point(386, 527);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(61, 13);
             this.label32.TabIndex = 45;
@@ -2230,7 +2014,7 @@
             // 
             // txtInVoorraad_Lunchmenuoverzicht
             // 
-            this.txtInVoorraad_Lunchmenuoverzicht.Location = new System.Drawing.Point(389, 536);
+            this.txtInVoorraad_Lunchmenuoverzicht.Location = new System.Drawing.Point(389, 543);
             this.txtInVoorraad_Lunchmenuoverzicht.Name = "txtInVoorraad_Lunchmenuoverzicht";
             this.txtInVoorraad_Lunchmenuoverzicht.Size = new System.Drawing.Size(58, 20);
             this.txtInVoorraad_Lunchmenuoverzicht.TabIndex = 44;
@@ -2238,7 +2022,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(258, 518);
+            this.label33.Location = new System.Drawing.Point(258, 525);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(67, 13);
             this.label33.TabIndex = 43;
@@ -2246,7 +2030,7 @@
             // 
             // txtOmschrijving_Lunchmenuoverzicht
             // 
-            this.txtOmschrijving_Lunchmenuoverzicht.Location = new System.Drawing.Point(261, 535);
+            this.txtOmschrijving_Lunchmenuoverzicht.Location = new System.Drawing.Point(261, 542);
             this.txtOmschrijving_Lunchmenuoverzicht.Name = "txtOmschrijving_Lunchmenuoverzicht";
             this.txtOmschrijving_Lunchmenuoverzicht.Size = new System.Drawing.Size(100, 20);
             this.txtOmschrijving_Lunchmenuoverzicht.TabIndex = 42;
@@ -2254,7 +2038,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(202, 518);
+            this.label34.Location = new System.Drawing.Point(202, 525);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(18, 13);
             this.label34.TabIndex = 41;
@@ -2262,14 +2046,14 @@
             // 
             // txtID_Lunchmenuoverzicht
             // 
-            this.txtID_Lunchmenuoverzicht.Location = new System.Drawing.Point(205, 534);
+            this.txtID_Lunchmenuoverzicht.Location = new System.Drawing.Point(205, 541);
             this.txtID_Lunchmenuoverzicht.Name = "txtID_Lunchmenuoverzicht";
             this.txtID_Lunchmenuoverzicht.Size = new System.Drawing.Size(39, 20);
             this.txtID_Lunchmenuoverzicht.TabIndex = 40;
             // 
             // btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41
             // 
-            this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.Location = new System.Drawing.Point(24, 525);
+            this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.Location = new System.Drawing.Point(22, 459);
             this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.Name = "btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41";
             this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.Size = new System.Drawing.Size(142, 97);
             this.btn_PersoneelsbeheerLunchmenuoverzicht_Kassan41.TabIndex = 39;
@@ -2279,7 +2063,7 @@
             // 
             // btn_MenuOverzichtLunchmenuoverzicht_Kassan41
             // 
-            this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.Location = new System.Drawing.Point(24, 389);
+            this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.Location = new System.Drawing.Point(24, 331);
             this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.Name = "btn_MenuOverzichtLunchmenuoverzicht_Kassan41";
             this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.Size = new System.Drawing.Size(142, 97);
             this.btn_MenuOverzichtLunchmenuoverzicht_Kassan41.TabIndex = 38;
@@ -2289,7 +2073,7 @@
             // 
             // btn_BestellingenLunchmenuoverzicht_Kassan41
             // 
-            this.btn_BestellingenLunchmenuoverzicht_Kassan41.Location = new System.Drawing.Point(24, 259);
+            this.btn_BestellingenLunchmenuoverzicht_Kassan41.Location = new System.Drawing.Point(24, 200);
             this.btn_BestellingenLunchmenuoverzicht_Kassan41.Name = "btn_BestellingenLunchmenuoverzicht_Kassan41";
             this.btn_BestellingenLunchmenuoverzicht_Kassan41.Size = new System.Drawing.Size(142, 97);
             this.btn_BestellingenLunchmenuoverzicht_Kassan41.TabIndex = 37;
@@ -2299,7 +2083,7 @@
             // 
             // btn_VoorraadLunchmenuoverzicht_Kassa
             // 
-            this.btn_VoorraadLunchmenuoverzicht_Kassa.Location = new System.Drawing.Point(24, 126);
+            this.btn_VoorraadLunchmenuoverzicht_Kassa.Location = new System.Drawing.Point(22, 77);
             this.btn_VoorraadLunchmenuoverzicht_Kassa.Name = "btn_VoorraadLunchmenuoverzicht_Kassa";
             this.btn_VoorraadLunchmenuoverzicht_Kassa.Size = new System.Drawing.Size(142, 97);
             this.btn_VoorraadLunchmenuoverzicht_Kassa.TabIndex = 36;
@@ -2309,7 +2093,7 @@
             // 
             // btnVerwijderen_Lunchmenuoverzicht
             // 
-            this.btnVerwijderen_Lunchmenuoverzicht.Location = new System.Drawing.Point(756, 606);
+            this.btnVerwijderen_Lunchmenuoverzicht.Location = new System.Drawing.Point(627, 606);
             this.btnVerwijderen_Lunchmenuoverzicht.Name = "btnVerwijderen_Lunchmenuoverzicht";
             this.btnVerwijderen_Lunchmenuoverzicht.Size = new System.Drawing.Size(197, 55);
             this.btnVerwijderen_Lunchmenuoverzicht.TabIndex = 35;
@@ -2319,7 +2103,7 @@
             // 
             // btnOpslaan_Lunchmenuoverzicht
             // 
-            this.btnOpslaan_Lunchmenuoverzicht.Location = new System.Drawing.Point(537, 606);
+            this.btnOpslaan_Lunchmenuoverzicht.Location = new System.Drawing.Point(409, 606);
             this.btnOpslaan_Lunchmenuoverzicht.Name = "btnOpslaan_Lunchmenuoverzicht";
             this.btnOpslaan_Lunchmenuoverzicht.Size = new System.Drawing.Size(188, 55);
             this.btnOpslaan_Lunchmenuoverzicht.TabIndex = 34;
@@ -2338,9 +2122,9 @@
             this.columnHeader8,
             this.columnHeader9});
             this.listView_LunchMenuOverzicht_Kassa.HideSelection = false;
-            this.listView_LunchMenuOverzicht_Kassa.Location = new System.Drawing.Point(205, 126);
+            this.listView_LunchMenuOverzicht_Kassa.Location = new System.Drawing.Point(205, 133);
             this.listView_LunchMenuOverzicht_Kassa.Name = "listView_LunchMenuOverzicht_Kassa";
-            this.listView_LunchMenuOverzicht_Kassa.Size = new System.Drawing.Size(748, 378);
+            this.listView_LunchMenuOverzicht_Kassa.Size = new System.Drawing.Size(700, 378);
             this.listView_LunchMenuOverzicht_Kassa.TabIndex = 29;
             this.listView_LunchMenuOverzicht_Kassa.UseCompatibleStateImageBehavior = false;
             this.listView_LunchMenuOverzicht_Kassa.View = System.Windows.Forms.View.Details;
@@ -2381,32 +2165,13 @@
             this.columnHeader9.Text = "Prijs";
             this.columnHeader9.Width = 50;
             // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(599, 14);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(112, 13);
-            this.label35.TabIndex = 28;
-            this.label35.Text = "Lunch menu overzicht";
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox11.Location = new System.Drawing.Point(385, 14);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(182, 106);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 27;
-            this.pictureBox11.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pictureBox2.Image = global::UI.Properties.Resources.chapoo_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(290, 41);
+            this.pictureBox2.Location = new System.Drawing.Point(306, 18);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(416, 236);
+            this.pictureBox2.Size = new System.Drawing.Size(396, 245);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -2433,7 +2198,7 @@
             // 
             // btn_BestellingenHoofdscherm_Kassa
             // 
-            this.btn_BestellingenHoofdscherm_Kassa.Location = new System.Drawing.Point(676, 314);
+            this.btn_BestellingenHoofdscherm_Kassa.Location = new System.Drawing.Point(654, 314);
             this.btn_BestellingenHoofdscherm_Kassa.Name = "btn_BestellingenHoofdscherm_Kassa";
             this.btn_BestellingenHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
             this.btn_BestellingenHoofdscherm_Kassa.TabIndex = 7;
@@ -2443,7 +2208,7 @@
             // 
             // btn_PersoneelsbeheerHoofdscherm_Kassa
             // 
-            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Location = new System.Drawing.Point(185, 510);
+            this.btn_PersoneelsbeheerHoofdscherm_Kassa.Location = new System.Drawing.Point(320, 510);
             this.btn_PersoneelsbeheerHoofdscherm_Kassa.Name = "btn_PersoneelsbeheerHoofdscherm_Kassa";
             this.btn_PersoneelsbeheerHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
             this.btn_PersoneelsbeheerHoofdscherm_Kassa.TabIndex = 8;
@@ -2453,22 +2218,13 @@
             // 
             // btn_TafeloverzichtHoofdscherm_Kassa
             // 
-            this.btn_TafeloverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(421, 510);
+            this.btn_TafeloverzichtHoofdscherm_Kassa.Location = new System.Drawing.Point(559, 510);
             this.btn_TafeloverzichtHoofdscherm_Kassa.Name = "btn_TafeloverzichtHoofdscherm_Kassa";
             this.btn_TafeloverzichtHoofdscherm_Kassa.Size = new System.Drawing.Size(176, 167);
             this.btn_TafeloverzichtHoofdscherm_Kassa.TabIndex = 9;
             this.btn_TafeloverzichtHoofdscherm_Kassa.Text = "Tafeloverzicht";
             this.btn_TafeloverzichtHoofdscherm_Kassa.UseVisualStyleBackColor = true;
             this.btn_TafeloverzichtHoofdscherm_Kassa.Click += new System.EventHandler(this.btn_TafeloverzichtHoofdscherm_Kassa_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(439, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Hoofdscherm";
             // 
             // pictureBx_Uitloggen_Kassa
             // 
@@ -2487,7 +2243,6 @@
             // 
             this.pnl_KassaHoofdscherm.BackColor = System.Drawing.Color.White;
             this.pnl_KassaHoofdscherm.Controls.Add(this.pictureBx_Uitloggen_Kassa);
-            this.pnl_KassaHoofdscherm.Controls.Add(this.label1);
             this.pnl_KassaHoofdscherm.Controls.Add(this.btn_TafeloverzichtHoofdscherm_Kassa);
             this.pnl_KassaHoofdscherm.Controls.Add(this.btn_PersoneelsbeheerHoofdscherm_Kassa);
             this.pnl_KassaHoofdscherm.Controls.Add(this.btn_BestellingenHoofdscherm_Kassa);
@@ -2499,29 +2254,115 @@
             this.pnl_KassaHoofdscherm.Size = new System.Drawing.Size(1008, 736);
             this.pnl_KassaHoofdscherm.TabIndex = 35;
             // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(286, 18);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(416, 45);
+            this.textBox3.TabIndex = 57;
+            this.textBox3.Text = "Menu overzicht keuze";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(203, 67);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(598, 45);
+            this.textBox4.TabIndex = 58;
+            this.textBox4.Text = "gerecht voorraad overzicht";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxVoorraadoverzicht
+            // 
+            this.txtBoxVoorraadoverzicht.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtBoxVoorraadoverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxVoorraadoverzicht.Location = new System.Drawing.Point(203, 67);
+            this.txtBoxVoorraadoverzicht.Name = "txtBoxVoorraadoverzicht";
+            this.txtBoxVoorraadoverzicht.Size = new System.Drawing.Size(608, 45);
+            this.txtBoxVoorraadoverzicht.TabIndex = 57;
+            this.txtBoxVoorraadoverzicht.Text = "voorraad overzicht";
+            this.txtBoxVoorraadoverzicht.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(223, 74);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(556, 45);
+            this.textBox5.TabIndex = 72;
+            this.textBox5.Text = "Personeelsoverzicht";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtBoxMenuoverzicht
+            // 
+            this.txtBoxMenuoverzicht.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtBoxMenuoverzicht.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMenuoverzicht.Location = new System.Drawing.Point(203, 70);
+            this.txtBoxMenuoverzicht.Name = "txtBoxMenuoverzicht";
+            this.txtBoxMenuoverzicht.Size = new System.Drawing.Size(688, 45);
+            this.txtBoxMenuoverzicht.TabIndex = 56;
+            this.txtBoxMenuoverzicht.Text = "Menu overzicht";
+            this.txtBoxMenuoverzicht.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(256, 24);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(489, 45);
+            this.textBox6.TabIndex = 57;
+            this.textBox6.Text = "Keuze bestelling";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UI.Properties.Resources.chapoo_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(905, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 56;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(256, 33);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(525, 45);
+            this.textBox7.TabIndex = 57;
+            this.textBox7.Text = "Voorraad keuze overzicht";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Kassa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.pnl_KassaVoorraadKeuze);
-            this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
-            this.Controls.Add(this.pnl_MenuOverzicht);
-            this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
-            this.Controls.Add(this.pnl_KassaHoofdscherm);
-            this.Controls.Add(this.pnl_KassaVoorraadoverzicht);
-            this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
             this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
-            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
+            this.Controls.Add(this.pnl_KassaVoorraadKeuze);
             this.Controls.Add(this.pnl_KassaTafeloverzicht);
+            this.Controls.Add(this.pnl_KassaVoorraadoverzichtGerecht);
+            this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
+            this.Controls.Add(this.pnl_KassaVoorraadoverzicht);
             this.Controls.Add(this.pnl_KassaLunchMenuoverizcht);
+            this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
+            this.Controls.Add(this.pnl_MenuOverzicht);
+            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
+            this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_Inkomstenoverzicht);
             this.Name = "Kassa";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kassa_FormClosing);
             this.pnl_KassaKeuzeBestellingen.ResumeLayout(false);
             this.pnl_KassaKeuzeBestellingen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugKeuzebestelling_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnl_Inkomstenoverzicht.ResumeLayout(false);
@@ -2529,54 +2370,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugnaarHoofdschermInkomsten_Kassa)).EndInit();
             this.pnl_KassaTafeloverzicht.ResumeLayout(false);
             this.pnl_KassaTafeloverzicht.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm2_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugTafeloverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnl_KassaPersoneelsbeheer.ResumeLayout(false);
             this.pnl_KassaPersoneelsbeheer.PerformLayout();
-            this.pnl_MessageBox.ResumeLayout(false);
-            this.pnl_MessageBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm6_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugOverzichtPersoneel_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnl_KassaVoorraadoverzichtGerecht.ResumeLayout(false);
             this.pnl_KassaVoorraadoverzichtGerecht.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm4_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugGerechtVoorraadOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.pnl_KassaVoorraadoverzicht.ResumeLayout(false);
             this.pnl_KassaVoorraadoverzicht.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm5_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugDrankvoorraadOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.pnl_KassaVoorraadKeuze.ResumeLayout(false);
             this.pnl_KassaVoorraadKeuze.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm1_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugVoorraadKeuzeOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnl_KassaDinerMenuoverzicht.ResumeLayout(false);
             this.pnl_KassaDinerMenuoverzicht.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdscherm3_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugDinermenuOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.pnl_KassaMenuoverzichtKeuze.ResumeLayout(false);
             this.pnl_KassaMenuoverzichtKeuze.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugMenuOverzichtKeuze_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.pnl_MenuOverzicht.ResumeLayout(false);
             this.pnl_MenuOverzicht.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugNaarHoofdschermDrankMenu_Kassa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebox_MenuOverzichtTerug)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.pnl_KassaLunchMenuoverizcht.ResumeLayout(false);
             this.pnl_KassaLunchMenuoverizcht.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugLunchMenu_Kassa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Kassa)).EndInit();
             this.pnl_KassaHoofdscherm.ResumeLayout(false);
-            this.pnl_KassaHoofdscherm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2591,7 +2421,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_BarKeuzeBestelling_Kassa;
         private System.Windows.Forms.Button btn_KeukenKeuzeBestelling_Kassa;
         private System.Windows.Forms.Panel pnl_KassaKeuzeBestellingen;
@@ -2608,11 +2437,9 @@
         private System.Windows.Forms.Button btn_KassaTafel3;
         private System.Windows.Forms.Button btn_KassaTafel2;
         private System.Windows.Forms.Button btn_KassaTafel1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel pnl_KassaPersoneelsbeheer;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ListView listView_Personeelsbeheer;
         private System.Windows.Forms.ColumnHeader PersoneelID;
         private System.Windows.Forms.ColumnHeader PersoneelVoornaam;
@@ -2628,7 +2455,6 @@
         private System.Windows.Forms.Button btn_MenuoverzichtPersoneelsbeheer_Kassa;
         private System.Windows.Forms.Panel pnl_KassaVoorraadoverzichtGerecht;
         private System.Windows.Forms.ListView listview_GerechtVoorraadOverzicht;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -2656,15 +2482,12 @@
         private System.Windows.Forms.ListView listView_VoorraadOverzicht;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel pnl_KassaMenuoverzichtKeuze;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel pnl_KassaVoorraadKeuze;
         private System.Windows.Forms.Button btn_GerechtVoorraadKeuzeOverzicht_Kassa;
         private System.Windows.Forms.Button btn_DrankVoorraadOverzichtKeuze_Kassa;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btnDinerMenu_MenuoverzichtKeuze;
         private System.Windows.Forms.Button btnLunchMenu_MenuoverzichtKeuze;
@@ -2696,7 +2519,6 @@
         private System.Windows.Forms.ColumnHeader drankmenuCategorie;
         private System.Windows.Forms.ColumnHeader drankmenuSoort;
         private System.Windows.Forms.ColumnHeader drankmenuPrijs;
-        private System.Windows.Forms.Label lbl_Overzicht;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnToevoegen_MenuOverzicht;
         private System.Windows.Forms.Label label29;
@@ -2731,8 +2553,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel pnl_KassaDinerMenuoverzicht;
         private System.Windows.Forms.Button btnToevoegen_DinerMenuOverzicht;
         private System.Windows.Forms.Label label36;
@@ -2763,7 +2583,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
         private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.Label label43;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBx_TerugKeuzebestelling_Kassa;
         private System.Windows.Forms.PictureBox pictureBx_TerugTafeloverzicht_Kassa;
@@ -2774,16 +2593,7 @@
         private System.Windows.Forms.PictureBox pictureBx_TerugMenuOverzichtKeuze_Kassa;
         private System.Windows.Forms.PictureBox picturebox_MenuOverzichtTerug;
         private System.Windows.Forms.PictureBox pictureBx_TerugDinermenuOverzicht_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm_Kassa;
         private System.Windows.Forms.PictureBox pictureBx_TerugnaarHoofdschermInkomsten_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdschermMenuOverzicht_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdschermDrankMenu_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm2_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm6_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm4_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm5_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm1_Kassa;
-        private System.Windows.Forms.PictureBox pictureBx_TerugNaarHoofdscherm3_Kassa;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Button btn_ToevoegenPersoneel;
         private System.Windows.Forms.TextBox txt_PersoneelsbeheerID;
@@ -2801,14 +2611,20 @@
         private System.Windows.Forms.Button btn_BestellingenHoofdscherm_Kassa;
         private System.Windows.Forms.Button btn_PersoneelsbeheerHoofdscherm_Kassa;
         private System.Windows.Forms.Button btn_TafeloverzichtHoofdscherm_Kassa;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBx_Uitloggen_Kassa;
         private System.Windows.Forms.Panel pnl_KassaHoofdscherm;
         private System.Windows.Forms.PictureBox pictureBx_TerugLunchMenu_Kassa;
-        private System.Windows.Forms.Panel pnl_MessageBox;
-        private System.Windows.Forms.Label lbl_MessageBox;
-        private System.Windows.Forms.Button btn_OKMessageBox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtBoxHeader;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBoxVoorraadoverzicht;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtBoxMenuoverzicht;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox7;
     }
 }
 

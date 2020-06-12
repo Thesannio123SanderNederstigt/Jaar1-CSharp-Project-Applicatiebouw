@@ -15,7 +15,13 @@ namespace ChapooModel
         public bool betaalStatus { get;  set; }
         public string opmerking { get; set; }
 
-        private Tafel tafel;
+        public int tafelID { get; set; }
+
+        public string omschrijving { get; set; }
+        public int aantal { get; set; }
+        public double prijs { get; set; }
+        public int btw { get; set; }
+
 
 
         public Rekening(int ID, float fooi, string betaalwijze, int tafelID, bool betaalStatus, string opmerking)
@@ -23,19 +29,18 @@ namespace ChapooModel
             this.ID = ID;
             this.fooi = fooi;
             this.betaalwijze = betaalwijze;
-            this.tafel.ID = tafelID;
+            this.tafelID = tafelID;
             this.betaalStatus = betaalStatus;
             this.opmerking = opmerking;
 
         }
 
-        /*public Rekening(int ID, float fooi, string betaalwijze, bool betaalStatus, string opmerking)
+        public Rekening(string omschrijving, int aantal, double prijs, int btw)
         {
-            this.ID = ID;
-            this.fooi = fooi;
-            this.betaalwijze = betaalwijze;
-            this.betaalStatus = betaalStatus;
-            this.opmerking = opmerking;
-        }*/
+            this.omschrijving = omschrijving;
+            this.aantal = aantal;
+            this.prijs = prijs;
+            this.btw = btw;
+        }
     }
 }

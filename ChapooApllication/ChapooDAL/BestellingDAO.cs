@@ -43,21 +43,21 @@ namespace ChapooDAL
         public List<Bestelling> GetCurrentOrders(string minMax)
         {
             string query = "SELECT Bestelling.tafelID, Bestelling.besteltijd AS [besteltijd], Bestelling.ID, Bestelling.[status], " +
-                " CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS [opmerking], MenuItem.menukaartsoort AS [kaartsoort] " + 
-                "FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID " +
-                "WHERE menukaartsoort != 'Dranken' GROUP BY Bestelling.tafelID, Bestelling.ID, besteltijd, Bestelling.[status], " + 
-                $"Bestelling.opmerking, MenuItem.menukaartsoort ORDER BY kaartsoort {minMax}";
+                 "CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS[opmerking] " +
+                 "FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID " +
+                 "WHERE menukaartsoort != 'Dranken' GROUP BY Bestelling.tafelID, Bestelling.ID, besteltijd, Bestelling.[status], " +
+                 $"Bestelling.opmerking ORDER BY besteltijd {minMax}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadBestellingenKaart(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public List<Bestelling> GetCurrentDrinkOrders(string minMax)
         {
-            string query = "SELECT Bestelling.tafelID, Bestelling.besteltijd AS [besteltijd], Bestelling.ID, Bestelling.[status], " +
-                " CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS [opmerking], MenuItem.menukaartsoort AS [kaartsoort] " +
+            string query = "SELECT Bestelling.tafelID, Bestelling.besteltijd AS [besteltijd], Bestelling.ID, Bestelling.[status], "+ 
+                "CASE WHEN Bestelling.opmerking IS NULL THEN '' ELSE Bestelling.opmerking END AS[opmerking] " +
                 "FROM Bestelling_MenuItem JOIN Bestelling ON Bestelling_MenuItem.bestellingID = Bestelling.ID JOIN MenuItem ON Bestelling_MenuItem.menuItemID = MenuItem.ID " +
-                "WHERE menukaartsoort = 'Dranken' GROUP BY Bestelling.tafelID, Bestelling.ID, besteltijd, Bestelling.[status], " +
-                $"Bestelling.opmerking, MenuItem.menukaartsoort ORDER BY kaartsoort {minMax}";
+                "WHERE menukaartsoort = 'Dranken' GROUP BY Bestelling.tafelID, Bestelling.ID, besteltijd, Bestelling.[status], " +  
+                $"Bestelling.opmerking ORDER BY besteltijd {minMax}";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadBestellingenKaart(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -75,9 +75,8 @@ namespace ChapooDAL
                 bool status = (bool)dr["status"];
                 int tafelID = (int)dr["tafelID"];
                 string opmerking = (string)dr["opmerking"];
-                string kaartsoort = (string)dr["kaartsoort"];
 
-                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, opmerking, kaartsoort);
+                Bestelling bestelling = new Bestelling(ID, besteltijd, status, tafelID, opmerking);
                 bestellingen.Add(bestelling);
             }
 
@@ -93,6 +92,7 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", bestellingID) };
             return ReadSpecialBestelling(ExecuteSelectQuery(query, sqlParameters));
         }
+
 
         private List<Bestelling> ReadSpecialBestelling(DataTable dataTable)
         {

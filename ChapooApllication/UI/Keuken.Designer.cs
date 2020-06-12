@@ -36,7 +36,6 @@
             this.btn_StartAfgeronde = new System.Windows.Forms.Button();
             this.ChapooLogoBestellingStartScherm = new System.Windows.Forms.PictureBox();
             this.pnl_BinnenkomendeBestellingen = new System.Windows.Forms.Panel();
-            this.pictureBx_KeukenBarStartscherm_Keuken = new System.Windows.Forms.PictureBox();
             this.pnl_TafelBinnenkomendeBestelling = new System.Windows.Forms.Panel();
             this.lbl_TafelBestellingID = new System.Windows.Forms.Label();
             this.pictureBx_TerugInkomendeBestellingen = new System.Windows.Forms.PictureBox();
@@ -53,6 +52,7 @@
             this.lbl_Bestelling = new System.Windows.Forms.Label();
             this.lbl_DatumTijd = new System.Windows.Forms.Label();
             this.lbl_Tafel = new System.Windows.Forms.Label();
+            this.pictureBx_KeukenBarStartscherm_Keuken = new System.Windows.Forms.PictureBox();
             this.btn_AfgerondeBestelling = new System.Windows.Forms.Button();
             this.gBoxBestellingen = new System.Windows.Forms.GroupBox();
             this.lbl_BestellingID = new System.Windows.Forms.Label();
@@ -95,9 +95,6 @@
             this.pnl_AfgerondeBestellingen = new System.Windows.Forms.Panel();
             this.pictureBxAF_KeukenBarStartscherm_Keuken = new System.Windows.Forms.PictureBox();
             this.btn_Binnenkomendestelling = new System.Windows.Forms.Button();
-            this.gBoxAfgerondeBestellingen = new System.Windows.Forms.GroupBox();
-            this.lbl_BestellingAFID = new System.Windows.Forms.Label();
-            this.lblAFTijd8 = new System.Windows.Forms.Label();
             this.pnl_TafelAfgerondeBestelling = new System.Windows.Forms.Panel();
             this.pictureBx_TerugAfgerondeBestellingen = new System.Windows.Forms.PictureBox();
             this.lbl_AFOpmerkingen = new System.Windows.Forms.Label();
@@ -108,6 +105,9 @@
             this.lbl_AFBestelling = new System.Windows.Forms.Label();
             this.lbl_AFDatumTijd = new System.Windows.Forms.Label();
             this.lbl_AFTafel = new System.Windows.Forms.Label();
+            this.gBoxAfgerondeBestellingen = new System.Windows.Forms.GroupBox();
+            this.lbl_BestellingAFID = new System.Windows.Forms.Label();
+            this.lblAFTijd8 = new System.Windows.Forms.Label();
             this.gBox_AFTafel8 = new System.Windows.Forms.GroupBox();
             this.lbl_BestellingAF8ID = new System.Windows.Forms.Label();
             this.lbl_AFBestelling8 = new System.Windows.Forms.Label();
@@ -146,9 +146,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_Uitloggen_Keuken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChapooLogoBestellingStartScherm)).BeginInit();
             this.pnl_BinnenkomendeBestellingen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_KeukenBarStartscherm_Keuken)).BeginInit();
             this.pnl_TafelBinnenkomendeBestelling.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugInkomendeBestellingen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_KeukenBarStartscherm_Keuken)).BeginInit();
             this.gBoxBestellingen.SuspendLayout();
             this.gBox_Tafel8.SuspendLayout();
             this.gBox_Tafel7.SuspendLayout();
@@ -161,9 +161,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChapooLogoBinnenkomendeBetselling)).BeginInit();
             this.pnl_AfgerondeBestellingen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBxAF_KeukenBarStartscherm_Keuken)).BeginInit();
-            this.gBoxAfgerondeBestellingen.SuspendLayout();
             this.pnl_TafelAfgerondeBestelling.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugAfgerondeBestellingen)).BeginInit();
+            this.gBoxAfgerondeBestellingen.SuspendLayout();
             this.gBox_AFTafel8.SuspendLayout();
             this.gBox_AFTafel7.SuspendLayout();
             this.gBox_AFTafel6.SuspendLayout();
@@ -244,9 +244,9 @@
             // 
             // pnl_BinnenkomendeBestellingen
             // 
+            this.pnl_BinnenkomendeBestellingen.Controls.Add(this.pnl_TafelBinnenkomendeBestelling);
             this.pnl_BinnenkomendeBestellingen.Controls.Add(this.pictureBx_KeukenBarStartscherm_Keuken);
             this.pnl_BinnenkomendeBestellingen.Controls.Add(this.btn_AfgerondeBestelling);
-            this.pnl_BinnenkomendeBestellingen.Controls.Add(this.pnl_TafelBinnenkomendeBestelling);
             this.pnl_BinnenkomendeBestellingen.Controls.Add(this.gBoxBestellingen);
             this.pnl_BinnenkomendeBestellingen.Controls.Add(this.lbl_Bestellingen);
             this.pnl_BinnenkomendeBestellingen.Controls.Add(this.btn_GereedBestelling);
@@ -256,17 +256,6 @@
             this.pnl_BinnenkomendeBestellingen.Name = "pnl_BinnenkomendeBestellingen";
             this.pnl_BinnenkomendeBestellingen.Size = new System.Drawing.Size(1903, 1041);
             this.pnl_BinnenkomendeBestellingen.TabIndex = 22;
-            // 
-            // pictureBx_KeukenBarStartscherm_Keuken
-            // 
-            this.pictureBx_KeukenBarStartscherm_Keuken.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_KeukenBarStartscherm_Keuken.Image")));
-            this.pictureBx_KeukenBarStartscherm_Keuken.Location = new System.Drawing.Point(109, 78);
-            this.pictureBx_KeukenBarStartscherm_Keuken.Name = "pictureBx_KeukenBarStartscherm_Keuken";
-            this.pictureBx_KeukenBarStartscherm_Keuken.Size = new System.Drawing.Size(62, 52);
-            this.pictureBx_KeukenBarStartscherm_Keuken.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_KeukenBarStartscherm_Keuken.TabIndex = 76;
-            this.pictureBx_KeukenBarStartscherm_Keuken.TabStop = false;
-            this.pictureBx_KeukenBarStartscherm_Keuken.Click += new System.EventHandler(this.pictureBx_KeukenBarStartscherm_Keuken_Click);
             // 
             // pnl_TafelBinnenkomendeBestelling
             // 
@@ -284,7 +273,7 @@
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_Bestelling);
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_DatumTijd);
             this.pnl_TafelBinnenkomendeBestelling.Controls.Add(this.lbl_Tafel);
-            this.pnl_TafelBinnenkomendeBestelling.Location = new System.Drawing.Point(527, 166);
+            this.pnl_TafelBinnenkomendeBestelling.Location = new System.Drawing.Point(523, 136);
             this.pnl_TafelBinnenkomendeBestelling.Name = "pnl_TafelBinnenkomendeBestelling";
             this.pnl_TafelBinnenkomendeBestelling.Size = new System.Drawing.Size(911, 744);
             this.pnl_TafelBinnenkomendeBestelling.TabIndex = 79;
@@ -387,7 +376,7 @@
             this.listView_BestelItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.MenuItem,
             this.Aantal});
-            this.listView_BestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_BestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView_BestelItems.HideSelection = false;
             this.listView_BestelItems.Location = new System.Drawing.Point(21, 81);
             this.listView_BestelItems.Name = "listView_BestelItems";
@@ -438,6 +427,17 @@
             this.lbl_Tafel.Size = new System.Drawing.Size(82, 31);
             this.lbl_Tafel.TabIndex = 41;
             this.lbl_Tafel.Text = "Tafel ";
+            // 
+            // pictureBx_KeukenBarStartscherm_Keuken
+            // 
+            this.pictureBx_KeukenBarStartscherm_Keuken.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_KeukenBarStartscherm_Keuken.Image")));
+            this.pictureBx_KeukenBarStartscherm_Keuken.Location = new System.Drawing.Point(109, 78);
+            this.pictureBx_KeukenBarStartscherm_Keuken.Name = "pictureBx_KeukenBarStartscherm_Keuken";
+            this.pictureBx_KeukenBarStartscherm_Keuken.Size = new System.Drawing.Size(62, 52);
+            this.pictureBx_KeukenBarStartscherm_Keuken.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBx_KeukenBarStartscherm_Keuken.TabIndex = 76;
+            this.pictureBx_KeukenBarStartscherm_Keuken.TabStop = false;
+            this.pictureBx_KeukenBarStartscherm_Keuken.Click += new System.EventHandler(this.pictureBx_KeukenBarStartscherm_Keuken_Click);
             // 
             // btn_AfgerondeBestelling
             // 
@@ -911,6 +911,109 @@
             this.btn_Binnenkomendestelling.UseVisualStyleBackColor = true;
             this.btn_Binnenkomendestelling.Click += new System.EventHandler(this.btn_Binnenkomendestelling_Click);
             // 
+            // pnl_TafelAfgerondeBestelling
+            // 
+            this.pnl_TafelAfgerondeBestelling.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.pictureBx_TerugAfgerondeBestellingen);
+            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFOpmerkingen);
+            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.txt_AFOpmerkingen);
+            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.listView_AFBestelItems);
+            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFBestelling);
+            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFDatumTijd);
+            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFTafel);
+            this.pnl_TafelAfgerondeBestelling.Location = new System.Drawing.Point(503, 16);
+            this.pnl_TafelAfgerondeBestelling.Name = "pnl_TafelAfgerondeBestelling";
+            this.pnl_TafelAfgerondeBestelling.Size = new System.Drawing.Size(911, 682);
+            this.pnl_TafelAfgerondeBestelling.TabIndex = 78;
+            // 
+            // pictureBx_TerugAfgerondeBestellingen
+            // 
+            this.pictureBx_TerugAfgerondeBestellingen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugAfgerondeBestellingen.Image")));
+            this.pictureBx_TerugAfgerondeBestellingen.Location = new System.Drawing.Point(21, 21);
+            this.pictureBx_TerugAfgerondeBestellingen.Name = "pictureBx_TerugAfgerondeBestellingen";
+            this.pictureBx_TerugAfgerondeBestellingen.Size = new System.Drawing.Size(49, 41);
+            this.pictureBx_TerugAfgerondeBestellingen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBx_TerugAfgerondeBestellingen.TabIndex = 78;
+            this.pictureBx_TerugAfgerondeBestellingen.TabStop = false;
+            this.pictureBx_TerugAfgerondeBestellingen.Click += new System.EventHandler(this.pictureBx_TerugAfgerondeBestellingen_Click);
+            // 
+            // lbl_AFOpmerkingen
+            // 
+            this.lbl_AFOpmerkingen.AutoSize = true;
+            this.lbl_AFOpmerkingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AFOpmerkingen.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_AFOpmerkingen.Location = new System.Drawing.Point(389, 506);
+            this.lbl_AFOpmerkingen.Name = "lbl_AFOpmerkingen";
+            this.lbl_AFOpmerkingen.Size = new System.Drawing.Size(130, 25);
+            this.lbl_AFOpmerkingen.TabIndex = 65;
+            this.lbl_AFOpmerkingen.Text = "Opmerkingen";
+            // 
+            // txt_AFOpmerkingen
+            // 
+            this.txt_AFOpmerkingen.Location = new System.Drawing.Point(21, 543);
+            this.txt_AFOpmerkingen.Multiline = true;
+            this.txt_AFOpmerkingen.Name = "txt_AFOpmerkingen";
+            this.txt_AFOpmerkingen.Size = new System.Drawing.Size(857, 113);
+            this.txt_AFOpmerkingen.TabIndex = 64;
+            // 
+            // listView_AFBestelItems
+            // 
+            this.listView_AFBestelItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.AFMenuItem,
+            this.AFAantal});
+            this.listView_AFBestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView_AFBestelItems.HideSelection = false;
+            this.listView_AFBestelItems.Location = new System.Drawing.Point(21, 81);
+            this.listView_AFBestelItems.Name = "listView_AFBestelItems";
+            this.listView_AFBestelItems.Size = new System.Drawing.Size(857, 390);
+            this.listView_AFBestelItems.TabIndex = 62;
+            this.listView_AFBestelItems.UseCompatibleStateImageBehavior = false;
+            this.listView_AFBestelItems.View = System.Windows.Forms.View.Details;
+            this.listView_AFBestelItems.SelectedIndexChanged += new System.EventHandler(this.listView_AFBestelItems_SelectedIndexChanged);
+            // 
+            // AFMenuItem
+            // 
+            this.AFMenuItem.Text = "Menu Item";
+            this.AFMenuItem.Width = 730;
+            // 
+            // AFAantal
+            // 
+            this.AFAantal.Text = "Aantal";
+            this.AFAantal.Width = 120;
+            // 
+            // lbl_AFBestelling
+            // 
+            this.lbl_AFBestelling.AutoSize = true;
+            this.lbl_AFBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AFBestelling.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_AFBestelling.Location = new System.Drawing.Point(358, 27);
+            this.lbl_AFBestelling.Name = "lbl_AFBestelling";
+            this.lbl_AFBestelling.Size = new System.Drawing.Size(218, 31);
+            this.lbl_AFBestelling.TabIndex = 61;
+            this.lbl_AFBestelling.Text = "Bestelling details";
+            // 
+            // lbl_AFDatumTijd
+            // 
+            this.lbl_AFDatumTijd.AutoSize = true;
+            this.lbl_AFDatumTijd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AFDatumTijd.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_AFDatumTijd.Location = new System.Drawing.Point(681, 27);
+            this.lbl_AFDatumTijd.Name = "lbl_AFDatumTijd";
+            this.lbl_AFDatumTijd.Size = new System.Drawing.Size(197, 31);
+            this.lbl_AFDatumTijd.TabIndex = 60;
+            this.lbl_AFDatumTijd.Text = "17-05-20 12:30";
+            // 
+            // lbl_AFTafel
+            // 
+            this.lbl_AFTafel.AutoSize = true;
+            this.lbl_AFTafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_AFTafel.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lbl_AFTafel.Location = new System.Drawing.Point(186, 27);
+            this.lbl_AFTafel.Name = "lbl_AFTafel";
+            this.lbl_AFTafel.Size = new System.Drawing.Size(82, 31);
+            this.lbl_AFTafel.TabIndex = 41;
+            this.lbl_AFTafel.Text = "Tafel ";
+            // 
             // gBoxAfgerondeBestellingen
             // 
             this.gBoxAfgerondeBestellingen.Controls.Add(this.lbl_BestellingAFID);
@@ -958,108 +1061,6 @@
             this.lblAFTijd8.Size = new System.Drawing.Size(17, 25);
             this.lblAFTijd8.TabIndex = 74;
             this.lblAFTijd8.Text = " ";
-            // 
-            // pnl_TafelAfgerondeBestelling
-            // 
-            this.pnl_TafelAfgerondeBestelling.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.pictureBx_TerugAfgerondeBestellingen);
-            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFOpmerkingen);
-            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.txt_AFOpmerkingen);
-            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.listView_AFBestelItems);
-            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFBestelling);
-            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFDatumTijd);
-            this.pnl_TafelAfgerondeBestelling.Controls.Add(this.lbl_AFTafel);
-            this.pnl_TafelAfgerondeBestelling.Location = new System.Drawing.Point(527, 26);
-            this.pnl_TafelAfgerondeBestelling.Name = "pnl_TafelAfgerondeBestelling";
-            this.pnl_TafelAfgerondeBestelling.Size = new System.Drawing.Size(911, 682);
-            this.pnl_TafelAfgerondeBestelling.TabIndex = 78;
-            // 
-            // pictureBx_TerugAfgerondeBestellingen
-            // 
-            this.pictureBx_TerugAfgerondeBestellingen.Image = ((System.Drawing.Image)(resources.GetObject("pictureBx_TerugAfgerondeBestellingen.Image")));
-            this.pictureBx_TerugAfgerondeBestellingen.Location = new System.Drawing.Point(21, 21);
-            this.pictureBx_TerugAfgerondeBestellingen.Name = "pictureBx_TerugAfgerondeBestellingen";
-            this.pictureBx_TerugAfgerondeBestellingen.Size = new System.Drawing.Size(49, 41);
-            this.pictureBx_TerugAfgerondeBestellingen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBx_TerugAfgerondeBestellingen.TabIndex = 78;
-            this.pictureBx_TerugAfgerondeBestellingen.TabStop = false;
-            this.pictureBx_TerugAfgerondeBestellingen.Click += new System.EventHandler(this.pictureBx_TerugAfgerondeBestellingen_Click);
-            // 
-            // lbl_AFOpmerkingen
-            // 
-            this.lbl_AFOpmerkingen.AutoSize = true;
-            this.lbl_AFOpmerkingen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AFOpmerkingen.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFOpmerkingen.Location = new System.Drawing.Point(389, 506);
-            this.lbl_AFOpmerkingen.Name = "lbl_AFOpmerkingen";
-            this.lbl_AFOpmerkingen.Size = new System.Drawing.Size(130, 25);
-            this.lbl_AFOpmerkingen.TabIndex = 65;
-            this.lbl_AFOpmerkingen.Text = "Opmerkingen";
-            // 
-            // txt_AFOpmerkingen
-            // 
-            this.txt_AFOpmerkingen.Location = new System.Drawing.Point(21, 543);
-            this.txt_AFOpmerkingen.Multiline = true;
-            this.txt_AFOpmerkingen.Name = "txt_AFOpmerkingen";
-            this.txt_AFOpmerkingen.Size = new System.Drawing.Size(857, 113);
-            this.txt_AFOpmerkingen.TabIndex = 64;
-            // 
-            // listView_AFBestelItems
-            // 
-            this.listView_AFBestelItems.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.AFMenuItem,
-            this.AFAantal});
-            this.listView_AFBestelItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView_AFBestelItems.HideSelection = false;
-            this.listView_AFBestelItems.Location = new System.Drawing.Point(21, 81);
-            this.listView_AFBestelItems.Name = "listView_AFBestelItems";
-            this.listView_AFBestelItems.Size = new System.Drawing.Size(857, 390);
-            this.listView_AFBestelItems.TabIndex = 62;
-            this.listView_AFBestelItems.UseCompatibleStateImageBehavior = false;
-            this.listView_AFBestelItems.View = System.Windows.Forms.View.Details;
-            // 
-            // AFMenuItem
-            // 
-            this.AFMenuItem.Text = "Menu Item";
-            this.AFMenuItem.Width = 730;
-            // 
-            // AFAantal
-            // 
-            this.AFAantal.Text = "Aantal";
-            this.AFAantal.Width = 120;
-            // 
-            // lbl_AFBestelling
-            // 
-            this.lbl_AFBestelling.AutoSize = true;
-            this.lbl_AFBestelling.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AFBestelling.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFBestelling.Location = new System.Drawing.Point(358, 27);
-            this.lbl_AFBestelling.Name = "lbl_AFBestelling";
-            this.lbl_AFBestelling.Size = new System.Drawing.Size(218, 31);
-            this.lbl_AFBestelling.TabIndex = 61;
-            this.lbl_AFBestelling.Text = "Bestelling details";
-            // 
-            // lbl_AFDatumTijd
-            // 
-            this.lbl_AFDatumTijd.AutoSize = true;
-            this.lbl_AFDatumTijd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AFDatumTijd.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFDatumTijd.Location = new System.Drawing.Point(681, 27);
-            this.lbl_AFDatumTijd.Name = "lbl_AFDatumTijd";
-            this.lbl_AFDatumTijd.Size = new System.Drawing.Size(197, 31);
-            this.lbl_AFDatumTijd.TabIndex = 60;
-            this.lbl_AFDatumTijd.Text = "17-05-20 12:30";
-            // 
-            // lbl_AFTafel
-            // 
-            this.lbl_AFTafel.AutoSize = true;
-            this.lbl_AFTafel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_AFTafel.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lbl_AFTafel.Location = new System.Drawing.Point(186, 27);
-            this.lbl_AFTafel.Name = "lbl_AFTafel";
-            this.lbl_AFTafel.Size = new System.Drawing.Size(82, 31);
-            this.lbl_AFTafel.TabIndex = 41;
-            this.lbl_AFTafel.Text = "Tafel ";
             // 
             // gBox_AFTafel8
             // 
@@ -1451,10 +1452,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ChapooLogoBestellingStartScherm)).EndInit();
             this.pnl_BinnenkomendeBestellingen.ResumeLayout(false);
             this.pnl_BinnenkomendeBestellingen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_KeukenBarStartscherm_Keuken)).EndInit();
             this.pnl_TafelBinnenkomendeBestelling.ResumeLayout(false);
             this.pnl_TafelBinnenkomendeBestelling.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugInkomendeBestellingen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBx_KeukenBarStartscherm_Keuken)).EndInit();
             this.gBoxBestellingen.ResumeLayout(false);
             this.gBoxBestellingen.PerformLayout();
             this.gBox_Tafel8.ResumeLayout(false);
@@ -1477,11 +1478,11 @@
             this.pnl_AfgerondeBestellingen.ResumeLayout(false);
             this.pnl_AfgerondeBestellingen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBxAF_KeukenBarStartscherm_Keuken)).EndInit();
-            this.gBoxAfgerondeBestellingen.ResumeLayout(false);
-            this.gBoxAfgerondeBestellingen.PerformLayout();
             this.pnl_TafelAfgerondeBestelling.ResumeLayout(false);
             this.pnl_TafelAfgerondeBestelling.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBx_TerugAfgerondeBestellingen)).EndInit();
+            this.gBoxAfgerondeBestellingen.ResumeLayout(false);
+            this.gBoxAfgerondeBestellingen.PerformLayout();
             this.gBox_AFTafel8.ResumeLayout(false);
             this.gBox_AFTafel8.PerformLayout();
             this.gBox_AFTafel7.ResumeLayout(false);
