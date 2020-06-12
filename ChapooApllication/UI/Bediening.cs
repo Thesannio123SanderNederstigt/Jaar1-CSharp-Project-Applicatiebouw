@@ -235,9 +235,10 @@ namespace UI
             }
         }
 
-        private void BestellingToevoegen1(ListView listview1, Label label1)
+        private void BestellingToevoegen1(Label label1)
         {
-            ListViewItem item1 = listview1.SelectedItems[0];
+
+            ListViewItem item1 = listView6_SelectedIndexChanged[0];
             ChapooModel.MenuItem menuItem = (ChapooModel.MenuItem)item1.Tag;
 
             Bestelling_MenuItem Item = new Bestelling_MenuItem()
@@ -251,7 +252,7 @@ namespace UI
 
             if (int.Parse(label1.Text) > 0)//hoger dan 1
             {
-                if (menuItems[Item.Aantal].aantalInVoorraad >= Item.Aantal)
+                if (menuItem.aantalInVoorraad >= Item.Aantal)
                 {
                     bestelling_MenuItemService.TESTCreateBestellingMenuItem(menuItem.ID, BestellingService.GetNieuuwsteID(), int.Parse(label1.Text));
                     MessageBox.Show("Item(s) toegevoegd aan bestelling !");
@@ -322,6 +323,7 @@ namespace UI
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
             Date_Time(OverzichtDateLBL, OverzichtTimeLBL);
+            GoToOverzicht();
 
 
 
@@ -677,6 +679,7 @@ namespace UI
         {
             DrankPNL.Hide();
             OverzichtPNL.Show();
+            GoToOverzicht();
 
         }
         private void DinerTerugLBL_Click(object sender, EventArgs e)

@@ -169,6 +169,13 @@
             this.Overzicht_TopPNL = new System.Windows.Forms.Panel();
             this.OverzichtReturnBTN = new System.Windows.Forms.Button();
             this.ChapooLogo = new System.Windows.Forms.Panel();
+            this.WijzigenPNL = new System.Windows.Forms.Panel();
+            this.BTNaangepast = new System.Windows.Forms.Button();
+            this.BTNWijzigingOplsaan = new System.Windows.Forms.Button();
+            this.BTNItemVerwijderen = new System.Windows.Forms.Button();
+            this.ALBLWijzigen = new System.Windows.Forms.Label();
+            this.BTNMinWijzigen = new System.Windows.Forms.Button();
+            this.BTNPlusWijzigen = new System.Windows.Forms.Button();
             this.timerDTap = new System.Windows.Forms.Timer(this.components);
             this.timerDGed = new System.Windows.Forms.Timer(this.components);
             this.timerDWijn = new System.Windows.Forms.Timer(this.components);
@@ -176,12 +183,6 @@
             this.timerDV = new System.Windows.Forms.Timer(this.components);
             this.timerDT = new System.Windows.Forms.Timer(this.components);
             this.timerDH = new System.Windows.Forms.Timer(this.components);
-            this.WijzigenPNL = new System.Windows.Forms.Panel();
-            this.BTNWijzigingOplsaan = new System.Windows.Forms.Button();
-            this.BTNItemVerwijderen = new System.Windows.Forms.Button();
-            this.ALBLWijzigen = new System.Windows.Forms.Label();
-            this.BTNMinWijzigen = new System.Windows.Forms.Button();
-            this.BTNPlusWijzigen = new System.Windows.Forms.Button();
             this.timerDN = new System.Windows.Forms.Timer(this.components);
             this.panel17 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -271,7 +272,6 @@
             this.BTW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_RekeningAfrekenenTekst = new System.Windows.Forms.Panel();
             this.lbl_RekenenAfrekeken = new System.Windows.Forms.Label();
-            this.BTNaangepast = new System.Windows.Forms.Button();
             this.TafelPNL.SuspendLayout();
             this.Tafel_TopPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
@@ -1654,7 +1654,6 @@
             // OverzichtPNL
             // 
             this.OverzichtPNL.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.OverzichtPNL.Controls.Add(this.WijzigenPNL);
             this.OverzichtPNL.Controls.Add(this.BTNItemAanpassen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingPlaatsen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingVerwijderen);
@@ -1674,11 +1673,11 @@
             // 
             this.BTNItemAanpassen.BackColor = System.Drawing.Color.Moccasin;
             this.BTNItemAanpassen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNItemAanpassen.Location = new System.Drawing.Point(266, 907);
+            this.BTNItemAanpassen.Location = new System.Drawing.Point(244, 609);
             this.BTNItemAanpassen.Name = "BTNItemAanpassen";
-            this.BTNItemAanpassen.Size = new System.Drawing.Size(198, 65);
+            this.BTNItemAanpassen.Size = new System.Drawing.Size(238, 79);
             this.BTNItemAanpassen.TabIndex = 31;
-            this.BTNItemAanpassen.Text = "Aanpassen";
+            this.BTNItemAanpassen.Text = "Bestelling aanpassen";
             this.BTNItemAanpassen.UseVisualStyleBackColor = false;
             this.BTNItemAanpassen.Click += new System.EventHandler(this.BTNItemAanpassen_Click);
             // 
@@ -1686,9 +1685,9 @@
             // 
             this.BTNBestellingPlaatsen.BackColor = System.Drawing.Color.PaleGreen;
             this.BTNBestellingPlaatsen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNBestellingPlaatsen.Location = new System.Drawing.Point(473, 907);
+            this.BTNBestellingPlaatsen.Location = new System.Drawing.Point(427, 907);
             this.BTNBestellingPlaatsen.Name = "BTNBestellingPlaatsen";
-            this.BTNBestellingPlaatsen.Size = new System.Drawing.Size(214, 65);
+            this.BTNBestellingPlaatsen.Size = new System.Drawing.Size(242, 85);
             this.BTNBestellingPlaatsen.TabIndex = 30;
             this.BTNBestellingPlaatsen.Text = "Bevestig Bestelling";
             this.BTNBestellingPlaatsen.UseVisualStyleBackColor = false;
@@ -1698,9 +1697,9 @@
             // 
             this.BTNBestellingVerwijderen.BackColor = System.Drawing.Color.Salmon;
             this.BTNBestellingVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNBestellingVerwijderen.Location = new System.Drawing.Point(62, 907);
+            this.BTNBestellingVerwijderen.Location = new System.Drawing.Point(50, 907);
             this.BTNBestellingVerwijderen.Name = "BTNBestellingVerwijderen";
-            this.BTNBestellingVerwijderen.Size = new System.Drawing.Size(198, 65);
+            this.BTNBestellingVerwijderen.Size = new System.Drawing.Size(242, 85);
             this.BTNBestellingVerwijderen.TabIndex = 29;
             this.BTNBestellingVerwijderen.Text = "Bestelling Verwijderen";
             this.BTNBestellingVerwijderen.UseVisualStyleBackColor = false;
@@ -1708,6 +1707,7 @@
             // 
             // TXTOverzicht
             // 
+            this.TXTOverzicht.Font = new System.Drawing.Font("Microsoft Yi Baiti", 15F);
             this.TXTOverzicht.Location = new System.Drawing.Point(50, 778);
             this.TXTOverzicht.Name = "TXTOverzicht";
             this.TXTOverzicht.Size = new System.Drawing.Size(625, 123);
@@ -1720,7 +1720,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F);
             this.label11.Location = new System.Drawing.Point(52, 733);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(221, 42);
+            this.label11.Size = new System.Drawing.Size(147, 28);
             this.label11.TabIndex = 27;
             this.label11.Text = "Opmerkingen:";
             // 
@@ -1735,7 +1735,7 @@
             this.ListViewOverzicht.HideSelection = false;
             this.ListViewOverzicht.Location = new System.Drawing.Point(48, 209);
             this.ListViewOverzicht.Name = "ListViewOverzicht";
-            this.ListViewOverzicht.Size = new System.Drawing.Size(625, 296);
+            this.ListViewOverzicht.Size = new System.Drawing.Size(625, 323);
             this.ListViewOverzicht.TabIndex = 24;
             this.ListViewOverzicht.UseCompatibleStateImageBehavior = false;
             this.ListViewOverzicht.View = System.Windows.Forms.View.Details;
@@ -1810,6 +1810,89 @@
             this.ChapooLogo.TabIndex = 33;
             this.ChapooLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint_1);
             // 
+            // WijzigenPNL
+            // 
+            this.WijzigenPNL.BackColor = System.Drawing.Color.Gainsboro;
+            this.WijzigenPNL.Controls.Add(this.BTNaangepast);
+            this.WijzigenPNL.Controls.Add(this.BTNWijzigingOplsaan);
+            this.WijzigenPNL.Controls.Add(this.BTNItemVerwijderen);
+            this.WijzigenPNL.Controls.Add(this.ALBLWijzigen);
+            this.WijzigenPNL.Controls.Add(this.BTNMinWijzigen);
+            this.WijzigenPNL.Controls.Add(this.BTNPlusWijzigen);
+            this.WijzigenPNL.Location = new System.Drawing.Point(46, 547);
+            this.WijzigenPNL.Name = "WijzigenPNL";
+            this.WijzigenPNL.Size = new System.Drawing.Size(625, 181);
+            this.WijzigenPNL.TabIndex = 31;
+            this.WijzigenPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
+            // 
+            // BTNaangepast
+            // 
+            this.BTNaangepast.BackColor = System.Drawing.Color.Moccasin;
+            this.BTNaangepast.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
+            this.BTNaangepast.Location = new System.Drawing.Point(73, 12);
+            this.BTNaangepast.Name = "BTNaangepast";
+            this.BTNaangepast.Size = new System.Drawing.Size(184, 64);
+            this.BTNaangepast.TabIndex = 45;
+            this.BTNaangepast.Text = "Klaar met aanpassen";
+            this.BTNaangepast.UseVisualStyleBackColor = false;
+            this.BTNaangepast.Click += new System.EventHandler(this.BTNaangepast_Click);
+            // 
+            // BTNWijzigingOplsaan
+            // 
+            this.BTNWijzigingOplsaan.BackColor = System.Drawing.Color.PaleGreen;
+            this.BTNWijzigingOplsaan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 13F);
+            this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(319, 100);
+            this.BTNWijzigingOplsaan.Name = "BTNWijzigingOplsaan";
+            this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(215, 62);
+            this.BTNWijzigingOplsaan.TabIndex = 44;
+            this.BTNWijzigingOplsaan.Text = "Opslaan";
+            this.BTNWijzigingOplsaan.UseVisualStyleBackColor = false;
+            this.BTNWijzigingOplsaan.Click += new System.EventHandler(this.BTNWijzigingOplsaan_Click);
+            // 
+            // BTNItemVerwijderen
+            // 
+            this.BTNItemVerwijderen.BackColor = System.Drawing.Color.Salmon;
+            this.BTNItemVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
+            this.BTNItemVerwijderen.Location = new System.Drawing.Point(73, 100);
+            this.BTNItemVerwijderen.Name = "BTNItemVerwijderen";
+            this.BTNItemVerwijderen.Size = new System.Drawing.Size(184, 62);
+            this.BTNItemVerwijderen.TabIndex = 43;
+            this.BTNItemVerwijderen.Text = "Item verwijderen";
+            this.BTNItemVerwijderen.UseVisualStyleBackColor = false;
+            this.BTNItemVerwijderen.Click += new System.EventHandler(this.BTNItemVerwijderen_Click);
+            // 
+            // ALBLWijzigen
+            // 
+            this.ALBLWijzigen.AutoSize = true;
+            this.ALBLWijzigen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.ALBLWijzigen.Location = new System.Drawing.Point(408, 27);
+            this.ALBLWijzigen.Name = "ALBLWijzigen";
+            this.ALBLWijzigen.Size = new System.Drawing.Size(33, 36);
+            this.ALBLWijzigen.TabIndex = 40;
+            this.ALBLWijzigen.Text = "0";
+            // 
+            // BTNMinWijzigen
+            // 
+            this.BTNMinWijzigen.BackColor = System.Drawing.Color.Salmon;
+            this.BTNMinWijzigen.Location = new System.Drawing.Point(465, 27);
+            this.BTNMinWijzigen.Name = "BTNMinWijzigen";
+            this.BTNMinWijzigen.Size = new System.Drawing.Size(56, 47);
+            this.BTNMinWijzigen.TabIndex = 42;
+            this.BTNMinWijzigen.Text = "Min";
+            this.BTNMinWijzigen.UseVisualStyleBackColor = false;
+            this.BTNMinWijzigen.Click += new System.EventHandler(this.BTNMinWijzigen_Click);
+            // 
+            // BTNPlusWijzigen
+            // 
+            this.BTNPlusWijzigen.BackColor = System.Drawing.Color.LightGreen;
+            this.BTNPlusWijzigen.Location = new System.Drawing.Point(322, 27);
+            this.BTNPlusWijzigen.Name = "BTNPlusWijzigen";
+            this.BTNPlusWijzigen.Size = new System.Drawing.Size(56, 47);
+            this.BTNPlusWijzigen.TabIndex = 41;
+            this.BTNPlusWijzigen.Text = "Plus";
+            this.BTNPlusWijzigen.UseVisualStyleBackColor = false;
+            this.BTNPlusWijzigen.Click += new System.EventHandler(this.BTNPlusWijzigen_Click);
+            // 
             // timerDTap
             // 
             this.timerDTap.Interval = 15;
@@ -1844,77 +1927,6 @@
             // 
             this.timerDH.Interval = 15;
             this.timerDH.Tick += new System.EventHandler(this.timerDH_Tick);
-            // 
-            // WijzigenPNL
-            // 
-            this.WijzigenPNL.BackColor = System.Drawing.Color.Gainsboro;
-            this.WijzigenPNL.Controls.Add(this.BTNaangepast);
-            this.WijzigenPNL.Controls.Add(this.BTNWijzigingOplsaan);
-            this.WijzigenPNL.Controls.Add(this.BTNItemVerwijderen);
-            this.WijzigenPNL.Controls.Add(this.ALBLWijzigen);
-            this.WijzigenPNL.Controls.Add(this.BTNMinWijzigen);
-            this.WijzigenPNL.Controls.Add(this.BTNPlusWijzigen);
-            this.WijzigenPNL.Location = new System.Drawing.Point(46, 547);
-            this.WijzigenPNL.Name = "WijzigenPNL";
-            this.WijzigenPNL.Size = new System.Drawing.Size(625, 181);
-            this.WijzigenPNL.TabIndex = 31;
-            this.WijzigenPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
-            // 
-            // BTNWijzigingOplsaan
-            // 
-            this.BTNWijzigingOplsaan.BackColor = System.Drawing.Color.PaleGreen;
-            this.BTNWijzigingOplsaan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(380, 126);
-            this.BTNWijzigingOplsaan.Name = "BTNWijzigingOplsaan";
-            this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(242, 56);
-            this.BTNWijzigingOplsaan.TabIndex = 44;
-            this.BTNWijzigingOplsaan.Text = "Wijziging Opslaan";
-            this.BTNWijzigingOplsaan.UseVisualStyleBackColor = false;
-            this.BTNWijzigingOplsaan.Click += new System.EventHandler(this.BTNWijzigingOplsaan_Click);
-            // 
-            // BTNItemVerwijderen
-            // 
-            this.BTNItemVerwijderen.BackColor = System.Drawing.Color.Salmon;
-            this.BTNItemVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.BTNItemVerwijderen.Location = new System.Drawing.Point(-3, 126);
-            this.BTNItemVerwijderen.Name = "BTNItemVerwijderen";
-            this.BTNItemVerwijderen.Size = new System.Drawing.Size(220, 56);
-            this.BTNItemVerwijderen.TabIndex = 43;
-            this.BTNItemVerwijderen.Text = "Item Verwijderen";
-            this.BTNItemVerwijderen.UseVisualStyleBackColor = false;
-            this.BTNItemVerwijderen.Click += new System.EventHandler(this.BTNItemVerwijderen_Click);
-            // 
-            // ALBLWijzigen
-            // 
-            this.ALBLWijzigen.AutoSize = true;
-            this.ALBLWijzigen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.ALBLWijzigen.Location = new System.Drawing.Point(290, 83);
-            this.ALBLWijzigen.Name = "ALBLWijzigen";
-            this.ALBLWijzigen.Size = new System.Drawing.Size(33, 36);
-            this.ALBLWijzigen.TabIndex = 40;
-            this.ALBLWijzigen.Text = "0";
-            // 
-            // BTNMinWijzigen
-            // 
-            this.BTNMinWijzigen.BackColor = System.Drawing.Color.Salmon;
-            this.BTNMinWijzigen.Location = new System.Drawing.Point(347, 83);
-            this.BTNMinWijzigen.Name = "BTNMinWijzigen";
-            this.BTNMinWijzigen.Size = new System.Drawing.Size(56, 47);
-            this.BTNMinWijzigen.TabIndex = 42;
-            this.BTNMinWijzigen.Text = "Min";
-            this.BTNMinWijzigen.UseVisualStyleBackColor = false;
-            this.BTNMinWijzigen.Click += new System.EventHandler(this.BTNMinWijzigen_Click);
-            // 
-            // BTNPlusWijzigen
-            // 
-            this.BTNPlusWijzigen.BackColor = System.Drawing.Color.LightGreen;
-            this.BTNPlusWijzigen.Location = new System.Drawing.Point(204, 83);
-            this.BTNPlusWijzigen.Name = "BTNPlusWijzigen";
-            this.BTNPlusWijzigen.Size = new System.Drawing.Size(56, 47);
-            this.BTNPlusWijzigen.TabIndex = 41;
-            this.BTNPlusWijzigen.Text = "Plus";
-            this.BTNPlusWijzigen.UseVisualStyleBackColor = false;
-            this.BTNPlusWijzigen.Click += new System.EventHandler(this.BTNPlusWijzigen_Click);
             // 
             // timerDN
             // 
@@ -2850,33 +2862,22 @@
             this.lbl_RekenenAfrekeken.TabIndex = 5;
             this.lbl_RekenenAfrekeken.Text = "Afrekenen";
             // 
-            // BTNaangepast
-            // 
-            this.BTNaangepast.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.BTNaangepast.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.BTNaangepast.Location = new System.Drawing.Point(16, 2);
-            this.BTNaangepast.Name = "BTNaangepast";
-            this.BTNaangepast.Size = new System.Drawing.Size(220, 56);
-            this.BTNaangepast.TabIndex = 45;
-            this.BTNaangepast.Text = "Item Verwijderen";
-            this.BTNaangepast.UseVisualStyleBackColor = false;
-            this.BTNaangepast.Click += new System.EventHandler(this.BTNaangepast_Click);
-            // 
             // Bediening
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(723, 1047);
+            this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.LunchPNL);
+            this.Controls.Add(this.WijzigenPNL);
             this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.AfgerondPNL);
             this.Controls.Add(this.AfrekenenPNL);
             this.Controls.Add(this.RekeningPNL);
-            this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.TafelPNL);
-            this.Controls.Add(this.LunchPNL);
             this.Controls.Add(this.DinerPNL);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
