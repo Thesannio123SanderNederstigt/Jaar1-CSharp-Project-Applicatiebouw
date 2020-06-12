@@ -94,7 +94,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,6 +137,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\android-icon-36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ui %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print-products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receipt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools-and-utensils.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-and-restaurant %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dinner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chair.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
