@@ -31,23 +31,6 @@ S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\C
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CopyComplete
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.dll
 S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.pdb
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.xml
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.xml
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.xml
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.xml
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csprojAssemblyReference.cache
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CoreCompileInputs.cache
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CopyComplete
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.dll
-C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.pdb
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.pdb
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.dll
@@ -65,3 +48,20 @@ D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwReposi
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CopyComplete
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.pdb
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.pdb
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.pdb
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.xml
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csprojAssemblyReference.cache
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CoreCompileInputs.cache
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CopyComplete
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.dll
+C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.pdb
