@@ -724,6 +724,7 @@
             // btn_ToevoegenPersoneel
             // 
             this.btn_ToevoegenPersoneel.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_ToevoegenPersoneel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_ToevoegenPersoneel.Location = new System.Drawing.Point(796, 289);
             this.btn_ToevoegenPersoneel.Name = "btn_ToevoegenPersoneel";
             this.btn_ToevoegenPersoneel.Size = new System.Drawing.Size(169, 43);
@@ -792,18 +793,20 @@
             // 
             // btn_OpslaanPersoneelsbeheer_Kassa
             // 
-            this.btn_OpslaanPersoneelsbeheer_Kassa.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_OpslaanPersoneelsbeheer_Kassa.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btn_OpslaanPersoneelsbeheer_Kassa.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_OpslaanPersoneelsbeheer_Kassa.Location = new System.Drawing.Point(518, 642);
             this.btn_OpslaanPersoneelsbeheer_Kassa.Name = "btn_OpslaanPersoneelsbeheer_Kassa";
             this.btn_OpslaanPersoneelsbeheer_Kassa.Size = new System.Drawing.Size(261, 43);
             this.btn_OpslaanPersoneelsbeheer_Kassa.TabIndex = 8;
-            this.btn_OpslaanPersoneelsbeheer_Kassa.Text = "Opslaan";
+            this.btn_OpslaanPersoneelsbeheer_Kassa.Text = "Wijzigen";
             this.btn_OpslaanPersoneelsbeheer_Kassa.UseVisualStyleBackColor = false;
             this.btn_OpslaanPersoneelsbeheer_Kassa.Click += new System.EventHandler(this.btn_OpslaanPersoneelsbeheer_Kassa_Click);
             // 
             // btn_VerwijderenPersoneelsBeheer_Kassa
             // 
             this.btn_VerwijderenPersoneelsBeheer_Kassa.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_VerwijderenPersoneelsBeheer_Kassa.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_VerwijderenPersoneelsBeheer_Kassa.Location = new System.Drawing.Point(223, 642);
             this.btn_VerwijderenPersoneelsBeheer_Kassa.Name = "btn_VerwijderenPersoneelsBeheer_Kassa";
             this.btn_VerwijderenPersoneelsBeheer_Kassa.Size = new System.Drawing.Size(267, 43);
@@ -950,22 +953,26 @@
             // 
             // btnVerwijderen_GerechtvoorraadOverzicht
             // 
+            this.btnVerwijderen_GerechtvoorraadOverzicht.BackColor = System.Drawing.Color.IndianRed;
+            this.btnVerwijderen_GerechtvoorraadOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnVerwijderen_GerechtvoorraadOverzicht.Location = new System.Drawing.Point(830, 303);
             this.btnVerwijderen_GerechtvoorraadOverzicht.Name = "btnVerwijderen_GerechtvoorraadOverzicht";
             this.btnVerwijderen_GerechtvoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnVerwijderen_GerechtvoorraadOverzicht.TabIndex = 22;
             this.btnVerwijderen_GerechtvoorraadOverzicht.Text = "Verwijderen";
-            this.btnVerwijderen_GerechtvoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_GerechtvoorraadOverzicht.UseVisualStyleBackColor = false;
             this.btnVerwijderen_GerechtvoorraadOverzicht.Click += new System.EventHandler(this.btnVerwijderen_GerechtvoorraadOverzicht_Click);
             // 
             // btnWijzigen_GerechtVoorraadOverzicht
             // 
+            this.btnWijzigen_GerechtVoorraadOverzicht.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnWijzigen_GerechtVoorraadOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnWijzigen_GerechtVoorraadOverzicht.Location = new System.Drawing.Point(830, 238);
             this.btnWijzigen_GerechtVoorraadOverzicht.Name = "btnWijzigen_GerechtVoorraadOverzicht";
             this.btnWijzigen_GerechtVoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnWijzigen_GerechtVoorraadOverzicht.TabIndex = 21;
             this.btnWijzigen_GerechtVoorraadOverzicht.Text = "Wijziging opslaan";
-            this.btnWijzigen_GerechtVoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_GerechtVoorraadOverzicht.UseVisualStyleBackColor = false;
             this.btnWijzigen_GerechtVoorraadOverzicht.Click += new System.EventHandler(this.btnWijzigen_GerechtVoorraadOverzicht_Click);
             // 
             // label14
@@ -1122,22 +1129,26 @@
             // 
             // btnVerwijderen_VoorraadOverzicht
             // 
+            this.btnVerwijderen_VoorraadOverzicht.BackColor = System.Drawing.Color.IndianRed;
+            this.btnVerwijderen_VoorraadOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnVerwijderen_VoorraadOverzicht.Location = new System.Drawing.Point(836, 327);
             this.btnVerwijderen_VoorraadOverzicht.Name = "btnVerwijderen_VoorraadOverzicht";
             this.btnVerwijderen_VoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnVerwijderen_VoorraadOverzicht.TabIndex = 22;
             this.btnVerwijderen_VoorraadOverzicht.Text = "Verwijderen";
-            this.btnVerwijderen_VoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_VoorraadOverzicht.UseVisualStyleBackColor = false;
             this.btnVerwijderen_VoorraadOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankVoorraadOverzicht_Click);
             // 
             // btnWijzigen_VoorraadOverzicht
             // 
+            this.btnWijzigen_VoorraadOverzicht.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnWijzigen_VoorraadOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnWijzigen_VoorraadOverzicht.Location = new System.Drawing.Point(836, 265);
             this.btnWijzigen_VoorraadOverzicht.Name = "btnWijzigen_VoorraadOverzicht";
             this.btnWijzigen_VoorraadOverzicht.Size = new System.Drawing.Size(146, 40);
             this.btnWijzigen_VoorraadOverzicht.TabIndex = 21;
             this.btnWijzigen_VoorraadOverzicht.Text = "Wijziging opslaan";
-            this.btnWijzigen_VoorraadOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_VoorraadOverzicht.UseVisualStyleBackColor = false;
             this.btnWijzigen_VoorraadOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankVoorraadOverzicht_Click);
             // 
             // label15
@@ -1328,12 +1339,14 @@
             // 
             // btnToevoegen_DinerMenuOverzicht
             // 
+            this.btnToevoegen_DinerMenuOverzicht.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnToevoegen_DinerMenuOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnToevoegen_DinerMenuOverzicht.Location = new System.Drawing.Point(203, 599);
             this.btnToevoegen_DinerMenuOverzicht.Name = "btnToevoegen_DinerMenuOverzicht";
             this.btnToevoegen_DinerMenuOverzicht.Size = new System.Drawing.Size(186, 53);
             this.btnToevoegen_DinerMenuOverzicht.TabIndex = 54;
             this.btnToevoegen_DinerMenuOverzicht.Text = "Toevoegen";
-            this.btnToevoegen_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnToevoegen_DinerMenuOverzicht.UseVisualStyleBackColor = false;
             this.btnToevoegen_DinerMenuOverzicht.Click += new System.EventHandler(this.btnToevoegen_DinerMenuOverzicht_Click);
             // 
             // label36
@@ -1500,22 +1513,26 @@
             // 
             // btnVerwijderen_DinerMenuOverzicht
             // 
+            this.btnVerwijderen_DinerMenuOverzicht.BackColor = System.Drawing.Color.IndianRed;
+            this.btnVerwijderen_DinerMenuOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnVerwijderen_DinerMenuOverzicht.Location = new System.Drawing.Point(614, 599);
             this.btnVerwijderen_DinerMenuOverzicht.Name = "btnVerwijderen_DinerMenuOverzicht";
             this.btnVerwijderen_DinerMenuOverzicht.Size = new System.Drawing.Size(197, 55);
             this.btnVerwijderen_DinerMenuOverzicht.TabIndex = 35;
             this.btnVerwijderen_DinerMenuOverzicht.Text = "Verwijderen";
-            this.btnVerwijderen_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_DinerMenuOverzicht.UseVisualStyleBackColor = false;
             this.btnVerwijderen_DinerMenuOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DinerMenuOverzicht_Click);
             // 
             // btnOpslaan_DinerMenuOverzicht
             // 
+            this.btnOpslaan_DinerMenuOverzicht.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnOpslaan_DinerMenuOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnOpslaan_DinerMenuOverzicht.Location = new System.Drawing.Point(409, 599);
             this.btnOpslaan_DinerMenuOverzicht.Name = "btnOpslaan_DinerMenuOverzicht";
             this.btnOpslaan_DinerMenuOverzicht.Size = new System.Drawing.Size(188, 53);
             this.btnOpslaan_DinerMenuOverzicht.TabIndex = 34;
             this.btnOpslaan_DinerMenuOverzicht.Text = "Wijziging opslaan";
-            this.btnOpslaan_DinerMenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnOpslaan_DinerMenuOverzicht.UseVisualStyleBackColor = false;
             this.btnOpslaan_DinerMenuOverzicht.Click += new System.EventHandler(this.btnOpslaan_DinerMenuOverzicht_Click);
             // 
             // listView_DinerMenuOverzicht
@@ -1705,12 +1722,14 @@
             // 
             // btnToevoegen_MenuOverzicht
             // 
+            this.btnToevoegen_MenuOverzicht.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnToevoegen_MenuOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnToevoegen_MenuOverzicht.Location = new System.Drawing.Point(205, 581);
             this.btnToevoegen_MenuOverzicht.Name = "btnToevoegen_MenuOverzicht";
             this.btnToevoegen_MenuOverzicht.Size = new System.Drawing.Size(167, 55);
             this.btnToevoegen_MenuOverzicht.TabIndex = 54;
             this.btnToevoegen_MenuOverzicht.Text = "Toevoegen";
-            this.btnToevoegen_MenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnToevoegen_MenuOverzicht.UseVisualStyleBackColor = false;
             this.btnToevoegen_MenuOverzicht.Click += new System.EventHandler(this.btnToevoegen_DrankMenuOverzicht_Click);
             // 
             // label29
@@ -1867,22 +1886,26 @@
             // 
             // btnVerwijderen_MenuOverzicht
             // 
+            this.btnVerwijderen_MenuOverzicht.BackColor = System.Drawing.Color.IndianRed;
+            this.btnVerwijderen_MenuOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnVerwijderen_MenuOverzicht.Location = new System.Drawing.Point(627, 581);
             this.btnVerwijderen_MenuOverzicht.Name = "btnVerwijderen_MenuOverzicht";
             this.btnVerwijderen_MenuOverzicht.Size = new System.Drawing.Size(197, 55);
             this.btnVerwijderen_MenuOverzicht.TabIndex = 35;
             this.btnVerwijderen_MenuOverzicht.Text = "Verwijderen";
-            this.btnVerwijderen_MenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_MenuOverzicht.UseVisualStyleBackColor = false;
             this.btnVerwijderen_MenuOverzicht.Click += new System.EventHandler(this.btnVerwijderen_DrankMenuOverzicht_Click);
             // 
             // btnWijzigen_MenuOverzicht
             // 
+            this.btnWijzigen_MenuOverzicht.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnWijzigen_MenuOverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnWijzigen_MenuOverzicht.Location = new System.Drawing.Point(409, 581);
             this.btnWijzigen_MenuOverzicht.Name = "btnWijzigen_MenuOverzicht";
             this.btnWijzigen_MenuOverzicht.Size = new System.Drawing.Size(188, 55);
             this.btnWijzigen_MenuOverzicht.TabIndex = 34;
             this.btnWijzigen_MenuOverzicht.Text = "Wijziging opslaan";
-            this.btnWijzigen_MenuOverzicht.UseVisualStyleBackColor = true;
+            this.btnWijzigen_MenuOverzicht.UseVisualStyleBackColor = false;
             this.btnWijzigen_MenuOverzicht.Click += new System.EventHandler(this.btnWijzigen_DrankMenuOverzicht_Click);
             // 
             // lv_MenuOverzicht
@@ -2018,12 +2041,14 @@
             // 
             // btnToevoegen_Lunchmenuoverzicht
             // 
+            this.btnToevoegen_Lunchmenuoverzicht.BackColor = System.Drawing.Color.OliveDrab;
+            this.btnToevoegen_Lunchmenuoverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnToevoegen_Lunchmenuoverzicht.Location = new System.Drawing.Point(206, 606);
             this.btnToevoegen_Lunchmenuoverzicht.Name = "btnToevoegen_Lunchmenuoverzicht";
             this.btnToevoegen_Lunchmenuoverzicht.Size = new System.Drawing.Size(167, 55);
             this.btnToevoegen_Lunchmenuoverzicht.TabIndex = 54;
             this.btnToevoegen_Lunchmenuoverzicht.Text = "Toevoegen";
-            this.btnToevoegen_Lunchmenuoverzicht.UseVisualStyleBackColor = true;
+            this.btnToevoegen_Lunchmenuoverzicht.UseVisualStyleBackColor = false;
             this.btnToevoegen_Lunchmenuoverzicht.Click += new System.EventHandler(this.btnToevoegen_Lunchmenuoverzicht_Click);
             // 
             // label20
@@ -2180,22 +2205,26 @@
             // 
             // btnVerwijderen_Lunchmenuoverzicht
             // 
+            this.btnVerwijderen_Lunchmenuoverzicht.BackColor = System.Drawing.Color.IndianRed;
+            this.btnVerwijderen_Lunchmenuoverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnVerwijderen_Lunchmenuoverzicht.Location = new System.Drawing.Point(627, 606);
             this.btnVerwijderen_Lunchmenuoverzicht.Name = "btnVerwijderen_Lunchmenuoverzicht";
             this.btnVerwijderen_Lunchmenuoverzicht.Size = new System.Drawing.Size(197, 55);
             this.btnVerwijderen_Lunchmenuoverzicht.TabIndex = 35;
             this.btnVerwijderen_Lunchmenuoverzicht.Text = "Verwijderen";
-            this.btnVerwijderen_Lunchmenuoverzicht.UseVisualStyleBackColor = true;
+            this.btnVerwijderen_Lunchmenuoverzicht.UseVisualStyleBackColor = false;
             this.btnVerwijderen_Lunchmenuoverzicht.Click += new System.EventHandler(this.btnVerwijderen_Lunchmenuoverzicht_Click);
             // 
             // btnOpslaan_Lunchmenuoverzicht
             // 
+            this.btnOpslaan_Lunchmenuoverzicht.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnOpslaan_Lunchmenuoverzicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnOpslaan_Lunchmenuoverzicht.Location = new System.Drawing.Point(409, 606);
             this.btnOpslaan_Lunchmenuoverzicht.Name = "btnOpslaan_Lunchmenuoverzicht";
             this.btnOpslaan_Lunchmenuoverzicht.Size = new System.Drawing.Size(188, 55);
             this.btnOpslaan_Lunchmenuoverzicht.TabIndex = 34;
             this.btnOpslaan_Lunchmenuoverzicht.Text = "Wijziging opslaan";
-            this.btnOpslaan_Lunchmenuoverzicht.UseVisualStyleBackColor = true;
+            this.btnOpslaan_Lunchmenuoverzicht.UseVisualStyleBackColor = false;
             this.btnOpslaan_Lunchmenuoverzicht.Click += new System.EventHandler(this.btnOpslaan_Lunchmenuoverzicht_Click);
             // 
             // listView_LunchMenuOverzicht_Kassa
@@ -2346,6 +2375,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
+            this.Controls.Add(this.pnl_MenuOverzicht);
+            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
             this.Controls.Add(this.pnl_KassaHoofdscherm);
             this.Controls.Add(this.pnl_KassaMenuoverzichtKeuze);
             this.Controls.Add(this.pnl_KassaVoorraadKeuze);
@@ -2354,9 +2386,6 @@
             this.Controls.Add(this.pnl_KassaKeuzeBestellingen);
             this.Controls.Add(this.pnl_KassaVoorraadoverzicht);
             this.Controls.Add(this.pnl_KassaLunchMenuoverizcht);
-            this.Controls.Add(this.pnl_KassaPersoneelsbeheer);
-            this.Controls.Add(this.pnl_MenuOverzicht);
-            this.Controls.Add(this.pnl_KassaDinerMenuoverzicht);
             this.Controls.Add(this.pnl_Inkomstenoverzicht);
             this.Name = "Kassa";
             this.Text = "Form1";
