@@ -40,14 +40,13 @@ namespace UI
         {
             BestellingPNL.Show();
             OverzichtPNL.Hide();
+            WijzigenPNL.Visible = false;
         }
         private void BTNBestellingVerwijderen_Click(object sender, EventArgs e)
         {
-
             if (MessageBox.Show("Weet je zeker dat je de bestelling wilt verwijderen?\n" +
                             "Bestelling en inhoud worden niet opgeslagen", "Bestelling verwijderen ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
                 int id = BestellingService.GetNieuuwsteID();
                 bestelling_MenuItemService.DeleteBestellingItem(id);
                 bestelling_MenuItemService.DeleteBestelling(id);
@@ -192,8 +191,10 @@ namespace UI
             TafelNummerPNL.Hide();
             BestellingPNL.Show();
             Date_Time(BestellingDateLBL, BestellingTimeLBL);
-
             Bestelling = BestellingService.Create_Bestelling(tafel);
+            LunchPNL.Refresh();
+            DrankPNL.Refresh();
+            DinerPNL.Refresh();
         }
         //Void voor alle plus knoppen 
         public void PlusClick(Label Plus)
@@ -215,7 +216,23 @@ namespace UI
         //Dit is om alle lijsten te vullen
         private void BTNBestellingPlaatsen_Click(object sender, EventArgs e)
         {
+            int ID = BestellingService.GetNieuuwsteID();
 
+            if (ListViewOverzicht.Items.Count > 0)
+            {
+                if (MessageBox.Show("", "Bestelling geplaatst", MessageBoxButtons.OK, MessageBoxIcon.None) == DialogResult.OK)
+                {
+                    string test = TXTOverzicht.Text;
+                    bestelling_MenuItemService.UpdateOpmerking(ID, test);
+                    OverzichtPNL.Hide();
+                    TafelNummerPNL.Visible = true;
+                    WijzigenPNL.Visible = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bestellinlijst is leeg", "Kan geen bestelling plaatsen !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void BestellingToevoegen1(ListView listview1, Label label1)
@@ -684,12 +701,12 @@ namespace UI
             if (MessageBox.Show("Weet je zeker dat je de bestelling wilt verwijderen?\n" +
                             "Bestelling en inhoud worden niet opgeslagen", "Bestelling verwijderen ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
                 int id = BestellingService.GetNieuuwsteID();
                 bestelling_MenuItemService.DeleteBestellingItem(id);
                 bestelling_MenuItemService.DeleteBestelling(id);
                 BestellingPNL.Hide();
                 TafelNummerPNL.Show();
+                WijzigenPNL.Visible = false;
             }
         }
 
@@ -697,6 +714,7 @@ namespace UI
         {
             TafelNummerPNL.Hide();
             TafelPNL.Show();
+            TafelStatus(); 
         }
 
 
@@ -832,12 +850,22 @@ namespace UI
 
         private void BTNWijzigingOplsaan_Click(object sender, EventArgs e)
         {
-
+            int aantal = int.Parse(ALBLWijzigen.Text);
+            ListViewItem item1 = ListViewOverzicht.SelectedItems[0];
+            int bestellingID = BestellingService.GetNieuuwsteID();
+            bestelling_MenuItemService.SetNewAantal(aantal, bestellingID, int.Parse(item1.Text));
+            ListViewOverzicht.Items.Clear();
+            GoToOverzicht();
+            ALBLWijzigen.Text = 0.ToString();
         }
 
         private void BTNItemVerwijderen_Click(object sender, EventArgs e)
         {
-
+            ListViewItem item1 = ListViewOverzicht.SelectedItems[0];
+            int bestellingID = BestellingService.GetNieuuwsteID();
+            bestelling_MenuItemService.DeleteMenuItem(bestellingID, int.Parse(item1.Text));
+            ListViewOverzicht.Items.Clear();
+            GoToOverzicht();
         }
 
 
@@ -969,6 +997,9 @@ namespace UI
             TafelPNL.Show();
         }
 
-
+        private void BTNaangepast_Click(object sender, EventArgs e)
+        {
+            WijzigenPNL.Visible = false;
+        }
     }
 }
