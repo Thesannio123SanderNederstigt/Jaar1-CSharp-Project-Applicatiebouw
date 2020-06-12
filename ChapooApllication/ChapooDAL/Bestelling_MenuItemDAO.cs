@@ -53,22 +53,25 @@ namespace ChapooDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-
-        public void Remove_MenuItem(int MenuItemID)
+        public void Remove_MenuItem(int bestellingID, int MenuItemID)
         {
-            string query = $"Delete From [Bestelling_MenuItem] Where [menuItemID] = '{MenuItemID}'";
+            string query = $"Delete From [Bestelling_MenuItem] Where [bestellingID] = '{bestellingID}' and [menuItemID] = '{MenuItemID}'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
+        public void Update_Voorraad(int Aantal, int MenuItemID)
+        {
+            string query = $"Update [MenuItem] set aantalvoorraad = aantalvoorraad - '{Aantal}' Where [ID] = '{MenuItemID}'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
 
-
-        public void Set_New_Aantal (int Aantal, int ID)
+        public void Set_New_Aantal (int Aantal, int bestellingID,int menuItemID)
         {
-            string query = $"Update [Bestelling_MenuItem] set aantal = '{Aantal}' Where [ID] = '{ID}'";
+            string query = $"Update [Bestelling_MenuItem] set aantal = '{Aantal}' Where [bestellingID] = '{bestellingID}' and [menuItemID] = '{menuItemID}'";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
-
 
         public void DeleteBestellingItem(int bestellingID)
         {
@@ -82,7 +85,12 @@ namespace ChapooDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             ExecuteEditQuery(query, sqlParameters);
         }
-
+        public void Update_Opmerking(int bestellingID, string opmerking)
+        {
+            string query = $"update Bestelling set opmerking = '{opmerking}' where ID = '{bestellingID}'";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            ExecuteEditQuery(query, sqlParameters);
+        }
 
         private List<Bestelling_MenuItem> ReadTablesTest(DataTable dataTable)
         {
@@ -93,7 +101,6 @@ namespace ChapooDAL
                 Bestelling_MenuItem bestelling_MenuItem = new Bestelling_MenuItem()
                 {
                     MenuItemID = (int)dr["menuItemID"],
-
                     Aantal = (int)dr["aantal"],
                     Omschrijving = (string)dr["omschrijving"]
 

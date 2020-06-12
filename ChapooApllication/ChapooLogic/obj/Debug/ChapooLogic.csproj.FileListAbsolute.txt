@@ -30,9 +30,6 @@ C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\Cha
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.dll
 C:\Users\Gillian\Documents\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.pdb
-<<<<<<< HEAD
-C:\Users\Nasra\OneDrive\Documenten\GitHub\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CoreCompileInputs.cache
-=======
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooLogic.pdb
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\bin\Debug\ChapooDAL.dll
@@ -44,4 +41,3 @@ D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwReposi
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.csproj.CopyComplete
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooLogic\obj\Debug\ChapooLogic.pdb
->>>>>>> e629fdf331b66a83cc98047b676f94f2b24f2af2
