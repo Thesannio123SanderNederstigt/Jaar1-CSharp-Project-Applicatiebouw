@@ -29,26 +29,35 @@ namespace UI
         public Rekening Rekening { get; set; }
 
         private Bestelling_MenuItemService bestelling_MenuItemService = new Bestelling_MenuItemService();
+        public Bediening()
+        {
+            InitializeComponent();
+        }
 
+        //om van de tafel terug te gaan
         private void OverzichtReturnBTN_Click(object sender, EventArgs e)
         {
             BestellingPNL.Show();
             OverzichtPNL.Hide();
+            WijzigenPNL.Visible = false;
         }
+
+        //om de gehele bestelling te verwijderen
         private void BTNBestellingVerwijderen_Click(object sender, EventArgs e)
         {
-
             if (MessageBox.Show("Weet je zeker dat je de bestelling wilt verwijderen?\n" +
                             "Bestelling en inhoud worden niet opgeslagen", "Bestelling verwijderen ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
                 int id = BestellingService.GetNieuuwsteID();
                 bestelling_MenuItemService.DeleteBestellingItem(id);
                 bestelling_MenuItemService.DeleteBestelling(id);
                 OverzichtPNL.Hide();
-                TafelNummerPNL.Show(); 
+                TafelNummerPNL.Show();
+                WijzigenPNL.Visible = false;
             }
         }
+
+        //Dit wordt gebruikt om af te mekden
         private void TafelEXITPNL_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Weet je zeker dat je wilt afmelden?", "Afmelden", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -57,24 +66,20 @@ namespace UI
                 login.Show();
                 this.Visible = false;
             }
-        }
+        }    
 
-        public Bediening()
-        {
-            InitializeComponent();
-        }
-
-
+        //om de dag en tijd op te vragen bij de verschillende panelen
         public void Date_Time(Label Date, Label Time)
         {
             Date.Text = DateTime.Now.ToShortDateString();
             Time.Text = DateTime.Now.ToShortTimeString();
         }
 
+        //voor de tafelknoppen
         private void Bediening_Load(object sender, EventArgs e)
-        {
-            ShowPanel("TafelPNL");
+        {   
             Date_Time(TafelDateLBL, TafelTimeLBL);
+            HidePanels();
             TafelPNL.Show();
             buttons = new List<Button>();
             buttons.Add(btnT1);
@@ -89,6 +94,7 @@ namespace UI
             buttons.Add(btnT10);
             TafelStatus();
         }
+        
         private void HidePanels()
         {
             DrankPNL.Hide();
@@ -102,32 +108,18 @@ namespace UI
             AfgerondPNL.Hide();
             AfrekenenPNL.Hide();
         }
-        private void ShowPanel(string PanelName)
-        {
-            HidePanels();
-            if (PanelName == "TafelPNL")
-            {
-                TafelPNL.Show();
-            }
-        }
-        
+
         private void BTNVoegToeL_Click(object sender, EventArgs e)
         {
-           
-           BestellingToevoegen1(ListViewLunchV, ALBLLunch);
-           
-
+            BestellingToevoegen1(ListViewLunchH, ALBLLunch);
         }
         private void BTNVoegToeDrank_Click(object sender, EventArgs e)
         {
             BestellingToevoegen1(ListViewDrankFris, ALBLDrank);
-           
-
         }
         private void BTNVoegToeDiner_Click(object sender, EventArgs e)
         {
             BestellingToevoegen1(ListViewDinerV, ALBLDiner);
-
         }
         public void VulListView(string MenuSoort, string Categorie, ListView ListViewNaam)
         {
@@ -143,6 +135,28 @@ namespace UI
                 List.SubItems.Add(M.aantalInVoorraad.ToString());
 
                 ListViewNaam.Items.Add(List);
+            }
+        }
+        private void BTNBestellingPlaatsen_Click(object sender, EventArgs e)
+        {
+            int ID = BestellingService.GetNieuuwsteID();
+
+            if (ListViewOverzicht.Items.Count > 0)
+            {
+                if (MessageBox.Show("", "Bestelling geplaatst", MessageBoxButtons.OK, MessageBoxIcon.None) == DialogResult.OK)
+                {
+                    string test = TXTOverzicht.Text;
+                    bestelling_MenuItemService.UpdateOpmerking(ID, test);
+                    bestelling_MenuItemService.UpdateVoorraad();
+                    OverzichtPNL.Hide();
+                    TafelNummerPNL.Visible = true;
+                    WijzigenPNL.Visible = false;
+                    TXTOverzicht.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bestellinlijst is leeg", "Kan geen bestelling plaatsen !", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -164,11 +178,11 @@ namespace UI
         }
 
         //Om de status van een tafel te krijgen
-        private void TafelStatus() //om de tafel status terug te krijgen
+        private void TafelStatus()
         {
             tafels = TafelService.TafelBeschikbaar();
 
-            for (int i = 0; i < tafels.Count -1; i++)
+            for (int i = 0; i < tafels.Count; i++)
             {
                 if (tafels[i].TafelStatus > 0)
                 {
@@ -180,15 +194,20 @@ namespace UI
                 }
             }
         }
-        //om een bestelling te plaatsen
+
+        //om een bestelling te creëren
         private void BTNBestellen_Click(object sender, EventArgs e)
-        {           
+        {
             TafelNummerPNL.Hide();
             BestellingPNL.Show();
             Date_Time(BestellingDateLBL, BestellingTimeLBL);
-
             Bestelling = BestellingService.Create_Bestelling(tafel);
+            TafelNummerPNL.Show();
+            LunchPNL.Refresh();
+            DrankPNL.Refresh();
+            DinerPNL.Refresh();
         }
+
         //Void voor alle plus knoppen 
         public void PlusClick(Label Plus)
         {
@@ -196,6 +215,7 @@ namespace UI
             AantalLBL++;
             Plus.Text = AantalLBL.ToString();
         }
+
         //void voor alle min knoppen
         public void MinClick(Label Min)
         {
@@ -206,14 +226,10 @@ namespace UI
                 Min.Text = AantalLBL.ToString();
             }
         }
-        //Dit is om alle lijsten te vullen
-        private void BTNBestellingPlaatsen_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void BestellingToevoegen1(ListView listview1, Label label1)
-        {
+        
+         private void BestellingToevoegen1(ListView listview1, Label label1)
+         {
             ListViewItem item1 = listview1.SelectedItems [0];
             ChapooModel.MenuItem menuItem = (ChapooModel.MenuItem)item1.Tag;
 
@@ -228,7 +244,7 @@ namespace UI
 
             if (int.Parse(label1.Text) > 0)//hoger dan 1
             {
-                if (menuItems[Item.Aantal].aantalInVoorraad >= Item.Aantal)
+                if (menuItem.aantalInVoorraad >= Item.Aantal)
                 {
                     bestelling_MenuItemService.TESTCreateBestellingMenuItem(menuItem.ID, BestellingService.GetNieuuwsteID(), int.Parse(label1.Text));
                     MessageBox.Show("Item(s) toegevoegd aan bestelling !"); 
@@ -243,7 +259,7 @@ namespace UI
                 MessageBox.Show("Aantal is niet hoger dan 0 !!!");
             }
             label1.Text = 0.ToString();
-        }
+         }
 
         //Dit is om alle menu balken te openen
         public void TimerClick(Timer TimerNaam, Button BTNNaam, Panel DropDownNaam)
@@ -299,9 +315,7 @@ namespace UI
             TafelNummerPNL.Hide();
             BestellingPNL.Hide();
             Date_Time(OverzichtDateLBL, OverzichtTimeLBL);
-            
-
-
+            GoToOverzicht();
         }
         private void timerDN_Tick(object sender, EventArgs e) // NAGERECHT DINER 
         {
@@ -362,10 +376,6 @@ namespace UI
             timerLH.Start();
             VulListView("Lunch", "Hoofdgerecht", ListViewLunchH);
             Button btnsender = (Button)sender;
-            //if (btnsender == BTNVoegToeL)
-            //{
-            //    BestellingToevoegen2(ALBLLunch);
-            //}
         }
         //
         private void timerLN_Tick(object sender, EventArgs e) //LUNCH NAGERECHT
@@ -377,10 +387,7 @@ namespace UI
             timerLN.Start();
             VulListView("Lunch", "Nagerecht", ListViewLunchN);
             Button btnsender = (Button)sender;
-            //if (btnsender == BTNVoegToeL)
-            //{
-            //    BestellingToevoegen1(ALBLLunch);
-            //}
+
         }
         //
         private void timerDFris_Tick(object sender, EventArgs e) // FRISDRANK DRANK
@@ -430,7 +437,7 @@ namespace UI
         private void DrankTheeBTN_Click(object sender, EventArgs e)
         {
             timerDThee.Start();
-            VulListView("Dranken", "Thee", ListViewDrankThee);
+            VulListView("Dranken", "Thee", ListViewDrankThee); 
         }
         // Alle plus en min knoppen voor de Lunch, Diner, Drank, Wijzingen panels
         private void BTNPlusDrank_Click(object sender, EventArgs e)
@@ -610,11 +617,9 @@ namespace UI
 
         }
 
-        
-
         private void BTNItemAanpassen_Click(object sender, EventArgs e)
         {
-            WijzigenPNL.Visible = true;
+            WijzigenPNL.Show();
             OverzichtPNL.SendToBack();   
         }
 
@@ -654,7 +659,8 @@ namespace UI
         {
             DrankPNL.Hide();
             OverzichtPNL.Show();
-            
+            GoToOverzicht();
+
         }
         private void DinerTerugLBL_Click(object sender, EventArgs e)
         {
@@ -673,25 +679,6 @@ namespace UI
             BestellingPNL.Show();
         }
 
-        private void BestellingTerugBTN_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Weet je zeker dat je de bestelling wilt verwijderen?\n" +
-                            "Bestelling en inhoud worden niet opgeslagen", "Bestelling verwijderen ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
-                int id = BestellingService.GetNieuuwsteID();
-                bestelling_MenuItemService.DeleteBestellingItem(id);
-                bestelling_MenuItemService.DeleteBestelling(id);
-                BestellingPNL.Hide();
-                TafelNummerPNL.Show();
-            }
-        }
-
-        private void TafelNummerTerugBT_Click(object sender, EventArgs e)
-        {
-            TafelNummerPNL.Hide();
-            TafelPNL.Show();
-        }
 
 
         ////////
@@ -710,14 +697,6 @@ namespace UI
             TafelNummerPNL.Hide();
         }
 
-        private void BTNWijzigingOplsaan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BTNItemVerwijderen_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

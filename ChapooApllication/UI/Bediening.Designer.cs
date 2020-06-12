@@ -158,10 +158,8 @@
             this.BTNItemAanpassen = new System.Windows.Forms.Button();
             this.BTNBestellingPlaatsen = new System.Windows.Forms.Button();
             this.BTNBestellingVerwijderen = new System.Windows.Forms.Button();
-            this.Text = new System.Windows.Forms.RichTextBox();
+            this.TXTOverzicht = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.ListViewOverzicht = new System.Windows.Forms.ListView();
             this.BOID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BONaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -179,6 +177,7 @@
             this.timerDT = new System.Windows.Forms.Timer(this.components);
             this.timerDH = new System.Windows.Forms.Timer(this.components);
             this.WijzigenPNL = new System.Windows.Forms.Panel();
+            this.BTNaangepast = new System.Windows.Forms.Button();
             this.BTNWijzigingOplsaan = new System.Windows.Forms.Button();
             this.BTNItemVerwijderen = new System.Windows.Forms.Button();
             this.ALBLWijzigen = new System.Windows.Forms.Label();
@@ -1646,10 +1645,8 @@
             this.OverzichtPNL.Controls.Add(this.BTNItemAanpassen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingPlaatsen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingVerwijderen);
-            this.OverzichtPNL.Controls.Add(this.Text);
+            this.OverzichtPNL.Controls.Add(this.TXTOverzicht);
             this.OverzichtPNL.Controls.Add(this.label11);
-            this.OverzichtPNL.Controls.Add(this.label10);
-            this.OverzichtPNL.Controls.Add(this.label9);
             this.OverzichtPNL.Controls.Add(this.ListViewOverzicht);
             this.OverzichtPNL.Controls.Add(this.panel20);
             this.OverzichtPNL.Controls.Add(this.Overzicht_TopPNL);
@@ -1664,7 +1661,7 @@
             // 
             this.BTNItemAanpassen.BackColor = System.Drawing.Color.Moccasin;
             this.BTNItemAanpassen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNItemAanpassen.Location = new System.Drawing.Point(254, 876);
+            this.BTNItemAanpassen.Location = new System.Drawing.Point(250, 942);
             this.BTNItemAanpassen.Name = "BTNItemAanpassen";
             this.BTNItemAanpassen.Size = new System.Drawing.Size(198, 65);
             this.BTNItemAanpassen.TabIndex = 31;
@@ -1676,7 +1673,7 @@
             // 
             this.BTNBestellingPlaatsen.BackColor = System.Drawing.Color.PaleGreen;
             this.BTNBestellingPlaatsen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNBestellingPlaatsen.Location = new System.Drawing.Point(461, 876);
+            this.BTNBestellingPlaatsen.Location = new System.Drawing.Point(457, 942);
             this.BTNBestellingPlaatsen.Name = "BTNBestellingPlaatsen";
             this.BTNBestellingPlaatsen.Size = new System.Drawing.Size(214, 65);
             this.BTNBestellingPlaatsen.TabIndex = 30;
@@ -1688,7 +1685,7 @@
             // 
             this.BTNBestellingVerwijderen.BackColor = System.Drawing.Color.Salmon;
             this.BTNBestellingVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNBestellingVerwijderen.Location = new System.Drawing.Point(50, 876);
+            this.BTNBestellingVerwijderen.Location = new System.Drawing.Point(46, 942);
             this.BTNBestellingVerwijderen.Name = "BTNBestellingVerwijderen";
             this.BTNBestellingVerwijderen.Size = new System.Drawing.Size(198, 65);
             this.BTNBestellingVerwijderen.TabIndex = 29;
@@ -1696,45 +1693,24 @@
             this.BTNBestellingVerwijderen.UseVisualStyleBackColor = false;
             this.BTNBestellingVerwijderen.Click += new System.EventHandler(this.BTNBestellingVerwijderen_Click);
             // 
-            // Text
+            // TXTOverzicht
             // 
-            this.Text.Location = new System.Drawing.Point(50, 672);
-            this.Text.Name = "Text";
-            this.Text.Size = new System.Drawing.Size(625, 169);
-            this.Text.TabIndex = 28;
-            this.Text.Text = "";
+            this.TXTOverzicht.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.TXTOverzicht.Location = new System.Drawing.Point(42, 779);
+            this.TXTOverzicht.Name = "TXTOverzicht";
+            this.TXTOverzicht.Size = new System.Drawing.Size(625, 140);
+            this.TXTOverzicht.TabIndex = 28;
+            this.TXTOverzicht.Text = "";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label11.Location = new System.Drawing.Point(52, 633);
+            this.label11.Location = new System.Drawing.Point(41, 737);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(185, 36);
             this.label11.TabIndex = 27;
             this.label11.Text = "Opmerkingen:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label10.Location = new System.Drawing.Point(559, 551);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 36);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "0";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label9.Location = new System.Drawing.Point(52, 551);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 36);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Totaal:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // ListViewOverzicht
             // 
@@ -1747,7 +1723,7 @@
             this.ListViewOverzicht.HideSelection = false;
             this.ListViewOverzicht.Location = new System.Drawing.Point(48, 209);
             this.ListViewOverzicht.Name = "ListViewOverzicht";
-            this.ListViewOverzicht.Size = new System.Drawing.Size(625, 329);
+            this.ListViewOverzicht.Size = new System.Drawing.Size(625, 338);
             this.ListViewOverzicht.TabIndex = 24;
             this.ListViewOverzicht.UseCompatibleStateImageBehavior = false;
             this.ListViewOverzicht.View = System.Windows.Forms.View.Details;
@@ -1859,39 +1835,52 @@
             // 
             // WijzigenPNL
             // 
-            this.WijzigenPNL.BackColor = System.Drawing.Color.Gainsboro;
+            this.WijzigenPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.WijzigenPNL.Controls.Add(this.BTNaangepast);
             this.WijzigenPNL.Controls.Add(this.BTNWijzigingOplsaan);
             this.WijzigenPNL.Controls.Add(this.BTNItemVerwijderen);
             this.WijzigenPNL.Controls.Add(this.ALBLWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNMinWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNPlusWijzigen);
-            this.WijzigenPNL.Location = new System.Drawing.Point(49, 659);
+            this.WijzigenPNL.Location = new System.Drawing.Point(47, 559);
             this.WijzigenPNL.Name = "WijzigenPNL";
-            this.WijzigenPNL.Size = new System.Drawing.Size(625, 309);
+            this.WijzigenPNL.Size = new System.Drawing.Size(625, 175);
             this.WijzigenPNL.TabIndex = 31;
             this.WijzigenPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
+            // BTNaangepast
+            // 
+            this.BTNaangepast.BackColor = System.Drawing.Color.LightYellow;
+            this.BTNaangepast.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
+            this.BTNaangepast.Location = new System.Drawing.Point(6, 9);
+            this.BTNaangepast.Name = "BTNaangepast";
+            this.BTNaangepast.Size = new System.Drawing.Size(138, 63);
+            this.BTNaangepast.TabIndex = 41;
+            this.BTNaangepast.Text = "klaar met aanpassingen";
+            this.BTNaangepast.UseVisualStyleBackColor = false;
+            this.BTNaangepast.Click += new System.EventHandler(this.BTNaangepast_Click);
+            // 
             // BTNWijzigingOplsaan
             // 
-            this.BTNWijzigingOplsaan.BackColor = System.Drawing.Color.PaleGreen;
-            this.BTNWijzigingOplsaan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(307, 211);
+            this.BTNWijzigingOplsaan.BackColor = System.Drawing.Color.Moccasin;
+            this.BTNWijzigingOplsaan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
+            this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(410, 114);
             this.BTNWijzigingOplsaan.Name = "BTNWijzigingOplsaan";
-            this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(317, 65);
+            this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(215, 53);
             this.BTNWijzigingOplsaan.TabIndex = 44;
-            this.BTNWijzigingOplsaan.Text = "Wijziging Opslaan";
+            this.BTNWijzigingOplsaan.Text = "Aantal wijzigen";
             this.BTNWijzigingOplsaan.UseVisualStyleBackColor = false;
             this.BTNWijzigingOplsaan.Click += new System.EventHandler(this.BTNWijzigingOplsaan_Click);
             // 
             // BTNItemVerwijderen
             // 
             this.BTNItemVerwijderen.BackColor = System.Drawing.Color.Salmon;
-            this.BTNItemVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.BTNItemVerwijderen.Location = new System.Drawing.Point(-1, 211);
+            this.BTNItemVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
+            this.BTNItemVerwijderen.Location = new System.Drawing.Point(0, 114);
             this.BTNItemVerwijderen.Name = "BTNItemVerwijderen";
-            this.BTNItemVerwijderen.Size = new System.Drawing.Size(302, 65);
+            this.BTNItemVerwijderen.Size = new System.Drawing.Size(197, 53);
             this.BTNItemVerwijderen.TabIndex = 43;
-            this.BTNItemVerwijderen.Text = "Item Verwijderen";
+            this.BTNItemVerwijderen.Text = "Item verwijderen";
             this.BTNItemVerwijderen.UseVisualStyleBackColor = false;
             this.BTNItemVerwijderen.Click += new System.EventHandler(this.BTNItemVerwijderen_Click);
             // 
@@ -1899,7 +1888,7 @@
             // 
             this.ALBLWijzigen.AutoSize = true;
             this.ALBLWijzigen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.ALBLWijzigen.Location = new System.Drawing.Point(494, 91);
+            this.ALBLWijzigen.Location = new System.Drawing.Point(292, 49);
             this.ALBLWijzigen.Name = "ALBLWijzigen";
             this.ALBLWijzigen.Size = new System.Drawing.Size(33, 36);
             this.ALBLWijzigen.TabIndex = 40;
@@ -1908,9 +1897,9 @@
             // BTNMinWijzigen
             // 
             this.BTNMinWijzigen.BackColor = System.Drawing.Color.Salmon;
-            this.BTNMinWijzigen.Location = new System.Drawing.Point(544, 74);
+            this.BTNMinWijzigen.Location = new System.Drawing.Point(344, 30);
             this.BTNMinWijzigen.Name = "BTNMinWijzigen";
-            this.BTNMinWijzigen.Size = new System.Drawing.Size(75, 64);
+            this.BTNMinWijzigen.Size = new System.Drawing.Size(64, 64);
             this.BTNMinWijzigen.TabIndex = 42;
             this.BTNMinWijzigen.Text = "Min";
             this.BTNMinWijzigen.UseVisualStyleBackColor = false;
@@ -1919,9 +1908,9 @@
             // BTNPlusWijzigen
             // 
             this.BTNPlusWijzigen.BackColor = System.Drawing.Color.LightGreen;
-            this.BTNPlusWijzigen.Location = new System.Drawing.Point(401, 74);
+            this.BTNPlusWijzigen.Location = new System.Drawing.Point(201, 30);
             this.BTNPlusWijzigen.Name = "BTNPlusWijzigen";
-            this.BTNPlusWijzigen.Size = new System.Drawing.Size(75, 64);
+            this.BTNPlusWijzigen.Size = new System.Drawing.Size(64, 64);
             this.BTNPlusWijzigen.TabIndex = 41;
             this.BTNPlusWijzigen.Text = "Plus";
             this.BTNPlusWijzigen.UseVisualStyleBackColor = false;
@@ -2754,12 +2743,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(726, 1047);
+            this.ClientSize = new System.Drawing.Size(724, 1047);
+            this.Controls.Add(this.WijzigenPNL);
+            this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.BestellingPNL);
             this.Controls.Add(this.DrankPNL);
             this.Controls.Add(this.DinerPNL);
-            this.Controls.Add(this.WijzigenPNL);
-            this.Controls.Add(this.BestellingPNL);
-            this.Controls.Add(this.OverzichtPNL);
             this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.TafelPNL);
             this.Controls.Add(this.LunchPNL);
@@ -2921,13 +2910,11 @@
         private System.Windows.Forms.ListView ListViewDrankWijn;
         private System.Windows.Forms.Button DrankWijnBTN;
         private System.Windows.Forms.Panel OverzichtPNL;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListView ListViewOverzicht;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox Text;
+        private System.Windows.Forms.RichTextBox TXTOverzicht;
         private System.Windows.Forms.Button BTNItemAanpassen;
         private System.Windows.Forms.Button BTNBestellingPlaatsen;
         private System.Windows.Forms.Button BTNBestellingVerwijderen;
@@ -3090,5 +3077,6 @@
         private System.Windows.Forms.ListView ListViewRekening;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BTNaangepast;
     }
 }

@@ -73,22 +73,10 @@ namespace ChapooLogic
             //}
 
         }
-        public void DeleteBestellingMenuItem(int bestelling_MenuItem)
+
+        public void SetNewAantal (int ID, int aantal, int menuItemID)
         {
-            Bestelling_MenuItem_db.Remove_Bestelling_MenuItem(bestelling_MenuItem);
-            //try
-            //{
-            //    Bestelling_MenuItem_db.Remove_Bestelling_MenuItem(bestelling_MenuItem);
-            //    return "Bestelling_MenuItem succesvol verwijderd!";
-            //}
-            //catch(Exception e)
-            //{
-            //    return e.ToString();
-            //}
-        }
-        public void SetNewAantal (int ID, int aantal)
-        {
-            Bestelling_MenuItem_db.Set_New_Aantal(ID, aantal);
+            Bestelling_MenuItem_db.Set_New_Aantal(ID, aantal, menuItemID);
             //try
             //{
             //    Bestelling_MenuItem_db.Set_New_Aantal(ID, aantal);
@@ -100,9 +88,9 @@ namespace ChapooLogic
             //}
 
         }
-        public void DeleteMenuItem(int MenuItemID)
+        public void DeleteMenuItem(int bestellingID, int MenuItemID)
         {
-            Bestelling_MenuItem_db.Remove_MenuItem(MenuItemID);
+            Bestelling_MenuItem_db.Remove_MenuItem(bestellingID,MenuItemID);
             //try
             //{
             //    Bestelling_MenuItem_db.Remove_MenuItem(MenuItemID);
@@ -134,6 +122,14 @@ namespace ChapooLogic
         public void DeleteBestellingItem(int bestellingID)
         {
             Bestelling_MenuItem_db.DeleteBestellingItem(bestellingID);
+        }
+        public void UpdateOpmerking(int id, string opmerking)
+        {
+            Bestelling_MenuItem_db.Update_Opmerking(id, opmerking);
+        }
+        public void UpdateVoorraad(int Aantal, int MenuItemID)
+        {
+            Bestelling_MenuItem_db.Update_Voorraad(Aantal, MenuItemID);
         }
     }
 }
