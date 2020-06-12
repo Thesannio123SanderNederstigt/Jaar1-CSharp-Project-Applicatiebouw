@@ -151,11 +151,11 @@ namespace ChapooLogic
             }
         }
 
-        public string UpdateBestellingMenuItems(int BestellingID)
+        public string UpdateBestellingMenuItems(int BestellingID, int minRange, int maxRange)
         {
             try
             {
-                Bestelling_db.UpdateBestellingMenuItems(BestellingID);
+                Bestelling_db.UpdateBestellingMenuItems(BestellingID, minRange, maxRange);
                 return "Menu Bestellingitem succesvol bijgewerkt!";
             }
             catch (Exception e)
@@ -164,11 +164,11 @@ namespace ChapooLogic
             }
         }
 
-        public string UpdateBestelling(int BestellingID)
+        public string UpdateBestelling(int BestellingID, int minRange, int maxRange)
         {
             try
             {
-                Bestelling_db.UpdateBestelling(BestellingID);
+                Bestelling_db.UpdateBestelling(BestellingID, minRange, maxRange);
                 return "Bestelling status succesvol gewijzigd!";
             }
             catch (Exception e)
@@ -177,11 +177,11 @@ namespace ChapooLogic
             }
         }
 
-        public string DeleteBestelling(int BestellingID)
+        public string DeleteBestelling(int BestellingID, int minRange, int maxRange)
         {
             try
             {
-                Bestelling_db.DeleteBestelling(BestellingID);
+                Bestelling_db.DeleteBestelling(BestellingID, minRange, maxRange);
                 return "Bestelling succesvol verwijderd!";
             }
             catch (Exception e)

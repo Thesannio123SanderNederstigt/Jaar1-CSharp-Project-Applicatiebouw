@@ -159,19 +159,23 @@ namespace ChapooDAL
             return "Menu Bestellingitem succesvol bijgewerkt!";
         }
 
-        public string UpdateBestellingMenuItems(int BestellingID)
+        public string UpdateBestellingMenuItems(int BestellingID, int minRange, int maxRange)
         {
-            string query = "UPDATE Bestelling_MenuItem SET [status] = 1 WHERE bestellingID = @id";
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", BestellingID) };
+            string query = "UPDATE Bestelling_MenuItem SET [status] = 1 from Bestelling_MenuItem join Bestelling on Bestelling_MenuItem.bestellingID = Bestelling.ID " +
+                "join MenuItem on Bestelling_MenuItem.menuItemID = MenuItem.ID WHERE Bestelling.ID = @id and MenuItem.ID between @minRange and @maxRange";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", BestellingID),
+                new SqlParameter("@minRange", minRange), new SqlParameter("@maxRange", maxRange)};
             ExecuteEditQuery(query, sqlParameters);
             return "Menu Bestellingitem succesvol bijgewerkt!";
         }
 
         //bijwerken van een gehele bestelling
-        public string UpdateBestelling(int BestellingID)
+        public string UpdateBestelling(int BestellingID, int minRange, int maxRange)
         {
-            string query = "UPDATE Bestelling SET [status] = 1 WHERE ID = @id";
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", BestellingID) };
+            string query = "update Bestelling set [status] = 1 from Bestelling_MenuItem join Bestelling on Bestelling.ID = Bestelling_MenuItem.bestellingID " +
+                "join MenuItem on Bestelling_MenuItem.menuItemID = MenuItem.ID where Bestelling_MenuItem.bestellingID = @id and MenuItem.ID between @minRange and @maxRange";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@id", BestellingID), new SqlParameter("@minRange", minRange),
+            new SqlParameter("@maxRange", maxRange)};
             ExecuteEditQuery(query, sqlParameters);
             return "Bestelling status succesvol gewijzigd!";
         }
@@ -202,10 +206,13 @@ namespace ChapooDAL
             return bestelling;
         }
 
-        public string DeleteBestelling(int BestellingID)
+
+        public string DeleteBestelling(int BestellingID, int minRange, int maxRange)
         {
-            string query = "DELETE FROM Bestelling WHERE ID = @Id";
-            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", BestellingID) };
+            string query = "DELETE Bestelling from Bestelling_MenuItem JOIN Bestelling on Bestelling.ID = Bestelling_MenuItem.bestellingID join MenuItem " +
+                "on MenuItem.ID = Bestelling_MenuItem.menuItemID where Bestelling.ID = @Id AND MenuItem.Id BETWEEN @minRange AND @maxRange";
+            SqlParameter[] sqlParameters = new SqlParameter[] { new SqlParameter("@Id", BestellingID), new SqlParameter("@minRange", minRange),
+            new SqlParameter("@maxRange", maxRange)};
             ExecuteEditQuery(query, sqlParameters);
             return "Bestelling succesvol verwijderd!";
         }
