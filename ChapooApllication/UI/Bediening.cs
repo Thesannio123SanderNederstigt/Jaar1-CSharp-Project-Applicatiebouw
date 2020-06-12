@@ -223,10 +223,9 @@ namespace UI
         //Dit is om alle lijsten te vullen
         private void BTNBestellingPlaatsen_Click(object sender, EventArgs e)
         {
-
             int ID = BestellingService.GetNieuuwsteID();
 
-           // bestelling_MenuItemService.UpdateVoorraad();
+           //bestelling_MenuItemService.UpdateVoorraad();
 
             if (ListViewOverzicht.Items.Count > 0)
             {
@@ -237,6 +236,7 @@ namespace UI
                     OverzichtPNL.Hide();
                     TafelPNL.Visible = true;
                     WijzigenPNL.Visible = false;
+                    TafelStatus();
                 }
             }
             else
