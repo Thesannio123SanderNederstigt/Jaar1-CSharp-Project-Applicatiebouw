@@ -102,7 +102,7 @@ namespace ChapooDAL
 
         public void AddMenuItem(string omschrijving, int inVoorraad, int BTW, string categorie, string menuSoort, float prijs)
         {
-            string query = "INSERT INTO menuItem(omschrijving, aantalvoorraad, btw, categorie, menukaartsoort, prijs) VALUES(@ID,@omschrijving,@inVoorraad,@BTW,@categorie,@menuSoort,@prijs)";
+            string query = "INSERT INTO menuItem(omschrijving, aantalvoorraad, btw, categorie, menukaartsoort, prijs) VALUES(@omschrijving,@inVoorraad,@BTW,@categorie,@menuSoort,@prijs)";
             SqlParameter[] sqlParameters = new SqlParameter[] {new SqlParameter("@omschrijving", omschrijving),
             new SqlParameter("@inVoorraad", inVoorraad),  new SqlParameter("@BTW", BTW),
             new SqlParameter("@categorie", categorie),  new SqlParameter("@menuSoort", menuSoort),  new SqlParameter("@prijs", prijs) };

@@ -25,7 +25,8 @@ namespace UI
     public enum ViewKeuze
     {
         Voorraad,
-        MenuKaart
+        MenuKaart,
+        Personeelsbeheer
     }
     
     public enum ButtonActie
@@ -44,6 +45,7 @@ namespace UI
         private static ViewKeuze view;
         private static ButtonActie actie;
         private static string Message;
+        MedewerkerService medewerkerService = new MedewerkerService();
 
         public void HidePanels()
         {
@@ -61,6 +63,11 @@ namespace UI
             pnl_KassaVoorraadoverzichtGerecht.Hide();
         }
 
+<<<<<<< HEAD
+
+        
+        public void RefreshPersoneelsbeheer(MedewerkerService medewerkerService)
+=======
         public void RefreshText()
         {
             foreach(Control panel in this.Controls)
@@ -76,14 +83,21 @@ namespace UI
         }
 
         public void RefreshVoorraadGerecht(MenuItemService menuItemService)
+>>>>>>> e629fdf331b66a83cc98047b676f94f2b24f2af2
         {
-            List<MenuItem> menuItemList = menuItemService.Get_Gerechten_MenuItems();
-            foreach (MenuItem menuItem in menuItemList)
+            HidePanels();
+            listView_Personeelsbeheer.Items.Clear();
+            List<Medewerker> medewerkerList = medewerkerService.GetMedewerkers();
+            foreach (Medewerker medewerker in medewerkerList)
             {
-                ListViewItem listViewItem = new ListViewItem(menuItem.omschrijving);
-                listViewItem.SubItems.Add(menuItem.aantalInVoorraad.ToString());
-                listview_GerechtVoorraadOverzicht.Items.Add(listViewItem);
+                ListViewItem listviewItem = new ListViewItem(medewerker.ID.ToString());
+                listviewItem.SubItems.Add(medewerker.voornaam);
+                listviewItem.SubItems.Add(medewerker.achternaam);
+                listviewItem.SubItems.Add(medewerker.type);
+                listviewItem.SubItems.Add(medewerker.inlogcode.ToString());
+                listView_Personeelsbeheer.Items.Add(listviewItem);
             }
+            pnl_KassaPersoneelsbeheer.Show();
         }
         public Kassa()
         {
@@ -105,6 +119,11 @@ namespace UI
                 HidePanels();
                 pnl_KassaHoofdscherm.Show();
             }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> e629fdf331b66a83cc98047b676f94f2b24f2af2
         }
         private void pictureBx_Uitloggen_Kassa_Click(object sender, EventArgs e)
         {
@@ -146,7 +165,6 @@ namespace UI
         {
             HidePanels();
             listView_Personeelsbeheer.Items.Clear();
-            MedewerkerService medewerkerService = new MedewerkerService();
             List<Medewerker> medewerkerList = medewerkerService.GetMedewerkers();
             foreach (Medewerker medewerker in medewerkerList)
             {
@@ -158,6 +176,9 @@ namespace UI
                 listView_Personeelsbeheer.Items.Add(listviewItem);
             }        
             pnl_KassaPersoneelsbeheer.Show();
+
+
+
         }
 
         private void btn_BestellingenHoofdscherm_Kassa_Click(object sender, EventArgs e)
@@ -171,7 +192,8 @@ namespace UI
         {
             menu = MenuKeuze.Drank;
             view = ViewKeuze.MenuKaart;
-            lbl_Overzicht.Text = "Drank Overzicht";
+            //lbl_Overzicht.Text = "Drank Overzicht";
+            txtBoxMenuoverzicht.Text = "Drank Overzicht";
             HidePanels();
             pnl_MenuOverzicht.Show();
             lv_MenuOverzicht.Items.Clear();
@@ -182,7 +204,9 @@ namespace UI
         {
             menu = MenuKeuze.Lunch;
             view = ViewKeuze.MenuKaart;
-            lbl_Overzicht.Text = "Lunch Overzicht";
+            //lbl_Overzicht.Text = "Lunch Overzicht";
+            txtBoxMenuoverzicht.Text = "Lunch Overzicht";
+
             HidePanels();
             pnl_MenuOverzicht.Show();
             lv_MenuOverzicht.Items.Clear();
@@ -193,7 +217,9 @@ namespace UI
         {
             menu = MenuKeuze.Diner;
             view = ViewKeuze.MenuKaart;
-            lbl_Overzicht.Text = "Diner Overzicht";
+            //lbl_Overzicht.Text = "Diner Overzicht";
+            txtBoxMenuoverzicht.Text = "Diner Overzicht";
+
             HidePanels();
             pnl_MenuOverzicht.Show();
             lv_MenuOverzicht.Items.Clear();
@@ -267,6 +293,7 @@ namespace UI
             HidePanels();
             view = ViewKeuze.Voorraad;
             menu = MenuKeuze.Drank;
+            txtBoxVoorraadoverzicht.Text = "Drankvoorraad overzicht";
             listView_VoorraadOverzicht.Items.Clear();
             listView_VoorraadOverzicht.Show();
             menuItemFiller();
@@ -278,6 +305,7 @@ namespace UI
             HidePanels();
             view = ViewKeuze.Voorraad;
             menu = MenuKeuze.Gerechten;
+            txtBoxVoorraadoverzicht.Text = "Gerechtvoorraad overzicht";
             listView_VoorraadOverzicht.Items.Clear();
             menuItemFiller();
             pnl_KassaVoorraadoverzicht.Show();
@@ -487,7 +515,9 @@ namespace UI
         {
             actie = ButtonActie.Verwijderen;
             Panel panelPersoneel = pnl_KassaPersoneelsbeheer;
+            
             ButtonHelper(panelPersoneel);
+            RefreshPersoneelsbeheer(medewerkerService);
             panelPersoneel.Show();
         }
         // button om te wijzigen
@@ -496,6 +526,7 @@ namespace UI
             actie = ButtonActie.Wijzigen;
             Panel panelPersoneel = pnl_KassaPersoneelsbeheer;
             ButtonHelper(panelPersoneel);
+            RefreshPersoneelsbeheer(medewerkerService);
             panelPersoneel.Show();
         }
 
@@ -505,7 +536,9 @@ namespace UI
             //listView_Personeelsbeheer.Items.Clear();
             Panel panelPersoneel = pnl_KassaPersoneelsbeheer;
             ButtonHelper(panelPersoneel);
+            RefreshPersoneelsbeheer(medewerkerService);
             panelPersoneel.Show();
+           
         }
 
         private void listView_Personeelsbeheer_SelectedIndexChanged(object sender, EventArgs e)
@@ -711,7 +744,7 @@ namespace UI
                 float prijs = float.Parse(txtPrijs_MenuOverzicht.Text);
                 if(actie == ButtonActie.Wijzigen)
                 {
-                    Message = menuItemService.EditAllMenuItem(ID, omschrijving, inVoorraad, BTW, categorie, menuSoort, prijs);
+                    Message = menuItemService.EditAllMenuItem(ID,omschrijving, inVoorraad, BTW, categorie, menuSoort, prijs);
 
                 } else if(actie == ButtonActie.Toevoegen)
                 {
