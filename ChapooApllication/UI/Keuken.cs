@@ -895,8 +895,16 @@ namespace UI
             {
                 int bestellingID = int.Parse(lbl_BestellingID.Text);
                 BestellingService bestelservice = new BestellingService();
-                bestelservice.UpdateBestelling(bestellingID);
-                bestelservice.UpdateBestellingMenuItems(bestellingID);
+                if (user == User.ChefKok || Overzicht == "kok")
+                {
+                    bestelservice.UpdateBestelling(bestellingID, 0, 140);
+                    bestelservice.UpdateBestellingMenuItems(bestellingID, 0, 140);
+                }
+                if (user == User.Barpersoneel || Overzicht == "bar")
+                {
+                    bestelservice.UpdateBestelling(bestellingID, 141, 420);
+                    bestelservice.UpdateBestellingMenuItems(bestellingID, 141, 420);
+                }
                 TextLabelColorReset();
                 LoadBinnenkomendeBestellingen();
             }
@@ -929,7 +937,15 @@ namespace UI
             {
                 int bestellingID = int.Parse(lbl_BestellingID.Text);
                 BestellingService bestelservice = new BestellingService();
-                bestelservice.DeleteBestelling(bestellingID);
+                if (user == User.ChefKok || Overzicht == "kok")
+                {
+                    bestelservice.DeleteBestelling(bestellingID, 0, 140);
+                }
+                if (user == User.Barpersoneel || Overzicht == "bar")
+                {
+                    bestelservice.DeleteBestelling(bestellingID, 141, 420);
+
+                }
                 TextLabelColorReset();
                 LoadBinnenkomendeBestellingen();
             }
@@ -1015,17 +1031,26 @@ namespace UI
                 }
             }
 
-
             int aantal = listView_BestelItems.Items.Count;
 
-            if (aantal == 0 && (aantal > 0) == false) //eigenlijk dus als dit nul (0) is en alle menu items in de bestelling al gereed zijn gemeldt
+            if (aantal == 0 && (aantal > 0) == false) 
             {
-                //zet hier dan de gehele bestelling op gereed (dezelfde functionaliteit als de 'gereed voor serveren' knop
+                
                 Bestelling b = Bestellinglistview[0];
-                int BestellingID = b.ID; //hopen dat deze niet NULL is gemaakt (dus niet is meegegeven) in dit listview object
-                bestelservice.UpdateBestelling(BestellingID);
-                TextLabelColorReset();
+                int BestellingID = b.ID; 
+                if (user == User.ChefKok || Overzicht == "kok")
+                {
+                    bestelservice.UpdateBestelling(BestellingID, 0, 140);
+                }
+                if(user == User.Barpersoneel || Overzicht == "bar")
+                {
+                    bestelservice.UpdateBestelling(BestellingID, 141, 420);
+
+                }
             }
+            TextLabelColorReset();
+
+            LoadBinnenkomendeBestellingen();
         }
 
 
@@ -1122,6 +1147,8 @@ namespace UI
         // Methode om de tafel panels te vullen met de juiste gegevens
         private void FillTafelPanel(string label, char last, int num, int bestellingID)
         {
+            listView_BestelItems.Items.Clear();
+            listView_AFBestelItems.Items.Clear();
             int tafelID;
 
             if (num.Equals(0))
@@ -1146,7 +1173,7 @@ namespace UI
                 {
                     if (b.status == false && b.kaartsoort != "Dranken")
                     {
-                        addStuff(bestellingID);
+                        addStuff(b);
                     }
                 }
 
@@ -1157,40 +1184,35 @@ namespace UI
                 {
                     if (b.status == false && b.kaartsoort == "Dranken")
                     {
-                        addStuff(bestellingID);
+                        addStuff(b);
                     }
                 }
             }
 
         }
         // Deze wordt gebruikt om alle bestellingen te vullen in de listviews
-        private List<Bestelling> addStuff(int ID)
+        private void addStuff(Bestelling b)
         {
-            listView_BestelItems.Items.Clear();
-            listView_AFBestelItems.Items.Clear();
-            BestellingService bestelservice = new BestellingService();
-            List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(ID);
+
             {
-                foreach (Bestelling b in Bestellinglistview)
+
+                ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                li.SubItems.Add(b.aantal.ToString());
+                li.SubItems.Add(b.opmerking.ToString());
+                li.SubItems.Add(b.bestellingmenuitemID.ToString());
+                if (b.aantal >= 1)
                 {
-                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                    li.SubItems.Add(b.aantal.ToString());
-                    li.SubItems.Add(b.opmerking.ToString());
-                    li.SubItems.Add(b.bestellingmenuitemID.ToString());
-                    if (b.aantal >= 1)
+                    if (current == true)
                     {
-                        if (current == true)
-                        {
-                            listView_BestelItems.Items.Add(li);
-                        }
-                        else
-                        {
-                            listView_AFBestelItems.Items.Add(li);
-                        }
+                        listView_BestelItems.Items.Add(li);
+                    }
+                    else
+                    {
+                        listView_AFBestelItems.Items.Add(li);
                     }
                 }
+
             }
-            return Bestellinglistview;
         }
 
 
@@ -1478,6 +1500,7 @@ namespace UI
 
             BestellingService bestelservice = new BestellingService();
             List<Bestelling> Bestellinglistview = bestelservice.GetBestellingOpmerking(bestellingID);
+            listView_BestelItems.Items.Clear();
             listView_AFBestelItems.Items.Clear();
 
             if (user == User.ChefKok || Overzicht == "kok")
@@ -1486,7 +1509,7 @@ namespace UI
                 {
                     if (b.kaartsoort != "Dranken")
                     {
-                        addStuff(bestellingID);
+                        addStuff(b);
                     }
                 }
             }
@@ -1496,7 +1519,7 @@ namespace UI
                 {
                     if (b.kaartsoort == "Dranken")
                     {
-                        addStuff(bestellingID);
+                        addStuff(b);
                     }
                 }
             }
@@ -1538,7 +1561,14 @@ namespace UI
             {
                 int bestellingID = int.Parse(lbl_BestellingAFID.Text);
                 BestellingService bestelservice = new BestellingService();
-                bestelservice.DeleteBestelling(bestellingID);
+                if (user == User.ChefKok || Overzicht == "kok")
+                {
+                    bestelservice.DeleteBestelling(bestellingID, 0, 140);
+                }
+                if (user == User.Barpersoneel || Overzicht == "bar")
+                {
+                    bestelservice.DeleteBestelling(bestellingID, 141, 420);
+                }
                 LoadAfgerondeBestellingen();
             }
             lbl_BestellingAFID.Text = "";
