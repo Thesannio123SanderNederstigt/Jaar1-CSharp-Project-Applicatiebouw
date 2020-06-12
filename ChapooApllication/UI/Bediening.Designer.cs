@@ -158,10 +158,8 @@
             this.BTNItemAanpassen = new System.Windows.Forms.Button();
             this.BTNBestellingPlaatsen = new System.Windows.Forms.Button();
             this.BTNBestellingVerwijderen = new System.Windows.Forms.Button();
-            this.Text = new System.Windows.Forms.RichTextBox();
+            this.TXTOverzicht = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.ListViewOverzicht = new System.Windows.Forms.ListView();
             this.BOID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BONaam = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -250,6 +248,8 @@
             this.btn_Pinnen = new System.Windows.Forms.Button();
             this.btn_CC = new System.Windows.Forms.Button();
             this.RekeningPNL = new System.Windows.Forms.Panel();
+            this.lbl_Totaaloutput = new System.Windows.Forms.Label();
+            this.lbl_Totaalbedrag = new System.Windows.Forms.Label();
             this.lbl_Inclbtwoutput = new System.Windows.Forms.Label();
             this.lbl_Exclbtwoutput = new System.Windows.Forms.Label();
             this.lbl_ExclBTW = new System.Windows.Forms.Label();
@@ -271,8 +271,7 @@
             this.BTW = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnl_RekeningAfrekenenTekst = new System.Windows.Forms.Panel();
             this.lbl_RekenenAfrekeken = new System.Windows.Forms.Label();
-            this.lbl_Totaalbedrag = new System.Windows.Forms.Label();
-            this.lbl_Totaaloutput = new System.Windows.Forms.Label();
+            this.BTNaangepast = new System.Windows.Forms.Button();
             this.TafelPNL.SuspendLayout();
             this.Tafel_TopPNL.SuspendLayout();
             this.HoofdschermPNL.SuspendLayout();
@@ -333,7 +332,7 @@
             this.OverzichtDateLBL.Location = new System.Drawing.Point(505, 34);
             this.OverzichtDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OverzichtDateLBL.Name = "OverzichtDateLBL";
-            this.OverzichtDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.OverzichtDateLBL.Size = new System.Drawing.Size(63, 30);
             this.OverzichtDateLBL.TabIndex = 13;
             this.OverzichtDateLBL.Text = "Date";
             this.OverzichtDateLBL.Click += new System.EventHandler(this.TijdLBL_Click);
@@ -345,7 +344,7 @@
             this.OverzichtTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.OverzichtTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OverzichtTimeLBL.Name = "OverzichtTimeLBL";
-            this.OverzichtTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.OverzichtTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.OverzichtTimeLBL.TabIndex = 14;
             this.OverzichtTimeLBL.Text = "Time";
             // 
@@ -393,7 +392,7 @@
             this.TafelDateLBL.Location = new System.Drawing.Point(505, 34);
             this.TafelDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelDateLBL.Name = "TafelDateLBL";
-            this.TafelDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.TafelDateLBL.Size = new System.Drawing.Size(63, 30);
             this.TafelDateLBL.TabIndex = 13;
             this.TafelDateLBL.Text = "Date";
             // 
@@ -404,7 +403,7 @@
             this.TafelTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.TafelTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelTimeLBL.Name = "TafelTimeLBL";
-            this.TafelTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.TafelTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.TafelTimeLBL.TabIndex = 14;
             this.TafelTimeLBL.Text = "Time";
             // 
@@ -434,7 +433,7 @@
             this.label8.Location = new System.Drawing.Point(227, 16);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 47);
+            this.label8.Size = new System.Drawing.Size(173, 70);
             this.label8.TabIndex = 5;
             this.label8.Text = "Tafels";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -610,7 +609,7 @@
             this.TafelNummerDateLBL.Location = new System.Drawing.Point(505, 34);
             this.TafelNummerDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelNummerDateLBL.Name = "TafelNummerDateLBL";
-            this.TafelNummerDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.TafelNummerDateLBL.Size = new System.Drawing.Size(63, 30);
             this.TafelNummerDateLBL.TabIndex = 13;
             this.TafelNummerDateLBL.Text = "Date";
             // 
@@ -621,7 +620,7 @@
             this.TafelNummerTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.TafelNummerTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TafelNummerTimeLBL.Name = "TafelNummerTimeLBL";
-            this.TafelNummerTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.TafelNummerTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.TafelNummerTimeLBL.TabIndex = 14;
             this.TafelNummerTimeLBL.Text = "Time";
             // 
@@ -698,7 +697,7 @@
             this.LBLTafelNummer.Location = new System.Drawing.Point(243, 19);
             this.LBLTafelNummer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBLTafelNummer.Name = "LBLTafelNummer";
-            this.LBLTafelNummer.Size = new System.Drawing.Size(100, 47);
+            this.LBLTafelNummer.Size = new System.Drawing.Size(147, 70);
             this.LBLTafelNummer.TabIndex = 5;
             this.LBLTafelNummer.Text = "Tafel";
             // 
@@ -737,7 +736,7 @@
             this.BestellingDateLBL.Location = new System.Drawing.Point(505, 34);
             this.BestellingDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BestellingDateLBL.Name = "BestellingDateLBL";
-            this.BestellingDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.BestellingDateLBL.Size = new System.Drawing.Size(63, 30);
             this.BestellingDateLBL.TabIndex = 13;
             this.BestellingDateLBL.Text = "Date";
             // 
@@ -748,7 +747,7 @@
             this.BestellingTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.BestellingTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BestellingTimeLBL.Name = "BestellingTimeLBL";
-            this.BestellingTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.BestellingTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.BestellingTimeLBL.TabIndex = 14;
             this.BestellingTimeLBL.Text = "Time";
             // 
@@ -836,7 +835,7 @@
             this.label2.Location = new System.Drawing.Point(179, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 47);
+            this.label2.Size = new System.Drawing.Size(258, 70);
             this.label2.TabIndex = 5;
             this.label2.Text = "Bestelling";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -878,7 +877,7 @@
             this.LunchDateLBL.Location = new System.Drawing.Point(505, 34);
             this.LunchDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LunchDateLBL.Name = "LunchDateLBL";
-            this.LunchDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.LunchDateLBL.Size = new System.Drawing.Size(63, 30);
             this.LunchDateLBL.TabIndex = 13;
             this.LunchDateLBL.Text = "Date";
             // 
@@ -889,7 +888,7 @@
             this.LunchTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.LunchTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LunchTimeLBL.Name = "LunchTimeLBL";
-            this.LunchTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.LunchTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.LunchTimeLBL.TabIndex = 14;
             this.LunchTimeLBL.Text = "Time";
             // 
@@ -932,7 +931,7 @@
             this.ALBLLunch.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLLunch.Location = new System.Drawing.Point(538, 754);
             this.ALBLLunch.Name = "ALBLLunch";
-            this.ALBLLunch.Size = new System.Drawing.Size(22, 24);
+            this.ALBLLunch.Size = new System.Drawing.Size(33, 36);
             this.ALBLLunch.TabIndex = 43;
             this.ALBLLunch.Text = "0";
             // 
@@ -1175,7 +1174,7 @@
             this.label5.Location = new System.Drawing.Point(243, 19);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 47);
+            this.label5.Size = new System.Drawing.Size(173, 70);
             this.label5.TabIndex = 5;
             this.label5.Text = "Lunch";
             // 
@@ -1236,7 +1235,7 @@
             this.DrankDATELBL.Location = new System.Drawing.Point(505, 34);
             this.DrankDATELBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DrankDATELBL.Name = "DrankDATELBL";
-            this.DrankDATELBL.Size = new System.Drawing.Size(42, 21);
+            this.DrankDATELBL.Size = new System.Drawing.Size(63, 30);
             this.DrankDATELBL.TabIndex = 13;
             this.DrankDATELBL.Text = "Date";
             // 
@@ -1247,7 +1246,7 @@
             this.DrankTIMELBL.Location = new System.Drawing.Point(605, 34);
             this.DrankTIMELBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DrankTIMELBL.Name = "DrankTIMELBL";
-            this.DrankTIMELBL.Size = new System.Drawing.Size(44, 21);
+            this.DrankTIMELBL.Size = new System.Drawing.Size(66, 30);
             this.DrankTIMELBL.TabIndex = 14;
             this.DrankTIMELBL.Text = "Time";
             // 
@@ -1290,7 +1289,7 @@
             this.ALBLDrank.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLDrank.Location = new System.Drawing.Point(547, 754);
             this.ALBLDrank.Name = "ALBLDrank";
-            this.ALBLDrank.Size = new System.Drawing.Size(22, 24);
+            this.ALBLDrank.Size = new System.Drawing.Size(33, 36);
             this.ALBLDrank.TabIndex = 42;
             this.ALBLDrank.Text = "0";
             // 
@@ -1648,20 +1647,19 @@
             this.label7.Location = new System.Drawing.Point(232, 16);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 47);
+            this.label7.Size = new System.Drawing.Size(169, 70);
             this.label7.TabIndex = 5;
             this.label7.Text = "Drank";
             // 
             // OverzichtPNL
             // 
             this.OverzichtPNL.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.OverzichtPNL.Controls.Add(this.WijzigenPNL);
             this.OverzichtPNL.Controls.Add(this.BTNItemAanpassen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingPlaatsen);
             this.OverzichtPNL.Controls.Add(this.BTNBestellingVerwijderen);
-            this.OverzichtPNL.Controls.Add(this.Text);
+            this.OverzichtPNL.Controls.Add(this.TXTOverzicht);
             this.OverzichtPNL.Controls.Add(this.label11);
-            this.OverzichtPNL.Controls.Add(this.label10);
-            this.OverzichtPNL.Controls.Add(this.label9);
             this.OverzichtPNL.Controls.Add(this.ListViewOverzicht);
             this.OverzichtPNL.Controls.Add(this.panel20);
             this.OverzichtPNL.Controls.Add(this.Overzicht_TopPNL);
@@ -1676,7 +1674,7 @@
             // 
             this.BTNItemAanpassen.BackColor = System.Drawing.Color.Moccasin;
             this.BTNItemAanpassen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNItemAanpassen.Location = new System.Drawing.Point(254, 876);
+            this.BTNItemAanpassen.Location = new System.Drawing.Point(266, 907);
             this.BTNItemAanpassen.Name = "BTNItemAanpassen";
             this.BTNItemAanpassen.Size = new System.Drawing.Size(198, 65);
             this.BTNItemAanpassen.TabIndex = 31;
@@ -1688,7 +1686,7 @@
             // 
             this.BTNBestellingPlaatsen.BackColor = System.Drawing.Color.PaleGreen;
             this.BTNBestellingPlaatsen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNBestellingPlaatsen.Location = new System.Drawing.Point(461, 876);
+            this.BTNBestellingPlaatsen.Location = new System.Drawing.Point(473, 907);
             this.BTNBestellingPlaatsen.Name = "BTNBestellingPlaatsen";
             this.BTNBestellingPlaatsen.Size = new System.Drawing.Size(214, 65);
             this.BTNBestellingPlaatsen.TabIndex = 30;
@@ -1700,7 +1698,7 @@
             // 
             this.BTNBestellingVerwijderen.BackColor = System.Drawing.Color.Salmon;
             this.BTNBestellingVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 12F);
-            this.BTNBestellingVerwijderen.Location = new System.Drawing.Point(50, 876);
+            this.BTNBestellingVerwijderen.Location = new System.Drawing.Point(62, 907);
             this.BTNBestellingVerwijderen.Name = "BTNBestellingVerwijderen";
             this.BTNBestellingVerwijderen.Size = new System.Drawing.Size(198, 65);
             this.BTNBestellingVerwijderen.TabIndex = 29;
@@ -1708,45 +1706,23 @@
             this.BTNBestellingVerwijderen.UseVisualStyleBackColor = false;
             this.BTNBestellingVerwijderen.Click += new System.EventHandler(this.BTNBestellingVerwijderen_Click);
             // 
-            // Text
+            // TXTOverzicht
             // 
-            this.Text.Location = new System.Drawing.Point(50, 672);
-            this.Text.Name = "Text";
-            this.Text.Size = new System.Drawing.Size(625, 169);
-            this.Text.TabIndex = 28;
-            this.Text.Text = "";
+            this.TXTOverzicht.Location = new System.Drawing.Point(50, 778);
+            this.TXTOverzicht.Name = "TXTOverzicht";
+            this.TXTOverzicht.Size = new System.Drawing.Size(625, 123);
+            this.TXTOverzicht.TabIndex = 28;
+            this.TXTOverzicht.Text = "";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label11.Location = new System.Drawing.Point(52, 633);
+            this.label11.Font = new System.Drawing.Font("Microsoft Yi Baiti", 14F);
+            this.label11.Location = new System.Drawing.Point(52, 733);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 24);
+            this.label11.Size = new System.Drawing.Size(221, 42);
             this.label11.TabIndex = 27;
             this.label11.Text = "Opmerkingen:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label10.Location = new System.Drawing.Point(559, 551);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 24);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "0";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.label9.Location = new System.Drawing.Point(52, 551);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 24);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Totaal:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // ListViewOverzicht
             // 
@@ -1759,7 +1735,7 @@
             this.ListViewOverzicht.HideSelection = false;
             this.ListViewOverzicht.Location = new System.Drawing.Point(48, 209);
             this.ListViewOverzicht.Name = "ListViewOverzicht";
-            this.ListViewOverzicht.Size = new System.Drawing.Size(625, 329);
+            this.ListViewOverzicht.Size = new System.Drawing.Size(625, 296);
             this.ListViewOverzicht.TabIndex = 24;
             this.ListViewOverzicht.UseCompatibleStateImageBehavior = false;
             this.ListViewOverzicht.View = System.Windows.Forms.View.Details;
@@ -1796,7 +1772,7 @@
             this.label4.Location = new System.Drawing.Point(79, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(349, 47);
+            this.label4.Size = new System.Drawing.Size(510, 70);
             this.label4.TabIndex = 5;
             this.label4.Text = "Bestelling Overzicht";
             // 
@@ -1872,14 +1848,15 @@
             // WijzigenPNL
             // 
             this.WijzigenPNL.BackColor = System.Drawing.Color.Gainsboro;
+            this.WijzigenPNL.Controls.Add(this.BTNaangepast);
             this.WijzigenPNL.Controls.Add(this.BTNWijzigingOplsaan);
             this.WijzigenPNL.Controls.Add(this.BTNItemVerwijderen);
             this.WijzigenPNL.Controls.Add(this.ALBLWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNMinWijzigen);
             this.WijzigenPNL.Controls.Add(this.BTNPlusWijzigen);
-            this.WijzigenPNL.Location = new System.Drawing.Point(49, 659);
+            this.WijzigenPNL.Location = new System.Drawing.Point(46, 547);
             this.WijzigenPNL.Name = "WijzigenPNL";
-            this.WijzigenPNL.Size = new System.Drawing.Size(625, 309);
+            this.WijzigenPNL.Size = new System.Drawing.Size(625, 181);
             this.WijzigenPNL.TabIndex = 31;
             this.WijzigenPNL.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
@@ -1887,9 +1864,9 @@
             // 
             this.BTNWijzigingOplsaan.BackColor = System.Drawing.Color.PaleGreen;
             this.BTNWijzigingOplsaan.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(307, 211);
+            this.BTNWijzigingOplsaan.Location = new System.Drawing.Point(380, 126);
             this.BTNWijzigingOplsaan.Name = "BTNWijzigingOplsaan";
-            this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(317, 65);
+            this.BTNWijzigingOplsaan.Size = new System.Drawing.Size(242, 56);
             this.BTNWijzigingOplsaan.TabIndex = 44;
             this.BTNWijzigingOplsaan.Text = "Wijziging Opslaan";
             this.BTNWijzigingOplsaan.UseVisualStyleBackColor = false;
@@ -1899,9 +1876,9 @@
             // 
             this.BTNItemVerwijderen.BackColor = System.Drawing.Color.Salmon;
             this.BTNItemVerwijderen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
-            this.BTNItemVerwijderen.Location = new System.Drawing.Point(-1, 211);
+            this.BTNItemVerwijderen.Location = new System.Drawing.Point(-3, 126);
             this.BTNItemVerwijderen.Name = "BTNItemVerwijderen";
-            this.BTNItemVerwijderen.Size = new System.Drawing.Size(302, 65);
+            this.BTNItemVerwijderen.Size = new System.Drawing.Size(220, 56);
             this.BTNItemVerwijderen.TabIndex = 43;
             this.BTNItemVerwijderen.Text = "Item Verwijderen";
             this.BTNItemVerwijderen.UseVisualStyleBackColor = false;
@@ -1911,18 +1888,18 @@
             // 
             this.ALBLWijzigen.AutoSize = true;
             this.ALBLWijzigen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.ALBLWijzigen.Location = new System.Drawing.Point(494, 91);
+            this.ALBLWijzigen.Location = new System.Drawing.Point(290, 83);
             this.ALBLWijzigen.Name = "ALBLWijzigen";
-            this.ALBLWijzigen.Size = new System.Drawing.Size(22, 24);
+            this.ALBLWijzigen.Size = new System.Drawing.Size(33, 36);
             this.ALBLWijzigen.TabIndex = 40;
             this.ALBLWijzigen.Text = "0";
             // 
             // BTNMinWijzigen
             // 
             this.BTNMinWijzigen.BackColor = System.Drawing.Color.Salmon;
-            this.BTNMinWijzigen.Location = new System.Drawing.Point(544, 74);
+            this.BTNMinWijzigen.Location = new System.Drawing.Point(347, 83);
             this.BTNMinWijzigen.Name = "BTNMinWijzigen";
-            this.BTNMinWijzigen.Size = new System.Drawing.Size(75, 64);
+            this.BTNMinWijzigen.Size = new System.Drawing.Size(56, 47);
             this.BTNMinWijzigen.TabIndex = 42;
             this.BTNMinWijzigen.Text = "Min";
             this.BTNMinWijzigen.UseVisualStyleBackColor = false;
@@ -1931,9 +1908,9 @@
             // BTNPlusWijzigen
             // 
             this.BTNPlusWijzigen.BackColor = System.Drawing.Color.LightGreen;
-            this.BTNPlusWijzigen.Location = new System.Drawing.Point(401, 74);
+            this.BTNPlusWijzigen.Location = new System.Drawing.Point(204, 83);
             this.BTNPlusWijzigen.Name = "BTNPlusWijzigen";
-            this.BTNPlusWijzigen.Size = new System.Drawing.Size(75, 64);
+            this.BTNPlusWijzigen.Size = new System.Drawing.Size(56, 47);
             this.BTNPlusWijzigen.TabIndex = 41;
             this.BTNPlusWijzigen.Text = "Plus";
             this.BTNPlusWijzigen.UseVisualStyleBackColor = false;
@@ -1961,7 +1938,7 @@
             this.label6.Location = new System.Drawing.Point(243, 19);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 47);
+            this.label6.Size = new System.Drawing.Size(155, 70);
             this.label6.TabIndex = 5;
             this.label6.Text = "Diner";
             // 
@@ -2236,7 +2213,7 @@
             this.ALBLDiner.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.ALBLDiner.Location = new System.Drawing.Point(550, 754);
             this.ALBLDiner.Name = "ALBLDiner";
-            this.ALBLDiner.Size = new System.Drawing.Size(22, 24);
+            this.ALBLDiner.Size = new System.Drawing.Size(33, 36);
             this.ALBLDiner.TabIndex = 37;
             this.ALBLDiner.Text = "0";
             // 
@@ -2301,7 +2278,7 @@
             this.DinerDateLBL.Location = new System.Drawing.Point(505, 34);
             this.DinerDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DinerDateLBL.Name = "DinerDateLBL";
-            this.DinerDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.DinerDateLBL.Size = new System.Drawing.Size(63, 30);
             this.DinerDateLBL.TabIndex = 13;
             this.DinerDateLBL.Text = "Date";
             // 
@@ -2312,7 +2289,7 @@
             this.DinerTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.DinerTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DinerTimeLBL.Name = "DinerTimeLBL";
-            this.DinerTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.DinerTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.DinerTimeLBL.TabIndex = 14;
             this.DinerTimeLBL.Text = "Time";
             // 
@@ -2380,7 +2357,7 @@
             this.AfgerondDateLBL.Location = new System.Drawing.Point(505, 34);
             this.AfgerondDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfgerondDateLBL.Name = "AfgerondDateLBL";
-            this.AfgerondDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.AfgerondDateLBL.Size = new System.Drawing.Size(63, 30);
             this.AfgerondDateLBL.TabIndex = 13;
             this.AfgerondDateLBL.Text = "Date";
             // 
@@ -2391,7 +2368,7 @@
             this.AfgerondTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.AfgerondTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfgerondTimeLBL.Name = "AfgerondTimeLBL";
-            this.AfgerondTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.AfgerondTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.AfgerondTimeLBL.TabIndex = 14;
             this.AfgerondTimeLBL.Text = "Time";
             // 
@@ -2422,7 +2399,7 @@
             this.lbl_TransactieSuccess.Font = new System.Drawing.Font("Microsoft Yi Baiti", 30F);
             this.lbl_TransactieSuccess.Location = new System.Drawing.Point(128, 261);
             this.lbl_TransactieSuccess.Name = "lbl_TransactieSuccess";
-            this.lbl_TransactieSuccess.Size = new System.Drawing.Size(461, 40);
+            this.lbl_TransactieSuccess.Size = new System.Drawing.Size(677, 60);
             this.lbl_TransactieSuccess.TabIndex = 31;
             this.lbl_TransactieSuccess.Text = "Transactie succesvol afgerond!";
             // 
@@ -2455,7 +2432,7 @@
             this.lbl_Tafel.Location = new System.Drawing.Point(184, 16);
             this.lbl_Tafel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Tafel.Name = "lbl_Tafel";
-            this.lbl_Tafel.Size = new System.Drawing.Size(151, 47);
+            this.lbl_Tafel.Size = new System.Drawing.Size(223, 70);
             this.lbl_Tafel.TabIndex = 5;
             this.lbl_Tafel.Text = "Tafel #";
             // 
@@ -2537,7 +2514,7 @@
             this.AfrekenenDateLBL.Location = new System.Drawing.Point(505, 34);
             this.AfrekenenDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfrekenenDateLBL.Name = "AfrekenenDateLBL";
-            this.AfrekenenDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.AfrekenenDateLBL.Size = new System.Drawing.Size(63, 30);
             this.AfrekenenDateLBL.TabIndex = 13;
             this.AfrekenenDateLBL.Text = "Date";
             // 
@@ -2548,7 +2525,7 @@
             this.AfrekenenTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.AfrekenenTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AfrekenenTimeLBL.Name = "AfrekenenTimeLBL";
-            this.AfrekenenTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.AfrekenenTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.AfrekenenTimeLBL.TabIndex = 14;
             this.AfrekenenTimeLBL.Text = "Time";
             // 
@@ -2602,7 +2579,7 @@
             this.lbl_Afrekenen.Location = new System.Drawing.Point(225, 20);
             this.lbl_Afrekenen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_Afrekenen.Name = "lbl_Afrekenen";
-            this.lbl_Afrekenen.Size = new System.Drawing.Size(184, 47);
+            this.lbl_Afrekenen.Size = new System.Drawing.Size(268, 70);
             this.lbl_Afrekenen.TabIndex = 5;
             this.lbl_Afrekenen.Text = "Afrekenen";
             // 
@@ -2651,13 +2628,32 @@
             this.RekeningPNL.Size = new System.Drawing.Size(721, 1039);
             this.RekeningPNL.TabIndex = 38;
             // 
+            // lbl_Totaaloutput
+            // 
+            this.lbl_Totaaloutput.AutoSize = true;
+            this.lbl_Totaaloutput.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Totaaloutput.Location = new System.Drawing.Point(569, 718);
+            this.lbl_Totaaloutput.Name = "lbl_Totaaloutput";
+            this.lbl_Totaaloutput.Size = new System.Drawing.Size(0, 36);
+            this.lbl_Totaaloutput.TabIndex = 49;
+            // 
+            // lbl_Totaalbedrag
+            // 
+            this.lbl_Totaalbedrag.AutoSize = true;
+            this.lbl_Totaalbedrag.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
+            this.lbl_Totaalbedrag.Location = new System.Drawing.Point(423, 718);
+            this.lbl_Totaalbedrag.Name = "lbl_Totaalbedrag";
+            this.lbl_Totaalbedrag.Size = new System.Drawing.Size(99, 36);
+            this.lbl_Totaalbedrag.TabIndex = 48;
+            this.lbl_Totaalbedrag.Text = "Totaal:";
+            // 
             // lbl_Inclbtwoutput
             // 
             this.lbl_Inclbtwoutput.AutoSize = true;
             this.lbl_Inclbtwoutput.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.lbl_Inclbtwoutput.Location = new System.Drawing.Point(589, 675);
             this.lbl_Inclbtwoutput.Name = "lbl_Inclbtwoutput";
-            this.lbl_Inclbtwoutput.Size = new System.Drawing.Size(0, 24);
+            this.lbl_Inclbtwoutput.Size = new System.Drawing.Size(0, 36);
             this.lbl_Inclbtwoutput.TabIndex = 47;
             // 
             // lbl_Exclbtwoutput
@@ -2666,7 +2662,7 @@
             this.lbl_Exclbtwoutput.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.lbl_Exclbtwoutput.Location = new System.Drawing.Point(589, 633);
             this.lbl_Exclbtwoutput.Name = "lbl_Exclbtwoutput";
-            this.lbl_Exclbtwoutput.Size = new System.Drawing.Size(0, 24);
+            this.lbl_Exclbtwoutput.Size = new System.Drawing.Size(0, 36);
             this.lbl_Exclbtwoutput.TabIndex = 46;
             // 
             // lbl_ExclBTW
@@ -2675,7 +2671,7 @@
             this.lbl_ExclBTW.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.lbl_ExclBTW.Location = new System.Drawing.Point(423, 630);
             this.lbl_ExclBTW.Name = "lbl_ExclBTW";
-            this.lbl_ExclBTW.Size = new System.Drawing.Size(93, 24);
+            this.lbl_ExclBTW.Size = new System.Drawing.Size(137, 36);
             this.lbl_ExclBTW.TabIndex = 45;
             this.lbl_ExclBTW.Text = "excl. btw:";
             // 
@@ -2685,7 +2681,7 @@
             this.lbl_InclBTW.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.lbl_InclBTW.Location = new System.Drawing.Point(425, 673);
             this.lbl_InclBTW.Name = "lbl_InclBTW";
-            this.lbl_InclBTW.Size = new System.Drawing.Size(88, 24);
+            this.lbl_InclBTW.Size = new System.Drawing.Size(130, 36);
             this.lbl_InclBTW.TabIndex = 44;
             this.lbl_InclBTW.Text = "incl. btw:";
             // 
@@ -2727,7 +2723,7 @@
             this.RekeningDateLBL.Location = new System.Drawing.Point(505, 34);
             this.RekeningDateLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RekeningDateLBL.Name = "RekeningDateLBL";
-            this.RekeningDateLBL.Size = new System.Drawing.Size(42, 21);
+            this.RekeningDateLBL.Size = new System.Drawing.Size(63, 30);
             this.RekeningDateLBL.TabIndex = 13;
             this.RekeningDateLBL.Text = "Date";
             // 
@@ -2738,7 +2734,7 @@
             this.RekeningTimeLBL.Location = new System.Drawing.Point(605, 34);
             this.RekeningTimeLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RekeningTimeLBL.Name = "RekeningTimeLBL";
-            this.RekeningTimeLBL.Size = new System.Drawing.Size(44, 21);
+            this.RekeningTimeLBL.Size = new System.Drawing.Size(66, 30);
             this.RekeningTimeLBL.TabIndex = 14;
             this.RekeningTimeLBL.Text = "Time";
             // 
@@ -2782,7 +2778,7 @@
             this.lbl_Opmerkingen.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.lbl_Opmerkingen.Location = new System.Drawing.Point(52, 734);
             this.lbl_Opmerkingen.Name = "lbl_Opmerkingen";
-            this.lbl_Opmerkingen.Size = new System.Drawing.Size(124, 24);
+            this.lbl_Opmerkingen.Size = new System.Drawing.Size(185, 36);
             this.lbl_Opmerkingen.TabIndex = 27;
             this.lbl_Opmerkingen.Text = "Opmerkingen:";
             // 
@@ -2792,7 +2788,7 @@
             this.lbl_Fooi.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
             this.lbl_Fooi.Location = new System.Drawing.Point(425, 570);
             this.lbl_Fooi.Name = "lbl_Fooi";
-            this.lbl_Fooi.Size = new System.Drawing.Size(51, 24);
+            this.lbl_Fooi.Size = new System.Drawing.Size(77, 36);
             this.lbl_Fooi.TabIndex = 25;
             this.lbl_Fooi.Text = "Fooi:";
             // 
@@ -2850,46 +2846,38 @@
             this.lbl_RekenenAfrekeken.Location = new System.Drawing.Point(225, 16);
             this.lbl_RekenenAfrekeken.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_RekenenAfrekeken.Name = "lbl_RekenenAfrekeken";
-            this.lbl_RekenenAfrekeken.Size = new System.Drawing.Size(184, 47);
+            this.lbl_RekenenAfrekeken.Size = new System.Drawing.Size(268, 70);
             this.lbl_RekenenAfrekeken.TabIndex = 5;
             this.lbl_RekenenAfrekeken.Text = "Afrekenen";
             // 
-            // lbl_Totaalbedrag
+            // BTNaangepast
             // 
-            this.lbl_Totaalbedrag.AutoSize = true;
-            this.lbl_Totaalbedrag.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.lbl_Totaalbedrag.Location = new System.Drawing.Point(423, 718);
-            this.lbl_Totaalbedrag.Name = "lbl_Totaalbedrag";
-            this.lbl_Totaalbedrag.Size = new System.Drawing.Size(66, 24);
-            this.lbl_Totaalbedrag.TabIndex = 48;
-            this.lbl_Totaalbedrag.Text = "Totaal:";
-            // 
-            // lbl_Totaaloutput
-            // 
-            this.lbl_Totaaloutput.AutoSize = true;
-            this.lbl_Totaaloutput.Font = new System.Drawing.Font("Microsoft Yi Baiti", 17.8F);
-            this.lbl_Totaaloutput.Location = new System.Drawing.Point(569, 718);
-            this.lbl_Totaaloutput.Name = "lbl_Totaaloutput";
-            this.lbl_Totaaloutput.Size = new System.Drawing.Size(0, 24);
-            this.lbl_Totaaloutput.TabIndex = 49;
+            this.BTNaangepast.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.BTNaangepast.Font = new System.Drawing.Font("Microsoft Yi Baiti", 16F);
+            this.BTNaangepast.Location = new System.Drawing.Point(16, 2);
+            this.BTNaangepast.Name = "BTNaangepast";
+            this.BTNaangepast.Size = new System.Drawing.Size(220, 56);
+            this.BTNaangepast.TabIndex = 45;
+            this.BTNaangepast.Text = "Item Verwijderen";
+            this.BTNaangepast.UseVisualStyleBackColor = false;
+            this.BTNaangepast.Click += new System.EventHandler(this.BTNaangepast_Click);
             // 
             // Bediening
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(4F, 10F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(726, 1047);
+            this.ClientSize = new System.Drawing.Size(723, 1047);
+            this.Controls.Add(this.OverzichtPNL);
+            this.Controls.Add(this.BestellingPNL);
+            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.AfgerondPNL);
             this.Controls.Add(this.AfrekenenPNL);
             this.Controls.Add(this.RekeningPNL);
-            this.Controls.Add(this.OverzichtPNL);
             this.Controls.Add(this.DrankPNL);
-            this.Controls.Add(this.TafelNummerPNL);
             this.Controls.Add(this.TafelPNL);
             this.Controls.Add(this.LunchPNL);
             this.Controls.Add(this.DinerPNL);
-            this.Controls.Add(this.WijzigenPNL);
-            this.Controls.Add(this.BestellingPNL);
             this.Font = new System.Drawing.Font("Microsoft Yi Baiti", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -3043,13 +3031,11 @@
         private System.Windows.Forms.ListView ListViewDrankWijn;
         private System.Windows.Forms.Button DrankWijnBTN;
         private System.Windows.Forms.Panel OverzichtPNL;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListView ListViewOverzicht;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RichTextBox Text;
+        private System.Windows.Forms.RichTextBox TXTOverzicht;
         private System.Windows.Forms.Button BTNItemAanpassen;
         private System.Windows.Forms.Button BTNBestellingPlaatsen;
         private System.Windows.Forms.Button BTNBestellingVerwijderen;
@@ -3223,5 +3209,6 @@
         private System.Windows.Forms.PictureBox ChapooSnail;
         private System.Windows.Forms.Label lbl_Totaaloutput;
         private System.Windows.Forms.Label lbl_Totaalbedrag;
+        private System.Windows.Forms.Button BTNaangepast;
     }
 }
