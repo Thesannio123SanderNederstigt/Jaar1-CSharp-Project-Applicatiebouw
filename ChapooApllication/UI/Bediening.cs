@@ -27,10 +27,13 @@ namespace UI
         private List<ChapooModel.MenuItem> menuItems; //ChappoModel omdat ik anders de model laag niet in kan.
         public Bestelling Bestelling;
 
+        private ListViewItem listviewItem;
+
         private int rekeningID; //voor de rekening om het ID mee te geven tussen methoden
         private int rekeningtafelID;
         private double Prijsinclbtw;
         private string betaalwijze;
+        private int teller;
 
         public Rekening Rekening { get; set; }
 
@@ -93,6 +96,7 @@ namespace UI
             buttons.Add(btnT9);
             buttons.Add(btnT10);
             TafelStatus();
+            Date_Time(TafelNummerDateLBL, TafelNummerTimeLBL);
         }
         private void HidePanels()
         {
@@ -118,21 +122,24 @@ namespace UI
 
         private void BTNVoegToeL_Click(object sender, EventArgs e)
         {
-
-            BestellingToevoegen1(ListViewLunchV, ALBLLunch);
-
-
+            if(listviewItem != null)
+            {
+                BestellingToevoegen1(listviewItem, ALBLLunch);
+            }
         }
         private void BTNVoegToeDrank_Click(object sender, EventArgs e)
         {
-            BestellingToevoegen1(ListViewDrankFris, ALBLDrank);
-
-
+            if(listviewItem != null)
+            {
+                BestellingToevoegen1(listviewItem, ALBLDrank);
+            }
         }
         private void BTNVoegToeDiner_Click(object sender, EventArgs e)
         {
-            BestellingToevoegen1(ListViewDinerV, ALBLDiner);
-
+            if(listviewItem != null)
+            {
+                BestellingToevoegen1(listviewItem, ALBLDiner);
+            }
         }
         public void VulListView(string MenuSoort, string Categorie, ListView ListViewNaam)
         {
@@ -216,16 +223,19 @@ namespace UI
         //Dit is om alle lijsten te vullen
         private void BTNBestellingPlaatsen_Click(object sender, EventArgs e)
         {
+
             int ID = BestellingService.GetNieuuwsteID();
+
+           // bestelling_MenuItemService.UpdateVoorraad();
 
             if (ListViewOverzicht.Items.Count > 0)
             {
-                if (MessageBox.Show("", "Bestelling geplaatst", MessageBoxButtons.OK, MessageBoxIcon.None) == DialogResult.OK)
+                if (MessageBox.Show("Terug naar tafels", "Bestelling geplaatst", MessageBoxButtons.OK, MessageBoxIcon.None) == DialogResult.OK)
                 {
                     string test = TXTOverzicht.Text;
                     bestelling_MenuItemService.UpdateOpmerking(ID, test);
                     OverzichtPNL.Hide();
-                    TafelNummerPNL.Visible = true;
+                    TafelPNL.Visible = true;
                     WijzigenPNL.Visible = false;
                 }
             }
@@ -235,11 +245,11 @@ namespace UI
             }
         }
 
-        private void BestellingToevoegen1(Label label1)
+        private void BestellingToevoegen1(ListViewItem item, Label label1)
         {
 
-            ListViewItem item1 = listView6_SelectedIndexChanged[0];
-            ChapooModel.MenuItem menuItem = (ChapooModel.MenuItem)item1.Tag;
+            //ListViewItem item1 = listView6_SelectedIndexChanged[0];
+            ChapooModel.MenuItem menuItem = (ChapooModel.MenuItem)item.Tag;
 
             Bestelling_MenuItem Item = new Bestelling_MenuItem()
             {
@@ -324,9 +334,6 @@ namespace UI
             BestellingPNL.Hide();
             Date_Time(OverzichtDateLBL, OverzichtTimeLBL);
             GoToOverzicht();
-
-
-
         }
         private void timerDN_Tick(object sender, EventArgs e) // NAGERECHT DINER 
         {
@@ -387,10 +394,6 @@ namespace UI
             timerLH.Start();
             VulListView("Lunch", "Hoofdgerecht", ListViewLunchH);
             Button btnsender = (Button)sender;
-            //if (btnsender == BTNVoegToeL)
-            //{
-            //    BestellingToevoegen2(ALBLLunch);
-            //}
         }
         //
         private void timerLN_Tick(object sender, EventArgs e) //LUNCH NAGERECHT
@@ -482,14 +485,16 @@ namespace UI
         {
             PlusClick(ALBLDiner);
         }
-        private void BTNPlusWijzigen_Click(object sender, EventArgs e)
+        private void BTNPlusWijzigen_Click_1(object sender, EventArgs e)
         {
             PlusClick(ALBLWijzigen);
         }
-        private void BTNMinWijzigen_Click(object sender, EventArgs e)
+
+        private void BTNMinWijzigen_Click_1(object sender, EventArgs e)
         {
             MinClick(ALBLWijzigen);
         }
+
         //tafel knoppen 
         private void btnT1_Click(object sender, EventArgs e)
         {
@@ -497,6 +502,7 @@ namespace UI
             TafelNummerPNL.Show();
             LBLTafelNummer.Text = "Tafel 1";
             TafelPNL.Hide();
+            Date_Time(OverzichtDateLBL, OverzichtTimeLBL);
         }
 
         private void btnT2_Click(object sender, EventArgs e)
@@ -565,16 +571,10 @@ namespace UI
             LBLTafelNummer.Text = "Tafel 10";
         }
 
-        private void BestellingVerwijderen()
-        {
-
-        }
-
-
         // Per ongeluk geklikt 
         private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -643,10 +643,6 @@ namespace UI
             OverzichtPNL.SendToBack();
         }
 
-        private void listView6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void panel11_Paint_1(object sender, PaintEventArgs e)
         {
 
@@ -701,8 +697,8 @@ namespace UI
 
         private void BestellingTerugBTN_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Weet je zeker dat je de bestelling wilt verwijderen?\n" +
-                            "Bestelling en inhoud worden niet opgeslagen", "Bestelling verwijderen ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Weet je zeker dat je de terug wilt gaan?\n" +
+                            "Bestelling en inhoud worden niet opgeslagen", "Terug naar tafels", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int id = BestellingService.GetNieuuwsteID();
                 bestelling_MenuItemService.DeleteBestellingItem(id);
@@ -711,6 +707,7 @@ namespace UI
                 TafelNummerPNL.Show();
                 WijzigenPNL.Visible = false;
             }
+            Date_Time(OverzichtDateLBL, OverzichtTimeLBL);
         }
 
         private void TafelNummerTerugBT_Click(object sender, EventArgs e)
@@ -795,6 +792,14 @@ namespace UI
 
             //methode invullen listview op RekeningPNL voor het rekening overzicht
             List<Rekening> rekeninglist = RekeningService.GetMenuitems(TafelID);
+
+            teller = 0;
+
+            foreach (Rekening r in rekeninglist)
+            {
+                teller++;
+            }
+
             ListviewFiller(rekeninglist);
 
             //query voor het invullen van de totaalprijs label
@@ -830,8 +835,7 @@ namespace UI
                 ListViewItem lv = new ListViewItem(r.omschrijving);
                 lv.SubItems.Add(r.aantal.ToString());
                 lv.SubItems.Add(r.prijs.ToString());
-                //lv.SubItems.Add(r.btw.ToString());
-                double btwprijs = ((r.prijs) * (100.00 + r.btw / 100));
+                double btwprijs = ((r.prijs) * ((100.00 + r.btw) / 100));
                 lv.SubItems.Add(btwprijs.ToString());
                 ListViewRekening.Items.Add(lv);
 
@@ -880,6 +884,11 @@ namespace UI
 
         private void btn_Betalen_Click(object sender, EventArgs e)
         {
+            if (teller == 0)
+            {
+                btn_Betalen.Enabled = false;
+            }
+
             float fooi = 0.00f;
             if(txt_Fooi.Text != "")
             {
@@ -1003,6 +1012,137 @@ namespace UI
         private void BTNaangepast_Click(object sender, EventArgs e)
         {
             WijzigenPNL.Visible = false;
+        }
+        // Methodes om te selecteren op basis van listviews
+        private void ListViewDrankThee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDrankThee.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDrankThee.SelectedIndices[0];
+                listviewItem = ListViewDrankThee.Items[index];
+            }
+        }
+
+        private void ListViewDrankWijn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDrankWijn.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDrankWijn.SelectedIndices[0];
+                listviewItem = ListViewDrankWijn.Items[index];
+            }
+        }
+
+        private void ListViewDrankGed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDrankGed.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDrankGed.SelectedIndices[0];
+                listviewItem = ListViewDrankGed.Items[index];
+            }
+        }
+
+        private void ListViewDrankTap_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDrankTap.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDrankTap.SelectedIndices[0];
+                listviewItem = ListViewDrankTap.Items[index];
+            }
+        }
+
+        private void ListViewDrankFris_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDrankFris.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDrankFris.SelectedIndices[0];
+                listviewItem = ListViewDrankFris.Items[index];
+            }
+        }
+
+        private void ListViewDinerN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDinerN.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDinerN.SelectedIndices[0];
+                listviewItem = ListViewDinerN.Items[index];
+            }
+        }
+
+        private void ListViewDinerH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDinerH.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDinerH.SelectedIndices[0];
+                listviewItem = ListViewDinerH.Items[index];
+            }
+        }
+
+        private void ListViewDinerT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDinerT.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDinerT.SelectedIndices[0];
+                listviewItem = ListViewDinerT.Items[index];
+            }
+        }
+
+        private void ListViewDinerV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewDinerV.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewDinerV.SelectedIndices[0];
+                listviewItem = ListViewDinerV.Items[index];
+            }
+        }
+
+        private void ListViewLunchN_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewLunchN.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewLunchN.SelectedIndices[0];
+                listviewItem = ListViewLunchN.Items[index];
+            }
+        }
+
+        private void ListViewLunchH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewLunchH.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewLunchH.SelectedIndices[0];
+                listviewItem = ListViewLunchH.Items[index];
+            }
+        }
+        private void ListViewLunchV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection listviewitems = ListViewLunchV.SelectedItems;
+
+            if (listviewitems.Count > 0)
+            {
+                int index = ListViewLunchV.SelectedIndices[0];
+                listviewItem = ListViewLunchV.Items[index];
+            }
         }
     }
 }

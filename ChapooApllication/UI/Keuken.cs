@@ -88,7 +88,7 @@ namespace UI
                         bestellingnumberlist.Add(bestellingID);
                     }
                 }
-                if(inkomend == false)
+                if (inkomend == false)
                 {
                     if (b.status == true) //om alleen afgeronde bestellingen te krijgen
                     {
@@ -550,15 +550,15 @@ namespace UI
         // Methode om de listviews te verwijderen
         private void DeleteListViews()
         {
-            foreach(Panel panel in this.Controls)
+            foreach (Panel panel in this.Controls)
             {
-                foreach(Control outerbox in panel.Controls)
+                foreach (Control outerbox in panel.Controls)
                 {
-                    if(outerbox.GetType() == typeof(GroupBox))
+                    if (outerbox.GetType() == typeof(GroupBox))
                     {
-                        foreach(Control innerbox in outerbox.Controls)
+                        foreach (Control innerbox in outerbox.Controls)
                         {
-                            if(innerbox.GetType() == typeof(GroupBox))
+                            if (innerbox.GetType() == typeof(GroupBox))
                             {
                                 foreach (Control listview in innerbox.Controls)
                                 {
@@ -567,7 +567,7 @@ namespace UI
                                         innerbox.Controls.Remove(listview);
                                     }
                                 }
-                            }   
+                            }
                         }
                     }
                 }
@@ -583,9 +583,10 @@ namespace UI
                 {
                     if (outerbox.GetType() == typeof(GroupBox))
                     {
-                        foreach(Control innerbox in outerbox.Controls) {
+                        foreach (Control innerbox in outerbox.Controls)
+                        {
 
-                            if(innerbox.GetType() == typeof(Label))
+                            if (innerbox.GetType() == typeof(Label))
                             {
                                 innerbox.Text = "";
                             }
@@ -610,18 +611,18 @@ namespace UI
                             }
                         }
                     }
-                 }
+                }
             }
         }
 
         // Methode om de kleuren van de labels weer terug te zetten
         private void TextLabelColorReset()
         {
-            foreach(Panel panel in this.Controls)
+            foreach (Panel panel in this.Controls)
             {
-                foreach(Control outerbox in panel.Controls)
+                foreach (Control outerbox in panel.Controls)
                 {
-                    if(outerbox.GetType() == typeof(GroupBox)) 
+                    if (outerbox.GetType() == typeof(GroupBox))
                     {
                         foreach (Control innerbox in outerbox.Controls)
                         {
@@ -671,12 +672,12 @@ namespace UI
             Kassa kassa = new Kassa();
             kassa.Show();
         }
-        
+
 
         //eventhandlers/methoden binnen het pnl_BinnenkomendeBestellingen
         private void pictureBx_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
-            if(user == User.Eigenaar)
+            if (user == User.Eigenaar)
             {
                 this.Visible = false;
                 Kassa kassa = new Kassa();
@@ -687,7 +688,7 @@ namespace UI
             TextLabelReset();
             ResetGroupBoxSystemColors();
             pnl_KeukenBarStart.Show();
-            
+
         }
 
 
@@ -811,7 +812,7 @@ namespace UI
 
         private void ResetGroupBoxSystemColors()
         {
-            foreach(Panel panel in this.Controls)
+            foreach (Panel panel in this.Controls)
             {
                 foreach (Control outerbox in panel.Controls)
                 {
@@ -819,7 +820,7 @@ namespace UI
                     {
                         foreach (Control innerbox in outerbox.Controls)
                         {
-                            if(innerbox.GetType() == typeof(GroupBox))
+                            if (innerbox.GetType() == typeof(GroupBox))
                             {
                                 innerbox.BackColor = SystemColors.Control;
                             }
@@ -1027,7 +1028,7 @@ namespace UI
             }
         }
 
-        
+
         private void FillTafelPanel1()
         {
             string label = lbl_Bestelling1.Text;
@@ -1148,7 +1149,7 @@ namespace UI
                         addStuff(bestellingID);
                     }
                 }
-               
+
             }
             else if (user == User.Barpersoneel || Overzicht == "bar")
             {
@@ -1172,10 +1173,10 @@ namespace UI
             {
                 foreach (Bestelling b in Bestellinglistview)
                 {
-                        ListViewItem li = new ListViewItem(b.omschrijving.ToString());
-                        li.SubItems.Add(b.aantal.ToString());
-                        li.SubItems.Add(b.opmerking.ToString());
-                        li.SubItems.Add(b.bestellingmenuitemID.ToString());
+                    ListViewItem li = new ListViewItem(b.omschrijving.ToString());
+                    li.SubItems.Add(b.aantal.ToString());
+                    li.SubItems.Add(b.opmerking.ToString());
+                    li.SubItems.Add(b.bestellingmenuitemID.ToString());
                     if (b.aantal >= 1)
                     {
                         if (current == true)
@@ -1197,7 +1198,7 @@ namespace UI
         //eventhandlers/methoden die op het Afgerondenbestellingen panel staan
         private void pictureBxAF_KeukenBarStartscherm_Keuken_Click(object sender, EventArgs e)
         {
-            if(user == User.Eigenaar)
+            if (user == User.Eigenaar)
             {
                 this.Visible = false;
                 Kassa kassa = new Kassa();
@@ -1527,7 +1528,7 @@ namespace UI
 
             pnl_BinnenkomendeBestellingen.Show();
             inkomend = true;
-            SelectOrders();   
+            SelectOrders();
         }
 
         private void btn_VerwijderAfgerondeBestelling_Click(object sender, EventArgs e)
