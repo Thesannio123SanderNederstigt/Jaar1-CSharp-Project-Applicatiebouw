@@ -410,7 +410,6 @@ namespace UI
             //    BestellingToevoegen1(ALBLLunch);
             //}
         }
-        //
         private void timerDFris_Tick(object sender, EventArgs e) // FRISDRANK DRANK
         {
             TimerClick(timerDFris, DrankFrisBTN, DFrisDropdown);
