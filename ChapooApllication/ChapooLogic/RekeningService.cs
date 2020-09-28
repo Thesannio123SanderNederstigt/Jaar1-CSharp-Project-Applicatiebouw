@@ -193,11 +193,5 @@ namespace ChapooLogic
             }
 
         }
-
-        //public string GetTafelByID(int ID)
-        //{
-        //    return Rekening_db.GetTafelByID(ID);
-        //}
-
     }
 }

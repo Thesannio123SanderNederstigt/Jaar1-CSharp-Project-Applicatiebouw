@@ -215,12 +215,23 @@ namespace ChapooLogic
         // test om soort en cat menuitem te krijgen
         public List<MenuItem> GetItems(string MenuKaartSoort, string Categorie)
         {
-            return MenuItem_db.GetByCat(MenuKaartSoort, Categorie);
-        }
+            try
+            {
+                List<MenuItem> menuitemlijst = MenuItem_db.GetByCat(MenuKaartSoort, Categorie);
 
-        public MenuItem GetMenuItemByID(int menuItemID)
-        {
-            return MenuItem_db.GetById(menuItemID);
+                if (menuitemlijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return menuitemlijst;
+            }
+            catch (Exception e)
+            {
+                List<MenuItem> fakemenuitemlist = new List<MenuItem>();
+                MenuItem fakemenuitem = new MenuItem(1, e.ToString(), "an error occured", 0.0f, 0, 0, "error");
+                fakemenuitemlist.Add(fakemenuitem);
+                return fakemenuitemlist;
+            }
         }
     }
 }

@@ -1,20 +1,3 @@
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.dll
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.pdb
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.dll
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.dll
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.dll
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.dll
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.dll
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.pdb
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Configuration.ConfigurationManager.xml
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.AccessControl.xml
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Permissions.xml
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\System.Security.Principal.Windows.xml
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csprojAssemblyReference.cache
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CoreCompileInputs.cache
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.csproj.CopyComplete
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.dll
-S:\Inholland\Project Applicatiebouw\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\obj\Debug\ChapooDAL.pdb
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.dll
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooDAL.pdb
 D:\School\Jaar 1\Periode 4\Project Periode 4\Chapoo Project\ApplicatiebouwRepository\ChapooApllication\ChapooDAL\bin\Debug\ChapooModel.dll

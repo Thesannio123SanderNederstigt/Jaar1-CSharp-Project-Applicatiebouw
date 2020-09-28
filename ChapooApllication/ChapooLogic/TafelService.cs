@@ -83,13 +83,49 @@ namespace ChapooLogic
 
         public List<Tafel> GeTafelStatus(bool status)
         {
-            return Tafel_db.GetTafelByStatus(status);
+            try
+            {
+                List<Tafel> tafellijst = Tafel_db.GetTafelByStatus(status);
+
+                if (tafellijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return tafellijst;
+            }
+            catch (Exception e)
+            {
+                string error = e.ToString();
+
+                List<Tafel> fakeTafelLijst = new List<Tafel>();
+                Tafel fakeTafel = new Tafel(error.Length, true, 1);
+                fakeTafelLijst.Add(fakeTafel);
+                return fakeTafelLijst;
+            }
         }
 
        
         public List<Tafel> TafelBeschikbaar()
         {
-            return Tafel_db.Get_Tafel_By_Order_Status();
+            try
+            {
+                List<Tafel> tafellijst = Tafel_db.Get_Tafel_By_Order_Status();
+
+                if (tafellijst == null)
+                {
+                    throw new ArgumentNullException();
+                }
+                return tafellijst;
+            }
+            catch (Exception e)
+            {
+                string error = e.ToString();
+
+                List<Tafel> fakeTafelLijst = new List<Tafel>();
+                Tafel fakeTafel = new Tafel(error.Length, true, 1);
+                fakeTafelLijst.Add(fakeTafel);
+                return fakeTafelLijst;
+            }
         }
     }
 }
